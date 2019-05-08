@@ -5,20 +5,50 @@
 <math>
   a \langle n \rangle b =
     \begin{cases}
-      a, & \text{if} \quad b = 1 \\
-      ( a \langle n \rangle b' ) + 1, & \text{if} \quad b = b' + 1 \land n = 1 \\
-      a \langle n' \rangle ( a \langle n \rangle b' ), & \text{if} \quad b = b' + 1 \land n = n' + 1
+      a + b,                                           & \text{if} \quad n = 1 \\
+      a,                                               & \text{if} \quad n = n' + 1 \land b = 1 \\
+      a \langle n' \rangle ( a \langle n \rangle b' ), & \text{if} \quad n = n' + 1 \land b = b' + 1 \\
     \end{cases}
 </math>
+
+<code>
+
+  hyper a n b = case n of
+    1   -> a + b
+    S n -> case b of
+      1   -> a
+      S b -> hyper a n (hyper a (S n) b)
+
+  hyper a n b = case b of
+    1   -> a
+    S b -> case n of
+      1   -> S (hyper a n b)
+      S n -> hyper a n (hyper a (S n) b)
+
+  hyper a n b = case b of
+    1   -> case n of
+      1   -> S a
+      S n -> a
+    S b -> case n of
+      1   -> S (hyper a n b)
+      S n -> hyper a n (hyper a (S n) b)
+
+  hyper a n b = case n of
+    0   -> S b
+    S n -> case b of
+      1   -> a
+      S b -> hyper a n (hyper a (S n) b)
+
+</code>
 
 また、弱ハイパー演算子も同様の定義域において以下のように定義される。
 
 <math>
   a [ n ] b =
     \begin{cases}
-      a, & \text{if} \quad b = 1 \\
-      ( a [ n ] b' ) + 1, & \text{if} \quad b = b' + 1 \land n = 1 \\
-      ( a [ n ] b' ) [ n' ] a, & \text{if} \quad b = b' + 1 \land n = n' + 1
+      a + b,                   & \text{if} \quad n = 1 \\
+      a,                       & \text{if} \quad n = n' + 1 \land b = 1 \\
+      ( a [ n ] b' ) [ n' ] a, & \text{if} \quad n = n' + 1 \land b = b' + 1 \\
     \end{cases}
 </math>
 
@@ -29,10 +59,10 @@
 <math>
   a \langle m, n \rangle =
     \begin{cases}
-      a, & \text{if} \quad b = 1 \\
-      ( a \langle m, n \rangle b) + 1, & \text{if} \quad b = b' + 1 \land m = 0 \land n = 1 \\
-      a \langle m', b \rangle b, & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = 0 \\
-      a \langle m, n' \rangle ( a \langle m, n \rangle b' ), & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = n' + 1
+      a + b,                                                 & \text{if} \quad m = 0      \land n = 1 \\
+      a,                                                     & \text{if} \quad m \neq 0   \land n \neq 1   \land b = 1 \\
+      a \langle m', b \rangle b,                             & \text{if} \quad m = m' + 1 \land n = 0      \land b = b' + 1 \\
+      a \langle m, n' \rangle ( a \langle m, n \rangle b' ), & \text{if} \quad m = m' + 1 \land n = n' + 1 \land b = b' + 1 \\
     \end{cases}
 </math>
 
@@ -41,23 +71,23 @@
 <math>
   a \langle m, n, o \rangle =
     \begin{cases}
-      a, & \text{if} \quad b = 1 \\
-      ( a \langle m, n, o \rangle b) + 1, & \text{if} \quad b = b' + 1 \land m = 0 \land n = 0 \land o = 1 \\
-      a \langle m', b, o \rangle b, & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = 0 \land o = 0 \\
-      a \langle m, n', b \rangle b, & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = n' + 1 \land o = 0 \\
-      a \langle m, n, o' \rangle ( a \langle m, n, o \rangle b' ), & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = n' + 1 \land o = o' + 1
+      a + b,                                                       & \text{if} \quad m = 0      \land n = 0      \land o = 1 \\
+      a,                                                           & \text{if} \quad m \neq 0   \land n \neq 0   \land o \neq 1   \land b = 1 \\
+      a \langle m', b, 0 \rangle b,                                & \text{if} \quad m = m' + 1 \land n = 0      \land o = 0      \land b = b' + 1 \\
+      a \langle m, n', b \rangle b,                                & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = 0      \land b = b' + 1 \\
+      a \langle m, n, o' \rangle ( a \langle m, n, o \rangle b' ), & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = o' + 1 \land b = b' + 1 \\
     \end{cases}
 </math>
 
 <math>
   a \langle m, n, o, p \rangle =
     \begin{cases}
-      a, & \text{if} \quad b = 1 \\
-      ( a \langle m, n, o, p \rangle b) + 1, & \text{if} \quad b = b' + 1 \land m = 0 \land n = 0 \land o = 0 \land p = 1 \\
-      a \langle m', b, o, p \rangle b, & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = 0 \land o = 0 \land p = 0 \\
-      a \langle m, n', b, p \rangle b, & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = n' + 1 \land o = 0 \land p = 0 \\
-      a \langle m, n, o', b \rangle b, & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = n' + 1 \land o = o' + 1 \land p = 0 \\
-      a \langle m, n, o, p' \rangle ( a \langle m, n, o, p \rangle b' ), & \text{if} \quad b = b' + 1 \land m = m' + 1 \land n = n' + 1 \land o = o' + 1 \land p = p' + 1
+      a + b,                                                             & \text{if} \quad m = 0      \land n = 0      \land o = 0      \land p = 1 \\
+      a,                                                                 & \text{if} \quad m \neq 0   \land n \neq 0   \land o \neq 0   \land p \neq 1   \land b = 1 \\
+      a \langle m', b, 0, 0 \rangle b,                                   & \text{if} \quad m = m' + 1 \land n = 0      \land o = 0      \land p = 0      \land b = b' + 1 \\
+      a \langle m, n', b, 0 \rangle b,                                   & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = 0      \land p = 0      \land b = b' + 1 \\
+      a \langle m, n, o', b \rangle b,                                   & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = o' + 1 \land p = 0      \land b = b' + 1 \\
+      a \langle m, n, o, p' \rangle ( a \langle m, n, o, p \rangle b' ), & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = o' + 1 \land p = p' + 1 \land b = b' + 1 \\
     \end{cases}
 </math>
 
@@ -68,10 +98,10 @@
 <math>
   x \langle \alpha \rangle y =
     \begin{cases}
-      x, & \text{if} \quad y = 1 \\
-      ( x \langle \alpha \rangle y' ) + 1, & \text{if} \quad y = y' + 1 \land \alpha = 1 \\
-      x \langle \alpha' \rangle ( x \langle \alpha \rangle y' ), & \text{if} \quad y = y' + 1 \land \alpha = \alpha' + 1 \\
-      x \langle \alpha [ y ] \rangle y, & \text{if} \quad y = y' + 1 \land \mathbf{Limit} ( \alpha )
+      x + y,                                                     & \text{if} \quad \alpha = 1 \\
+      x,                                                         & \text{if} \quad \alpha \neq 1             \land y = 1 \\
+      x \langle \alpha' \rangle ( x \langle \alpha \rangle y' ), & \text{if} \quad \alpha = \alpha' + 1      \land y = y' + 1 \\
+      x \langle \alpha [ y ] \rangle y,                          & \text{if} \quad \mathbf{Limit} ( \alpha ) \land y = y' + 1 \\
     \end{cases}
 </math>
 
