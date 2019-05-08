@@ -1,6 +1,6 @@
-���̋L���ł͎����l�Ă����n�C�p�[���Z�q�̊g�����O�Љ��B�����͕��ՓI�ȍl�������g�������̂ł��邽�ߓ������̂��ʂ̐l�ɂ��l���o����Ă���\���������B
+﻿この記事では私が考案したハイパー演算子の拡張を三つ紹介する。これらは普遍的な考え方を使ったものであるため同じものが別の人により考え出されている可能性が高い。
 
-���̋L���Ō��ɂȂ��Ă���[[�n�C�p�[���Z�q]]�̓[���łȂ����R�� <math> a, b, n </math> �ɑ΂��Ĉȉ��̂悤�ɒ�`����鎩�R����Ԃ��֐��ł���B
+この記事で元になっている[[ハイパー演算子]]はゼロでない自然数 <math> a, b, n </math> に対して以下のように定義される自然数を返す関数である。
 
 <math>
   a \langle n \rangle b =
@@ -41,7 +41,7 @@
 
 </code>
 
-�܂��A��n�C�p�[���Z�q�����l�̒�`��ɂ����Ĉȉ��̂悤�ɒ�`�����B
+また、弱ハイパー演算子も同様の定義域において以下のように定義される。
 
 <math>
   a [ n ] b =
@@ -52,9 +52,9 @@
     \end{cases}
 </math>
 
-== ���ϐ��n�C�p�[���Z�q ==
+== 多変数ハイパー演算子 ==
 
-[[���ϐ��A�b�J�[�}���֐�]]�͊��ɒ�`����Ă��邪�A���ϐ��n�C�p�[���Z�q�͖��m�Ȓ�`���������Ƃ��Ȃ��B�����Œ�`�𖾎����Ă������Ƃ͖��ɗ��Ǝv���B�ŏ���2�ϐ��ł��ȉ��Ɏ����B���̊֐��� �[���ł͂Ȃ����R�� <math> a, b </math> �Ǝ��R�� <math> m, n </math> �ɑ΂��āA <math> m, n </math> �������Ƃ��[���ł���ꍇ�������Ē�`����Ă���B
+[[多変数アッカーマン関数]]は既に定義されているが、多変数ハイパー演算子は明確な定義を見たことがない。ここで定義を明示しておくことは役に立つと思う。最初に2変数版を以下に示す。この関数は ゼロではない自然数 <math> a, b </math> と自然数 <math> m, n </math> に対して、 <math> m, n </math> が両方ともゼロである場合を除いて定義されている。
 
 <math>
   a \langle m, n \rangle =
@@ -66,7 +66,7 @@
     \end{cases}
 </math>
 
-���l�̊g�����J��Ԃ��đ��ϐ������\�ł���B
+同様の拡張を繰り返して多変数化が可能である。
 
 <math>
   a \langle m, n, o \rangle =
@@ -91,9 +91,9 @@
     \end{cases}
 </math>
 
-== �n�C�p�[�K�w ==
+== ハイパー階層 ==
 
-���ϐ��n�C�p�[���Z�q�� <math> \omega ^ \omega </math> �܂ł̋}�����֐��̓�����܂˂č���Ă���B���l�̍l�����ł��傫���������ɂ��g���ł���B
+多変数ハイパー演算子は <math> \omega ^ \omega </math> までの急増加関数の動作をまねて作っている。同様の考え方でより大きい順序数にも拡張できる。
 
 <math>
   x \langle \alpha \rangle y =
@@ -105,9 +105,9 @@
     \end{cases}
 </math>
 
-== �����n�C�p�[���Z�q ==
+== 超限ハイパー演算子 ==
 
-�n�C�p�[���Z�q�ɋɌ��������ɑ΂��Ă͋Ɍ����Ƃ�Ƃ������[����ǉ����邱�ƂŃ[���ȊO�̏������S�̂֒�`����g�����邱�Ƃ��ł���B�������A����� <math> \omega \langle 4 \rangle \omega = \epsilon_0 </math> �𒴂���Ƒ������Ȃ��Ȃ�Ƃ������_������Ă���B
+ハイパー演算子に極限順序数に対しては極限をとるというルールを追加することでゼロ以外の順序数全体へ定義域を拡張することができる。しかし、これは <math> \omega \langle 4 \rangle \omega = \epsilon_0 </math> を超えると増加しなくなるという欠点を抱えている。
 
 <math>
   a \langle n \rangle b =
@@ -120,7 +120,7 @@
     \end{cases}
 </math>
 
-��n�C�p�[���Z�q�ɓ��l�̊g�����{���� <math> \epsilon_0 </math> �𒴂��Ă��������Â���B
+弱ハイパー演算子に同様の拡張を施すと <math> \epsilon_0 </math> を超えても増加しつづける。
 
 <math>
   a [ n ] b =
@@ -133,12 +133,12 @@
     \end{cases}
 </math>
 
-== �[���ɑ΂���l ==
+== ゼロに対する値 ==
 
-�n�C�p�[���Z�q�Ƃ��̊g���͈����Ƀ[�����^�����Ă���ꍇ�ɂ������I�Ȃ���l��ݒ�ł���B�ȉ��̍P�����𖞂����悤�ɒ�߂�΂悢�B
+ハイパー演算子とその拡張は引数にゼロが与えられている場合にも整合的なある値を設定できる。以下の恒等式を満たすように定めればよい。
 
 <math> a \langle n \rangle ( a \langle n + 1 \rangle 0 ) = a \langle n + 1 \rangle 1 = a </math>
 
-�������A��n�C�p�[���Z�q�ł͐����I�ɒ�`�ł��Ȃ��B�n�C�p�[���Z�q�ɂ�����e�g���[�V�������x���ɂȂ�Ɗ��҂���鐫���𖞂����悤�Ȏ��R�������݂��Ȃ��Ȃ��Ă��܂����炾�B
+しかし、弱ハイパー演算子では整合的に定義できない。ハイパー演算子におけるテトレーションレベルになると期待される性質を満たすような自然数が存在しなくなってしまうからだ。
 
 <math> ( a [ n ] 0 ) [ n + 1 ] a = a [ n + 1 ] 1 = a </math>
