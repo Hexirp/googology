@@ -82,11 +82,11 @@
 <math>
   a \langle n \rangle b =
     \begin{cases}
-      a, & \text{if} \quad b = 1 \\
-      ( a \langle n \rangle b' ) + 1, & \text{if} \quad b = b' + 1 \land n = 1 \\
-      a \langle n' \rangle ( a \langle n \rangle b' ), & \text{if} \quad b = b' + 1 \land n = n' + 1 \\
-      \sup \{ a \langle n' \rangle \mid n' < n \land n' \neq 0 \}, & \text{if} \quad b = b' + 1 \land \mathbf{Limit} ( n ) \\
-      \sup \{ a \langle n \rangle b' \mid b' < b \land b' \neq 0 \}, & \text{if} \quad \mathbf{Limit} ( b )
+      a + b,                                                         & \text{if} \quad n = 1 \\
+      a,                                                             & \text{if} \quad n \neq 1             \land b = 1 \\
+      a \langle n' \rangle ( a \langle n \rangle b' ),               & \text{if} \quad n = n' + 1           \land b = b' + 1 \\
+      \sup \{ a \langle n' \rangle b \mid n' < n \land n' \neq 0 \}, & \text{if} \quad \mathbf{Limit} ( n ) \land b = b' + 1 \\
+      \sup \{ a \langle n \rangle b' \mid b' < b \land b' \neq 0 \}, & \text{if} \quad n \neq 1             \land \mathbf{Limit} ( b ) \\
     \end{cases}
 </math>
 
@@ -95,11 +95,11 @@
 <math>
   a [ n ] b =
     \begin{cases}
-      a, & \text{if} \quad b = 1 \\
-      ( a [ n ] b' ) + 1, & \text{if} \quad b = b' + 1 \land n = 1 \\
-      ( a [ n ] b' ) [ n' ] a, & \text{if} \quad b = b' + 1 \land n = n' + 1 \\
-      \sup \{ a [ n' ] b \mid n' < n \land n' \neq 0 \}, & \text{if} \quad b = b' + 1 \land \mathbf{Limit} ( n ) \\
-      \sup \{ a [ n ] b' \mid b' < b \land b' \neq 0 \}, & \text{if} \quad \mathbf{Limit} ( b )
+      a + b,                                             & \text{if} \quad n = 1 \\
+      a,                                                 & \text{if} \quad n \neq 1             \land b = 1 \\
+      ( a [ n ] b' ) [ n' ] a,                           & \text{if} \quad n = n' + 1           \land b = b' + 1 \\
+      \sup \{ a [ n' ] b \mid n' < n \land n' \neq 0 \}, & \text{if} \quad \mathbf{Limit} ( n ) \land b = b' + 1 \\
+      \sup \{ a [ n ] b' \mid b' < b \land b' \neq 0 \}, & \text{if} \quad n \neq 1             \land \mathbf{Limit} ( b ) \\
     \end{cases}
 </math>
 
