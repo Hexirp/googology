@@ -11,36 +11,6 @@
     \end{cases}
 </math>
 
-<code>
-
-  hyper a n b = case n of
-    1   -> a + b
-    S n -> case b of
-      1   -> a
-      S b -> hyper a n (hyper a (S n) b)
-
-  hyper a n b = case b of
-    1   -> a
-    S b -> case n of
-      1   -> S (hyper a n b)
-      S n -> hyper a n (hyper a (S n) b)
-
-  hyper a n b = case b of
-    1   -> case n of
-      1   -> S a
-      S n -> a
-    S b -> case n of
-      1   -> S (hyper a n b)
-      S n -> hyper a n (hyper a (S n) b)
-
-  hyper a n b = case n of
-    0   -> S b
-    S n -> case b of
-      1   -> a
-      S b -> hyper a n (hyper a (S n) b)
-
-</code>
-
 また、弱ハイパー演算子も同様の定義域において以下のように定義される。
 
 <math>
