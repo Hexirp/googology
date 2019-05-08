@@ -1,0 +1,50 @@
+ここでは[[ユーザーブログ:Hexirp/ハイパー演算子の拡張]]で示した超限ハイパー演算子および超限弱ハイパー演算子について解析を行う。
+
+== 前提 ==
+
+以下の恒等式を前提とする。きちんと証明はしていないが、いくつか計算してみたところ成り立っているように思う。
+
+<math>
+ \begin{array}{}
+  a \langle 1 \rangle b = a [ 1 ] b = a + b \\
+  a \langle 2 \rangle b = a [ 2 ] b = a \times b \\
+  a \langle 3 \rangle b = a [ 3 ] b = a ^ b \\
+ \end{array}
+</math>
+
+== 超限ハイパー演算子 ==
+
+<math>
+ \begin{eqnarray*}
+  \omega \langle 4 \rangle \omega & = & \epsilon_0 \\
+  \omega \langle 5 \rangle \omega & = & \epsilon_0 \\
+  \omega \langle 6 \rangle \omega & = & \epsilon_0 \\
+  \omega \langle \alpha \rangle \omega & = & \epsilon_0 \quad \text{if} \quad 4 \leq \alpha \\
+  ( \omega \langle 4 \rangle \omega ) \langle 4 \rangle \omega & = & \epsilon_1 \\
+ \end{eqnarray*}
+</math>
+
+== 超限弱ハイパー演算子 ==
+
+<math>
+ \begin{eqnarray*}
+  \omega [ 4 ] 1 & = & \omega \\
+  \omega [ 4 ] 2 & = & \omega ^ { \omega } \\
+  \omega [ 4 ] 3 & = & \omega ^ { \omega ^ 2 } \\
+  \omega [ 4 ] 4 & = & \omega ^ { \omega ^ 3 } \\
+  \omega [ 4 ] \omega & = & \omega ^ { \omega ^ \omega } \\
+  \omega [ 4 ] \omega [ 4 ] 2 & = & \omega ^ { \omega ^ { \omega ^ \omega } } \\
+  \omega [ 4 ] \omega [ 4 ] 3 & = & \omega ^ { \omega ^ { { \omega ^ \omega}  \times 2 } } \\
+  \omega [ 4 ] \omega [ 4 ] 4 & = & \omega ^ { \omega ^ { { \omega ^ \omega } \times 3 } } \\
+  \omega [ 4 ] \omega [ 4 ] \omega = \omega [ 5 ] 3 & = & \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } \\
+  \omega [ 5 ] 4 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } \\
+  \omega [ 5 ] 5 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } + 1 } } } \\
+  \omega [ 5 ] \omega & = & \epsilon_0 \\
+  \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { \epsilon_0 } } \\
+  \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } + 1 } } } \\
+  \omega [ 5 ] \omega [ 5 ] 4 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } + 1 } + 1 } } } \\
+  \omega [ 6 ] 3 & = & \epsilon_1 \\
+  \omega [ 6 ] 4 & = & \epsilon_2 \\
+  \omega [ 6 ] \omega & = & \epsilon_\omega \\
+ \end{eqnarray*}
+</math>
