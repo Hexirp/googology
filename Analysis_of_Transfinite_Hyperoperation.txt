@@ -1,8 +1,8 @@
 ﻿ここでは[[ユーザーブログ:Hexirp/ハイパー演算子の拡張]]で示した超限ハイパー演算子および超限弱ハイパー演算子について解析を行う。
 
-== 前提 ==
+== 共通部分 ==
 
-以下の恒等式を前提とする。きちんと証明はしていないが、いくつか計算してみたところ成り立っているように思う。
+以下のような恒等式が成り立つ。加算については定義から自明、乗算と累乗については <math> b </math> に関する超限帰納法で証明可能。
 
 <math>
  \begin{array}{}
@@ -14,31 +14,47 @@
 
 == 超限ハイパー演算子 ==
 
-<math>
- \begin{eqnarray*}
-  \omega \langle 4 \rangle \omega & = & \epsilon_0 \\
-  \omega \langle 5 \rangle \omega & = & \epsilon_0 \\
-  \omega \langle 6 \rangle \omega & = & \epsilon_0 \\
-  \omega \langle \alpha \rangle \omega & = & \epsilon_0 \quad \text{if} \quad 4 \leq \alpha \\
-  ( \omega \langle 4 \rangle \omega ) \langle 4 \rangle \omega & = & \epsilon_1 \\
- \end{eqnarray*}
-</math>
+全ての <math> 4 \leq \alpha </math> に対して <math> \omega \langle \alpha \rangle \omega = \epsilon _ 0 </math> が成り立つ。確かめていないが超限帰納法で証明可能だと思われる。これ以上に行くには <math> ( \omega \langle 4 \rangle \omega ) \langle 4 \rangle \omega = \epsilon _ 1 </math> とでもすればいいが、これは超限弱ハイパー演算子の領分である。
 
 == 超限弱ハイパー演算子 ==
+
+限界は <math> \omega [ \omega ] \omega = SVO </math> だと思われる。
+
+=== 4 ===
+
+累乗以上テトレーション未満。
 
 <math>
  \begin{eqnarray*}
   \omega [ 4 ] 1 & = & \omega \\
-  \omega [ 4 ] 2 & = & \omega ^ { \omega } \\
-  \omega [ 4 ] 3 & = & \omega ^ { \omega ^ 2 } \\
-  \omega [ 4 ] 4 & = & \omega ^ { \omega ^ 3 } \\
+  \omega [ 4 ] 2 & = & \omega ^ \omega \\
+  \omega [ 4 ] 3 & = & ( \omega ^ \omega ) ^ \omega = \omega ^ { \omega ^ 2 } \\
+  \omega [ 4 ] 4 & = & ( \omega ^ { \omega ^ 2 } ) ^ \omega = \omega ^ { \omega ^ 3 } \\
+  \omega [ 4 ] ( n + 1 ) & = & \omega ^ { \omega ^ n } \\
   \omega [ 4 ] \omega & = & \omega ^ { \omega ^ \omega } \\
-  \omega [ 4 ] \omega [ 4 ] 2 & = & \omega ^ { \omega ^ { \omega ^ \omega } } \\
-  \omega [ 4 ] \omega [ 4 ] 3 & = & \omega ^ { \omega ^ { { \omega ^ \omega}  \times 2 } } \\
-  \omega [ 4 ] \omega [ 4 ] 4 & = & \omega ^ { \omega ^ { { \omega ^ \omega } \times 3 } } \\
-  \omega [ 4 ] \omega [ 4 ] \omega = \omega [ 5 ] 3 & = & \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } \\
+  \omega [ 4 ] \omega [ 4 ] 2 & = & ( \omega ^ { \omega ^ \omega } ) ^ { \omega ^ { \omega ^ \omega } } = \omega ^ { \omega ^ \omega \times \omega ^ { \omega ^ \omega } } = \omega ^ { \omega ^ { \omega + \omega ^ \omega } } = \omega ^ { \omega ^ { \omega ^ \omega } } \\
+  \omega [ 4 ] \omega [ 4 ] 3 & = & \omega ^ { \omega ^ { \omega ^ \omega \times 2 } } \\
+  \omega [ 4 ] \omega [ 4 ] 4 & = & \omega ^ { \omega ^ { \omega ^ \omega \times 3 } } \\
+  \omega [ 4 ] \omega [ 4 ] ( n + 1 ) & = & \omega ^ { \omega ^ { \omega ^ \omega \times n } } \\
+  \omega [ 4 ] \omega [ 4 ] \omega & = & \omega ^ { \omega ^ { \omega ^ \omega \times \omega } } = \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } \\
+  \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] 2 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } } \\
+  \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] ( n + 1 ) & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } \times n } } \\
+  \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] \omega & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } \times \omega } } = \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } \\
+ \end{eqnarray*}
+</math>
+
+=== 5 ===
+
+テトレーションレベル。
+
+<math>
+ \begin{eqnarray*}
+  \omega [ 5 ] 1 & = & \omega \\
+  \omega [ 5 ] 2 & = & \omega ^ { \omega ^ \omega } \\
+  \omega [ 5 ] 3 & = & \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } \\
   \omega [ 5 ] 4 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } \\
   \omega [ 5 ] 5 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } + 1 } } } \\
+  \omega [ 5 ] ( n + 1 ) & = & \omega ^ { \omega ^ { f ( n ) } } \\
   \omega [ 5 ] \omega & = & \epsilon_0 \\
   \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { \epsilon_0 } } \\
   \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } + 1 } } } \\
@@ -46,5 +62,14 @@
   \omega [ 6 ] 3 & = & \epsilon_1 \\
   \omega [ 6 ] 4 & = & \epsilon_2 \\
   \omega [ 6 ] \omega & = & \epsilon_\omega \\
+ \end{eqnarray*}
+</math>
+
+ただし、この節での <math> n \mapsto f ( n ) </math> は以下のように定義される関数である。
+
+<math>
+ \begin{eqnarray*}
+  f ( 1 ) & = & \omega \\
+  f ( n + 1 ) & = & \omega ^ { f ( n ) + 1 } \\
  \end{eqnarray*}
 </math>
