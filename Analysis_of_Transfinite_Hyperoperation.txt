@@ -30,15 +30,15 @@
   \omega [ 4 ] 2 & = & \omega ^ \omega \\
   \omega [ 4 ] 3 & = & ( \omega ^ \omega ) ^ \omega = \omega ^ { \omega ^ 2 } \\
   \omega [ 4 ] 4 & = & ( \omega ^ { \omega ^ 2 } ) ^ \omega = \omega ^ { \omega ^ 3 } \\
-  \omega [ 4 ] ( n + 1 ) & = & \omega ^ { \omega ^ n } \\
+  \omega [ 4 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ \alpha } \\
   \omega [ 4 ] \omega & = & \omega ^ { \omega ^ \omega } \\
   \omega [ 4 ] \omega [ 4 ] 2 & = & ( \omega ^ { \omega ^ \omega } ) ^ { \omega ^ { \omega ^ \omega } } = \omega ^ { \omega ^ \omega \times \omega ^ { \omega ^ \omega } } = \omega ^ { \omega ^ { \omega + \omega ^ \omega } } = \omega ^ { \omega ^ { \omega ^ \omega } } \\
   \omega [ 4 ] \omega [ 4 ] 3 & = & \omega ^ { \omega ^ { \omega ^ \omega \times 2 } } \\
   \omega [ 4 ] \omega [ 4 ] 4 & = & \omega ^ { \omega ^ { \omega ^ \omega \times 3 } } \\
-  \omega [ 4 ] \omega [ 4 ] ( n + 1 ) & = & \omega ^ { \omega ^ { \omega ^ \omega \times n } } \\
+  \omega [ 4 ] \omega [ 4 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { \omega ^ \omega \times \n } } \\
   \omega [ 4 ] \omega [ 4 ] \omega & = & \omega ^ { \omega ^ { \omega ^ \omega \times \omega } } = \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } \\
   \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] 2 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } } \\
-  \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] ( n + 1 ) & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } \times n } } \\
+  \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } \times \alpha } } \\
   \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] \omega & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } \times \omega } } = \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } \\
  \end{eqnarray*}
 </math>
@@ -54,7 +54,7 @@
   \omega [ 5 ] 3 & = & \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } \\
   \omega [ 5 ] 4 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } \\
   \omega [ 5 ] 5 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } + 1 } } } \\
-  \omega [ 5 ] ( n + 1 ) & = & \omega ^ { \omega ^ { f ( n ) } } \\
+  \omega [ 5 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { f ( \alpha ) } } \\
   \omega [ 5 ] \omega & = & \epsilon_0 \\
   \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { \epsilon_0 } } \\
   \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } + 1 } } } \\
@@ -65,11 +65,12 @@
  \end{eqnarray*}
 </math>
 
-ただし、この節での <math> n \mapsto f ( n ) </math> は以下のように定義される関数である。
+ただし、この節での <math> \alpha \mapsto f ( \alpha ) </math> は以下のように定義される関数である。
 
 <math>
  \begin{eqnarray*}
   f ( 1 ) & = & \omega \\
-  f ( n + 1 ) & = & \omega ^ { f ( n ) + 1 } \\
+  f ( \alpha + 1 ) & = & \omega ^ { f ( \alpha ) + 1 } \\
+  f ( \alpha ) & = & \sup \{ f ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad \text{if} \quad \mathbf{Limit} ( \alpha ) \\
  \end{eqnarray*}
 </math>
