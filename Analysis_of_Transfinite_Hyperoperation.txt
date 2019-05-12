@@ -35,7 +35,7 @@
   \omega [ 4 ] \omega [ 4 ] 2 & = & ( \omega ^ { \omega ^ \omega } ) ^ { \omega ^ { \omega ^ \omega } } = \omega ^ { \omega ^ \omega \times \omega ^ { \omega ^ \omega } } = \omega ^ { \omega ^ { \omega + \omega ^ \omega } } = \omega ^ { \omega ^ { \omega ^ \omega } } \\
   \omega [ 4 ] \omega [ 4 ] 3 & = & \omega ^ { \omega ^ { \omega ^ \omega \times 2 } } \\
   \omega [ 4 ] \omega [ 4 ] 4 & = & \omega ^ { \omega ^ { \omega ^ \omega \times 3 } } \\
-  \omega [ 4 ] \omega [ 4 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { \omega ^ \omega \times \n } } \\
+  \omega [ 4 ] \omega [ 4 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { \omega ^ \omega \times \alpha } } \\
   \omega [ 4 ] \omega [ 4 ] \omega & = & \omega ^ { \omega ^ { \omega ^ \omega \times \omega } } = \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } \\
   \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] 2 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } } \\
   \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } \times \alpha } } \\
