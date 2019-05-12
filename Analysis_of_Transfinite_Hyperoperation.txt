@@ -55,8 +55,13 @@
   \omega [ 5 ] 4 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } \\
   \omega [ 5 ] 5 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } + 1 } } } \\
   \omega [ 5 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { f ( \alpha ) } } \\
-  \omega [ 5 ] \omega & = & \epsilon_0 \\
-  \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { \epsilon_0 } } \\
+  \omega [ 5 ] \omega & = & \epsilon _ 0 \\
+  \omega [ 5 ] \omega [ 4 ] 2 & = & { \epsilon _ 0 } ^ { \epsilon _ 0 } \\
+  \omega [ 5 ] \omega [ 4 ] 3 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ 2 } \\
+  \omega [ 5 ] \omega [ 4 ] \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ \omega } \\
+  \omega [ 5 ] \omega [ 4 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ \alpha } \\
+  \omega [ 5 ] \omega [ 4 ] \omega [ 5 ] \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
+  \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
   \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } + 1 } } } \\
   \omega [ 5 ] \omega [ 5 ] 4 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } + 1 } + 1 } } } \\
   \omega [ 6 ] 3 & = & \epsilon_1 \\
