@@ -63,8 +63,9 @@
   \omega [ 5 ] \omega [ 4 ] \omega ^ 2 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ 2 } } \\
   \omega [ 5 ] \omega [ 4 ] \omega ^ \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ \omega } } \\
   \omega [ 5 ] \omega [ 4 ] \omega ^ { \omega ^ \omega } & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ { \omega ^ \omega } } } \\
-  \omega [ 5 ] \omega [ 4 ] \omega [ 5 ] \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
+  \omega [ 5 ] \omega [ 4 ] \epsilon _ 0 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
   \omega [ 5 ] \omega [ 4 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ \alpha } \\
+  \omega [ 5 ] \omega [ 4 ] \omega [ 5 ] \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
   \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
   \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 + 1 } } } \\
   \omega [ 5 ] \omega [ 5 ] 4 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 + 1 } + 1 } } } \\
@@ -106,5 +107,22 @@
   \omega [ 6 ] 4 & = & \epsilon _ 2 \\
   \omega [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \alpha - 1 } \\
   \omega [ 6 ] \omega & = & \epsilon _ \omega \\
+  \omega [ 6 ] \omega [ 5 ] \omega & = & \epsilon _ { \omega + 1 } \\
+  \omega [ 6 ] \omega [ 5 ] ( \omega \times 2 ) & = & \epsilon _ { \omega + 2 } \\
+  \omega [ 6 ] \omega [ 5 ] \omega ^ 2 & = & \epsilon _ { \omega \times 2 } \\
+  \omega [ 6 ] \omega [ 5 ] \omega ^ 3 & = & \epsilon _ { \omega ^ 2 } \\
+  \omega [ 6 ] \omega [ 5 ] \omega ^ \omega & = & \epsilon _ { \omega ^ \omega } \\
+  \omega [ 6 ] \omega [ 5 ] \omega ^ { \omega ^ \omega } & = & \epsilon _ { \omega ^ { \omega ^ \omega } } \\
+  \omega [ 6 ] \omega [ 5 ] \epsilon _ 0 & = & \epsilon _ { \epsilon _ 0 } \\
+  \omega [ 6 ] \omega [ 5 ] \epsilon _ \omega & = & \epsilon _ { \epsilon _ \omega } \\
+  \omega [ 6 ] \omega [ 5 ] ( \omega \times ( 1 + \alpha ) ) & = & \epsilon _ { \omega + \alpha - 1 } \\
+  \omega [ 6 ] \omega [ 5 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ \omega } \\
+  \omega [ 6 ] \omega [ 6 ] 2 & = & \epsilon _ { \epsilon _ \omega } \\
+  \omega [ 6 ] \omega [ 6 ] 3 & = & \epsilon _ { \epsilon _ \omega \times 2 } \\
+  \omega [ 6 ] \omega [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \epsilon _ \omega \times \alpha } \\
+  \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } \\
+  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilone _ { \epsilon _ { \epsilon _ \omega } \times \omega } \times \omega } \\
  \end{eqnarray*}
 </math>
+
+なお、ここで出てくる減算は <math> A \setminus B </math> で残った元に <math> A </math> に沿った順序を入れたものである。
