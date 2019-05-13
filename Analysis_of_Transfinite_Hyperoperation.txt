@@ -45,7 +45,7 @@
 
 === 5 ===
 
-テトレーションレベル。
+テトレーションレベル。二つの関数 <math> \alpha \mapsto \alpha \langle 4 \rangle \omega </math> と <math> \alpha \mapsto \alpha [ 5 ] \omega </math> は似た効果を持つ。
 
 <math>
  \begin{eqnarray*}
@@ -59,14 +59,18 @@
   \omega [ 5 ] \omega [ 4 ] 2 & = & { \epsilon _ 0 } ^ { \epsilon _ 0 } \\
   \omega [ 5 ] \omega [ 4 ] 3 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ 2 } \\
   \omega [ 5 ] \omega [ 4 ] \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ \omega } \\
-  \omega [ 5 ] \omega [ 4 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ \alpha } \\
+  \omega [ 5 ] \omega [ 4 ] ( \omega \times 2 ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega \times 2 } } \\
+  \omega [ 5 ] \omega [ 4 ] \omega ^ 2 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ 2 } } \\
+  \omega [ 5 ] \omega [ 4 ] \omega ^ \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ \omega } } \\
+  \omega [ 5 ] \omega [ 4 ] \omega ^ { \omega ^ \omega } & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ { \omega ^ \omega } } } \\
   \omega [ 5 ] \omega [ 4 ] \omega [ 5 ] \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
+  \omega [ 5 ] \omega [ 4 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ \alpha } \\
   \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
-  \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } + 1 } } } \\
-  \omega [ 5 ] \omega [ 5 ] 4 & = & { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } ^ { { \epsilon_0 } + 1 } + 1 } } } \\
-  \omega [ 6 ] 3 & = & \epsilon_1 \\
-  \omega [ 6 ] 4 & = & \epsilon_2 \\
-  \omega [ 6 ] \omega & = & \epsilon_\omega \\
+  \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 + 1 } } } \\
+  \omega [ 5 ] \omega [ 5 ] 4 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 + 1 } + 1 } } } \\
+  \omega [ 5 ] \omega [ 5 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { g ( \alpha ) } \\
+  \omega [ 5 ] \omega [ 5 ] \omega & = & \epsilon _ 1 \\
+  \omega [ 5 ] \omega [ 5 ] \omega [ 5 ] \omega & = & \epsilon _ 2 \\
  \end{eqnarray*}
 </math>
 
@@ -76,6 +80,31 @@
  \begin{eqnarray*}
   f ( 1 ) & = & \omega \\
   f ( \alpha + 1 ) & = & \omega ^ { f ( \alpha ) + 1 } \\
-  f ( \alpha ) & = & \sup \{ f ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad \text{if} \quad \mathbf{Limit} ( \alpha ) \\
+  f ( \alpha ) & = & \sup \{ f ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
+ \end{eqnarray*}
+</math>
+
+また <math> \alpha \matsto g ( \alpha ) </math> は以下のように定義される関数である。
+
+<math>
+ \begin{eqnarray*}
+  g ( 1 ) & = & \epsilon _ 0 \\
+  g ( \alpha + 1 ) & = & { \epsilon _ 0 } ^ { g ( \alpha ) + 1 } \\
+  g ( \alpha ) & = & \sup \{ g ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
+ \end{eqnarray*}
+</math>
+
+=== 6 ===
+
+テトレーション以上と <math> \alpha \mapsto \epsilon _ \alpha </math> 未満。
+
+<math>
+ \begin{eqnarray*}
+  \omega [ 6 ] 1 & = & \omega \\
+  \omega [ 6 ] 2 & = & \epsilon _ 0 \\
+  \omega [ 6 ] 3 & = & \epsilon _ 1 \\
+  \omega [ 6 ] 4 & = & \epsilon _ 2 \\
+  \omega [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \alpha - 1 } \\
+  \omega [ 6 ] \omega & = & \epsilon _ \omega \\
  \end{eqnarray*}
 </math>
