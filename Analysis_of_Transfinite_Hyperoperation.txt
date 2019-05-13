@@ -68,7 +68,7 @@
   \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
   \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 + 1 } } } \\
   \omega [ 5 ] \omega [ 5 ] 4 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 + 1 } + 1 } } } \\
-  \omega [ 5 ] \omega [ 5 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { g ( \alpha ) } \\
+  \omega [ 5 ] \omega [ 5 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { g ( \alpha ) } } \\
   \omega [ 5 ] \omega [ 5 ] \omega & = & \epsilon _ 1 \\
   \omega [ 5 ] \omega [ 5 ] \omega [ 5 ] \omega & = & \epsilon _ 2 \\
  \end{eqnarray*}
@@ -84,7 +84,7 @@
  \end{eqnarray*}
 </math>
 
-また <math> \alpha \matsto g ( \alpha ) </math> は以下のように定義される関数である。
+また <math> \alpha \mapsto g ( \alpha ) </math> は以下のように定義される関数である。
 
 <math>
  \begin{eqnarray*}
