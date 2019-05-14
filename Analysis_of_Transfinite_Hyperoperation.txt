@@ -122,6 +122,7 @@
   \omega [ 6 ] \omega [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \epsilon _ \omega \times \alpha } \\
   \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } \\
   \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 2 & = & \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega + \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } } = \epsilon _ { \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } } \\
+  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 3 & = & \epsilon _ { \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } \times 2 } \\
   \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } \times \omega } \\
  \end{eqnarray*}
 </math>
