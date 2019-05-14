@@ -39,17 +39,17 @@
 # T(ω)(1) -> 1
 # T(ω)(n) -> T(ω)(n-1)[1]1
 # T(a[b]c)(n) -> ...
-  # Limit(b) -> a[T(b)(n)]c
-  # Limit(c) -> a[b]T(c)(n)
+## Limit(b) -> a[T(b)(n)]c
+## Limit(c) -> a[b]T(c)(n)
 # T(a)(n) -> 1
 
 
 関数 f を以下のようにして定義する。ただし、iter(f)(m)(n) は n に f を m 回適用することを表す。
 
 # f(a)(n) = let a' = S(a) in ...
-  # One(a') -> 2 * n
-  # Succ(a') -> iter(f(P(a')))(n)(n)
-  # Limit(a') -> f(T(a')(n))(n)
+## One(a') -> 2 * n
+## Succ(a') -> iter(f(P(a')))(n)(n)
+## Limit(a') -> f(T(a')(n))(n)
 
 
 関数 O を以下のようにして定義する。
