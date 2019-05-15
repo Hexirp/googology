@@ -1,4 +1,5 @@
 ﻿import Prelude hiding (succ)
+import System.IO
 
 data Formula = One | Omega | Node Formula Formula Formula deriving (Eq, Ord, Show)
 
@@ -6,6 +7,8 @@ s :: Formula -> Formula
 s One = One
 s Omega = Omega
 s (Node a One (Node b One c)) = s (Node (Node a One b) One c)
+s (Node a One b) = Node (s a) One (s b)
+s (Node a b One) = s a
 s (Node a (Node b One One) (Node c One One)) = s (Node (Node a (Node b One One) c) b a)
 s (Node a b c) = Node (s a) (s b) (s c)
 
