@@ -23,7 +23,7 @@
 式 a の標準形とは S(a) である。
 
 
-標準形である式 F に対する述語 One, Succ, Limit を以下のように定義する。
+標準形である式に対する述語 One, Succ, Limit を以下のように定義する。
 
 * One(a) := a = 1
 * Succ(a) := exists a', a = a'[1]1
