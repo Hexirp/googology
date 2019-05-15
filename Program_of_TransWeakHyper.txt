@@ -75,3 +75,6 @@ fe n a = let a' = s a in
    else if limit a'
     then putStrLn (sf a' []) >> fe n (t a' n)
     else putStrLn (sf a' []) >> putStrLn "error" >> return ()
+
+main :: IO ()
+main = hSetBuffering stdout NoBuffering >> fe 3 (Node Omega (Node One One One) Omega)
