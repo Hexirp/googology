@@ -25,7 +25,7 @@
 
 * One(a) := a = 1
 * Succ(a) := exists a', a = a'[1]1
-* Limit(a) := a = ω \/ exists a' b c, Limit(b) \/ Limit(c) -> A = a'[b]c
+* Limit(a) := ¬ (One(a) \/ Succ(a))
 
 
 後者変換 P を以下のようにして定義する。
