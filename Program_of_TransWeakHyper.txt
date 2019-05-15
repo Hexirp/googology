@@ -1,4 +1,6 @@
-﻿data Formula = One | Omega | Node Formula Formula Formula deriving (Eq, Ord, Show)
+﻿import Prelude hiding (succ)
+
+data Formula = One | Omega | Node Formula Formula Formula deriving (Eq, Ord, Show)
 
 s :: Formula -> Formula
 s One = One
@@ -37,7 +39,7 @@ iter f 0 a = a
 iter f n a = f (iter f (n - 1) a)
 
 f :: Formula -> Integer -> Integer
-f a = let a' = s a in
+f a n = let a' = s a in
  if one a'
   then 2 * n
   else if succ a'
