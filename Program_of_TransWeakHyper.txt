@@ -66,15 +66,12 @@ sf One = (:) '1'
 sf Omega = (:) 'ω'
 sf (Node a b c) = (:) '(' . sf a . (:) ')' . (:) '[' . sf b . (:) ']' . (:) '(' . sf c . (:) ')'
 
-fe :: Integer -> (String -> String, Formula) -> (String -> String, Formula)
-fe n (st, a) = let a' = s a in
+fe :: Integer -> Formula -> IO ()
+fe n a = let a' = s a in
  if one a'
-  then (st . sf a', a')
+  then putStrLn (sf a' []) >> return ()
   else if succ a'
-   then fe n (st . sf a', p a')
+   then putStrLn (sf a' []) >> fe n (p a')
    else if limit a'
-    then fe n (st . sf a', t a' n)
-    else (st . sf a', One)
-
-fo :: Integer -> Formula -> String
-fo n a = let (st, _) = fe n (id, a) in st []
+    then putStrLn (sf a' []) >> fe n (t a' n)
+    else putStrLn (sf a' []) >> putStrLn "error" >> return ()
