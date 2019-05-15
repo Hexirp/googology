@@ -57,3 +57,24 @@ twh n = f (o n) n
 
 ntwh :: Integer
 ntwh = twh 10000
+
+
+-- ここからは計算過程を見やすくするためのプログラム
+
+sf :: Formula -> String -> String
+sf One = (:) '1'
+sf Omega = (:) 'ω'
+sf (Node a b c) = (:) '(' . sf a . (:) ')' . (:) '[' . sf b . (:) ']' . (:) '(' . sf c . (:) ')'
+
+fe :: Integer -> (String -> String, Formula) -> (String -> String, Formula)
+fe n (st, a) = let a' = s a in
+ if one a'
+  then (st . sf a', a')
+  else if succ a'
+   then fe n (st . sf a', p a')
+   else if limit a'
+    then fe n (st . sf a', t a' n)
+    else (st . sf a', One)
+
+fo :: Integer -> Formula -> String
+fo n a = let (st, _) = fe n (id, a) in st []
