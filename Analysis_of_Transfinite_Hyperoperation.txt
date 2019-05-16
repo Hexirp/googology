@@ -137,7 +137,28 @@
   \omega [ 7 ] 2 & = & \epsilon _ \omega \\
   \omega [ 7 ] 3 & = & \epsilon _ { \epsilon _ \omega \times \omega } \\
   \omega [ 7 ] 4 & = & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times \omega } \\
-  \omega [ 7 ] ( 1 + \alpha ) & = & f ( \alpha ) \
+  \omega [ 7 ] ( 1 + \alpha ) & = & f ( \alpha ) \\
+  \omega [ 7 ] \omega & = & \zeta _ 0 \\
+  \omega [ 7 ] \omega [ 6 ] 2 & = & \epsilon _ { \zeta _ 0 + \zeta _ 0 } = \epsilon _ { \zeta _ 0 \times 2 } \\
+  \omega [ 7 ] \omega [ 6 ] 3 & = & \epsilon _ { \zeta _ 0 \times 2 + \zeta _ 0 } = \epsilon _ { \zeta _ 0 \times 3 } \\
+  \omega [ 7 ] \omega [ 6 ] \omega & = & \epsilon _ { \zeta _ 0 \times \omega } \\
+  \omega [ 7 ] \omega [ 6 ] ( \omega \times 2 ) & = & \epsilon _ { \zeta _ 0 \times \omega \times 2 } \\
+  \omega [ 7 ] \omega [ 6 ] \omega ^ 2 & = & \epsilon _ { \zeta _ 0 \times \omega ^ 2 } \\
+  \omega [ 7 ] \omega [ 6 ] \omega ^ \omega & = & \epsilon _ { \zeta _ 0 \times \omega ^ \omega } \\
+  \omega [ 7 ] \omega [ 6 ] \omega ^ { \omega ^ \omega } & = & \epsilon _ { \zeta _ 0 \times \omega ^ { \omega ^ \omega } } \\
+  \omega [ 7 ] \omega [ 6 ] \epsilon _ 0 & = & \epsilon _ { \zeta _ 0 \times \epsilon _ 0 } \\
+  \omega [ 7 ] \omega [ 6 ] \epsilon _ \omega & = & \epsilon _ { \zeta _ 0 \times \epsilon _ \omega } \\
+  \omega [ 7 ] \omega [ 6 ] \zeta _ 0 & = & \epsilon _ { { \zeta _ 0 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 6 ] \alpha & = & \epsilon _ { \zeta _ 0 \times \alpha } \\
+  \omega [ 7 ] \omega [ 6 ] \omega [ 7 ] \omega & = & \epsilon _ { \zeta _ 0 \times \zeta _ 0 } = \epsilon _ { { \zeta _ 0 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 7 ] 2 & = & \epsilon _ { \zeta _ 0 \times \zeta _ 0 } = \epsilon _ { { \zeta _ 0 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] 2 & = & \epsilon _ { { \zeta _ 0 } ^ 2 + \epsilon _ { { \zeta _ 0 } ^ 2 } } = \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } } \\
+  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] 3 & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times 2 } \\
+  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times \alpha } \\
+  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] \omega [ 7 ] \omega & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times \zeta _ 0 } \\
+  \omega [ 7 ] \omega [ 7 ] 3 & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times \zeta _ 0 } \\
+  \omega [ 7 ] \omega [ 7 ] \alpha & = & g ( \alpha ) \\
+  \omega [ 7 ] \omega [ 7 ] \omega & = & \zeta _ 1 \\
  \end{eqnarray*}
 </math>
 
@@ -148,6 +169,16 @@
   f ( 1 ) & = & \epsilon _ \omega \\
   f ( \alpha + 1 ) & = & \epsilon _ { f ( \alpha ) \times \omega }  \\
   f ( \alpha ) & = & \sup \{ f ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
+ \end{eqnarray*}
+</math>
+
+また <math> \alpha \mapsto g ( \alpha ) </math> は以下のように定義される関数である。
+
+<math>
+ \begin{eqnarray*}
+  g ( 1 ) & = & \zeta _ 0 \\
+  g ( \alpha + 1 ) & = & \epsilon _ { f ( \alpha ) \times \zeta _ 0 } \\
+  g ( \alpha ) & = & \sup \{ g ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
  \end{eqnarray*}
 </math>
 
