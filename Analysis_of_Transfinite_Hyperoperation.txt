@@ -120,11 +120,37 @@
   \omega [ 6 ] \omega [ 6 ] 2 & = & \epsilon _ { \omega + \epsilon _ \omega } = \epsilon _ { \epsilon _ \omega } \\
   \omega [ 6 ] \omega [ 6 ] 3 & = & \epsilon _ { \epsilon _ \omega + \epsilon _ \omega } = \epsilon _ { \epsilon _ \omega \times 2 } \\
   \omega [ 6 ] \omega [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \epsilon _ \omega \times \alpha } \\
-  \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } \\
-  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 2 & = & \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega + \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } } = \epsilon _ { \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } } \\
-  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 3 & = & \epsilon _ { \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } \times 2 } \\
-  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ { \epsilon _ { \epsilon _ \omega } \times \omega } \times \omega } \\
+  \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ \omega \times \omega } \\
+  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 2 & = & \epsilon _ { \epsilon _ \omega \times \omega + \epsilon _ { \epsilon _ \omega \times \omega } } = \epsilon _ { \epsilon _ { \epsilon \omega \times \omega } } \\
+  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 3 & = & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times 2 } \\
+  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times \omega } \\
  \end{eqnarray*}
 </math>
+
+=== 7 ===
+
+<math> \alpha \mapsto \epsilon _ \alpha </math> レベル。
+
+<math>
+ \begin{eqnarray*}
+  \omega [ 7 ] 1 & = & \omega \\
+  \omega [ 7 ] 2 & = & \epsilon _ \omega \\
+  \omega [ 7 ] 3 & = & \epsilon _ { \epsilon _ \omega \times \omega } \\
+  \omega [ 7 ] 4 & = & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times \omega } \\
+  \omega [ 7 ] ( 1 + \alpha ) & = & f ( \alpha ) \
+ \end{eqnarray*}
+</math>
+
+ただし、この節での <math> \alpha \mapsto f ( \alpha ) </math> は以下のように定義される関数である。
+
+<math>
+ \begin{eqnarray*}
+  f ( 1 ) & = & \epsilone _ \omega \\
+  f ( \alpha + 1 ) & = & \epsilone _ { f ( \alpha ) \times \omega }  \\
+  f ( \alpha ) & = & \sup \{ f ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
+ \end{eqnarray*}
+</math>
+
+=== 補足 ===
 
 なお、ここで出てくる減算 <math> A - B </math> は <math> A \setminus B </math> で残った元に <math> A </math> に沿った順序を入れたものである。
