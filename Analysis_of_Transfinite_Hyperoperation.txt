@@ -18,7 +18,7 @@
 
 == 超限弱ハイパー演算子 ==
 
-限界は <math> \omega [ \omega ] \omega = SVO </math> だと思われる。
+限界は <math> \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \Gamma _ 0 </math> である。
 
 === 4 ===
 
@@ -159,6 +159,12 @@
   \omega [ 7 ] \omega [ 7 ] 3 & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times \zeta _ 0 } \\
   \omega [ 7 ] \omega [ 7 ] \alpha & = & g ( \alpha ) \\
   \omega [ 7 ] \omega [ 7 ] \omega & = & \zeta _ 1 \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] 2 & = & \epsilon _ { \zeta _ 1 \times 2 } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] 3 & = & \epsilon _ { \zeta _ 1 \times 3 } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] \alpha & = & \epsilon _ { \zeta _ 1 \times \alpha } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] \omega [ 7 ] \omega [ 7 ] \omega & = & \epsilon _ { { \zeta _ 1 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 7 ] 2 & = & \epsilon _ { { \zeta _ 1 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 7 ] \omega & = & \zeta _ 2 \\
  \end{eqnarray*}
 </math>
 
@@ -179,6 +185,67 @@
   g ( 1 ) & = & \zeta _ 0 \\
   g ( \alpha + 1 ) & = & \epsilon _ { f ( \alpha ) \times \zeta _ 0 } \\
   g ( \alpha ) & = & \sup \{ g ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
+ \end{eqnarray*}
+</math>
+
+=== 8 ===
+
+<math> \alpha \mapsto \epsilon _ \alpha </math> 以上と <math> \alpha \mapsto \zeta _ \alpha </math> 未満。
+
+<math>
+ \begin{eqnarray*}
+  \omega [ 8 ] 1 & = & \omega \\
+  \omega [ 8 ] 2 & = & \zeta _ 0 \\
+  \omega [ 8 ] 3 & = & \zeta _ 1 \\
+  \omega [ 8 ] 4 & = & \zeta _ 2 \\
+  \omega [ 8 ] ( 1 + \alpha ) & = & \zeta _ { \alpha - 1 } \\
+  \omega [ 8 ] \omega & = & \zeta _ \omega \\
+  \omega [ 8 ] \omega [ 7 ] 2 & = & \epsilon _ { { \zeta _ \omega } ^2 } \\
+  \omega [ 8 ] \omega [ 7 ] \omega & = & \zeta _ { \omega + 1 } \\
+  \omega [ 8 ] \omega [ 7 ] \omega [ 8 ] \omega & = & \zeta _ { \omega + \zeta _ \omega } = \zeta _ { \zeta _ \omega } \\
+  \omega [ 8 ] \omega [ 8 ] 2 & = & \zeta _ { \zeta _ \omega } \\
+  \omega [ 8 ] \omega [ 8 ] \omega & = & \zeta _ { \zeta _ \omega \times \omega } \\
+  \omega [ 8 ] \omega [ 8 ] \omega [ 8 ] \omega & = & \zeta _ { \zeta _ { \zeta _ \omega \times \omega } \times \omega } \\
+ \end{eqnarray*}
+</math>
+
+=== 9 ===
+
+<math> \alpha \mapsto \zeta _ \alpha </math> レベル。
+
+<math>
+ \begin{eqnarray*}
+  \omega [ 9 ] 1 & = & \omega \\
+  \omega [ 9 ] 2 & = & \zeta _ \omega \\
+  \omega [ 9 ] 3 & = & \zeta _ { \zeta _ \omega \times \omega } \\
+  \omega [ 9 ] 4 & = & \zeta _ { \zeta _ { \zeta _ \omega \times \omega } \times \omega } \\
+  \omega [ 9 ] \omega & = & \eta _ 0 \\
+ \end{eqnarray*}
+</math>
+
+=== ω 以後 ===
+
+ここから先は解析の飛びが大きいので不正確さも高くなっている。
+
+<math>
+ \begin{eqnarray*}
+  \omega [ 1 ] \omega & = & \omega \times 2 \\
+  \omega [ 2 ] \omega & = & \omega ^ 2 \\
+  \omega [ 3 ] \omega & = & \omega ^ \omega \\
+  \omega [ 4 ] \omega & = & \omega ^ { \omega ^ \omega } \\
+  \omega [ 5 ] \omega & = & \epsilon _ 0 = \phi _ 1 ( 0 ) \\
+  \omega [ 6 ] \omega & = & \epsilon _ \omega = \phi _ 1 ( \omega ) \\
+  \omega [ 7 ] \omega & = & \zeta _ 0 = \phi _ 2 ( 0 ) \\
+  \omega [ 8 ] \omega & = & \zeta _ \omega = \phi _ 2 ( \omega ) \\
+  \omega [ 9 ] \omega & = & \eta _ 0 = \phi _ 3 ( 0 ) \\
+  \omega [ 10 ] \omega & = & \eta _ \omega = \phi _ 3 ( \omega ) \\
+  \omega [ \omega ] \omega & = & \phi _ \omega ( 0 ) \\
+  \omega [ \omega + 1 ] \omega & = & \phi _ \omega ( \omega ) \\
+  \omega [ \omega \times 2 ] \omega & = & \phi _ { \omega \times 2 } ( 0 ) \\
+  \omega [ \omega \times \alpha ] \omega & = & \phi _ { \omega \times \alpha } ( 0 ) \\
+  \omega [ \omega [ \omega ] \omega ] \omega & = & \phi _ { \phi _ \omega ( 0 ) } ( 0 ) \\
+  \omega [ \omega [ \omega [ \omega ] \omega ] \omega ] \omega & = & \phi _ { \phi _ { \phi _ \omega ( 0 ) } ( 0 ) } ( 0 ) \\
+  \omega [ \omega [ \cdots ] \omega ] \omega & = & \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \sup \{ \omega, \phi _ \omega ( 0 ), \phi _ { \phi _ \omega ( 0 ) } ( 0 ), \ldots \} = \Gamma _ 0 \\
  \end{eqnarray*}
 </math>
 
