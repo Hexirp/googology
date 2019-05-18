@@ -115,7 +115,7 @@
   \omega [ 6 ] \omega [ 5 ] \omega ^ { \omega ^ \omega } & = & \epsilon _ { \omega ^ { \omega ^ \omega } } \\
   \omega [ 6 ] \omega [ 5 ] \epsilon _ 0 & = & \epsilon _ { \epsilon _ 0 } \\
   \omega [ 6 ] \omega [ 5 ] \epsilon _ \omega & = & \epsilon _ { \epsilon _ \omega } \\
-  \omega [ 6 ] \omega [ 5 ] ( \omega \times ( 1 + \alpha ) ) & = & \epsilon _ { \omega + \alpha - 1 } \\
+  \omega [ 6 ] \omega [ 5 ] ( \omega \times ( 1 + \alpha ) ) & = & \epsilon _ { \omega + ( \alpha - 1 ) } \\
   \omega [ 6 ] \omega [ 5 ] \omega [ 6 ] \omega & = & \epsilon _ { \omega + \epsilon _ \omega } = \epsilon _ { \epsilon _ \omega } \\
   \omega [ 6 ] \omega [ 6 ] 2 & = & \epsilon _ { \omega + \epsilon _ \omega } = \epsilon _ { \epsilon _ \omega } \\
   \omega [ 6 ] \omega [ 6 ] 3 & = & \epsilon _ { \epsilon _ \omega + \epsilon _ \omega } = \epsilon _ { \epsilon _ \omega \times 2 } \\
