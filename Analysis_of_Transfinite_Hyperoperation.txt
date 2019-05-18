@@ -18,7 +18,7 @@
 
 == 超限弱ハイパー演算子 ==
 
-限界は <math> \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \Gamma _ 0 </math> である。この節の解析の中に現れる恒等式の変数 <math> \alpha </math> の範囲は <math> 1 \leq \alpha </math> である。
+限界は <math> \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \varphi ( \omega + 1, 0 ) </math> である<ref>[https://docs.google.com/spreadsheets/d/13dF_JysGD8shMOTYL3KfsFmcKOMNXp7hyfgjVbQZm6I/edit#gid=206312705]</ref>。この節の解析の中に現れる恒等式の変数 <math> \alpha </math> の範囲は <math> 1 \leq \alpha </math> である。
 
 === 4 ===
 
@@ -225,7 +225,7 @@
 
 === ω 以後 ===
 
-ここから先は解析の飛びが大きいので不正確さも高くなっている。
+<del>ここから先は解析の飛びが大きいので不正確さも高くなっている。</del>誤っている。
 
 <math>
  \begin{eqnarray*}
