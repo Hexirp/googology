@@ -14,7 +14,7 @@
 
 == 超限ハイパー演算子 ==
 
-全ての <math> 4 \leq \alpha </math> に対して <math> \omega \langle \alpha \rangle \omega = \epsilon _ 0 </math> が成り立つ。確かめていないが超限帰納法で証明可能だと思われる。これ以上に行くには <math> ( \omega \langle 4 \rangle \omega ) \langle 4 \rangle \omega = \epsilon _ 1 </math> とでもすればいいが、これは超限弱ハイパー演算子の領分である。
+全ての <math> 4 \leq \alpha </math> に対して <math> \omega \langle \alpha \rangle \omega = \varepsilon _ 0 </math> が成り立つ。確かめていないが超限帰納法で証明可能だと思われる。これ以上に行くには <math> ( \omega \langle 4 \rangle \omega ) \langle 4 \rangle \omega = \varepsilon _ 1 </math> とでもすればいいが、これは超限弱ハイパー演算子の領分である。
 
 == 超限弱ハイパー演算子 ==
 
@@ -55,23 +55,23 @@
   \omega [ 5 ] 4 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } \\
   \omega [ 5 ] 5 & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } + 1 } } } \\
   \omega [ 5 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { f ( \alpha ) } } \\
-  \omega [ 5 ] \omega & = & \epsilon _ 0 \\
-  \omega [ 5 ] \omega [ 4 ] 2 & = & { \epsilon _ 0 } ^ { \epsilon _ 0 } \\
-  \omega [ 5 ] \omega [ 4 ] 3 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ 2 } \\
-  \omega [ 5 ] \omega [ 4 ] \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ \omega } \\
-  \omega [ 5 ] \omega [ 4 ] ( \omega \times 2 ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega \times 2 } } \\
-  \omega [ 5 ] \omega [ 4 ] \omega ^ 2 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ 2 } } \\
-  \omega [ 5 ] \omega [ 4 ] \omega ^ \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ \omega } } \\
-  \omega [ 5 ] \omega [ 4 ] \omega ^ { \omega ^ \omega } & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \omega ^ { \omega ^ \omega } } } \\
-  \omega [ 5 ] \omega [ 4 ] \epsilon _ 0 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
-  \omega [ 5 ] \omega [ 4 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ \alpha } \\
-  \omega [ 5 ] \omega [ 4 ] \omega [ 5 ] \omega & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
-  \omega [ 5 ] \omega [ 5 ] 2 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } } \\
-  \omega [ 5 ] \omega [ 5 ] 3 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 + 1 } } } \\
-  \omega [ 5 ] \omega [ 5 ] 4 & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 + 1 } + 1 } } } \\
-  \omega [ 5 ] \omega [ 5 ] ( 1 + \alpha ) & = & { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { g ( \alpha ) } } \\
-  \omega [ 5 ] \omega [ 5 ] \omega & = & \epsilon _ 1 \\
-  \omega [ 5 ] \omega [ 5 ] \omega [ 5 ] \omega & = & \epsilon _ 2 \\
+  \omega [ 5 ] \omega & = & \varepsilon _ 0 \\
+  \omega [ 5 ] \omega [ 4 ] 2 & = & { \varepsilon _ 0 } ^ { \varepsilon _ 0 } \\
+  \omega [ 5 ] \omega [ 4 ] 3 & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ 2 } \\
+  \omega [ 5 ] \omega [ 4 ] \omega & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ \omega } \\
+  \omega [ 5 ] \omega [ 4 ] ( \omega \times 2 ) & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \omega \times 2 } } \\
+  \omega [ 5 ] \omega [ 4 ] \omega ^ 2 & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \omega ^ 2 } } \\
+  \omega [ 5 ] \omega [ 4 ] \omega ^ \omega & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \omega ^ \omega } } \\
+  \omega [ 5 ] \omega [ 4 ] \omega ^ { \omega ^ \omega } & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \omega ^ { \omega ^ \omega } } } \\
+  \omega [ 5 ] \omega [ 4 ] \varepsilon _ 0 & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \varepsilon _ 0 } } \\
+  \omega [ 5 ] \omega [ 4 ] ( 1 + \alpha ) & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ \alpha } \\
+  \omega [ 5 ] \omega [ 4 ] \omega [ 5 ] \omega & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \varepsilon _ 0 } } \\
+  \omega [ 5 ] \omega [ 5 ] 2 & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \varepsilon _ 0 } } \\
+  \omega [ 5 ] \omega [ 5 ] 3 & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \varepsilon _ 0 + 1 } } } \\
+  \omega [ 5 ] \omega [ 5 ] 4 & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { \varepsilon _ 0 + 1 } + 1 } } } \\
+  \omega [ 5 ] \omega [ 5 ] ( 1 + \alpha ) & = & { \varepsilon _ 0 } ^ { { \varepsilon _ 0 } ^ { g ( \alpha ) } } \\
+  \omega [ 5 ] \omega [ 5 ] \omega & = & \varepsilon _ 1 \\
+  \omega [ 5 ] \omega [ 5 ] \omega [ 5 ] \omega & = & \varepsilon _ 2 \\
  \end{eqnarray*}
 </math>
 
@@ -89,81 +89,81 @@
 
 <math>
  \begin{eqnarray*}
-  g ( 1 ) & = & \epsilon _ 0 \\
-  g ( \alpha + 1 ) & = & { \epsilon _ 0 } ^ { g ( \alpha ) + 1 } \\
+  g ( 1 ) & = & \varepsilon _ 0 \\
+  g ( \alpha + 1 ) & = & { \varepsilon _ 0 } ^ { g ( \alpha ) + 1 } \\
   g ( \alpha ) & = & \sup \{ g ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
  \end{eqnarray*}
 </math>
 
 === 6 ===
 
-テトレーション以上と <math> \alpha \mapsto \epsilon _ \alpha </math> 未満。
+テトレーション以上と <math> \alpha \mapsto \varepsilon _ \alpha </math> 未満。
 
 <math>
  \begin{eqnarray*}
   \omega [ 6 ] 1 & = & \omega \\
-  \omega [ 6 ] 2 & = & \epsilon _ 0 \\
-  \omega [ 6 ] 3 & = & \epsilon _ 1 \\
-  \omega [ 6 ] 4 & = & \epsilon _ 2 \\
-  \omega [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \alpha - 1 } \\
-  \omega [ 6 ] \omega & = & \epsilon _ \omega \\
-  \omega [ 6 ] \omega [ 5 ] \omega & = & \epsilon _ { \omega + 1 } \\
-  \omega [ 6 ] \omega [ 5 ] ( \omega \times 2 ) & = & \epsilon _ { \omega + 2 } \\
-  \omega [ 6 ] \omega [ 5 ] \omega ^ 2 & = & \epsilon _ { \omega + \omega } = \epsilon _ { \omega \times 2 } \\
-  \omega [ 6 ] \omega [ 5 ] \omega ^ 3 & = & \epsilon _ { \omega + \omega ^ 2 } = \epsilon _ { \omega ^ 2 } \\
-  \omega [ 6 ] \omega [ 5 ] \omega ^ \omega & = & \epsilon _ { \omega ^ \omega } \\
-  \omega [ 6 ] \omega [ 5 ] \omega ^ { \omega ^ \omega } & = & \epsilon _ { \omega ^ { \omega ^ \omega } } \\
-  \omega [ 6 ] \omega [ 5 ] \epsilon _ 0 & = & \epsilon _ { \epsilon _ 0 } \\
-  \omega [ 6 ] \omega [ 5 ] \epsilon _ \omega & = & \epsilon _ { \epsilon _ \omega } \\
-  \omega [ 6 ] \omega [ 5 ] ( \omega \times ( 1 + \alpha ) ) & = & \epsilon _ { \omega + ( \alpha - 1 ) } \\
-  \omega [ 6 ] \omega [ 5 ] \omega [ 6 ] \omega & = & \epsilon _ { \omega + \epsilon _ \omega } = \epsilon _ { \epsilon _ \omega } \\
-  \omega [ 6 ] \omega [ 6 ] 2 & = & \epsilon _ { \omega + \epsilon _ \omega } = \epsilon _ { \epsilon _ \omega } \\
-  \omega [ 6 ] \omega [ 6 ] 3 & = & \epsilon _ { \epsilon _ \omega + \epsilon _ \omega } = \epsilon _ { \epsilon _ \omega \times 2 } \\
-  \omega [ 6 ] \omega [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \epsilon _ \omega \times \alpha } \\
-  \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ \omega \times \omega } \\
-  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 2 & = & \epsilon _ { \epsilon _ \omega \times \omega + \epsilon _ { \epsilon _ \omega \times \omega } } = \epsilon _ { \epsilon _ { \epsilon \omega \times \omega } } \\
-  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 3 & = & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times 2 } \\
-  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] \omega & = & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times \omega } \\
+  \omega [ 6 ] 2 & = & \varepsilon _ 0 \\
+  \omega [ 6 ] 3 & = & \varepsilon _ 1 \\
+  \omega [ 6 ] 4 & = & \varepsilon _ 2 \\
+  \omega [ 6 ] ( 1 + \alpha ) & = & \varepsilon _ { \alpha - 1 } \\
+  \omega [ 6 ] \omega & = & \varepsilon _ \omega \\
+  \omega [ 6 ] \omega [ 5 ] \omega & = & \varepsilon _ { \omega + 1 } \\
+  \omega [ 6 ] \omega [ 5 ] ( \omega \times 2 ) & = & \varepsilon _ { \omega + 2 } \\
+  \omega [ 6 ] \omega [ 5 ] \omega ^ 2 & = & \varepsilon _ { \omega + \omega } = \varepsilon _ { \omega \times 2 } \\
+  \omega [ 6 ] \omega [ 5 ] \omega ^ 3 & = & \varepsilon _ { \omega + \omega ^ 2 } = \varepsilon _ { \omega ^ 2 } \\
+  \omega [ 6 ] \omega [ 5 ] \omega ^ \omega & = & \varepsilon _ { \omega ^ \omega } \\
+  \omega [ 6 ] \omega [ 5 ] \omega ^ { \omega ^ \omega } & = & \varepsilon _ { \omega ^ { \omega ^ \omega } } \\
+  \omega [ 6 ] \omega [ 5 ] \varepsilon _ 0 & = & \varepsilon _ { \varepsilon _ 0 } \\
+  \omega [ 6 ] \omega [ 5 ] \varepsilon _ \omega & = & \varepsilon _ { \varepsilon _ \omega } \\
+  \omega [ 6 ] \omega [ 5 ] ( \omega \times ( 1 + \alpha ) ) & = & \varepsilon _ { \omega + ( \alpha - 1 ) } \\
+  \omega [ 6 ] \omega [ 5 ] \omega [ 6 ] \omega & = & \varepsilon _ { \omega + \varepsilon _ \omega } = \varepsilon _ { \varepsilon _ \omega } \\
+  \omega [ 6 ] \omega [ 6 ] 2 & = & \varepsilon _ { \omega + \varepsilon _ \omega } = \varepsilon _ { \varepsilon _ \omega } \\
+  \omega [ 6 ] \omega [ 6 ] 3 & = & \varepsilon _ { \varepsilon _ \omega + \varepsilon _ \omega } = \varepsilon _ { \varepsilon _ \omega \times 2 } \\
+  \omega [ 6 ] \omega [ 6 ] ( 1 + \alpha ) & = & \varepsilon _ { \varepsilon _ \omega \times \alpha } \\
+  \omega [ 6 ] \omega [ 6 ] \omega & = & \varepsilon _ { \varepsilon _ \omega \times \omega } \\
+  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 2 & = & \varepsilon _ { \varepsilon _ \omega \times \omega + \varepsilon _ { \varepsilon _ \omega \times \omega } } = \varepsilon _ { \varepsilon _ { \varepsilon \omega \times \omega } } \\
+  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 3 & = & \varepsilon _ { \varepsilon _ { \varepsilon _ \omega \times \omega } \times 2 } \\
+  \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] \omega & = & \varepsilon _ { \varepsilon _ { \varepsilon _ \omega \times \omega } \times \omega } \\
  \end{eqnarray*}
 </math>
 
 === 7 ===
 
-<math> \alpha \mapsto \epsilon _ \alpha </math> レベル。
+<math> \alpha \mapsto \varepsilon _ \alpha </math> レベル。
 
 <math>
  \begin{eqnarray*}
   \omega [ 7 ] 1 & = & \omega \\
-  \omega [ 7 ] 2 & = & \epsilon _ \omega \\
-  \omega [ 7 ] 3 & = & \epsilon _ { \epsilon _ \omega \times \omega } \\
-  \omega [ 7 ] 4 & = & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times \omega } \\
+  \omega [ 7 ] 2 & = & \varepsilon _ \omega \\
+  \omega [ 7 ] 3 & = & \varepsilon _ { \varepsilon _ \omega \times \omega } \\
+  \omega [ 7 ] 4 & = & \varepsilon _ { \varepsilon _ { \varepsilon _ \omega \times \omega } \times \omega } \\
   \omega [ 7 ] ( 1 + \alpha ) & = & f ( \alpha ) \\
   \omega [ 7 ] \omega & = & \zeta _ 0 \\
-  \omega [ 7 ] \omega [ 6 ] 2 & = & \epsilon _ { \zeta _ 0 + \zeta _ 0 } = \epsilon _ { \zeta _ 0 \times 2 } \\
-  \omega [ 7 ] \omega [ 6 ] 3 & = & \epsilon _ { \zeta _ 0 \times 2 + \zeta _ 0 } = \epsilon _ { \zeta _ 0 \times 3 } \\
-  \omega [ 7 ] \omega [ 6 ] \omega & = & \epsilon _ { \zeta _ 0 \times \omega } \\
-  \omega [ 7 ] \omega [ 6 ] ( \omega \times 2 ) & = & \epsilon _ { \zeta _ 0 \times \omega \times 2 } \\
-  \omega [ 7 ] \omega [ 6 ] \omega ^ 2 & = & \epsilon _ { \zeta _ 0 \times \omega ^ 2 } \\
-  \omega [ 7 ] \omega [ 6 ] \omega ^ \omega & = & \epsilon _ { \zeta _ 0 \times \omega ^ \omega } \\
-  \omega [ 7 ] \omega [ 6 ] \omega ^ { \omega ^ \omega } & = & \epsilon _ { \zeta _ 0 \times \omega ^ { \omega ^ \omega } } \\
-  \omega [ 7 ] \omega [ 6 ] \epsilon _ 0 & = & \epsilon _ { \zeta _ 0 \times \epsilon _ 0 } \\
-  \omega [ 7 ] \omega [ 6 ] \epsilon _ \omega & = & \epsilon _ { \zeta _ 0 \times \epsilon _ \omega } \\
-  \omega [ 7 ] \omega [ 6 ] \zeta _ 0 & = & \epsilon _ { { \zeta _ 0 } ^ 2 } \\
-  \omega [ 7 ] \omega [ 6 ] \alpha & = & \epsilon _ { \zeta _ 0 \times \alpha } \\
-  \omega [ 7 ] \omega [ 6 ] \omega [ 7 ] \omega & = & \epsilon _ { \zeta _ 0 \times \zeta _ 0 } = \epsilon _ { { \zeta _ 0 } ^ 2 } \\
-  \omega [ 7 ] \omega [ 7 ] 2 & = & \epsilon _ { \zeta _ 0 \times \zeta _ 0 } = \epsilon _ { { \zeta _ 0 } ^ 2 } \\
-  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] 2 & = & \epsilon _ { { \zeta _ 0 } ^ 2 + \epsilon _ { { \zeta _ 0 } ^ 2 } } = \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } } \\
-  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] 3 & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times 2 } \\
-  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] ( 1 + \alpha ) & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times \alpha } \\
-  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] \omega [ 7 ] \omega & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times \zeta _ 0 } \\
-  \omega [ 7 ] \omega [ 7 ] 3 & = & \epsilon _ { \epsilon _ { { \zeta _ 0 } ^ 2 } \times \zeta _ 0 } \\
+  \omega [ 7 ] \omega [ 6 ] 2 & = & \varepsilon _ { \zeta _ 0 + \zeta _ 0 } = \varepsilon _ { \zeta _ 0 \times 2 } \\
+  \omega [ 7 ] \omega [ 6 ] 3 & = & \varepsilon _ { \zeta _ 0 \times 2 + \zeta _ 0 } = \varepsilon _ { \zeta _ 0 \times 3 } \\
+  \omega [ 7 ] \omega [ 6 ] \omega & = & \varepsilon _ { \zeta _ 0 \times \omega } \\
+  \omega [ 7 ] \omega [ 6 ] ( \omega \times 2 ) & = & \varepsilon _ { \zeta _ 0 \times \omega \times 2 } \\
+  \omega [ 7 ] \omega [ 6 ] \omega ^ 2 & = & \varepsilon _ { \zeta _ 0 \times \omega ^ 2 } \\
+  \omega [ 7 ] \omega [ 6 ] \omega ^ \omega & = & \varepsilon _ { \zeta _ 0 \times \omega ^ \omega } \\
+  \omega [ 7 ] \omega [ 6 ] \omega ^ { \omega ^ \omega } & = & \varepsilon _ { \zeta _ 0 \times \omega ^ { \omega ^ \omega } } \\
+  \omega [ 7 ] \omega [ 6 ] \varepsilon _ 0 & = & \varepsilon _ { \zeta _ 0 \times \varepsilon _ 0 } \\
+  \omega [ 7 ] \omega [ 6 ] \varepsilon _ \omega & = & \varepsilon _ { \zeta _ 0 \times \varepsilon _ \omega } \\
+  \omega [ 7 ] \omega [ 6 ] \zeta _ 0 & = & \varepsilon _ { { \zeta _ 0 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 6 ] \alpha & = & \varepsilon _ { \zeta _ 0 \times \alpha } \\
+  \omega [ 7 ] \omega [ 6 ] \omega [ 7 ] \omega & = & \varepsilon _ { \zeta _ 0 \times \zeta _ 0 } = \varepsilon _ { { \zeta _ 0 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 7 ] 2 & = & \varepsilon _ { \zeta _ 0 \times \zeta _ 0 } = \varepsilon _ { { \zeta _ 0 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] 2 & = & \varepsilon _ { { \zeta _ 0 } ^ 2 + \varepsilon _ { { \zeta _ 0 } ^ 2 } } = \varepsilon _ { \varepsilon _ { { \zeta _ 0 } ^ 2 } } \\
+  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] 3 & = & \varepsilon _ { \varepsilon _ { { \zeta _ 0 } ^ 2 } \times 2 } \\
+  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] ( 1 + \alpha ) & = & \varepsilon _ { \varepsilon _ { { \zeta _ 0 } ^ 2 } \times \alpha } \\
+  \omega [ 7 ] \omega [ 7 ] 2 [ 6 ] \omega [ 7 ] \omega & = & \varepsilon _ { \varepsilon _ { { \zeta _ 0 } ^ 2 } \times \zeta _ 0 } \\
+  \omega [ 7 ] \omega [ 7 ] 3 & = & \varepsilon _ { \varepsilon _ { { \zeta _ 0 } ^ 2 } \times \zeta _ 0 } \\
   \omega [ 7 ] \omega [ 7 ] \alpha & = & g ( \alpha ) \\
   \omega [ 7 ] \omega [ 7 ] \omega & = & \zeta _ 1 \\
-  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] 2 & = & \epsilon _ { \zeta _ 1 \times 2 } \\
-  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] 3 & = & \epsilon _ { \zeta _ 1 \times 3 } \\
-  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] \alpha & = & \epsilon _ { \zeta _ 1 \times \alpha } \\
-  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] \omega [ 7 ] \omega [ 7 ] \omega & = & \epsilon _ { { \zeta _ 1 } ^ 2 } \\
-  \omega [ 7 ] \omega [ 7 ] \omega [ 7 ] 2 & = & \epsilon _ { { \zeta _ 1 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] 2 & = & \varepsilon _ { \zeta _ 1 \times 2 } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] 3 & = & \varepsilon _ { \zeta _ 1 \times 3 } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] \alpha & = & \varepsilon _ { \zeta _ 1 \times \alpha } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 6 ] \omega [ 7 ] \omega [ 7 ] \omega & = & \varepsilon _ { { \zeta _ 1 } ^ 2 } \\
+  \omega [ 7 ] \omega [ 7 ] \omega [ 7 ] 2 & = & \varepsilon _ { { \zeta _ 1 } ^ 2 } \\
   \omega [ 7 ] \omega [ 7 ] \omega [ 7 ] \omega & = & \zeta _ 2 \\
  \end{eqnarray*}
 </math>
@@ -172,8 +172,8 @@
 
 <math>
  \begin{eqnarray*}
-  f ( 1 ) & = & \epsilon _ \omega \\
-  f ( \alpha + 1 ) & = & \epsilon _ { f ( \alpha ) \times \omega }  \\
+  f ( 1 ) & = & \varepsilon _ \omega \\
+  f ( \alpha + 1 ) & = & \varepsilon _ { f ( \alpha ) \times \omega }  \\
   f ( \alpha ) & = & \sup \{ f ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
  \end{eqnarray*}
 </math>
@@ -183,14 +183,14 @@
 <math>
  \begin{eqnarray*}
   g ( 1 ) & = & \zeta _ 0 \\
-  g ( \alpha + 1 ) & = & \epsilon _ { f ( \alpha ) \times \zeta _ 0 } \\
+  g ( \alpha + 1 ) & = & \varepsilon _ { f ( \alpha ) \times \zeta _ 0 } \\
   g ( \alpha ) & = & \sup \{ g ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
  \end{eqnarray*}
 </math>
 
 === 8 ===
 
-<math> \alpha \mapsto \epsilon _ \alpha </math> 以上と <math> \alpha \mapsto \zeta _ \alpha </math> 未満。
+<math> \alpha \mapsto \varepsilon _ \alpha </math> 以上と <math> \alpha \mapsto \zeta _ \alpha </math> 未満。
 
 <math>
  \begin{eqnarray*}
@@ -200,7 +200,7 @@
   \omega [ 8 ] 4 & = & \zeta _ 2 \\
   \omega [ 8 ] ( 1 + \alpha ) & = & \zeta _ { \alpha - 1 } \\
   \omega [ 8 ] \omega & = & \zeta _ \omega \\
-  \omega [ 8 ] \omega [ 7 ] 2 & = & \epsilon _ { { \zeta _ \omega } ^2 } \\
+  \omega [ 8 ] \omega [ 7 ] 2 & = & \varepsilon _ { { \zeta _ \omega } ^2 } \\
   \omega [ 8 ] \omega [ 7 ] \omega & = & \zeta _ { \omega + 1 } \\
   \omega [ 8 ] \omega [ 7 ] \omega [ 8 ] \omega & = & \zeta _ { \omega + \zeta _ \omega } = \zeta _ { \zeta _ \omega } \\
   \omega [ 8 ] \omega [ 8 ] 2 & = & \zeta _ { \zeta _ \omega } \\
@@ -233,8 +233,8 @@
   \omega [ 2 ] \omega & = & \omega ^ 2 \\
   \omega [ 3 ] \omega & = & \omega ^ \omega \\
   \omega [ 4 ] \omega & = & \omega ^ { \omega ^ \omega } \\
-  \omega [ 5 ] \omega & = & \epsilon _ 0 = \varphi _ 1 ( 0 ) \\
-  \omega [ 6 ] \omega & = & \epsilon _ \omega = \varphi _ 1 ( \omega ) \\
+  \omega [ 5 ] \omega & = & \varepsilon _ 0 = \varphi _ 1 ( 0 ) \\
+  \omega [ 6 ] \omega & = & \varepsilon _ \omega = \varphi _ 1 ( \omega ) \\
   \omega [ 7 ] \omega & = & \zeta _ 0 = \varphi _ 2 ( 0 ) \\
   \omega [ 8 ] \omega & = & \zeta _ \omega = \varphi _ 2 ( \omega ) \\
   \omega [ 9 ] \omega & = & \eta _ 0 = \varphi _ 3 ( 0 ) \\
@@ -260,8 +260,8 @@
   \omega & \omega ^ 2 & \omega ^ 3 & \omega ^ 4 & \omega ^ 5 & \omega ^ 6 & \cdots \\
   \omega & \omega ^ \omega & \omega ^ { \omega ^ 2 } & \omega ^ { \omega ^ 3 } & \omega ^ { \omega ^ 4 } & \omega ^ { \omega ^ 5 } & \cdots \\
   \omega & \omega ^ { \omega ^ \omega } & \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } + 1 } } } & \cdots & \\
-  \omega & \epsilon _ 0 & \epsilon _ 1 & \epsilon _ 2 & \cdots & & \\
-  \omega & \epsilon _ \omega & \epsilon _ { \epsilon _ \omega \times \omega } & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times \omega } & \cdots & & \\
+  \omega & \varepsilon _ 0 & \varepsilon _ 1 & \varepsilon _ 2 & \cdots & & \\
+  \omega & \varepsilon _ \omega & \varepsilon _ { \varepsilon _ \omega \times \omega } & \varepsilon _ { \varepsilon _ { \varepsilon _ \omega \times \omega } \times \omega } & \cdots & & \\
   \omega & \zeta _ 0 & \zeta _ 1 & \zeta _ 2 & \cdots & & \\
   \omega & \zeta _ \omega & \zeta _ { \zeta _ \omega \times \omega } & \zeta _ { \zeta _ { \zeta _ \omega \times \omega } \times \omega } & \cdots & & \\
   \omega & \eta _ 0 & \cdots & & & & \\
