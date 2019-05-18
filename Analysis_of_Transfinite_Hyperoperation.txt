@@ -18,7 +18,7 @@
 
 == 超限弱ハイパー演算子 ==
 
-限界は <math> \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \Gamma _ 0 </math> である。
+限界は <math> \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \Gamma _ 0 </math> である。この節の解析の中に現れる恒等式の変数 <math> \alpha </math> の範囲は <math> 1 \leq \alpha </math> である。
 
 === 4 ===
 
