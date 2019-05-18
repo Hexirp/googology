@@ -259,14 +259,14 @@
   \omega & \omega \times 2 & \omega \times 3 & \omega \times 4 & \omega \times 5 & \omega \times 6 & \cdots \\
   \omega & \omega ^ 2 & \omega ^ 3 & \omega ^ 4 & \omega ^ 5 & \omega ^ 6 & \cdots \\
   \omega & \omega ^ \omega & \omega ^ { \omega ^ 2 } & \omega ^ { \omega ^ 3 } & \omega ^ { \omega ^ 4 } & \omega ^ { \omega ^ 5 } & \cdots \\
-  \omega & \omega ^ { \omega ^ \omega } & \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } + 1 } } } & & \cdots \\
-  \omega & \epsilon _ 0 & \epsilon _ 1 & \epsilon _ 2 & \epsilon _ 3 & \epsilon _ 4 & \cdots \\
-  \omega & \epsilon _ \omega & \epsilon _ { \epsilon _ \omega \times \omega } & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times \omega } & & & \cdots \\
-  \omega & \zeta _ 0 & \zeta _ 1 & \zeta _ 2 & \zeta _ 3 & \zeta _ 4 & \cdots \\
-  \omega & \zeta _ \omega & \zeta _ { \zeta _ \omega \times \omega } & \zeta _ { \zeta _ { \zeta _ \omega \times \omega } \times \omega } & & & \cdots \\
-  \omega & \eta _ 0 & & & & & \cdots \\
-  \omega & \eta _ \omega & & & & & \cdots \\
-  \omega & \vdots & & & & & \cdots \\
+  \omega & \omega ^ { \omega ^ \omega } & \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } } & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } + 1 } } } & \cdots & \\
+  \omega & \epsilon _ 0 & \epsilon _ 1 & \epsilon _ 2 & \cdots & & \\
+  \omega & \epsilon _ \omega & \epsilon _ { \epsilon _ \omega \times \omega } & \epsilon _ { \epsilon _ { \epsilon _ \omega \times \omega } \times \omega } & \cdots & & \\
+  \omega & \zeta _ 0 & \zeta _ 1 & \zeta _ 2 & \cdots & & \\
+  \omega & \zeta _ \omega & \zeta _ { \zeta _ \omega \times \omega } & \zeta _ { \zeta _ { \zeta _ \omega \times \omega } \times \omega } & \cdots & & \\
+  \omega & \eta _ 0 & \cdots & & & & \\
+  \omega & \eta _ \omega & \cdots & & & & \\
+  \vdots & \vdots & & & & & \\
  \end{array}
 </math>
 
