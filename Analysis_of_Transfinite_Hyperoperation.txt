@@ -240,12 +240,7 @@
   \omega [ 9 ] \omega & = & \eta _ 0 = \varphi _ 3 ( 0 ) \\
   \omega [ 10 ] \omega & = & \eta _ \omega = \varphi _ 3 ( \omega ) \\
   \omega [ \omega ] \omega & = & \varphi _ \omega ( 0 ) \\
-  \omega [ \omega + 1 ] \omega & = & \varphi _ \omega ( \omega ) \\
-  \omega [ \omega \times 2 ] \omega & = & \varphi _ { \omega \times 2 } ( 0 ) \\
-  \omega [ \omega \times \alpha ] \omega & = & \varphi _ { \omega \times \alpha } ( 0 ) \\
-  \omega [ \omega [ \omega ] \omega ] \omega & = & \varphi _ { \varphi _ \omega ( 0 ) } ( 0 ) \\
-  \omega [ \omega [ \omega [ \omega ] \omega ] \omega ] \omega & = & \varphi _ { \varphi _ { \varphi _ \omega ( 0 ) } ( 0 ) } ( 0 ) \\
-  \omega [ \omega [ \cdots ] \omega ] \omega & = & \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \sup \{ \omega, \varphi _ \omega ( 0 ), \varphi _ { \varphi _ \omega ( 0 ) } ( 0 ), \ldots \} = \Gamma _ 0 \\
+  \omega [ \omega ] \omega [ 1 ] & = & \varphi _ \omega ( 0 ) + \omega \\
  \end{eqnarray*}
 </math>
 
