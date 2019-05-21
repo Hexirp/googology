@@ -269,7 +269,7 @@
   \omega [ \epsilon _ 0 ] \omega & = & \varphi _ \omega ( \epsilon _ 0 ) \\
   \omega [ \omega [ \omega ] \omega ] \omega & = & \varphi _ \omega ( \varphi _ \omega ( 0 ) ) \\
   \omega [ \omega [ \omega [ \omega ] \omega ] \omega ] \omega & = & \varphi _ \omega ( \varphi _ \omega ( \varphi _ \omega ( 0 ) ) ) \\
-  \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} & = & \varphi ( \omega + 1, 0 ) \\
+  \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} & = & \varphi _ { \omega + 1 } ( 0 ) \\
  \end{eqnarray*}
 </math>
 
