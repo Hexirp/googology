@@ -240,7 +240,36 @@
   \omega [ 9 ] \omega & = & \eta _ 0 = \varphi _ 3 ( 0 ) \\
   \omega [ 10 ] \omega & = & \eta _ \omega = \varphi _ 3 ( \omega ) \\
   \omega [ \omega ] \omega & = & \varphi _ \omega ( 0 ) \\
-  \omega [ \omega ] \omega [ 1 ] & = & \varphi _ \omega ( 0 ) + \omega \\
+  \omega [ \omega ] \omega [ 1 ] \omega & = & \varphi _ \omega ( 0 ) + \omega \\
+  \omega [ \omega ] \omega [ 2 ] \omega & = & \varphi _ \omega ( 0 ) \times \omega \\
+  \omega [ \omega ] \omega [ 3 ] \omega & = & { \varphi _ \omega ( 0 ) } ^ \omega \\
+  \omega [ \omega ] \omega [ 4 ] \omega & = & { \varphi _ \omega ( 0 ) } ^ { { \varphi _ \omega ( 0 ) } ^ \omega } \\
+  \omega [ \omega ] \omega [ 5 ] \omega & = & \varepsilon _ { \varphi _ \omega ( 0 ) + 1 } \\
+  \omega [ \omega ] \omega [ 6 ] \omega & = & \varepsilon _ { \varphi _ \omega ( 0 ) \times \omega } \\
+  \omega [ \omega ] \omega [ 7 ] \omega & = & \zeta _ { \varphi _ \omega ( 0 ) + 1 } \\
+  \omega [ \omega ] \omega [ 8 ] \omega & = & \zeta _ { \varphi _ \omega ( 0 ) \times \omega } \\
+  \omega [ \omega ] \omega [ 9 ] \omega & = & \eta _ { \varphi _ \omega ( 0 ) + 1 } \\
+  \omega [ \omega ] \omega [ \omega ] \omega & = & \varphi _ \omega ( 1 ) \\
+  \omega [ \omega ] \omega [ \omega ] \omega [ \omega ] \omega & = & \varphi _ \omega ( 2 ) \\
+  \omega [ \omega + 1 ] \omega & = & \varphi _ \omega ( \omega ) \\
+  \omega [ \omega + 1 ] \omega [ \omega ] \omega & = & \varphi _ \omega ( \omega + 1 ) \\
+  \omega [ \omega + 1 ] \omega [ \omega ] ( \omega + 1 ) & = & \varphi _ \omega ( \omega + 1 ) \\
+  \omega [ \omega + 1 ] \omega [ \omega ] ( \omega \times 2 ) & = & \varphi _ \omega ( \omega + 1 ) \\
+  \omega [ \omega + 1 ] \omega [ \omega ] \omega [ \omega + 1 ] \omega & = & \varphi _ \omega ( \omega + 1 ) \\
+  \omega [ \omega + 1 ] \omega [ \omega ] \omega [ \omega + 1 ] \omega [ \omega ] \omega [ \omega + 1 ] \omega & = & \varphi _ \omega ( \omega + 2 ) \\
+  \omega [ \omega + 1 ] \omega [ \omega + 1 ] \omega & = & \varphi _ \omega ( \omega \times 2 ) \\
+  \omega [ \omega + 2 ] \omega & = & \varphi _ \omega ( \omega ^ 2 ) \\
+  \omega [ \omega + 2 ] \omega [ \omega + 1 ] \omega & = & \varphi _ \omega ( \omega ^ 2 + \omega ) \\
+  \omega [ \omega + 2 ] \omega [ \omega + 2 ] \omega & = & \varphi _ \omega ( \omega ^ 2 \times 2 ) \\
+  \omega [ \omega + 3 ] \omega & = & \varphi _ \omega ( \omega ^ 3 ) \\
+  \omega [ \omega \times 2 ] \omega & = & \varphi _ \omega ( \omega ^ \omega ) \\
+  \omega [ \omega ^ 2 ] \omega & = & \varphi _ \omega ( \omega ^ { \omega ^ 2 } ) \\
+  \omega [ \omega ^ \omega ] \omega & = & \varphi _ \omega ( \omega ^ { \omega ^ \omega } ) \\
+  \omega [ \omega ^ { \omega ^ \omega } ] \omega & = & \varphi _ \omega ( \omega ^ { \omega ^ { \omega ^ \omega } } ) \\
+  \omega [ \epsilon _ 0 ] \omega & = & \varphi _ \omega ( \epsilon _ 0 ) \\
+  \omega [ \omega [ \omega ] \omega ] \omega & = & \varphi _ \omega ( \varphi _ \omega ( 0 ) ) \\
+  \omega [ \omega [ \omega [ \omega ] \omega ] \omega ] \omega & = & \varphi _ \omega ( \varphi _ \omega ( \varphi _ \omega ( 0 ) ) ) \\
+  \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \varphi ( \omega + 1, 0 ) \\
  \end{eqnarray*}
 </math>
 
