@@ -273,7 +273,7 @@
  \end{eqnarray*}
 </math>
 
-== 表 ==
+=== 表 ===
 
 <math> a, b \mapsto \omega [ a ] b </math> による表。前までの解析に書いてある部分だけ埋めてある。
 
@@ -293,6 +293,17 @@
   \vdots & \vdots & & & & & \\
  \end{array}
 </math>
+
+=== 緩増加関数との関係 ===
+
+[[緩増加関数]]を通して、超限弱ハイパー演算子がハイパー演算子の順序数への正しい拡張であるということの、ある種の証明が得られる。
+
+<math>
+ \begin{eqnarray*}
+  g _ { \omega \times 2 } ( n ) = g _ { \omega [ 1 ] \omega } ( n ) & = & n [ 1 ] n = n \times 2 \\
+  g _ { \omega ^ 2 } ( n ) = g _ { \omega [ 2 ] \omega } ( n ) & = & n [ 2 ] n = n ^ 2 \\
+  g _ { \omega ^ \omega } ( n ) = g _ { \omega [ 3 ] \omega } ( n ) & = & n [ 3 ] n = n ^ n = n \uparrow n \\
+ \end{eqnarray*}
 
 === 補足 ===
 
