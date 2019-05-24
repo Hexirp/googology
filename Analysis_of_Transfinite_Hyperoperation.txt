@@ -296,14 +296,13 @@
 
 === 緩増加関数との関係 ===
 
-[[緩増加関数]]を通して、超限弱ハイパー演算子がハイパー演算子の順序数への正しい拡張であるということの、ある種の証明が得られる。
+[[緩増加関数]]を通して、超限弱ハイパー演算子が弱ハイパー演算子の順序数への正しい拡張であるということの、ある種の「証拠」が得られる。それは、緩増加関数において以下のような関係が'''経験則'''的に成り立っているからである。
 
 <math>
- \begin{eqnarray*}
-  g _ { \omega \times 2 } ( n ) = g _ { \omega [ 1 ] \omega } ( n ) & = & n [ 1 ] n = n \times 2 \\
-  g _ { \omega ^ 2 } ( n ) = g _ { \omega [ 2 ] \omega } ( n ) & = & n [ 2 ] n = n ^ 2 \\
-  g _ { \omega ^ \omega } ( n ) = g _ { \omega [ 3 ] \omega } ( n ) & = & n [ 3 ] n = n ^ n = n \uparrow n \\
- \end{eqnarray*}
+ g _ { f ( \omega ) } ( n ) \approx f ( n )
+</math>
+
+これを使って <math> \omega [ \omega ] \omega </math> がいくつになるべきなのか求めてみよう。まず、上式に代入して <math> g _ { \omega [ \omega ] \omega } ( n ) \approx n [ n ] n </math> を得る。ここで <math> n [ n ] n \approx n { \uparrow ^ n } n </math> であるから、 <math> g _ { f ( \omega ) } ( n ) \approx n { \uparrow ^ n } n </math> となる。このような式を満たす順序数を[[緩増加関数]]にある対応の一覧を逆引きすると、 <math> \varphi _ \omega ( 0 ) </math> が求める性質を満たす順序数である。そして、実際に <math> \omega [ \omega ] \omega = \varphi _ \omega ( 0) </math> である。
 
 === 補足 ===
 
