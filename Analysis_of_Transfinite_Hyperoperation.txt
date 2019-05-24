@@ -302,7 +302,7 @@
  g _ { f ( \omega ) } ( n ) \approx f ( n )
 </math>
 
-これを使って <math> \omega [ \omega ] \omega </math> がいくつになるべきなのか求めてみよう。まず、上式に代入して <math> g _ { \omega [ \omega ] \omega } ( n ) \approx n [ n ] n </math> を得る。ここで <math> n [ n ] n \approx n { \uparrow ^ n } n </math> であるから、 <math> g _ { f ( \omega ) } ( n ) \approx n { \uparrow ^ n } n </math> となる。このような式を満たす順序数を[[緩増加関数]]にある対応の一覧を逆引きすると、 <math> \varphi _ \omega ( 0 ) </math> が求める性質を満たす順序数である。そして、実際に <math> \omega [ \omega ] \omega = \varphi _ \omega ( 0) </math> である。
+これを使って <math> \omega [ \omega ] \omega </math> がいくつになるべきなのか求めてみよう。まず、上式に代入して <math> g _ { \omega [ \omega ] \omega } ( n ) \approx n [ n ] n </math> を得る。ここで <math> n [ n ] n \approx n { \uparrow ^ n } n </math> であるから、 <math> g _ { \omega [ \omega ] \omega } ( n ) \approx n { \uparrow ^ n } n </math> となる。このような式を満たす順序数を[[緩増加関数]]にある対応の一覧を逆引きすると、 <math> \varphi _ \omega ( 0 ) </math> が求める性質を満たす順序数である。そして、実際に <math> \omega [ \omega ] \omega = \varphi _ \omega ( 0) </math> である。
 
 === 補足 ===
 
