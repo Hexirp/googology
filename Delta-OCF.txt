@@ -1,0 +1,23 @@
+﻿δOCF の定義を清書する試み。
+
+<math> \Delta ( k , \gamma , \beta , \alpha ) , \Epsilon ( \gamma , \beta , \alpha ) </math> を順序数を引数にとり順序数を返す関数であるとする。
+
+== 表示の制限 ==
+
+== 不動点の定義 ==
+
+== 大小の比較 ==
+
+== 展開規則 ==
+
+略記を以下のようにして定義する。
+
+* <math> \delta ( \alpha ) = \Delta ( 0 , 0 , 0 , \alpha ) </math>
+* <math> \epsilon ( \alpha , \beta ) = \Epsilon ( \alpha , 0 , \beta ) </math>
+* <math> \Omega _ { 1 + \alpha } = \Epsilon ( 0 , 0 , \alpha ) </math>
+* <math> I _ \alpha = \Epsilon ( 1 , 0 , \alpha ) </math>
+
+計算規則を以下のようにして定義する。
+
+* <math> \Delta ( 0 , 0 , 0 , 0 ) = 1 </math>
+* <math> \Delta ( 0 , 0 , 0 , \alpha + 1 ) = \Delta ( 0 , 0 , 0 , \alpha ) \times \omega </math>
