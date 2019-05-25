@@ -308,6 +308,6 @@
 
 なお、ここで出てくる減算 <math> A - B </math> は <math> A \setminus B </math> で残った元に <math> A </math> に沿った順序を入れたものである。
 
-== 参照 ==
+== 脚注 ==
 
 <references/>
