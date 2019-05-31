@@ -5,9 +5,9 @@
 <math>
   a \langle n \rangle b =
     \begin{cases}
-      a + b,                                           & \quad \textrm{if} \quad n = 1 \\
-      a,                                               & \quad \textrm{if} \quad n = n' + 1 \land b = 1 \\
-      a \langle n' \rangle ( a \langle n \rangle b' ), & \quad \textrm{if} \quad n = n' + 1 \land b = b' + 1 \\
+      a + b,                                           & \quad \mathrm{if} \quad n = 1 \\
+      a,                                               & \quad \mathrm{if} \quad n = n' + 1 \land b = 1 \\
+      a \langle n' \rangle ( a \langle n \rangle b' ), & \quad \mathrm{if} \quad n = n' + 1 \land b = b' + 1 \\
     \end{cases}
 </math>
 
@@ -16,9 +16,9 @@
 <math>
   a [ n ] b =
     \begin{cases}
-      a + b,                   & \quad \textrm{if} \quad n = 1 \\
-      a,                       & \quad \textrm{if} \quad n = n' + 1 \land b = 1 \\
-      ( a [ n ] b' ) [ n' ] a, & \quad \textrm{if} \quad n = n' + 1 \land b = b' + 1 \\
+      a + b,                   & \quad \mathrm{if} \quad n = 1 \\
+      a,                       & \quad \mathrm{if} \quad n = n' + 1 \land b = 1 \\
+      ( a [ n ] b' ) [ n' ] a, & \quad \mathrm{if} \quad n = n' + 1 \land b = b' + 1 \\
     \end{cases}
 </math>
 
@@ -29,10 +29,11 @@
 <math>
   a \langle m, n \rangle =
     \begin{cases}
-      a + b,                                                 & \text{if} \quad m = 0      \land n = 1 \\
-      a,                                                     & \text{if} \quad m \neq 0   \land n \neq 1   \land b = 1 \\
-      a \langle m', b \rangle b,                             & \text{if} \quad m = m' + 1 \land n = 0      \land b = b' + 1 \\
-      a \langle m, n' \rangle ( a \langle m, n \rangle b' ), & \text{if} \quad m = m' + 1 \land n = n' + 1 \land b = b' + 1 \\
+      \mathrm{undefined},                                    & \quad \mathrm{if} \quad m = 0 \land n = 0 \\
+      a + b,                                                 & \quad \mathrm{if} \quad m = 0 \land n = 1 \\
+      a,                                                     & \quad \mathrm{if} \quad m = m' + 1 \land \mathrm{True} \land b = 1 \\
+      a \langle m', b \rangle b,                             & \quad \mathrm{if} \quad \quad m = m' + 1 \land n = 0      \land b = b' + 1 \\
+      a \langle m, n' \rangle ( a \langle m, n \rangle b' ), & \quad \mathrm{if} \quad \quad m = m' + 1 \land n = n' + 1 \land b = b' + 1 \\
     \end{cases}
 </math>
 
