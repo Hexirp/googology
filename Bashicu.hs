@@ -1,6 +1,12 @@
 module Bashicu where
  import Prelude
 
+ k : Int
+ k = iter bm 10 9
+
+ bm :: Int -> Int
+ bm = expand ([replicate (n + 1) 0, replicate (n + 1) 1], n)
+
  expand :: ([[Int]], Int) -> Int
  expand ([], n) = n
  expand (s,  n) = let x = length s in case is_empty_column (s !! (x - 1)) of
