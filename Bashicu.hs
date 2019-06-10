@@ -1,7 +1,7 @@
 module Bashicu where
  import Prelude
 
- k : Int
+ k :: Int
  k = iter bm 10 9
 
  bm :: Int -> Int
