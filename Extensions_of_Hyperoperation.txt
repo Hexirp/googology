@@ -42,11 +42,11 @@
       s ( a )                                                       & ( b = 1    \land m = 0    \land n = 1    ) \\
       a                                                             & ( b = 1    \land m = 0    \land n \geq 2 ) \\
       a                                                             & ( b = 1    \land m \geq 1                ) \\
-      \mathrm{undefined}                                            & ( b \geq 2 \land m = 0    \land n = 0    ) \\
-      s ( a \langle m , n ^ - \rangle b ^ - )                       & ( b \geq 2 \land m = 0    \land n = 1    ) \\
-      a \langle m , n ^ - \rangle ( a \langle m , n \rangle b ^ - ) & ( b \geq 2 \land m = 0    \land n \geq 2 ) \\
-      a \langle m ^ - , b \rangle b                                 & ( b \geq 2 \land m \geq 1 \land n = 0    ) \\
-      a \langle m , n ^ - \rangle ( a \langle m , n \rangle b ^ - ) & ( b \geq 2 \land m \geq 1 \land n \geq 1 ) \\
+      \mathrm{undefined}                                            & ( b \geq 2 \land n = 0    \land m = 0    ) \\
+      a \langle m ^ - , b \rangle b                                 & ( b \geq 2 \land n = 0    \land m \geq 1 ) \\
+      s ( a \langle m , n \rangle b ^ - )                           & ( b \geq 2 \land n = 1    \land m = 0    ) \\
+      a \langle m , n ^ - \rangle ( a \langle m , n \rangle b ^ - ) & ( b \geq 2 \land n = 1    \land m \geq 1 ) \\
+      a \langle m , n ^ - \rangle ( a \langle m , n \rangle b ^ - ) & ( b \geq 2 \land n \geq 2                ) \\
     \end{cases}
 </math>
 
