@@ -5,9 +5,13 @@
 <math>
   a \langle n \rangle b =
     \begin{cases}
-      a + b,                                           & \quad \mathrm{if} \quad n = 1 \\
-      a,                                               & \quad \mathrm{if} \quad n = n' + 1 \land b = 1 \\
-      a \langle n' \rangle ( a \langle n \rangle b' ), & \quad \mathrm{if} \quad n = n' + 1 \land b = b' + 1 \\
+      \mathrm{undefined} , & ( b = 0 ) \\
+      \mathrm{undefined} , & ( b = 1 \land n = 0 ) \\
+      s ( a ) , & ( b = 1 \land n = 1 ) \\
+      a , & ( b = 1 \land n \geq 2 ) \\
+      \mathrm{undefied} , & ( b \geq 2 \land n = 0 ) \\
+      s ( a \langle n \rangle b ^ - ) , & ( b \geq 2 \land n = 1 ) \\
+      a \langle n ^ - \rangle ( a \langle n \rangle b ^ - ), & ( b \geq 2 \land n \geq 2 ) \\
     \end{cases}
 </math>
 
