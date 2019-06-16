@@ -5,13 +5,13 @@
 <math>
   a \langle n \rangle b =
     \begin{cases}
-      \mathrm{undefined} , & ( b = 0 ) \\
-      \mathrm{undefined} , & ( b = 1 \land n = 0 ) \\
-      s ( a ) , & ( b = 1 \land n = 1 ) \\
-      a , & ( b = 1 \land n \geq 2 ) \\
-      \mathrm{undefied} , & ( b \geq 2 \land n = 0 ) \\
-      s ( a \langle n \rangle b ^ - ) , & ( b \geq 2 \land n = 1 ) \\
-      a \langle n ^ - \rangle ( a \langle n \rangle b ^ - ), & ( b \geq 2 \land n \geq 2 ) \\
+      \mathrm{undefined}                                    & ( b = 0 ) \\
+      \mathrm{undefined}                                    & ( b = 1 \land n = 0 ) \\
+      s ( a )                                               & ( b = 1 \land n = 1 ) \\
+      a                                                     & ( b = 1 \land n \geq 2 ) \\
+      \mathrm{undefined}                                    & ( b \geq 2 \land n = 0 ) \\
+      s ( a \langle n \rangle b ^ - )                       & ( b \geq 2 \land n = 1 ) \\
+      a \langle n ^ - \rangle ( a \langle n \rangle b ^ - ) & ( b \geq 2 \land n \geq 2 ) \\
     \end{cases}
 </math>
 
