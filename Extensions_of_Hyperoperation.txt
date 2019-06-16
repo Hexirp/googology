@@ -52,14 +52,22 @@
 
 同様の拡張を繰り返して多変数化が可能である。以下は三変数版。
 
-<math>
-  a \langle m, n, o \rangle =
+<<math>
+  a \langle m, n, o \rangle b =
     \begin{cases}
-      a + b,                                                       & \text{if} \quad m = 0      \land n = 0      \land o = 1 \\
-      a,                                                           & \text{if} \quad m \neq 0   \land n \neq 0   \land o \neq 1   \land b = 1 \\
-      a \langle m', b, 0 \rangle b,                                & \text{if} \quad m = m' + 1 \land n = 0      \land o = 0      \land b = b' + 1 \\
-      a \langle m, n', b \rangle b,                                & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = 0      \land b = b' + 1 \\
-      a \langle m, n, o' \rangle ( a \langle m, n, o \rangle b' ), & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = o' + 1 \land b = b' + 1 \\
+      \mathrm{undefined}                                                    & ( b = 0                                                 ) \\
+      \mathrm{undefined}                                                    & ( b = 1    \land m = 0    \land n = 0    \land o = 0    ) \\
+      s ( a )                                                               & ( b = 1    \land m = 0    \land n = 0    \land o = 1    ) \\
+      a                                                                     & ( b = 1    \land m = 0    \land n = 0    \land o \geq 2 ) \\
+      a                                                                     & ( b = 1    \land m = 0    \land n \geq 1                ) \\
+      a                                                                     & ( b = 1    \land m \geq 1                               ) \\
+      \mathrm{undefined}                                                    & ( b \geq 2 \land o = 0    \land n = 0    \land m = 0    ) \\
+      a \langle m ^ - , b , 0 \rangle b                                     & ( b \geq 2 \land o = 0    \land n = 0    \land m \geq 1 ) \\
+      a \langle m , n ^ - , b \rangle b                                     & ( b \geq 2 \land o = 0    \land n \geq 1                ) \\
+      s ( a \langle m , n , o \rangle b ^ - )                               & ( b \geq 2 \land o = 1    \land n = 0    \land m = 0    ) \\
+      a \langle m , n , o ^ - \rangle ( a \langle m , n , o \rangle b ^ - ) & ( b \geq 2 \land o = 1    \land n = 0    \land m \geq 1 ) \\
+      a \langle m , n , o ^ - \rangle ( a \langle m , n , o \rangle b ^ - ) & ( b \geq 2 \land o = 1    \land n \geq 1                ) \\
+      a \langle m , n , o ^ - \rangle ( a \langle m , n , o \rangle b ^ - ) & ( b \geq 2 \land o \geq 2                               ) \\
     \end{cases}
 </math>
 
