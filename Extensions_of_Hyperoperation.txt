@@ -35,9 +35,9 @@
 [[多変数アッカーマン関数]]は既に定義されているが、多変数ハイパー演算子は明確な定義を見たことがない。ここで定義を明示しておくことは役に立つと思う。最初に2変数版を以下に示す。この関数は ゼロではない自然数 <math> a, b </math> と自然数 <math> m, n </math> に対して、 <math> m, n </math> が両方ともゼロである場合を除いて定義されている。
 
 <math>
-  a \langle m, n \rangle =
+  a \langle m, n \rangle b =
     \begin{cases}
-      \mathrm{undefined}                                            & ( b = 0                   ) \\
+      \mathrm{undefined}                                            & ( b = 0                                  ) \\
       \mathrm{undefined}                                            & ( b = 1    \land m = 0    \land n = 0    ) \\
       s ( a )                                                       & ( b = 1    \land m = 0    \land n = 1    ) \\
       a                                                             & ( b = 1    \land m = 0    \land n \geq 2 ) \\
