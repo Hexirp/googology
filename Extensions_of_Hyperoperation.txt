@@ -5,13 +5,13 @@
 <math>
   a \langle n \rangle b =
     \begin{cases}
-      \mathrm{undefined}                                    & ( b = 0                   ) \\
-      \mathrm{undefined}                                    & ( b = 1    \land n = 0    ) \\
-      s ( a )                                               & ( b = 1    \land n = 1    ) \\
-      a                                                     & ( b = 1    \land n \geq 2 ) \\
-      \mathrm{undefined}                                    & ( b \geq 2 \land n = 0    ) \\
-      s ( a \langle n \rangle b ^ - )                       & ( b \geq 2 \land n = 1    ) \\
-      a \langle n ^ - \rangle ( a \langle n \rangle b ^ - ) & ( b \geq 2 \land n \geq 2 ) \\
+      \mathrm{undefined}                                & ( b = 0                   ) \\
+      \mathrm{undefined}                                & ( b = 1    \land n = 0    ) \\
+      s ( a )                                           & ( b = 1    \land n = 1    ) \\
+      a                                                 & ( b = 1    \land n \geq 2 ) \\
+      \mathrm{undefined}                                & ( b \geq 2 \land n = 0    ) \\
+      s ( a \langle n \rangle b^- )                     & ( b \geq 2 \land n = 1    ) \\
+      a \langle n^- \rangle ( a \langle n \rangle b^- ) & ( b \geq 2 \land n \geq 2 ) \\
     \end{cases}
 </math>
 
@@ -20,13 +20,13 @@
 <math>
   a [ n ] b =
     \begin{cases}
-      \mathrm{undefined}            & ( b = 0                   ) \\
-      \mathrm{undefined}            & ( b = 1    \land n = 0    ) \\
-      s ( a )                       & ( b = 1    \land n = 1    ) \\
-      a                             & ( b = 1    \land n \geq 2 ) \\
-      \mathrm{undefined}            & ( b \geq 2 \land n = 0    ) \\
-      s ( a [ n ] b ^ - )           & ( b \geq 2 \land n = 1    ) \\
-      ( a [ n ] b ^ - ) [ n ^ - ] a & ( b \geq 2 \land n \geq 2 ) \\
+      \mathrm{undefined}        & ( b = 0                   ) \\
+      \mathrm{undefined}        & ( b = 1    \land n = 0    ) \\
+      s ( a )                   & ( b = 1    \land n = 1    ) \\
+      a                         & ( b = 1    \land n \geq 2 ) \\
+      \mathrm{undefined}        & ( b \geq 2 \land n = 0    ) \\
+      s ( a [ n ] b^- )         & ( b \geq 2 \land n = 1    ) \\
+      ( a [ n ] b^- ) [ n^- ] a & ( b \geq 2 \land n \geq 2 ) \\
     \end{cases}
 </math>
 
@@ -37,16 +37,16 @@
 <math>
   a \langle m, n \rangle b =
     \begin{cases}
-      \mathrm{undefined}                                            & ( b = 0                                  ) \\
-      \mathrm{undefined}                                            & ( b = 1    \land m = 0    \land n = 0    ) \\
-      s ( a )                                                       & ( b = 1    \land m = 0    \land n = 1    ) \\
-      a                                                             & ( b = 1    \land m = 0    \land n \geq 2 ) \\
-      a                                                             & ( b = 1    \land m \geq 1                ) \\
-      \mathrm{undefined}                                            & ( b \geq 2 \land n = 0    \land m = 0    ) \\
-      a \langle m ^ - , b \rangle b                                 & ( b \geq 2 \land n = 0    \land m \geq 1 ) \\
-      s ( a \langle m , n \rangle b ^ - )                           & ( b \geq 2 \land n = 1    \land m = 0    ) \\
-      a \langle m , n ^ - \rangle ( a \langle m , n \rangle b ^ - ) & ( b \geq 2 \land n = 1    \land m \geq 1 ) \\
-      a \langle m , n ^ - \rangle ( a \langle m , n \rangle b ^ - ) & ( b \geq 2 \land n \geq 2                ) \\
+      \mathrm{undefined}                                      & ( b = 0                                  ) \\
+      \mathrm{undefined}                                      & ( b = 1    \land m = 0    \land n = 0    ) \\
+      s ( a )                                                 & ( b = 1    \land m = 0    \land n = 1    ) \\
+      a                                                       & ( b = 1    \land m = 0    \land n \geq 2 ) \\
+      a                                                       & ( b = 1    \land m \geq 1                ) \\
+      \mathrm{undefined}                                      & ( b \geq 2 \land n = 0    \land m = 0    ) \\
+      a \langle m^-, b \rangle b                              & ( b \geq 2 \land n = 0    \land m \geq 1 ) \\
+      s ( a \langle m, n \rangle b^- )                        & ( b \geq 2 \land n = 1    \land m = 0    ) \\
+      a \langle m, n^- \rangle ( a \langle m, n \rangle b^- ) & ( b \geq 2 \land n = 1    \land m \geq 1 ) \\
+      a \langle m, n^- \rangle ( a \langle m, n \rangle b^- ) & ( b \geq 2 \land n \geq 2                ) \\
     \end{cases}
 </math>
 
@@ -55,19 +55,19 @@
 <math>
   a \langle m, n, o \rangle b =
     \begin{cases}
-      \mathrm{undefined}                                                    & ( b = 0                                                 ) \\
-      \mathrm{undefined}                                                    & ( b = 1    \land m = 0    \land n = 0    \land o = 0    ) \\
-      s ( a )                                                               & ( b = 1    \land m = 0    \land n = 0    \land o = 1    ) \\
-      a                                                                     & ( b = 1    \land m = 0    \land n = 0    \land o \geq 2 ) \\
-      a                                                                     & ( b = 1    \land m = 0    \land n \geq 1                ) \\
-      a                                                                     & ( b = 1    \land m \geq 1                               ) \\
-      \mathrm{undefined}                                                    & ( b \geq 2 \land o = 0    \land n = 0    \land m = 0    ) \\
-      a \langle m ^ - , b , 0 \rangle b                                     & ( b \geq 2 \land o = 0    \land n = 0    \land m \geq 1 ) \\
-      a \langle m , n ^ - , b \rangle b                                     & ( b \geq 2 \land o = 0    \land n \geq 1                ) \\
-      s ( a \langle m , n , o \rangle b ^ - )                               & ( b \geq 2 \land o = 1    \land n = 0    \land m = 0    ) \\
-      a \langle m , n , o ^ - \rangle ( a \langle m , n , o \rangle b ^ - ) & ( b \geq 2 \land o = 1    \land n = 0    \land m \geq 1 ) \\
-      a \langle m , n , o ^ - \rangle ( a \langle m , n , o \rangle b ^ - ) & ( b \geq 2 \land o = 1    \land n \geq 1                ) \\
-      a \langle m , n , o ^ - \rangle ( a \langle m , n , o \rangle b ^ - ) & ( b \geq 2 \land o \geq 2                               ) \\
+      \mathrm{undefined}                                            & ( b = 0                                                 ) \\
+      \mathrm{undefined}                                            & ( b = 1    \land m = 0    \land n = 0    \land o = 0    ) \\
+      s ( a )                                                       & ( b = 1    \land m = 0    \land n = 0    \land o = 1    ) \\
+      a                                                             & ( b = 1    \land m = 0    \land n = 0    \land o \geq 2 ) \\
+      a                                                             & ( b = 1    \land m = 0    \land n \geq 1                ) \\
+      a                                                             & ( b = 1    \land m \geq 1                               ) \\
+      \mathrm{undefined}                                            & ( b \geq 2 \land o = 0    \land n = 0    \land m = 0    ) \\
+      a \langle m^-, b, 0 \rangle b                                 & ( b \geq 2 \land o = 0    \land n = 0    \land m \geq 1 ) \\
+      a \langle m, n^-, b \rangle b                                 & ( b \geq 2 \land o = 0    \land n \geq 1                ) \\
+      s ( a \langle m, n, o \rangle b^- )                           & ( b \geq 2 \land o = 1    \land n = 0    \land m = 0    ) \\
+      a \langle m, n, o^- \rangle ( a \langle m, n, o \rangle b^- ) & ( b \geq 2 \land o = 1    \land n = 0    \land m \geq 1 ) \\
+      a \langle m, n, o^- \rangle ( a \langle m, n, o \rangle b^- ) & ( b \geq 2 \land o = 1    \land n \geq 1                ) \\
+      a \langle m, n, o^- \rangle ( a \langle m, n, o \rangle b^- ) & ( b \geq 2 \land o \geq 2                               ) \\
     \end{cases}
 </math>
 
@@ -76,22 +76,22 @@
 <math>
   a \langle m, n, o, p \rangle b =
     \begin{cases}
-      \mathrm{undefined}                                                            & ( b = 0                                                                ) \\
-      \mathrm{undefined}                                                            & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p = 0    ) \\
-      s ( a )                                                                       & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p = 1    ) \\
-      a                                                                             & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p \geq 2 ) \\
-      a                                                                             & ( b = 1    \land m = 0    \land n = 0    \land o \geq 1                ) \\
-      a                                                                             & ( b = 1    \land m = 0    \land n \geq 1                               ) \\
-      a                                                                             & ( b = 1    \land m \geq 1                                              ) \\
-      \mathrm{undefined}                                                            & ( b \geq 2 \land p = 0    \land o = 0    \land n = 0    \land m = 0    ) \\
-      a \langle m ^ - , b , 0 , 0 \rangle b                                         & ( b \geq 2 \land p = 0    \land o = 0    \land n = 0    \land \geq 1   ) \\
-      a \langle m , n ^ - , b , 0 \rangle b                                         & ( b \geq 2 \land p = 0    \land o = 0    \land n \geq 1                ) \\
-      a \langle m , n , o ^ - , b \rangle b                                         & ( b \geq 2 \land p = 0    \land o \geq 1                               ) \\
-      s ( a \langle m , n , o \rangle b ^ - )                                       & ( b \geq 2 \land p = 1    \land o = 0    \land n = 0    \land m = 0    ) \\
-      a \langle m , n , o , p ^ - \rangle ( a \langle m , n , o , p \rangle b ^ - ) & ( b \geq 2 \land p = 1    \land o = 0    \land n = 0    \land m \geq 1 ) \\
-      a \langle m , n , o , p ^ - \rangle ( a \langle m , n , o , p \rangle b ^ - ) & ( b \geq 2 \land p = 1    \land o = 0    \land n \geq 1 ) \\
-      a \langle m , n , o , p ^ - \rangle ( a \langle m , n , o , p \rangle b ^ - ) & ( b \geq 2 \land p = 1    \land o \geq 1                ) \\
-      a \langle m , n , o , p ^ - \rangle ( a \langle m , n , o , p \rangle b ^ - ) & ( b \geq 2 \land p \geq 2                               ) \\
+      \mathrm{undefined}                                                  & ( b = 0                                                                ) \\
+      \mathrm{undefined}                                                  & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p = 0    ) \\
+      s ( a )                                                             & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p = 1    ) \\
+      a                                                                   & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p \geq 2 ) \\
+      a                                                                   & ( b = 1    \land m = 0    \land n = 0    \land o \geq 1                ) \\
+      a                                                                   & ( b = 1    \land m = 0    \land n \geq 1                               ) \\
+      a                                                                   & ( b = 1    \land m \geq 1                                              ) \\
+      \mathrm{undefined}                                                  & ( b \geq 2 \land p = 0    \land o = 0    \land n = 0    \land m = 0    ) \\
+      a \langle m^-, b, 0, 0 \rangle b                                    & ( b \geq 2 \land p = 0    \land o = 0    \land n = 0    \land \geq 1   ) \\
+      a \langle m, n^-, b, 0 \rangle b                                    & ( b \geq 2 \land p = 0    \land o = 0    \land n \geq 1                ) \\
+      a \langle m, n, o^-, b \rangle b                                    & ( b \geq 2 \land p = 0    \land o \geq 1                               ) \\
+      s ( a \langle m, n, o \rangle b^- )                                 & ( b \geq 2 \land p = 1    \land o = 0    \land n = 0    \land m = 0    ) \\
+      a \langle m, n, o, p^- \rangle ( a \langle m, n, o, p \rangle b^- ) & ( b \geq 2 \land p = 1    \land o = 0    \land n = 0    \land m \geq 1 ) \\
+      a \langle m, n, o, p^- \rangle ( a \langle m, n, o, p \rangle b^- ) & ( b \geq 2 \land p = 1    \land o = 0    \land n \geq 1                ) \\
+      a \langle m, n, o, p^- \rangle ( a \langle m, n, o, p \rangle b^- ) & ( b \geq 2 \land p = 1    \land o \geq 1                               ) \\
+      a \langle m, n, o, p^- \rangle ( a \langle m, n, o, p \rangle b^- ) & ( b \geq 2 \land p \geq 2                                              ) \\
     \end{cases}
 </math>
 
