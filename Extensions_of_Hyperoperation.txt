@@ -74,14 +74,24 @@
 四変数版。
 
 <math>
-  a \langle m, n, o, p \rangle =
+  a \langle m, n, o, p \rangle b =
     \begin{cases}
-      a + b,                                                             & \text{if} \quad m = 0      \land n = 0      \land o = 0      \land p = 1 \\
-      a,                                                                 & \text{if} \quad m \neq 0   \land n \neq 0   \land o \neq 0   \land p \neq 1   \land b = 1 \\
-      a \langle m', b, 0, 0 \rangle b,                                   & \text{if} \quad m = m' + 1 \land n = 0      \land o = 0      \land p = 0      \land b = b' + 1 \\
-      a \langle m, n', b, 0 \rangle b,                                   & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = 0      \land p = 0      \land b = b' + 1 \\
-      a \langle m, n, o', b \rangle b,                                   & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = o' + 1 \land p = 0      \land b = b' + 1 \\
-      a \langle m, n, o, p' \rangle ( a \langle m, n, o, p \rangle b' ), & \text{if} \quad m = m' + 1 \land n = n' + 1 \land o = o' + 1 \land p = p' + 1 \land b = b' + 1 \\
+      \mathrm{undefined}                                                            & ( b = 0                                                                ) \\
+      \mathrm{undefined}                                                            & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p = 0    ) \\
+      s ( a )                                                                       & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p = 1    ) \\
+      a                                                                             & ( b = 1    \land m = 0    \land n = 0    \land o = 0    \land p \geq 2 ) \\
+      a                                                                             & ( b = 1    \land m = 0    \land n = 0    \land o \geq 1                ) \\
+      a                                                                             & ( b = 1    \land m = 0    \land n \geq 1                               ) \\
+      a                                                                             & ( b = 1    \land m \geq 1                                              ) \\
+      \mathrm{undefined}                                                            & ( b \geq 2 \land p = 0    \land o = 0    \land n = 0    \land m = 0    ) \\
+      a \langle m ^ - , b , 0 , 0 \rangle b                                         & ( b \geq 2 \land p = 0    \land o = 0    \land n = 0    \land \geq 1   ) \\
+      a \langle m , n ^ - , b , 0 \rangle b                                         & ( b \geq 2 \land p = 0    \land o = 0    \land n \geq 1                ) \\
+      a \langle m , n , o ^ - , b \rangle b                                         & ( b \geq 2 \land p = 0    \land o \geq 1                               ) \\
+      s ( a \langle m , n , o \rangle b ^ - )                                       & ( b \geq 2 \land p = 1    \land o = 0    \land n = 0    \land m = 0    ) \\
+      a \langle m , n , o , p ^ - \rangle ( a \langle m , n , o , p \rangle b ^ - ) & ( b \geq 2 \land p = 1    \land o = 0    \land n = 0    \land m \geq 1 ) \\
+      a \langle m , n , o , p ^ - \rangle ( a \langle m , n , o , p \rangle b ^ - ) & ( b \geq 2 \land p = 1    \land o = 0    \land n \geq 1 ) \\
+      a \langle m , n , o , p ^ - \rangle ( a \langle m , n , o , p \rangle b ^ - ) & ( b \geq 2 \land p = 1    \land o \geq 1                ) \\
+      a \langle m , n , o , p ^ - \rangle ( a \langle m , n , o , p \rangle b ^ - ) & ( b \geq 2 \land p \geq 2                               ) \\
     \end{cases}
 </math>
 
