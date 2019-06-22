@@ -102,10 +102,15 @@
 <math>
   x \langle \alpha \rangle y =
     \begin{cases}
-      x + y,                                                     & \text{if} \quad \alpha = 1 \\
-      x,                                                         & \text{if} \quad \alpha \neq 1             \land y = 1 \\
-      x \langle \alpha' \rangle ( x \langle \alpha \rangle y' ), & \text{if} \quad \alpha = \alpha' + 1      \land y = y' + 1 \\
-      x \langle \alpha [ y ] \rangle y,                          & \text{if} \quad \mathbf{Limit} ( \alpha ) \land y = y' + 1 \\
+      \mathrm{undefined} & ( y = 0 ) \\
+      \mathrm{undefined} & ( y = 1 \land Z ( \alpha ) ) \\
+      s ( a ) & ( y = 1 \land O ( \alpha ) ) \\
+      a & ( y = 1 \land S ( \alpha ) ) \\
+      a & ( y = 1 \land L ( \alpha ) ) \\
+      \mathrm{undefined} & ( y \geq 2 \land Z ( \alpha ) ) \\
+      s ( x \langle \alpha \rangle y^- ) & ( y \geq 2 \land O ( \alpha ) ) \\
+      x \langle \alpha^- \rangle ( x \langle \alpha \rangle y^- ) & ( y \geq 2 \land S ( \alpha ) ) \\
+      x \langle \alpha [ y ] \rangle y & ( y \geq 2 \land S ( \alpha ) ) \\
     \end{cases}
 </math>
 
