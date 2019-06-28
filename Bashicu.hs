@@ -27,3 +27,11 @@ module Bashicu where
 
  bad_part :: [[Int]] -> Int -> [[Int]]
  bad_part = undefined
+
+ type Matrix = [[Int]]
+
+ data Signature = Zero | Succ | Limit
+
+ sig :: Matrix -> Signature
+ sig [] = Zero
+ sig (x:xs) = if all (0 ==) x then Succ else Limit
