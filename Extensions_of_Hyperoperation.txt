@@ -158,6 +158,22 @@
 
 <math> a \langle n \rangle ( a \langle n + 1 \rangle 0 ) = a \langle n + 1 \rangle 1 = a </math>
 
+具体的には、以下のようになる。
+
+<math>
+  a \langle n \rangle 0 =
+    \begin{cases}
+      \mathrm{undefined} & ( n = 0 )    \\
+      a                  & ( n = 1 )    \\
+      0                  & ( n = 2 )    \\
+      1                  & ( n \geq 3 ) \\
+    \end{cases}
+</math>
+
 しかし、弱ハイパー演算子では整合的に定義できない。ハイパー演算子におけるテトレーションレベルになると期待される性質を満たすような自然数が存在しなくなってしまうからだ。
 
 <math> ( a [ n ] 0 ) [ n + 1 ] a = a [ n + 1 ] 1 = a </math>
+
+例えば、以下のような式を満たす自然数は存在しない。
+
+<math> n [ 2 + 1 ] 3 = 3 [ 2 + 1 ] 1 = 3 </math>
