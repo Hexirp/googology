@@ -39,6 +39,9 @@ module Bashicu where
  sig (x:xs) = if all (0 ==) x then Succ xs else Limit x xs
 
  parent :: Matrix -> Int -> Int -> Int
- parent s 0 x = go x where
-  go n = if s ! (n + 1) ! 0 < s ! x ! 0 then n + 1 else go (n + 1)
- parent s y x = go 
+ parent s 0 x = go (x + 1) where
+  go n = if s ! n ! 0 < s ! x ! 0 then n else go (n + 1)
+ parent s y x = go x where
+  go n = if n `elem` ancestor s (y - 1) x
+   then if s ! n ! y < s ! x ! y then n else go (n + 1)
+   else go (n + 1)
