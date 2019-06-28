@@ -28,10 +28,17 @@ module Bashicu where
  bad_part :: [[Int]] -> Int -> [[Int]]
  bad_part = undefined
 
- type Matrix = [[Int]]
+ type Matrix = [Sequence]
 
- data Signature = Zero | Succ | Limit
+ type Sequence = [Int]
+
+ data Signature = Zero | Succ Matrix | Limit Sequence Matrix
 
  sig :: Matrix -> Signature
  sig [] = Zero
- sig (x:xs) = if all (0 ==) x then Succ else Limit
+ sig (x:xs) = if all (0 ==) x then Succ xs else Limit x xs
+
+ parent :: Matrix -> Int -> Int -> Int
+ parent s 0 x = go x where
+  go n = if s ! (n + 1) ! 0 < s ! x ! 0 then n + 1 else go (n + 1)
+ parent s y x = go 
