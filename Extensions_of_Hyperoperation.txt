@@ -146,7 +146,7 @@
       a                                                                                  & ( O ( \gamma ) \land L ( \beta ) ) \\
       \mathrm{undefined}                                                                 & ( S ( \gamma ) \land Z ( \beta ) ) \\
       s ( \alpha [ \beta ] \gamma^- )                                                    & ( S ( \gamma ) \land O ( \beta ) ) \\
-      \alpha [ \beta^- ] ( \alpha [ \beta ] \gamma^- )                                   & ( S ( \gamma ) \land S ( \beta ) ) \\
+      ( \alpha [ \beta ] \gamma^- ) [ \beta^- ] \alpha                                   & ( S ( \gamma ) \land S ( \beta ) ) \\
       \sup \{ \alpha [ \beta' ] \gamma \mid \beta' < \beta \land \lnot Z ( \beta ) \}    & ( S ( \gamma ) \land L ( \beta ) ) \\
       \sup \{ \alpha [ \beta ] \gamma' \mid \gamma' < \gamma \land \lnot Z ( \gamma ) \} & ( L ( \gamma )                   ) \\
     \end{cases}
