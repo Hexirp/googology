@@ -48,4 +48,4 @@ module Bashicu where
 
  ancestor :: Matrix -> Int -> Int -> [Int]
  ancestor s y x = go x where
-  go n = if n == length s - 1 then [n] else n : go (parent s y n)
+  go n = n : if n == length s - 1 then [] else go (parent s y n)
