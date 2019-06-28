@@ -137,13 +137,18 @@
 弱ハイパー演算子に同様の拡張を施すと <math> \epsilon_0 </math> を超えても増加しつづける。
 
 <math>
-  a [ n ] b =
+  \alpha [ \beta ] \gamma =
     \begin{cases}
-      a + b,                                             & \text{if} \quad n = 1 \\
-      a,                                                 & \text{if} \quad n \neq 1             \land b = 1 \\
-      ( a [ n ] b' ) [ n' ] a,                           & \text{if} \quad n = n' + 1           \land b = b' + 1 \\
-      \sup \{ a [ n' ] b \mid n' < n \land n' \neq 0 \}, & \text{if} \quad \mathbf{Limit} ( n ) \land b = b' + 1 \\
-      \sup \{ a [ n ] b' \mid b' < b \land b' \neq 0 \}, & \text{if} \quad n \neq 1             \land \mathbf{Limit} ( b ) \\
+      \mathrm{undefined}                                                                 & ( Z ( \gamma )                   ) \\
+      \mathrm{undefined}                                                                 & ( O ( \gamma ) \land Z ( \beta ) ) \\
+      s ( a )                                                                            & ( O ( \gamma ) \land O ( \beta ) ) \\
+      a                                                                                  & ( O ( \gamma ) \land S ( \beta ) ) \\
+      a                                                                                  & ( O ( \gamma ) \land L ( \beta ) ) \\
+      \mathrm{undefined}                                                                 & ( S ( \gamma ) \land Z ( \beta ) ) \\
+      s ( \alpha [ \beta ] \gamma^- )                                                    & ( S ( \gamma ) \land O ( \beta ) ) \\
+      \alpha [ \beta^- ] ( \alpha [ \beta ] \gamma^- )                                   & ( S ( \gamma ) \land S ( \beta ) ) \\
+      \sup \{ \alpha [ \beta' ] \gamma \mid \beta' < \beta \land \lnot Z ( \beta ) \}    & ( S ( \gamma ) \land L ( \beta ) ) \\
+      \sup \{ \alpha [ \beta ] \gamma' \mid \gamma' < \gamma \land \lnot Z ( \gamma ) \} & ( L ( \gamma )                   ) \\
     \end{cases}
 </math>
 
