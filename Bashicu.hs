@@ -45,3 +45,7 @@ module Bashicu where
   go n = if n `elem` ancestor s (y - 1) x
    then if s ! n ! y < s ! x ! y then n else go (n + 1)
    else go (n + 1)
+
+ ancestor :: Matrix -> Int -> Int -> [Int]
+ ancestor s y x = go x where
+  go n = if n == length s - 1 then [n] else n : go (parent s y n)
