@@ -30,6 +30,10 @@
     \end{cases}
 </math>
 
+ただし、 <math> s ( n ) </math> は以下のように定義される後者関数である。
+
+<math> s ( n ) = n + 1 </math>
+
 == 多変数ハイパー演算子 ==
 
 [[多変数アッカーマン関数]]は既に定義されているが、多変数ハイパー演算子は明確な定義を見たことがない。ここで定義を明示しておくことは役に立つと思う。最初に2変数版を以下に示す。この関数は ゼロではない自然数 <math> a, b </math> と自然数 <math> m, n </math> に対して、 <math> m, n </math> が両方ともゼロである場合を除いて定義されている。
@@ -112,6 +116,17 @@
       x \langle \alpha^- \rangle ( x \langle \alpha \rangle y^- ) & ( y \geq 2 \land S ( \alpha ) ) \\
       x \langle \alpha [ y ] \rangle y                            & ( y \geq 2 \land L ( \alpha ) ) \\
     \end{cases}
+</math>
+
+ただし、以下のような述語を条件に用いた。
+
+<math>
+  \begin{eqnarray*}
+    Z ( \alpha ) \coloneqq \alpha = 0 \\
+    O ( \alpha ) \coloneqq \alpha = 1 \\
+    S ( \alpha ) \coloneqq \alpha \neq 1 \land \exists \beta\, \alpha = \beta + 1 \\
+    L ( \alpha ) \coloneqq \\
+  \end{eqnarray*}
 </math>
 
 == 超限ハイパー演算子 ==
