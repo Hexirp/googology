@@ -121,16 +121,16 @@
 <math>
   \alpha \langle \beta \rangle \gamma =
     \begin{cases}
-      \mathrm{undefined} & ( Z ( \gamma ) ) \\
-      \mathrm{undefined} & ( O ( \gamma ) \land Z ( \beta ) ) \\
-      s ( a ) & ( O ( \gamma ) \land O ( \beta ) ) \\
-      a & ( O ( \gamma ) \land S ( \beta ) ) \\
-      a & ( O ( \gamma ) \land L ( \beta ) ) \\
-      \mathrm{undefined} & ( S ( \gamma ) \land Z ( \beta ) ) \\
-      s ( \alpha \langle \beta \rangle \gamma^- ) & ( S ( \gamma ) \land O ( \beta ) ) \\
-      \alpha \langle \beta^- \rangle ( \alpha \langle \beta \rangle \gamma^- ) & ( S ( \gamma ) \land S ( \beta ) ) \\
-      \sup \{ \alpha \langle \beta' \rangle \gamma \mid \beta' < \beta \land \lnot Z ( \beta ) \} & ( S ( \gamma ) \land L ( \beta ) ) \\
-      \mathrm{undefined} & ( L ( \gamma ) \land Z ( \beta ) ) \\
+      \mathrm{undefined}                                                                             & ( Z ( \gamma )                   ) \\
+      \mathrm{undefined}                                                                             & ( O ( \gamma ) \land Z ( \beta ) ) \\
+      s ( a )                                                                                        & ( O ( \gamma ) \land O ( \beta ) ) \\
+      a                                                                                              & ( O ( \gamma ) \land S ( \beta ) ) \\
+      a                                                                                              & ( O ( \gamma ) \land L ( \beta ) ) \\
+      \mathrm{undefined}                                                                             & ( S ( \gamma ) \land Z ( \beta ) ) \\
+      s ( \alpha \langle \beta \rangle \gamma^- )                                                    & ( S ( \gamma ) \land O ( \beta ) ) \\
+      \alpha \langle \beta^- \rangle ( \alpha \langle \beta \rangle \gamma^- )                       & ( S ( \gamma ) \land S ( \beta ) ) \\
+      \sup \{ \alpha \langle \beta' \rangle \gamma \mid \beta' < \beta \land \lnot Z ( \beta ) \}    & ( S ( \gamma ) \land L ( \beta ) ) \\
+      \mathrm{undefined}                                                                             & ( L ( \gamma ) \land Z ( \beta ) ) \\
       \sup \{ \alpha \langle \beta \rangle \gamma' \mid \gamma' < \gamma \land \lnot Z ( \gamma ) \} & ( L ( \gamma ) \land O ( \beta ) ) \\
       \sup \{ \alpha \langle \beta \rangle \gamma' \mid \gamma' < \gamma \land \lnot Z ( \gamma ) \} & ( L ( \gamma ) \land S ( \beta ) ) \\
       \sup \{ \alpha \langle \beta \rangle \gamma' \mid \gamma' < \gamma \land \lnot Z ( \gamma ) \} & ( L ( \gamma ) \land L ( \beta ) ) \\
