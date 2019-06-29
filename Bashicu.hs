@@ -38,14 +38,30 @@ module Bashicu where
  sig [] = Zero
  sig (x:xs) = if all (0 ==) x then Succ xs else Limit x xs
 
+ -- エラーの可能性あり
  parent :: Matrix -> Int -> Int -> Int
  parent s 0 x = go (x + 1) where
+  go :: Int -> Int
   go n = if s ! n ! 0 < s ! x ! 0 then n else go (n + 1)
  parent s y x = go x where
+  go :: Int -> Int
   go n = if n `elem` ancestor s (y - 1) x
    then if s ! n ! y < s ! x ! y then n else go (n + 1)
    else go (n + 1)
 
+ -- エラーの可能性あり
  ancestor :: Matrix -> Int -> Int -> [Int]
  ancestor s y x = go x where
   go n = n : if n == length s - 1 then [] else go (parent s y n)
+
+ -- エラーの可能性あり
+ t :: Sequence -> Int
+ t x = fromMaybe undefined $ go x where
+  go :: [Int] -> Maybe Int
+  go [] = Nothing
+  go (x:xs) = let nu = go xs in
+   if x == 0
+    then nu
+    else case nu of
+     Nothing -> Just 0
+     Just n -> Just (n + 1)
