@@ -85,3 +85,20 @@ module Bashicu where
  -- エラーの可能性あり
  bad_element :: Sequence -> Matrix -> Int -> Int -> Int -> Int
  bad_element e s a x y = s ! (x + 1)
+
+ type Matrix = Array Integer Sequence
+
+ type Sequence = Array Integer Integer
+
+ data Signature = Zero | Succ Matrix | Limit Array Sequence
+
+ type PMatrix = Array Integer PSequence
+
+ type PSequence = Array Integer PIndex
+
+ data PIndex = IsRoot | HasParent Integer
+
+ parent :: Matrix -> Integer -> Integer -> PIndex
+ parent s x 0 = go (x - 1) where
+  go n = if s ! n ! 0 < s ! x ! n then n else go (n - 1)
+ parent s x y = go (x - 1) where
