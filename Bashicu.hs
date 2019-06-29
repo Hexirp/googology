@@ -72,4 +72,8 @@ module Bashicu where
 
  -- エラーの可能性あり
  split :: Sequence -> Matrix -> (Matrix, Matrix)
- split e s = splitAt (bad_root e s + 1) s
+ split e s = splitAt (bad_root e s) s
+
+ -- エラーの可能性あり
+ apper :: Sequence -> Matrix -> Int -> Int -> Int
+ apper e s x y = if bad_root e s `elem` ancestor (e : s) y (r + x) then 1 else 0
