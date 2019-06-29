@@ -106,4 +106,6 @@ module Bashicu where
 
  ancestor :: Matrix -> Integer -> Integer -> [Integer]
  ancestor s y x = go x where
-  go n = n : (if n == 0 then [] else go (parent s y n))
+  go n = n : case parent s y n of
+   IsRoot -> []
+   HasParent p -> go p
