@@ -99,7 +99,11 @@ module Bashicu where
  data PIndex = IsRoot | HasParent Integer
 
  parent :: Matrix -> Integer -> Integer -> PIndex
- parent s x 0 = go (x - 1) where
+ parent s 0 x = go (x - 1) where
   go n = if s ! n ! 0 < s ! x ! n then HasParent n else if n == 0 then IsRoot else go (n - 1)
- parent s x y = go (x - 1) where
-  go n = if elem n (ancestor s x y) then if s ! n ! 0 < s ! x ! n then HasParent n else
+ parent s y x = go (x - 1) where
+  go n = if (n `elem` ancestor s y x) && (s ! n ! 0 < s ! x ! n) then HasParent n else if n == 0 then IsRoot else go (n - 1)
+
+ ancestor :: Matrix -> Integer -> Integer -> [Integer]
+ ancestor s y x = go x where
+  go n = n : (if n == 0 then [] else go (parent s y n))
