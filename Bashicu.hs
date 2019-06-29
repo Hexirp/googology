@@ -80,7 +80,7 @@ module Bashicu where
 
  -- エラーの可能性あり
  delta :: Sequence -> Matrix -> Int -> Int
- delta e s y = if y > t e then s ! x ! y - s ! (bad_root e s + 1) ! y else 0
+ delta e s y = if y > t e then e ! y - s ! (bad_root e s + 1) ! y else 0
 
  -- エラーの可能性あり
  bad_element :: Sequence -> Matrix -> Int -> Int -> Int -> Int
