@@ -109,3 +109,6 @@ module Bashicu where
   go n = n : case parent s y n of
    IsRoot -> []
    HasParent p -> go p
+
+ badroot :: Matrix -> Integer
+ badroot m = parent m (level m) (snd $ bounds m)
