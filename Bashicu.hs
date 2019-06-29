@@ -36,7 +36,7 @@ module Bashicu where
 
  sig :: Matrix -> Signature
  sig [] = Zero
- sig (x:xs) = if all (0 ==) x then Succ xs else Limit x xs
+ sig (x : xs) = if all (0 ==) x then Succ xs else Limit x xs
 
  -- エラーの可能性あり
  parent :: Matrix -> Int -> Int -> Int
@@ -59,9 +59,17 @@ module Bashicu where
  t x = fromMaybe undefined $ go x where
   go :: [Int] -> Maybe Int
   go [] = Nothing
-  go (x:xs) = let nu = go xs in
+  go (x : xs) = let nu = go xs in
    if x == 0
     then nu
     else case nu of
      Nothing -> Just 0
      Just n -> Just (n + 1)
+
+ -- エラーの可能性あり
+ bad_root :: Sequence -> Matrix -> Int
+ bad_root e s = parent (e : s) (t e) (length s - 1)
+
+ -- エラーの可能性あり
+ split :: Sequence -> Matrix -> (Matrix, Matrix)
+ split e s = splitAt (bad_root e s + 1) s
