@@ -76,4 +76,12 @@ module Bashicu where
 
  -- エラーの可能性あり
  apper :: Sequence -> Matrix -> Int -> Int -> Int
- apper e s x y = if bad_root e s `elem` ancestor (e : s) y (r + x) then 1 else 0
+ apper e s x y = if bad_root e s `elem` ancestor (e : s) y x then 1 else 0
+
+ -- エラーの可能性あり
+ delta :: Sequence -> Matrix -> Int -> Int
+ delta e s y = if y > t e then s ! x ! y - s ! (bad_root e s + 1) ! y else 0
+
+ -- エラーの可能性あり
+ bad_element :: Sequence -> Matrix -> Int -> Int -> Int -> Int
+ bad_element e s a x y = s ! (x + 1)
