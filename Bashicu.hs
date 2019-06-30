@@ -54,7 +54,7 @@ module Bashicu where
  apper e s x y = if badroot e s `elem` ancestor (e : s) y (x + 1) then 1 else 0
 
  delta :: Sequence -> Matrix -> Integer -> Integer
- delta e b y = if y > level e then e ! y - b ! (mlength b - 1) ! y else 0
+ delta e b y = if y < level e then e ! y - b ! (mlength b - 1) ! y else 0
 
  ecopies
   :: Sequence -> (Matrix, Matrix) -> Integer -> Integer -> Integer
