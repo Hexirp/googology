@@ -74,6 +74,34 @@ module Bashicu where
  expand :: Sequence -> Matrix -> Integer -> Matrix
  expand e s n = copies e (split e s) n
 
+ data Signature = Zero | Succ Matrix | Limit Sequence Matrix
+
+ data Trampoline a b = More a | Done b
+
+ sign :: Matrix -> Signature
+ sign [] = Zero
+ sign (x : xs) = if all (0 ==) x then Succ xs else Limit x xs
+
+ step
+  :: (Integer -> Integer) -> (Matrix, Integer)
+  -> Either (Matrix, Integer) Integer
+ step f (s, n) = case sign s of
+  Zero -> n
+  Succ s' -> Left (s', f n)
+  Limit e s -> Left (expand e s (f n), f n)
+
+ calc
+  :: (Integer -> Integer) -> Matrix -> Integer -> Integer
+ calc f s n = case step f (s, n) of
+  Left (s', n') -> calc f s' n'
+  Right n -> n
+
+ bm :: Integer -> Integer
+ bm n = calc (^ 2) [ireplicate (n + 1) 1, ireplicate (n + 1) 0] n
+
+ bm_number :: Integer
+ bm_number = iter 10 bm 9
+
 
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
@@ -108,3 +136,11 @@ module Bashicu where
  idrop 0 x = x
  idrop n [] = undefined
  idrop n (x : xs) =i idrop (n - 1) xs
+
+ ireplicate :: Integer -> a -> [a]
+ ireplicate 0 x = []
+ ireplicate n x = x : ireplicate (n - 1) x
+
+ iter :: Integer -> (a -> a) -> a -> a
+ iter 0 f = id
+ iter n f = f . iter (n - 1) f
