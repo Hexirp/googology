@@ -22,11 +22,20 @@ module Bashicu where
    HasParent p' -> go p'
 
  level :: Sequence -> Integer
- level e = fromMaybe undefined $ go e where
-  go [] = Nothing
-  go (x : xs) = let nu = go xs in case nu of
-   Nothing -> if x == 0 then Nothing else Just 0
-   Just n -> Just (n + 1)
+ level e = case go e of
+   Nothing -> undefined
+   Just n -> n
+  where
+   go [] = Nothing
+   go (x : xs) = let nu = go xs in case nu of
+    Nothing -> if x == 0 then Nothing else Just 0
+    Just n -> Just (n + 1)
+
+ badroot :: Sequence -> Matrix -> Integer
+ badroot e s = case parent (e : s) (level e) 0 of
+  IsRoot -> undefined
+  PIndex n -> n
+
 
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
