@@ -114,4 +114,4 @@ module Bashicu where
 
 
  main :: IO ()
- main = print $ ancestor [[4,2,0],[3,3,3],[2,2,2],[1,1,1],[0,0,0]] 0 3
+ main = print $ expand [4,2,0] [[3,3,3],[2,2,2],[1,1,1],[0,0,0]] 4
