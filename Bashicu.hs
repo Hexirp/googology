@@ -9,11 +9,17 @@ module Bashicu where
 
  parent :: Matrix -> Integer -> Integer -> PIndex
  parent s y x = go (x + 1) where
-  go p = if is_ancestor s p y x && s ! p ! y < s ! x ! y then HasParent p else if p == length s - 1 then IsRoot else go (p + 1)
+  go p = if is_ancestor s p y x && s ! p ! y < s ! x ! y then HasParent p else if p == mlength s - 1 then IsRoot else go (p + 1)
 
  is_ancestor :: Matrix -> Integer -> Integer -> Integer -> Bool
  is_ancestor s p 0 x = True
  is_ancestor s p y x = p `elem` ancestor s (y - 1) x
+
+ ancestor :: Matrix -> Integer -> Integer -> [Integer]
+ ancestor s y x = go x where
+  go p = p : let nu = parent s y x in case nu of
+   IsRoot -> []
+   HasParent p' -> go p'
 
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
