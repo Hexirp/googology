@@ -50,9 +50,8 @@ module Bashicu where
  badpart :: Sequence -> Matrix -> Matrix
  badpart e s = fst $ split e s
 
- -- ancestor (e : s) y (x + 1) = ancestor s y x
  apper :: Sequence -> Matrix -> Integer -> Integer -> Integer
- apper e s x y = if badroot e s `elem` ancestor s y x then 1 else 0
+ apper e s x y = if badroot e s `elem` ancestor (e : s) y (x + 1) then 1 else 0
 
  delta :: Sequence -> Matrix -> Integer -> Integer
  delta e b y = if y > level e then e ! y - b ! (mlength b - 1) ! y else 0
