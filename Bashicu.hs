@@ -40,8 +40,9 @@ module Bashicu where
   IsRoot -> undefined
   HasParent n -> n
 
+ -- isplitAt (badroot e s + 1) (e : s) = isplitAt (badroot e s) s
  split :: Sequence -> Matrix -> (Matrix, Matrix)
- split e s = isplitAt (badroot e s + 1) s
+ split e s = isplitAt (badroot e s) s
 
  goodpart :: Sequence -> Matrix -> Matrix
  goodpart e s = snd $ split e s
@@ -49,6 +50,7 @@ module Bashicu where
  badpart :: Sequence -> Matrix -> Matrix
  badpart e s = fst $ split e s
 
+ -- ancestor (e : s) y (x + 1) = ancestor s y x
  apper :: Sequence -> Matrix -> Integer -> Integer -> Integer
  apper e s x y = if badroot e s `elem` ancestor s y x then 1 else 0
 
