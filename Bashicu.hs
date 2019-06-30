@@ -8,7 +8,7 @@ module Bashicu where
  data PIndex = IsRoot | HasParent Integer deriving (Eq, Ord, Show)
 
  parent :: Matrix -> Integer -> Integer -> PIndex
- parent s y x = go (x + 1) where
+ parent s y x = go x where
   go p = if is_ancestor s p y x && s ! p ! y < s ! x ! y
    then HasParent p
    else if p == mlength s - 1
