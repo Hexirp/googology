@@ -41,7 +41,7 @@ module Bashicu where
   HasParent n -> n
 
  split :: Sequence -> Matrix -> (Matrix, Matrix)
- split e s = splitAt (badroot e s + 1) s
+ split e s = isplitAt (badroot e s + 1) s
 
  goodpart :: Sequence -> Matrix -> Matrix
  goodpart e s = snd $ split e s
@@ -65,7 +65,7 @@ module Bashicu where
   map (\y -> ecopies e (b, g) a x y) [ 0 .. elength e - 1 ]
 
  mcopies :: Sequence -> (Matrix, Matrix) -> Integer -> Matrix
- mcopies e (b, g) a = map (\x -> mcopies e (b, g) a x) [ 0 .. mlength b - 1 ]
+ mcopies e (b, g) a = map (\x -> scopies e (b, g) a x) [ 0 .. mlength b - 1 ]
 
  copies :: Sequence -> (Matrix, Matrix) -> Integer -> Matrix
  copies e (b, g) n = go n where
@@ -73,6 +73,7 @@ module Bashicu where
 
  expand :: Sequence -> Matrix -> Integer -> Matrix
  expand e s n = copies e (split e s) n
+
 
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
@@ -94,3 +95,16 @@ module Bashicu where
 
  elength :: Sequence -> Integer
  elength = ilength
+
+ isplitAt :: Integer -> [a] -> ([a], [a])
+ isplitAt n xs = (itake n xs, idrop n xs)
+
+ itake :: Integer -> [a] -> [a]
+ itake 0 _ = []
+ itake n [] = undefined
+ itake n (x : xs) = x : itake (n - 1) xs
+
+ idrop :: Integer -> [a] -> [a]
+ idrop 0 x = x
+ idrop n [] = undefined
+ idrop n (x : xs) = idrop (n - 1) xs
