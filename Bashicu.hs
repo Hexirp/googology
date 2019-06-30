@@ -5,7 +5,7 @@ module Bashicu where
 
  type Sequence = [Integer]
 
- data PIndex = IsRoot | HasParent Integer
+ data PIndex = IsRoot | HasParent Integer deriving (Eq, Ord, Show)
 
  parent :: Matrix -> Integer -> Integer -> PIndex
  parent s y x = go (x + 1) where
