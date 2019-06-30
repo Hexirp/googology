@@ -23,7 +23,7 @@ module Bashicu where
 
  ancestor :: Matrix -> Integer -> Integer -> [Integer]
  ancestor s y x = go x where
-  go p = trace ("p : " ++ show p) $ p : let nu = parent s y x in case nu of
+  go p = trace ("p : " ++ show p) $ p : let nu = parent s y p in case nu of
    IsRoot -> []
    HasParent p' -> go p'
 
