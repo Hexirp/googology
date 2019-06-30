@@ -41,7 +41,7 @@ module Bashicu where
   HasParent n -> n
 
  split :: Sequence -> Matrix -> (Matrix, Matrix)
- split e s = isplitAt (badroot e s + 1) (e : s)
+ split e s = isplitAt (badroot e s) s
 
  goodpart :: Sequence -> Matrix -> Matrix
  goodpart e s = snd $ split e s
@@ -74,9 +74,9 @@ module Bashicu where
  expand :: Sequence -> Matrix -> Integer -> Matrix
  expand e s n = copies e (split e s) n
 
- data Signature = Zero | Succ Matrix | Limit Sequence Matrix
+ data Signature = Zero | Succ Matrix | Limit Sequence Matrix deriving (Eq, Show)
 
- data Trampoline a b = More a | Done b
+ data Trampoline a b = More a | Done b deriving (Eq, Show)
 
  sign :: Matrix -> Signature
  sign [] = Zero
@@ -86,7 +86,7 @@ module Bashicu where
   :: (Integer -> Integer) -> (Matrix, Integer)
   -> Either (Matrix, Integer) Integer
  step f (s, n) = case sign s of
-  Zero -> n
+  Zero -> Right n
   Succ s' -> Left (s', f n)
   Limit e s -> Left (expand e s (f n), f n)
 
@@ -135,7 +135,7 @@ module Bashicu where
  idrop :: Integer -> [a] -> [a]
  idrop 0 x = x
  idrop n [] = undefined
- idrop n (x : xs) =i idrop (n - 1) xs
+ idrop n (x : xs) = idrop (n - 1) xs
 
  ireplicate :: Integer -> a -> [a]
  ireplicate 0 x = []
