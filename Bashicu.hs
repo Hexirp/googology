@@ -51,6 +51,15 @@ module Bashicu where
  delta :: Sequence -> Matrix -> Integer -> Integer
  delta e b y = if y > level e then e ! y - b ! (mlength b - 1) ! y else 0
 
+ ecopies :: Sequence -> (Matrix, Matrix) -> Integer -> Integer -> Integer -> Integer
+ ecopies e (b, g) a x y = b ! x ! y + a * delta e b y * apper e (b ++ g) x y
+
+ scopies :: Sequence -> (Matrix, Matrix) -> Integer -> Integer -> Sequence
+ scopies e (b, g) a x = map (\y -> ecopies e (b, g) a x y) [ 0 .. elength e - 1 ]
+
+ mcopies :: Sequence -> (Matrix, Matrix) -> Integer -> Integer
+ mcopies e (b, g) a = map (\x -> mcopies e (b, g) a x) [ 0 .. mlength b - 1 ]
+
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
  (x : xs) ! 0 = x
@@ -68,3 +77,6 @@ module Bashicu where
  slength :: Matrix -> Integer
  slength [] = undefined
  slength (x : _) = ilength x
+
+ elength :: Sequence -> Integer
+ elength = ilength
