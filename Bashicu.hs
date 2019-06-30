@@ -57,8 +57,15 @@ module Bashicu where
  scopies :: Sequence -> (Matrix, Matrix) -> Integer -> Integer -> Sequence
  scopies e (b, g) a x = map (\y -> ecopies e (b, g) a x y) [ 0 .. elength e - 1 ]
 
- mcopies :: Sequence -> (Matrix, Matrix) -> Integer -> Integer
+ mcopies :: Sequence -> (Matrix, Matrix) -> Integer -> Matrix
  mcopies e (b, g) a = map (\x -> mcopies e (b, g) a x) [ 0 .. mlength b - 1 ]
+
+ copies :: Sequence -> (Matrix, Matrix) -> Integer -> Matrix
+ copies e (b, g) n = go n where
+  go m = mcopies e (b, g) m ++ if m == 0 then g else go (m - 1)
+
+ expand :: Sequence -> Matrix -> Integer -> Matrix
+ expand e s n = copies e (split e s) n
 
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
