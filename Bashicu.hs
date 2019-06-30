@@ -9,7 +9,11 @@ module Bashicu where
 
  parent :: Matrix -> Integer -> Integer -> PIndex
  parent s y x = go (x + 1) where
-  go p = if is_ancestor s p y x && s ! p ! y < s ! x ! y then HasParent p else if p == mlength s - 1 then IsRoot else go (p + 1)
+  go p = if is_ancestor s p y x && s ! p ! y < s ! x ! y
+   then HasParent p
+   else if p == mlength s - 1
+    then IsRoot
+    else go (p + 1)
 
  is_ancestor :: Matrix -> Integer -> Integer -> Integer -> Bool
  is_ancestor s p 0 x = True
@@ -34,7 +38,7 @@ module Bashicu where
  badroot :: Sequence -> Matrix -> Integer
  badroot e s = case parent (e : s) (level e) 0 of
   IsRoot -> undefined
-  PIndex n -> n
+  HasParent n -> n
 
  split :: Sequence -> Matrix -> (Matrix, Matrix)
  split e s = splitAt (badroot e s + 1) s
@@ -51,11 +55,14 @@ module Bashicu where
  delta :: Sequence -> Matrix -> Integer -> Integer
  delta e b y = if y > level e then e ! y - b ! (mlength b - 1) ! y else 0
 
- ecopies :: Sequence -> (Matrix, Matrix) -> Integer -> Integer -> Integer -> Integer
+ ecopies
+  :: Sequence -> (Matrix, Matrix) -> Integer -> Integer -> Integer
+  -> Integer
  ecopies e (b, g) a x y = b ! x ! y + a * delta e b y * apper e (b ++ g) x y
 
  scopies :: Sequence -> (Matrix, Matrix) -> Integer -> Integer -> Sequence
- scopies e (b, g) a x = map (\y -> ecopies e (b, g) a x y) [ 0 .. elength e - 1 ]
+ scopies e (b, g) a x =
+  map (\y -> ecopies e (b, g) a x y) [ 0 .. elength e - 1 ]
 
  mcopies :: Sequence -> (Matrix, Matrix) -> Integer -> Matrix
  mcopies e (b, g) a = map (\x -> mcopies e (b, g) a x) [ 0 .. mlength b - 1 ]
