@@ -21,6 +21,13 @@ module Bashicu where
    IsRoot -> []
    HasParent p' -> go p'
 
+ level :: Sequence -> Integer
+ level e = fromMaybe undefined $ go e where
+  go [] = Nothing
+  go (x : xs) = let nu = go xs in case nu of
+   Nothing -> if x == 0 then Nothing else Just 0
+   Just n -> Just (n + 1)
+
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
  (x : xs) ! 0 = x
