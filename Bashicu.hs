@@ -36,6 +36,20 @@ module Bashicu where
   IsRoot -> undefined
   PIndex n -> n
 
+ split :: Sequence -> Matrix -> (Matrix, Matrix)
+ split e s = splitAt (badroot e s + 1) s
+
+ goodpart :: Sequence -> Matrix -> Matrix
+ goodpart e s = snd $ split e s
+
+ badpart :: Sequence -> Matrix -> Matrix
+ badpart e s = fst $ split e s
+
+ apper :: Sequence -> Matrix -> Integer -> Integer -> Integer
+ apper e s x y = if badroot e s `elem` ancestor s y x then 1 else 0
+
+ delta :: Sequence -> Matrix -> Integer -> Integer
+ delta e b y = if y > level e then e ! y - b ! (mlength b - 1) ! y else 0
 
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
