@@ -8,10 +8,12 @@ module Bashicu where
  data PIndex = IsRoot | HasParent Integer
 
  parent :: Matrix -> Integer -> Integer -> PIndex
- parent s 0 x = go (x + 1) where
-  go p = if s ! p ! 0 < s ! x ! 0 then HasParent p else if p == length s - 1 then IsRoot else go (p + 1)
  parent s y x = go (x + 1) where
-  go p = if p `elem` ancestor s y x && s ! p ! y < s ! x ! y then HasParent p else if p == length s - 1 then IsRoot else go (p + 1)
+  go p = if is_ancestor s p y x && s ! p ! y < s ! x ! y then HasParent p else if p == length s - 1 then IsRoot else go (p + 1)
+
+ is_ancestor :: Matrix -> Integer -> Integer -> Integer -> Bool
+ is_ancestor s p 0 x = True
+ is_ancestor s p y x = p `elem` ancestor s (y - 1) x
 
  (!) :: [a] -> Integer -> a
  [] ! _ = undefined
@@ -20,12 +22,13 @@ module Bashicu where
 
  infixl 9 !
 
+ ilength :: [a] -> Integer
+ ilength [] = 0
+ ilength (_ : xs) = ilength xs + 1
+
  mlength :: Matrix -> Integer
- mlength [] = 0
- mlength (_ : xs) = mlength xs + 1
+ mlength = ilength
 
  slength :: Matrix -> Integer
  slength [] = undefined
- slength (x : _) = go x where
-  go [] = 0
-  go (_ : xs) = go xs + 1
+ slength (x : _) = ilength x
