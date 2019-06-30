@@ -1,8 +1,6 @@
 module Bashicu where
  import Prelude
 
- import Debug.Trace
-
  type Matrix = [Sequence]
 
  type Sequence = [Integer]
@@ -23,7 +21,7 @@ module Bashicu where
 
  ancestor :: Matrix -> Integer -> Integer -> [Integer]
  ancestor s y x = go x where
-  go p = trace ("p : " ++ show p) $ p : let nu = parent s y p in case nu of
+  go p = p : let nu = parent s y p in case nu of
    IsRoot -> []
    HasParent p' -> go p'
 
@@ -42,9 +40,8 @@ module Bashicu where
   IsRoot -> undefined
   HasParent n -> n
 
- -- isplitAt (badroot e s + 1) (e : s) = isplitAt (badroot e s) s
  split :: Sequence -> Matrix -> (Matrix, Matrix)
- split e s = isplitAt (badroot e s) s
+ split e s = isplitAt (badroot e s + 1) (e : s)
 
  goodpart :: Sequence -> Matrix -> Matrix
  goodpart e s = snd $ split e s
@@ -111,7 +108,3 @@ module Bashicu where
  idrop 0 x = x
  idrop n [] = undefined
  idrop n (x : xs) =i idrop (n - 1) xs
-
-
- main :: IO ()
- main = print $ expand [4,2,0] [[3,3,3],[2,2,2],[1,1,1],[0,0,0]] 4
