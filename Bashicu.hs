@@ -76,8 +76,6 @@ module Bashicu where
 
  data Signature = Zero | Succ Matrix | Limit Sequence Matrix deriving (Eq, Show)
 
- data Trampoline a b = More a | Done b deriving (Eq, Show)
-
  sign :: Matrix -> Signature
  sign [] = Zero
  sign (x : xs) = if all (0 ==) x then Succ xs else Limit x xs
