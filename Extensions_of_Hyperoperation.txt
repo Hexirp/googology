@@ -141,10 +141,10 @@
 
 <math>
   \begin{eqnarray*}
-    Z ( \alpha ) $ \coloneqq $ \alpha \in \mathrm{FSS} \land \alpha = 0 \\
-    O ( \alpha ) $ \coloneqq $ \alpha \in \mathrm{FSS} \land \alpha = 1 \\
-    S ( \alpha ) $ \coloneqq $ \alpha \in \mathrm{FSS} \land \alpha \neq 1 \land \exists \beta, \alpha = s ( \beta ) \\
-    L ( \alpha ) $ \coloneqq $ \alpha \in \mathrm{FSS} \land \exists f \colon \omega \to \mathrm{FSS}, \alpha = \sup \{ f ( n ) \mid n \le \omega \} \\
+    Z ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \alpha = 0 \\
+    O ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \alpha = 1 \\
+    S ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \alpha \neq 1 \land \exists \beta, \alpha = s ( \beta ) \\
+    L ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \exists f \colon \omega \to \mathrm{FSS}, \alpha = \sup \{ f ( n ) \mid n \le \omega \} \\
   \end{eqnarray*}
 </math>
 
