@@ -133,7 +133,7 @@
     \land
       ( \forall \alpha, \alpha \in S \to \alpha + 1 \in S )
     \land
-      ( \forall f \colon \omega \to \mathrm{FSS}, \sup_{ n \le \omega } f ( n ) )
+      ( \forall f : \omega \to \mathrm{FSS}, \sup_{ n \le \omega } f ( n ) )
     \}
 </math>
 
