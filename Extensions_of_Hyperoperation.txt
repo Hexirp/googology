@@ -1,4 +1,10 @@
-﻿この記事では私が考案したハイパー演算子の拡張を三つ紹介する。これらは普遍的な考え方を使ったものであるため同じものが別の人により考え出されている可能性が高い。
+﻿<math>
+  \newcommand{\ordinarycolon} {:}
+  \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
+  \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+</math>
+
+この記事では私が考案したハイパー演算子の拡張を三つ紹介する。これらは普遍的な考え方を使ったものであるため同じものが別の人により考え出されている可能性が高い。
 
 この記事で元になっている[[ハイパー演算子]]は自然数 <math> a, b, n </math> に対して以下のように定義される自然数を返す関数である。
 
