@@ -131,9 +131,9 @@
     \min \{ S \mid
       0 \in S
     \land
-      ( \forall \alpha, \alpha \in S \to s ( \alpha ) \in S )
+      ( \forall \alpha, \, \alpha \in S \to s ( \alpha ) \in S )
     \land
-      ( \forall f \colon \omega \to S, \sup \{ f ( n ) \mid n < \omega \} \in S )
+      ( \forall f \colon \omega \to S, \, \sup \{ f ( n ) \mid n < \omega \} \in S )
     \}
 </math>
 
@@ -143,8 +143,8 @@
   \begin{eqnarray*}
     Z ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \alpha = 0 \\
     O ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \alpha = 1 \\
-    S ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \alpha \neq 1 \land \exists \beta, \alpha = s ( \beta ) \\
-    L ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \exists f \colon \omega \to \mathrm{FSS}, \alpha = \sup \{ f ( n ) \mid n < \omega \} \\
+    S ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \alpha \neq 1 \land \exists \beta, \, \alpha = s ( \beta ) \\
+    L ( \alpha ) & \coloneqq & \alpha \in \mathrm{FSS} \land \exists f \colon \omega \to \mathrm{FSS}, \, \alpha = \sup \{ f ( n ) \mid n < \omega \} \\
   \end{eqnarray*}
 </math>
 
@@ -192,8 +192,8 @@
   \begin{eqnarray*}
     Z ( \alpha ) & \coloneqq & \alpha = 0 \\
     O ( \alpha ) & \coloneqq & \alpha = 1 \\
-    S ( \alpha ) & \coloneqq & \alpha \neq 1 \land \exists \beta, \alpha = s ( \beta ) \\
-    L ( \alpha ) & \coloneqq & \alpha \neq 0 \land \forall \beta, \beta < \alpha \to s ( \beta ) < \alpha \\
+    S ( \alpha ) & \coloneqq & \alpha \neq 1 \land \exists \beta, \, \alpha = s ( \beta ) \\
+    L ( \alpha ) & \coloneqq & \alpha \neq 0 \land \forall \beta, \, \beta < \alpha \to s ( \beta ) < \alpha \\
   \end{eqnarray*}
 </math>
 
