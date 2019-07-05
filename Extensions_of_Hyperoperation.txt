@@ -133,7 +133,7 @@
     \land
       ( \forall \alpha, \alpha \in S \to \alpha + 1 \in S )
     \land
-      ( \forall f \colon \omega \to \mathrm{FSS}, \sup_{ n \le \omega } f ( n ) )
+      ( \forall f \colon \omega \to \mathrm{FSS}, \sup \{ f ( n ) \mid n \le \omega \} )
     \}
 </math>
 
@@ -141,10 +141,10 @@
 
 <math>
   \begin{eqnarray*}
-    Z ( \alpha ) \coloneqq \alpha = 0 \\
-    O ( \alpha ) \coloneqq \alpha = 1 \\
-    S ( \alpha ) \coloneqq \alpha \neq 1 \land \exists \beta\, \alpha = \beta + 1 \\
-    L ( \alpha ) \coloneqq \\
+    Z ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \alpha = 0 \\
+    O ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \alpha = 1 \\
+    S ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \alpha \neq 1 \land \exists \beta, \alpha = \beta + 1 \\
+    L ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \exists f \colon \omega \to \mathrm{FSS}, \sup \{ f ( n ) \mid n \le \omega \} \\
   \end{eqnarray*}
 </math>
 
