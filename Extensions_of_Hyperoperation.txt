@@ -131,20 +131,20 @@
     \min \{ S \mid
       0 \in S
     \land
-      ( \forall \alpha, \alpha \in S \to \alpha + 1 \in S )
+      ( \forall \alpha, \alpha \in S \to s ( \alpha ) \in S )
     \land
-      ( \forall f \colon \omega \to \mathrm{FSS}, \sup \{ f ( n ) \mid n \le \omega \} )
+      ( \forall f \colon \omega \to S, \sup \{ f ( n ) \mid n \le \omega \} \in S )
     \}
 </math>
 
-ただし、以下のような述語を条件に用いた。
+以下のような述語を条件に用いた。
 
 <math>
   \begin{eqnarray*}
     Z ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \alpha = 0 \\
     O ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \alpha = 1 \\
-    S ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \alpha \neq 1 \land \exists \beta, \alpha = \beta + 1 \\
-    L ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \exists f \colon \omega \to \mathrm{FSS}, \sup \{ f ( n ) \mid n \le \omega \} \\
+    S ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \alpha \neq 1 \land \exists \beta, \alpha = s ( \beta ) \\
+    L ( \alpha ) \coloneqq \alpha \in \mathrm{FSS} \land \exists f \colon \omega \to \mathrm{FSS}, \alpha = \sup \{ f ( n ) \mid n \le \omega \} \\
   \end{eqnarray*}
 </math>
 
