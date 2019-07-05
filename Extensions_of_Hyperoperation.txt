@@ -118,6 +118,19 @@
     \end{cases}
 </math>
 
+ここで <math> \alpha </math> は、集合 <math> \mathrm{FSS} </math> の要素である。
+
+<math>
+  \mathrm{FSS} \coloneqq
+    \min \{ S \mid
+      0 \in S
+    \land
+      ( \forall \alpha\, \alpha \in S \to \alpha + 1 \in S )
+    \land
+      ( \forall f \in \omega \to \mathrm{FSS}\, \sup_{ n \le \omega } f ( n ) )
+    \}
+</math>
+
 ただし、以下のような述語を条件に用いた。
 
 <math>
