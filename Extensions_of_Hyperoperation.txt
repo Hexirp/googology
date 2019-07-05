@@ -131,9 +131,9 @@
     \min \{ S \mid
       0 \in S
     \land
-      ( \forall \alpha\, \alpha \in S \to \alpha + 1 \in S )
+      ( \forall \alpha, \alpha \in S \to \alpha + 1 \in S )
     \land
-      ( \forall f \in \omega \to \mathrm{FSS}\, \sup_{ n \le \omega } f ( n ) )
+      ( \forall f \colon \omega \to \mathrm{FSS}, \sup_{ n \le \omega } f ( n ) )
     \}
 </math>
 
