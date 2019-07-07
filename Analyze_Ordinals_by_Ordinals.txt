@@ -23,3 +23,7 @@
 === 未実行 ===
 
 # 1.1 と 1.2 の比較
+
+== 関連リンク ==
+
+* [https://docs.google.com/spreadsheets/d/10xoOD6Elm5VIK5B8NVDclRcu8-dEaD0d1vveFjzL3-M/edit?usp=sharing 順序数で順序数を解析] - このプロジェクトの前身
