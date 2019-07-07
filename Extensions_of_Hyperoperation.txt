@@ -107,7 +107,7 @@
 
 == ハイパー階層 ==
 
-多変数ハイパー演算子は <math> \omega ^ \omega </math> までの急増加関数の動作をまねて作っている。同様の考え方でより大きい順序数にも拡張できる。
+多変数ハイパー演算子は <math> \omega ^ \omega </math> までの急増加関数の動作をまねて作っている。同様の考え方でより大きい順序数にも拡張できる。厳密な定義は以下のとおりである。
 
 <math>
   x \langle \alpha \rangle y =
@@ -126,14 +126,14 @@
 
 ただし、ハイパー階層はそれぞれの基本列付き順序数表記 <math> A </math> に対して定義されるものとする。 集合 <math> \mathrm{OT} _ A </math> を、標準形である順序数の表記全体の集合とする。関数 <math> \_ < _ A \_ \colon \mathrm{OT} \to \mathrm{OT} \to \mathrm{Bool} </math> を、比較を行う関数とする。関数 <math> O _ A, S _ A , L _ A \colon \mathrm{OT} \to \mathrm{Bool} </math> を、それぞれ「ゼロであるか」「後者であるか」「極限であるか」を判定する関数とする。関数 <math> p ( \_ ) \colon \{ x \in \mathrm{OT} : S _ A ( x ) = \mathrm{True} \} \to \mathrm{OT} </math> を、後者を求める関数とする。関数 <math> \_ [ \_ ] _ A \colon \{ x \in \mathrm{OT} : L _ A ( x ) = \mathrm{True} \} \to \mathbb{N} \to \mathrm{OT} </math> を、基本列を求める関数とする。
 
-ここで <math> \alpha </math> は、集合 <math> \mathrm{OT}_A </math> の要素であり、以下の述語は <math> A </math> に関わる関数によって定義される。
+ここで <math> \alpha </math> は、集合 <math> \mathrm{OT}_A </math> の要素であり、以下の述語は <math> A </math> に関わる関数によって定義される。また、関数 <math> \_ [ \_ ] </math> は <math> \_ [ \_ ] _ A </math> の略記である。
 
 <math>
   \begin{eqnarray*}
-    Z ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land O _ A ( \alpha ) = \mathrm{True} \\
-    O ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land S _ A ( \alpha ) = \mathrm{True} \land O _ A ( p ( \alpha ) ) = \mathrm{True} \\
+    Z ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land O _ A ( \alpha ) = \mathrm{True}                                               \\
+    O ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land S _ A ( \alpha ) = \mathrm{True} \land O _ A ( p ( \alpha ) ) = \mathrm{True}  \\
     S ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land S _ A ( \alpha ) = \mathrm{True} \land O _ A ( p ( \alpha ) ) = \mathrm{False} \\
-    L ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land L _ A ( \alpha ) = \mathrm{True} \\
+    L ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land L _ A ( \alpha ) = \mathrm{True}                                               \\
   \end{eqnarray*}
 </math>
 
