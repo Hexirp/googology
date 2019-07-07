@@ -1,3 +1,13 @@
-﻿順序数を学び始めてしばらく経ち、だいぶ理解できて来たと思っています。ですが、順序数そのものに複数の表記があるという状態で、全て理解できた訳ではありません。また、 <math> \epsilon _ 1 </math> の基本列といった基本的な所でも <math> \sup \{ \epsilon _ 0 + 1, \omega ^ { \epsilon _ 0 + 1 }, \omega ^ { \omega ^ { \epsilon _ 0 } }, \ldots \} = \sup \{ 1, \epsilon _ 0 , { \epsilon _ 0 } ^ { \epsilon _ 0 }, { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } }, \ldots \} </math> という風に広く受けいられたものが二種類あります。
+﻿順序数の表記について学び始めてしばらく経ち、だいぶ理解できて来たと思っています。ですが、一定レベルを超えた順序数では複数の表記があるという状態で、全て理解できた訳ではありません。また、 <math> \epsilon _ 1 </math> の基本列といった基本的な所でも <math> \sup \{ \epsilon _ 0 + 1, \omega ^ { \epsilon _ 0 + 1 }, \omega ^ { \omega ^ { \epsilon _ 0 } }, \ldots \} = \sup \{ 1, \epsilon _ 0 , { \epsilon _ 0 } ^ { \epsilon _ 0 }, { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } }, \ldots \} </math> という風に広く受けいられたものが二種類あります。
 
 このような複数の表記の間の関係や、細かな違い、そして最上級の順序数表記について理解したいという個人的な興味から、この「順序数で順序数を解析する」というプロジェクトを立ち上げました。
+
+== 対象 ==
+
+これらの対象は全て私の個人的な興味で選定されています。中には自分が考えたものもありますが、それらは矛盾しているようですがオリジナルではなく、既に存在する概念を明瞭化した形になります。また、定義されているかどうかは問いません。
+
+=== Cantor normal form ===
+
+==== extended by epsilon family (addition) ====
+
+==== extended by epsilon family (exponentiation) ====
