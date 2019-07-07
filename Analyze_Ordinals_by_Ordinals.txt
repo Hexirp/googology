@@ -6,11 +6,21 @@
 
 これらの対象は全て私の個人的な興味で選定している。
 
+=== Natural number ===
+
+自然数である。これを表記できない順序数表記は恐らく存在しないだろう<ref>かの "6" を除いて</ref>。
+
 === Cantor normal form ===
+
+[[カントールの標準形]]である。一応、表記の中に自分自身が現れることを認めると <math> \epsilon _ 0 = \omega ^ { \epsilon _ 0 } </math> というように、カントールの標準形で全ての順序数を書き下せるが、ここでは <math> 0, ( a, b \mapsto a + b ), ( a \mapsto \omega ^ a ) </math> だけを使って書き下せる全ての順序数というように考える。
 
 ==== extended by epsilon family (addition) ====
 
+カントールの標準形に <math> ( a \mapsto \epsilon _ a ), ( a \mapsto \zeta _ a ), ( a \mapsto \eta _ a ) </math> を追加したもの。下との違いは <math> { \epsilon _ 0 } ^ { \epsilon _ 0 } </math> よりも <math> \omega ^ { \omega  ^ { \epsilon _ 0 + \epsilon _ 0 } } </math> のほうが優先されること。
+
 ==== extended by epsilon family (exponentiation) ====
+
+カントールの標準形に <math> ( a \mapsto \epsilon _ a ), ( a \mapsto \zeta _ a ), ( a \mapsto \eta _ a ) </math> を追加したもの。上との違いは <math> \omega ^ { \omega  ^ { \epsilon _ 0 + \epsilon _ 0 } } </math> よりも <math> { \epsilon _ 0 } ^ { \epsilon _ 0 } </math> のほうが優先されること。
 
 == 計画 ==
 
