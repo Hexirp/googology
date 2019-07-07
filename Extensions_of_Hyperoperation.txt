@@ -42,7 +42,7 @@
 
 また、 <math> n^- </math> は以下のように定義される前者関数（ <math> 0^- </math> は未定義）である。
 
-<math> n^- = n - 1 </math>
+<math> n^- + 1 = n </math>
 
 == 多変数ハイパー演算子 ==
 
@@ -130,7 +130,7 @@
 
 ただし、ハイパー階層はそれぞれの基本列付き順序数表記 <math> A </math> に対して定義されるものとする。 集合 <math> \mathrm{OT} _ A </math> を、標準形である順序数の表記全体の集合とする。関数 <math> \_ < _ A \_ \colon \mathrm{OT} _ A \to \mathrm{OT} _ A \to \mathrm{Bool} </math> を、比較を行う関数とする。関数 <math> O _ A, S _ A , L _ A \colon \mathrm{OT} _ A \to \mathrm{Bool} </math> を、それぞれ「ゼロであるか」「後者であるか」「極限であるか」を判定する関数とする。関数 <math> p _ A ( \_ ) \colon \{ x \in \mathrm{OT} _ A : S _ A ( x ) = \mathrm{True} \} \to \mathrm{OT} _ A </math> を、前者を求める関数とする。関数 <math> \_ [ \_ ] _ A \colon \{ x \in \mathrm{OT} _ A : L _ A ( x ) = \mathrm{True} \} \to \mathbb{N} \to \mathrm{OT} _ A </math> を、基本列を求める関数とする。
 
-ここで <math> \alpha </math> は、集合 <math> \mathrm{OT} _ A </math> の要素であり、以下の述語は <math> A </math> に関わる関数によって定義される。また、関数 <math> p ( \_ ) </math> は <math> p _ A ( \_ ) </math> の略記で、関数 <math> \_ [ \_ ] </math> は <math> \_ [ \_ ] _ A </math> の略記である。
+数式中の <math> \alpha </math> は、集合 <math> \mathrm{OT} _ A </math> の要素とする。関数 <math> p ( \_ ) </math> は <math> p _ A ( \_ ) </math> の略記で、関数 <math> \_ [ \_ ] </math> は <math> \_ [ \_ ] _ A </math> の略記である。また、以下の述語のような述語を条件に用いた。
 
 <math>
   \begin{eqnarray*}
