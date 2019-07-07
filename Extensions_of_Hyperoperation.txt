@@ -124,18 +124,9 @@
     \end{cases}
 </math>
 
-ここで <math> \alpha </math> は、集合 <math> \mathrm{FSS} </math> の要素である。
+ただし、ハイパー階層は。それぞれの基本列付き順序数表記 <math> A </math> に対して定義されるものとする。 集合 <math> \mathrm{OT} _ A </math> を、標準形である順序数の表記全体の集合とする。関数 <math> \_ < _ A \_ \colon \mathrm{OT} \to \mathrm{OT} \to \mathrm{Bool} </math> を、比較関数とする。関数 <math> O _ A, S _ A , L _ A \colon \mathrm{OT} \to \mathrm{Bool} </math> を、それぞれ「ゼロであるか」「後者であるか」「極限であるか」を判定する関数とする。関数 <math> \_ [ \_ ] _ A \colon \{ x \in \mathrm{OT} : L _ A ( x ) = \mathrm{True} \} \to \mathbb{N} \to \mathrm{OT} </math> を、基本列関数とする。
 
-<math>
-  \mathrm{FSS} \coloneqq
-    \min \{ S \mid
-      0 \in S
-    \land
-      ( \forall \alpha, \, \alpha \in S \to s ( \alpha ) \in S )
-    \land
-      ( \forall f \colon \omega \to S, \, \sup \{ f ( n ) \mid n < \omega \} \in S )
-    \}
-</math>
+のここで <math> \alpha </math> は、集合 <math> \mathrm{OT}_A </math> の要素である。ただし <math> A </math> は、ある順序数表記の体系である。
 
 以下のような述語を条件に用いた。
 
