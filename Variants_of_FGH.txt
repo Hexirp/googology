@@ -1,0 +1,126 @@
+﻿[[急増加関数]]の色々な変種である。
+
+これらはそれぞれの基本列付き順序数表記 <math> A </math> に対して定義されるものとする。 集合 <math> \mathrm{OT} _ A </math> を、標準形である順序数の表記全体の集合とする。関数 <math> \_ < _ A \_ \colon \mathrm{OT} _ A \to \mathrm{OT} _ A \to \mathrm{Bool} </math> を、比較を行う関数とする。関数 <math> O _ A, S _ A , L _ A \colon \mathrm{OT} _ A \to \mathrm{Bool} </math> を、それぞれ「ゼロであるか」「後者であるか」「極限であるか」を判定する関数とする。関数 <math> p _ A ( \_ ) \colon \{ x \in \mathrm{OT} _ A : S _ A ( x ) = \mathrm{True} \} \to \mathrm{OT} _ A </math> を、前者を求める関数とする。関数 <math> \_ [ \_ ] _ A \colon \{ x \in \mathrm{OT} _ A : L _ A ( x ) = \mathrm{True} \} \to \mathbb{N} \to \mathrm{OT} _ A </math> を、基本列を求める関数とする。
+
+<math> s ( n ) </math> は <math> s ( n ) = n + 1 </math> のように定義される後者関数である。また <math> n^- </math> は <math> n^- + 1 = n </math> のように定義される前者関数（ <math> 0^- </math> は未定義）である。
+
+== 急増加関数 ==
+
+<math>
+  f _ \alpha ( n ) =
+    \begin{cases}
+      n + 1                          & ( O ( \alpha ) ) \\
+      f _ { p ( \alpha ) } ^ n ( n ) & ( S ( \alpha ) ) \\
+      f _ { \alpha [ n ] } ( n )     & ( L ( \alpha ) ) \\
+    \end{cases}
+</math>
+
+数式中の <math> \alpha </math> は、集合 <math> \mathrm{OT} _ A </math> の要素とする。関数 <math> p ( \_ ) </math> は <math> p _ A ( \_ ) </math> の略記で、関数 <math> \_ [ \_ ] </math> は <math> \_ [ \_ ] _ A </math> の略記である。また、以下の述語のような述語を条件に用いた。
+
+<math>
+  \begin{eqnarray*}
+    O ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land O _ A ( \alpha ) = \mathrm{True} \\
+    S ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land S _ A ( \alpha ) = \mathrm{True} \\
+    L ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land L _ A ( \alpha ) = \mathrm{True} \\
+  \end{eqnarray*}
+</math>
+
+<!--
+
+n: 0, 1, 2, 3, 4, ...
+
+0: 1, 2, 3, 4, 5, ...
+1: 0, 2, 4, 6, 8, ...
+2: 0, 2, 8, 24, 64, ...
+
+-->
+
+=== 変種１ ===
+
+<math> \forall x, \, \forall m < \omega, \, \forall n < \omega, \, m < n \to f _ m ( x ) < f _ n ( x ) </math> が成り立つようになる。
+
+<math>
+  f _ \alpha ( n ) =
+    \begin{cases}
+      n + 1                                  & ( O ( \alpha ) ) \\
+      f _ { p ( \alpha ) } ^ { n + 1 } ( n ) & ( S ( \alpha ) ) \\
+      f _ { \alpha [ n ] } ( n )             & ( L ( \alpha ) ) \\
+    \end{cases}
+</math>
+
+<!--
+
+m: 0, 1, 2, 3, 4, ...
+
+0: 1, 2, 3, 4, 5, ...
+1: 1, 3, 5, 7, 9, ...
+2: 1, f1(f1(1))=f1(3)=7, f1(f1(f1(2)))=f1(f1(5))=f1(11)=23, f1^4(3)=f1^3(7)=f1^2(15)=f1(31)=63, ...
+
+-->
+
+=== 変種２ ===
+
+<math> \forall x, \, \forall \alpha, \, \forall \beta, \, \alpha < \beta \to f _ \alpha ( x ) < f _ \beta ( x ) </math> が成り立つようになる。
+
+<math>
+  f _ \alpha ( n ) =
+    \begin{cases}
+      n + 1                                           & ( O ( \alpha ) ) \\
+      f _ { p ( \alpha ) } ^ { n + 1 } ( n )          & ( S ( \alpha ) ) \\
+      f _ { \alpha [ n ] } ( \varrho _ \alpha ( n ) ) & ( L ( \alpha ) ) \\
+    \end{cases}
+</math>
+
+ただし <math> \varrho _ \alpha ( n ) </math> は以下のように定義される関数である。
+
+<math>
+  \varrho _ \alpha ( n ) =
+    \begin{cases}
+      0                                                                                                                              & ( n = 0    ) \\
+      \min \{ z \mid \varrho _ \alpha ( n^- ) < z \land \forall i < n, \, f _ { \alpha [ i ] } ( z ) < f _ { \alpha [ n ] } ( z ) \} & ( n \geq 1 ) \\
+    \end{cases}
+</math>
+
+<!--
+
+m: 0, 1, 2, 3, 4, ...
+
+0: 1, 2, 3, 4, 5, ...
+1: 1, 3, 5, 7, 9, ...
+2: 1, 7, 23, 63, ...
+
+w: fw[0](pw(0))=f0(pw(0))=f0(0), fw[1](pw(1))=f1(pw(1))
+        pw(1)... 0 < z, if, z = 1, then i = 0, then fw[0](1)=f0(1)<fw[1](1)=f1(1), good, therefore pw(1)=1
+   =f1(1)=3, fw(2)=23, ...
+
+-->
+
+== ハイパー階層 ==
+
+ハイパー演算子を[[急増加関数]]化したものである。
+
+<math>
+  x \langle \alpha \rangle y =
+    \begin{cases}
+      \mathrm{undefined}                                              & ( y = 0                       ) \\
+      \mathrm{undefined}                                              & ( y = 1    \land Z ( \alpha ) ) \\
+      s ( a )                                                         & ( y = 1    \land O ( \alpha ) ) \\
+      a                                                               & ( y = 1    \land S ( \alpha ) ) \\
+      a                                                               & ( y = 1    \land L ( \alpha ) ) \\
+      \mathrm{undefined}                                              & ( y \geq 2 \land Z ( \alpha ) ) \\
+      s ( x \langle \alpha \rangle y^- )                              & ( y \geq 2 \land O ( \alpha ) ) \\
+      x \langle p ( \alpha ) \rangle ( x \langle \alpha \rangle y^- ) & ( y \geq 2 \land S ( \alpha ) ) \\
+      x \langle \alpha [ y ] \rangle y                                & ( y \geq 2 \land L ( \alpha ) ) \\
+    \end{cases}
+</math>
+
+数式中の <math> \alpha </math> は、集合 <math> \mathrm{OT} _ A </math> の要素とする。関数 <math> p ( \_ ) </math> は <math> p _ A ( \_ ) </math> の略記で、関数 <math> \_ [ \_ ] </math> は <math> \_ [ \_ ] _ A </math> の略記である。また、以下の述語のような述語を条件に用いた。
+
+<math>
+  \begin{eqnarray*}
+    Z ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land O _ A ( \alpha ) = \mathrm{True}                                                   \\
+    O ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land S _ A ( \alpha ) = \mathrm{True} \land O _ A ( p _ A ( \alpha ) ) = \mathrm{True}  \\
+    S ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land S _ A ( \alpha ) = \mathrm{True} \land O _ A ( p _ A ( \alpha ) ) = \mathrm{False} \\
+    L ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land L _ A ( \alpha ) = \mathrm{True}                                                   \\
+  \end{eqnarray*}
+</math>
