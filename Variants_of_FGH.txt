@@ -4,7 +4,7 @@
   \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
 </math>
 
-[[急増加関数]]の色々な変種である。節に「独自」と注釈したものは私が考案したものである。ただ、自然で普遍的な考えであるため他の人が既に考案しているかもしれない。
+[[急増加関数]]の色々な変種である。節の注釈は考案者である。つまり Hexirp と注釈されているものは私が考案したものである。ただ、自然で普遍的な考えであるため他の人が既に考案しているかもしれない。
 
 これらはそれぞれの基本列付き順序数表記 <math> A </math> に対して定義されるものとする。 集合 <math> \mathrm{OT} _ A </math> を、標準形である順序数の表記全体の集合とする。関数 <math> \_ < _ A \_ \colon \mathrm{OT} _ A \to \mathrm{OT} _ A \to \mathrm{Bool} </math> を、比較を行う関数とする。関数 <math> O _ A, S _ A , L _ A \colon \mathrm{OT} _ A \to \mathrm{Bool} </math> を、それぞれ「ゼロであるか」「後者であるか」「極限であるか」を判定する関数とする。関数 <math> p _ A ( \_ ) \colon \{ x \in \mathrm{OT} _ A : S _ A ( x ) = \mathrm{True} \} \to \mathrm{OT} _ A </math> を、前者を求める関数とする。関数 <math> \_ [ \_ ] _ A \colon \{ x \in \mathrm{OT} _ A : L _ A ( x ) = \mathrm{True} \} \to \mathbb{N} \to \mathrm{OT} _ A </math> を、基本列を求める関数とする。
 
@@ -233,7 +233,7 @@ w: 0, 1, 2, 3, 4, 5, ...
   \end{eqnarray*}
 </math>
 
-== ハイパー階層（独自） ==
+== ハイパー階層 (Hexirp) ==
 
 ハイパー演算子を[[急増加関数]]化したものである。
 
@@ -263,7 +263,7 @@ w: 0, 1, 2, 3, 4, 5, ...
   \end{eqnarray*}
 </math>
 
-== 超緩増加関数（独自） ==
+== 超緩増加関数 (Hexirp) ==
 
 <math>
   h _ \alpha [ x _ 0, x _ 1, x _ 2, \ldots ] =
