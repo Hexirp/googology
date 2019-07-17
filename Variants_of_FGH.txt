@@ -290,8 +290,8 @@ w: 0, 1, 2, 3, 4, 5, ...
   I _ \alpha ( n ) =
     \begin{cases}
       0                              & ( O ( \alpha ) ) \\
-      g _ { p ( \alpha ) } ( n ) + 1 & ( S ( \alpha ) ) \\
-      g _ { \alpha [ n ] } ( 2 )     & ( L ( \alpha ) ) \\
+      I _ { p ( \alpha ) } ( n ) + 1 & ( S ( \alpha ) ) \\
+      I _ { \alpha [ n ] } ( 2 )     & ( L ( \alpha ) ) \\
     \end{cases}
 </math>
 
