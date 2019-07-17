@@ -284,6 +284,27 @@ w: 0, 1, 2, 3, 4, 5, ...
   \end{eqnarray*}
 </math>
 
+== ??? (Hassium108) ==
+
+<math>
+  I _ \alpha ( n ) =
+    \begin{cases}
+      0                              & ( O ( \alpha ) ) \\
+      g _ { p ( \alpha ) } ( n ) + 1 & ( S ( \alpha ) ) \\
+      g _ { \alpha [ n ] } ( 2 )     & ( L ( \alpha ) ) \\
+    \end{cases}
+</math>
+
+数式中の <math> \alpha </math> は、集合 <math> \mathrm{OT} _ A </math> の要素とする。関数 <math> p ( \_ ) </math> は <math> p _ A ( \_ ) </math> の略記で、関数 <math> \_ [ \_ ] </math> は <math> \_ [ \_ ] _ A </math> の略記である。また、以下の述語のような述語を条件に用いた。
+
+<math>
+  \begin{eqnarray*}
+    O ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land O _ A ( \alpha ) = \mathrm{True} \\
+    S ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land S _ A ( \alpha ) = \mathrm{True} \\
+    L ( \alpha ) & \coloneqq & \alpha \in \mathrm{OT} _ A \land L _ A ( \alpha ) = \mathrm{True} \\
+  \end{eqnarray*}
+</math>
+
 == 参考文献 ==
 
 * [[急増加関数]]
@@ -292,3 +313,4 @@ w: 0, 1, 2, 3, 4, 5, ...
 * [[N成長階層]]
 * [[ユーザーブログ:Hexirp/ハイパー演算子の拡張]]
 * [[ユーザーブログ:Merliborn/Fast-growing hierarchy rivisited]]
+* [[ユーザー:Hassium108/第2物置]]
