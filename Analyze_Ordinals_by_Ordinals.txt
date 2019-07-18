@@ -1,42 +1,44 @@
-﻿順序数の表記について学び始めてしばらく経ち、だいぶ理解できて来たと思う。だが、一定レベルを超えた順序数では複数の表記があるという状態で、全て理解できた訳ではないし、また <math> \epsilon _ 1 </math> といった基本的な所でも <math> \sup \{ \epsilon _ 0 + 1, \omega ^ { \epsilon _ 0 + 1 }, \omega ^ { \omega ^ { \epsilon _ 0 + 1 } }, \ldots \} = \sup \{ 1, \epsilon _ 0 , { \epsilon _ 0 } ^ { \epsilon _ 0 }, { \epsilon _ 0 } ^ { { \epsilon _ 0 } ^ { \epsilon _ 0 } }, \ldots \} </math> という風に二種類の基本列があり一定していないという状態である。さらに、最上位レベルの順序数の表記は定義ですら論文の中でしか見つからないという状態である。
+﻿<math>
+  \newcommand{\w}{\omega}
+  \newcommand{\W}{\Omega}
+  \newcommand{\e}{\varepsilon}
+  \newcommand{\f}{\varphi}
+  \newcommand{\p}{\psi}
+</math>
 
-このような状態を主に個人的興味から整理すべく、複数の表記の間の関係や細かな違い、そして最上級の順序数表記について調べていくために、この「順序数で順序数を解析する」というプロジェクトを立ち上げた。
+順序数で順序数を解析するだけ。
 
-== 対象 ==
+== １ ==
 
-これらの対象は全て私の個人的な興味で選定している。
-
-=== Natural number ===
-
-自然数である。これを表記できない順序数表記は恐らく存在しないだろう<ref>かの "6" を除いて</ref>。
-
-=== Cantor normal form ===
-
-[[カントールの標準形]]である。一応、表記の中に自分自身が現れることを認めると <math> \epsilon _ 0 = \omega ^ { \epsilon _ 0 } </math> というように、カントールの標準形で全ての順序数を書き下せるが、ここでは <math> 0, ( a, b \mapsto a + b ), ( a \mapsto \omega ^ a ) </math> だけを使って書き下せる全ての順序数というように考える。
-
-==== extended by epsilon family (addition) ====
-
-カントールの標準形に <math> ( a \mapsto \epsilon _ a ), ( a \mapsto \zeta _ a ), ( a \mapsto \eta _ a ) </math> を追加したもの。下との違いは <math> { \epsilon _ 0 } ^ { \epsilon _ 0 } </math> よりも <math> \omega ^ { \omega  ^ { \epsilon _ 0 + \epsilon _ 0 } } </math> のほうが優先されること。
-
-==== extended by epsilon family (exponentiation) ====
-
-カントールの標準形に <math> ( a \mapsto \epsilon _ a ), ( a \mapsto \zeta _ a ), ( a \mapsto \eta _ a ) </math> を追加したもの。上との違いは <math> \omega ^ { \omega  ^ { \epsilon _ 0 + \epsilon _ 0 } } </math> よりも <math> { \epsilon _ 0 } ^ { \epsilon _ 0 } </math> のほうが優先されること。
-
-== 計画 ==
-
-このプロジェクトは A の x という表記は B ではどう書かれるか調べる作業、つまり A で B を解析するのが基本になる。包摂関係が明確なため解析をせず他の解析結果を流用したり、双方向の解析（つまり比較）を行ったり、一つの表記で複数の表記を解析したりするということもあると思う。
-
-=== 実行済み ===
-
-# '''包摂関係より自明''' - 1 と、 1.1 と 1.2 を比較
-
-=== 未実行 ===
-
-# 1.1 と 1.2 の比較
-
-== 脚注 ==
-
-<references />
+<math>
+  \begin{eqnarray*}
+    0 & = & 0 \\
+    1 & = & 1 \\
+    2 & = & 2 \\
+    \w & = & \w \\
+    \w \times 2 & = & \w + \w \\
+    \w ^ \w & = & \w ^ \w \\
+    \w ^ { \w ^ \w } & = & \w ^ { \w ^ \w } \\
+    \e _ 0 & = & \e _ 0 \\
+    \e _ 0 + 1 & = & \e _ 0 + 1 \\
+    \e _ 0 + \w & = & \e _ 0 + \w \\
+    \e _ 0 \times 2 & = & \e _ 0 + \e _ 0 \\
+    \e _ 0 \times \w & = & \w ^ { \e _ 0 + 1 } \\
+    \e _ 0 \times \w + \w & = & \w ^ { \e _ 0 + 1 } + \w \\
+    \e _ 0 \times ( \w + 1 ) & = & \w ^ { \e _ 0 + 1 } + \e _ 0 \\
+    \e _ 0 \times \w ^ 2 & = & \w ^ { \e _ 0 + 2 } \\
+    \e _ 0 \times \w ^ \w & = & \w ^ { \e _ 0 + \w } \\
+    \e _ 0 \times \w ^ { \w ^ \w } & = & \w ^ { \e _ 0 + \w ^ \w } \\
+    { \e _ 0 } ^ 2 & = & \w ^ { \e _ 0 + \e _ 0 } \\
+    { \e _ 0 } ^ 2 + \w & = & \w ^ { \e _ 0 + \e _ 0 } + \w \\
+    { \e _ 0 } ^ 2 + \e _ 0 & = & \w ^ { \e _ 0 + \e _ 0 } + \e _ 0 \\
+    { \e _ 0 } ^ 2 \times 2 & = & \w ^ { \e _ 0 + \e _ 0 } + \w ^ { \e _ 0 + \e _ 0 } \\
+    { \e _ 0 } ^ 2 \times \w & = & \w ^ { \e _ 0 + \e _ 0 + 1 } \\
+    { \e _ 0 } ^ 2 \times \w ^ \w & = & \w ^ { \e _ 0 + \e _ 0 + \w } \\
+    { \e _ 0 } ^ 3 & = & \w ^ { \e _ 0 + \e _ 0 + \e _ 0 } \\
+    { \e _ 0 } ^ \w & = & \w ^{ \w ^ { \e _ 0 + 1 } } \\
+  \end{eqnarray*}
+</math>
 
 == 関連リンク ==
 
