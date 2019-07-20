@@ -1,0 +1,69 @@
+﻿<math>
+  \newcommand{\ordinarycolon} {:}
+  \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
+  \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+</math>
+
+この記事では[[ユーザーブログ:Hexirp/ハイパー演算子の拡張]]での超限弱ハイパー演算子の変種を紹介し、強化を試みる。
+
+<math> s ( n ) </math> は以下のように定義される後者関数である。
+
+<math> s ( n ) = n + 1 </math>
+
+また、 <math> n^- </math> は以下のように定義される前者関数（ <math> 0^- </math> は未定義）である。
+
+<math> n^- + 1 = n </math>
+
+== 変種１ ==
+
+引数を一つずらして未定義部をなくしたもの。つまり旧来の演算子では <math> \alpha [ 1 + \beta ] ( 1 + \gamma ) </math> に対応する。
+
+<math>
+  \alpha [ \beta ] \gamma =
+    \begin{cases}
+      s ( a )                                                   & ( O ( \gamma ) \land O ( \beta ) ) \\
+      a                                                         & ( O ( \gamma ) \land S ( \beta ) ) \\
+      a                                                         & ( O ( \gamma ) \land L ( \beta ) ) \\
+      s ( \alpha [ \beta ] \gamma^- )                           & ( S ( \gamma ) \land O ( \beta ) ) \\
+      ( \alpha [ \beta ] \gamma^- ) [ \beta^- ] \alpha          & ( S ( \gamma ) \land S ( \beta ) ) \\
+      \sup \{ \alpha [ \beta' ] \gamma \mid \beta' < \beta \}   & ( S ( \gamma ) \land L ( \beta ) ) \\
+      \sup \{ \alpha [ \beta ] \gamma' \mid \gamma' < \gamma \} & ( L ( \gamma )                   ) \\
+    \end{cases}
+</math>
+
+以下のような述語を条件に用いた。
+
+<math>
+  \begin{eqnarray*}
+    O ( \alpha ) & \coloneqq & \alpha = 0 \\
+    S ( \alpha ) & \coloneqq & \alpha \neq 1 \land \exists \beta, \, \alpha = s ( \beta ) \\
+    L ( \alpha ) & \coloneqq & \alpha \neq 0 \land \forall \beta, \, \beta < \alpha \to s ( \beta ) < \alpha \\
+  \end{eqnarray*}
+</math>
+
+== 変種２ ==
+
+きちんと <math> \Gamma _ 0 </math> に到達するようにしたバージョン。
+
+<math>
+  \alpha [ \beta ] \gamma =
+    \begin{cases}
+      s ( a )                                                   & ( O ( \gamma ) \land O ( \beta ) ) \\
+      a                                                         & ( O ( \gamma ) \land S ( \beta ) ) \\
+      a                                                         & ( O ( \gamma ) \land L ( \beta ) ) \\
+      s ( \alpha [ \beta ] \gamma^- )                           & ( S ( \gamma ) \land O ( \beta ) ) \\
+      ( \alpha [ \beta ] \gamma^- ) [ \beta^- ] \alpha          & ( S ( \gamma ) \land S ( \beta ) ) \\
+      \sup \{ \alpha [ \beta' ] \gamma \mid \beta' < \beta \}   & ( S ( \gamma ) \land L ( \beta ) ) \\
+      \sup \{ \alpha [ \beta ] \gamma' \mid \gamma' < \gamma \} & ( L ( \gamma )                   ) \\
+    \end{cases}
+</math>
+
+以下のような述語を条件に用いた。
+
+<math>
+  \begin{eqnarray*}
+    O ( \alpha ) & \coloneqq & \alpha = 0 \\
+    S ( \alpha ) & \coloneqq & \alpha \neq 1 \land \exists \beta, \, \alpha = s ( \beta ) \\
+    L ( \alpha ) & \coloneqq & \alpha \neq 0 \land \forall \beta, \, \beta < \alpha \to s ( \beta ) < \alpha \\
+  \end{eqnarray*}
+</math>
