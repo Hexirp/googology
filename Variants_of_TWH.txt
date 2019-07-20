@@ -36,7 +36,7 @@
 <math>
   \begin{eqnarray*}
     O ( \alpha ) & \coloneqq & \alpha = 0 \\
-    S ( \alpha ) & \coloneqq & \alpha \neq 1 \land \exists \beta, \, \alpha = s ( \beta ) \\
+    S ( \alpha ) & \coloneqq & \exists \beta, \, \alpha = s ( \beta ) \\
     L ( \alpha ) & \coloneqq & \alpha \neq 0 \land \forall \beta, \, \beta < \alpha \to s ( \beta ) < \alpha \\
   \end{eqnarray*}
 </math>
@@ -53,7 +53,7 @@
       a                                                         & ( O ( \gamma ) \land L ( \beta ) ) \\
       s ( \alpha [ \beta ] \gamma^- )                           & ( S ( \gamma ) \land O ( \beta ) ) \\
       ( \alpha [ \beta ] \gamma^- ) [ \beta^- ] \alpha          & ( S ( \gamma ) \land S ( \beta ) ) \\
-      \sup \{ \alpha [ \beta' ] \gamma \mid \beta' < \beta \}   & ( S ( \gamma ) \land L ( \beta ) ) \\
+      ( \alpha [ \beta ] \gamma^- ) [ \beta ] \mu ( \gamma )    & ( S ( \gamma ) \land L ( \beta ) ) \\
       \sup \{ \alpha [ \beta ] \gamma' \mid \gamma' < \gamma \} & ( L ( \gamma )                   ) \\
     \end{cases}
 </math>
@@ -63,7 +63,13 @@
 <math>
   \begin{eqnarray*}
     O ( \alpha ) & \coloneqq & \alpha = 0 \\
-    S ( \alpha ) & \coloneqq & \alpha \neq 1 \land \exists \beta, \, \alpha = s ( \beta ) \\
+    S ( \alpha ) & \coloneqq & \exists \beta, \, \alpha = s ( \beta ) \\
     L ( \alpha ) & \coloneqq & \alpha \neq 0 \land \forall \beta, \, \beta < \alpha \to s ( \beta ) < \alpha \\
   \end{eqnarray*}
+</math>
+
+また、以下のような関数を用いた。
+
+<math>
+  \mu ( \alpha ) \coloneqq \min \{ \beta \mid \exists n < \omega, \, \alpha = \beta + n \}
 </math>
