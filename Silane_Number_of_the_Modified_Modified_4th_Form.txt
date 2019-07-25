@@ -13,7 +13,7 @@
 ここで <math> R ( x, y ) </math> が成り立つことは以下の条件と同値である。ただし <math> x = ( T, m ), \, y = ( S, n ) </math> とした。
 
 # 次のうちどれかである。
-** <math> T </math> から頂点 <math> X </math> を取り除いた <math> T' </math> が <math> S </math> へ位相的同型埋め込み可能であるならば、頂点 <math> X </math> のラベルとなっている関数を <math> X ( \_ ) </math> とすると <math> n = X ( m ) </math> である<ref>このような <math> X </math> は一意でなくても良く、どれの <math> X </math> を選ぶかによって列が分岐し、その内で最も長くなるものが最終的に選ばれる。</ref>。
+#* <math> T </math> から頂点 <math> X </math> を取り除いた <math> T' </math> が <math> S </math> へ位相的同型埋め込み可能であるならば、頂点 <math> X </math> のラベルとなっている関数を <math> X ( \_ ) </math> とすると <math> n = X ( m ) </math> である<ref>このような <math> X </math> は一意でなくても良く、どれの <math> X </math> を選ぶかによって列が分岐し、その内で最も長くなるものが最終的に選ばれる。</ref>。
 #* <math> n = m + 1 </math> である。
 
 ここで <math> x _ 0, x _ 1, \ldots </math> は無限列ではありえない。これは[[TREE数列]]の有限性の証明を応用して証明可能である。このような列をシラン数列とする。
@@ -45,7 +45,7 @@
 ここで <math> R ( x, y ) </math> が成り立つことは以下の条件と同値である。ただし <math> x = ( G, m ), \, y = ( H, n ) </math> とした。
 
 # 次のうちどれかである。
-** <math> G </math> から頂点 <math> X </math> を取り除いた <math> G' </math> が <math> H </math> へラベルを無視して位相的同型埋め込み可能であるならば、頂点 <math> X </math> のラベルとなっている関数を <math> X ( \_ ) </math> とすると <math> n = X ( m ) </math> である<ref>このような <math> X </math> は一意でなくても良く、どれの <math> X </math> を選ぶかによって列が分岐し、その内で最も長くなるものが最終的に選ばれる。</ref>。
+#* <math> G </math> から頂点 <math> X </math> を取り除いた <math> G' </math> が <math> H </math> へラベルを無視して位相的同型埋め込み可能であるならば、頂点 <math> X </math> のラベルとなっている関数を <math> X ( \_ ) </math> とすると <math> n = X ( m ) </math> である<ref>このような <math> X </math> は一意でなくても良く、どれの <math> X </math> を選ぶかによって列が分岐し、その内で最も長くなるものが最終的に選ばれる。</ref>。
 #* <math> n = m + 1 </math> である。
 
 ここで <math> x _ 0, x _ 1, \ldots </math> が無限列になりうるかどうかは不明である。ここではならないということを仮定し、このような数列をシラン数列という。
