@@ -64,9 +64,41 @@
 
 また <math> n </math> が出現しない <math> 14 </math> という式も含まれているが、これは定数関数として取り扱う。
 
+== 定義３ ==
+
+<math> \mathbb{N} \to \mathbb{N} </math> である関数の有限集合 <math> \mathrm{Func} </math> が与えられているとする。この時 <math> \mathrm{Func} </math> をラベルとしたグラフの集合を <math> \mathrm{Graph} </math> とする。
+
+次の特徴を持つ <math> ( \mathrm{Graph}, \mathbb{N} ) </math> の要素の列 <math> x _ 0, x _ 1, \ldots </math> または <math> ( G _ 0, n _ 0 ), ( G _ 1, n _ 1 ), \ldots </math> があるとする。
+
+# <math> G _ i </math> の頂点の数は最大で <math> n _ i </math> までである。
+# <math> i < j </math> の時 <math> G _ i </math> は <math> G _ j </math> にラベルを無視しても位相的同型埋め込み可能ではない。
+# <math> R ( x _ n, x _ { n + 1 } ) </math> である。
+
+ここで <math> R ( x, y ) </math> が成り立つことは以下の条件と同値である。ただし <math> x = ( G, m ), \, y = ( H, n ) </math> とした。
+
+# <math> G </math> から頂点 <math> X </math> を取り除いた <math> G' </math> が <math> H </math> へラベルを無視して位相的同型埋め込み可能であり <math> G' </math> と <math> H </math> の頂点を対応付ける全単射がある、という条件が成り立つどうかで分岐する。
+## 成り立つのなら、その頂点 <math> X </math> のラベルとなっている関数を <math> X ( \_ ) </math> とすると <math> n = X ( m ) </math> である。
+## 成り立たないのなら <math> n = m + 1 </math> である。
+
+ここで <math> x _ 0, x _ 1, \ldots </math> が無限列になりうるかどうかは不明である。ここではならないということを仮定し、このような数列をシラン数列という。
+
+=== 表記 ===
+
+グラフは図で表現される。頂点は円で表現され、その内部には <math> n </math> をただ一つの自由変数とする式で表現された <math> \mathbb{N} \to \mathbb{N} </math> である関数が書き込まれる。それら頂点は線により繋がれグラフの構造を表す。
+
+図で表現されたグラフ <math> G </math> があるとき、その木はそれのみで <math> x _ 0 = ( G, n ) </math> から始まるシラン数列の最大長である数を表すものとする。ただし、ここでの <math> \mathrm{Func} </math> は <math> G </math> の頂点のラベルとなっている関数全てであり、ここでの <math> n </math> は <math> G </math> の頂点の数である。
+
+=== 補足 ===
+
+シラン数第四形態改二の定義に含まれる以下のような関数は計算の途中で実数が現れるが <math> \mathbb{N} \to \mathbb{N} </math> である。
+
+<math> X = \frac{ 1 }{ 6 } n ^ 3 + \frac{ 3 }{ 2 } n ^ 2 + \frac{ 13 }{ 3 } n + 1 + \left( \frac{ 1 }{ 2 } n + \frac{ 3 }{ 2 } \right) \frac{ 1 - \cos \pi n }{ 2 } </math>
+
+また <math> n </math> が出現しない <math> 14 </math> という式も含まれているが、これは定数関数として取り扱う。
+
 == エントリー ==
 
-定義１を、バージョン名を「収容済みバージョン」としてエントリーする。定義２を、バージョン名を「未収容バージョン」としてエントリーする。
+定義１を、バージョン名を「収容済みバージョン」としてエントリーする。定義２を、バージョン名を「未収容バージョン」としてエントリーする。定義３を、バージョン名を「破壊措置完了バージョン」とする。
 
 == 脚注 ==
 
