@@ -38,7 +38,7 @@
 
 次の特徴を持つ <math> ( \mathrm{Graph}, \mathbb{N} ) </math> の要素の列 <math> x _ 0, x _ 1, \ldots </math> または <math> ( G _ 0, n _ 0 ), ( G _ 1, n _ 1 ), \ldots </math> があるとする。
 
-# <math> G _ i </math> の頂点の数は最大で <math> n _ i </math> までである。
+# <math> G _ i </math> の頂点の数は最大で <math> n _ i </math> までであり、辺の数は最大で <math> { n _ i } ^ 2 </math> までである。
 # <math> i < j </math> の時 <math> G _ i </math> は <math> G _ j </math> にラベルを無視しても位相的同型埋め込み可能ではない。
 # <math> R ( x _ n, x _ { n + 1 } ) </math> である。
 
@@ -70,7 +70,7 @@
 
 次の特徴を持つ <math> ( \mathrm{Graph}, \mathbb{N} ) </math> の要素の列 <math> x _ 0, x _ 1, \ldots </math> または <math> ( G _ 0, n _ 0 ), ( G _ 1, n _ 1 ), \ldots </math> があるとする。
 
-# <math> G _ i </math> の頂点の数は最大で <math> n _ i </math> までである。
+# <math> G _ i </math> の頂点の数は最大で <math> n _ i </math> までであり、辺の数は最大で <math> { n _ i } ^ 2 </math> までである。
 # <math> i < j </math> の時 <math> G _ i </math> は <math> G _ j </math> にラベルを無視しても位相的同型埋め込み可能ではない。
 # <math> R ( x _ n, x _ { n + 1 } ) </math> である。
 
