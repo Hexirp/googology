@@ -1,11 +1,11 @@
-﻿<math>
+﻿<div style="display:none"><math>
   \newcommand{\w}{\omega}
   \newcommand{\W}{\Omega}
   \newcommand{\e}{\varepsilon}
   \newcommand{\z}{\zeta}
   \newcommand{\f}{\phi}
   \newcommand{\p}{\psi}
-</math>
+</math></div>
 
 順序数で順序数を解析するだけ。
 
