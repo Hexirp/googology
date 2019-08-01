@@ -284,7 +284,7 @@ w: 0, 1, 2, 3, 4, 5, ...
   \end{eqnarray*}
 </math>
 
-== ??? (Hassium108) ==
+== 2-短成長階層 (Hassium108) ==
 
 <math>
   I _ \alpha ( n ) =
