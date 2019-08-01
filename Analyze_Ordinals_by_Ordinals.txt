@@ -214,7 +214,7 @@
 
 <math> \p _ 1 ( 0 ) </math> が足されると <math> \e </math> の尺度で一つ増え <math> \p _ 1 ( \p _ 1 ( 0 ) ) </math> が足されると <math> \z </math> の尺度で一つ増える。発展して <math> \p _ 1 ( \alpha ) </math> が足されると崩壊がなければ <math> \e </math> の尺度で <math> \w ^ \alpha </math> 増える。同様に <math> \p _ 1 ( \p _ 1 ( 0 ) + \alpha ) </math> が足されると崩壊がなければ <math> \z </math> の尺度で <math> \w ^ \alpha </math> 増える。
 
-そして <math> \f _ 1 ( 0 ) = \p _ 0 ( \p _ 1 ( 0 ) ) </math> で <math> \f _ 2 ( 0 ) = \p _ 0 ( \p _ 1 ( \p _ 1 ( 0 ) ) ) </math> で <math> \f _ 3 ( 0 ) = \p _ 0 ( \p _ 1 ( \p _ 1 ( 0 ) + \p _ 1 ( 0 ) ) ) </math> と増えていき、ついに <math> \f _ \w ( 0 ) = \p _ 0 ( \p _ 1 ( \p _ 0 ( 0 ) ) ) </math> へ達する。より詳細またはこの先はいつかやる Veblen Φ vs Buchholz ψ で。
+そして <math> \varphi _ 1 ( 0 ) = \p _ 0 ( \p _ 1 ( 0 ) ) </math> で <math> \varphi _ 2 ( 0 ) = \p _ 0 ( \p _ 1 ( \p _ 1 ( 0 ) ) ) </math> で <math> \varphi _ 3 ( 0 ) = \p _ 0 ( \p _ 1 ( \p _ 1 ( 0 ) + \p _ 1 ( 0 ) ) ) </math> と増えていき、ついに <math> \f _ \w ( 0 ) = \p _ 0 ( \p _ 1 ( \p _ 1 ( \p _ 0 ( 0 ) ) ) ) </math> へ達する。より詳細またはこの先はいつかやる Veblen Φ vs Buchholz ψ で。
 
 == 4 ==
 
