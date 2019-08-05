@@ -1,10 +1,16 @@
 ﻿<div style="display:none"><math>
+
+  \newcommand{\ordinarycolon} {:}
+  \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
+  \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+
   \newcommand{\w}{\omega}
   \newcommand{\W}{\Omega}
   \newcommand{\e}{\varepsilon}
   \newcommand{\z}{\zeta}
   \newcommand{\f}{\phi}
   \newcommand{\p}{\psi}
+
 </math></div>
 
 順序数で順序数を解析するだけ。
@@ -397,6 +403,21 @@
     \w [ \w ] \w [ \w ] 0 & = & \f ( \w, 0 ) + 1 \\
   \end{array}
 </math>
+
+== 5 ==
+
+Bachmann ψ (recast) を計算する。この順序数崩壊関数は史上初の順序数崩壊関数であり、その定義は全ての極限順序数の基本列が必要になるなど複雑なものであった。このバージョンは Rathjen により再構成 (recast) されたものである。
+
+\[
+  \begin{eqnarray*}
+    C ^ \Omega ( \alpha, \beta ) \coloneqq \mathrm{cl} \{ +, \xi \mapsto \omega ^ \xi, \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) \} ( \beta \cup \{ 0, \Omega \} ) \\
+    \psi _ \Omega ( \alpha ) \coloneqq \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \\
+  \end{eqnarray*}
+\]
+
+=== 参考文献 ===
+
+* [https://googology.wikia.org/wiki/Ordinal_notation?oldid=258188 Ordinal notation]
 
 == 関連リンク ==
 
