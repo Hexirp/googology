@@ -408,12 +408,12 @@
 
 Bachmann ψ (recast) を計算する。この順序数崩壊関数は史上初の順序数崩壊関数であり、その定義は全ての極限順序数の基本列が必要になるなど複雑なものであった。このバージョンは Rathjen により再構成 (recast) されたものである。
 
-\[
+<math>
   \begin{eqnarray*}
     C ^ \Omega ( \alpha, \beta ) \coloneqq \mathrm{cl} \{ +, \xi \mapsto \omega ^ \xi, \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) \} ( \beta \cup \{ 0, \Omega \} ) \\
     \psi _ \Omega ( \alpha ) \coloneqq \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \\
   \end{eqnarray*}
-\]
+</math>
 
 === 参考文献 ===
 
