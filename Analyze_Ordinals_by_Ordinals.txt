@@ -410,8 +410,8 @@ Bachmann ψ (recast) を計算する。この順序数崩壊関数は史上初�
 
 <math>
   \begin{eqnarray*}
-    C ^ \Omega ( \alpha, \beta ) \coloneqq \mathrm{cl} \{ +, \xi \mapsto \omega ^ \xi, \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) \} ( \beta \cup \{ 0, \Omega \} ) \\
-    \psi _ \Omega ( \alpha ) \coloneqq \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \\
+    C ^ \Omega ( \alpha, \beta ) & \coloneqq & \mathrm{cl} \{ +, \xi \mapsto \omega ^ \xi, \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) \} ( \beta \cup \{ 0, \Omega \} ) \\
+    \psi _ \Omega ( \alpha ) & \coloneqq & \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \\
   \end{eqnarray*}
 </math>
 
