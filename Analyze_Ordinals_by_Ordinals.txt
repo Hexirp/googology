@@ -417,41 +417,41 @@ Bachmann ψ (recast) を計算する。この順序数崩壊関数は史上初�
   \end{eqnarray*}
 </math>
 
-<math> \psi _ \Omega ( 0 ) </math> を計算する。まずは <math> C ^ \Omega ( 0, 0 ) = \{ 0, 1, 2, \omega, \omega ^ \omega, \omega ^ { \omega ^ \omega + \omega }, \Omega, \Omega + 1, \Omega + \omega, \omega ^ { \Omega + 1 }, \omega ^ { \Omega + \Omega }, \omega ^ { \omega ^ { \Omega + \Omega } }, \ldots \} </math> である。さらに <math> C ^ \Omega ( 0, \beta ) </math> は <math> \beta < \epsilon _ 0 </math> のとき <math> C ^ \Omega ( 0, 0 ) </math> と等しい。加えて <math> C ^ \Omega ( 0, \epsilon _ 0 ) </math> のときも等しい。
+<math> \psi _ \Omega ( 0 ) </math> を計算する。まずは <math> C ^ \Omega ( 0, 0 ) = \{ 0, 1, 2, \omega, \omega ^ \omega, \omega ^ { \omega ^ \omega + \omega }, \Omega, \Omega + 1, \Omega + \omega, \omega ^ { \Omega + 1 }, \omega ^ { \Omega + \Omega }, \omega ^ { \omega ^ { \Omega + \Omega } }, \ldots \} </math> である。さらに <math> C ^ \Omega ( 0, \beta ) </math> は <math> \beta < \varepsilon _ 0 </math> のとき <math> C ^ \Omega ( 0, 0 ) </math> と等しい。加えて <math> C ^ \Omega ( 0, \varepsilon _ 0 ) </math> のときも等しい。
 
-よって <math> C ^ \Omega ( 0, 0 ) \cap \Omega = \epsilon _ 0 </math> であることから <math> C ^ \Omega ( 0, \epsilon _ 0 ) \cap \Omega = \epsilon _ 0 </math> である。自明に <math> \epsilon _ 0 </math> は <math> C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho </math> を満たす最小の順序数である。
+よって <math> C ^ \Omega ( 0, 0 ) \cap \Omega = \varepsilon _ 0 </math> であることから <math> C ^ \Omega ( 0, \varepsilon _ 0 ) \cap \Omega = \varepsilon _ 0 </math> である。自明に <math> \varepsilon _ 0 </math> は <math> C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho </math> を満たす最小の順序数である。
 
-ゆえに <math> \psi _ \Omega ( 0 ) = \epsilon _ 0 <math> である。
+ゆえに <math> \psi _ \Omega ( 0 ) = \varepsilon _ 0 </math> である。
 
-<math> \psi _ \Omega ( 1 ) </math> を計算する。ここでは <math> \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) </math> が <math> \xi _ { < 1 } \mapsto \psi _ \Omega ( \xi ) </math> となって <math> \psi _ \Omega ( 0 ) = \epsilon _ 0 </math> が <math> C ^ ( 1, \beta ) </math> に含まれるようになる。
+<math> \psi _ \Omega ( 1 ) </math> を計算する。ここでは <math> \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) </math> が <math> \xi _ { < 1 } \mapsto \psi _ \Omega ( \xi ) </math> となって <math> \psi _ \Omega ( 0 ) = \varepsilon _ 0 </math> が <math> C ^ ( 1, \beta ) </math> に含まれるようになる。
 
-よって <math> C ^ \Omega ( 1, 0 ) = C ^ \Omega ( 1, 1 ) = \cdots = C ^ \Omega ( 1, \epsilon _ 1 ) = \epsilon _ 1 </math> になる。ゆえに <math> \psi _ \Omega ( 1 ) = \epsilon _ 1 </math> である。
+よって <math> C ^ \Omega ( 1, 0 ) = C ^ \Omega ( 1, 1 ) = \cdots = C ^ \Omega ( 1, \varepsilon _ 1 ) = \varepsilon _ 1 </math> になる。ゆえに <math> \psi _ \Omega ( 1 ) = \varepsilon _ 1 </math> である。
 
-<math> \psi _ \Omega ( \omega ) </math> を計算する。まず <math> C ^ \Omega ( \omega, 0 ) = \{ 0, 1, \omega, \omega ^ 2, \omega ^ \omega, \epsilon _ 0, \epsilon _ 1, \ldots \} </math> であり <math> C ^ \Omega ( \omega, 0 ) \cup \Omega = \epsilon _ \omega </math> である。ゆえに <math> \psi _ \Omega ( \omega ) = \epsilon _ \omega </math> である。
+<math> \psi _ \Omega ( \omega ) </math> を計算する。まず <math> C ^ \Omega ( \omega, 0 ) = \{ 0, 1, \omega, \omega ^ 2, \omega ^ \omega, \varepsilon _ 0, \varepsilon _ 1, \ldots \} </math> であり <math> C ^ \Omega ( \omega, 0 ) \cup \Omega = \varepsilon _ \omega </math> である。ゆえに <math> \psi _ \Omega ( \omega ) = \varepsilon _ \omega </math> である。
 
-<math> \psi _ \Omega ( \psi _ \Omega ( 0 ) ) = \psi _ \Omega ( \epsilon _ 0 ) </math> を計算する。 <math> C ^ \Omega ( \epsilon _ 0, 0 ) = \{ \epsilon _ 0, \epsilon _ 1, \epsilon _ \omega \ldots \} </math> であり <math> C ^ \Omega ( \epsilon _ 0, 0 ) \cup \Omega = \epsilon _ { \epsilon _ 0 } </math> である。ゆえに <math> \psi _ \Omega ( \omega ) = \epsilon _ \omega </math> である。
+<math> \psi _ \Omega ( \psi _ \Omega ( 0 ) ) = \psi _ \Omega ( \varepsilon _ 0 ) </math> を計算する。 <math> C ^ \Omega ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ 1, \varepsilon _ \omega \ldots \} </math> であり <math> C ^ \Omega ( \varepsilon _ 0, 0 ) \cup \Omega = \varepsilon _ { \varepsilon _ 0 } </math> である。ゆえに <math> \psi _ \Omega ( \omega ) = \varepsilon _ \omega </math> である。
 
-このように積み重ねると <math> 0, \psi _ \Omega ( 0 ), \psi _ \Omega ( \psi _ \Omega ( 0 ) ) \Longrightarrow \zeta _ 0 </math> に達する。
+このように積み重ねると <math> 0, \psi _ \Omega ( 0 ), \psi _ \Omega ( \psi _ \Omega ( 0 ) ), \ldots \Longrightarrow \zeta _ 0 </math> に達する。
 
-<math> \psi _ \Omega ( \zeta _ 0 ) </math> を計算する。 <math> C ^ \Omega ( \epsilon _ 0, 0 ) = \{ \epsilon _ 0, \epsilon _ { \epsilon _ 0 }, \epsilon _ { \epsilon _ { \epsilon _ 0 } } \ldots \} </math> であるゆえに <math> \psi _ \Omega ( \zeta _ 0 ) = \zeta _ 0 </math> である。
+<math> \psi _ \Omega ( \zeta _ 0 ) </math> を計算する。 <math> C ^ \Omega ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ { \varepsilon _ 0 }, \varepsilon _ { \varepsilon _ { \varepsilon _ 0 } } \ldots \} </math> であるゆえに <math> \psi _ \Omega ( \zeta _ 0 ) = \zeta _ 0 </math> である。
 
 <math> \psi _ \Omega ( \Omega ) </math> を計算する。このとき <math> \xi _ { < \Omega } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> < \zeta _ 0 </math> では許されなかった <math> \psi _ \Omega </math> の無制限のネストが許される。よって <math> \zeta _ 0 </math> と同じような状態になり、ゆえに <math> \psi _ \Omega ( \Omega ) = \zeta _ 0 </math> である。
 
-<math> \psi _ \Omega ( \Omega + 1, 0 ) </math> を計算する。このとき <math> \xi _ { < \Omega + 1 } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> C ^ \Omega ( \Omega + 1, 0 ) </math> に <math> \psi _ \Omega ( \Omega ) </math> が'''含まれる'''。 <math> \zeta _ 0, \zeta _ 0 + 1, \zeta _ 0 + 2, \ldots </math> では含まれない。ゆえに <math> \psi _ \Omega ( \Omega + 1 ) = \epsilon _ { \zeta _ 0 + 1 } </math> である。
+<math> \psi _ \Omega ( \Omega + 1, 0 ) </math> を計算する。このとき <math> \xi _ { < \Omega + 1 } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> C ^ \Omega ( \Omega + 1, 0 ) </math> に <math> \psi _ \Omega ( \Omega ) </math> が'''含まれる'''。 <math> \zeta _ 0, \zeta _ 0 + 1, \zeta _ 0 + 2, \ldots </math> では含まれない。ゆえに <math> \psi _ \Omega ( \Omega + 1 ) = \varepsilon _ { \zeta _ 0 + 1 } </math> である。
 
 このまま計算を続けていくと以下のようになる。
 
 <math>
   \begin{eqnarray*}
-    \psi _ \Omega ( 0 ) & = & \epsilon _ 0 \\
-    \psi _ \Omega ( 1 ) & = & \epsilon _ 1 \\
-    \psi _ \Omega ( \omega ) & = & \epsilon _ \omega \\
-    \psi _ \Omega ( \psi _ \Omega ( 0 ) ) & = & \epsilon _ { \epsilon _ 0 } \\
+    \psi _ \Omega ( 0 ) & = & \varepsilon _ 0 \\
+    \psi _ \Omega ( 1 ) & = & \varepsilon _ 1 \\
+    \psi _ \Omega ( \omega ) & = & \varepsilon _ \omega \\
+    \psi _ \Omega ( \psi _ \Omega ( 0 ) ) & = & \varepsilon _ { \varepsilon _ 0 } \\
     \psi _ \Omega ( \zeta _ 0 ) & = & \zeta _ 0 \\
     \psi _ \Omega ( \Omega ) & = & \zeta _ 0 \\
-    \psi _ \Omega ( \Omega + 1 ) & = & \epsilon _ { \zeta _ 0 + 1 } \\
-    \psi _ \Omega ( \Omega + \omega ) & = & \epsilon _ { \zeta _ 0 + \omega } \\
-    \psi _ \Omega ( \Omega + \psi _ \Omega ( \Omega ) ) & = & \epsilon _ { \zeta _ 0 + \zeta _ 0 } \\
+    \psi _ \Omega ( \Omega + 1 ) & = & \varepsilon _ { \zeta _ 0 + 1 } \\
+    \psi _ \Omega ( \Omega + \omega ) & = & \varepsilon _ { \zeta _ 0 + \omega } \\
+    \psi _ \Omega ( \Omega + \psi _ \Omega ( \Omega ) ) & = & \varepsilon _ { \zeta _ 0 + \zeta _ 0 } \\
     \psi _ \Omega ( \Omega + \Omega ) & = & \zeta _ 1 \\
   \end{eqnarray*}
 </math>
