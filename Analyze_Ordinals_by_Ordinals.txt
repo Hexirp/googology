@@ -435,7 +435,7 @@ Bachmann ψ (recast) を計算する。この順序数崩壊関数は史上初�
 
 <math> \psi _ \Omega ( \zeta _ 0 ) </math> を計算する。 <math> C ^ \Omega ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ { \varepsilon _ 0 }, \varepsilon _ { \varepsilon _ { \varepsilon _ 0 } } \ldots \} </math> であるゆえに <math> \psi _ \Omega ( \zeta _ 0 ) = \zeta _ 0 </math> である。
 
-<math> \psi _ \Omega ( \Omega ) </math> を計算する。このとき <math> \xi _ { < \Omega } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> < \zeta _ 0 </math> では許されなかった <math> \psi _ \Omega </math> の無制限のネストが許される。よって <math> \zeta _ 0 </math> と同じような状態になり、ゆえに <math> \psi _ \Omega ( \Omega ) = \zeta _ 0 </math> である。
+<math> \psi _ \Omega ( \Omega ) </math> を計算する。このとき <math> \xi _ { < \Omega } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> \alpha < \zeta _ 0 </math> では許されなかった <math> \psi _ \Omega </math> の無制限のネストが許される。よって <math> \zeta _ 0 </math> と同じような状態になり、ゆえに <math> \psi _ \Omega ( \Omega ) = \zeta _ 0 </math> である。
 
 <math> \psi _ \Omega ( \Omega + 1, 0 ) </math> を計算する。このとき <math> \xi _ { < \Omega + 1 } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> C ^ \Omega ( \Omega + 1, 0 ) </math> に <math> \psi _ \Omega ( \Omega ) </math> が'''含まれる'''。 <math> \zeta _ 0, \zeta _ 0 + 1, \zeta _ 0 + 2, \ldots </math> では含まれない。ゆえに <math> \psi _ \Omega ( \Omega + 1 ) = \varepsilon _ { \zeta _ 0 + 1 } </math> である。
 
