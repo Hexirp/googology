@@ -54,7 +54,11 @@
 
 == 表記 ==
 
-集合 <math> T </math> を次のように定める。
+集合 <math> T </math> を次のような条件を満たす最小の集合であるとして定める。
+
+# <math> 0 \in T </math> である。
+# <math> a \in T </math> に対して <math> \omega ^ a \in T </math> である。
+# <math> a \in T </math> に対して <math> \psi _ \Omega ( a ) \in T </math> である。
 
 == 脚注 ==
 
