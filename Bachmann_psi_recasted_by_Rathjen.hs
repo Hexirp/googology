@@ -6,50 +6,57 @@ module Oridnal where
 
   data Unary = Omega Sequence | Psi Sequence | Cardinal
 
-  lt :: Sequence -> Sequence -> Ordering
-  lt (Sequence a) (Sequence b) = go a b
+  lt_seq :: Sequence -> Sequence -> Ordering
+  lt_seq (Sequence a) (Sequence b) = go a b
    where
     go :: [Unary] -> [Unary] -> Ordering
     go []       []       = EQ
     go []       (b : bs) = LT
     go (a : as) []       = GT
-    go (a : as) (b : bs) = case uo a b of
+    go (a : as) (b : bs) = case lt_u a b of
       LT -> LT
       EQ -> go as bs
       GT -> GT
-    uo :: Unary -> Unary -> Ordering
-    uo (Omega a) (Omega b) = lt a b
-    uo (Omega a) (Psi b)   = lt a (Sequence [Psi b])
-    uo (Omega a) Cardinal  = LT
-    uo (Psi a)   (Omega b) = lt (Sequence [Psi a]) b
-    uo (Psi a)   (Psi b)   = lt a b
-    uo (Psi a)   Cardinal  = LT
-    uo Cardinal  (Omega b) = GT
-    uo Cardinal  (Psi b)   = GT
-    uo Cardinal  Cardinal  = EQ
 
-  st :: Sequence -> Bool
-  st (Sequence x) = go x
+  lt_u :: Unary -> Unary -> Ordering
+  lt_u (Omega a) (Omega b) = lt_seq a b
+  lt_u (Omega a) (Psi b)   = lt_seq a (Sequence [Psi b])
+  lt_u (Omega a) Cardinal  = LT
+  lt_u (Psi a)   (Omega b) = lt_seq (Sequence [Psi a]) b
+  lt_u (Psi a)   (Psi b)   = lt_seq a b
+  lt_u (Psi a)   Cardinal  = LT
+  lt_u Cardinal  (Omega b) = GT
+  lt_u Cardinal  (Psi b)   = GT
+  lt_u Cardinal  Cardinal  = EQ
+
+  st_seq :: Sequence -> Bool
+  st_seq (Sequence x) = go x
    where
     go :: [Unary] -> Bool
-    go [] = True
-    go (x : xs) = stu x && go xs
-    stu :: Unary -> Bool
-    stu (Omega x) = case x of
-      [] -> True
-      [x'] -> case x' of
-        Omega x'' -> st (Sequence [Omega x''])
-        Psi x'' -> False
-        Cardinal -> False
-      (x' : xs') -> True
-    stu (Psi x) = st x && stug x
-    stu Cardinal = True
-    stug :: Sequence -> Bool
-    stug x@(Sequence x') = go x x'
-     where
-      go :: Sequence -> [Unary] -> Bool
-      go x [] = True
-      go x (x' : xs') = stugu x x' && go x xs'
-      stugu :: Sequence -> Unary -> Bool
-      stugu x (Omega (Sequence y)) = go x y
-      stugu x y@(Psi (Sequence y')) = lt
+    go []       = True
+    go (x : xs) = st_u x && dec x xs && go xs
+
+  dec :: Unary -> Sequence -> Bool
+  dec x []       = True
+  dex x (y : ys) = lt_u x y && ys
+
+  st_u :: Unary -> Bool
+  st_u (Omega x) = case x of
+    [] -> True
+    [x'] -> case x' of
+      Omega x'' -> st (Sequence [Omega x''])
+      Psi x'' -> False
+      Cardinal -> False
+    (x' : xs') -> True
+  st_u (Psi x) = st x && stug x
+  st_u Cardinal = True
+
+  g_u :: Sequence -> Bool
+  g_u x@(Sequence x') = go x x'
+   where
+    go :: Sequence -> [Unary] -> Bool
+    go x [] = True
+    go x (x' : xs') = stugu x x' && go x xs'
+    stugu :: Sequence -> Unary -> Bool
+    stugu x (Omega (Sequence y)) = go x y
+    stugu x y@(Psi (Sequence y')) = lt
