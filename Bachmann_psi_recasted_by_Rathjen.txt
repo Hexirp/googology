@@ -1,12 +1,12 @@
-﻿<math>
+﻿<div style="display:none"><math>
   \newcommand{\ordinarycolon}{:}
   \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
   \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
-</math>
+</math></div>
 
 Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathjen が再構成したものである。そもそも Bachmann ψ は史上初の順序数崩壊関数であったが、その定義は全ての極限順序数の基本列が必要になるなど計算が面倒なものであった。それを Rathjen が再構成 (recast) して計算が簡便になっている。<ref>GWiki 2019 §3.1</ref>
 
-限界は Bachmann–Howard ordinal である<ref> GWiki 2019 §5</ref>。そも、名前が同じ人に由来しているので、この順序数崩壊関数の限界であるから名前がこうなったのかもしれない。
+限界は[[バッハマン・ハワード順序数]] (Bachmann–Howard ordinal) である<ref> GWiki 2019 §5</ref>。そも、名前が同じ人に由来しているので、この順序数崩壊関数の限界であるから名前がこうなったのかもしれない。
 
 == 定義 ==
 
@@ -62,7 +62,7 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 
 == 順序数表記 ==
 
-Bachmann ψ (recasted) を元にした順序数表記は探しても見つからなかった。ここのは私が独自に定めたものである。この順序数表記は良く知られた順序数表記である Buchholz ψ と違って <math> \omega ^ \alpha </math> が基本記号（表記を構成する様々なアリティの定数記号および関数記号）に含まれている。そのため、順序数表記の正当性は未知の状態である。
+Bachmann ψ (recasted) を元にした順序数表記は探しても見つからなかった。ここのは私が独自に定めたものである。この順序数表記は良く知られた順序数表記である Buchholz ψ と違って <math> \omega ^ \alpha </math> が基本記号（表記を構成する様々なアリティの定数記号および関数記号）に含まれている。そのため、この順序数表記が正しいのかはまだわかってない。
 
 === 定義 ===
 
@@ -140,6 +140,10 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 一番右に一番奥にある要素を求める。 ω だったら並べていくだけ。 Buchholz ψ と違って ψ 関数は必ずネストへ展開される。カントールの標準形の展開が組み込み。要素が Ω の時だけネストになる。ネストされる範囲は親を辿って行って最初に見つかった ψ までか？
 
+=== プログラム ===
+
+作業中……
+
 == 脚注 ==
 
 <references />
@@ -147,3 +151,8 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 == 参考文献 ==
 
 * [https://googology.wikia.org/wiki/Ordinal_notation?oldid=258188 Ordinal notation | Googology Wiki | FANDOM powered by Wikia] - GWiki 2019
+
+== 関連項目 ==
+
+* [[バッハマン・ハワード順序数]]
+* [[Ψ関数]]
