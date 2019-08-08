@@ -44,19 +44,24 @@ module Oridnal where
   st_u (Omega x) = case x of
     [] -> True
     [x'] -> case x' of
-      Omega x'' -> st (Sequence [Omega x''])
+      Omega x'' -> st_seq (Sequence [Omega x''])
       Psi x'' -> False
       Cardinal -> False
     (x' : xs') -> True
-  st_u (Psi x) = st x && stug x
+  st_u (Psi x) = g_u x && st_seq x
   st_u Cardinal = True
 
   g_u :: Sequence -> Bool
-  g_u x@(Sequence x') = go x x'
+  g_u x = go x x
    where
-    go :: Sequence -> [Unary] -> Bool
-    go x [] = True
-    go x (x' : xs') = stugu x x' && go x xs'
-    stugu :: Sequence -> Unary -> Bool
-    stugu x (Omega (Sequence y)) = go x y
-    stugu x y@(Psi (Sequence y')) = lt
+    --
+    go_seq :: Sequence -> Sequence -> Bool
+    go_seq x (Sequence y) = go x y
+    --
+    go_us :: Sequence -> [Unary] -> Bool
+    go_us x []       = True
+    go_us x (y : ys) = go_u x y && go x xs'
+    --
+    go_u :: Sequence -> Unary -> Bool
+    go_u x (Omega y) = lt_seq y x && 
+    go_u x y@(Psi (Sequence y')) = lt
