@@ -59,6 +59,33 @@
 # <math> 0 \in T </math> である。
 # <math> a \in T </math> に対して <math> \omega ^ a \in T </math> である。
 # <math> a \in T </math> に対して <math> \psi _ \Omega ( a ) \in T </math> である。
+# <math> 1 \lt k \le \omega </math> を取り、単項（条件 2, 3 で構成された要素）の列 <math> a _ 0, \ldots, a _ k \in T </math> に対して <math> a _ 0 + \cdots + a _ l \in T </math> である。
+
+集合 <math> T </math> の上の狭義全順序 <math> < </math> を次のように帰納的に定める。
+
+# <math> 0 < 0 </math> ではない。
+# <math> 0 </math> ではない <math> a \in T </math> に対して <math> 0 < a </math> である。
+# <math> 0 </math> ではない <math> a \in T </math> に対して <math> a < 0 </math> ではない。
+# いずれも <math> 0 </math> ではない <math> a, b \in T </math> に対して、
+## <math> a, b </math> の双方とも単項であるとき、
+### <math> a = \omega ^ a', \, b = \omega ^ b' </math> のとき <math> a' < b' </math> と同値である。
+### <math> a = \omega ^ a', \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < \psi _ \Omega ( b' ) </math> と同値である。
+### <math> a = \psi _ \Omega ( a' ), \, b = \omega ^ b' </math> のとき <math> \psi _ \Omega ( a' ) < b' </math> と同値である。
+### <math> a = \psi _ \Omega ( a' ), \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < b' </math> と同値である。
+## <math> a </math> が単項で <math> b </math> が単項ではないとき、
+### <math> b = b' _ 0 + \cdots + b' _ k </math> のとき、
+#### <math> a < b' _ 0 </math> であるならば <math> a < b </math> である。
+#### <math> a = b' _ 0 </math> であるならば <math> a < b </math> である。
+#### <math> a > b' _ 0 </math> であるならば <math> a < b </math> ではない。
+## <math> a </math> が単項ではなく <math> b </math> が単項のとき、
+### <math> a = a' _ 0 + \cdots + a' _ k </math> のとき、
+#### <math> a' _ 0 < b </math> であるならば <math> a < b </math> である。
+#### <math> a' _ 0 = b </math> であるならば <math> a < b </math> ではない。
+#### <math> a' _ 0 > b </math> であるならば <math> a < b </math> ではない。
+## <math> a, b </math> が双方とも単項ではないとき、
+### <math> a = a' _ 0 + \cdots + a' _ m, \, b = b' _ 0 + \cdots + b' _ n </math> のとき、以下のいずれかが成り立てば <math> a < b </math> である
+#### <math> m < n </math> であり、どの <math> i \le m </math> に対しても <math> a' _ i = b' _ i </math> である。
+#### <math> k \le \min \{ m, n \} </math> が存在して <math> a _ k < b _ k </math> を満たし、どの <math> i < k </math> に対しても <math> a' _ i = b' _ i </math> である。
 
 == 脚注 ==
 
