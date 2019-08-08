@@ -63,5 +63,6 @@ module Oridnal where
     go_us x (y : ys) = go_u x y && go x xs'
     --
     go_u :: Sequence -> Unary -> Bool
-    go_u x (Omega y) = lt_seq y x && 
-    go_u x y@(Psi (Sequence y')) = lt
+    go_u x (Omega y) = lt_seq (Sequence [Omega y]) x && go_u x y -- r
+    go_u x (Psi y) = lt_seq (Sequence [Psi y]) x && go_u x y
+    go_u x Cardinal = lt_seq (Sequence [Cardinal]) x
