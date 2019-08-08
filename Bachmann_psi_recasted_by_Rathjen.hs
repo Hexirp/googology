@@ -38,7 +38,7 @@ module Oridnal where
 
   dec :: Unary -> Sequence -> Bool
   dec x []       = True
-  dex x (y : ys) = comp_u x y == LT && ys
+  dex x (y : ys) = comp_u x y == LT && dec x ys
 
   st_u :: Unary -> Bool
   st_u (Omega x) = case x of
@@ -52,15 +52,15 @@ module Oridnal where
   st_u Cardinal = True
 
   g_u :: Sequence -> Bool
-  g_u x = go x x
+  g_u x = go_seq x x
    where
     --
     go_seq :: Sequence -> Sequence -> Bool
-    go_seq x (Sequence y) = go x y
+    go_seq x (Sequence y) = go_us x y
     --
     go_us :: Sequence -> [Unary] -> Bool
     go_us x []       = True
-    go_us x (y : ys) = go_u x y && go x xs'
+    go_us x (y : ys) = go_u x y && go_us x ys
     --
     go_u :: Sequence -> Unary -> Bool
     go_u x (Omega y) = comp_seq x (Sequence [Omega y])  == GT && go_u x y -- r
