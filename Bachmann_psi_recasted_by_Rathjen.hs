@@ -2,9 +2,9 @@ module Oridnal where
 
   import Prelude
 
-  data Sequence = Sequence [Unary]
+  data Sequence = Sequence [Unary] deriving Show
 
-  data Unary = Omega Sequence | Psi Sequence | Cardinal
+  data Unary = Omega Sequence | Psi Sequence | Cardinal deriving Show
 
   comp_seq :: Sequence -> Sequence -> Ordering
   comp_seq (Sequence a) (Sequence b) = go a b
