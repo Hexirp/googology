@@ -41,15 +41,18 @@ module Oridnal where
   dex x (y : ys) = comp_u x y == LT && dec x ys
 
   st_u :: Unary -> Bool
-  st_u (Omega (Sequence x)) = case x of
-    [] -> True
-    x' : [] -> case x' of
-      Omega x'' -> st_seq (Sequence [Omega x''])
+  st_u (Omega x) = o_u x && st_seq x
+  st_u (Psi x) = g_u x && st_seq x
+  st_u Cardinal = True
+
+  o_u :: Sequence -> Bool
+  o_u (Sequence x) = case x of
+    []       -> True
+    x' : []  -> case x' of
+      Omega x'' -> True
       Psi x''   -> False
       Cardinal  -> False
     x' : xs' -> True
-  st_u (Psi x) = g_u x && st_seq x
-  st_u Cardinal = True
 
   g_u :: Sequence -> Bool
   g_u x = go_seq x x
@@ -66,3 +69,7 @@ module Oridnal where
     go_u x (Omega y) = comp_seq x (Sequence [Omega y])  == GT && go_seq x y -- r
     go_u x (Psi y)   = comp_seq x (Sequence [Psi y])    == GT && go_seq x y
     go_u x Cardinal  = comp_seq x (Sequence [Cardinal]) == GT
+
+
+  main :: IO ()
+  main = return ()
