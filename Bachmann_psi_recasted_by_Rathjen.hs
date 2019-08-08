@@ -36,12 +36,12 @@ module Oridnal where
     go []       = True
     go (x : xs) = st_u x && dec x xs && go xs
 
-  dec :: Unary -> Sequence -> Bool
+  dec :: Unary -> [Unary] -> Bool
   dec x []       = True
   dex x (y : ys) = comp_u x y == LT && dec x ys
 
   st_u :: Unary -> Bool
-  st_u (Omega x) = case x of
+  st_u (Omega (Sequence x)) = case x of
     [] -> True
     x' : [] -> case x' of
       Omega x'' -> st_seq (Sequence [Omega x''])
@@ -63,6 +63,6 @@ module Oridnal where
     go_us x (y : ys) = go_u x y && go_us x ys
     --
     go_u :: Sequence -> Unary -> Bool
-    go_u x (Omega y) = comp_seq x (Sequence [Omega y])  == GT && go_u x y -- r
-    go_u x (Psi y)   = comp_seq x (Sequence [Psi y])    == GT && go_u x y
+    go_u x (Omega y) = comp_seq x (Sequence [Omega y])  == GT && go_seq x y -- r
+    go_u x (Psi y)   = comp_seq x (Sequence [Psi y])    == GT && go_seq x y
     go_u x Cardinal  = comp_seq x (Sequence [Cardinal]) == GT
