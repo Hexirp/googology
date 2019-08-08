@@ -59,6 +59,7 @@
 # <math> 0 \in T </math> である。
 # <math> a \in T </math> に対して <math> \omega ^ a \in T </math> である。
 # <math> a \in T </math> に対して <math> \psi _ \Omega ( a ) \in T </math> である。
+# <math> \Omega \in T </math> である。
 # <math> 1 \lt k \le \omega </math> を取り、単項（条件 2, 3 で構成された要素）の列 <math> a _ 0, \ldots, a _ k \in T </math> に対して <math> a _ 0 + \cdots + a _ l \in T </math> である。
 
 集合 <math> T </math> の上の狭義全順序 <math> < </math> を次のように帰納的に定める。
@@ -86,6 +87,30 @@
 ### <math> a = a' _ 0 + \cdots + a' _ m, \, b = b' _ 0 + \cdots + b' _ n </math> のとき、以下のいずれかが成り立てば <math> a < b </math> である
 #### <math> m < n </math> であり、どの <math> i \le m </math> に対しても <math> a' _ i = b' _ i </math> である。
 #### <math> k \le \min \{ m, n \} </math> が存在して <math> a _ k < b _ k </math> を満たし、どの <math> i < k </math> に対しても <math> a' _ i = b' _ i </math> である。
+
+集合 <math> G ( a ) </math> を次のような条件を満たす最小の集合であるとして定める。
+
+# <math> a = 0 </math> のとき <math> G ( a ) = \emptyset </math> である。
+# <math> a = \omega ^ a' </math> のとき  <math> G ( a ) = \{ a \} \cup G ( a' ) </math> である。
+# <math> a = \psi _ \Omega ( a' ) </math> のとき <math> G ( a ) = \{ a \} \cup G ( a' ) </math> である。
+# <math> a = \Omega </math> のとき <math> G ( a ) = \{ \Omega \} </math> である。
+# <math> a = a' _ 0 + \cdots + a' _ k </math> のとき <math> G ( a ) = G ( a' _ 0 ) \cup \cdots \cup G ( a' _ k ) </math> である。
+
+集合 <math> \mathrm{OT </math> を次のように帰納的に定める。
+
+# <math> 0 \in OT </math> である。
+# <math> a \in OT </math> に対して <math> a = 0 </math> か <math> a = a' _ 0 + \cdots + a' _ k </math> であれば <math> \omega ^ a \in OT </math> である。
+# <math> a \in OT </math> に対して <math> \forall a', \, a' \in G ( a ) \to a' < a </math> であれば <math> \psi _ \Omega ( a' ) \in OT </math> である。
+# <math> \Omega \in OT </math> である。
+# <math> a _ 0, \ldots, a _ k \in OT </math> に対して <math> a _ 0 > \cdots > a _ k </math> であれば <math> a _ 0 + \cdots + a _ k \in OT </math> である。
+
+対応 <math> o ( a ) </math> を次のようにして定める。
+
+# <math> a = 0 </math> のとき <math> o ( a ) = 0 </math> である。
+# <math> a = \omega ^ a' </math> のとき <math> o ( a ) = \omega ^ { o ( a' ) } </math> である。
+# <math> a = \psi _ \Omega ( a' ) </math> のとき <math> o ( a ) = \psi _ \Omega ( o ( a' ) ) </math> である。
+# <math> a = \Omega </math> のとき <math> o ( a ) = \Omega </math> である。
+# <math> 1 \lt k \le \omega </math> を取って <math> a = a' _ 0 + \cdots + a' _ k </math> のとき <math> o ( a ) = o ( a' _ 0 ) + \cdots + o ( a' _ k ) </math> である。
 
 == 脚注 ==
 
