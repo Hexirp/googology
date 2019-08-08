@@ -6,28 +6,28 @@ module Oridnal where
 
   data Unary = Omega Sequence | Psi Sequence | Cardinal
 
-  lt_seq :: Sequence -> Sequence -> Ordering
-  lt_seq (Sequence a) (Sequence b) = go a b
+  comp_seq :: Sequence -> Sequence -> Ordering
+  comp_seq (Sequence a) (Sequence b) = go a b
    where
     go :: [Unary] -> [Unary] -> Ordering
     go []       []       = EQ
     go []       (b : bs) = LT
     go (a : as) []       = GT
-    go (a : as) (b : bs) = case lt_u a b of
+    go (a : as) (b : bs) = case comp_u a b of
       LT -> LT
       EQ -> go as bs
       GT -> GT
 
-  lt_u :: Unary -> Unary -> Ordering
-  lt_u (Omega a) (Omega b) = lt_seq a b
-  lt_u (Omega a) (Psi b)   = lt_seq a (Sequence [Psi b])
-  lt_u (Omega a) Cardinal  = LT
-  lt_u (Psi a)   (Omega b) = lt_seq (Sequence [Psi a]) b
-  lt_u (Psi a)   (Psi b)   = lt_seq a b
-  lt_u (Psi a)   Cardinal  = LT
-  lt_u Cardinal  (Omega b) = GT
-  lt_u Cardinal  (Psi b)   = GT
-  lt_u Cardinal  Cardinal  = EQ
+  comp_u :: Unary -> Unary -> Ordering
+  comp_u (Omega a) (Omega b) = comp_seq a b
+  comp_u (Omega a) (Psi b)   = comp_seq a (Sequence [Psi b])
+  comp_u (Omega a) Cardinal  = LT
+  comp_u (Psi a)   (Omega b) = comp_seq (Sequence [Psi a]) b
+  comp_u (Psi a)   (Psi b)   = comp_seq a b
+  comp_u (Psi a)   Cardinal  = LT
+  comp_u Cardinal  (Omega b) = GT
+  comp_u Cardinal  (Psi b)   = GT
+  comp_u Cardinal  Cardinal  = EQ
 
   st_seq :: Sequence -> Bool
   st_seq (Sequence x) = go x
@@ -38,16 +38,16 @@ module Oridnal where
 
   dec :: Unary -> Sequence -> Bool
   dec x []       = True
-  dex x (y : ys) = lt_u x y && ys
+  dex x (y : ys) = comp_u x y == LT && ys
 
   st_u :: Unary -> Bool
   st_u (Omega x) = case x of
     [] -> True
-    [x'] -> case x' of
+    x' : [] -> case x' of
       Omega x'' -> st_seq (Sequence [Omega x''])
-      Psi x'' -> False
-      Cardinal -> False
-    (x' : xs') -> True
+      Psi x''   -> False
+      Cardinal  -> False
+    x' : xs' -> True
   st_u (Psi x) = g_u x && st_seq x
   st_u Cardinal = True
 
@@ -63,6 +63,6 @@ module Oridnal where
     go_us x (y : ys) = go_u x y && go x xs'
     --
     go_u :: Sequence -> Unary -> Bool
-    go_u x (Omega y) = lt_seq (Sequence [Omega y]) x && go_u x y -- r
-    go_u x (Psi y) = lt_seq (Sequence [Psi y]) x && go_u x y
-    go_u x Cardinal = lt_seq (Sequence [Cardinal]) x
+    go_u x (Omega y) = comp_seq x (Sequence [Omega y])  == GT && go_u x y -- r
+    go_u x (Psi y)   = comp_seq x (Sequence [Psi y])    == GT && go_u x y
+    go_u x Cardinal  = comp_seq x (Sequence [Cardinal]) == GT
