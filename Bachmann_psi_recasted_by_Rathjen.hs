@@ -71,5 +71,20 @@ module Oridnal where
     go_u x Cardinal  = comp_seq x (Sequence [Cardinal]) == GT
 
 
+  -- テスト:
+  --
+  -- >>> comp_seq (Sequence []) (Sequence [])
+  -- EQ
+  -- >>> comp_seq (Sequence [Psi (Sequence [])]) (Sequence [Psi (Sequence [Cardinal])])
+  -- LT
+  -- >>> st_seq (Sequence [])
+  -- True
+  -- >>> st_seq (Sequence [Psi (Sequence [])])
+  -- True
+  -- >>> st_seq (Sequence [Psi (Sequence [Cardinal])])
+  -- False
+  --
+  -- True を期待していたが False になった。
+
   main :: IO ()
   main = return ()
