@@ -1,8 +1,10 @@
-﻿Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathjen が再構成したものである。そもそも Bachmann ψ は史上初の順序数崩壊関数であったが、その定義は全ての極限順序数の基本列が必要になるなど計算が面倒なものであった。それを Rathjen が再構成 (recast) して計算が簡便になっている。<ref>GWIKI 2019 §3.1</ref>
+﻿Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathjen が再構成したものである。そもそも Bachmann ψ は史上初の順序数崩壊関数であったが、その定義は全ての極限順序数の基本列が必要になるなど計算が面倒なものであった。それを Rathjen が再構成 (recast) して計算が簡便になっている。<ref>GWiki 2019 §3.1</ref>
+
+限界は Bachmann–Howard ordinal である<ref> GWiki 2019 §5</ref>。そも、名前が同じ人に由来しているので、この順序数崩壊関数の限界であるから名前がこうなったのかもしれない。
 
 == 定義 ==
 
-定義は次のようになる<ref>GWIKI 2019 §3.1</ref>。ここで <math> \Omega </math> はある一つの不可算基数である。
+定義は次のようになる<ref>GWiki 2019 §3.1</ref>。ここで <math> \Omega </math> はある一つの不可算基数、例えば最小の不可算順序数 (aleph one) である。
 
 <math>
   \begin{eqnarray*}
@@ -52,7 +54,11 @@
   \end{eqnarray*}
 </math>
 
-== 表記 ==
+== 順序数表記 ==
+
+Bachmann ψ (recasted) を元にした順序数表記は探しても見つからなかった。ここのは私が独自に定めたものである。この順序数表記は良く知られた順序数表記である Buchholz ψ と違って <math> \omega ^ \alpha </math> が基本記号（表記を構成する様々なアリティの定数記号および関数記号）に含まれている。そのため、順序数表記の正当性は未知の状態である。
+
+=== 定義 ===
 
 集合 <math> T </math> を次のような条件を満たす最小の集合であるとして定める。
 
@@ -112,10 +118,26 @@
 # <math> a = \Omega </math> のとき <math> o ( a ) = \Omega </math> である。
 # <math> 1 \lt k \le \omega </math> を取って <math> a = a' _ 0 + \cdots + a' _ k </math> のとき <math> o ( a ) = o ( a' _ 0 ) + \cdots + o ( a' _ k ) </math> である。
 
+=== 基本列 ===
+
+作業中……
+
+# 0 だったら Zero
+# ω^a だったら
+## a == 0 なら Succ
+## a /= 0 なら Limit
+# ψ だったら Limit
+# Ω だったら ???
+# a_0, ..., a_k だったら
+## a_k が ω^0 なら Succ
+## そうでないなら Limit
+
+一番右に一番奥にある要素を求める。 ω だったら並べていくだけ。 Buchholz ψ と違って ψ 関数は必ずネストへ展開される。カントールの標準形の展開が組み込み。要素が Ω の時だけネストになる。ネストされる範囲は親を辿って行って最初に見つかった ψ までか？
+
 == 脚注 ==
 
 <references />
 
 == 参考文献 ==
 
-* [https://googology.wikia.org/wiki/Ordinal_notation?oldid=258188 Ordinal notation | Googology Wiki | FANDOM powered by Wikia] - GWIKI 2019
+* [https://googology.wikia.org/wiki/Ordinal_notation?oldid=258188 Ordinal notation | Googology Wiki | FANDOM powered by Wikia] - GWiki 2019
