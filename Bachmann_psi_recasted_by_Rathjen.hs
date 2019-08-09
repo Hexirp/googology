@@ -42,8 +42,8 @@ module Oridnal where
 
   st_u :: Unary -> Bool
   st_u (Omega x) = o_u x && st_seq x
-  st_u (Psi x) = g_u x && st_seq x
-  st_u Cardinal = True
+  st_u (Psi x)   = g_u x && st_seq x
+  st_u Cardinal  = True
 
   o_u :: Sequence -> Bool
   o_u (Sequence x) = case x of
@@ -53,6 +53,27 @@ module Oridnal where
       Psi x''   -> False
       Cardinal  -> False
     x' : xs' -> True
+
+  -- p ( a ) の a の部分が引数である。
+  g_u :: Sequence -> Bool
+  g_u x = go_seq x x
+   where
+    --
+    go_seq :: Sequence -> Sequence -> Bool
+    go_seq x (Sequence y) = go_us x y
+    --
+    go_us :: Sequence -> [Unary] -> Bool
+    go_us x []       = True
+    go_us x (y : []) = case y of
+      Omega y' -> comp_seq x (Sequence [Omega y']) == GT && go_seq y'
+      Psi y'   -> comp_seq x (Sequence [Psi y']) == GT && go_seq y'
+      Cardinal -> True
+    go_us x (y : ys) = go_u x y && go_us x ys
+    --
+    go_u :: Sequence -> Unary -> Bool
+    go_u x (Omega y) = comp_seq x (Sequence [Omega y]) == GT && go_seq x y
+    go_u x (Psi y)   = comp_seq x (Sequence [Psi y]) == GT && go_seq x y
+    go_u x Cardinal  = comp_seq x (Sequence [Cardinal]) == GT
 
   g_u :: Sequence -> Bool
   g_u x = go_seq x x
