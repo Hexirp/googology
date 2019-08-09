@@ -124,6 +124,12 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 # <math> a = \Omega </math> のとき <math> o ( a ) = \Omega </math> である。
 # <math> 1 \lt k \le \omega </math> を取って <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> o ( a ) = o ( { a' } _ 0 ) + \cdots + o ( { a' } _ k ) </math> である。
 
+=== 性質 ===
+
+このような性質が期待される。証明はまだない。
+
+* <math> o \colon OT \to \mathrm{On} </math> は <math> OT </math> の上の <math> < </math> から通常の <math> < </math> へ順序を保つ写像である。このことから <math> OT </math> の上の <math> < </math> は整列順序を構成する。
+
 === 基本列 ===
 
 作業中……
