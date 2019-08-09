@@ -103,9 +103,9 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 集合 <math> G ( a ) </math> を次のような条件を満たす最小の集合であるとして定める。
 
 # <math> a = 0 </math> のとき <math> G ( a ) = \emptyset </math> である。
-# <math> a = \omega ^ { a' } </math> のとき  <math> G ( a ) = \{ a \} \cup G ( a' ) </math> である。
-# <math> a = \psi _ \Omega ( a' ) </math> のとき <math> G ( a ) = \{ a \} \cup G ( a' ) </math> である。
-# <math> a = \Omega </math> のとき <math> G ( a ) = \{ a \} </math> である。
+# <math> a = \omega ^ { a' } </math> のとき  <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である。
+# <math> a = \psi _ \Omega ( a' ) </math> のとき <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である。
+# <math> a = \Omega </math> のとき <math> G ( a ) = \emptyset </math> である。
 # <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> G ( a ) = G ( { a' } _ 0 ) \cup \cdots \cup G ( { a' } _ k ) </math> である。
 
 集合 <math> OT </math> を次のように帰納的に定める。
@@ -114,7 +114,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 # <math> a \in OT </math> に対して <math> a = 0 </math> か <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> であれば <math> \omega ^ a \in OT </math> である。
 # <math> a \in OT </math> に対して <math> \forall a', \, a' \in G ( a ) \to a' < a </math> であれば <math> \psi _ \Omega ( a' ) \in OT </math> である。
 # <math> \Omega \in OT </math> である。
-# <math> a _ 0, \ldots, a _ k \in OT </math> に対して <math> a _ 0 > \cdots > a _ k </math> であれば <math> a _ 0 + \cdots + a _ k \in OT </math> である。
+# <math> a _ 0, \ldots, a _ k \in OT </math> に対して <math> a _ 0 \ge \cdots \ge a _ k </math> であれば <math> a _ 0 + \cdots + a _ k \in OT </math> である。
 
 対応 <math> o ( a ) </math> を次のようにして定める。
 
