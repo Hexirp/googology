@@ -103,7 +103,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 集合 <math> G ( a ) </math> を次のような条件を満たす最小の集合であるとして定める。
 
 # <math> a = 0 </math> のとき <math> G ( a ) = \emptyset </math> である。
-# <math> a = \omega ^ { a' } </math> のとき  <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である<ref group="注釈">この部分は <math> G ( a ) = G ( a' ) </math> と簡略化できるかもしれない<ref>。
+# <math> a = \omega ^ { a' } </math> のとき  <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である<ref group="注釈">この部分は <math> G ( a ) = G ( a' ) </math> と簡略化できるかもしれない</ref>。
 # <math> a = \psi _ \Omega ( a' ) </math> のとき <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である。
 # <math> a = \Omega </math> のとき <math> G ( a ) = \emptyset </math> である。
 # <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> G ( a ) = G ( { a' } _ 0 ) \cup \cdots \cup G ( { a' } _ k ) </math> である。
