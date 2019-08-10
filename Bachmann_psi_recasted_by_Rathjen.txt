@@ -82,7 +82,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 # いずれも <math> 0 </math> ではない <math> a, b \in T </math> に対して、
 ## <math> a, b </math> の双方とも単項であるとき、
 ### <math> a = \omega ^ { a' }, \, b = \omega ^ { b' } </math> のとき <math> a' < b' </math> と同値である。
-### <math> a = \omega ^ { a' }, \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < \psi _ \Omega ( b' ) </math> と同値である。
+### <math> a = \omega ^ { a' }, \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < \psi _ \Omega ( b' ) </math> と同値である<ref group="注釈"><math> \psi _ \Omega ( b' ) </math> は必ず <math> \xi \mapsto \omega ^ \xi </math> の不動点である</ref>。
 ### <math> a = \psi _ \Omega ( a' ), \, b = \omega ^ { b' } </math> のとき <math> \psi _ \Omega ( a' ) < b' </math> と同値である。
 ### <math> a = \psi _ \Omega ( a' ), \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < b' </math> と同値である。
 ## <math> a </math> が単項で <math> b </math> が単項ではないとき、
