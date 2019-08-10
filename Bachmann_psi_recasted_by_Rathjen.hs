@@ -92,4 +92,24 @@ module Oridnal where
   -- True を期待していたが False になった。
 
   main :: IO ()
-  main = return ()
+  main = do
+    print $ comp_seq (Sequence []) (Sequence []) == EQ
+    print $ comp_seq (Sequence [Psi (Sequence [])]) (Sequence [Psi (Sequence [Cardinal])]) == LT
+    print $ st_seq (Sequence []) == True
+    print $ st_seq (Sequence [Psi (Sequence [])]) == True
+    print $ st_seq (Sequence [Psi (Sequence [Cardinal])]) == True
+    print $ st_seq (Sequence [Omega (Sequence [])]) == True
+    print $ st_seq (Sequence [Omega (Sequence []), Omega (Sequence [])]) == True
+    print $ st_seq (Sequence [Psi (Sequence []), Psi (Sequence [])]) == True
+    print $ st_seq (Sequence [Omega (Sequence [Psi (Sequence [])])]) == False
+    print $ st_seq (Sequence [Omega (Sequence [Psi (Sequence []), Omega (Sequence [])])]) == True
+    print $ st_seq (Sequence [Psi (Sequence [Cardinal, Omega (Sequence [])])]) == True
+    print $ st_seq (Sequence [Psi (Sequence [Cardinal, Psi (Sequence [Cardinal])])]) == True
+    print $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])])]) == False
+    print $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])])]) == False
+    print $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])]) == True
+    print $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])]) == True
+    print $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal])])]) == True
+    print $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])]) == False
+    print $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal, Cardinal, Cardinal])])]) == False
+    print $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Psi (Sequence [Cardina])]), Psi (Sequence [])])]) == False
