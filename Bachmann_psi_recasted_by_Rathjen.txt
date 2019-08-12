@@ -1,5 +1,4 @@
 ﻿<div style="display:none"><math>
-  \textstyle
   \newcommand{\ordinarycolon}{:}
   \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
   \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
@@ -14,13 +13,10 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 定義は次のようになる<ref>GWiki 2019 § 3.1</ref>。ここで <math> \Omega </math> はある一つの不可算基数、例えば最小の不可算順序数 (aleph one) である。
 
 <math>
-  {
-    \displaystyle
-    \begin{eqnarray*}
-      C ^ \Omega ( \alpha, \beta ) & \coloneqq & \mathrm{closure} \{ +, \xi \mapsto \omega ^ \xi, \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) \} ( \beta \cup \{ 0, \Omega \} ) \\
-      \psi _ \Omega ( \alpha ) & \coloneqq & \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \\
-    \end{eqnarray*}
-  }
+  \begin{eqnarray*}
+    C ^ \Omega ( \alpha, \beta ) & \coloneqq & \mathrm{closure} \{ +, \xi \mapsto \omega ^ \xi, \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) \} ( \beta \cup \{ 0, \Omega \} ) \\
+    \psi _ \Omega ( \alpha ) & \coloneqq & \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \\
+  \end{eqnarray*}
 </math>
 
 ただし <math> \mathrm{closure} S ( \alpha ) </math> は、関数群 <math> S </math> に対する <math> \alpha </math> の閉包である。
@@ -52,21 +48,18 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 このまま計算を続けていくと以下のようになる。
 
 <math>
-  {
-    \displaystyle
-    \begin{eqnarray*}
-      \psi _ \Omega ( 0 ) & = & \varepsilon _ 0 \\
-      \psi _ \Omega ( 1 ) & = & \varepsilon _ 1 \\
-      \psi _ \Omega ( \omega ) & = & \varepsilon _ \omega \\
-      \psi _ \Omega ( \psi _ \Omega ( 0 ) ) & = & \varepsilon _ { \varepsilon _ 0 } \\
-      \psi _ \Omega ( \zeta _ 0 ) & = & \zeta _ 0 \\
-      \psi _ \Omega ( \Omega ) & = & \zeta _ 0 \\
-      \psi _ \Omega ( \Omega + 1 ) & = & \varepsilon _ { \zeta _ 0 + 1 } \\
-      \psi _ \Omega ( \Omega + \omega ) & = & \varepsilon _ { \zeta _ 0 + \omega } \\
-      \psi _ \Omega ( \Omega + \psi _ \Omega ( \Omega ) ) & = & \varepsilon _ { \zeta _ 0 + \zeta _ 0 } \\
-      \psi _ \Omega ( \Omega + \Omega ) & = & \zeta _ 1 \\
-    \end{eqnarray*}
-  }
+  \begin{eqnarray*}
+    \psi _ \Omega ( 0 ) & = & \varepsilon _ 0 \\
+    \psi _ \Omega ( 1 ) & = & \varepsilon _ 1 \\
+    \psi _ \Omega ( \omega ) & = & \varepsilon _ \omega \\
+    \psi _ \Omega ( \psi _ \Omega ( 0 ) ) & = & \varepsilon _ { \varepsilon _ 0 } \\
+    \psi _ \Omega ( \zeta _ 0 ) & = & \zeta _ 0 \\
+    \psi _ \Omega ( \Omega ) & = & \zeta _ 0 \\
+    \psi _ \Omega ( \Omega + 1 ) & = & \varepsilon _ { \zeta _ 0 + 1 } \\
+    \psi _ \Omega ( \Omega + \omega ) & = & \varepsilon _ { \zeta _ 0 + \omega } \\
+    \psi _ \Omega ( \Omega + \psi _ \Omega ( \Omega ) ) & = & \varepsilon _ { \zeta _ 0 + \zeta _ 0 } \\
+    \psi _ \Omega ( \Omega + \Omega ) & = & \zeta _ 1 \\
+  \end{eqnarray*}
 </math>
 
 == 順序数表記 ==
