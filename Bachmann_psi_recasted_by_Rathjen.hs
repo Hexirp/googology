@@ -1,6 +1,7 @@
 module Oridnal where
 
   import Prelude
+  import System.IO
 
   data Sequence = Sequence [Unary] deriving Show
 
@@ -115,4 +116,4 @@ module Oridnal where
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])]), Psi (Sequence [])])]) == False
    where
     put :: Show a => a -> IO ()
-    put a = print a >> putStrLn ""
+    put a = print a >> putStrLn "" >> hFlush stdout
