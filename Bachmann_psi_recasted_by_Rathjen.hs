@@ -12,19 +12,19 @@ module Oridnal where
    where
     go :: [Unary] -> [Unary] -> Ordering
     go []       []       = EQ
-    go []       (_ : _)  = LT
-    go (_ : _)  []       = GT
-    go (a : as) (b : bs) = comp_u a b <> comp_seq
+    go []       _        = LT
+    go _        []       = GT
+    go (a : as) (b : bs) = comp_u a b <> go as bs
 
   comp_u :: Unary -> Unary -> Ordering
   comp_u (Omega a) (Omega b) = comp_seq a b
   comp_u (Omega a) (Psi b)   = comp_seq a (Sequence [Psi b])
-  comp_u (Omega a) Cardinal  = LT
+  comp_u (Omega _) Cardinal  = LT
   comp_u (Psi a)   (Omega b) = comp_seq (Sequence [Psi a]) b
   comp_u (Psi a)   (Psi b)   = comp_seq a b
-  comp_u (Psi a)   Cardinal  = LT
-  comp_u Cardinal  (Omega b) = GT
-  comp_u Cardinal  (Psi b)   = GT
+  comp_u (Psi _)   Cardinal  = LT
+  comp_u Cardinal  (Omega _) = GT
+  comp_u Cardinal  (Psi _)   = GT
   comp_u Cardinal  Cardinal  = EQ
 
   st_seq :: Sequence -> Bool
@@ -47,32 +47,32 @@ module Oridnal where
   st_o (Sequence x) = case x of
     []       -> True
     x' : []  -> case x' of
-      Omega x'' -> True
-      Psi x''   -> False
-      Cardinal  -> False
-    x' : xs' -> True
+      Omega _  -> True
+      Psi _    -> False
+      Cardinal -> False
+    _        -> True
 
   st_p :: Sequence -> Bool
-  st_p x = all (\x' -> comp_seq x' x == LT) (g_1 x)
+  st_p x = all (\x' -> comp_seq x' x == LT) (g1 x)
    where
     --
-    g_1 :: Sequence -> [Sequence]
-    g_1 x (Sequence y) = case y of
+    g1 :: Sequence -> [Sequence]
+    g1 x (Sequence y) = case y of
       []      -> []
-      u : []  -> g_1_u u
-      _       -> g_1_s y
+      u : []  -> g1_u u
+      _       -> g1_s y
     --
-    g_1_u :: Unary -> [Sequence]
-    g_1_u (Omega x) = g x
-    g_1_u (Psi x)   = g x
-    g_1_u Cardinal  = []
+    g1_u :: Unary -> [Sequence]
+    g1_u (Omega x) = g x
+    g1_u (Psi x)   = g x
+    g1_u Cardinal  = []
     --
-    g_1_s :: [Sequence] -> [Sequence]
-    g_1_s []       = []
-    g_1_s (x : xs) = g x ++ g_1_s xs
+    g1_s :: [Unary] -> [Sequence]
+    g1_s []       = []
+    g1_s (x : xs) = g (Sequence [x]) ++ g_1_s xs
     --
     g :: Sequence -> [Sequence]
-    g (Sequence x) = go_seq x
+    g (Sequence x) = Sequence x : go_seq x
      where
       --
       go_s :: [Unary] -> [Sequence]
@@ -80,9 +80,9 @@ module Oridnal where
       go_s (x : xs) = go_u x ++ go_s xs
       --
       go_u :: Unary -> [Sequence]
-      go_u (Omega x) = Omega x : g x
-      go_u (Psi x)   = Psi x : g x
-      go_u Cardinal  = Cardinal : []
+      go_u (Omega x) = Sequence [Omega x] : g x
+      go_u (Psi x)   = Sequence [Psi x] : g x
+      go_u Cardinal  = Sequence [Cardinal] : []
 
 
   main :: IO ()
