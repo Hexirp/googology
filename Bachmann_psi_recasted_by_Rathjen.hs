@@ -12,12 +12,9 @@ module Oridnal where
    where
     go :: [Unary] -> [Unary] -> Ordering
     go []       []       = EQ
-    go []       (b : bs) = LT
-    go (a : as) []       = GT
-    go (a : as) (b : bs) = case comp_u a b of
-      LT -> LT
-      EQ -> go as bs
-      GT -> GT
+    go []       (_ : _)  = LT
+    go (_ : _)  []       = GT
+    go (a : as) (b : bs) = comp_u a b <> comp_seq
 
   comp_u :: Unary -> Unary -> Ordering
   comp_u (Omega a) (Omega b) = comp_seq a b
