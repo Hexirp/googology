@@ -55,7 +55,6 @@ module Oridnal where
       Cardinal  -> False
     x' : xs' -> True
 
-  -- p ( a ) の a の部分が引数である。
   g_u :: Sequence -> Bool
   g_u x = go_seq x x
    where
@@ -77,21 +76,6 @@ module Oridnal where
     go_u x Cardinal  = comp_seq x (Sequence [Cardinal]) == GT
 
 
-  -- テスト:
-  --
-  -- >>> comp_seq (Sequence []) (Sequence [])
-  -- EQ
-  -- >>> comp_seq (Sequence [Psi (Sequence [])]) (Sequence [Psi (Sequence [Cardinal])])
-  -- LT
-  -- >>> st_seq (Sequence [])
-  -- True
-  -- >>> st_seq (Sequence [Psi (Sequence [])])
-  -- True
-  -- >>> st_seq (Sequence [Psi (Sequence [Cardinal])])
-  -- False
-  --
-  -- True を期待していたが False になった。
-
   main :: IO ()
   main = do
     put $ comp_seq (Sequence []) (Sequence []) == EQ
@@ -103,18 +87,18 @@ module Oridnal where
     put $ st_seq (Sequence [Omega (Sequence []), Omega (Sequence [])]) == True
     put $ st_seq (Sequence [Psi (Sequence []), Psi (Sequence [])]) == True
     put $ st_seq (Sequence [Omega (Sequence [Psi (Sequence [])])]) == False
-    put $ st_seq (Sequence [Omega (Sequence [Psi (Sequence []), Omega (Sequence [])])]) == True
-    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Omega (Sequence [])])]) == True
-    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Psi (Sequence [Cardinal])])]) == True
+    put $ st_seq (Sequence [Omega (Sequence [Psi (Sequence []), Omega (Sequence [])])]) == True -- n
+    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Omega (Sequence [])])]) == True -- n
+    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Psi (Sequence [Cardinal])])]) == True -- n
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])])]) == False
-    put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])]) == True
-    put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])]) == True
-    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal])])]) == True
+    put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])]) == True -- n
+    put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])]) == True -- n
+    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal])])]) == True -- n
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal, Cardinal, Cardinal])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])]), Psi (Sequence [])])]) == False
-    put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal, Cardinal])])]) == True
+    put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal, Cardinal])])]) == True -- n
    where
     put :: Show a => a -> IO ()
     put a = print a >> putStrLn "" >> hFlush stdout
