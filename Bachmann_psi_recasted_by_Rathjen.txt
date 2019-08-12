@@ -1,8 +1,8 @@
-﻿<div style="display:none">\(
+﻿<div style="display:none"><math>
   \newcommand{\ordinarycolon}{:}
   \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
   \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
-\)</div>
+</math></div>
 
 Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathjen が再構成したものである。そもそも Bachmann ψ は史上初の順序数崩壊関数であったが、その定義は全ての極限順序数の基本列が必要になるなど計算が面倒なものであった。それを Rathjen が再構成 (recast) して計算が簡便になっている。<ref>GWiki 2019 § 3.1</ref>
 
@@ -10,44 +10,44 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 
 == 定義 ==
 
-定義は次のようになる<ref>GWiki 2019 § 3.1</ref>。ここで \( \Omega \) はある一つの不可算基数、例えば最小の不可算順序数 (aleph one) である。
+定義は次のようになる<ref>GWiki 2019 § 3.1</ref>。ここで <math> \Omega </math> はある一つの不可算基数、例えば最小の不可算順序数 (aleph one) である。
 
-\(
+<math>
   \begin{eqnarray*}
     C ^ \Omega ( \alpha, \beta ) & \coloneqq & \mathrm{closure} \{ +, \xi \mapsto \omega ^ \xi, \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) \} ( \beta \cup \{ 0, \Omega \} ) \\
     \psi _ \Omega ( \alpha ) & \coloneqq & \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \\
   \end{eqnarray*}
-\)
+</math>
 
-ただし \( \mathrm{closure} S ( \alpha ) \) は、関数群 \( S \) に対する \( \alpha \) の閉包である。
+ただし <math> \mathrm{closure} S ( \alpha ) </math> は、関数群 <math> S </math> に対する <math> \alpha </math> の閉包である。
 
 == 計算 ==
 
-\( \psi _ \Omega ( 0 ) \) を計算する。まずは \( C ^ \Omega ( 0, 0 ) = \{ 0, 1, 2, \omega, \omega ^ \omega, \omega ^ { \omega ^ \omega + \omega }, \Omega, \Omega + 1, \Omega + \omega, \omega ^ { \Omega + 1 }, \omega ^ { \Omega + \Omega }, \omega ^ { \omega ^ { \Omega + \Omega } }, \ldots \} \) である。さらに \( C ^ \Omega ( 0, \beta ) \) は \( \beta < \varepsilon _ 0 \) のとき \( C ^ \Omega ( 0, 0 ) \) と等しい。加えて \( C ^ \Omega ( 0, \varepsilon _ 0 ) \) のときも等しい。
+<math> \psi _ \Omega ( 0 ) </math> を計算する。まずは <math> C ^ \Omega ( 0, 0 ) = \{ 0, 1, 2, \omega, \omega ^ \omega, \omega ^ { \omega ^ \omega + \omega }, \Omega, \Omega + 1, \Omega + \omega, \omega ^ { \Omega + 1 }, \omega ^ { \Omega + \Omega }, \omega ^ { \omega ^ { \Omega + \Omega } }, \ldots \} </math> である。さらに <math> C ^ \Omega ( 0, \beta ) </math> は <math> \beta < \varepsilon _ 0 </math> のとき <math> C ^ \Omega ( 0, 0 ) </math> と等しい。加えて <math> C ^ \Omega ( 0, \varepsilon _ 0 ) </math> のときも等しい。
 
-よって \( C ^ \Omega ( 0, 0 ) \cap \Omega = \varepsilon _ 0 \) であることから \( C ^ \Omega ( 0, \varepsilon _ 0 ) \cap \Omega = \varepsilon _ 0 \) である。自明に \( \varepsilon _ 0 \) は \( C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \) を満たす最小の順序数である。
+よって <math> C ^ \Omega ( 0, 0 ) \cap \Omega = \varepsilon _ 0 </math> であることから <math> C ^ \Omega ( 0, \varepsilon _ 0 ) \cap \Omega = \varepsilon _ 0 </math> である。自明に <math> \varepsilon _ 0 </math> は <math> C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho </math> を満たす最小の順序数である。
 
-ゆえに \( \psi _ \Omega ( 0 ) = \varepsilon _ 0 \) である。
+ゆえに <math> \psi _ \Omega ( 0 ) = \varepsilon _ 0 </math> である。
 
-\( \psi _ \Omega ( 1 ) \) を計算する。ここでは \( \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) \) が \( \xi _ { < 1 } \mapsto \psi _ \Omega ( \xi ) \) となって \( \psi _ \Omega ( 0 ) = \varepsilon _ 0 \) が \( C ^ ( 1, \beta ) \) に含まれるようになる。
+<math> \psi _ \Omega ( 1 ) </math> を計算する。ここでは <math> \xi _ { < \alpha } \mapsto \psi _ \Omega ( \xi ) </math> が <math> \xi _ { < 1 } \mapsto \psi _ \Omega ( \xi ) </math> となって <math> \psi _ \Omega ( 0 ) = \varepsilon _ 0 </math> が <math> C ^ ( 1, \beta ) </math> に含まれるようになる。
 
-よって \( C ^ \Omega ( 1, 0 ) = C ^ \Omega ( 1, 1 ) = \cdots = C ^ \Omega ( 1, \varepsilon _ 1 ) = \varepsilon _ 1 \) になる。ゆえに \( \psi _ \Omega ( 1 ) = \varepsilon _ 1 \) である。
+よって <math> C ^ \Omega ( 1, 0 ) = C ^ \Omega ( 1, 1 ) = \cdots = C ^ \Omega ( 1, \varepsilon _ 1 ) = \varepsilon _ 1 </math> になる。ゆえに <math> \psi _ \Omega ( 1 ) = \varepsilon _ 1 </math> である。
 
-\( \psi _ \Omega ( \omega ) \) を計算する。まず \( C ^ \Omega ( \omega, 0 ) = \{ 0, 1, \omega, \omega ^ 2, \omega ^ \omega, \varepsilon _ 0, \varepsilon _ 1, \ldots \} \) であり \( C ^ \Omega ( \omega, 0 ) \cup \Omega = \varepsilon _ \omega \) である。ゆえに \( \psi _ \Omega ( \omega ) = \varepsilon _ \omega \) である。
+<math> \psi _ \Omega ( \omega ) </math> を計算する。まず <math> C ^ \Omega ( \omega, 0 ) = \{ 0, 1, \omega, \omega ^ 2, \omega ^ \omega, \varepsilon _ 0, \varepsilon _ 1, \ldots \} </math> であり <math> C ^ \Omega ( \omega, 0 ) \cup \Omega = \varepsilon _ \omega </math> である。ゆえに <math> \psi _ \Omega ( \omega ) = \varepsilon _ \omega </math> である。
 
-\( \psi _ \Omega ( \psi _ \Omega ( 0 ) ) = \psi _ \Omega ( \varepsilon _ 0 ) \) を計算する。 \( C ^ \Omega ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ 1, \varepsilon _ \omega \ldots \} \) であり \( C ^ \Omega ( \varepsilon _ 0, 0 ) \cup \Omega = \varepsilon _ { \varepsilon _ 0 } \) である。ゆえに \( \psi _ \Omega ( \omega ) = \varepsilon _ \omega \) である。
+<math> \psi _ \Omega ( \psi _ \Omega ( 0 ) ) = \psi _ \Omega ( \varepsilon _ 0 ) </math> を計算する。 <math> C ^ \Omega ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ 1, \varepsilon _ \omega \ldots \} </math> であり <math> C ^ \Omega ( \varepsilon _ 0, 0 ) \cup \Omega = \varepsilon _ { \varepsilon _ 0 } </math> である。ゆえに <math> \psi _ \Omega ( \omega ) = \varepsilon _ \omega </math> である。
 
-このように積み重ねると \( 0, \psi _ \Omega ( 0 ), \psi _ \Omega ( \psi _ \Omega ( 0 ) ), \ldots \Longrightarrow \zeta _ 0 \) に達する。
+このように積み重ねると <math> 0, \psi _ \Omega ( 0 ), \psi _ \Omega ( \psi _ \Omega ( 0 ) ), \ldots \Longrightarrow \zeta _ 0 </math> に達する。
 
-\( \psi _ \Omega ( \zeta _ 0 ) \) を計算する。 \( C ^ \Omega ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ { \varepsilon _ 0 }, \varepsilon _ { \varepsilon _ { \varepsilon _ 0 } } \ldots \} \) であるゆえに \( \psi _ \Omega ( \zeta _ 0 ) = \zeta _ 0 \) である。
+<math> \psi _ \Omega ( \zeta _ 0 ) </math> を計算する。 <math> C ^ \Omega ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ { \varepsilon _ 0 }, \varepsilon _ { \varepsilon _ { \varepsilon _ 0 } } \ldots \} </math> であるゆえに <math> \psi _ \Omega ( \zeta _ 0 ) = \zeta _ 0 </math> である。
 
-\( \psi _ \Omega ( \Omega ) \) を計算する。このとき \( \xi _ { < \Omega } \mapsto \psi _ \Omega ( \xi ) \) であるため \( \alpha < \zeta _ 0 \) では許されなかった \( \psi _ \Omega \) の無制限のネストが許される。よって \( \zeta _ 0 \) と同じような状態になり、ゆえに \( \psi _ \Omega ( \Omega ) = \zeta _ 0 \) である。
+<math> \psi _ \Omega ( \Omega ) </math> を計算する。このとき <math> \xi _ { < \Omega } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> \alpha < \zeta _ 0 </math> では許されなかった <math> \psi _ \Omega </math> の無制限のネストが許される。よって <math> \zeta _ 0 </math> と同じような状態になり、ゆえに <math> \psi _ \Omega ( \Omega ) = \zeta _ 0 </math> である。
 
-\( \psi _ \Omega ( \Omega + 1, 0 ) \) を計算する。このとき \( \xi _ { < \Omega + 1 } \mapsto \psi _ \Omega ( \xi ) \) であるため \( C ^ \Omega ( \Omega + 1, 0 ) \) に \( \psi _ \Omega ( \Omega ) \) が'''含まれる'''。 \( \zeta _ 0, \zeta _ 0 + 1, \zeta _ 0 + 2, \ldots \) では含まれない。ゆえに \( \psi _ \Omega ( \Omega + 1 ) = \varepsilon _ { \zeta _ 0 + 1 } \) である。
+<math> \psi _ \Omega ( \Omega + 1, 0 ) </math> を計算する。このとき <math> \xi _ { < \Omega + 1 } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> C ^ \Omega ( \Omega + 1, 0 ) </math> に <math> \psi _ \Omega ( \Omega ) </math> が'''含まれる'''。 <math> \zeta _ 0, \zeta _ 0 + 1, \zeta _ 0 + 2, \ldots </math> では含まれない。ゆえに <math> \psi _ \Omega ( \Omega + 1 ) = \varepsilon _ { \zeta _ 0 + 1 } </math> である。
 
 このまま計算を続けていくと以下のようになる。
 
-\(
+<math>
   \begin{eqnarray*}
     \psi _ \Omega ( 0 ) & = & \varepsilon _ 0 \\
     \psi _ \Omega ( 1 ) & = & \varepsilon _ 1 \\
@@ -60,77 +60,77 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
     \psi _ \Omega ( \Omega + \psi _ \Omega ( \Omega ) ) & = & \varepsilon _ { \zeta _ 0 + \zeta _ 0 } \\
     \psi _ \Omega ( \Omega + \Omega ) & = & \zeta _ 1 \\
   \end{eqnarray*}
-\)
+</math>
 
 == 順序数表記 ==
 
-Bachmann ψ (recasted) を元にした順序数表記は探しても見つからなかった。ここのは私が独自に定めたものである。この順序数表記は良く知られた順序数表記である Buchholz ψ と違って \( \omega ^ \alpha \) が基本記号（表記を構成する様々なアリティの定数記号および関数記号）に含まれている。そのため、この順序数表記が正しいのかはまだわかってない。
+Bachmann ψ (recasted) を元にした順序数表記は探しても見つからなかった。ここのは私が独自に定めたものである。この順序数表記は良く知られた順序数表記である Buchholz ψ と違って <math> \omega ^ \alpha </math> が基本記号（表記を構成する様々なアリティの定数記号および関数記号）に含まれている。そのため、この順序数表記が正しいのかはまだわかってない。
 
 === 定義 ===
 
-集合 \( T \) を次のような条件を満たす最小の集合であるとして定める。
+集合 <math> T </math> を次のような条件を満たす最小の集合であるとして定める。
 
-# \( 0 \in T \) である。
-# \( a \in T \) に対して \( \omega ^ a \in T \) である。
-# \( a \in T \) に対して \( \psi _ \Omega ( a ) \in T \) である。
-# \( \Omega \in T \) である。
-# \( 1 \lt k \le \omega \) を取り、単項（条件 2, 3 で構成された要素）の列 \( a _ 0, \ldots, a _ k \in T \) に対して \( a _ 0 + \cdots + a _ k \in T \) である。
+# <math> 0 \in T </math> である。
+# <math> a \in T </math> に対して <math> \omega ^ a \in T </math> である。
+# <math> a \in T </math> に対して <math> \psi _ \Omega ( a ) \in T </math> である。
+# <math> \Omega \in T </math> である。
+# <math> 1 \lt k \le \omega </math> を取り、単項（条件 2, 3 で構成された要素）の列 <math> a _ 0, \ldots, a _ k \in T </math> に対して <math> a _ 0 + \cdots + a _ k \in T </math> である。
 
-集合 \( T \) の上の狭義全順序 \( < \) を次のように帰納的に定める。
+集合 <math> T </math> の上の狭義全順序 <math> < </math> を次のように帰納的に定める。
 
-# \( 0 < 0 \) ではない。
-# \( 0 \) ではない \( a \in T \) に対して \( 0 < a \) である。
-# \( 0 \) ではない \( a \in T \) に対して \( a < 0 \) ではない。
-# いずれも \( 0 \) ではない \( a, b \in T \) に対して、
-## \( a, b \) の双方とも単項であるとき、
-### \( a = \omega ^ { a' }, \, b = \omega ^ { b' } \) のとき \( a' < b' \) と同値である。
-### \( a = \omega ^ { a' }, \, b = \psi _ \Omega ( b' ) \) のとき \( a' < \psi _ \Omega ( b' ) \) と同値である<ref group="注釈">\( \psi _ \Omega ( b' ) \) は必ず \( \xi \mapsto \omega ^ \xi \) の不動点である</ref>。
-### \( a = \psi _ \Omega ( a' ), \, b = \omega ^ { b' } \) のとき \( \psi _ \Omega ( a' ) < b' \) と同値である。
-### \( a = \psi _ \Omega ( a' ), \, b = \psi _ \Omega ( b' ) \) のとき \( a' < b' \) と同値である。
-## \( a \) が単項で \( b \) が単項ではないとき、
-### \( b = { b' } _ 0 + \cdots + { b' } _ k \) のとき、
-#### \( a < { b' } _ 0 \) であるならば \( a < b \) である。
-#### \( a = { b' } _ 0 \) であるならば \( a < b \) である。
-#### \( a > { b' } _ 0 \) であるならば \( a < b \) ではない。
-## \( a \) が単項ではなく \( b \) が単項のとき、
-### \( a = { a' } _ 0 + \cdots + { a' } _ k \) のとき、
-#### \( { a' } _ 0 < b \) であるならば \( a < b \) である。
-#### \( { a' } _ 0 = b \) であるならば \( a < b \) ではない。
-#### \( { a' } _ 0 > b \) であるならば \( a < b \) ではない。
-## \( a, b \) が双方とも単項ではないとき、
-### \( a = { a' } _ 0 + \cdots + { a' } _ m, \, b = { b' } _ 0 + \cdots + { b' } _ n \) のとき、以下のいずれかが成り立てば \( a < b \) である
-#### \( m < n \) であり、どの \( i \le m \) に対しても \( { a' } _ i = { b' } _ i \) である。
-#### \( k \le \min \{ m, n \} \) が存在して \( a _ k < b _ k \) を満たし、どの \( i < k \) に対しても \( { a' } _ i = { b' } _ i \) である。
+# <math> 0 < 0 </math> ではない。
+# <math> 0 </math> ではない <math> a \in T </math> に対して <math> 0 < a </math> である。
+# <math> 0 </math> ではない <math> a \in T </math> に対して <math> a < 0 </math> ではない。
+# いずれも <math> 0 </math> ではない <math> a, b \in T </math> に対して、
+## <math> a, b </math> の双方とも単項であるとき、
+### <math> a = \omega ^ { a' }, \, b = \omega ^ { b' } </math> のとき <math> a' < b' </math> と同値である。
+### <math> a = \omega ^ { a' }, \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < \psi _ \Omega ( b' ) </math> と同値である<ref group="注釈"><math> \psi _ \Omega ( b' ) </math> は必ず <math> \xi \mapsto \omega ^ \xi </math> の不動点である</ref>。
+### <math> a = \psi _ \Omega ( a' ), \, b = \omega ^ { b' } </math> のとき <math> \psi _ \Omega ( a' ) < b' </math> と同値である。
+### <math> a = \psi _ \Omega ( a' ), \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < b' </math> と同値である。
+## <math> a </math> が単項で <math> b </math> が単項ではないとき、
+### <math> b = { b' } _ 0 + \cdots + { b' } _ k </math> のとき、
+#### <math> a < { b' } _ 0 </math> であるならば <math> a < b </math> である。
+#### <math> a = { b' } _ 0 </math> であるならば <math> a < b </math> である。
+#### <math> a > { b' } _ 0 </math> であるならば <math> a < b </math> ではない。
+## <math> a </math> が単項ではなく <math> b </math> が単項のとき、
+### <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき、
+#### <math> { a' } _ 0 < b </math> であるならば <math> a < b </math> である。
+#### <math> { a' } _ 0 = b </math> であるならば <math> a < b </math> ではない。
+#### <math> { a' } _ 0 > b </math> であるならば <math> a < b </math> ではない。
+## <math> a, b </math> が双方とも単項ではないとき、
+### <math> a = { a' } _ 0 + \cdots + { a' } _ m, \, b = { b' } _ 0 + \cdots + { b' } _ n </math> のとき、以下のいずれかが成り立てば <math> a < b </math> である
+#### <math> m < n </math> であり、どの <math> i \le m </math> に対しても <math> { a' } _ i = { b' } _ i </math> である。
+#### <math> k \le \min \{ m, n \} </math> が存在して <math> a _ k < b _ k </math> を満たし、どの <math> i < k </math> に対しても <math> { a' } _ i = { b' } _ i </math> である。
 
-集合 \( G ( a ) \) を次のような条件を満たす最小の集合であるとして定める。
+集合 <math> G ( a ) </math> を次のような条件を満たす最小の集合であるとして定める。
 
-# \( a = 0 \) のとき \( G ( a ) = \emptyset \) である。
-# \( a = \omega ^ { a' } \) のとき  \( G ( a ) = \{ a' \} \cup G ( a' ) \) である<ref group="注釈">この部分は \( G ( a ) = G ( a' ) \) と簡略化できるかもしれない</ref>。
-# \( a = \psi _ \Omega ( a' ) \) のとき \( G ( a ) = \{ a' \} \cup G ( a' ) \) である。
-# \( a = \Omega \) のとき \( G ( a ) = \emptyset \) である。
-# \( a = { a' } _ 0 + \cdots + { a' } _ k \) のとき \( G ( a ) = G ( { a' } _ 0 ) \cup \cdots \cup G ( { a' } _ k ) \) である。
+# <math> a = 0 </math> のとき <math> G ( a ) = \emptyset </math> である。
+# <math> a = \omega ^ { a' } </math> のとき  <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である<ref group="注釈">この部分は <math> G ( a ) = G ( a' ) </math> と簡略化できるかもしれない</ref>。
+# <math> a = \psi _ \Omega ( a' ) </math> のとき <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である。
+# <math> a = \Omega </math> のとき <math> G ( a ) = \emptyset </math> である。
+# <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> G ( a ) = G ( { a' } _ 0 ) \cup \cdots \cup G ( { a' } _ k ) </math> である。
 
-集合 \( OT \) を次のように帰納的に定める。
+集合 <math> OT </math> を次のように帰納的に定める。
 
-# \( 0 \in OT \) である。
-# \( a \in OT \) に対して \( a = 0 \) か \( a = { a' } _ 0 + \cdots + { a' } _ k \) であれば \( \omega ^ a \in OT \) である。
-# \( a \in OT \) に対して \( \forall a', \, a' \in G ( a ) \to a' < a \) であれば \( \psi _ \Omega ( a' ) \in OT \) である。
-# \( \Omega \in OT \) である。
-# \( a _ 0, \ldots, a _ k \in OT \) に対して \( a _ 0 \ge \cdots \ge a _ k \) であれば \( a _ 0 + \cdots + a _ k \in OT \) である。
+# <math> 0 \in OT </math> である。
+# <math> a \in OT </math> に対して <math> a = 0 </math> か <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> であれば <math> \omega ^ a \in OT </math> である。
+# <math> a \in OT </math> に対して <math> \forall a', \, a' \in G ( a ) \to a' < a </math> であれば <math> \psi _ \Omega ( a' ) \in OT </math> である。
+# <math> \Omega \in OT </math> である。
+# <math> a _ 0, \ldots, a _ k \in OT </math> に対して <math> a _ 0 \ge \cdots \ge a _ k </math> であれば <math> a _ 0 + \cdots + a _ k \in OT </math> である。
 
-対応 \( o ( a ) \) を次のようにして定める。
+対応 <math> o ( a ) </math> を次のようにして定める。
 
-# \( a = 0 \) のとき \( o ( a ) = 0 \) である。
-# \( a = \omega ^ { a' } \) のとき \( o ( a ) = \omega ^ { o ( a' ) } \) である。
-# \( a = \psi _ \Omega ( a' ) \) のとき \( o ( a ) = \psi _ \Omega ( o ( a' ) ) \) である。
-# \( a = \Omega \) のとき \( o ( a ) = \Omega \) である。
-# \( 1 \lt k \le \omega \) を取って \( a = { a' } _ 0 + \cdots + { a' } _ k \) のとき \( o ( a ) = o ( { a' } _ 0 ) + \cdots + o ( { a' } _ k ) \) である。
+# <math> a = 0 </math> のとき <math> o ( a ) = 0 </math> である。
+# <math> a = \omega ^ { a' } </math> のとき <math> o ( a ) = \omega ^ { o ( a' ) } </math> である。
+# <math> a = \psi _ \Omega ( a' ) </math> のとき <math> o ( a ) = \psi _ \Omega ( o ( a' ) ) </math> である。
+# <math> a = \Omega </math> のとき <math> o ( a ) = \Omega </math> である。
+# <math> 1 \lt k \le \omega </math> を取って <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> o ( a ) = o ( { a' } _ 0 ) + \cdots + o ( { a' } _ k ) </math> である。
 
 === 性質 ===
 
 このような性質が期待される。証明はまだない。
 
-* \( o \colon OT \to \mathrm{On} \) は \( OT \) の上の \( < \) から通常の \( < \) へ順序を保つ写像である。このことから \( OT \) の上の \( < \) は整列順序を構成する。
+* <math> o \colon OT \to \mathrm{On} </math> は <math> OT </math> の上の <math> < </math> から通常の <math> < </math> へ順序を保つ写像である。このことから <math> OT </math> の上の <math> < </math> は整列順序を構成する。
 
 === 基本列 ===
 
