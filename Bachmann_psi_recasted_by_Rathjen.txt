@@ -162,7 +162,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 == 参考文献 ==
 
-* [https://googology.wikia.org/wiki/Ordinal_notation?oldid=258188 Ordinal notation | Googology Wiki | FANDOM powered by Wikia] - GWiki 2019
+* GWiki 2019 - [https://googology.wikia.org/wiki/Ordinal_notation?oldid=258188 Ordinal notation | Googology Wiki | FANDOM powered by Wikia]
 
 == 関連項目 ==
 
