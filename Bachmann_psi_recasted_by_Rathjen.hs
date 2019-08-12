@@ -39,12 +39,12 @@ module Oridnal where
   dec x (y : ys) = comp_u x y /= LT && dec x ys
 
   st_u :: Unary -> Bool
-  st_u (Omega x) = o_u x && st_seq x
-  st_u (Psi x)   = g_u x && st_seq x
+  st_u (Omega x) = st_o x && st_seq x
+  st_u (Psi x)   = st_p x && st_seq x
   st_u Cardinal  = True
 
-  o_u :: Sequence -> Bool
-  o_u (Sequence x) = case x of
+  st_o :: Sequence -> Bool
+  st_o (Sequence x) = case x of
     []       -> True
     x' : []  -> case x' of
       Omega x'' -> True
@@ -52,8 +52,8 @@ module Oridnal where
       Cardinal  -> False
     x' : xs' -> True
 
-  g_u :: Sequence -> Bool
-  g_u x = go_seq x x
+  st_p :: Sequence -> Bool
+  st_p x = go_seq x x
    where
     --
     go_seq :: Sequence -> Sequence -> Bool
