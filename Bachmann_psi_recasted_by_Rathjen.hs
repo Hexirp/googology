@@ -1,5 +1,3 @@
-{-# OPTIONS -Wall -Werror #-}
-
 module Oridnal where
 
   import Prelude
@@ -41,7 +39,7 @@ module Oridnal where
 
   dec :: Unary -> [Unary] -> Bool
   dec x []       = True
-  dex x (y : ys) = comp_u x y == LT && dec x ys
+  dec x (y : ys) = comp_u x y == LT && dec x ys
 
   st_u :: Unary -> Bool
   st_u (Omega x) = o_u x && st_seq x
