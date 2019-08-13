@@ -23,7 +23,7 @@ module Oridnal where
   comp_u (Psi a)   (Omega b) = comp_seq (Sequence [Psi a]) b
   comp_u (Psi a)   (Psi b)   = comp_seq a b
   comp_u (Psi _)   Cardinal  = LT
-  comp_u Cardinal  (Omega b) = comp_seq (Seqeunce [Cardinal]) b
+  comp_u Cardinal  (Omega b) = comp_seq (Sequence [Cardinal]) b
   comp_u Cardinal  (Psi _)   = GT
   comp_u Cardinal  Cardinal  = EQ
 
