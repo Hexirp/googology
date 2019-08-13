@@ -96,14 +96,14 @@ module Oridnal where
     put $ st_seq (Sequence [Omega (Sequence []), Omega (Sequence [])]) == True
     put $ st_seq (Sequence [Psi (Sequence []), Psi (Sequence [])]) == True
     put $ st_seq (Sequence [Omega (Sequence [Psi (Sequence [])])]) == False
-    put $ st_seq (Sequence [Omega (Sequence [Psi (Sequence []), Omega (Sequence [])])]) == True -- n
-    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Omega (Sequence [])])]) == True -- n
-    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Psi (Sequence [Cardinal])])]) == True -- n
+    put $ st_seq (Sequence [Omega (Sequence [Psi (Sequence []), Omega (Sequence [])])]) == True
+    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Omega (Sequence [])])]) == True
+    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Psi (Sequence [Cardinal])])]) == True
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])]) == True -- n
     put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])]) == True -- n
-    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal])])]) == True -- n
+    put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal])])]) == True
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal, Cardinal, Cardinal])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])]), Psi (Sequence [])])]) == False
