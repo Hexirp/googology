@@ -113,4 +113,4 @@ module Oridnal where
     put $ st_seq (Sequence [Omega (Sequence []), Omega (Sequence [Omega (Sequence [])])]) == False
    where
     put :: Show a => a -> IO ()
-    put a = print a >> putStrLn "" >> hFlush stdout
+    put a = print a >> hFlush stdout
