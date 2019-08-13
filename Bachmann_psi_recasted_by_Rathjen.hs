@@ -108,8 +108,9 @@ module Oridnal where
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal, Cardinal, Cardinal])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])]), Psi (Sequence [])])]) == False
-    put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal, Cardinal])])]) == False -- n
+    put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal, Cardinal])])]) == False
     put $ g1 (Sequence [Psi (Sequence [Cardinal, Cardinal])])
+    put $ st_seq (Sequence [Omega (Sequence []), Omega (Sequence [Omega (Sequence [])])])
    where
     put :: Show a => a -> IO ()
     put a = print a >> putStrLn "" >> hFlush stdout
