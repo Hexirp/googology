@@ -19,11 +19,11 @@ module Oridnal where
   comp_u :: Unary -> Unary -> Ordering
   comp_u (Omega a) (Omega b) = comp_seq a b
   comp_u (Omega a) (Psi b)   = comp_seq a (Sequence [Psi b])
-  comp_u (Omega _) Cardinal  = LT
+  comp_u (Omega a) Cardinal  = comp_seq a (Sequence [Cardinal])
   comp_u (Psi a)   (Omega b) = comp_seq (Sequence [Psi a]) b
   comp_u (Psi a)   (Psi b)   = comp_seq a b
   comp_u (Psi _)   Cardinal  = LT
-  comp_u Cardinal  (Omega _) = GT
+  comp_u Cardinal  (Omega b) = comp_seq (Seqeunce [Cardinal]) b
   comp_u Cardinal  (Psi _)   = GT
   comp_u Cardinal  Cardinal  = EQ
 
