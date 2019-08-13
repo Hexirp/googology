@@ -57,7 +57,7 @@ module Oridnal where
    where
     --
     g1 :: Sequence -> [Sequence]
-    g1 x (Sequence y) = case y of
+    g1 (Sequence y) = case y of
       []      -> []
       u : []  -> g1_u u
       _       -> g1_s y
@@ -69,10 +69,10 @@ module Oridnal where
     --
     g1_s :: [Unary] -> [Sequence]
     g1_s []       = []
-    g1_s (x : xs) = g (Sequence [x]) ++ g_1_s xs
+    g1_s (x : xs) = g (Sequence [x]) ++ g1_s xs
     --
     g :: Sequence -> [Sequence]
-    g (Sequence x) = Sequence x : go_seq x
+    g (Sequence x) = Sequence x : go_s x
      where
       --
       go_s :: [Unary] -> [Sequence]
