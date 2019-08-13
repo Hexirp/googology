@@ -100,15 +100,15 @@ module Oridnal where
     put $ st_seq (Sequence [Psi (Sequence [Cardinal, Psi (Sequence [Cardinal])])]) == True
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])])]) == False
-    put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])]) == True -- n
+    put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])]) == True
     put $ g1 (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])
-    put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])]) == True -- n
+    put $ st_seq (Sequence [Psi (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])]) == True
     put $ g1 (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])
     put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal])])]) == True
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal, Cardinal, Cardinal])])]) == False
     put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])]), Psi (Sequence [])])]) == False
-    put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal, Cardinal])])]) == True -- n
+    put $ st_seq (Sequence [Psi (Sequence [Psi (Sequence [Cardinal, Cardinal])])]) == False -- n
     put $ g1 (Sequence [Psi (Sequence [Cardinal, Cardinal])])
    where
     put :: Show a => a -> IO ()
