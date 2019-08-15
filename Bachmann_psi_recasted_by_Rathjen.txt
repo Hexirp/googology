@@ -85,8 +85,13 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 ## <math> a, b </math> の双方とも単項であるとき、
 ### <math> a = \omega ^ { a' }, \, b = \omega ^ { b' } </math> のとき <math> a' < b' </math> と同値である。
 ### <math> a = \omega ^ { a' }, \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < \psi _ \Omega ( b' ) </math> と同値である<ref group="注釈"><math> \psi _ \Omega ( b' ) </math> は必ず <math> \xi \mapsto \omega ^ \xi </math> の不動点である</ref>。
+### <math> a = \omega ^ { a' }, \, b = \Omega </math> の時 <math> a' < \Omega </math> と同値である<ref group="注釈"><math> \Omega </math> は最大元ではない</ref>。
 ### <math> a = \psi _ \Omega ( a' ), \, b = \omega ^ { b' } </math> のとき <math> \psi _ \Omega ( a' ) < b' </math> と同値である。
 ### <math> a = \psi _ \Omega ( a' ), \, b = \psi _ \Omega ( b' ) </math> のとき <math> a' < b' </math> と同値である。
+### <math> a = \psi _ \Omega ( a' ), \, b = \Omega </math> のとき <math> a < b </math> である。
+### <math> a = \Omega, \, b = \omega ^ { b' } </math> のとき <math> a < b' </math> と同値である。
+### <math> a = \Omega, \, b = \psi _ \Omega ( b' ) </math> のとき <math> a < b </math> ではない。
+### <math> a = \Omega, \, b = \Omega </math> のとき <math> a < b </math> ではない。
 ## <math> a </math> が単項で <math> b </math> が単項ではないとき、
 ### <math> b = { b' } _ 0 + \cdots + { b' } _ k </math> のとき、
 #### <math> a < { b' } _ 0 </math> であるならば <math> a < b </math> である。
