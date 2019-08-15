@@ -45,7 +45,7 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 
 <math> \psi _ \Omega ( \Omega + 1, 0 ) </math> を計算する。このとき <math> \xi _ { < \Omega + 1 } \mapsto \psi _ \Omega ( \xi ) </math> であるため <math> C ^ \Omega ( \Omega + 1, 0 ) </math> に <math> \psi _ \Omega ( \Omega ) </math> が'''含まれる'''。ゆえに <math> \psi _ \Omega ( \Omega + 1 ) = \varepsilon _ { \zeta _ 0 + 1 } </math> である。そのまま増やした <math> \zeta _ 0, \zeta _ 0 + 1, \zeta _ 0 + 2, \ldots </math> では含まれず、そのせいで <math> \psi _ \Omega ( \zeta _ 0 + 1 ) = \zeta _ 0 </math> になる。
 
-このまま計算を続けていくと以下のようになる。
+このまま計算を続けていくと以下のようになる。これは Madore ψ に一致している。
 
 <math>
   \begin{eqnarray*}
