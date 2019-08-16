@@ -83,6 +83,20 @@ module Oridnal where
     go_u (Psi x)   = Sequence [Psi x] : g x
     go_u Cardinal  = Sequence [Cardinal] : []
 
+  data Fundamental = Zero | Succ Sequence | Limit (Integer -> Sequence)
+
+  fs :: Sequence -> Fundamental
+  fs (Sequence x) = go x
+   where
+    go x = case mleft x of
+      Nothing -> Zero
+      Just x' -> undefined
+
+  mleft :: [a] -> Maybe a
+  mleft []       = Nothing
+  mleft (x : []) = Just a
+  mleft (_ : xs) = mleft xs
+
 
   main :: IO ()
   main = do
