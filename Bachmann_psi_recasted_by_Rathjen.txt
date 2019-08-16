@@ -131,6 +131,22 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 # <math> a = \Omega </math> のとき <math> o ( a ) = \Omega </math> である。
 # <math> 1 \lt k \le \omega </math> を取って <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> o ( a ) = o ( { a' } _ 0 ) + \cdots + o ( { a' } _ k ) </math> である。
 
+=== 計算 ===
+
+標準形の判定はこのようになる。
+
+<math>
+  \begin{array}{ll}
+    0 & T \\
+    \psi _ \Omega ( 0 ) & T \\
+    \psi _ \Omega ( \Omega ) & T \\
+    \omega ^ 0 & T \\
+    \omega ^ 0 + \omega ^ 0 & T \\
+    \psi _ \Omega ( 0 ) + \psi _ \Omega ( 0 ) & T \\
+    \omega ^ { \psi _ \Omega ( 0 ) } & F \\
+  \end{array}
+</math>
+
 === 性質 ===
 
 このような性質が期待される。証明はまだない。
