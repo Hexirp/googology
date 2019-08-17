@@ -104,7 +104,12 @@ module Oridnal where
   isSucc _                     = False
 
   fpred :: Sequence -> Sequence
-  fpred = undefined
+  fpred (Sequence x) = Sequence (go x)
+   where
+    go :: [Unary] -> [Unary]
+    go []       = []
+    go (x : []) = []
+    go (x : xs) = x : go xs
 
   fseq :: Sequence -> Integer -> Sequence
   fseq = undefined
