@@ -91,12 +91,12 @@ module Oridnal where
     go x = case mleft x of
       Nothing -> Zero
       Just x' -> if isSucc x'
-        then Succ (fpred x)
-        else Limit (fseq x)
+        then Succ (fpred (Sequence x))
+        else Limit (fseq (Sequence x))
 
   mleft :: [a] -> Maybe a
   mleft []       = Nothing
-  mleft (x : []) = Just a
+  mleft (x : []) = Just x
   mleft (_ : xs) = mleft xs
 
   isSucc :: Unary -> Bool
