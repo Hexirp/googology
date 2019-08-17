@@ -171,7 +171,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 === プログラム ===
 
-作業中……
+作業中……（[https://github.com/Hexirp/googology ここ]にて）
 
 == 注釈 ==
 
