@@ -112,7 +112,15 @@ module Oridnal where
     go (x : xs) = x : go xs
 
   fseq :: Sequence -> Integer -> Sequence
-  fseq = undefined
+  fseq (Sequence x) n = Sequence (go x n)
+   where
+    go :: [Unary] -> Integer -> [Unary]
+    go []       _ = []
+    go (x : []) n = fseq1 x n : []
+    go (x : xs) n = x : (go xs n)
+
+  fseq1 :: Unary -> Integer -> Unary
+  fseq1 = undefined
 
 
   main :: IO ()
