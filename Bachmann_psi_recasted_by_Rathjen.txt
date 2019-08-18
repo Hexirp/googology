@@ -169,6 +169,21 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 一番右に一番奥にある要素を求める。 ω だったら並べていくだけ。 Buchholz ψ と違って ψ 関数は必ずネストへ展開される。カントールの標準形の展開が組み込み。要素が Ω の時だけネストになる。ネストされる範囲は親を辿って行って最初に見つかった ψ までか？
 
+<math> a \in OT </math> の基本列は次のようになる。
+
+# <math> a = 0 </math> のとき <math> \mathrm{cf} ( a ) = 0 </math> であり、基本列は{{wja|空関数}}により与えられる。
+# <math> a = \omega ^ b </math> のとき
+## <math> b = 0 </math> のとき <math> \mathrm{cf} ( a ) = 1 </math> であり、基本列は <math> a [ 0 ] = 0 </math> により与えられる。
+## <math> b = c + \omega ^ 0 </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ n ] = \omega ^ c \times n </math> により与えられる<ref group="注釈">ここでの乗算は略記と捉えてほしい</math>。
+## <math> b \in L </math> のとき <math> \mathrm{cf} ( a ) = \mathrm{cf} ( b ) </math> であり、基本列は <math> a [ n ] = \omega ^ { b [ n ] } </math> により与えられる。
+# <math> a = \psi _ \Omega ( b ) </math> のとき
+## <math> b = 0 </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ 0 ] = 0, \, a [ n + 1 ] = \omega ^ { a [ n ] } </math> により与えられる。
+## <math> b = c + \omega ^ 0 </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ 0 ] = \psi _ \Omega ( c ) + \omega ^ 0, \, a [ n + 1 ] = \omega ^ { a [ m ] } </math> により与えられる。
+## <math> \mathrm{cf} ( b ) = \omega </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ n ] = \psi _ \Omega ( b [ n ] ) </math> により与えられる。
+## <math> \mathrm{cf} ( b ) = \Omega </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ n ] = \psi _ \Omega ( b [ c [ n ] ] ) </math> と <math> c [ 0 ] = 0, \, c [ n + 1 ] = \psi _ \Omega ( b [ c [ n ] ] ) </math> により与えられる。
+# <math> a = \Omega </math> のとき <math> \mathrm{cf} ( a ) = \Omega </math> であり、基本列は <math> a [ n ] = n </math> により与えられる。
+# <math> a = a _ 0 + \cdots + a _ k </math> のとき <math> \mathrm{cf} ( a ) = \mathrm{cf} ( a _ k ) </math> であり、基本列は <math> a [ n ] = a _ 0 + \cdots + ( a _ k [ n ] ) </math> により与えられる。
+
 === プログラム ===
 
 作業中……（[https://github.com/Hexirp/googology ここ]にて）
