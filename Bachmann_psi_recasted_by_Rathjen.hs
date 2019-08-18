@@ -120,7 +120,13 @@ module Oridnal where
     go (x : xs) n = x : (go xs n)
 
   fseq1 :: Unary -> Integer -> Unary
-  fseq1 = undefined
+  fseq1 x = case lef x of
+    Omega (Sequence []) -> undefined
+    Psi (Sequence []) -> undefined
+    Cardinal -> undefined
+
+  lef :: Unary -> Unary
+  lef = undefined
 
 
   main :: IO ()
