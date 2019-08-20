@@ -178,18 +178,18 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 <math> a \in OT </math> の基本列は次のようになる。
 
-# <math> a = 0 </math> のとき <math> \mathrm{cf} ( a ) = 0 </math> であり、基本列は{{wja|空関数}}により与えられる。
+# <math> a = 0 </math> のとき <math> \mathrm{cof} ( a ) = 0 </math> であり、基本列は{{wja|空関数}}により与えられる。
 # <math> a = \w ^ b </math> のとき
-## <math> b = 0 </math> のとき <math> \mathrm{cf} ( a ) = 1 </math> であり、基本列は <math> a [ 0 ] = 0 </math> により与えられる。
-## <math> b = c + \w ^ 0 </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \w ^ c \times n </math> により与えられる<ref group="注釈">ここでの乗算は略記と捉えてほしい</ref>。
-## <math> b \in L </math> のとき <math> \mathrm{cf} ( a ) = \mathrm{cf} ( b ) </math> であり、基本列は <math> a [ n ] = \w ^ { b [ n ] } </math> により与えられる。
+## <math> b = 0 </math> のとき <math> \mathrm{cof} ( a ) = 1 </math> であり、基本列は <math> a [ 0 ] = 0 </math> により与えられる。
+## <math> b = c + \w ^ 0 </math> のとき <math> \mathrm{cof} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \w ^ c \times n </math> により与えられる<ref group="注釈">ここでの乗算は略記と捉えてほしい</ref>。
+## <math> b \in L </math> のとき <math> \mathrm{cof} ( a ) = \mathrm{cof} ( b ) </math> であり、基本列は <math> a [ n ] = \w ^ { b [ n ] } </math> により与えられる。
 # <math> a = \pw ( b ) </math> のとき
-## <math> b = 0 </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = 0, \, a [ n + 1 ] = \w ^ { a [ n ] } </math> により与えられる。
-## <math> b = c + \w ^ 0 </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = \pw ( c ) + \w ^ 0, \, a [ n + 1 ] = \w ^ { a [ m ] } </math> により与えられる。
-## <math> \mathrm{cf} ( b ) = \w </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \pw ( b [ n ] ) </math> により与えられる。
-## <math> \mathrm{cf} ( b ) = \W </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \pw ( b [ c [ n ] ] ) </math> と <math> c [ 0 ] = 0, \, c [ n + 1 ] = \pw ( b [ c [ n ] ] ) </math> により与えられる。
-# <math> a = \W </math> のとき <math> \mathrm{cf} ( a ) = \W </math> であり、基本列は <math> a [ n ] = n </math> により与えられる。
-# <math> a = a _ 0 + \cdots + a _ k </math> のとき <math> \mathrm{cf} ( a ) = \mathrm{cf} ( a _ k ) </math> であり、基本列は <math> a [ n ] = a _ 0 + \cdots + ( a _ k [ n ] ) </math> により与えられる。
+## <math> b = 0 </math> のとき <math> \mathrm{cof} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = 0, \, a [ n + 1 ] = \w ^ { a [ n ] } </math> により与えられる。
+## <math> b = c + \w ^ 0 </math> のとき <math> \mathrm{cof} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = \pw ( c ) + \w ^ 0, \, a [ n + 1 ] = \w ^ { a [ m ] } </math> により与えられる。
+## <math> \mathrm{cof} ( b ) = \w </math> のとき <math> \mathrm{cof} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \pw ( b [ n ] ) </math> により与えられる。
+## <math> \mathrm{cof} ( b ) = \W </math> のとき <math> \mathrm{cof} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \pw ( b [ c [ n ] ] ) </math> と <math> c [ 0 ] = 0, \, c [ n + 1 ] = \pw ( b [ c [ n ] ] ) </math> により与えられる。
+# <math> a = \W </math> のとき <math> \mathrm{cof} ( a ) = \W </math> であり、基本列は <math> a [ n ] = n </math> により与えられる。
+# <math> a = a _ 0 + \cdots + a _ k </math> のとき <math> \mathrm{cof} ( a ) = \mathrm{cof} ( a _ k ) </math> であり、基本列は <math> a [ n ] = a _ 0 + \cdots + ( a _ k [ n ] ) </math> により与えられる。
 
 === プログラム ===
 
