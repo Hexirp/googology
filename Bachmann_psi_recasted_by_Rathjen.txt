@@ -81,7 +81,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 # <math> a \in T </math> に対して <math> \w ^ a \in T </math> である。
 # <math> a \in T </math> に対して <math> \pw ( a ) \in T </math> である。
 # <math> \W \in T </math> である。
-# <math> 1 \lt k \le \w </math> を取り、単項（条件 2, 3 で構成された要素）の列 <math> a _ 0, \ldots, a _ k \in T </math> に対して <math> a _ 0 + \cdots + a _ k \in T </math> である。
+# <math> 1 \lt k \le \w </math> を取り、単項（条件 2, 3, 4 で構成された要素）の列 <math> a _ 0, \ldots, a _ k \in T </math> に対して <math> a _ 0 + \cdots + a _ k \in T </math> である。
 
 集合 <math> T </math> の上の狭義全順序 <math> < </math> を次のように帰納的に定める。
 
@@ -162,7 +162,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 === 基本列 ===
 
-<math> a \in OT </math> の基本列は次のようになる。
+<math> a \in T </math> の基本列は次のようになる。
 
 # <math> a = 0 </math> のとき <math> \mathrm{cof} ( a ) = 0 </math> であり、基本列は{{wja|空関数}}により与えられる。
 # <math> a = \w ^ b </math> のとき
