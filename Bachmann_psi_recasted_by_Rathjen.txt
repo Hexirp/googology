@@ -5,6 +5,7 @@
   \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
 
   \newcommand{\p}{\psi}
+  \newcommand{\w}{\omega}
   \newcommand{\W}{\Omega}
   \newcommand{\pw}{{\p _ \W}}
 
@@ -20,7 +21,7 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 
 <math>
   \begin{eqnarray*}
-    C ^ \W ( \alpha, \beta ) & \coloneqq & \mathrm{closure} ( \{ +, \xi \mapsto \omega ^ \xi, \xi _ { < \alpha } \mapsto \pw ( \xi ) \} ) ( \beta \cup \{ 0, \W \} ) \\
+    C ^ \W ( \alpha, \beta ) & \coloneqq & \mathrm{closure} ( \{ +, \xi \mapsto \w ^ \xi, \xi _ { < \alpha } \mapsto \pw ( \xi ) \} ) ( \beta \cup \{ 0, \W \} ) \\
     \pw ( \alpha ) & \coloneqq & \min \{ \rho < \W : C ^ \W ( \alpha, \rho ) \cap \W = \rho \} \\
   \end{eqnarray*}
 </math>
@@ -29,7 +30,7 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 
 == 計算 ==
 
-<math> \pw ( 0 ) </math> を計算する。まずは <math> C ^ \W ( 0, 0 ) = \{ 0, 1, 2, \omega, \omega ^ \omega, \omega ^ { \omega ^ \omega + \omega }, \W, \W + 1, \W + \omega, \omega ^ { \W + 1 }, \omega ^ { \W + \W }, \omega ^ { \omega ^ { \W + \W } }, \ldots \} </math> である。さらに <math> C ^ \W ( 0, \beta ) </math> は <math> \beta < \varepsilon _ 0 </math> のとき <math> C ^ \W ( 0, 0 ) </math> と等しい。加えて <math> C ^ \W ( 0, \varepsilon _ 0 ) </math> のときも等しい。
+<math> \pw ( 0 ) </math> を計算する。まずは <math> C ^ \W ( 0, 0 ) = \{ 0, 1, 2, \w, \w ^ \w, \w ^ { \w ^ \w + \w }, \W, \W + 1, \W + \w, \w ^ { \W + 1 }, \w ^ { \W + \W }, \w ^ { \w ^ { \W + \W } }, \ldots \} </math> である。さらに <math> C ^ \W ( 0, \beta ) </math> は <math> \beta < \varepsilon _ 0 </math> のとき <math> C ^ \W ( 0, 0 ) </math> と等しい。加えて <math> C ^ \W ( 0, \varepsilon _ 0 ) </math> のときも等しい。
 
 よって <math> C ^ \W ( 0, 0 ) \cap \W = \varepsilon _ 0 </math> であることから <math> C ^ \W ( 0, \varepsilon _ 0 ) \cap \W = \varepsilon _ 0 </math> である。自明に <math> \varepsilon _ 0 </math> は <math> C ^ \W ( \alpha, \rho ) \cap \W = \rho </math> を満たす最小の順序数である。
 
@@ -39,9 +40,9 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 
 よって <math> C ^ \W ( 1, 0 ) = C ^ \W ( 1, 1 ) = \cdots = C ^ \W ( 1, \varepsilon _ 1 ) = \varepsilon _ 1 </math> になる。ゆえに <math> \pw ( 1 ) = \varepsilon _ 1 </math> である。
 
-<math> \pw ( \omega ) </math> を計算する。まず <math> C ^ \W ( \omega, 0 ) = \{ 0, 1, \omega, \omega ^ 2, \omega ^ \omega, \varepsilon _ 0, \varepsilon _ 1, \ldots \} </math> であり <math> C ^ \W ( \omega, 0 ) \cup \W = \varepsilon _ \omega </math> である。ゆえに <math> \pw ( \omega ) = \varepsilon _ \omega </math> である。
+<math> \pw ( \w ) </math> を計算する。まず <math> C ^ \W ( \w, 0 ) = \{ 0, 1, \w, \w ^ 2, \w ^ \w, \varepsilon _ 0, \varepsilon _ 1, \ldots \} </math> であり <math> C ^ \W ( \w, 0 ) \cup \W = \varepsilon _ \w </math> である。ゆえに <math> \pw ( \w ) = \varepsilon _ \w </math> である。
 
-<math> \pw ( \pw ( 0 ) ) = \pw ( \varepsilon _ 0 ) </math> を計算する。 <math> C ^ \W ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ 1, \varepsilon _ \omega \ldots \} </math> であり <math> C ^ \W ( \varepsilon _ 0, 0 ) \cup \W = \varepsilon _ { \varepsilon _ 0 } </math> である。ゆえに <math> \pw ( \omega ) = \varepsilon _ \omega </math> である。
+<math> \pw ( \pw ( 0 ) ) = \pw ( \varepsilon _ 0 ) </math> を計算する。 <math> C ^ \W ( \varepsilon _ 0, 0 ) = \{ \varepsilon _ 0, \varepsilon _ 1, \varepsilon _ \w \ldots \} </math> であり <math> C ^ \W ( \varepsilon _ 0, 0 ) \cup \W = \varepsilon _ { \varepsilon _ 0 } </math> である。ゆえに <math> \pw ( \w ) = \varepsilon _ \w </math> である。
 
 このように積み重ねると <math> 0, \pw ( 0 ), \pw ( \pw ( 0 ) ), \ldots \Longrightarrow \zeta _ 0 </math> に達する。
 
@@ -57,12 +58,12 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
   \begin{eqnarray*}
     \pw ( 0 ) & = & \varepsilon _ 0 \\
     \pw ( 1 ) & = & \varepsilon _ 1 \\
-    \pw ( \omega ) & = & \varepsilon _ \omega \\
+    \pw ( \w ) & = & \varepsilon _ \w \\
     \pw ( \pw ( 0 ) ) & = & \varepsilon _ { \varepsilon _ 0 } \\
     \pw ( \zeta _ 0 ) & = & \zeta _ 0 \\
     \pw ( \W ) & = & \zeta _ 0 \\
     \pw ( \W + 1 ) & = & \varepsilon _ { \zeta _ 0 + 1 } \\
-    \pw ( \W + \omega ) & = & \varepsilon _ { \zeta _ 0 + \omega } \\
+    \pw ( \W + \w ) & = & \varepsilon _ { \zeta _ 0 + \w } \\
     \pw ( \W + \pw ( \W ) ) & = & \varepsilon _ { \zeta _ 0 + \zeta _ 0 } \\
     \pw ( \W + \W ) & = & \zeta _ 1 \\
   \end{eqnarray*}
@@ -70,17 +71,17 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 
 == 順序数表記 ==
 
-Bachmann ψ (recasted) を元にした順序数表記は探しても見つからなかった。ここのは私が独自に定めたものである。この順序数表記は良く知られた順序数表記である Buchholz ψ と違って <math> \omega ^ \alpha </math> が基本記号（表記を構成する様々なアリティの定数記号および関数記号）に含まれている。そのため、この順序数表記が正しいのかはまだわかってない。
+Bachmann ψ (recasted) を元にした順序数表記は探しても見つからなかった。ここのは私が独自に定めたものである。この順序数表記は良く知られた順序数表記である Buchholz ψ と違って <math> \w ^ \alpha </math> が基本記号（表記を構成する様々なアリティの定数記号および関数記号）に含まれている。そのため、この順序数表記が正しいのかはまだわかってない。
 
 === 定義 ===
 
 集合 <math> T </math> を次のような条件を満たす最小の集合であるとして定める。
 
 # <math> 0 \in T </math> である。
-# <math> a \in T </math> に対して <math> \omega ^ a \in T </math> である。
+# <math> a \in T </math> に対して <math> \w ^ a \in T </math> である。
 # <math> a \in T </math> に対して <math> \pw ( a ) \in T </math> である。
 # <math> \W \in T </math> である。
-# <math> 1 \lt k \le \omega </math> を取り、単項（条件 2, 3 で構成された要素）の列 <math> a _ 0, \ldots, a _ k \in T </math> に対して <math> a _ 0 + \cdots + a _ k \in T </math> である。
+# <math> 1 \lt k \le \w </math> を取り、単項（条件 2, 3 で構成された要素）の列 <math> a _ 0, \ldots, a _ k \in T </math> に対して <math> a _ 0 + \cdots + a _ k \in T </math> である。
 
 集合 <math> T </math> の上の狭義全順序 <math> < </math> を次のように帰納的に定める。
 
@@ -89,13 +90,13 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 # <math> 0 </math> ではない <math> a \in T </math> に対して <math> a < 0 </math> ではない。
 # いずれも <math> 0 </math> ではない <math> a, b \in T </math> に対して、
 ## <math> a, b </math> の双方とも単項であるとき、
-### <math> a = \omega ^ { a' }, \, b = \omega ^ { b' } </math> のとき <math> a' < b' </math> と同値である。
-### <math> a = \omega ^ { a' }, \, b = \pw ( b' ) </math> のとき <math> a' < \pw ( b' ) </math> と同値である<ref group="注釈"><math> \pw ( b' ) </math> は必ず <math> \xi \mapsto \omega ^ \xi </math> の不動点である</ref>。
-### <math> a = \omega ^ { a' }, \, b = \W </math> の時 <math> a' < \W </math> と同値である<ref group="注釈"><math> \W </math> は最大元ではない</ref>。
-### <math> a = \pw ( a' ), \, b = \omega ^ { b' } </math> のとき <math> \pw ( a' ) < b' </math> と同値である。
+### <math> a = \w ^ { a' }, \, b = \w ^ { b' } </math> のとき <math> a' < b' </math> と同値である。
+### <math> a = \w ^ { a' }, \, b = \pw ( b' ) </math> のとき <math> a' < \pw ( b' ) </math> と同値である<ref group="注釈"><math> \pw ( b' ) </math> は必ず <math> \xi \mapsto \w ^ \xi </math> の不動点である</ref>。
+### <math> a = \w ^ { a' }, \, b = \W </math> の時 <math> a' < \W </math> と同値である<ref group="注釈"><math> \W </math> は最大元ではない</ref>。
+### <math> a = \pw ( a' ), \, b = \w ^ { b' } </math> のとき <math> \pw ( a' ) < b' </math> と同値である。
 ### <math> a = \pw ( a' ), \, b = \pw ( b' ) </math> のとき <math> a' < b' </math> と同値である。
 ### <math> a = \pw ( a' ), \, b = \W </math> のとき <math> a < b </math> である。
-### <math> a = \W, \, b = \omega ^ { b' } </math> のとき <math> a < b' </math> と同値である。
+### <math> a = \W, \, b = \w ^ { b' } </math> のとき <math> a < b' </math> と同値である。
 ### <math> a = \W, \, b = \pw ( b' ) </math> のとき <math> a < b </math> ではない。
 ### <math> a = \W, \, b = \W </math> のとき <math> a < b </math> ではない。
 ## <math> a </math> が単項で <math> b </math> が単項ではないとき、
@@ -116,7 +117,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 集合 <math> G ( a ) </math> を次のような条件を満たす最小の集合であるとして定める。
 
 # <math> a = 0 </math> のとき <math> G ( a ) = \emptyset </math> である。
-# <math> a = \omega ^ { a' } </math> のとき  <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である<ref group="注釈">この部分は <math> G ( a ) = G ( a' ) </math> と簡略化できるかもしれない</ref>。
+# <math> a = \w ^ { a' } </math> のとき  <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である<ref group="注釈">この部分は <math> G ( a ) = G ( a' ) </math> と簡略化できるかもしれない</ref>。
 # <math> a = \pw ( a' ) </math> のとき <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である。
 # <math> a = \W </math> のとき <math> G ( a ) = \emptyset </math> である。
 # <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> G ( a ) = G ( { a' } _ 0 ) \cup \cdots \cup G ( { a' } _ k ) </math> である。
@@ -124,7 +125,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 集合 <math> OT </math> を次のように帰納的に定める。
 
 # <math> 0 \in OT </math> である。
-# <math> a \in OT </math> に対して <math> a = 0 </math> か <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> であれば <math> \omega ^ a \in OT </math> である。
+# <math> a \in OT </math> に対して <math> a = 0 </math> か <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> であれば <math> \w ^ a \in OT </math> である。
 # <math> a \in OT </math> に対して <math> \forall a', \, a' \in G ( a ) \to a' < a </math> であれば <math> \pw ( a' ) \in OT </math> である。
 # <math> \W \in OT </math> である。
 # <math> a _ 0, \ldots, a _ k \in OT </math> に対して <math> a _ 0 \ge \cdots \ge a _ k </math> であれば <math> a _ 0 + \cdots + a _ k \in OT </math> である。
@@ -132,10 +133,10 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 対応 <math> o ( a ) </math> を次のようにして定める。
 
 # <math> a = 0 </math> のとき <math> o ( a ) = 0 </math> である。
-# <math> a = \omega ^ { a' } </math> のとき <math> o ( a ) = \omega ^ { o ( a' ) } </math> である。
+# <math> a = \w ^ { a' } </math> のとき <math> o ( a ) = \w ^ { o ( a' ) } </math> である。
 # <math> a = \pw ( a' ) </math> のとき <math> o ( a ) = \pw ( o ( a' ) ) </math> である。
 # <math> a = \W </math> のとき <math> o ( a ) = \W </math> である。
-# <math> 1 \lt k \le \omega </math> を取って <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> o ( a ) = o ( { a' } _ 0 ) + \cdots + o ( { a' } _ k ) </math> である。
+# <math> 1 \lt k \le \w </math> を取って <math> a = { a' } _ 0 + \cdots + { a' } _ k </math> のとき <math> o ( a ) = o ( { a' } _ 0 ) + \cdots + o ( { a' } _ k ) </math> である。
 
 === 計算 ===
 
@@ -146,10 +147,10 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
     0 & T \\
     \pw ( 0 ) & T \\
     \pw ( \W ) & T \\
-    \omega ^ 0 & T \\
-    \omega ^ 0 + \omega ^ 0 & T \\
+    \w ^ 0 & T \\
+    \w ^ 0 + \w ^ 0 & T \\
     \pw ( 0 ) + \pw ( 0 ) & T \\
-    \omega ^ { \pw ( 0 ) } & F \\
+    \w ^ { \pw ( 0 ) } & F \\
   \end{array}
 </math>
 
@@ -178,15 +179,15 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 <math> a \in OT </math> の基本列は次のようになる。
 
 # <math> a = 0 </math> のとき <math> \mathrm{cf} ( a ) = 0 </math> であり、基本列は{{wja|空関数}}により与えられる。
-# <math> a = \omega ^ b </math> のとき
+# <math> a = \w ^ b </math> のとき
 ## <math> b = 0 </math> のとき <math> \mathrm{cf} ( a ) = 1 </math> であり、基本列は <math> a [ 0 ] = 0 </math> により与えられる。
-## <math> b = c + \omega ^ 0 </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ n ] = \omega ^ c \times n </math> により与えられる<ref group="注釈">ここでの乗算は略記と捉えてほしい</ref>。
-## <math> b \in L </math> のとき <math> \mathrm{cf} ( a ) = \mathrm{cf} ( b ) </math> であり、基本列は <math> a [ n ] = \omega ^ { b [ n ] } </math> により与えられる。
+## <math> b = c + \w ^ 0 </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \w ^ c \times n </math> により与えられる<ref group="注釈">ここでの乗算は略記と捉えてほしい</ref>。
+## <math> b \in L </math> のとき <math> \mathrm{cf} ( a ) = \mathrm{cf} ( b ) </math> であり、基本列は <math> a [ n ] = \w ^ { b [ n ] } </math> により与えられる。
 # <math> a = \pw ( b ) </math> のとき
-## <math> b = 0 </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ 0 ] = 0, \, a [ n + 1 ] = \omega ^ { a [ n ] } </math> により与えられる。
-## <math> b = c + \omega ^ 0 </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ 0 ] = \pw ( c ) + \omega ^ 0, \, a [ n + 1 ] = \omega ^ { a [ m ] } </math> により与えられる。
-## <math> \mathrm{cf} ( b ) = \omega </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ n ] = \pw ( b [ n ] ) </math> により与えられる。
-## <math> \mathrm{cf} ( b ) = \W </math> のとき <math> \mathrm{cf} ( a ) = \omega </math> であり、基本列は <math> a [ n ] = \pw ( b [ c [ n ] ] ) </math> と <math> c [ 0 ] = 0, \, c [ n + 1 ] = \pw ( b [ c [ n ] ] ) </math> により与えられる。
+## <math> b = 0 </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = 0, \, a [ n + 1 ] = \w ^ { a [ n ] } </math> により与えられる。
+## <math> b = c + \w ^ 0 </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = \pw ( c ) + \w ^ 0, \, a [ n + 1 ] = \w ^ { a [ m ] } </math> により与えられる。
+## <math> \mathrm{cf} ( b ) = \w </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \pw ( b [ n ] ) </math> により与えられる。
+## <math> \mathrm{cf} ( b ) = \W </math> のとき <math> \mathrm{cf} ( a ) = \w </math> であり、基本列は <math> a [ n ] = \pw ( b [ c [ n ] ] ) </math> と <math> c [ 0 ] = 0, \, c [ n + 1 ] = \pw ( b [ c [ n ] ] ) </math> により与えられる。
 # <math> a = \W </math> のとき <math> \mathrm{cf} ( a ) = \W </math> であり、基本列は <math> a [ n ] = n </math> により与えられる。
 # <math> a = a _ 0 + \cdots + a _ k </math> のとき <math> \mathrm{cf} ( a ) = \mathrm{cf} ( a _ k ) </math> であり、基本列は <math> a [ n ] = a _ 0 + \cdots + ( a _ k [ n ] ) </math> により与えられる。
 
