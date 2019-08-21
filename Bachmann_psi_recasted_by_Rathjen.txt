@@ -151,6 +151,19 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
     \w ^ 0 + \w ^ 0 & T \\
     \pw ( 0 ) + \pw ( 0 ) & T \\
     \w ^ { \pw ( 0 ) } & F \\
+    \w ^ { \pw ( 0 ) + \w ^ 0 } & T \\
+    \pw ( \W + \w ^ 0 ) & T \\
+    \pw ( \W + \pw ( \W ) ) & T \\
+    \pw ( \pw ( \W ) ) & F \\
+    \pw ( \w ^ { \pw ( \W ) + \w ^ 0 } ) & F \\
+    \pw ( \w ^ { \W + \w ^ 0 } ) & T \\
+    \pw ( \w ^ { \w ^ { \W + \W } } ) & T \\
+    \pw ( \W + \W + \pw ( \W ) ) & T \\
+    \pw ( \pw ( \W ) + \w ^ 0 ) & F \\
+    \pw ( \W + \W + \pw ( \W + \W + \W ) ) & F \\
+    \pw ( \pw ( \pw ( \W ) ) + \pw ( 0 ) ) & F \\
+    \pw ( \pw ( \W + \W ) ) & F \\
+    \w ^ 0 + \w ^ { \w ^ 0 } & F \\
   \end{array}
 </math>
 
