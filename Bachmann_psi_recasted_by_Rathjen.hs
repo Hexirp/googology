@@ -3,20 +3,12 @@ module Oridnal where
   import Prelude
   import System.IO
 
-  -- 順序数を足し合わせる列。
-  --
-  -- [] -> 0
-  -- [a] -> a
-  -- [a, b] -> a + b
-  -- [a, b, c] -> a + b + c
   data Sequence = Sequence [Unary] deriving Show
 
-  -- 単項。
   data Unary = Omega Sequence | Psi Sequence | Cardinal deriving Show
 
-  -- 比較。
-  comp_seq :: Sequence -> Sequence -> Ordering
-  comp_seq (Sequence a) (Sequence b) = go a b
+  comp_s :: Sequence -> Sequence -> Ordering
+  comp_s (Sequence a) (Sequence b) = go a b
    where
     go :: [Unary] -> [Unary] -> Ordering
     go []       []       = EQ
@@ -25,17 +17,16 @@ module Oridnal where
     go (a : as) (b : bs) = comp_u a b <> go as bs
 
   comp_u :: Unary -> Unary -> Ordering
-  comp_u (Omega a) (Omega b) = comp_seq a b
-  comp_u (Omega a) (Psi b)   = comp_seq a (Sequence [Psi b])
-  comp_u (Omega a) Cardinal  = comp_seq a (Sequence [Cardinal])
-  comp_u (Psi a)   (Omega b) = comp_seq (Sequence [Psi a]) b
-  comp_u (Psi a)   (Psi b)   = comp_seq a b
+  comp_u (Omega a) (Omega b) = comp_s a b
+  comp_u (Omega a) (Psi b)   = comp_s a (Sequence [Psi b])
+  comp_u (Omega a) Cardinal  = comp_s a (Sequence [Cardinal])
+  comp_u (Psi a)   (Omega b) = comp_s (Sequence [Psi a]) b
+  comp_u (Psi a)   (Psi b)   = comp_s a b
   comp_u (Psi _)   Cardinal  = LT
-  comp_u Cardinal  (Omega b) = comp_seq (Sequence [Cardinal]) b
+  comp_u Cardinal  (Omega b) = comp_s (Sequence [Cardinal]) b
   comp_u Cardinal  (Psi _)   = GT
   comp_u Cardinal  Cardinal  = EQ
 
-  -- 標準形の判定。
   st_s :: Sequence -> Bool
   st_s (Sequence x) = go x
    where
@@ -62,7 +53,7 @@ module Oridnal where
     _        -> True
 
   st_p :: Sequence -> Bool
-  st_p x = all (\x' -> comp_seq x' x == LT) (g1 x)
+  st_p x = all (\x' -> comp_s x' x == LT) (g1 x)
 
   g1 :: Sequence -> [Sequence]
   g1 (Sequence y) = case y of
@@ -140,8 +131,8 @@ module Oridnal where
 
   main :: IO ()
   main = do
-    put $ comp_seq (Sequence []) (Sequence []) == EQ
-    put $ comp_seq (Sequence [Psi (Sequence [])]) (Sequence [Psi (Sequence [Cardinal])]) == LT
+    put $ comp_s (Sequence []) (Sequence []) == EQ
+    put $ comp_s (Sequence [Psi (Sequence [])]) (Sequence [Psi (Sequence [Cardinal])]) == LT
     put $ st_s (Sequence []) == True
     put $ st_s (Sequence [Psi (Sequence [])]) == True
     put $ st_s (Sequence [Psi (Sequence [Cardinal])]) == True
