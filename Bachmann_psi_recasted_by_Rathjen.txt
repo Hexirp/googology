@@ -114,7 +114,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 #### <math> m < n </math> であり、どの <math> i \le m </math> に対しても <math> { a' } _ i = { b' } _ i </math> である。
 #### <math> k \le \min \{ m, n \} </math> が存在して <math> a _ k < b _ k </math> を満たし、どの <math> i < k </math> に対しても <math> { a' } _ i = { b' } _ i </math> である。
 
-集合 <math> G ( a ) </math> を次のような条件を満たす最小の集合であるとして定める。
+集合 <math> G ( \_ ) </math> を次のような条件を満たす最小の集合であるとして定める。
 
 # <math> a = 0 </math> のとき <math> G ( a ) = \emptyset </math> である。
 # <math> a = \w ^ { a' } </math> のとき  <math> G ( a ) = \{ a' \} \cup G ( a' ) </math> である<ref group="注釈">この部分は <math> G ( a ) = G ( a' ) </math> と簡略化できるかもしれない</ref>。
@@ -191,6 +191,14 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 # <math> a = a _ 0 + \cdots + a _ k </math> のとき
 ## <math> a _ k = \w ^ 0 </math> のとき <math> \mathrm{cof} ( a ) = 1 </math> であり、基本列は <math> a [ 0 ] = a _ 0 + \cdots + a _ { k - 1 } </math> により与えられる。
 ## <math> a _ k \in L </math> のとき <math> \mathrm{cof} ( a ) = \mathrm{cof} ( a _ k ) </math> であり、基本列は <math> a [ n ] = a _ 0 + \cdots + a _ k [ n ] </math> により与えられる。
+
+ここで <math> \mathrm{cof} ( \_ ) </math> は順序数表記の項に対する関数であり、項を順序数へ変換した際の共終数を求める。共終数には様々な定義があるが、ここでは以下のような定義を採用している。
+
+<math>
+ \mathrm{cf} ( \alpha ) \coloneqq \min \{ \kappa \mid \exists f \colon \kappa \to a, \, \sup \{ f ( \lambda ) \mid \lambda < \kappa \} = \alpha \}
+</math>
+
+この定義だと <math> 0 </math> の共終数は <math> \sup \emptyset = \emptyset </math> であるから <math> 0 </math> になり、 <math> \alpha + 1 </math> の共終数は <math> \sup \{ \alpha \} = \alpha + 1 </math> であるから <math> 1 </math> になる。
 
 === プログラム ===
 
