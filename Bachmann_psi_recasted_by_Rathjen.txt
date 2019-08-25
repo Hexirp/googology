@@ -167,6 +167,8 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
   \end{array}
 </math>
 
+<math> \w ^ { \pw ( 0 ) } </math> は <math> \pw ( 0 ) </math> と等しいため標準形ではない。 <math> \pw ( \pw ( \W ) ) </math> は <math> \pw ( \W ) < \W </math> であるため標準形ではない。 <math> \pw ( \w ^ { \pw ( \W ) + \w ^ 0 } ) </math> は <math> \w ^ { \pw ( \W ) + \w ^ 0 } < \W </math> であるため標準形ではない。 <math> \pw ( \pw ( \W ) + \w ^ 0 ) </math> は <math> \pw ( \W ) + \w ^ 0 < \W </math> であるため標準形ではない。 <math> \pw ( \W + \W + \pw ( \W + \W + \W ) ) </math> は <math> \W + \W + \pw ( \W + \W + \W ) < \W + \W + \W </math> であるため標準形ではない。 <math> \pw ( \pw ( \pw ( \W ) ) + \pw ( 0 ) ) </math> は <math> \pw ( \pw ( \W ) ) + \pw ( 0 ) < \W </math> であるため標準形ではない。 <math> \pw ( \pw ( \W + \W ) ) </math> は <math> \pw ( \W + \W ) < \W + \W </math> であるため標準形ではない。 <math> \w ^ 0 + \w ^ { \w ^ 0 } </math> は <math> \w ^ 0 < \w ^ { \w ^ 0 } </math> であるため標準形ではない。
+
 === 性質 ===
 
 このような性質が期待される。証明はまだない。
