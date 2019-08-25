@@ -3,12 +3,12 @@ module Oridnal where
   import Prelude
   import System.IO
 
-  data Sequence = Sequence [Unary] deriving Show
+  data Seq = Seq [Unary] deriving Show
 
-  data Unary = Omega Sequence | Psi Sequence | Cardinal deriving Show
+  data Unary = Omega Seq | Psi Seq | Card deriving Show
 
-  comp_s :: Sequence -> Sequence -> Ordering
-  comp_s (Sequence a) (Sequence b) = go a b
+  comp_s :: Seq -> Seq -> Ordering
+  comp_s (Seq a) (Seq b) = go a b
    where
     go :: [Unary] -> [Unary] -> Ordering
     go []       []       = EQ
@@ -18,17 +18,17 @@ module Oridnal where
 
   comp_u :: Unary -> Unary -> Ordering
   comp_u (Omega a) (Omega b) = comp_s a b
-  comp_u (Omega a) (Psi b)   = comp_s a (Sequence [Psi b])
-  comp_u (Omega a) Cardinal  = comp_s a (Sequence [Cardinal])
-  comp_u (Psi a)   (Omega b) = comp_s (Sequence [Psi a]) b
+  comp_u (Omega a) (Psi b)   = comp_s a (Seq [Psi b])
+  comp_u (Omega a) Card  = comp_s a (Seq [Card])
+  comp_u (Psi a)   (Omega b) = comp_s (Seq [Psi a]) b
   comp_u (Psi a)   (Psi b)   = comp_s a b
-  comp_u (Psi _)   Cardinal  = LT
-  comp_u Cardinal  (Omega b) = comp_s (Sequence [Cardinal]) b
-  comp_u Cardinal  (Psi _)   = GT
-  comp_u Cardinal  Cardinal  = EQ
+  comp_u (Psi _)   Card  = LT
+  comp_u Card  (Omega b) = comp_s (Seq [Card]) b
+  comp_u Card  (Psi _)   = GT
+  comp_u Card  Card  = EQ
 
-  st_s :: Sequence -> Bool
-  st_s (Sequence x) = go x
+  st_s :: Seq -> Bool
+  st_s (Seq x) = go x
    where
     go :: [Unary] -> Bool
     go []       = True
@@ -41,58 +41,58 @@ module Oridnal where
   st_u :: Unary -> Bool
   st_u (Omega x) = st_o x && st_s x
   st_u (Psi x)   = st_p x && st_s x
-  st_u Cardinal  = True
+  st_u Card  = True
 
-  st_o :: Sequence -> Bool
-  st_o (Sequence x) = case x of
+  st_o :: Seq -> Bool
+  st_o (Seq x) = case x of
     []       -> True
     x' : []  -> case x' of
       Omega _  -> True
       Psi _    -> False
-      Cardinal -> False
+      Card -> False
     _        -> True
 
-  st_p :: Sequence -> Bool
+  st_p :: Seq -> Bool
   st_p x = all (\x' -> comp_s x' x == LT) (g1 x)
 
-  g1 :: Sequence -> [Sequence]
-  g1 (Sequence y) = case y of
+  g1 :: Seq -> [Seq]
+  g1 (Seq y) = case y of
     []      -> []
     u : []  -> g1_u u
     _       -> g1_s y
 
-  g1_u :: Unary -> [Sequence]
+  g1_u :: Unary -> [Seq]
   g1_u (Omega x) = g x
   g1_u (Psi x)   = g x
-  g1_u Cardinal  = []
+  g1_u Card  = []
 
-  g1_s :: [Unary] -> [Sequence]
+  g1_s :: [Unary] -> [Seq]
   g1_s []       = []
-  g1_s (x : xs) = g (Sequence [x]) ++ g1_s xs
+  g1_s (x : xs) = g (Seq [x]) ++ g1_s xs
 
-  g :: Sequence -> [Sequence]
-  g (Sequence x) = Sequence x : go_s x
+  g :: Seq -> [Seq]
+  g (Seq x) = Seq x : go_s x
    where
     --
-    go_s :: [Unary] -> [Sequence]
+    go_s :: [Unary] -> [Seq]
     go_s [] = []
     go_s (x : xs) = go_u x ++ go_s xs
     --
-    go_u :: Unary -> [Sequence]
-    go_u (Omega x) = Sequence [Omega x] : g x
-    go_u (Psi x)   = Sequence [Psi x] : g x
-    go_u Cardinal  = Sequence [Cardinal] : []
+    go_u :: Unary -> [Seq]
+    go_u (Omega x) = Seq [Omega x] : g x
+    go_u (Psi x)   = Seq [Psi x] : g x
+    go_u Card  = Seq [Card] : []
 
-  data Fundamental = Zero | Succ Sequence | Limit (Integer -> Sequence)
+  data Fundamental = Zero | Succ Seq | Limit (Integer -> Seq)
 
-  fs :: Sequence -> Fundamental
-  fs (Sequence x) = go x
+  fs :: Seq -> Fundamental
+  fs (Seq x) = go x
    where
     go x = case mleft x of
       Nothing -> Zero
       Just x' -> if isSucc x'
-        then Succ (fpred (Sequence x))
-        else Limit (fseq (Sequence x))
+        then Succ (fpred (Seq x))
+        else Limit (fseq (Seq x))
 
   mleft :: [a] -> Maybe a
   mleft []       = Nothing
@@ -100,19 +100,19 @@ module Oridnal where
   mleft (_ : xs) = mleft xs
 
   isSucc :: Unary -> Bool
-  isSucc (Omega (Sequence [])) = True
+  isSucc (Omega (Seq [])) = True
   isSucc _                     = False
 
-  fpred :: Sequence -> Sequence
-  fpred (Sequence x) = Sequence (go x)
+  fpred :: Seq -> Seq
+  fpred (Seq x) = Seq (go x)
    where
     go :: [Unary] -> [Unary]
     go []       = []
     go (x : []) = []
     go (x : xs) = x : go xs
 
-  fseq :: Sequence -> Integer -> Sequence
-  fseq (Sequence x) n = Sequence (go x n)
+  fseq :: Seq -> Integer -> Seq
+  fseq (Seq x) n = Seq (go x n)
    where
     go :: [Unary] -> Integer -> [Unary]
     go []       _ = []
@@ -121,9 +121,9 @@ module Oridnal where
 
   fseq1 :: Unary -> Integer -> Unary
   fseq1 x = case lef x of
-    Omega (Sequence []) -> undefined
-    Psi (Sequence []) -> undefined
-    Cardinal -> undefined
+    Omega (Seq []) -> undefined
+    Psi (Seq []) -> undefined
+    Card -> undefined
 
   lef :: Unary -> Unary
   lef = undefined
@@ -131,31 +131,31 @@ module Oridnal where
 
   main :: IO ()
   main = do
-    put $ comp_s (Sequence []) (Sequence []) == EQ
-    put $ comp_s (Sequence [Psi (Sequence [])]) (Sequence [Psi (Sequence [Cardinal])]) == LT
-    put $ st_s (Sequence []) == True
-    put $ st_s (Sequence [Psi (Sequence [])]) == True
-    put $ st_s (Sequence [Psi (Sequence [Cardinal])]) == True
-    put $ st_s (Sequence [Omega (Sequence [])]) == True
-    put $ st_s (Sequence [Omega (Sequence []), Omega (Sequence [])]) == True
-    put $ st_s (Sequence [Psi (Sequence []), Psi (Sequence [])]) == True
-    put $ st_s (Sequence [Omega (Sequence [Psi (Sequence [])])]) == False
-    put $ st_s (Sequence [Omega (Sequence [Psi (Sequence []), Omega (Sequence [])])]) == True
-    put $ st_s (Sequence [Psi (Sequence [Cardinal, Omega (Sequence [])])]) == True
-    put $ st_s (Sequence [Psi (Sequence [Cardinal, Psi (Sequence [Cardinal])])]) == True
-    put $ st_s (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])])]) == False
-    put $ st_s (Sequence [Psi (Sequence [Omega (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])])]) == False
-    put $ st_s (Sequence [Psi (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])]) == True
-    put $ g1 (Sequence [Omega (Sequence [Cardinal, Omega (Sequence [])])])
-    put $ st_s (Sequence [Psi (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])]) == True
-    put $ g1 (Sequence [Omega (Sequence [Omega (Sequence [Cardinal, Cardinal])])])
-    put $ st_s (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal])])]) == True
-    put $ st_s (Sequence [Psi (Sequence [Psi (Sequence [Cardinal]), Omega (Sequence [])])]) == False
-    put $ st_s (Sequence [Psi (Sequence [Cardinal, Cardinal, Psi (Sequence [Cardinal, Cardinal, Cardinal])])]) == False
-    put $ st_s (Sequence [Psi (Sequence [Psi (Sequence [Psi (Sequence [Cardinal])]), Psi (Sequence [])])]) == False
-    put $ st_s (Sequence [Psi (Sequence [Psi (Sequence [Cardinal, Cardinal])])]) == False
-    put $ g1 (Sequence [Psi (Sequence [Cardinal, Cardinal])])
-    put $ st_s (Sequence [Omega (Sequence []), Omega (Sequence [Omega (Sequence [])])]) == False
+    put $ comp_s (Seq []) (Seq []) == EQ
+    put $ comp_s (Seq [Psi (Seq [])]) (Seq [Psi (Seq [Card])]) == LT
+    put $ st_s (Seq []) == True
+    put $ st_s (Seq [Psi (Seq [])]) == True
+    put $ st_s (Seq [Psi (Seq [Card])]) == True
+    put $ st_s (Seq [Omega (Seq [])]) == True
+    put $ st_s (Seq [Omega (Seq []), Omega (Seq [])]) == True
+    put $ st_s (Seq [Psi (Seq []), Psi (Seq [])]) == True
+    put $ st_s (Seq [Omega (Seq [Psi (Seq [])])]) == False
+    put $ st_s (Seq [Omega (Seq [Psi (Seq []), Omega (Seq [])])]) == True
+    put $ st_s (Seq [Psi (Seq [Card, Omega (Seq [])])]) == True
+    put $ st_s (Seq [Psi (Seq [Card, Psi (Seq [Card])])]) == True
+    put $ st_s (Seq [Psi (Seq [Psi (Seq [Card])])]) == False
+    put $ st_s (Seq [Psi (Seq [Omega (Seq [Psi (Seq [Card]), Omega (Seq [])])])]) == False
+    put $ st_s (Seq [Psi (Seq [Omega (Seq [Card, Omega (Seq [])])])]) == True
+    put $ g1 (Seq [Omega (Seq [Card, Omega (Seq [])])])
+    put $ st_s (Seq [Psi (Seq [Omega (Seq [Omega (Seq [Card, Card])])])]) == True
+    put $ g1 (Seq [Omega (Seq [Omega (Seq [Card, Card])])])
+    put $ st_s (Seq [Psi (Seq [Card, Card, Psi (Seq [Card])])]) == True
+    put $ st_s (Seq [Psi (Seq [Psi (Seq [Card]), Omega (Seq [])])]) == False
+    put $ st_s (Seq [Psi (Seq [Card, Card, Psi (Seq [Card, Card, Card])])]) == False
+    put $ st_s (Seq [Psi (Seq [Psi (Seq [Psi (Seq [Card])]), Psi (Seq [])])]) == False
+    put $ st_s (Seq [Psi (Seq [Psi (Seq [Card, Card])])]) == False
+    put $ g1 (Seq [Psi (Seq [Card, Card])])
+    put $ st_s (Seq [Omega (Seq []), Omega (Seq [Omega (Seq [])])]) == False
    where
     put :: Show a => a -> IO ()
     put a = print a >> hFlush stdout
