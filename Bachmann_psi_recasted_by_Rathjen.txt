@@ -198,7 +198,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
  \mathrm{cf} ( \alpha ) \coloneqq \min \{ \kappa \mid \exists f \colon \kappa \to a, \, \sup \{ f ( \lambda ) \mid \lambda < \kappa \} = \alpha \}
 </math>
 
-この定義だと <math> 0 </math> の共終数は <math> \sup \emptyset = \emptyset </math> であるから <math> 0 </math> になり、 <math> \alpha + 1 </math> の共終数は <math> \sup \{ \alpha \} = \alpha + 1 </math> であるから <math> 1 </math> になる。
+この定義だと <math> 0 </math> の共終数は <math> \sup \emptyset = 0 </math> であるから <math> 0 </math> になり、 <math> \alpha + 1 </math> の共終数は <math> \sup \{ \alpha \} = \alpha + 1 </math> であるから <math> 1 </math> になる。
 
 === プログラム ===
 
