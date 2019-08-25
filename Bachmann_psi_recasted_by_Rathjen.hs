@@ -59,7 +59,22 @@ module Oridnal where
     _        -> True
 
   st_p :: Seq -> Bool
-  st_p x = all (\x' -> comp_s x' x == LT) (g1 x)
+  st_p x = all (\x' -> comp_s x' x == LT) (col1_s x)
+
+  col1_s :: Seq -> [Seq]
+  col1_s (Seq x) = go x
+   where
+    go :: [Unary] -> [Seq]
+    go x = case x of
+      []      -> []
+      xv : [] -> col1_u xv
+      xv : xs -> col_u xv ++ go xs
+
+  col1_u :: Unary -> [Seq]
+  col1_u x = case x of
+    Omega x' -> col_s x'
+    Psi x'   -> col_s x'
+    Card     -> []
 
   col_s :: Seq -> [Seq]
   col_s (Seq x) = go x
