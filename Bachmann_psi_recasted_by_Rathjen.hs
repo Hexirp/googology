@@ -19,13 +19,13 @@ module Oridnal where
   comp_u :: Unary -> Unary -> Ordering
   comp_u (Omega a) (Omega b) = comp_s a b
   comp_u (Omega a) (Psi b)   = comp_s a (Seq [Psi b])
-  comp_u (Omega a) Card  = comp_s a (Seq [Card])
+  comp_u (Omega a) Card      = comp_s a (Seq [Card])
   comp_u (Psi a)   (Omega b) = comp_s (Seq [Psi a]) b
   comp_u (Psi a)   (Psi b)   = comp_s a b
-  comp_u (Psi _)   Card  = LT
-  comp_u Card  (Omega b) = comp_s (Seq [Card]) b
-  comp_u Card  (Psi _)   = GT
-  comp_u Card  Card  = EQ
+  comp_u (Psi _)   Card      = LT
+  comp_u Card      (Omega b) = comp_s (Seq [Card]) b
+  comp_u Card      (Psi _)   = GT
+  comp_u Card      Card      = EQ
 
   st_s :: Seq -> Bool
   st_s (Seq x) = go x
@@ -41,7 +41,7 @@ module Oridnal where
   st_u :: Unary -> Bool
   st_u (Omega x) = st_o x && st_s x
   st_u (Psi x)   = st_p x && st_s x
-  st_u Card  = True
+  st_u Card      = True
 
   st_o :: Seq -> Bool
   st_o (Seq x) = case x of
@@ -49,7 +49,7 @@ module Oridnal where
     x' : []  -> case x' of
       Omega _  -> True
       Psi _    -> False
-      Card -> False
+      Card     -> False
     _        -> True
 
   st_p :: Seq -> Bool
@@ -64,7 +64,7 @@ module Oridnal where
   g1_u :: Unary -> [Seq]
   g1_u (Omega x) = g x
   g1_u (Psi x)   = g x
-  g1_u Card  = []
+  g1_u Card      = []
 
   g1_s :: [Unary] -> [Seq]
   g1_s []       = []
@@ -81,7 +81,7 @@ module Oridnal where
     go_u :: Unary -> [Seq]
     go_u (Omega x) = Seq [Omega x] : g x
     go_u (Psi x)   = Seq [Psi x] : g x
-    go_u Card  = Seq [Card] : []
+    go_u Card      = Seq [Card] : []
 
   data Fundamental = Zero | Succ Seq | Limit (Integer -> Seq)
 
