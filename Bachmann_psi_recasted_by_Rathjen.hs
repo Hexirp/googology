@@ -3,10 +3,18 @@ module Oridnal where
   import Prelude
   import System.IO
 
+  -- 順序数を足し合わせる列。
+  --
+  -- [] -> 0
+  -- [a] -> a
+  -- [a, b] -> a + b
+  -- [a, b, c] -> a + b + c
   data Sequence = Sequence [Unary] deriving Show
 
+  -- 単項。
   data Unary = Omega Sequence | Psi Sequence | Cardinal deriving Show
 
+  -- 比較。
   comp_seq :: Sequence -> Sequence -> Ordering
   comp_seq (Sequence a) (Sequence b) = go a b
    where
@@ -27,6 +35,7 @@ module Oridnal where
   comp_u Cardinal  (Psi _)   = GT
   comp_u Cardinal  Cardinal  = EQ
 
+  -- 標準形の判定。
   st_s :: Sequence -> Bool
   st_s (Sequence x) = go x
    where
