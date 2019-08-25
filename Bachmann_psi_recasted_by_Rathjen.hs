@@ -7,6 +7,12 @@ module Oridnal where
 
   data Unary = Omega Seq | Psi Seq | Card deriving Show
 
+  isUnary :: Seq -> Bool
+  isUnary (Sequence x) = case x of
+    []     -> False
+    _ : [] -> True
+    _ : _  -> False
+
   comp_s :: Seq -> Seq -> Ordering
   comp_s (Seq a) (Seq b) = go a b
    where
