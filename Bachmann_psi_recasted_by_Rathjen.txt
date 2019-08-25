@@ -175,12 +175,12 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 === 基本列 ===
 
-<math> a \in T </math> の基本列は次のようになる。
+<math> a \in OT </math> の基本列は次のようになる。
 
 # <math> a = 0 </math> のとき <math> \mathrm{cof} ( a ) = 0 </math> であり、基本列は{{wja|空関数}}により与えられる。
 # <math> a = \w ^ b </math> のとき
 ## <math> b = 0 </math> のとき <math> \mathrm{cof} ( a ) = 1 </math> であり、基本列は <math> a [ 0 ] = 0 </math> により与えられる。
-## <math> b = c + \w ^ 0 </math> のとき <math> \mathrm{cof} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = 0, \, a [ n ] = \w ^ c + a [ n - 1 ] </math> により与えられる。
+## <math> b = c + \w ^ 0 </math> のとき <math> \mathrm{cof} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = 0, \, a [ 1 ] = \w ^ c, \, a [ n ] = \w ^ c + a [ n - 1 ] </math> により与えられる。
 ## <math> b \in L </math> のとき <math> \mathrm{cof} ( a ) = \mathrm{cof} ( b ) </math> であり、基本列は <math> a [ n ] = \w ^ { b [ n ] } </math> により与えられる。
 # <math> a = \pw ( b ) </math> のとき
 ## <math> b = 0 </math> のとき <math> \mathrm{cof} ( a ) = \w </math> であり、基本列は <math> a [ 0 ] = 0, \, a [ n + 1 ] = \w ^ { a [ n ] } </math> により与えられる。
