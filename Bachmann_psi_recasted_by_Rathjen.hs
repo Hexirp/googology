@@ -107,28 +107,52 @@ module Oridnal where
       Seq [Omega (Seq [])]               -> Seq [Omega (Seq [Omega (Seq [])])]
       Seq [Omega (Seq [Omega (Seq [])])] -> Seq [Omega (Seq [Omega (Seq [])])]
       Seq [Card]                         -> Seq [Card]
-      cx                                 -> cx
+      _                                  -> error "impossible"
     Psi x'   -> case cof_s x' of
       Seq []                             -> Seq [Omega (Seq [Omega (Seq [])])]
       Seq [Omega (Seq [])]               -> Seq [Omega (Seq [Omega (Seq [])])]
       Seq [Omega (Seq [Omega (Seq [])])] -> Seq [Omega (Seq [Omega (Seq [])])]
       Seq [Card]                         -> Seq [Omega (Seq [Omega (Seq [])])]
-      cx                                 -> cx
+      _                                  -> error "impossible"
     Card     -> Seq [Card]
 
-  fun_s :: Seq -> Seq -> Seq
-  fun_s x n = if comp_s n (cof_s x) == LT
-    then f x n
-    else x
+  fun :: Seq -> Seq -> Seq
+  fun x n = if comp_s n (cof_s x) == LT then f x n else x
    where
     f :: Seq -> Seq -> Seq
-    f (Seq x) n = case x of
-      []      -> error "It's impossible because of 'cof x = 0'."
+    f (Seq x) = case x of
+      []      -> error "impossible"
       xv : [] -> fun_u xv n
-      xv : xs -> case cof_s (Seq (xv : xs)) of
-        Seq []               -> error "It's impossible because of '0 < x'."
-        Seq [Omega (Seq [])] -> pred_s (Seq (xv : xs))
-        Seq [Omega (Seq [Omega (Seq [])])] -> undefined
+      xv : xs -> fun_s (Seq (xv : xs)) n
+
+  fun_s :: Seq -> Seq -> Seq
+  fun_s x n = case cof_s x of
+    Seq []                             -> error "impossible"
+    Seq [Omega (Seq [])]               -> fun_s_S x
+    Seq [Omega (Seq [Omega (Seq [])])] -> fun_s_L x n 
+    Seq [Card]                         -> fun_s_L x n
+    _                                  -> error "impossible"
+
+  fun_s_S :: Seq -> Seq
+  fun_s_S (Seq x) = Seq (go x)
+   where
+    go :: [Unary] -> [Unary]
+    go x = case x of
+      []      -> error "impossible"
+      xv : [] -> []
+      xv : xs -> xv : go xs
+
+  fun_s_L :: Seq -> Seq -> Seq
+  fun_s_L (Seq x) n = Seq (go x n)
+   where
+    go :: [Unary] -> Seq -> [Unary]
+    go x n = case x of
+      []
+      xv : [] -> fun_u xv n : []
+      xv : xs -> xv : go xs n
+
+  fun_u :: Seq -> Seq -> Seq
+  fun_u = undefined
 
 
   main :: IO ()
