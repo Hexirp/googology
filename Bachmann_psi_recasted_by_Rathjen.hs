@@ -221,6 +221,7 @@ module Oridnal where
 
   main :: IO ()
   main = do
+    --
     put $ comp_s (Seq []) (Seq []) == EQ
     put $ comp_s (Seq [Psi (Seq [])]) (Seq [Psi (Seq [Card])]) == LT
     put $ st_s (Seq []) == True
@@ -246,14 +247,12 @@ module Oridnal where
     put $ st_s (Seq [Psi (Seq [Psi (Seq [Card, Card])])]) == False
     put $ col1_s (Seq [Psi (Seq [Card, Card])])
     put $ st_s (Seq [Omega (Seq []), Omega (Seq [Omega (Seq [])])]) == False
+    --
+    fundamental 10 $ Seq [Psi (Seq [Omega (Seq [Omega (Seq [Card, Card])])])]
    where
     --
     put :: Show a => a -> IO ()
     put a = print a >> hFlush stdout
     --
-    fundamental :: IO ()
-    fundamental = forM_ [ 0 .. 10 ] $ \i ->
-      let
-        t = Seq [Psi (Seq [Omega (Seq [Omega (Seq [Card, Card])])])]
-      in
-        put $ pretty_s $ fun t $ from_i i
+    fundamental :: Integer -> Seq -> IO ()
+    fundamental n t = forM_ [ 0 .. n ] $ put . pretty_s . fun t . from_i
