@@ -1,6 +1,7 @@
 module Oridnal where
 
   import Prelude
+  import Control.Monad
   import System.IO
 
   rep :: Integer -> a -> [a]
@@ -29,7 +30,7 @@ module Oridnal where
    where
     go :: Integer -> [Unary]
     go 0 = []
-    go n = Omega (Seq []) : from_i (n - 1)
+    go n = Omega (Seq []) : go (n - 1)
 
   comp_s :: Seq -> Seq -> Ordering
   comp_s (Seq a) (Seq b) = go a b
