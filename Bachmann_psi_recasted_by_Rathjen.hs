@@ -220,6 +220,11 @@ module Oridnal where
     Card     -> "\\W"
 
 
+  printFS :: Integer -> Seq -> IO ()
+  printFS n t = forM_ [ 0 .. n ] $ \i -> do
+    putStrLn $ pretty_s $ fun t $ from_i i
+    hFlush stdout
+
   main :: IO ()
   main = do
     --
@@ -249,11 +254,8 @@ module Oridnal where
     put $ col1_s (Seq [Psi (Seq [Card, Card])])
     put $ st_s (Seq [Omega (Seq []), Omega (Seq [Omega (Seq [])])]) == False
     --
-    fundamental 10 $ Seq [Psi (Seq [Omega (Seq [Omega (Seq [Card, Card])])])]
+    printFS 10 $ Seq [Psi (Seq [Omega (Seq [Omega (Seq [Card, Card])])])]
    where
     --
     put :: Show a => a -> IO ()
     put a = print a >> hFlush stdout
-    --
-    fundamental :: Integer -> Seq -> IO ()
-    fundamental n t = forM_ [ 0 .. n ] $ put . pretty_s . fun t . from_i
