@@ -18,7 +18,11 @@ module Oridnal where
     _ : _  -> False
 
   to_i :: Seq -> Integer
-  to_i (Seq x) = length x
+  to_i (Seq x) = go x
+   where
+    go :: [Unary] -> Integer
+    go []       = 0
+    go (_ : xs) = 1 + go xs
 
   comp_s :: Seq -> Seq -> Ordering
   comp_s (Seq a) (Seq b) = go a b
