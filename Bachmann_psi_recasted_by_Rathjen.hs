@@ -131,7 +131,7 @@ module Oridnal where
   fun x n = if comp_s n (cof_s x) == LT then f x n else x
    where
     f :: Seq -> Seq -> Seq
-    f (Seq x) = case x of
+    f (Seq x) n = case x of
       []      -> error "impossible"
       xv : [] -> fun_u xv n
       xv : xs -> fun_s (Seq (xv : xs)) n
