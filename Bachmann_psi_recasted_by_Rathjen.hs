@@ -166,10 +166,22 @@ module Oridnal where
     _                                  -> error "impossible"
 
   fun_u_p :: Seq -> Seq -> Seq
-  fun_u_p x n = let n' = to_i n in f x n'
+  fun_u_p x n = case cof_s x of
+    Seq []                             -> go_o (to_i n)
+    Seq [Omega (Seq [])]               -> go_s x (to_i n)
+    Seq [Omega (Seq [Omega (Seq [])])] -> Seq [Psi (fun_s_L x n)]
+    Seq [Card]                         -> Seq [Psi (fun_s_L x (go_W x n))]
+    _                                  -> error "impossible"
    where
-    f :: Seq -> Integer -> Seq
-    f = undefined
+    go_o :: Integer -> Seq
+    go_o 0 = Seq []
+    go_o n = Seq [Omega (go_o (n - 1))]
+    go_s :: Seq -> Integer -> Seq
+    go_s x 0 = Seq [Psi (fun_s_S x), Omega (Seq [])]
+    go_s x n = Seq [Omega (go_s x (n - 1))]
+    go_W :: Seq -> Integer -> Seq
+    go_W x 0 = Seq []
+    go_W x n = Seq [Psi (fun_s_L x (go_W x (n - 1)))]
 
 
   main :: IO ()
