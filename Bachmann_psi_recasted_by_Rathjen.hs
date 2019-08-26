@@ -3,6 +3,10 @@ module Oridnal where
   import Prelude
   import System.IO
 
+  rep :: Integer -> a -> [a]
+  rep 0 _ = []
+  rep n x = x : rep (n - 1) x
+
   data Seq = Seq [Unary] deriving Show
 
   data Unary = Omega Seq | Psi Seq | Card deriving Show
@@ -12,6 +16,9 @@ module Oridnal where
     []     -> False
     _ : [] -> True
     _ : _  -> False
+
+  to_i :: Seq -> Integer
+  to_i (Seq x) = length x
 
   comp_s :: Seq -> Seq -> Ordering
   comp_s (Seq a) (Seq b) = go a b
@@ -170,7 +177,7 @@ module Oridnal where
     Seq []                             -> go_o (to_i n)
     Seq [Omega (Seq [])]               -> go_s x (to_i n)
     Seq [Omega (Seq [Omega (Seq [])])] -> Seq [Psi (fun_s_L x n)]
-    Seq [Card]                         -> Seq [Psi (fun_s_L x (go_W x n))]
+    Seq [Card]                         -> Seq [Psi (fun_s_L x (go_W x (to_i n)))]
     _                                  -> error "impossible"
    where
     go_o :: Integer -> Seq
