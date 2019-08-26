@@ -129,7 +129,7 @@ module Oridnal where
   fun_s x n = case cof_s x of
     Seq []                             -> error "impossible"
     Seq [Omega (Seq [])]               -> fun_s_S x
-    Seq [Omega (Seq [Omega (Seq [])])] -> fun_s_L x n 
+    Seq [Omega (Seq [Omega (Seq [])])] -> fun_s_L x n
     Seq [Card]                         -> fun_s_L x n
     _                                  -> error "impossible"
 
@@ -147,12 +147,29 @@ module Oridnal where
    where
     go :: [Unary] -> Seq -> [Unary]
     go x n = case x of
-      []
-      xv : [] -> fun_u xv n : []
+      []      -> error "impossible"
+      xv : [] -> fun_u xv n
       xv : xs -> xv : go xs n
 
-  fun_u :: Seq -> Seq -> Seq
-  fun_u = undefined
+  fun_u :: Unary -> Seq -> Seq
+  fun_u x n = case x of
+    Omega x' -> fun_u_w x' n
+    Psi x'   -> fun_u_p x' n
+    Card     -> n
+
+  fun_u_w :: Seq -> Seq -> Seq
+  fun_u_w x n = case cof_s x of
+    Seq []                             -> error "impossible"
+    Seq [Omega (Seq [])]               -> Seq (rep (to_i n) (Omega (fun_s_S x)))
+    Seq [Omega (Seq [Omega (Seq [])])] -> Seq [Omega (fun_s_L x n)]
+    Seq [Card]                         -> Seq [Omega (fun_s_L x n)]
+    _                                  -> error "impossible"
+
+  fun_u_p :: Seq -> Seq -> Seq
+  fun_u_p x n = let n' = to_i n in f x n'
+   where
+    f :: Seq -> Integer -> Seq
+    f = undefined
 
 
   main :: IO ()
