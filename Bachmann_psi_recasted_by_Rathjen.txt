@@ -177,7 +177,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 === 基本列 ===
 
-<math> a \in OT </math> の基本列は次のようになる。
+<math> a \in T </math> の基本列は次のようになる。
 
 # <math> a = 0 </math> のとき <math> \mathrm{cof} ( a ) = 0 </math> であり、基本列は{{wja|空関数}}により与えられる。
 # <math> a = \w ^ b </math> のとき
