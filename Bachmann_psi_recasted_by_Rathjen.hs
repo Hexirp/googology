@@ -24,6 +24,13 @@ module Oridnal where
     go []       = 0
     go (_ : xs) = 1 + go xs
 
+  from_i :: Integer -> Seq
+  from_i n = Seq (go n)
+   where
+    go :: Integer -> [Unary]
+    go 0 = []
+    go n = Omega (Seq []) : from_i (n - 1)
+
   comp_s :: Seq -> Seq -> Ordering
   comp_s (Seq a) (Seq b) = go a b
    where
@@ -187,12 +194,29 @@ module Oridnal where
     go_o :: Integer -> Seq
     go_o 0 = Seq []
     go_o n = Seq [Omega (go_o (n - 1))]
+    --
     go_s :: Seq -> Integer -> Seq
     go_s x 0 = Seq [Psi (fun_s_S x), Omega (Seq [])]
     go_s x n = Seq [Omega (go_s x (n - 1))]
+    --
     go_W :: Seq -> Integer -> Seq
     go_W x 0 = Seq []
     go_W x n = Seq [Psi (fun_s_L x (go_W x (n - 1)))]
+
+  pretty_s :: Seq -> String
+  pretty_s (Seq x) = go x
+   where
+    go :: [Unary] -> String
+    go x = case x of
+      []      -> "0"
+      xv : [] -> pretty_u xv
+      xv : xs -> pretty_u xv ++ " + " ++ go xs
+
+  pretty_u :: Unary -> String
+  pretty_u x = case x of
+    Omega x' -> "\\w ^ { " ++ pretty_s x' ++ " }"
+    Psi   x' -> "\\pw ( " ++ pretty_s x' ++ " )"
+    Card     -> "\\W"
 
 
   main :: IO ()
@@ -223,5 +247,13 @@ module Oridnal where
     put $ col1_s (Seq [Psi (Seq [Card, Card])])
     put $ st_s (Seq [Omega (Seq []), Omega (Seq [Omega (Seq [])])]) == False
    where
+    --
     put :: Show a => a -> IO ()
     put a = print a >> hFlush stdout
+    --
+    fundamental :: IO ()
+    fundamental = forM_ [ 0 .. 10 ] $ \i ->
+      let
+        t = Seq [Psi (Seq [Omega (Seq [Omega (Seq [Card, Card])])])]
+      in
+        put $ pretty_s $ fun t $ from_i i
