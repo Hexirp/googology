@@ -204,7 +204,15 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 === プログラム ===
 
-作業中……（[https://github.com/Hexirp/googology ここ]にて）
+順序数表記としての比較・標準形の判定・基本列の計算を行うプログラムを作成した。これは、順序数表記としての計算が可能であることを示すうえで意義が存在する。
+
+ソースコードは[https://github.com/Hexirp/googology/blob/master/Bachmann_psi_recasted_by_Rathjen.hs ここ]でホストされている。Haskellなので馴染みがないと思われるが、オンラインREPLサービスを用いて簡単に実行することが出来る。
+
+# [https://repl.it/languages/haskell Repl.it] にアクセスする。
+# 前述したソースコードをコピーアンドペーストする。
+# run ボタンを押す。
+
+この作業で main の内容が実行されて、テスト結果と基本列の計算の例が表示される。別の項に対して基本列を表示させたいのならば printFS 関数を使えばよい。右に printFS t n ( t は任意の項, n は任意の自然数) と入力して実行すれば t[0], t[1], t[2], ..., t[n] が計算されて表示される。表示された文字列の形式は TeX であるが、きちんと表示させるためには newcommand を要する。
 
 == 注釈 ==
 
