@@ -91,6 +91,39 @@ module Oridnal where
     Psi x'   -> col_s x'
     Card     -> []
 
+  cof_s :: Seq -> Seq
+  cof_s (Seq x) = go x
+   where
+    go :: [Unary] -> Seq
+    go x = case x of
+      []      -> Seq []
+      xv : [] -> cof_u xv
+      _  : xs -> go xs
+
+  cof_u :: Unary -> Seq
+  cof_u x = case x of
+    Omega x' -> case cof_s x' of
+      Seq []                             -> Seq [Omega (Seq [])]
+      Seq [Omega (Seq [])]               -> Seq [Omega (Seq [Omega (Seq [])])]
+      Seq [Omega (Seq [Omega (Seq [])])] -> Seq [Omega (Seq [Omega (Seq [])])]
+      Seq [Card]                         -> Seq [Card]
+      cx                                 -> cx
+    Psi x'   -> case cof_s x' of
+      Seq []                             -> Seq [Omega (Seq [Omega (Seq [])])]
+      Seq [Omega (Seq [])]               -> Seq [Omega (Seq [Omega (Seq [])])]
+      Seq [Omega (Seq [Omega (Seq [])])] -> Seq [Omega (Seq [Omega (Seq [])])]
+      Seq [Card]                         -> Seq [Omega (Seq [Omega (Seq [])])]
+      cx                                 -> cx
+    Card     -> Seq [Card]
+
+  fun_s :: Seq -> Seq -> Seq
+  fun_s x n = if comp_s n (cof_s x) == LT
+    then case cof_s x of
+      Seq [] -> error "Impossible Case"
+      Seq [Omega (Seq [])] -> pred_s x
+      Seq [Omega (Seq [Omega (Seq [])])] -> undefined
+    else x
+
 
   main :: IO ()
   main = do
