@@ -118,11 +118,17 @@ module Oridnal where
 
   fun_s :: Seq -> Seq -> Seq
   fun_s x n = if comp_s n (cof_s x) == LT
-    then case cof_s x of
-      Seq [] -> error "Impossible Case"
-      Seq [Omega (Seq [])] -> pred_s x
-      Seq [Omega (Seq [Omega (Seq [])])] -> undefined
+    then f x n
     else x
+   where
+    f :: Seq -> Seq -> Seq
+    f (Seq x) n = case x of
+      []      -> error "It's impossible because of 'cof x = 0'."
+      xv : [] -> fun_u xv n
+      xv : xs -> case cof_s (Seq (xv : xs)) of
+        Seq []               -> error "It's impossible because of '0 < x'."
+        Seq [Omega (Seq [])] -> pred_s (Seq (xv : xs))
+        Seq [Omega (Seq [Omega (Seq [])])] -> undefined
 
 
   main :: IO ()
