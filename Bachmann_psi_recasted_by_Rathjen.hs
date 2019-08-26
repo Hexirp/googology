@@ -159,7 +159,7 @@ module Oridnal where
     go :: [Unary] -> Seq -> [Unary]
     go x n = case x of
       []      -> error "impossible"
-      xv : [] -> fun_u xv n
+      xv : [] -> let Seq x' = fun_u xv n in x'
       xv : xs -> xv : go xs n
 
   fun_u :: Unary -> Seq -> Seq
