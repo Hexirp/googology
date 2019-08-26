@@ -109,15 +109,15 @@ module Oridnal where
     put $ st_s (Seq [Psi (Seq [Psi (Seq [Card])])]) == False
     put $ st_s (Seq [Psi (Seq [Omega (Seq [Psi (Seq [Card]), Omega (Seq [])])])]) == False
     put $ st_s (Seq [Psi (Seq [Omega (Seq [Card, Omega (Seq [])])])]) == True
-    put $ g1 (Seq [Omega (Seq [Card, Omega (Seq [])])])
+    put $ col1_s (Seq [Omega (Seq [Card, Omega (Seq [])])])
     put $ st_s (Seq [Psi (Seq [Omega (Seq [Omega (Seq [Card, Card])])])]) == True
-    put $ g1 (Seq [Omega (Seq [Omega (Seq [Card, Card])])])
+    put $ col1_s (Seq [Omega (Seq [Omega (Seq [Card, Card])])])
     put $ st_s (Seq [Psi (Seq [Card, Card, Psi (Seq [Card])])]) == True
     put $ st_s (Seq [Psi (Seq [Psi (Seq [Card]), Omega (Seq [])])]) == False
     put $ st_s (Seq [Psi (Seq [Card, Card, Psi (Seq [Card, Card, Card])])]) == False
     put $ st_s (Seq [Psi (Seq [Psi (Seq [Psi (Seq [Card])]), Psi (Seq [])])]) == False
     put $ st_s (Seq [Psi (Seq [Psi (Seq [Card, Card])])]) == False
-    put $ g1 (Seq [Psi (Seq [Card, Card])])
+    put $ col1_s (Seq [Psi (Seq [Card, Card])])
     put $ st_s (Seq [Omega (Seq []), Omega (Seq [Omega (Seq [])])]) == False
    where
     put :: Show a => a -> IO ()
