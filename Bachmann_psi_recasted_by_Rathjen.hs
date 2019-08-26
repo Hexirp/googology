@@ -8,7 +8,7 @@ module Oridnal where
   data Unary = Omega Seq | Psi Seq | Card deriving Show
 
   isUnary :: Seq -> Bool
-  isUnary (Sequence x) = case x of
+  isUnary (Seq x) = case x of
     []     -> False
     _ : [] -> True
     _ : _  -> False
