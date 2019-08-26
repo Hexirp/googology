@@ -4,20 +4,31 @@ module Oridnal where
   import Control.Monad
   import System.IO
 
+  -- Integer を引数に取る replicate 。
   rep :: Integer -> a -> [a]
   rep 0 _ = []
   rep n x = x : rep (n - 1) x
 
+  -- 項である。単項の足し合わせであり、空リストで 0 も表現する。
+  -- 記事の T に該当する。記事とは定義が少し異なっている。
+  --
+  -- []    <===> 0
+  -- [a]   <===> a
+  -- [a,b] <===> a + b
   data Seq = Seq [Unary] deriving Show
 
+  -- 単項である。
   data Unary = Omega Seq | Psi Seq | Card deriving Show
 
+  -- 足し合わせが一つだけ＝単項である。
   isUnary :: Seq -> Bool
   isUnary (Seq x) = case x of
     []     -> False
     _ : [] -> True
     _ : _  -> False
 
+  -- 項を自然数に変換する。項が自然数に対応するものであれば正しいが、
+  -- そうでなければエラーにもならないで不正確な結果を返す。
   to_i :: Seq -> Integer
   to_i (Seq x) = go x
    where
@@ -25,6 +36,7 @@ module Oridnal where
     go []       = 0
     go (_ : xs) = 1 + go xs
 
+  -- 自然数を項に変換する。こっちは常に正確。
   from_i :: Integer -> Seq
   from_i n = Seq (go n)
    where
@@ -32,6 +44,7 @@ module Oridnal where
     go 0 = []
     go n = Omega (Seq []) : go (n - 1)
 
+  -- 項の集合 T の上での比較。辞書式順序。
   comp_s :: Seq -> Seq -> Ordering
   comp_s (Seq a) (Seq b) = go a b
    where
@@ -41,6 +54,7 @@ module Oridnal where
     go _        []       = GT
     go (a : as) (b : bs) = comp_u a b <> go as bs
 
+  -- 単項の上での比較。
   comp_u :: Unary -> Unary -> Ordering
   comp_u (Omega a) (Omega b) = comp_s a b
   comp_u (Omega a) (Psi b)   = comp_s a (Seq [Psi b])
@@ -52,6 +66,7 @@ module Oridnal where
   comp_u Card      (Psi _)   = GT
   comp_u Card      Card      = EQ
 
+  -- 項の集合 T での標準形の判定。
   st_s :: Seq -> Bool
   st_s (Seq x) = go x
    where
@@ -59,15 +74,18 @@ module Oridnal where
     go []       = True
     go (x : xs) = st_u x && dec x xs && go xs
 
+  -- 足し合わせの順序のチェック。
   dec :: Unary -> [Unary] -> Bool
   dec x []       = True
   dec x (y : ys) = comp_u x y /= LT && dec x ys
 
+  -- 単項の標準形の判定。
   st_u :: Unary -> Bool
   st_u (Omega x) = st_o x && st_s x
   st_u (Psi x)   = st_p x && st_s x
   st_u Card      = True
 
+  -- w ^ x の時のチェック。
   st_o :: Seq -> Bool
   st_o (Seq x) = case x of
     []       -> True
@@ -77,9 +95,11 @@ module Oridnal where
       Card     -> False
     _        -> True
 
+  -- pw ( x ) の時のチェック
   st_p :: Seq -> Bool
   st_p x = all (\x' -> comp_s x' x == LT) (col1_s x)
 
+  -- G ( _ ) に該当。
   col1_s :: Seq -> [Seq]
   col1_s (Seq x) = go x
    where
@@ -110,6 +130,8 @@ module Oridnal where
     Psi x'   -> col_s x'
     Card     -> []
 
+  -- 共終数を求める。ここで Seq を返すことにした。それ専用の型を作る選択肢も
+  -- あったが、作っている途中にめんどくさいことに気が付いた。
   cof_s :: Seq -> Seq
   cof_s (Seq x) = go x
    where
@@ -119,6 +141,7 @@ module Oridnal where
       xv : [] -> cof_u xv
       _  : xs -> go xs
 
+  -- 単項への共終数。
   cof_u :: Unary -> Seq
   cof_u x = case x of
     Omega x' -> case cof_s x' of
@@ -135,6 +158,10 @@ module Oridnal where
       _                                  -> error "impossible"
     Card     -> Seq [Card]
 
+  -- 基本列。もし { w ^ 1 } [ W ] のときは w ^ 1 となる。つまり、カウンター
+  -- ストップみたいな感じ。
+  --
+  -- 0 [ a ] = 0 になるが、これはカウンターストップによるもの。
   fun :: Seq -> Seq -> Seq
   fun x n = if comp_s n (cof_s x) == LT then f x n else x
    where
@@ -204,6 +231,7 @@ module Oridnal where
     go_W x 0 = Seq []
     go_W x n = Seq [Psi (fun_s_L x (go_W x (n - 1)))]
 
+  -- 整形して文字列に。書式は TeX 。
   pretty_s :: Seq -> String
   pretty_s (Seq x) = go x
    where
@@ -220,6 +248,8 @@ module Oridnal where
     Card     -> "\\W"
 
 
+  -- 基本列を印刷する。たとえば printFS n t は t の n までの基本列を全て
+  -- 求める。
   printFS :: Integer -> Seq -> IO ()
   printFS n t = forM_ [ 0 .. n ] $ \i -> do
     putStrLn $ pretty_s $ fun t $ from_i i
