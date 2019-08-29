@@ -206,7 +206,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 この定義だと <math> 0 </math> の共終数は <math> \sup \emptyset = 0 </math> であるから <math> 0 </math> になり、 <math> \alpha + 1 </math> の共終数は <math> \sup \{ \alpha \} = \alpha + 1 </math> であるから <math> 1 </math> になる。
 
-この二つの関数 <math> \mathrm{cof} ( \_ ), \mathrm{cf} ( \_ ) </math> は <math> \forall x \in OT, \, o ( \mathrm{cof} ( x ) ) = \mathrm{cf} ( o ( x ) ) </math> という関係を持っている（ことが期待される）。
+この二つの関数 <math> \mathrm{cof} ( \_ ), \, \mathrm{cf} ( \_ ) </math> は <math> \forall x \in OT, \, o ( \mathrm{cof} ( x ) ) = \mathrm{cf} ( o ( x ) ) </math> という関係を持っている（ことが期待される）。
 
 === 計算２ ===
 
