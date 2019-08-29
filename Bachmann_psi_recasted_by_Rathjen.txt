@@ -11,9 +11,11 @@
 
 </math></div>
 
-Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathjen が再構成したものである。そもそも Bachmann ψ は史上初の順序数崩壊関数であったが、その定義は全ての極限順序数の基本列が必要になるなど計算が面倒なものであった。それを Rathjen が再構成 (recast) して計算が簡便になっている。<ref>GWiki 2019 § 3.1</ref>
+Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathjen が再構成したものである。そもそもの Bachmann ψ は史上初の順序数崩壊関数であり、その定義は全ての極限順序数の基本列が必要になるなど計算が面倒なものであったが、それを Rathjen が再構成 (recast) して計算が簡便になっているのがこの順序数崩壊関数である<ref>GWiki 2019 § 3.1</ref>。
 
-限界は[[バッハマン・ハワード順序数]] (Bachmann–Howard ordinal) である<ref> GWiki 2019 § 5</ref>。そも、名前が同じ人に由来しているので、逆に限界という意味で順序数の名前がこうなったのかもしれない。
+元々の順序数崩壊関数は "Die Normalfunktionen und das Problem der ausgezeichneten Folgen von Ordnungszahlen" (Bachmann, Heinz) で定義されており Bachmann ψ (recast) の定義は "The Art of Ordinal Analysis" (Rathjen) pp. 55 に記載されている。
+
+限界は[[バッハマン・ハワード順序数]] (Bachmann–Howard ordinal) である<ref> GWiki 2019 § 5</ref>。名前が同じ人に由来しているので、逆にこの順序数崩壊関数の限界という意味で順序数の名前がこうなったのかもしれない。
 
 == 定義 ==
 
@@ -27,6 +29,8 @@ Bachmann ψ (recast) は Bachmann ψ として考案された順序数を Rathje
 </math>
 
 ただし <math> \mathrm{closure} ( S ) ( \alpha ) </math> は、関数群 <math> S </math> に対する <math> \alpha </math> の閉包である。
+
+この定義は、原論文 "The Art of Ordinal Analysis" のものとは異なっている。英語版ウィキの定義は、原論文を典拠したものではなくラスジェンの順序数崩壊関数から一部分を抜き出したものかもしれない。
 
 == 計算 ==
 
@@ -194,7 +198,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 ## <math> a _ k = \w ^ 0 </math> のとき <math> \mathrm{cof} ( a ) = 1 </math> であり、基本列は <math> a [ 0 ] = a _ 0 + \cdots + a _ { k - 1 } </math> により与えられる。
 ## <math> a _ k \in L </math> のとき <math> \mathrm{cof} ( a ) = \mathrm{cof} ( a _ k ) </math> であり、基本列は <math> a [ n ] = a _ 0 + \cdots + a _ k [ n ] </math> により与えられる。
 
-ここで <math> \mathrm{cof} ( \_ ) </math> は順序数表記の項に対する関数であり、項を順序数へ変換した際の共終数を求める。共終数には様々な定義があるが、ここでは以下のような定義を採用している。
+ここで <math> \mathrm{cof} ( \_ ) </math> は順序数表記の項に対する関数<ref name="注釈">集合に対する関数ではない</ref>であり、項を順序数へ変換した際の共終数を求める。共終数には様々な定義があるが、ここでは以下のような定義を採用している。
 
 <math>
  \mathrm{cf} ( \alpha ) \coloneqq \min \{ \kappa \mid \exists f \colon \kappa \to a, \, \sup \{ f ( \lambda ) \mid \lambda < \kappa \} = \alpha \}
@@ -202,11 +206,15 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 この定義だと <math> 0 </math> の共終数は <math> \sup \emptyset = 0 </math> であるから <math> 0 </math> になり、 <math> \alpha + 1 </math> の共終数は <math> \sup \{ \alpha \} = \alpha + 1 </math> であるから <math> 1 </math> になる。
 
+この二つの関数 <math> \mathrm{cof} ( \_ ), \mathrm{cf} ( \_ ) </math> は <math> \forall x \in OT, \, o ( \mathrm{cof} ( x ) ) = \mathrm{cf} ( o ( x ) ) </math> という関係を持っている（ことが期待される）。
+
 === 計算２ ===
 
 <math> \pw ( \w ^ { \w ^ { \W + \W } } ) </math> を例に上げよう。ルール 3.4 が適用される。すなわち、この基本列は <math> \pw ( \w ^ { \w ^ { \W + \W } } ) [ n ] = \pw ( \w ^ { \w ^ { \W + \W } } [ \alpha [ n ] ] ) </math> で与えられる。ただし <math> \alpha [ 0 ] = 0, \alpha [ n + 1 ] = \pw ( \w ^ { \w ^ { \W + \W } } [ \alpha [ n ] ] ) </math> である。
 
 ここで <math> \w ^ { \w ^ { \W + \W } } [ \eta ] = \w ^ { \w ^ { \W + \W } [ \eta ] } = \w ^ { \w ^ { ( \W + \W ) [ \eta ] } } = \w ^ { \w ^ { \W + \W [ \eta ] } } = \w ^ { \w ^ { \W + \eta } } </math> であるから、基本列を取る操作は <math> \W </math> を置き換えていく操作としても見ることができる。このようにまとめなおすと <math> \pw ( \w ^ { \w ^ { \W + \W } } ) [ n ] = \pw ( \w ^ { \w ^ { \W + \alpha [ n ] } } ) </math> と <math> \alpha [ 0 ] = 0, \alpha [ n + 1 ] = \pw ( \w ^ { \w ^ { \W + \alpha [ n ] } } ) </math> で記述される。ここで <math> \pw ( \w ^ { \w ^ { \W + \W } } ) [ 0 ] = \pw ( \w ^ { \w ^ { \W + 0 } } ) </math> となって、項ですらない形が表られるのではないかと思われるかもしれないが、プログラムではそこらへんもきちんと考慮しているので容赦してほしい。
+
+<math> \w ^ { \W + \w ^ 0 } </math> の基本列は <math> 0, \w ^ \W, \w ^ \W + \w ^ \W, \w ^ \W + \w ^ \W + \w ^ \W, \ldots </math> になる。これは標準形ではないが、これによって基本列を取る操作が停止しなくなるということは（おそらく）ないので、許容可能である。
 
 === プログラム ===
 
@@ -220,7 +228,7 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 
 この作業で main の内容が実行されて、テスト結果と基本列の計算の例が表示される。別の項に対して基本列を表示させたいのならば printFS 関数を使えばよい。右に printFS t n (t は任意の項, n は任意の自然数) と入力して実行すれば t[0], t[1], t[2], ..., t[n] が計算されて表示される。表示された文字列の形式は TeX であるが、きちんと表示させるためには newcommand を要する。
 
-以下は <math> \pw ( \w ^ { \w ^ { \W + \W } } ) </math> の基本列を <math> 10 </math> まで計算させた結果である。
+以下は <math> \pw ( \w ^ { \w ^ { \W + \W } } ) </math> の基本列を <math> 5 </math> まで計算させた結果である。
 
 <pre>
 \pw ( \w ^ { \w ^ { \W } } )
@@ -229,11 +237,6 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
 \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } )
 \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } )
 \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } )
-\pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } )
-\pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } )
-\pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } )
-\pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } )
-\pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } )
 </pre>
 
 整形して数式として表示させると以下のようになる。
@@ -246,11 +249,6 @@ Bachmann ψ (recasted) を元にした順序数表記は探しても見つから
     \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) \\
     \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) \\
     \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) \\
-    \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) \\
-    \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) \\
-    \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) \\
-    \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) \\
-    \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W + \pw ( \w ^ { \w ^ { \W } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) } } ) \\
   \end{array}
 </math>
 
