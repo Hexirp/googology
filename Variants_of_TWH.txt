@@ -71,5 +71,9 @@
 また、以下のような関数を用いた。
 
 <math>
-  \mu ( \alpha ) \coloneqq \min \{ \beta \mid \exists n < \omega, \, \alpha = \beta + n \}
+  \mu ( \alpha ) \coloneqq
+    \begin{cases}
+      \alpha                                                 & ( \{ \beta \mid L ( \beta ) \land \beta < \alpha \} =    \emptyset ) \\
+      \max \{ \beta \mid L ( \beta ) \land \beta < \alpha \} & ( \{ \beta \mid L ( \beta ) \land \beta < \alpha \} \neq \emptyset ) \\
+    \end{cases}
 </math>
