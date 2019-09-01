@@ -1,8 +1,8 @@
-﻿<math>
+﻿<div style="display:none"><math>
   \newcommand{\ordinarycolon} {:}
   \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
   \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
-</math>
+</math></div>
 
 この記事では[[ユーザーブログ:Hexirp/ハイパー演算子の拡張]]での超限弱ハイパー演算子の変種を紹介し、強化を試みる。
 
