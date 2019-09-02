@@ -596,7 +596,7 @@
     \w [ \w + 1 ] \w [ 7 ] 0 & = & \f _ \w ( \w ) \\
     \w [ \w + 1 ] \w [ 7 ] 1 & = & \f _ { 1 + 1 } ( \f _ \w ( \w ) + \f _ \w ( \w ) ) \\
     \w [ \w + 1 ] \w [ \w ] \w & = & \f _ \w ( \w + 1 ) \\
-    \w [ \w + 1 ] \w [ \w ] ( \w + 1 ) & = & \mathrm{undefined} \\
+    \w [ \w + 1 ] \w [ \w ] ( \w + 1 ) & = & \w [ \w + 1 ] \w [ \w ] \w [ \w ] \w = \mathrm{undefined} \\
   \end{array}
 </math>
 
