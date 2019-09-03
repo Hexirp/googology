@@ -11,6 +11,7 @@
 <math>
   \begin{eqnarray*}
   x ^ - & \coloneqq & x - 1 \\
+  x ^ + & \coloneqq & x + 1 \\
   \mathbb{N} ^ + & \coloneqq & \{ x \in \mathbb{N} \mid x \neq 0 \} \\
   [ x, \ldots, y ] & \coloneqq &
     \begin{cases}
