@@ -1,0 +1,39 @@
+<div style="display:none"><math>
+  \newcommand{\ordinarycolon} {:}
+  \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
+  \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+</math></div>
+
+'''Y数列'''を数式で定義する。この定義は圧縮・展開・解凍の三段階を使っている。また、圧縮／解凍の形式は D (difference), P (parent), N (depth) の三行で構成された形式（DPN形式と名付けた）を使っている。
+
+== 圧縮 ==
+
+山を構成する部分。
+
+<math>
+  \begin{eqnarray*}
+    S & = & ( S _ 1, S _ 2, \ldots, S _ X ) \\
+    X & \coloneqq & \mathrm{length}(S) \\
+    D _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        S _ x                                                    & ( n = 1                              ) \\
+        0                                                        & ( n > 1 \land P _ S ( x, n ^ - ) = 0 ) \\
+        D _ S ( x, n ^ - ) - D _ S ( P _ S ( x, n ^ - ), n ^ - ) & ( n > 1 \land P _ S ( x, n ^ - ) > 0 ) \\
+      \end{cases} \\
+    P _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        0                                                                                           & ( n = 1 \land D _ S ( x, n ) = 1 ) \\
+        \max \{ p \mid D _ S ( p, n ) < D _ S ( x, n ) \}                                           & ( n = 1 \land D _ S ( x, n ) > 1 ) \\
+        0                                                                                           & ( n > 1 \land D _ S ( x, n ) = 0 ) \\
+        \max \{ p \mid D _ S ( p, n ) < D _ S ( x, n ) \land p \in \mathrm{Anc} _ S ( x, n ^ - ) \} & ( n > 1 \land D _ S ( x, n ) > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+== 展開 ==
+
+（未完成）
+
+== 解凍 ==
+
+（未完成）
