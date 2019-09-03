@@ -108,7 +108,8 @@ DPN形式を山へ解凍する部分。
 
 <math>
   \begin{eqnarray*}
-    { D' } _ S ( x, n ) & \coloneqq &
+    { S' } _ x & \coloneqq & { D' } _ { Z' } ( x, 1 ) \\
+    { D' } _ { Z' } ( x, n ) & \coloneqq &
       \begin{cases}
         { D' } _ { Z' } ( x, n ^ + ) + { D' } _ { Z' } ( { P' } _ { Z' } ( x, n ), n ) & ( n < { n' } _ { Z' } ( x ) ) \\
         { d' } _ { Z' } ( x )                                                          & ( n = { n' } _ { Z' } ( x ) ) \\
@@ -128,4 +129,8 @@ DPN形式を山へ解凍する部分。
   \end{eqnarray*}
 </math>
 
-（未完成）
+展開後の数列。
+
+<math>
+  u ( Z' ) \coloneqq ( { S' } _ 1, { S' } _ 2, \ldots, { S' } _ { X' } )
+</math>
