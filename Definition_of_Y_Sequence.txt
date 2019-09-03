@@ -116,13 +116,13 @@ DPN形式を山へ解凍する部分。
       \end{cases} \\
     { P' } _ S ( x, n ) & \coloneqq &
       \begin{cases}
-        \mathrm{Idx} ( { p' } _ { Z' } ( x ), { n' } _ { Z' } ( x ) - n ) & ( n \leq { n' } _ { Z' } ( x ) ) \\
-        0                                                                 & ( n >    { n' } _ { Z' } ( x ) ) \\
+        \mathrm{Idx} ( { p' } _ { Z' } ( x ), 1 + { n' } _ { Z' } ( x ) - n ) & ( n \leq { n' } _ { Z' } ( x ) ) \\
+        0                                                                     & ( n >    { n' } _ { Z' } ( x ) ) \\
       \end{cases} \\
     \mathrm{Idx} ( p, n ) & \coloneqq &
       \begin{cases}
-        p _ 1                                      & ( p = p _ s \frown [ p _ 2, p _ 1 ] \land n = 0 ) \\
-        \mathrm{Idx} ( p _ s \frown [ p _ 2 ], n ) & ( p = p _ s \frown [ p _ 2, p _ 1 ] \land n > 0 ) \\
+        p _ 1                                      & ( p = p _ s \frown [ p _ 2, p _ 1 ] \land n = 1 ) \\
+        \mathrm{Idx} ( p _ s \frown [ p _ 2 ], n ) & ( p = p _ s \frown [ p _ 2, p _ 1 ] \land n > 1 ) \\
         p _ 1                                      & ( p =              [ p _ 1 ]                    ) \\
       \end{cases} \\
   \end{eqnarray*}
