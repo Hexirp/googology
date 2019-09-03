@@ -8,12 +8,17 @@
 
 == 圧縮 ==
 
-汎用関数／表記。
+汎用関数／表記。リスト版の内包表記も使っているが、定義を書ききる自信はないので Haskell でのリスト内包表記の動作を参考にしてほしい。
 
 <math>
   \begin{eqnarray*}
   x ^ - & \coloneqq & x - 1 \\
   \mathbb{N} ^ + & \coloneqq & \{ x \in \mathbb{N} \mid x \neq 0 \} \\
+  [ x, \ldots, y ] & \coloneqq &
+    \begin{cases}
+      [ ]                               & ( x >    y ) \\
+      [ x ] \frown [ x ^ -, \ldots, y ] & ( x \leq y ) \\
+    \end{cases} \\
 </math>
 
 山を構成する部分。
@@ -57,7 +62,7 @@
     \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} \\
     n            _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \\
     d            _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
-    p            _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ) \ldots v _ S ( x ) ] ] \\
+    p            _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ), \ldots, v _ S ( x ) ] ] \\
     u            _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \leq n _ S ( x ) \} \\
     v            _ S ( x ) & \coloneqq & n _ S ( x ) \\
   \end{eqnarray*}
