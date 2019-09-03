@@ -26,7 +26,6 @@
 <math>
   \begin{eqnarray*}
     S & = & ( S _ 1, S _ 2, \ldots, S _ X ) \\
-    X & \coloneqq & \mathrm{length}(S) \\
     D _ S ( x, n ) & \coloneqq &
       \begin{cases}
         S _ x                                                    & ( n = 1                              ) \\
@@ -86,5 +85,23 @@ DPN形式への圧縮を行う関数は以下のようになる。
 （未完成）
 
 == 解凍 ==
+
+新しい行列の要素へアクセスする部分。
+
+<math>
+  \begin{eqnarray*}
+    Z ' \coloneqq
+      \left (
+        \begin{array}{cccc}
+          { Z ' } _ { 1, 1 } & { Z ' } _ { 1, 2 } & \cdots & { Z ' } _ { 1, Y } \\
+          { Z ' } _ { 2, 1 } & { Z ' } _ { 2, 2 } & \cdots & { Z ' } _ { 2, Y } \\
+          { Z ' } _ { 3, 1 } & { Z ' } _ { 3, 2 } & \cdots & { Z ' } _ { 3, Y } \\
+        \end{array}
+      \right )
+    { d ' } _ { Z ' } ( x ) & \coloneqq & { Z ' } _ { 1, x } \\
+    { p ' } _ { Z ' } ( x ) & \coloneqq & { Z ' } _ { 2, x } \\
+    { n ' } _ { Z ' } ( x ) & \coloneqq & { Z ' } _ { 3, x } \\
+  \end{eqnarray*}
+</math>
 
 （未完成）
