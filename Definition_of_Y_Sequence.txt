@@ -115,7 +115,7 @@ DPN形式を山へ解凍する部分。
         { d' } _ { Z' } ( x )                                                          & ( n = { n' } _ { Z' } ( x ) ) \\
         0                                                                              & ( n > { n' } _ { Z' } ( x ) ) \\
       \end{cases} \\
-    { P' } _ S ( x, n ) & \coloneqq &
+    { P' } _ { Z' } ( x, n ) & \coloneqq &
       \begin{cases}
         \mathrm{Idx} ( { p' } _ { Z' } ( x ), 1 + { n' } _ { Z' } ( x ) - n ) & ( n \leq { n' } _ { Z' } ( x ) ) \\
         0                                                                     & ( n >    { n' } _ { Z' } ( x ) ) \\
