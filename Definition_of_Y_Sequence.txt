@@ -6,9 +6,7 @@
 
 '''Y数列'''を数式で定義する。この定義は圧縮・展開・解凍の三段階を使っている。また、圧縮／解凍の形式は D (difference), P (parent), N (depth) の三行で構成された形式（DPN形式と名付けた）を使っている。
 
-== 圧縮 ==
-
-汎用関数／表記。リスト版の内包表記も使っているが、定義を書ききる自信はないので Haskell でのリスト内包表記の動作を参考にしてほしい。
+== 汎用関数／表記 ==
 
 <math>
   \begin{eqnarray*}
@@ -20,6 +18,14 @@
       [ x ] \frown [ x ^ -, \ldots, y ] & ( x \leq y ) \\
     \end{cases} \\
 </math>
+
+リスト版の内包表記も使っているが、定義を書ききる自信はないので Haskell でのリスト内包表記の動作を参考にしてほしい。
+
+== 極限形 ==
+
+ここでは <math> S </math> という'''極限形'''の数列の展開を定義する数式を与える。
+
+=== 圧縮 ===
 
 山を構成する部分。
 
@@ -80,7 +86,34 @@ DPN形式への圧縮を行う関数は以下のようになる。
     \right )
 </math>
 
-== 展開 ==
+また、付随して行列のクラスもDPN形式に含まれる。
+
+<math>
+  c ( S ) \coloneqq c _ S
+</math>
+
+=== 展開 ===
+
+DPN形式の行列の要素へアクセスする関数。
+
+<math>
+  \begin{eqnarray*}
+    Z & \coloneqq & z ( S ) \\
+    Z & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, X' } \\
+          Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, X' } \\
+          Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, X' } \\
+        \end{array}
+      \right )
+    C & \coloneqq & c ( S ) \\
+    { d' } _ Z ( x ) & \coloneqq & Z _ { 1, x } \\
+    { p' } _ Z ( x ) & \coloneqq & Z _ { 2, x } \\
+    { n' } _ Z ( x ) & \coloneqq & Z _ { 3, x } \\
+    r _ Z & \coloneqq & p _ 1 \quad ( p = [ p _ 1 ] \frown p _ s ) \\
+  \end{eqnarray*}
+</math>
 
 良い部分と悪い部分と刈られた部分の分割。
 
@@ -116,13 +149,13 @@ DPN形式への圧縮を行う関数は以下のようになる。
 
 （未完成）
 
-== 解凍 ==
+=== 解凍 ===
 
 新しい行列の要素へアクセスする部分。
 
 <math>
   \begin{eqnarray*}
-    Z' \coloneqq
+    Z' & \coloneqq &
       \left (
         \begin{array}{cccc}
           { Z' } _ { 1, 1 } & { Z' } _ { 1, 2 } & \cdots & { Z' } _ { 1, X' } \\
