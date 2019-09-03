@@ -27,13 +27,13 @@
   \begin{eqnarray*}
     S & = & ( S _ 1, S _ 2, \ldots, S _ X ) \\
     X & \coloneqq & \mathrm{length}(S) \\
-    D            _ S ( x, n ) & \coloneqq &
+    D _ S ( x, n ) & \coloneqq &
       \begin{cases}
         S _ x                                                    & ( n = 1                              ) \\
         0                                                        & ( n > 1 \land P _ S ( x, n ^ - ) = 0 ) \\
         D _ S ( x, n ^ - ) - D _ S ( P _ S ( x, n ^ - ), n ^ - ) & ( n > 1 \land P _ S ( x, n ^ - ) > 0 ) \\
       \end{cases} \\
-    P            _ S ( x, n ) & \coloneqq &
+    P _ S ( x, n ) & \coloneqq &
       \begin{cases}
         0                                                                                                              & ( n = 1 \land D _ S ( x, n ) = 1 ) \\
         \max \{ p \in \mathbb{N} ^ + \mid D _ S ( p, n ) < D _ S ( x, n ) \}                                           & ( n = 1 \land D _ S ( x, n ) > 1 ) \\
@@ -60,20 +60,18 @@
         T _ S         & ( c _ S > 1 ) \\ 
       \end{cases} \\
     \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} \\
-    d            _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
-    p            _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ), \ldots, v _ S ( x ) ] ] \\
-    n            _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \\
-    u            _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \leq n _ S ( x ) \} \\
-    v            _ S ( x ) & \coloneqq & n _ S ( x ) \\
+    d _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
+    p _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ), \ldots, v _ S ( x ) ] ] \\
+    n _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \\
+    u _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \leq n _ S ( x ) \} \\
+    v _ S ( x ) & \coloneqq & n _ S ( x ) \\
   \end{eqnarray*}
 </math>
 
-== 展開 ==
-
-DPN形式への圧縮は以下のようになる。
+DPN形式への圧縮を行う関数は以下のようになる。
 
 <math>
-  s \coloneqq
+  z ( S ) \coloneqq
     \left (
       \begin{array}{cccc}
         d _ S ( 1 ) & d _ S ( 2 ) & \cdots & d _ S ( X ) \\
@@ -82,6 +80,8 @@ DPN形式への圧縮は以下のようになる。
       \end{array}
     \right )
 </math>
+
+== 展開 ==
 
 （未完成）
 
