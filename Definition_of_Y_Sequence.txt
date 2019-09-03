@@ -177,6 +177,10 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 新しい行列を求める部分。
 
+<math>
+  e ( Z, n ) \coloneqq G _ Z \frown B _ Z \frown B _ Z ( 1 ) \frown B _ Z ( 2 ) \frown \cdots \frown B _ Z ( n ) 
+</math>
+
 （未完成）
 
 === 解凍 ===
