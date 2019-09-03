@@ -121,9 +121,9 @@ DPN形式を山へ解凍する部分。
       \end{cases} \\
     \mathrm{Idx} ( p, n ) & \coloneqq &
       \begin{cases}
-        p _ v                     & ( p = p _ s \frown [ p _ v ] \land n = 0 ) \\
-        \mathrm{Idx} ( p _ s, n ) & ( p = p _ s \frown [ p _ v ] \land n > 0 ) \\
-        p _ v                     & ( p = [ p _ v ]                          ) \\
+        p _ 1                                      & ( p = p _ s \frown [ p _ 2, p _ 1 ] \land n = 0 ) \\
+        \mathrm{Idx} ( p _ s \frown [ p _ 2 ], n ) & ( p = p _ s \frown [ p _ 2, p _ 1 ] \land n > 0 ) \\
+        p _ 1                                      & ( p =              [ p _ 1 ]                    ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
