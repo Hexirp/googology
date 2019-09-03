@@ -30,6 +30,26 @@
   \end{eqnarray*}
 </math>
 
+DPN形式へ圧縮する部分。
+
+<math>
+  \begin{eqnarray*}
+    T _ S & \coloneqq & \max \{ n \mid D _ S ( X, n ) > 0 \} \\
+    c _ S & \coloneqq & D _ S ( X, T _ S ) \\
+    t _ S & \coloneqq &
+      \begin{cases}
+        { T _ S } ^ - & ( c _ S = 1 ) \\
+        T _ S         & ( c _ S > 1 ) \\ 
+      \end{cases} \\
+    \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \mid D _ S ( x, n ) > 0 \}
+    n _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \\
+    d _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
+    p _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ) \ldots v _ S ( x ) ] ] \\
+    u _ S ( x ) & \coloneqq & \max \{ n \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \leq n _ S ( x ) \} \\
+    v _ S ( x ) & \coloneqq & n _ S ( x ) \\
+  \end{eqnarray*}
+</math>
+
 == 展開 ==
 
 （未完成）
