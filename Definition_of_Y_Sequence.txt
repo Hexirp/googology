@@ -82,6 +82,38 @@ DPN形式への圧縮を行う関数は以下のようになる。
 
 == 展開 ==
 
+良い部分と悪い部分と刈られた部分の分割。
+
+<math>
+  \begin{eqnarray*}
+    r _ Z & \coloneqq & p _ 1 \quad ( p = [ p _ 1 ] \frown p _ s ) \\
+    G _ Z & \coloneqq &
+    \left (
+      \begin{array}{cccc}
+          { Z' } _ { 1, 1 } & { Z' } _ { 1, 2 } & \cdots & { Z' } _ { 1, r _ Z - 1 } \\
+          { Z' } _ { 2, 1 } & { Z' } _ { 2, 2 } & \cdots & { Z' } _ { 2, r _ Z - 1 } \\
+          { Z' } _ { 3, 1 } & { Z' } _ { 3, 2 } & \cdots & { Z' } _ { 3, r _ Z - 1 } \\
+      \end{array}
+    \right ) \\
+    B _ Z & \coloneqq &
+    \left (
+      \begin{array}{cccc}
+          { Z' } _ { 1, r _ Z - 1 + 1 } & { Z' } _ { 1, r _ Z - 1 + 2 } & \cdots & { Z' } _ { 1, X - 1 } \\
+          { Z' } _ { 2, r _ Z - 1 + 1 } & { Z' } _ { 2, r _ Z - 1 + 2 } & \cdots & { Z' } _ { 2, X - 1 } \\
+          { Z' } _ { 3, r _ Z - 1 + 1 } & { Z' } _ { 3, r _ Z - 1 + 2 } & \cdots & { Z' } _ { 3, X - 1 } \\
+      \end{array}
+    \right ) \\
+    C _ Z & \coloneqq &
+    \left (
+      \begin{array}{c}
+          { Z' } _ { 1, X } \\
+          { Z' } _ { 2, X } \\
+          { Z' } _ { 3, X } \\
+      \end{array}
+    \right ) \\
+  \end{eqnarray*}
+</math>
+
 （未完成）
 
 == 解凍 ==
