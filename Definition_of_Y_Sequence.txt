@@ -21,11 +21,9 @@
 
 リスト版の内包表記も使っているが、定義を書ききる自信はないので Haskell でのリスト内包表記の動作を参考にしてほしい。
 
-== 極限形 ==
+== 圧縮 ==
 
-ここでは <math> S </math> という'''極限形'''の数列の展開を定義する数式を与える。
-
-=== 圧縮 ===
+ここでは <math> S </math> という'''極限形'''の数列を <math> Z </math> というDPN形式の行列へ圧縮する関数を記述している。また数列 <math> S </math> からクラスを表す自然数 <math> C </math> を求める関数も記述している。
 
 山を構成する部分。
 
@@ -92,7 +90,11 @@ DPN形式への圧縮を行う関数は以下のようになる。
   c ( S ) \coloneqq c _ S
 </math>
 
-=== 展開 ===
+この <math> z ( S ) </math> が <math> Z </math> となる。また <math> c ( S ) </math> が <math> C </math> となる
+
+== 展開 ==
+
+ここではDPN形式の行列 <math> Z </math> とクラスを表す整数 <math> C </math> と展開数 <math> m </math> から展開済みのDPN形式の行列 <math> Z' </math> を求める関数を記述する。
 
 DPN形式の行列の要素へアクセスする関数の部分。
 
@@ -178,12 +180,14 @@ DPN形式の行列の要素へアクセスする関数の部分。
 新しい行列を求める部分。
 
 <math>
-  e ( Z, n ) \coloneqq G _ Z \frown B _ Z \frown B _ Z ( 1 ) \frown B _ Z ( 2 ) \frown \cdots \frown B _ Z ( n ) 
+  e ( Z, n ) \coloneqq G _ Z \frown B _ Z \frown B _ Z ( 1 ) \frown B _ Z ( 2 ) \frown \cdots \frown B _ Z ( n )
 </math>
 
 （未完成）
 
-=== 解凍 ===
+== 解凍 ==
+
+ここではDPN形式の行列 <math> Z' </math> から数列 <math> S' </math> へ復元する関数を記述する。
 
 DPN形式の行列の要素へアクセスする関数の部分（再掲）。
 
