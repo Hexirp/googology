@@ -94,11 +94,12 @@ DPN形式への圧縮を行う関数は以下のようになる。
 
 === 展開 ===
 
-DPN形式の行列の要素へアクセスする関数。
+DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
     Z & \coloneqq & z ( S ) \\
+    C & \coloneqq & c ( S ) \\
     Z & \coloneqq &
       \left (
         \begin{array}{cccc}
@@ -107,50 +108,80 @@ DPN形式の行列の要素へアクセスする関数。
           Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, X' } \\
         \end{array}
       \right ) \\
-    C & \coloneqq & c ( S ) \\
     { d' } _ Z ( x ) & \coloneqq & Z _ { 1, x } \\
     { p' } _ Z ( x ) & \coloneqq & Z _ { 2, x } \\
     { n' } _ Z ( x ) & \coloneqq & Z _ { 3, x } \\
   \end{eqnarray*}
 </math>
 
-良い部分と悪い部分と刈られた部分の分割。
+良い部分と悪い部分と刈られた部分の分割の部分。
 
 <math>
   \begin{eqnarray*}
-    r _ Z & \coloneqq & p _ a \quad ( p = [ p _ a ] \frown p _ s ) \\
+    r _ Z & \coloneqq & p _ a \quad ( p = p _ s \frown [ p _ a ] ) \\
     G _ Z & \coloneqq &
-    \left (
-      \begin{array}{cccc}
-          { Z' } _ { 1, 1 } & { Z' } _ { 1, 2 } & \cdots & { Z' } _ { 1, r _ Z - 1 } \\
-          { Z' } _ { 2, 1 } & { Z' } _ { 2, 2 } & \cdots & { Z' } _ { 2, r _ Z - 1 } \\
-          { Z' } _ { 3, 1 } & { Z' } _ { 3, 2 } & \cdots & { Z' } _ { 3, r _ Z - 1 } \\
-      \end{array}
-    \right ) \\
+      \left (
+        \begin{array}{cccc}
+            Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, r _ Z - 1 } \\
+            Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, r _ Z - 1 } \\
+            Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, r _ Z - 1 } \\
+        \end{array}
+      \right ) \\
     B _ Z & \coloneqq &
-    \left (
-      \begin{array}{cccc}
-          { Z' } _ { 1, r _ Z - 1 + 1 } & { Z' } _ { 1, r _ Z - 1 + 2 } & \cdots & { Z' } _ { 1, X - 1 } \\
-          { Z' } _ { 2, r _ Z - 1 + 1 } & { Z' } _ { 2, r _ Z - 1 + 2 } & \cdots & { Z' } _ { 2, X - 1 } \\
-          { Z' } _ { 3, r _ Z - 1 + 1 } & { Z' } _ { 3, r _ Z - 1 + 2 } & \cdots & { Z' } _ { 3, X - 1 } \\
-      \end{array}
-    \right ) \\
+      \left (
+        \begin{array}{cccc}
+            Z _ { 1, r _ Z - 1 + 1 } & Z _ { 1, r _ Z - 1 + 2 } & \cdots & Z _ { 1, X - 1 } \\
+            Z _ { 2, r _ Z - 1 + 1 } & Z _ { 2, r _ Z - 1 + 2 } & \cdots & Z _ { 2, X - 1 } \\
+            Z _ { 3, r _ Z - 1 + 1 } & Z _ { 3, r _ Z - 1 + 2 } & \cdots & Z _ { 3, X - 1 } \\
+        \end{array}
+      \right ) \\
     C _ Z & \coloneqq &
-    \left (
-      \begin{array}{c}
-          { Z' } _ { 1, X } \\
-          { Z' } _ { 2, X } \\
-          { Z' } _ { 3, X } \\
-      \end{array}
-    \right ) \\
+      \left (
+        \begin{array}{c}
+            Z _ { 1, X } \\
+            Z _ { 2, X } \\
+            Z _ { 3, X } \\
+        \end{array}
+      \right ) \\
   \end{eqnarray*}
 </math>
+
+悪い部分をコピーする部分。
+
+<math>
+  \begin{eqnarray*}
+    B _ Z & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+            { B _ Z } _ { 1, 1 } & { B _ Z } _ { 1, 2 } & \cdots & { B _ Z } _ { 1, ( r _ Z - 1 ) - ( X - 1 ) } \\
+            { B _ Z } _ { 2, 1 } & { B _ Z } _ { 2, 2 } & \cdots & { B _ Z } _ { 2, ( r _ Z - 1 ) - ( X - 1 ) } \\
+            { B _ Z } _ { 3, 1 } & { B _ Z } _ { 3, 2 } & \cdots & { B _ Z } _ { 3, ( r _ Z - 1 ) - ( X - 1 ) } \\
+        \end{array}
+      \right ) \\
+    { d' } _ { B _ Z } ( x ) & \coloneqq & { B _ Z } _ { 1, x } \\
+    { p' } _ { B _ Z } ( x ) & \coloneqq & { B _ Z } _ { 2, x } \\
+    { n' } _ { B _ Z } ( x ) & \coloneqq & { B _ Z } _ { 3, x } \\
+    B _ Z ( m ) & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+            { d' } _ { B _ Z ( m ) } ( 1 ) & { d' } _ { B _ Z ( m ) } ( 2 ) & \cdots & { d' } _ { B _ Z ( m ) } ( ( r _ Z - 1 ) - ( X - 1 ) ) \\
+            { p' } _ { B _ Z ( m ) } ( 1 ) & { p' } _ { B _ Z ( m ) } ( 2 ) & \cdots & { p' } _ { B _ Z ( m ) } ( ( r _ Z - 1 ) - ( X - 1 ) ) \\
+            { n' } _ { B _ Z ( m ) } ( 1 ) & { n' } _ { B _ Z ( m ) } ( 2 ) & \cdots & { n' } _ { B _ Z ( m ) } ( ( r _ Z - 1 ) - ( X - 1 ) ) \\
+        \end{array}
+      \right ) \\
+    { d' } _ { B _ Z ( m ) } ( x ) & \coloneqq & { d' } _ { B _ Z } ( x ) \\
+    { p' } _ { B _ Z ( m ) } ( x ) & \coloneqq & \\
+    { n' } _ { B _ Z ( m ) } ( x ) & \coloneqq & \\
+  \end{eqnarray*}
+</math>
+
+新しい行列を求める部分。
 
 （未完成）
 
 === 解凍 ===
 
-新しい行列の要素へアクセスする部分。
+DPN形式の行列の要素へアクセスする関数の部分（再掲）。
 
 <math>
   \begin{eqnarray*}
