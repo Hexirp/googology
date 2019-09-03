@@ -90,17 +90,35 @@ DPN形式への圧縮を行う関数は以下のようになる。
 
 <math>
   \begin{eqnarray*}
-    Z ' \coloneqq
+    Z' \coloneqq
       \left (
         \begin{array}{cccc}
-          { Z ' } _ { 1, 1 } & { Z ' } _ { 1, 2 } & \cdots & { Z ' } _ { 1, Y } \\
-          { Z ' } _ { 2, 1 } & { Z ' } _ { 2, 2 } & \cdots & { Z ' } _ { 2, Y } \\
-          { Z ' } _ { 3, 1 } & { Z ' } _ { 3, 2 } & \cdots & { Z ' } _ { 3, Y } \\
+          { Z' } _ { 1, 1 } & { Z' } _ { 1, 2 } & \cdots & { Z' } _ { 1, X' } \\
+          { Z' } _ { 2, 1 } & { Z' } _ { 2, 2 } & \cdots & { Z' } _ { 2, X' } \\
+          { Z' } _ { 3, 1 } & { Z' } _ { 3, 2 } & \cdots & { Z' } _ { 3, X' } \\
         \end{array}
       \right )
-    { d ' } _ { Z ' } ( x ) & \coloneqq & { Z ' } _ { 1, x } \\
-    { p ' } _ { Z ' } ( x ) & \coloneqq & { Z ' } _ { 2, x } \\
-    { n ' } _ { Z ' } ( x ) & \coloneqq & { Z ' } _ { 3, x } \\
+    { d' } _ { Z' } ( x ) & \coloneqq & { Z' } _ { 1, x } \\
+    { p' } _ { Z' } ( x ) & \coloneqq & { Z' } _ { 2, x } \\
+    { n' } _ { Z' } ( x ) & \coloneqq & { Z' } _ { 3, x } \\
+  \end{eqnarray*}
+</math>
+
+DPN形式を山へ解凍する部分。
+
+<math>
+  \begin{eqnarray*}
+    { D' } _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        { D' } _ { Z' } ( x, n ^ + ) + { D' } _ { Z' } ( { P' } _ { Z' } ( x, n ), n ) & ( n < { n' } _ { Z' } ( x ) ) \\
+        { d' } _ { Z' } ( x )                                                          & ( n = { n' } _ { Z' } ( x ) ) \\
+        0                                                                              & ( n > { n' } _ { Z' } ( x ) ) \\
+      \end{cases} \\
+    { P' } _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \mathrm{Idx} ( { p' } _ { Z' } ( x ), { n' } _ { Z' } ( x ) - n ) & ( n \leq { n' } _ { Z' } ( x ) ) \\
+        0                                                                 & ( n >    { n' } _ { Z' } ( x ) ) \\
+      \end{cases} \\
   \end{eqnarray*}
 </math>
 
