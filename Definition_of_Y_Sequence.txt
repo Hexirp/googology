@@ -106,12 +106,11 @@ DPN形式の行列の要素へアクセスする関数。
           Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, X' } \\
           Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, X' } \\
         \end{array}
-      \right )
+      \right ) \\
     C & \coloneqq & c ( S ) \\
     { d' } _ Z ( x ) & \coloneqq & Z _ { 1, x } \\
     { p' } _ Z ( x ) & \coloneqq & Z _ { 2, x } \\
     { n' } _ Z ( x ) & \coloneqq & Z _ { 3, x } \\
-    r _ Z & \coloneqq & p _ 1 \quad ( p = [ p _ 1 ] \frown p _ s ) \\
   \end{eqnarray*}
 </math>
 
@@ -119,7 +118,7 @@ DPN形式の行列の要素へアクセスする関数。
 
 <math>
   \begin{eqnarray*}
-    r _ Z & \coloneqq & p _ 1 \quad ( p = [ p _ 1 ] \frown p _ s ) \\
+    r _ Z & \coloneqq & p _ a \quad ( p = [ p _ a ] \frown p _ s ) \\
     G _ Z & \coloneqq &
     \left (
       \begin{array}{cccc}
@@ -187,9 +186,9 @@ DPN形式を山へ解凍する部分。
       \end{cases} \\
     \mathrm{Idx} ( p, n ) & \coloneqq &
       \begin{cases}
-        p _ 1                                      & ( p = p _ s \frown [ p _ 2, p _ 1 ] \land n = 1 ) \\
-        \mathrm{Idx} ( p _ s \frown [ p _ 2 ], n ) & ( p = p _ s \frown [ p _ 2, p _ 1 ] \land n > 1 ) \\
-        p _ 1                                      & ( p =              [ p _ 1 ]                    ) \\
+        p _ a                                      & ( p = p _ s \frown [ p _ b, p _ a ] \land n = 1 ) \\
+        \mathrm{Idx} ( p _ s \frown [ p _ b ], n ) & ( p = p _ s \frown [ p _ b, p _ a ] \land n > 1 ) \\
+        p _ a                                      & ( p =              [        p _ a ]             ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
