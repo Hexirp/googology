@@ -119,21 +119,21 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    r _ S & \coloneqq & p _ a \quad ( P _ S ( X ) = p _ s \frown [ p _ a ] ) \\
+    R _ S & \coloneqq & p _ a \quad ( P _ S ( X ) = p _ s \frown [ p _ a ] ) \\
     G _ S & \coloneqq &
       \left (
         \begin{array}{cccc}
-          S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, r _ S - 1 } \\
-          S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, r _ S - 1 } \\
-          S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, r _ S - 1 } \\
+          S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, R _ S - 1 } \\
+          S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, R _ S - 1 } \\
+          S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, R _ S - 1 } \\
         \end{array}
       \right ) \\
     B _ S & \coloneqq &
       \left (
         \begin{array}{cccc}
-          S _ { 1, r _ S - 1 + 1 } & S _ { 1, r _ S - 1 + 2 } & \cdots & S _ { 1, X - 1 } \\
-          S _ { 2, r _ S - 1 + 1 } & S _ { 2, r _ S - 1 + 2 } & \cdots & S _ { 2, X - 1 } \\
-          S _ { 3, r _ S - 1 + 1 } & S _ { 3, r _ S - 1 + 2 } & \cdots & S _ { 3, X - 1 } \\
+          S _ { 1, R _ S - 1 + 1 } & S _ { 1, R _ S - 1 + 2 } & \cdots & S _ { 1, X - 1 } \\
+          S _ { 2, R _ S - 1 + 1 } & S _ { 2, R _ S - 1 + 2 } & \cdots & S _ { 2, X - 1 } \\
+          S _ { 3, R _ S - 1 + 1 } & S _ { 3, R _ S - 1 + 2 } & \cdots & S _ { 3, X - 1 } \\
         \end{array}
       \right ) \\
     C _ S & \coloneqq &
@@ -153,6 +153,7 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
+    r _ S & \coloneqq & R _ S \\
     d _ S ( m, x ) & \coloneqq & D _ S ( x ) \\
     p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
     n _ S ( m, x ) & \coloneqq & N _ S ( x ) \\
@@ -192,8 +193,8 @@ DPN形式の行列の要素へアクセスする関数の部分。
       \left (
         \begin{array}{cccc}
           d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
-          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
-          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
+          p _ S ( m, r _ S - 1 + 1 ) & p _ S ( m, r _ S - 1 + 2 ) & \cdots & p _ S ( m, X - 1 ) \\
+          n _ S ( m, r _ S - 1 + 1 ) & n _ S ( m, r _ S - 1 + 2 ) & \cdots & n _ S ( m, X - 1 ) \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
@@ -205,20 +206,23 @@ DPN形式の行列の要素へアクセスする関数の部分。
   e ( S, 1, m ) \coloneqq G _ S \frown B _ S \frown B _ S ( 1 ) \frown B _ S ( 2 ) \frown \cdots \frown B _ S ( m )
 </math>
 
+怒る親を求める部分。
+
+<math>
+  r ( S ) \coloneqq r _ S
+</math>
+
 === クラスｎ ===
 
 悪い部分をコピーする部分。
 
 <math>
   \begin{eqnarray*}
-    { B' } _ S & \coloneqq & \mathrm{expand} ( B', m ) \\
-    d _ S ( m, x ) & \coloneqq &  \\
+    r _ S & \coloneqq & R _ S + ( r _ ( B _ S ) - 1 ) \\
+    { B' } _ S & \coloneqq & \mathrm{expand} ( B _ S, m ) \\
+    d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - 1 ) + m \times ( x - ( r _ S - 1 ) ) } \\
     p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
-    n _ S ( m, x ) & \coloneqq &
-      \begin{cases}
-        1                                   & ( C = 1 ) \\
-        \mathrm{des} _ S ( m, N _ S ( x ) ) & ( C = 2 ) \\
-      \end{cases} \\
+    n _ S ( m, x ) & \coloneqq & \mathrm{des} _ S ( m, N _ S ( x ) ) \\
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
         p _ a                                          & ( p =              [ p _ a ]                    ) \\
@@ -272,8 +276,8 @@ DPN形式の行列の要素へアクセスする関数の部分。
       \left (
         \begin{array}{cccc}
           d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
-          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
-          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
+          p _ S ( m, r _ S - 1 + 1 ) & p _ S ( m, r _ S - 1 + 2 ) & \cdots & p _ S ( m, X - 1 ) \\
+          n _ S ( m, r _ S - 1 + 1 ) & n _ S ( m, r _ S - 1 + 2 ) & \cdots & n _ S ( m, X - 1 ) \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
@@ -282,13 +286,21 @@ DPN形式の行列の要素へアクセスする関数の部分。
 新しい行列を求める部分。
 
 <math>
-  e ( S, C, n ) \coloneqq G _ S \frown B _ S \frown B _ S ( 1 ) \frown B _ S ( 2 ) \frown \cdots \frown B _ S ( n )
+  e ( S, C, n ) \coloneqq
+    \left (
+      \begin{array}{cccc|cccc|cccc|c|cccc}
+        S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, r _ S - 1 } & d _ S ( 1, ( r _ S - 1 ) + 1 ) & d _ S ( 1, ( r _ S - 1 ) + 2 ) & \cdots & d _ S ( 1, ( r _ S - 1 ) + ( X - 1 ) ) & d _ S ( 2, ( r _ S - 1 ) + 1 ) & d _ S ( 2, ( r _ S - 1 ) + 2 ) & \cdots & d _ S ( 2, ( r _ S - 1 ) + ( X - 1 ) ) & \cdots & d _ S ( m, ( r _ S - 1 ) + 1 ) & d _ S ( m, ( r _ S - 1 ) + 2 ) & \cdots & d _ S ( m, ( r _ S - 1 ) + ( X - 1 ) ) \\
+        S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 1, r _ S - 1 } & p _ S ( 1, ( r _ S - 1 ) + 1 ) & p _ S ( 1, ( r _ S - 1 ) + 2 ) & \cdots & p _ S ( 1, ( r _ S - 1 ) + ( X - 1 ) ) & p _ S ( 2, ( r _ S - 1 ) + 1 ) & p _ S ( 2, ( r _ S - 1 ) + 2 ) & \cdots & p _ S ( 2, ( r _ S - 1 ) + ( X - 1 ) ) & \cdots & p _ S ( m, ( r _ S - 1 ) + 1 ) & p _ S ( m, ( r _ S - 1 ) + 2 ) & \cdots & p _ S ( m, ( r _ S - 1 ) + ( X - 1 ) ) \\
+        S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 1, r _ S - 1 } & n _ S ( 1, ( r _ S - 1 ) + 1 ) & n _ S ( 1, ( r _ S - 1 ) + 2 ) & \cdots & n _ S ( 1, ( r _ S - 1 ) + ( X - 1 ) ) & n _ S ( 2, ( r _ S - 1 ) + 1 ) & n _ S ( 2, ( r _ S - 1 ) + 2 ) & \cdots & n _ S ( 2, ( r _ S - 1 ) + ( X - 1 ) ) & \cdots & n _ S ( m, ( r _ S - 1 ) + 1 ) & n _ S ( m, ( r _ S - 1 ) + 2 ) & \cdots & n _ S ( m, ( r _ S - 1 ) + ( X - 1 ) ) \\
+      \end{array}
+    \right )
 </math>
 
 怒る親を求める部分。
 
 <math>
-  e ( S ) \coloneqq
+  r ( S ) \coloneqq r _ S
+</math>
 
 === 全体 ===
 
@@ -355,6 +367,6 @@ DPN形式を山へ解凍する部分。
 <math>
   \begin{eqnarray*}
     S & = & ( S _ 1, S _ 2, \ldots, S _ X ) \\
-    \mathrm{expand} _ S ( n ) & \coloneqq & u ( e ( z ( S ), c ( S ), n ) ) \\
+    \mathrm{expand} ( S, n ) & \coloneqq & u ( e ( z ( S ), c ( S ), n ) ) \\
   \end{eqnarray*}
 </math>
