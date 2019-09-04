@@ -246,8 +246,8 @@ DPN形式の行列の要素へアクセスする関数の部分。
     \epsilon _ S & \coloneqq & N _ S ( X ) - N _ S ( r _ S ) \\
     b _ S ( x ) & \coloneqq &
       \begin{cases}
-        1 & ( N _ S ( r _ S ) <    N _ S ( x ) ) \\
-        0 & ( N _ S ( r _ S ) \geq N _ S ( x ) ) \\
+        1 & ( r _ S \in    \mathrm{nan} _ S ( x, n ) ) \\
+        0 & ( r _ S \notin \mathrm{nan} _ S ( x, n ) ) \\
       \end{cases} \\
     \mathrm{des} _ S ( m, x ) & \coloneqq & N _ S ( x ) + m \times \epsilon _ S \times b _ S ( x ) \\
     B _ S ( m ) & \coloneqq &
