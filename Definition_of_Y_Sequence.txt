@@ -151,7 +151,7 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    d _ S ( m, x ) & \coloneqq & D _ S ( 1, r _ S - 1 + x ) \\
+    d _ S ( m, x ) & \coloneqq & D _ S ( 1, x ) \\
     p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
     n _ S ( m, x ) & \coloneqq & \\
     \mathrm{idx} ( p, n ) & \coloneqq &
@@ -189,9 +189,9 @@ DPN形式の行列の要素へアクセスする関数の部分。
     B _ S ( m ) & \coloneqq &
       \left (
         \begin{array}{cccc}
-            d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, ( r _ S - 1 ) - ( X - 1 ) ) \\
-            d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, ( r _ S - 1 ) - ( X - 1 ) ) \\
-            d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, ( r _ S - 1 ) - ( X - 1 ) ) \\
+            d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
+            d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
+            d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
