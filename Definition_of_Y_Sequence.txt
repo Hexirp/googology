@@ -228,7 +228,7 @@ DPN形式の行列の要素へアクセスする関数の部分。
   e ( S, C, n ) \coloneqq G _ S \frown B _ S \frown B _ S ( 1 ) \frown B _ S ( 2 ) \frown \cdots \frown B _ S ( n )
 </math>
 
-（未完成）
+この <math> e ( S, C, n ) </math> が <math> Z </math> である。
 
 == 解凍 ==
 
@@ -283,3 +283,14 @@ DPN形式を山へ解凍する部分。
 </math>
 
 この <math> u ( S ) </math> が <math> Z </math> となる。
+
+== 全体 ==
+
+<math> S [ n ] </math> を <math> S' </math> へ展開する。
+
+<math>
+  \begin{eqnarray*}
+    S & = & ( S _ 1, S _ 2, \ldots, S _ X ) \\
+    \mathrm{expand} _ S ( n ) & \coloneqq & u ( e ( z ( S ), c ( S ), n ) ) \\
+  \end{eqnarray*}
+</math>
