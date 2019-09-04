@@ -218,7 +218,7 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    r _ S & \coloneqq & R _ S + ( r _ ( B _ S ) - 1 ) \\
+    r _ S & \coloneqq & R _ S + ( r ( B _ S ) - 1 ) \\
     { B' } _ S & \coloneqq & \mathrm{expand} ( B _ S, m ) \\
     d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - 1 ) + m \times ( x - ( r _ S - 1 ) ) } \\
     p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
