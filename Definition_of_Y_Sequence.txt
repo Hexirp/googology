@@ -61,7 +61,7 @@
     t _ S & \coloneqq &
       \begin{cases}
         T _ S - 1 & ( c _ S = 1 ) \\
-        T _ S     & ( c _ S > 1 ) \\ 
+        T _ S     & ( c _ S > 1 ) \\
       \end{cases} \\
     d _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
     p _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ), \ldots, v _ S ( x ) ] ] \\
@@ -151,12 +151,16 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    d _ S ( m, x ) & \coloneqq & D _ S ( 1, x ) \\
+    d _ S ( m, x ) & \coloneqq &
+      \begin{cases}
+        D _ S ( 1, x )                                   & ( C \geq 2 ) \\
+        m \times ( x - ( r _ S - 1 ) ) + ( r _ S - 1 ) & ( C > 1 ) \\
+      \end{cases} \\
     p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
     n _ S ( m, x ) & \coloneqq &
       \begin{cases}
         1                                   & ( C = 1 ) \\
-        \mathrm{des} _ S ( m, N _ S ( x ) ) & ( C = 1 ) \\
+        \mathrm{des} _ S ( m, N _ S ( x ) ) & ( C > 1 ) \\
       \end{cases} \\
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
@@ -221,7 +225,7 @@ DPN形式の行列の要素へアクセスする関数の部分。
 新しい行列を求める部分。
 
 <math>
-  e ( Z, n ) \coloneqq G _ Z \frown B _ Z \frown B _ Z ( 1 ) \frown B _ Z ( 2 ) \frown \cdots \frown B _ Z ( n )
+  e ( S, C, n ) \coloneqq G _ S \frown B _ S \frown B _ S ( 1 ) \frown B _ S ( 2 ) \frown \cdots \frown B _ S ( n )
 </math>
 
 （未完成）
