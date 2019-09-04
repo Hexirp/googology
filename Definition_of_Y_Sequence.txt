@@ -363,3 +363,5 @@ DPN形式を山へ解凍する部分。
     \mathrm{expand} ( S, n ) & \coloneqq & u ( e ( z ( S ), c ( S ), n ) ) \\
   \end{eqnarray*}
 </math>
+
+この <math> \mathrm{expand} ( S, n ) </math> は <math> S' </math> である。
