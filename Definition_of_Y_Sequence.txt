@@ -223,42 +223,17 @@ DPN形式の行列の要素へアクセスする関数の部分。
     d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - 1 ) + m \times ( x - ( r _ S - 1 ) ) } \\
     p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
     n _ S ( m, x ) & \coloneqq & \mathrm{des} _ S ( m, N _ S ( x ) ) \\
-    \mathrm{idx} ( p, n ) & \coloneqq &
+    \mathrm{idx} ( p ) & \coloneqq & p _ v \quad ( p = [ p _ v ] \frown p _ s ) \\
+    \mathrm{pnt} _ S ( x ) & \coloneqq & \mathrm{idx} ( P _ S ( x ) ) \\
+    \mathrm{anc} _ S ( x ) & \coloneqq &
       \begin{cases}
-        p _ a                                          & ( p =              [ p _ a ]                    ) \\
-        p _ a                                          & ( p = p _ s \frown [ p _ b, p _ a ] \land n = 1 ) \\
-        \mathrm{idx} ( p _ s \frown [ p _ b ], n ^ - ) & ( p = p _ s \frown [ p _ b, p _ a ] \land n > 1 ) \\
-      \end{cases} \\
-    \mathrm{pnt} _ S ( x, n ) & \coloneqq &
-      \begin{cases}
-        \mathrm{idx} ( P _ S ( x ), N _ S ( x ) + 1 - n ) & ( n \leq N _ S ( x ) ) \\
-        0                                                 & ( n >    N _ S ( x ) ) \\
-      \end{cases} \\
-    \mathrm{anc} _ S ( x, n ) & \coloneqq &
-      \begin{cases}
-        \emptyset                                                      & ( x = 0 ) \\
-        \{ x \} \cup \mathrm{anc} _ S ( \mathrm{pnt} _ S ( x, n ), n ) & ( x > 0 ) \\
-      \end{cases} \\
-    \delta _ S & \coloneqq & X - r _ S \\
-    a _ S ( x, n ) & \coloneqq &
-      \begin{cases}
-        1 & ( r _ S \in    \mathrm{anc} _ S ( x, n ) ) \\
-        0 & ( r _ S \notin \mathrm{anc} _ S ( x, n ) ) \\
-      \end{cases} \\
-    \mathrm{bas} _ S ( x ) & \coloneqq &
-      \begin{cases}
-        P _ S ( X )             & ( x = r _ S ) \\
-        P _ S ( r _ S - 1 + x ) & ( x > r _ S ) \\
-      \end{cases} \\
-    \mathrm{ris} _ S ( m, p, n ) & \coloneqq &
-      \begin{cases}
-        [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
-        \mathrm{ris} _ S ( m, p _ s \frown [ p _ b ], n ^ - ) \frown [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ] & ( p = p _ s \frown [ p _ b, p _ a ] ) \\
+        \emptyset                                                & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{anc} _ S ( \mathrm{pnt} _ S ( x ) ) & ( x > 0 ) \\
       \end{cases} \\
     \mathrm{npt} _ S ( x ) & \coloneqq &
       \begin{cases}
-        0                                                                                                    & ( N _ S ( x ) = 1 ) \\
-        \max \{ p \in \mathbb{N} ^ + \mid N _ S ( p ) < N _ S ( x ) \land p \in \mathrm{anc} _ S ( x, 1 ) \} & ( N _ S ( x ) > 1 ) \\
+        0                                                                                                 & ( N _ S ( x ) = 1 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid N _ S ( p ) < N _ S ( x ) \land p \in \mathrm{anc} _ S ( x ) \} & ( N _ S ( x ) > 1 ) \\
       \end{cases} \\
     \mathrm{nan} _ S ( x ) & \coloneqq &
       \begin{cases}
