@@ -85,7 +85,7 @@ DPN形式への圧縮を行う関数は以下のようになる。
     \right )
 </math>
 
-また、付随して行列のクラスもDPN形式に含まれる。
+また、付随して行列のクラスも必要な情報に含まれる。
 
 <math>
   c ( S ) \coloneqq c _ S
@@ -95,25 +95,23 @@ DPN形式への圧縮を行う関数は以下のようになる。
 
 == 展開 ==
 
-ここではDPN形式の行列 <math> Z </math> とクラスを表す整数 <math> C </math> と展開数 <math> m </math> から展開済みのDPN形式の行列 <math> Z' </math> を求める関数を記述する。
+ここではDPN形式の行列 <math> S </math> とクラスを表す整数 <math> C </math> と展開数 <math> m </math> から展開済みのDPN形式の行列 <math> Z </math> を求める関数を記述する。
 
 DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    Z & \coloneqq & z ( S ) \\
-    C & \coloneqq & c ( S ) \\
-    Z & \coloneqq &
+    S & \coloneqq &
       \left (
         \begin{array}{cccc}
-          Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, X' } \\
-          Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, X' } \\
-          Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, X' } \\
+          S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, X } \\
+          S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, X } \\
+          S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, X } \\
         \end{array}
       \right ) \\
-    { d' } _ Z ( x ) & \coloneqq & Z _ { 1, x } \\
-    { p' } _ Z ( x ) & \coloneqq & Z _ { 2, x } \\
-    { n' } _ Z ( x ) & \coloneqq & Z _ { 3, x } \\
+    D _ S ( x ) & \coloneqq & S _ { 1, x } \\
+    P _ S ( x ) & \coloneqq & S _ { 2, x } \\
+    N _ S ( x ) & \coloneqq & S _ { 3, x } \\
   \end{eqnarray*}
 </math>
 
@@ -121,29 +119,29 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    r _ Z & \coloneqq & p _ a \quad ( p = p _ s \frown [ p _ a ] ) \\
-    G _ Z & \coloneqq &
+    r _ S & \coloneqq & p _ a \quad ( p = p _ s \frown [ p _ a ] ) \\
+    G _ S & \coloneqq &
       \left (
         \begin{array}{cccc}
-            Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, r _ Z - 1 } \\
-            Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, r _ Z - 1 } \\
-            Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, r _ Z - 1 } \\
+            S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, r _ S - 1 } \\
+            S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, r _ S - 1 } \\
+            S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, r _ S - 1 } \\
         \end{array}
       \right ) \\
-    B _ Z & \coloneqq &
+    B _ S & \coloneqq &
       \left (
         \begin{array}{cccc}
-            Z _ { 1, r _ Z - 1 + 1 } & Z _ { 1, r _ Z - 1 + 2 } & \cdots & Z _ { 1, X - 1 } \\
-            Z _ { 2, r _ Z - 1 + 1 } & Z _ { 2, r _ Z - 1 + 2 } & \cdots & Z _ { 2, X - 1 } \\
-            Z _ { 3, r _ Z - 1 + 1 } & Z _ { 3, r _ Z - 1 + 2 } & \cdots & Z _ { 3, X - 1 } \\
+            S _ { 1, r _ S - 1 + 1 } & S _ { 1, r _ S - 1 + 2 } & \cdots & S _ { 1, X - 1 } \\
+            S _ { 2, r _ S - 1 + 1 } & S _ { 2, r _ S - 1 + 2 } & \cdots & S _ { 2, X - 1 } \\
+            S _ { 3, r _ S - 1 + 1 } & S _ { 3, r _ S - 1 + 2 } & \cdots & S _ { 3, X - 1 } \\
         \end{array}
       \right ) \\
-    C _ Z & \coloneqq &
+    C _ S & \coloneqq &
       \left (
         \begin{array}{c}
-            Z _ { 1, X } \\
-            Z _ { 2, X } \\
-            Z _ { 3, X } \\
+            S _ { 1, X } \\
+            S _ { 2, X } \\
+            S _ { 3, X } \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
@@ -153,28 +151,28 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    B _ Z & \coloneqq &
+    B _ S & \coloneqq &
       \left (
         \begin{array}{cccc}
-            { B _ Z } _ { 1, 1 } & { B _ Z } _ { 1, 2 } & \cdots & { B _ Z } _ { 1, ( r _ Z - 1 ) - ( X - 1 ) } \\
-            { B _ Z } _ { 2, 1 } & { B _ Z } _ { 2, 2 } & \cdots & { B _ Z } _ { 2, ( r _ Z - 1 ) - ( X - 1 ) } \\
-            { B _ Z } _ { 3, 1 } & { B _ Z } _ { 3, 2 } & \cdots & { B _ Z } _ { 3, ( r _ Z - 1 ) - ( X - 1 ) } \\
+            { B _ S } _ { 1, 1 } & { B _ S } _ { 1, 2 } & \cdots & { B _ S } _ { 1, ( r _ S - 1 ) - ( X - 1 ) } \\
+            { B _ S } _ { 2, 1 } & { B _ S } _ { 2, 2 } & \cdots & { B _ S } _ { 2, ( r _ S - 1 ) - ( X - 1 ) } \\
+            { B _ S } _ { 3, 1 } & { B _ S } _ { 3, 2 } & \cdots & { B _ S } _ { 3, ( r _ S - 1 ) - ( X - 1 ) } \\
         \end{array}
       \right ) \\
-    { d' } _ { B _ Z } ( x ) & \coloneqq & { B _ Z } _ { 1, x } \\
-    { p' } _ { B _ Z } ( x ) & \coloneqq & { B _ Z } _ { 2, x } \\
-    { n' } _ { B _ Z } ( x ) & \coloneqq & { B _ Z } _ { 3, x } \\
-    B _ Z ( m ) & \coloneqq &
+    { d' } _ { B _ S } ( x ) & \coloneqq & { B _ S } _ { 1, x } \\
+    { p' } _ { B _ S } ( x ) & \coloneqq & { B _ S } _ { 2, x } \\
+    { n' } _ { B _ S } ( x ) & \coloneqq & { B _ S } _ { 3, x } \\
+    B _ S ( m ) & \coloneqq &
       \left (
         \begin{array}{cccc}
-            { d' } _ { B _ Z ( m ) } ( 1 ) & { d' } _ { B _ Z ( m ) } ( 2 ) & \cdots & { d' } _ { B _ Z ( m ) } ( ( r _ Z - 1 ) - ( X - 1 ) ) \\
-            { p' } _ { B _ Z ( m ) } ( 1 ) & { p' } _ { B _ Z ( m ) } ( 2 ) & \cdots & { p' } _ { B _ Z ( m ) } ( ( r _ Z - 1 ) - ( X - 1 ) ) \\
-            { n' } _ { B _ Z ( m ) } ( 1 ) & { n' } _ { B _ Z ( m ) } ( 2 ) & \cdots & { n' } _ { B _ Z ( m ) } ( ( r _ Z - 1 ) - ( X - 1 ) ) \\
+            { d' } _ { B _ S ( m ) } ( 1 ) & { d' } _ { B _ S ( m ) } ( 2 ) & \cdots & { d' } _ { B _ S ( m ) } ( ( r _ S - 1 ) - ( X - 1 ) ) \\
+            { p' } _ { B _ S ( m ) } ( 1 ) & { p' } _ { B _ S ( m ) } ( 2 ) & \cdots & { p' } _ { B _ S ( m ) } ( ( r _ S - 1 ) - ( X - 1 ) ) \\
+            { n' } _ { B _ S ( m ) } ( 1 ) & { n' } _ { B _ S ( m ) } ( 2 ) & \cdots & { n' } _ { B _ S ( m ) } ( ( r _ S - 1 ) - ( X - 1 ) ) \\
         \end{array}
       \right ) \\
-    { d' } _ { B _ Z ( m ) } ( x ) & \coloneqq & { d' } _ { B _ Z } ( x ) \\
-    { p' } _ { B _ Z ( m ) } ( x ) & \coloneqq & \\
-    { n' } _ { B _ Z ( m ) } ( x ) & \coloneqq & \\
+    { d' } _ { B _ S ( m ) } ( x ) & \coloneqq & { d' } _ { B _ S } ( x ) \\
+    { p' } _ { B _ S ( m ) } ( x ) & \coloneqq & \\
+    { n' } _ { B _ S ( m ) } ( x ) & \coloneqq & \\
   \end{eqnarray*}
 </math>
 
