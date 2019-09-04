@@ -123,25 +123,25 @@ DPN形式の行列の要素へアクセスする関数の部分。
     G _ S & \coloneqq &
       \left (
         \begin{array}{cccc}
-            S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, r _ S - 1 } \\
-            S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, r _ S - 1 } \\
-            S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, r _ S - 1 } \\
+          S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, r _ S - 1 } \\
+          S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, r _ S - 1 } \\
+          S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, r _ S - 1 } \\
         \end{array}
       \right ) \\
     B _ S & \coloneqq &
       \left (
         \begin{array}{cccc}
-            S _ { 1, r _ S - 1 + 1 } & S _ { 1, r _ S - 1 + 2 } & \cdots & S _ { 1, X - 1 } \\
-            S _ { 2, r _ S - 1 + 1 } & S _ { 2, r _ S - 1 + 2 } & \cdots & S _ { 2, X - 1 } \\
-            S _ { 3, r _ S - 1 + 1 } & S _ { 3, r _ S - 1 + 2 } & \cdots & S _ { 3, X - 1 } \\
+          S _ { 1, r _ S - 1 + 1 } & S _ { 1, r _ S - 1 + 2 } & \cdots & S _ { 1, X - 1 } \\
+          S _ { 2, r _ S - 1 + 1 } & S _ { 2, r _ S - 1 + 2 } & \cdots & S _ { 2, X - 1 } \\
+          S _ { 3, r _ S - 1 + 1 } & S _ { 3, r _ S - 1 + 2 } & \cdots & S _ { 3, X - 1 } \\
         \end{array}
       \right ) \\
     C _ S & \coloneqq &
       \left (
         \begin{array}{c}
-            S _ { 1, X } \\
-            S _ { 2, X } \\
-            S _ { 3, X } \\
+          S _ { 1, X } \\
+          S _ { 2, X } \\
+          S _ { 3, X } \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
@@ -151,16 +151,12 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    d _ S ( m, x ) & \coloneqq &
-      \begin{cases}
-        D _ S ( 1, x )                                   & ( C \geq 2 ) \\
-        m \times ( x - ( r _ S - 1 ) ) + ( r _ S - 1 ) & ( C > 1 ) \\
-      \end{cases} \\
+    d _ S ( m, x ) & \coloneqq & D _ S ( 1, x ) \\
     p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
     n _ S ( m, x ) & \coloneqq &
       \begin{cases}
         1                                   & ( C = 1 ) \\
-        \mathrm{des} _ S ( m, N _ S ( x ) ) & ( C > 1 ) \\
+        \mathrm{des} _ S ( m, N _ S ( x ) ) & ( C = 2 ) \\
       \end{cases} \\
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
@@ -214,9 +210,9 @@ DPN形式の行列の要素へアクセスする関数の部分。
     B _ S ( m ) & \coloneqq &
       \left (
         \begin{array}{cccc}
-            d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
-            d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
-            d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
+          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
+          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
+          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
