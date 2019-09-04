@@ -372,3 +372,7 @@ DPN形式を山へ解凍する部分。
 
 # <math> u \circ z = z \circ u = \mathrm{id} </math> である。
 # 辞書式順序で <math> \forall n, \, \mathrm{expand} ( S, n ) < S </math> である。
+
+== 参考文献 ==
+
+* [[ユーザーブログ:Koteitan/バシク行列の数式的定義]]
