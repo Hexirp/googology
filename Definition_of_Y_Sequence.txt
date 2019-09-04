@@ -63,10 +63,10 @@
         { T _ S } ^ - & ( c _ S = 1 ) \\
         T _ S         & ( c _ S > 1 ) \\ 
       \end{cases} \\
-    \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} \\
     d _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
     p _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ), \ldots, v _ S ( x ) ] ] \\
-    n _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \\
+    n _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \
+    \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} \\
     u _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \leq n _ S ( x ) \} \\
     v _ S ( x ) & \coloneqq & n _ S ( x ) \\
   \end{eqnarray*}
@@ -119,7 +119,7 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    r _ S & \coloneqq & p _ a \quad ( p = p _ s \frown [ p _ a ] ) \\
+    r _ S & \coloneqq & p _ a \quad ( P _ S ( X ) = p _ s \frown [ p _ a ] ) \\
     G _ S & \coloneqq &
       \left (
         \begin{array}{cccc}
@@ -151,28 +151,15 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    B _ S & \coloneqq &
-      \left (
-        \begin{array}{cccc}
-            { B _ S } _ { 1, 1 } & { B _ S } _ { 1, 2 } & \cdots & { B _ S } _ { 1, ( r _ S - 1 ) - ( X - 1 ) } \\
-            { B _ S } _ { 2, 1 } & { B _ S } _ { 2, 2 } & \cdots & { B _ S } _ { 2, ( r _ S - 1 ) - ( X - 1 ) } \\
-            { B _ S } _ { 3, 1 } & { B _ S } _ { 3, 2 } & \cdots & { B _ S } _ { 3, ( r _ S - 1 ) - ( X - 1 ) } \\
-        \end{array}
-      \right ) \\
-    { d' } _ { B _ S } ( x ) & \coloneqq & { B _ S } _ { 1, x } \\
-    { p' } _ { B _ S } ( x ) & \coloneqq & { B _ S } _ { 2, x } \\
-    { n' } _ { B _ S } ( x ) & \coloneqq & { B _ S } _ { 3, x } \\
-    B _ S ( m ) & \coloneqq &
-      \left (
-        \begin{array}{cccc}
-            { d' } _ { B _ S ( m ) } ( 1 ) & { d' } _ { B _ S ( m ) } ( 2 ) & \cdots & { d' } _ { B _ S ( m ) } ( ( r _ S - 1 ) - ( X - 1 ) ) \\
-            { p' } _ { B _ S ( m ) } ( 1 ) & { p' } _ { B _ S ( m ) } ( 2 ) & \cdots & { p' } _ { B _ S ( m ) } ( ( r _ S - 1 ) - ( X - 1 ) ) \\
-            { n' } _ { B _ S ( m ) } ( 1 ) & { n' } _ { B _ S ( m ) } ( 2 ) & \cdots & { n' } _ { B _ S ( m ) } ( ( r _ S - 1 ) - ( X - 1 ) ) \\
-        \end{array}
-      \right ) \\
-    { d' } _ { B _ S ( m ) } ( x ) & \coloneqq & { d' } _ { B _ S } ( x ) \\
-    { p' } _ { B _ S ( m ) } ( x ) & \coloneqq & \\
-    { n' } _ { B _ S ( m ) } ( x ) & \coloneqq & \\
+    d _ S ( m, x ) & \coloneqq & D _ S ( 1, r _ S - 1 + x ) \\
+    p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ) ) \\
+    n _ S ( m, x ) & \coloneqq & \\
+    \mathrm{bas} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        P _ S ( X )             & ( x = r _ S ) \\
+        P _ S ( r _ S - 1 + x ) & ( x > r _ S ) \\
+      \end{cases} \\
+    \mathrm{ris} _ S ( m, p ) & \coloneqq & [ \delta _ S ( m, p _ v, n ) \mid 
   \end{eqnarray*}
 </math>
 
