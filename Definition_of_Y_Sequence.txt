@@ -159,7 +159,23 @@ DPN形式の行列の要素へアクセスする関数の部分。
         P _ S ( X )             & ( x = r _ S ) \\
         P _ S ( r _ S - 1 + x ) & ( x > r _ S ) \\
       \end{cases} \\
-    \mathrm{ris} _ S ( m, p ) & \coloneqq & [ \delta _ S ( m, p _ v, n ) \mid 
+    \mathrm{ris} _ S ( m, p ) & \coloneqq & [ \delta _ S ( m, p _ v, N _ S ( x ) + 1 - n ) \mid ( p _ v, n ) \leftarrow \mathrm{zip} ( p, 1 ) ] \\
+    \mathrm{idx} ( p, n ) & \coloneqq &
+      \begin{cases}
+        p _ a                                          & ( p = p _ s \frown [ p _ b, p _ a ] \land n = 1 ) \\
+        \mathrm{idx} ( p _ s \frown [ p _ b ], n ^ - ) & ( p = p _ s \frown [ p _ b, p _ a ] \land n > 1 ) \\
+        p _ a                                          & ( p =              [ p _ a ]                    ) \\
+      \end{cases} \\
+    \mathrm{ptn} ( x, n ) & \coloneqq &
+      \begin{cases}
+        \mathrm{idx} ( P _ S ( x ), N _ S ( x ) + 1 - n ) & ( n \leq N _ S ( x ) ) \\
+        0                                                 & ( n >    N _ S ( x ) ) \\
+      \end{cases} \\
+    \mathrm{anc} _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                                      & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{anc} _ S ( \mathrm{ptn} _ S ( x, n ), n ) & ( x > 0 ) \\
+      \end{cases} \\
   \end{eqnarray*}
 </math>
 
@@ -205,14 +221,14 @@ DPN形式を山へ解凍する部分。
       \end{cases} \\
     p _ S ( x, n ) & \coloneqq &
       \begin{cases}
-        \mathrm{Idx} ( P _ S ( x ), 1 + N _ S ( x ) - n ) & ( n \leq N _ S ( x ) ) \\
+        \mathrm{idx} ( P _ S ( x ), N _ S ( x ) + 1 - n ) & ( n \leq N _ S ( x ) ) \\
         0                                                 & ( n >    N _ S ( x ) ) \\
       \end{cases} \\
-    \mathrm{Idx} ( p, n ) & \coloneqq &
+    \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
-        p _ a                                      & ( p = p _ s \frown [ p _ b, p _ a ] \land n = 1 ) \\
-        \mathrm{Idx} ( p _ s \frown [ p _ b ], n ) & ( p = p _ s \frown [ p _ b, p _ a ] \land n > 1 ) \\
-        p _ a                                      & ( p =              [        p _ a ]             ) \\
+        p _ a                                          & ( p = p _ s \frown [ p _ b, p _ a ] \land n = 1 ) \\
+        \mathrm{idx} ( p _ s \frown [ p _ b ], n ^ - ) & ( p = p _ s \frown [ p _ b, p _ a ] \land n > 1 ) \\
+        p _ a                                          & ( p =              [ p _ a ]                    ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
