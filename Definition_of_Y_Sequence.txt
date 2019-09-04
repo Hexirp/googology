@@ -18,6 +18,7 @@
       [ ]                               & ( x >    y ) \\
       [ x ] \frown [ x ^ -, \ldots, y ] & ( x \leq y ) \\
     \end{cases} \\
+  \end{eqnarray*}
 </math>
 
 リスト版の内包表記も使っているが、定義を書ききる自信はないので Haskell でのリスト内包表記の動作を参考にしてほしい。
@@ -65,7 +66,7 @@
       \end{cases} \\
     d _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
     p _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ), \ldots, v _ S ( x ) ] ] \\
-    n _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \
+    n _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \\
     \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} \\
     u _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \leq n _ S ( x ) \} \\
     v _ S ( x ) & \coloneqq & n _ S ( x ) \\
@@ -281,7 +282,7 @@ DPN形式の行列の要素へアクセスする関数の部分。
         \cdots &
         p _ S ( m, ( r _ S - 1 ) + 1 ) & p _ S ( m, ( r _ S - 1 ) + 2 ) & \cdots & p _ S ( m, X - 1 ) \\
 
-        S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 1, r _ S - 1 } &
+        S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 1, R _ S - 1 } &
         S _ { 3, ( R _ S - 1 ) + 1 } & S _ { 3, ( R _ S - 1 ) + 2 } & \cdots & S _ { 3, r _ S - 1 } &
         n _ S ( 1, ( r _ S - 1 ) + 1 ) & n _ S ( 1, ( r _ S - 1 ) + 2 ) & \cdots & n _ S ( 1, X - 1 ) &
         n _ S ( 2, ( r _ S - 1 ) + 1 ) & n _ S ( 2, ( r _ S - 1 ) + 2 ) & \cdots & n _ S ( 2, X - 1 ) &
