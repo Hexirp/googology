@@ -147,6 +147,8 @@ DPN形式の行列の要素へアクセスする関数の部分。
   \end{eqnarray*}
 </math>
 
+下の <math> e ( S, C, n ) </math> が <math> Z </math> である。
+
 === クラス１ ===
 
 悪い部分をコピーする部分。
@@ -295,10 +297,6 @@ DPN形式の行列の要素へアクセスする関数の部分。
 <math>
   r ( S ) \coloneqq r _ S
 </math>
-
-=== 全体 ===
-
-この <math> e ( S, C, n ) </math> が <math> Z </math> である。
 
 == 解凍 ==
 
