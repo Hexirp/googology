@@ -15,7 +15,7 @@
   \mathbb{N} ^ + & \coloneqq & \{ x \in \mathbb{N} \mid x \neq 0 \} \\
   [ x, \ldots, y ] & \coloneqq &
     \begin{cases}
-      [ ]                               & ( x >    y ) \\
+      [ \, ]                            & ( x >    y ) \\
       [ x ] \frown [ x ^ -, \ldots, y ] & ( x \leq y ) \\
     \end{cases} \\
   \end{eqnarray*}
@@ -365,3 +365,10 @@ DPN形式を山へ解凍する部分。
 </math>
 
 この <math> \mathrm{expand} ( S, n ) </math> は <math> S' </math> である。
+
+== 性質 ==
+
+期待しているもの。
+
+# <math> u \circ z = z \circ u = \mathrm{id} </math> である。
+# 辞書式順序で <math> \forall n, \, \mathrm{expand} ( S, n ) < S </math> である。
