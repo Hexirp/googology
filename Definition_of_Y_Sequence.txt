@@ -91,7 +91,7 @@ DPN形式への圧縮を行う関数は以下のようになる。
   c ( S ) \coloneqq c _ S
 </math>
 
-この <math> z ( S ) </math> が <math> Z </math> となる。また <math> c ( S ) </math> が <math> C </math> となる
+この <math> z ( S ) </math> が <math> Z </math> となる。また <math> c ( S ) </math> が <math> C </math> となる。
 
 == 展開 ==
 
@@ -186,23 +186,23 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 == 解凍 ==
 
-ここではDPN形式の行列 <math> Z' </math> から数列 <math> S' </math> へ復元する関数を記述する。
+ここではDPN形式の行列 <math> S </math> から数列 <math> Z </math> へ復元する関数を記述する。
 
-DPN形式の行列の要素へアクセスする関数の部分（再掲）。
+DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    Z' & \coloneqq &
+    S & \coloneqq &
       \left (
         \begin{array}{cccc}
-          { Z' } _ { 1, 1 } & { Z' } _ { 1, 2 } & \cdots & { Z' } _ { 1, X' } \\
-          { Z' } _ { 2, 1 } & { Z' } _ { 2, 2 } & \cdots & { Z' } _ { 2, X' } \\
-          { Z' } _ { 3, 1 } & { Z' } _ { 3, 2 } & \cdots & { Z' } _ { 3, X' } \\
+          S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, X } \\
+          S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, X } \\
+          S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, X } \\
         \end{array}
-      \right )
-    { d' } _ { Z' } ( x ) & \coloneqq & { Z' } _ { 1, x } \\
-    { p' } _ { Z' } ( x ) & \coloneqq & { Z' } _ { 2, x } \\
-    { n' } _ { Z' } ( x ) & \coloneqq & { Z' } _ { 3, x } \\
+      \right ) \\
+    D _ S ( x ) & \coloneqq & S _ { 1, x } \\
+    P _ S ( x ) & \coloneqq & S _ { 2, x } \\
+    N _ S ( x ) & \coloneqq & S _ { 3, x } \\
   \end{eqnarray*}
 </math>
 
@@ -210,17 +210,16 @@ DPN形式を山へ解凍する部分。
 
 <math>
   \begin{eqnarray*}
-    { S' } _ x & \coloneqq & { D' } _ { Z' } ( x, 1 ) \\
-    { D' } _ { Z' } ( x, n ) & \coloneqq &
+    d _ S ( x, n ) & \coloneqq &
       \begin{cases}
-        { D' } _ { Z' } ( x, n ^ + ) + { D' } _ { Z' } ( { P' } _ { Z' } ( x, n ), n ) & ( n < { n' } _ { Z' } ( x ) ) \\
-        { d' } _ { Z' } ( x )                                                          & ( n = { n' } _ { Z' } ( x ) ) \\
-        0                                                                              & ( n > { n' } _ { Z' } ( x ) ) \\
+        d _ S ( x, n ^ + ) + d _ S ( p _ S ( x, n ), n ) & ( n < N _ S ( x ) ) \\
+        D _ S ( x )                                      & ( n = N _ S ( x ) ) \\
+        0                                                & ( n > N _ S ( x ) ) \\
       \end{cases} \\
-    { P' } _ { Z' } ( x, n ) & \coloneqq &
+    p _ S ( x, n ) & \coloneqq &
       \begin{cases}
-        \mathrm{Idx} ( { p' } _ { Z' } ( x ), 1 + { n' } _ { Z' } ( x ) - n ) & ( n \leq { n' } _ { Z' } ( x ) ) \\
-        0                                                                     & ( n >    { n' } _ { Z' } ( x ) ) \\
+        \mathrm{Idx} ( P _ S ( x ), 1 + N _ S ( x ) - n ) & ( n \leq N _ S ( x ) ) \\
+        0                                                 & ( n >    N _ S ( x ) ) \\
       \end{cases} \\
     \mathrm{Idx} ( p, n ) & \coloneqq &
       \begin{cases}
@@ -234,5 +233,7 @@ DPN形式を山へ解凍する部分。
 展開後の数列。
 
 <math>
-  u ( Z' ) \coloneqq ( { S' } _ 1, { S' } _ 2, \ldots, { S' } _ { X' } )
+  u ( S ) \coloneqq ( d _ S ( 1, 1 ), d _ S ( 2, 1 ), \ldots, d _ S ( X, 1 ) )
 </math>
+
+この <math> u ( S ) </math> が <math> Z </math> となる。
