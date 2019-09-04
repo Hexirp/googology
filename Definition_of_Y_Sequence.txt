@@ -41,9 +41,9 @@
     P _ S ( x, n ) & \coloneqq &
       \begin{cases}
         0                                                                                                              & ( n = 1 \land D _ S ( x, n ) = 1 ) \\
-        \max \{ p \in \mathbb{N} ^ + \mid D _ S ( p, n ) < D _ S ( x, n ) \}                                           & ( n = 1 \land D _ S ( x, n ) > 1 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid p < x \land D _ S ( p, n ) < D _ S ( x, n ) \}                                           & ( n = 1 \land D _ S ( x, n ) > 1 ) \\
         0                                                                                                              & ( n > 1 \land D _ S ( x, n ) = 0 ) \\
-        \max \{ p \in \mathbb{N} ^ + \mid D _ S ( p, n ) < D _ S ( x, n ) \land p \in \mathrm{Anc} _ S ( x, n ^ - ) \} & ( n > 1 \land D _ S ( x, n ) > 0 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid p < x \land D _ S ( p, n ) < D _ S ( x, n ) \land p \in \mathrm{Anc} _ S ( x, n ^ - ) \} & ( n > 1 \land D _ S ( x, n ) > 0 ) \\
       \end{cases} \\
     \mathrm{Anc} _ S ( x, n ) & \coloneqq &
       \begin{cases}
