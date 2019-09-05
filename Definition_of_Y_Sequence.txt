@@ -158,7 +158,11 @@ DPN形式の行列の要素へアクセスする関数の部分。
   \begin{eqnarray*}
     r _ S & \coloneqq & R _ S \\
     d _ S ( m, x ) & \coloneqq & D _ S ( x ) \\
-    p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
+    p _ S ( m, x ) & \coloneqq &
+      \begin{cases}
+        \mathrm{ris} _ S ( m - 1, \mathrm{bas} _ S ( x ), N _ S ( x ) ) & ( x = r _ S ) \\
+        \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) )     & ( x > r _ S ) \\
+      \end{cases} \\
     n _ S ( m, x ) & \coloneqq & N _ S ( x ) \\
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
@@ -224,7 +228,11 @@ DPN形式の行列の要素へアクセスする関数の部分。
     r _ S & \coloneqq & R _ S + ( r ( B _ S ) - 1 ) \\
     { B' } _ S & \coloneqq & \mathrm{expand} ( B _ S, m ) \\
     d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - 1 ) + m \times ( x - ( r _ S - 1 ) ) } \\
-    p _ S ( m, x ) & \coloneqq & \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) ) \\
+    p _ S ( m, x ) & \coloneqq &
+      \begin{cases}
+        \mathrm{ris} _ S ( m - 1, \mathrm{bas} _ S ( x ), N _ S ( x ) ) & ( x = r _ S ) \\
+        \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) )     & ( x > r _ S ) \\
+      \end{cases} \\
     n _ S ( m, x ) & \coloneqq & \mathrm{des} _ S ( m, N _ S ( x ) ) \\
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
