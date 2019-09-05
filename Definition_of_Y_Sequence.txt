@@ -260,7 +260,7 @@ DPN形式の行列の要素へアクセスする関数の部分。
       \end{cases} \\
     \mathrm{npt} _ S ( x ) & \coloneqq &
       \begin{cases}
-        0                                                                                                 & ( N _ S ( x ) = 1 ) \\
+        0                                                                                                                & ( N _ S ( x ) = 1 ) \\
         \max \{ p \in \mathbb{N} ^ + \mid p < x \land N _ S ( p ) < N _ S ( x ) \land p \in \mathrm{anc} _ S ( x, 1 ) \} & ( N _ S ( x ) > 1 ) \\
       \end{cases} \\
     \mathrm{nan} _ S ( x ) & \coloneqq &
