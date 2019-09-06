@@ -415,4 +415,8 @@ DPN形式を山へ解凍する部分。
 
 == 参考文献 ==
 
-* [[ユーザーブログ:Koteitan/バシク行列の数式的定義]]
+* [https://docs.google.com/presentation/d/14xksfL9P3A4Vb_-yIY0jdvCvg77MhjUq08LSHrO4iQE/edit?usp=sharing Y数列の解説] - Y数列の基本的な展開はここを参考にしています。
+* [https://twitter.com/Y_Y_Googology/status/1165222093857804288 Twitter での質疑応答] - 定義を作る際の助けになりました。
+* [[ユーザーブログ:Koteitan/バシク行列の数式的定義]] - 多くの部分はここを元にさせていただきました。
+* [[ユーザーブログ:Hexirp/バシク行列を Haskell に移植]] - Ans や ans や nan などが Haskell への移植の際に導入した関数に由来しています。
+* [[ユーザーブログ:Hassium108/数列・行列関連]] - リストの結合を <math> \frown </math> で表すのは Hassium108 さんの影響です。
