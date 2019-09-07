@@ -164,13 +164,13 @@ DPN形式の行列の要素へアクセスする関数の部分。
 <math>
   \begin{eqnarray*}
     r _ S & \coloneqq & R _ S \\
-    d _ S ( m, x ) & \coloneqq & D _ S ( x ) \\
+    d _ S ( m, x ) & \coloneqq & D _ S ( r _ S - 1 + x ) \\
     p _ S ( m, x ) & \coloneqq &
       \begin{cases}
-        \mathrm{ris} _ S ( m - 1, \mathrm{bas} _ S ( x ), N _ S ( x ) ) & ( x = r _ S ) \\
-        \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) )     & ( x > r _ S ) \\
+        \mathrm{ris} _ S ( m - 1, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) ) & ( x = r _ S ) \\
+        \mathrm{ris} _ S ( m, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) )     & ( x > r _ S ) \\
       \end{cases} \\
-    n _ S ( m, x ) & \coloneqq & N _ S ( x ) \\
+    n _ S ( m, x ) & \coloneqq & N _ S ( r _ S - 1 + x ) \\
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
         p _ a                                          & ( p =              [ p _ a ]                    ) \\
@@ -190,15 +190,15 @@ DPN形式の行列の要素へアクセスする関数の部分。
     \delta _ S & \coloneqq & X - r _ S \\
     a _ S ( x, n ) & \coloneqq &
       \begin{cases}
-        1 & ( r _ S \in    \mathrm{anc} _ S ( x, n ) ) \\
-        0 & ( r _ S \notin \mathrm{anc} _ S ( x, n ) ) \\
+        1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+        0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
       \end{cases} \\
     \mathrm{bas} _ S ( x ) & \coloneqq &
       \begin{cases}
-        P _ S ( X )             & ( x = r _ S ) \\
-        P _ S ( r _ S - 1 + x ) & ( x > r _ S ) \\
+        P _ S ( X )             & ( x = 1 ) \\
+        P _ S ( r _ S - 1 + x ) & ( x > 1 ) \\
       \end{cases} \\
-    \mathrm{ris} _ S ( m, p, n ) & \coloneqq &
+    \mathrm{ris} _ S ( m, x, p, n ) & \coloneqq &
       \begin{cases}
         [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
         \mathrm{ris} _ S ( m, p _ s \frown [ p _ b ], n ^ - ) \frown [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ] & ( p = p _ s \frown [ p _ b, p _ a ] ) \\
@@ -206,9 +206,9 @@ DPN形式の行列の要素へアクセスする関数の部分。
     B _ S ( m ) & \coloneqq &
       \left (
         \begin{array}{cccc}
-          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
-          p _ S ( m, r _ S - 1 + 1 ) & p _ S ( m, r _ S - 1 + 2 ) & \cdots & p _ S ( m, X - 1 ) \\
-          n _ S ( m, r _ S - 1 + 1 ) & n _ S ( m, r _ S - 1 + 2 ) & \cdots & n _ S ( m, X - 1 ) \\
+          d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, X - r _ S ) \\
+          p _ S ( m, 1 ) & p _ S ( m, 2 ) & \cdots & p _ S ( m, X - r _ S ) \\
+          n _ S ( m, 1 ) & n _ S ( m, 2 ) & \cdots & n _ S ( m, X - r _ S ) \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
