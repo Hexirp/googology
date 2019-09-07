@@ -232,15 +232,6 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 <math>
   \begin{eqnarray*}
-    r _ S & \coloneqq & R _ S + ( r ( B _ S ) - 1 ) \\
-    { B' } _ S & \coloneqq & \mathrm{expand} ( B _ S, m ) \\
-    d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - 1 ) + m \times ( x - ( r _ S - 1 ) ) } \\
-    p _ S ( m, x ) & \coloneqq &
-      \begin{cases}
-        \mathrm{ris} _ S ( m - 1, \mathrm{bas} _ S ( x ), N _ S ( x ) ) & ( x = r _ S ) \\
-        \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) )     & ( x > r _ S ) \\
-      \end{cases} \\
-    n _ S ( m, x ) & \coloneqq & \mathrm{des} _ S ( m, N _ S ( x ) ) \\
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
         p _ a                                          & ( p =              [ p _ a ]                    ) \\
@@ -257,6 +248,18 @@ DPN形式の行列の要素へアクセスする関数の部分。
         \emptyset                                                      & ( x = 0 ) \\
         \{ x \} \cup \mathrm{anc} _ S ( \mathrm{pnt} _ S ( x, n ), n ) & ( x > 0 ) \\
       \end{cases} \\
+    \mathrm{npt} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        0                                                                                                                & ( N _ S ( x ) = 1 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid p < x \land N _ S ( p ) < N _ S ( x ) \land p \in \mathrm{anc} _ S ( x, 1 ) \} & ( N _ S ( x ) > 1 ) \\
+      \end{cases} \\
+    \mathrm{nan} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                                & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{nan} _ S ( \mathrm{npt} _ S ( x ) ) & ( x > 0 ) \\
+      \end{cases} \\
+    { B' } _ S & \coloneqq & \mathrm{expand} ( B _ S, m ) \\
+    r _ S & \coloneqq & R _ S + ( r ( B _ S ) - 1 ) \\
     \delta _ S & \coloneqq & X - r _ S \\
     a _ S ( x, n ) & \coloneqq &
       \begin{cases}
@@ -273,16 +276,6 @@ DPN形式の行列の要素へアクセスする関数の部分。
         [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
         \mathrm{ris} _ S ( m, p _ s \frown [ p _ b ], n ^ - ) \frown [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ] & ( p = p _ s \frown [ p _ b, p _ a ] ) \\
       \end{cases} \\
-    \mathrm{npt} _ S ( x ) & \coloneqq &
-      \begin{cases}
-        0                                                                                                                & ( N _ S ( x ) = 1 ) \\
-        \max \{ p \in \mathbb{N} ^ + \mid p < x \land N _ S ( p ) < N _ S ( x ) \land p \in \mathrm{anc} _ S ( x, 1 ) \} & ( N _ S ( x ) > 1 ) \\
-      \end{cases} \\
-    \mathrm{nan} _ S ( x ) & \coloneqq &
-      \begin{cases}
-        \emptyset                                                & ( x = 0 ) \\
-        \{ x \} \cup \mathrm{nan} _ S ( \mathrm{npt} _ S ( x ) ) & ( x > 0 ) \\
-      \end{cases} \\
     \epsilon _ S & \coloneqq & N _ S ( X ) - N _ S ( r _ S ) \\
     b _ S ( x ) & \coloneqq &
       \begin{cases}
@@ -290,6 +283,13 @@ DPN形式の行列の要素へアクセスする関数の部分。
         0 & ( r _ S \notin \mathrm{nan} _ S ( x, n ) ) \\
       \end{cases} \\
     \mathrm{des} _ S ( m, x ) & \coloneqq & N _ S ( x ) + m \times \epsilon _ S \times b _ S ( x ) \\
+    d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - 1 ) + m \times ( x - ( r _ S - 1 ) ) } \\
+    p _ S ( m, x ) & \coloneqq &
+      \begin{cases}
+        \mathrm{ris} _ S ( m - 1, \mathrm{bas} _ S ( x ), N _ S ( x ) ) & ( x = r _ S ) \\
+        \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) )     & ( x > r _ S ) \\
+      \end{cases} \\
+    n _ S ( m, x ) & \coloneqq & \mathrm{des} _ S ( m, N _ S ( x ) ) \\
     B _ S ( m ) & \coloneqq &
       \left (
         \begin{array}{cccc}
