@@ -263,15 +263,15 @@ DPN形式の行列の要素へアクセスする関数の部分。
     \delta _ S & \coloneqq & X - r _ S \\
     a _ S ( x, n ) & \coloneqq &
       \begin{cases}
-        1 & ( r _ S \in    \mathrm{anc} _ S ( x, n ) ) \\
-        0 & ( r _ S \notin \mathrm{anc} _ S ( x, n ) ) \\
+        1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+        0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
       \end{cases} \\
     \mathrm{bas} _ S ( x ) & \coloneqq &
       \begin{cases}
-        P _ S ( X )             & ( x = r _ S ) \\
-        P _ S ( r _ S - 1 + x ) & ( x > r _ S ) \\
+        P _ S ( X )             & ( x = 1 ) \\
+        P _ S ( r _ S - 1 + x ) & ( x > 1 ) \\
       \end{cases} \\
-    \mathrm{ris} _ S ( m, p, n ) & \coloneqq &
+    \mathrm{ris} _ S ( m, x, p, n ) & \coloneqq &
       \begin{cases}
         [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
         \mathrm{ris} _ S ( m, p _ s \frown [ p _ b ], n ^ - ) \frown [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ] & ( p = p _ s \frown [ p _ b, p _ a ] ) \\
@@ -279,23 +279,23 @@ DPN形式の行列の要素へアクセスする関数の部分。
     \epsilon _ S & \coloneqq & N _ S ( X ) - N _ S ( r _ S ) \\
     b _ S ( x ) & \coloneqq &
       \begin{cases}
-        1 & ( r _ S \in    \mathrm{nan} _ S ( x, n ) ) \\
-        0 & ( r _ S \notin \mathrm{nan} _ S ( x, n ) ) \\
+        1 & ( r _ S \in    \mathrm{nan} _ S ( r _ S - 1 + x, n ) ) \\
+        0 & ( r _ S \notin \mathrm{nan} _ S ( r _ S - 1 + x, n ) ) \\
       \end{cases} \\
-    \mathrm{des} _ S ( m, x ) & \coloneqq & N _ S ( x ) + m \times \epsilon _ S \times b _ S ( x ) \\
-    d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - 1 ) + m \times ( x - ( r _ S - 1 ) ) } \\
+    \mathrm{des} _ S ( m, x ) & \coloneqq & N _ S ( r _ S - 1 + x ) + m \times \epsilon _ S \times b _ S ( x ) \\
+    d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - R _ S ) + ( m - 1 ) \times ( X - r _ S ) + x } \\
     p _ S ( m, x ) & \coloneqq &
       \begin{cases}
-        \mathrm{ris} _ S ( m - 1, \mathrm{bas} _ S ( x ), N _ S ( x ) ) & ( x = r _ S ) \\
-        \mathrm{ris} _ S ( m, \mathrm{bas} _ S ( x ), N _ S ( x ) )     & ( x > r _ S ) \\
+        \mathrm{ris} _ S ( m - 1, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) ) & ( x = r _ S ) \\
+        \mathrm{ris} _ S ( m, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) )     & ( x > r _ S ) \\
       \end{cases} \\
-    n _ S ( m, x ) & \coloneqq & \mathrm{des} _ S ( m, N _ S ( x ) ) \\
+    n _ S ( m, x ) & \coloneqq & \mathrm{des} _ S ( m, N _ S ( r _ S - 1 + x ) ) \\
     B _ S ( m ) & \coloneqq &
       \left (
         \begin{array}{cccc}
-          d _ S ( m, r _ S - 1 + 1 ) & d _ S ( m, r _ S - 1 + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
-          p _ S ( m, r _ S - 1 + 1 ) & p _ S ( m, r _ S - 1 + 2 ) & \cdots & p _ S ( m, X - 1 ) \\
-          n _ S ( m, r _ S - 1 + 1 ) & n _ S ( m, r _ S - 1 + 2 ) & \cdots & n _ S ( m, X - 1 ) \\
+          d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, X - r _ S ) \\
+          p _ S ( m, 1 ) & p _ S ( m, 2 ) & \cdots & p _ S ( m, X - r _ S ) \\
+          n _ S ( m, 1 ) & n _ S ( m, 2 ) & \cdots & n _ S ( m, X - r _ S ) \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
@@ -310,24 +310,24 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
         S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, R _ S - 1 } &
         { { B' } _ S } _ { ( R _ S - 1 ) + 1 } & { { B' } _ S } _ { ( R _ S - 1 ) + 2 } & \cdots & { { B' } _ S } _ { r _ S - 1 } &
-        d _ S ( 1, ( r _ S - 1 ) + 1 ) & d _ S ( 1, ( r _ S - 1 ) + 2 ) & \cdots & d _ S ( 1, X - 1 ) &
-        d _ S ( 2, ( r _ S - 1 ) + 1 ) & d _ S ( 2, ( r _ S - 1 ) + 2 ) & \cdots & d _ S ( 2, X - 1 ) &
+        d _ S ( 1, 1 ) & d _ S ( 1, 2 ) & \cdots & d _ S ( 1, X - r _ S ) &
+        d _ S ( 2, 1 ) & d _ S ( 2, 2 ) & \cdots & d _ S ( 2, X - r _ S ) &
         \cdots &
-        d _ S ( m, ( r _ S - 1 ) + 1 ) & d _ S ( m, ( r _ S - 1 ) + 2 ) & \cdots & d _ S ( m, X - 1 ) \\
+        d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, X - r _ S ) \\
 
         S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 1, R _ S - 1 } &
         S _ { 2, ( R _ S - 1 ) + 1 } & S _ { 2, ( R _ S - 1 ) + 2 } & \cdots & S _ { 3, r _ S - 1 } &
-        p _ S ( 1, ( r _ S - 1 ) + 1 ) & p _ S ( 1, ( r _ S - 1 ) + 2 ) & \cdots & p _ S ( 1, X - 1 ) &
-        p _ S ( 2, ( r _ S - 1 ) + 1 ) & p _ S ( 2, ( r _ S - 1 ) + 2 ) & \cdots & p _ S ( 2, X - 1 ) &
+        p _ S ( 1, 1 ) & p _ S ( 1, 2 ) & \cdots & p _ S ( 1, X - r _ S ) &
+        p _ S ( 2, 1 ) & p _ S ( 2, 2 ) & \cdots & p _ S ( 2, X - r _ S ) &
         \cdots &
-        p _ S ( m, ( r _ S - 1 ) + 1 ) & p _ S ( m, ( r _ S - 1 ) + 2 ) & \cdots & p _ S ( m, X - 1 ) \\
+        p _ S ( m, 1 ) & p _ S ( m, 2 ) & \cdots & p _ S ( m, X - r _ S ) \\
 
         S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 1, R _ S - 1 } &
         S _ { 3, ( R _ S - 1 ) + 1 } & S _ { 3, ( R _ S - 1 ) + 2 } & \cdots & S _ { 3, r _ S - 1 } &
-        n _ S ( 1, ( r _ S - 1 ) + 1 ) & n _ S ( 1, ( r _ S - 1 ) + 2 ) & \cdots & n _ S ( 1, X - 1 ) &
-        n _ S ( 2, ( r _ S - 1 ) + 1 ) & n _ S ( 2, ( r _ S - 1 ) + 2 ) & \cdots & n _ S ( 2, X - 1 ) &
+        n _ S ( 1, 1 ) & n _ S ( 1, 2 ) & \cdots & n _ S ( 1, X - r _ S ) &
+        n _ S ( 2, 1 ) & n _ S ( 2, 2 ) & \cdots & n _ S ( 2, X - r _ S ) &
         \cdots
-        & n _ S ( m, ( r _ S - 1 ) + 1 ) & n _ S ( m, ( r _ S - 1 ) + 2 ) & \cdots & n _ S ( m, X - 1 ) \\
+        & n _ S ( m, 1 ) & n _ S ( m, 2 ) & \cdots & n _ S ( m, X - r _ S ) \\
 
       \end{array}
     \right )
