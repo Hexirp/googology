@@ -23,7 +23,7 @@
   [ x, \ldots, y ] & \coloneqq &
     \begin{cases}
       [ \,\, ]                          & ( x >    y ) \\
-      [ x ] \frown [ x ^ -, \ldots, y ] & ( x \leq y ) \\
+      [ x ] \frown [ x ^ +, \ldots, y ] & ( x \leq y ) \\
     \end{cases} \\
   \end{eqnarray*}
 </math>
