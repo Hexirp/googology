@@ -410,7 +410,7 @@ DPN形式を山へ解凍する部分。
 
 期待しているもの。
 
-# <math> u \circ z = z \circ u = \mathrm{id} </math> である。
+# <math> u \circ z = \mathrm{id} </math> である。
 # 辞書式順序で <math> \forall n, \, \mathrm{expand} ( S, n ) < S </math> である。
 
 == 参考文献 ==
