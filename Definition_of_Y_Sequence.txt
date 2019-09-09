@@ -22,7 +22,7 @@
   \mathbb{N} ^ + & \coloneqq & \{ x \in \mathbb{N} \mid x \neq 0 \} \\
   [ x, \ldots, y ] & \coloneqq &
     \begin{cases}
-      [ \,\, ]                            & ( x >    y ) \\
+      [ \,\, ]                          & ( x >    y ) \\
       [ x ] \frown [ x ^ -, \ldots, y ] & ( x \leq y ) \\
     \end{cases} \\
   \end{eqnarray*}
