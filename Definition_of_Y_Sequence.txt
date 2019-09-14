@@ -73,8 +73,8 @@
       \end{cases} \\
     \mathrm{btm} _ S ( x ) & \coloneqq &
       \begin{cases}
-        0                                                       & ( x = 1 ) \\
-        \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} & ( x > 1 ) \\
+        0                                                       & ( D _ S ( x, 1 ) = 1 ) \\
+        \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} & ( D _ S ( x, 1 ) > 1 ) \\
       \end{cases} \\
     u _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \leq n _ S ( x ) \} \\
     v _ S ( x ) & \coloneqq & n _ S ( x ) \\
