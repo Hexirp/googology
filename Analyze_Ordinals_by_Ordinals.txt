@@ -245,7 +245,7 @@
 
 集合 <math> \mathrm{O} </math> を <math> S \in \mathrm{O} \Longleftrightarrow S = () </math> と定義する。
 
-集合 <math> \mathrm{S} </math> を <math> S \in \mathrm{S} \Longleftrightarrow \forall y, \, S _ { ( X - 1 ), y } = 0 </math> と定義する。
+集合 <math> \mathrm{S} </math> を <math> S \in \mathrm{S} \Longleftrightarrow \forall y \ldotp S _ { ( X - 1 ), y } = 0 </math> と定義する。
 
 集合 <math> \mathrm{L} </math> を <math> S \in \mathrm{L} \Longleftrightarrow S \notin \mathrm{O} \land S \notin \mathrm{S} </math> と定義する。
 
