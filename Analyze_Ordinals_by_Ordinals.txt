@@ -258,6 +258,15 @@
 # 任意の <math> S </math> と <math> n </math> に対して <math> S = ( \underbrace{ 0, 0, \ldots, 0 } _ { n + 1 } ) ( \underbrace{ 1, 1, \ldots, 1 } _ { n + 1 } ) </math> であるならば <math> S \in \mathrm{OT} </math> である。
 # 任意の <math> S </math> と <math> n </math> に対して <math> S \in \mathrm{L} \land S \in \mathrm{OT} </math> であるならば <math> S [ n ] \in \mathrm{OT} </math> である。
 
+ここで <math> \mathrm{OT} </math> が帰納的可算集合であること（半決定可能であること）は容易にわかるが、帰納的集合であること（決定可能であること）は自明ではない。しかし、この集合は決定可能であり、帰属を判定するアルゴリズムが存在する。
+
+* <math> S \in \mathrm{OT} </math> を以下のように定める。
+*# <math> S \in \mathrm{OT} ( ( \underbrace{ 0, 0, \ldots, 0 } _ { Y + 1 } ) ( \underbrace{ 1, 1, \ldots, 1 } _ { Y + 1 } ) ) </math> と同値である。ここで <math> Y </math> は <math> S </math> の列の長さである。
+* <math> S \in \mathrm{OT} ( Z ) </math> を以下のように定める。
+*# <math> S < _ \mathrm{T} Z </math> であるとき <math> S \in \mathrm{OT} ( Z [ 0 ] ) </math> と同値である。
+*# <math> S = _ \mathrm{T} Z </math> であるとき <math> \mathrm{True} </math> と同値である。
+*# <math> S > _ \mathrm{T} Z </math> であるとき
+
 後者関数 <math> \mathrm{pred} ( S ) </math> を <math> \boldsymbol{S} _ 0 \cdots \boldsymbol{S} _ { X - 2 } </math> と定義する。この操作は <math> S \in \mathrm{S} </math> である場合しか定義されない。
 
 基本列関数 <math> \mathrm{fseq} ( S, n ) </math> を <math> S [ n ] </math> と定義する。この操作は <math> S \in \mathrm{L} </math> である場合しか定義されない。
