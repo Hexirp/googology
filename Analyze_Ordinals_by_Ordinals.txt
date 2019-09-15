@@ -230,6 +230,40 @@
 
 この節の内容は[[ユーザーブログ:Hexirp/Bachmann ψ (recasted)]]の一部として取り込まれた。
 
+== 6 ==
+
+; 左辺
+: バシク行列システム（バージョン４）。
+; 右辺
+: Buchholz の ψ 関数。
+
+=== 準備 ===
+
+バシク行列システムを次のように順序数表記としてみなす。この際、[[ユーザーブログ:Koteitan/バシク行列の数式的定義]]を参照している。
+
+項 <math> \mathrm{T} </math> は <math> \mathbb{N} </math> を要素とする行列全体である。
+
+集合 <math> \mathrm{O} </math> を <math> S \in \mathrm{O} \Longleftrightarrow S = () </math> と定義する。
+
+集合 <math> \mathrm{S} </math> を <math> S \in \mathrm{S} \Longleftrightarrow \forall y, \, S _ { ( X - 1 ), y } = 0 </math> と定義する。
+
+集合 <math> \mathrm{L} </math> を <math> S \in \mathrm{L} \Longleftrightarrow S \notin \mathrm{O} \land S \notin \mathrm{S} </math> と定義する。
+
+展開関数 <math> S [ n ] </math> を <math> \boldsymbol{G} \boldsymbol{B} ^ { ( 0 ) } \boldsymbol{B} ^ { ( 1 ) } \boldsymbol{B} ^ { ( 2 ) } \cdots \boldsymbol{B} ^ { ( n ) } </math> と定義する。この操作は <math> S \in \mathrm{L} </math> である場合しか定義されない。
+
+比較関数 <math> < _ \mathrm{T} </math> を行列を列のリストとして列を自然数のリストとした辞書式順序で定義する。
+
+標準形の項 <math> \mathrm{OT} </math> を再帰的に定義する。
+
+# 任意の <math> S </math> と <math> n </math> に対して <math> S = ( \underbrace{ 0, 0, \ldots, 0 } _ { n + 1 } ) ( \underbrace{ 1, 1, \ldots, 1 } _ { n + 1 } ) </math> であるならば <math> S \in \mathrm{OT} </math> である。
+# 任意の <math> S </math> と <math> n </math> に対して <math> S \in \mathrm{L} \land S \in \mathrm{OT} </math> であるならば <math> S [ n ] \in \mathrm{OT} </math> である。
+
+後者関数 <math> \mathrm{pred} ( S ) </math> を <math> \boldsymbol{S} _ 0 \cdots \boldsymbol{S} _ { X - 2 } </math> と定義する。この操作は <math> S \in \mathrm{S} </math> である場合しか定義されない。
+
+基本列関数 <math> \mathrm{fseq} ( S, n ) </math> を <math> S [ n ] </math> と定義する。この操作は <math> S \in \mathrm{L} </math> である場合しか定義されない。
+
+=== 解析 ===
+
 == 関連リンク ==
 
 * [https://docs.google.com/spreadsheets/d/10xoOD6Elm5VIK5B8NVDclRcu8-dEaD0d1vveFjzL3-M/edit?usp=sharing 順序数で順序数を解析] - このプロジェクトの前身
