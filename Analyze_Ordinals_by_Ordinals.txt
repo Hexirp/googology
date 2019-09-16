@@ -266,10 +266,10 @@
 *# <math> S < _ \mathrm{T} Z [ n ] </math> であるとき <math> S \in \mathrm{OT} ( Z [ n ], 0 ) </math> と同値である。
 *# <math> S = _ \mathrm{T} Z [ n ] </math> であるとき <math> \mathrm{True} </math> と同値である。
 *# <math> S > _ \mathrm{T} Z [ n ] </math> であるとき、
-*## <math> X _ S \le X _ { Z [ n ] } </math> であるとき <math> \mathrm{False} </math> と同値である。
-*## <math> X _ S >   X _ { Z [ n ] } </math> であるとき <math> S \in \mathrm{OT} ( Z, n + 1 ) </math> と同値である。
+*## <math> X _ S \le X _ { Z [ n ] } </math> であるとき <math> \mathrm{False} </math> と同値である。ここで <math> X _ S </math> は <math> S </math> の行の長さであり、 <math> X _ { Z [ n ] } </math> は <math> Z [ n ] </math> の行の長さである。
+*## <math> X _ S >   X _ { Z [ n ] } </math> であるとき <math> S \in \mathrm{OT} ( Z, n + 1 ) </math> と同値である。ここで <math> X _ S </math> は <math> S </math> の行の長さであり、 <math> X _ { Z [ n ] } </math> は <math> Z [ n ] </math> の行の長さである。
 
-後者関数 <math> \mathrm{pred} ( S ) </math> を <math> \boldsymbol{S} _ 0 \cdots \boldsymbol{S} _ { X - 2 } </math> と定義する。この操作は <math> S \in \mathrm{S} </math> である場合しか定義されない。
+後者関数 <math> \mathrm{pred} ( S ) </math> を <math> \boldsymbol{S} _ 0 \cdots \boldsymbol{S} _ { X - 2 } </math> と定義する。ここで <math> X </math> は <math> S </math> の行の長さである。この操作は <math> S \in \mathrm{S} </math> である場合しか定義されない。
 
 基本列関数 <math> \mathrm{fseq} ( S, n ) </math> を <math> S [ n ] </math> と定義する。この操作は <math> S \in \mathrm{L} </math> である場合しか定義されない。
 
