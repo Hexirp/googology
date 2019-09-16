@@ -261,9 +261,11 @@
 ここで <math> \mathrm{OT} </math> が帰納的可算集合であること（半決定可能であること）は容易にわかるが、帰納的集合であること（決定可能であること）は自明ではない。しかし、この集合は決定可能であり、帰属を判定するアルゴリズムが存在する。
 
 * <math> S \in \mathrm{OT} </math> を以下のように定める。
-*# <math> S \in \mathrm{OT} ( ( \underbrace{ 0, 0, \ldots, 0 } _ { Y + 1 } ) ( \underbrace{ 1, 1, \ldots, 1 } _ { Y + 1 } ), 0 ) </math> と同値である。ここで <math> Y </math> は <math> S </math> の列の長さである。
+*# <math> S \in \mathrm{OT} ( ( \underbrace{ 0, 0, \ldots, 0 } _ { Y + 1 } ) ( \underbrace{ 1, 1, \ldots, 1 } _ { Y + 1 } ) ) </math> と同値である。ここで <math> Y </math> は <math> S </math> の列の長さである。
+* <math> S \in \mathrm{OT} ( Z ) </math> を以下のように定める。
+*# <math> S \in \mathrm{OT} ( Z, 0 ) </math> と同値である。
 * <math> S \in \mathrm{OT} ( Z, n ) </math> を以下のように定める。
-*# <math> S < _ \mathrm{T} Z [ n ] </math> であるとき <math> S \in \mathrm{OT} ( Z [ n ], 0 ) </math> と同値である。
+*# <math> S < _ \mathrm{T} Z [ n ] </math> であるとき <math> S \in \mathrm{OT} ( Z [ n ] ) </math> と同値である。
 *# <math> S = _ \mathrm{T} Z [ n ] </math> であるとき <math> \mathrm{True} </math> と同値である。
 *# <math> S > _ \mathrm{T} Z [ n ] </math> であるとき、
 *## <math> X _ S \le X _ { Z [ n ] } </math> であるとき <math> \mathrm{False} </math> と同値である。ここで <math> X _ S </math> は <math> S </math> の行の長さであり、 <math> X _ { Z [ n ] } </math> は <math> Z [ n ] </math> の行の長さである。
