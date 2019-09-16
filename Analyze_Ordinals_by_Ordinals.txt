@@ -235,7 +235,7 @@
 ; 左辺
 : バシク行列システム（バージョン４）を順序数表記化したもの。
 ; 右辺
-: Buchholz の ψ 関数。ただし <math> 1 \coloneqq \p _ 0 ( 0 ), \; \w \coloneqq \p _ 0 ( 1 ) </math> という略記を使っている。
+: Buchholz の ψ 関数。ただし <math> 1 \coloneqq \p _ 0 ( 0 ), \,\, \w \coloneqq \p _ 0 ( 1 ) </math> という略記を使っている。
 
 === 準備 ===
 
