@@ -258,7 +258,7 @@
 # 任意の <math> S </math> と <math> n </math> に対して <math> S = ( \underbrace{ 0, 0, \ldots, 0 } _ { n + 1 } ) ( \underbrace{ 1, 1, \ldots, 1 } _ { n + 1 } ) </math> であるならば <math> S \in \mathrm{OT} </math> である。
 # 任意の <math> S </math> と <math> n </math> に対して <math> S \in \mathrm{L} \land S \in \mathrm{OT} </math> であるならば <math> S [ n ] \in \mathrm{OT} </math> である。
 
-ここで <math> \mathrm{OT} </math> が帰納的可算集合であること（半決定可能であること）は容易にわかるが、帰納的集合であること（決定可能であること）は自明ではない。しかし、この集合は決定可能であり、帰属を判定するアルゴリズムが存在する。
+ここで <math> \mathrm{OT} </math> が帰納的可算集合であること（半決定可能であること）は容易にわかるが、帰納的集合であること（決定可能であること）は自明ではない。しかし、この集合は帰納的集合であり決定可能である、つまり、帰属を判定するアルゴリズムが存在すると見られ、そのアルゴリズムの候補が存在する。この候補アルゴリズムは [http://gyafun.jp/ln/basmat.cgi Bachicu Matrix Calculator] を参考にしている。
 
 * <math> S \in \mathrm{OT} </math> を以下のように定める。
 *# <math> S \in \mathrm{OT} ( ( \underbrace{ 0, 0, \ldots, 0 } _ { Y + 1 } ) ( \underbrace{ 1, 1, \ldots, 1 } _ { Y + 1 } ) ) </math> と同値である。ここで <math> Y </math> は <math> S </math> の列の長さである。
