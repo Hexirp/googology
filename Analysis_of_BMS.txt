@@ -24,7 +24,7 @@
 項を分割する三つの集合を以下のように定義する。
 
 * 集合 <math> \mathrm{O} </math> を <math> S \in \mathrm{O} \Longleftrightarrow S = () </math> と定義する。
-* 集合 <math> \mathrm{S} </math> を <math> S \in \mathrm{S} \Longleftrightarrow \forall y \ldotp S _ { ( X - 1 ) y } = 0 </math> と定義する。
+* 集合 <math> \mathrm{S} </math> を <math> S \in \mathrm{S} \Longleftrightarrow \forall y \ldotp S _ { ( X - 1 ) y } = 0 </math> と定義する。ここで <math> X </math> は <math> S </math> の行の長さである。
 * 集合 <math> \mathrm{L} </math> を <math> S \in \mathrm{L} \Longleftrightarrow S \notin \mathrm{O} \land S \notin \mathrm{S} </math> と定義する。
 
 展開関数 <math> S [ n ] </math> を <math> \boldsymbol{G} \boldsymbol{B} ^ { ( 0 ) } \boldsymbol{B} ^ { ( 1 ) } \boldsymbol{B} ^ { ( 2 ) } \cdots \boldsymbol{B} ^ { ( n ) } </math> と定義する。この操作は <math> S \in \mathrm{L} </math> である場合しか定義されない。
