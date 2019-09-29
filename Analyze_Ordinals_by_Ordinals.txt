@@ -232,6 +232,8 @@
 
 == 6 ==
 
+この節の内容は[[ユーザーブログ:Hexirp/バシク行列システムの解析]]として抜き出された。
+
 == 関連リンク ==
 
 * [https://docs.google.com/spreadsheets/d/10xoOD6Elm5VIK5B8NVDclRcu8-dEaD0d1vveFjzL3-M/edit?usp=sharing 順序数で順序数を解析] - このプロジェクトの前身
