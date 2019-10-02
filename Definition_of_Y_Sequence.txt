@@ -38,6 +38,8 @@
 
 山を構成する部分。
 
+{{User:Hexirp/Template:Scroll Top}}
+
 <math>
   \begin{eqnarray*}
     S & = & ( S _ 1, S _ 2, \ldots, S _ X ) \\
@@ -61,6 +63,8 @@
       \end{cases} \\
   \end{eqnarray*}
 </math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
 
 山をDPN形式へ圧縮する部分。
 
@@ -309,6 +313,8 @@ DPN形式の行列の要素へアクセスする関数の部分。
 
 新しい行列を求める部分。
 
+{{User:Hexirp/Template:Scroll Top}}
+
 <math>
   e ( S, C, n ) \coloneqq
     \left (
@@ -338,6 +344,8 @@ DPN形式の行列の要素へアクセスする関数の部分。
       \end{array}
     \right )
 </math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
 
 怒る親を求める部分。
 
