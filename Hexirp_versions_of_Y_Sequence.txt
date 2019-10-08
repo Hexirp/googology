@@ -1,6 +1,6 @@
 Y数列はゆきと ([[ユーザー:ゆきと]], [https://twitter.com/Y_Y_Googology Twitter: @Y_Y_Googology]) 氏により作成された表記である。「階差を展開する」のが基本的なアイデアであり、 <math> (1,3) </math> の時点で[[バシク行列システム]]の限界と一致すると解析されている。さらに <math> (1,1), (1,2), (1,3), (1,4), \ldots </math> の極限（この列を展開列として持つ表記）は <math> ( 1, \omega ) </math> と表記される。これがY数列の限界である。その増加速度は非常に大きいとみられているが、あまりにも巨大すぎるため詳しいことはわかっていない。
 
-その正確な定義はまだ完成していない。Y数列が広められた時期、日本語圏や英語圏の人々が正確な定義を作成することを目指していた。その様子は p進大好きbot 氏が例えるに「Y数列の定義合戦」である<ref>[https://twitter.com/non_archimedean/status/1174451173799018496?s=20 @non_archimedean - 2019/9/19]</ref>。
+その正確な定義はまだ完成していない。Y数列が（アイデアと理想の展開例だけ）広められると、日本語圏や英語圏の人々が正確な定義を作成することを試みるようになった。その様子は p進大好きbot 氏が例えるに「Y数列の定義合戦」である<ref>[https://twitter.com/non_archimedean/status/1174451173799018496?s=20 @non_archimedean - 2019/9/19]</ref>。
 
 この時期に公開されたY数列関係の定義は以下のとおりである。
 
@@ -18,11 +18,11 @@ Y数列はY数列、一つであるべき
 
 </div>
 
-このコメント以降のY数列関連定義はY数列という名前を使っていない。Y数列のオリジナルと一致しないため、Y数列を名乗ろうとすると「別バージョン」となってしまうためだと推測している。
+このコメント以降のY数列関連定義はY数列という名前を使っていない。Y数列のオリジナルと一致しないため、Y数列を名乗ろうとすると「別バージョン」となってしまうためだと、私は推測している。
 
 * p進大好きbot (2019/9/19) - [https://googology.wikia.org/wiki/User_blog:P%E9%80%B2%E5%A4%A7%E5%A5%BD%E3%81%8Dbot/New_Difference_Sequence_System User blog:P進大好きbot/New Difference Sequence System]
 * Syst3ms (2019/9/28) - [https://googology.wikia.org/wiki/User_blog:Syst3ms/Bismuth_:_not_Y_sequence,_but_close User blog:Syst3ms/Bismuth : not Y sequence, but close]
 
-また、これらと別にゆきと氏の不完全な元定義を数式で形式化しようとする試みも存在する。
+また、これらと別にゆきと氏の[[東方巨大数]]3に投稿された定義を数式で形式化しようとする試みも存在する。
 
 * Koteitan (2019/10/8) - [[ユーザーブログ:Koteitan/(1,3)未満のY数列の定義]]
