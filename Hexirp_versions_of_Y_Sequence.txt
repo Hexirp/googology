@@ -11,7 +11,7 @@ Y数列はゆきと ([[ユーザー:ゆきと]], [https://twitter.com/Y_Y_Googol
 * ゆきと (2019/5/16) - [https://docs.google.com/document/d/1dA3V_5ZMfXN-z3X-g-yoJfmoTvKuk3efeaKaBFw8Vhs/edit?usp=sharing Y sequence　定義]
 * Hexirp (2019/9/4) - [[ユーザーブログ:Hexirp/Y数列の定義]]
 
-このような状況の下、9月19日にゆきと氏から以下のようなコメントがあった。<ref>https://twitter.com/Y_Y_Googology/status/1174525344507817984 @Y_Y_Googology - 2019/9/19]</ref>
+このような状況の下、9月19日にゆきと氏から以下のようなコメントがあった。<ref>[https://twitter.com/Y_Y_Googology/status/1174525344507817984 @Y_Y_Googology - 2019/9/19]</ref>
 
 <div style="margin: 1em 0; padding: 0 4em 0; white-space: pre-wrap;">
 
