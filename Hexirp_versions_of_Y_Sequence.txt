@@ -18,7 +18,7 @@ Y数列はY数列、一つであるべき
 
 </div>
 
-このコメント以降のY数列関連定義はY数列という名前を使っていない。Y数列のオリジナルと一致しないため、Y数列を名乗ろうとすると「別バージョン」となってしまうためだと、私は推測している。
+このコメント以降のY数列に類似する表記の定義はY数列という名前を使っていない。Y数列のオリジナルと一致しないため、Y数列を名乗ろうとすると「別バージョン」となってしまうためであろうか。
 
 * p進大好きbot (2019/9/19) - [https://googology.wikia.org/wiki/User_blog:P%E9%80%B2%E5%A4%A7%E5%A5%BD%E3%81%8Dbot/New_Difference_Sequence_System User blog:P進大好きbot/New Difference Sequence System]
 * Syst3ms (2019/9/28) - [https://googology.wikia.org/wiki/User_blog:Syst3ms/Bismuth_:_not_Y_sequence,_but_close User blog:Syst3ms/Bismuth : not Y sequence, but close]
