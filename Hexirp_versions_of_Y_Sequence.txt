@@ -159,9 +159,9 @@ DPN形式に関する表記は以下のようになる。
     Z & \coloneqq &
       \left (
         \begin{array}{cccc}
-          Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, X _ S } \\
-          Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, X _ S } \\
-          Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, X _ S } \\
+          Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, X _ Z } \\
+          Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, X _ Z } \\
+          Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, X _ Z } \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
