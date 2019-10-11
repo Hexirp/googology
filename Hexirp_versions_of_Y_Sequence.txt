@@ -374,8 +374,8 @@ R が D への bad root だとしたら r は P と N への bad root である�
   \begin{eqnarray*}
     a _ S ( y, n ) & \coloneqq &
       \begin{cases}
-        1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + y, n ) ) \\
-        0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + y, n ) ) \\
+        1 & ( r _ Z \in    \mathrm{anc} _ Z ( r _ Z - 1 + y, n ) ) \\
+        0 & ( r _ Z \notin \mathrm{anc} _ Z ( r _ Z - 1 + y, n ) ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
