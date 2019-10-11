@@ -6,7 +6,7 @@
 
   \newcommand{\nil}{[\,\,]}
   \newcommand{\cons}{\vcentcolon{\mathrel{\mkern-1.2mu}}\vcentcolon}
-  \newcommand{\append}{+{\mathrel{\mkern-1.2mu}}+}
+  \newcommand{\append}{+{\mathrel{\mkern-3.0mu}}+}
 
 </math></div>
 
