@@ -123,7 +123,7 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
 
 <math>
   \begin{eqnarray*}
-    [ x _ 0, x _ 1, \ldots, x _ n ] & = & x _ 0 \cons x _ 1 \cons \cdots x _ n \cons \nil \\
+    [ x _ 0, x _ 1, \ldots, x _ n ] & = & x _ 0 \cons x _ 1 \cons \cdots \cons x _ n \cons \nil \\
   \end{eqnarray*}
 </math>
 
