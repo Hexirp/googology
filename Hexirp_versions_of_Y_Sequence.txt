@@ -225,3 +225,35 @@ T はカットする部分の中で最も深いゼロではない要素の深さ
 === DPN形式から山への解凍 ===
 
 DPN形式から山への解凍は既に完成している。
+
+<math>
+  \begin{eqnarray*}
+    d _ S ( x ) & \coloneqq & S _ { 1, x } \\
+    p _ S ( x ) & \coloneqq & S _ { 2, x } \\
+    n _ S ( x ) & \coloneqq & S _ { 3, x } \\
+  \end{eqnarray*}
+</math>
+
+d, p, n はそれぞれ対応する要素へのアクセス関数である。
+
+<math>
+  \begin{eqnarray*}
+    D _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        P _ S ( x, n ^ + ) + D _ S ( P _ S ( x, n ), n ) & ( n < N _ S ( x ) ) \\
+        d _ S ( x )                                      & ( n = N _ S ( x ) ) \\
+        0                                                & ( n > N _ S ( x ) ) \\
+      \end{cases} \\
+    P _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \mathrm{idx} ( \mathrm{reverse} ( d _ S ( x ) ), n _ S ( x ) - n ) & ( n \leq N _ S ( x ) ) \\
+        0                                                                  & ( n >    N _ S ( x ) ) \\
+      \end{cases} \\
+    \mathrm{idx} ( p, n ) & \coloneqq &
+      \begin{cases}
+        p _ a                                     & ( p = p _ a \cons \nil                           ) \\
+        p _ a                                     & ( p = p _ a \cons \p _ b \cons p _ s \land n = 0 ) \\
+        \mathrm{idx} ( p _ b \cons p _ s, n ^ - ) & ( p = p _ a \cons \p _ b \cons p _ s \land n > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
