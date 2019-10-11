@@ -133,4 +133,31 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
 
 {{User:Hexirp/Template:Scroll Top}}
 
+<math>
+  \begin{eqnarray*}
+    D _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        S _ x                                                    & ( n = 1                              ) \\
+        0                                                        & ( n > 1 \land P _ S ( x, n ^ - ) = 0 ) \\
+        D _ S ( x, n ^ - ) - D _ S ( P _ S ( x, n ^ - ), n ^ - ) & ( n > 1 \land P _ S ( x, n ^ - ) > 0 ) \\
+      \end{cases} \\
+    P _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        0                                                                                                                          & ( n = 1 \land D _ S ( x, n ) = 1 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid p < x \land D _ S ( p, n ) < D _ S ( x, n ) \}                                           & ( n = 1 \land D _ S ( x, n ) > 1 ) \\
+        0                                                                                                                          & ( n > 1 \land D _ S ( x, n ) = 0 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid p < x \land D _ S ( p, n ) < D _ S ( x, n ) \land p \in \mathrm{Anc} _ S ( x, n ^ - ) \} & ( n > 1 \land D _ S ( x, n ) > 0 ) \\
+      \end{cases} \\
+    \mathrm{Anc} _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                           & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{Anc} _ S ( P _ S ( x, n ), n ) & ( x > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
 {{User:Hexirp/Template:Scroll Bottom}}
+
+D (Diff) は差分を記述し、 P (Parent) はそれらの親を記述する。親を決定する際、バシク行列システムのバージョン 4 と同じように Upper-branch ignoring モデルを使う。その決定に必要になるため Anc (Ancestor) が補助関数として用意されている。
+
+[[]]
