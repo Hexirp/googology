@@ -87,6 +87,23 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
 
 === 一般的な表記 ===
 
+ゼロを含まない自然数全体の集合は以下のように表記する。
+
+<math>
+  \begin{eqnarray*}
+    \mathbb{N} ^ + & = & \{ x \in \mathbb{N} \mid x \neq 0 \} \\
+  \end{eqnarray*}
+</math>
+
+再帰により減少および増加していく引数の増減には以下のような表記を使う。
+
+<math>
+  \begin{eqnarray*}
+    x ^ - & = & x - 1 \\
+    x ^ + & = & x + 1 \\
+  \end{eqnarray*}
+</math>
+
 数列に関する表記は以下のようになる。
 
 <math>
