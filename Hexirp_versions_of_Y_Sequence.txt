@@ -396,11 +396,7 @@ bas (base) はコピーされた bad part の基本の親を決める。これ�
 
 <math>
   \begin{eqnarray*}
-    \mathrm{ris} _ S ( m, x, p, n ) & \coloneqq &
-      \begin{cases}
-        [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
-        \mathrm{ris} _ S ( m, p _ s \frown [ p _ b ], n ^ - ) \frown [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ] & ( p = p _ s \frown [ p _ b, p _ a ] ) \\
-      \end{cases} \\
+    \mathrm{ris} _ Z ( m, y, p, n ) & \coloneqq & \mathrm{map} ( \lambda e \ldotp e + m \times \delta _ Z \times a _ Z ( y, n ), p ) \\
   \end{eqnarray*}
 </math>
 
