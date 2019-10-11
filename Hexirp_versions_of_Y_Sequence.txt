@@ -365,6 +365,13 @@ R が D への bad root だとしたら r は P と N への bad root である�
 <math>
   \begin{eqnarray*}
     \delta _ S & \coloneqq & X - r _ S \\
+  \end{eqnarray*}
+</math>
+
+Δ はコピーされる部分の長さであり、主に親を参照するインデックスがどれだけずれるかを決める。
+
+<math>
+  \begin{eqnarray*}
     a _ S ( x, n ) & \coloneqq &
       \begin{cases}
         1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
