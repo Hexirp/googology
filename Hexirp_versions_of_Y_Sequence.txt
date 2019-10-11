@@ -1,7 +1,13 @@
 <div style="display:none"><math>
+
   \newcommand{\ordinarycolon}{:}
   \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
-  \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+  \newcommand{\coloneqq}{\vcentcolon{\mathrel{\mkern-1.2mu}}=}
+
+  \newcommand{\nil}{[\,\,]}
+  \newcommand{\cons}{\vcentcolon{\mathrel{\mkern-1.2mu}}\vcentcolon}
+  \newcommand{\append}{+{\mathrel{\mkern-1.2mu}}+}
+
 </math></div>
 
 この記事ではY数列 Hexirp 版の定義群を記述している。
