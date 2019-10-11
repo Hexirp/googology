@@ -384,11 +384,18 @@ R が D への bad root だとしたら r は P と N への bad root である�
 
 <math>
   \begin{eqnarray*}
-    \mathrm{bas} _ S ( x ) & \coloneqq &
+    \mathrm{bas} _ Z ( y ) & \coloneqq &
       \begin{cases}
-        P _ S ( X )             & ( x = 1 ) \\
-        P _ S ( r _ S - 1 + x ) & ( x > 1 ) \\
+        p _ Z ( X _ Z )         & ( y = 1 ) \\
+        p _ Z ( r _ Z - 1 + y ) & ( y > 1 ) \\
       \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+bas (base) は上昇する前のベースの親を決める。これが必要なのは接ぎ木があるから。元の bad part とは違って、コピーされた bad part は一番最初の要素の親がカットされた要素の親になる。カットされた部分に接ぎ木するイメージ。
+
+<math>
+  \begin{eqnarray*}
     \mathrm{ris} _ S ( m, x, p, n ) & \coloneqq &
       \begin{cases}
         [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
