@@ -424,7 +424,7 @@ ris (rising) は親をずらしていく部分。うん、自分から上昇で�
   \end{eqnarray*}
 </math>
 
-d, n は普通のコピペ。
+b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先頭のところだけ m が一つずれる。
 
 <math>
   \begin{eqnarray*}
