@@ -85,6 +85,17 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
 
 このバージョンは (1,3) 未満にしか定義されていない。
 
+=== 一般的な表記 ===
+
+数列に関する表記は以下のようになる。
+
+<math>
+  \begin{eqnarray*}
+    X _ S & = & \mathrm{length} ( S ) \\
+    S & = & ( S _ 1, S _ 2, \ldots, S _ { X _ S } ) \\
+  \end{eqnarray*}
+</math>
+
 === 数列から山への展開 ===
 
 数列から山への展開は既に完成している。
