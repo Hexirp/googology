@@ -396,7 +396,8 @@ bas (base) はコピーされた bad part の基本の親を決める。これ�
 
 <math>
   \begin{eqnarray*}
-    \mathrm{ris} _ Z ( m, y, p, n ) & \coloneqq & \mathrm{map} ( \lambda e \ldotp e + m \times \delta _ Z \times a _ Z ( y, n ), p ) \\
+    \mathrm{rising} _ Z ( m, y, p, n ) & \coloneqq & p + m \times \delta _ Z \times a _ Z ( y, n ) \\
+    \mathrm{rise} _ Z ( m, y, p, n ) & \coloneqq & ( \mathrm{rising} _ Z ( m, y, p _ v, n' ) \cons p', n' - 1 ) & ( p = p _ v \cons p _ s \land ( p', n' ) = \mathrm{rise} _ Z ( m, y, p _ s, n ) )
   \end{eqnarray*}
 </math>
 
