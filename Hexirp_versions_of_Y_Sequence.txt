@@ -356,7 +356,7 @@ pnt (parent) は親の情報を全て復元する。そのデータを使って 
 
 <math>
   \begin{eqnarray*}
-    r _ S & \coloneqq & R _ Z \\
+    r _ Z & \coloneqq & R _ Z \\
   \end{eqnarray*}
 </math>
 
@@ -364,7 +364,7 @@ R が D への bad root だとしたら r は P と N への bad root である�
 
 <math>
   \begin{eqnarray*}
-    \delta _ S & \coloneqq & X _ Z - r _ Z \\
+    \delta _ Z & \coloneqq & X _ Z - r _ Z \\
   \end{eqnarray*}
 </math>
 
@@ -372,7 +372,7 @@ R が D への bad root だとしたら r は P と N への bad root である�
 
 <math>
   \begin{eqnarray*}
-    a _ S ( y, n ) & \coloneqq &
+    a _ Z ( y, n ) & \coloneqq &
       \begin{cases}
         1 & ( r _ Z \in    \mathrm{anc} _ Z ( r _ Z - 1 + y, n ) ) \\
         0 & ( r _ Z \notin \mathrm{anc} _ Z ( r _ Z - 1 + y, n ) ) \\
