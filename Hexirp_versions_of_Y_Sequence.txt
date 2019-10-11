@@ -234,9 +234,9 @@ DPN形式から山への解凍は既に完成している。
 
 <math>
   \begin{eqnarray*}
-    d _ S ( x ) & \coloneqq & S _ { 1, x } \\
-    p _ S ( x ) & \coloneqq & S _ { 2, x } \\
-    n _ S ( x ) & \coloneqq & S _ { 3, x } \\
+    d _ Z ( x ) & \coloneqq & Z _ { 1, x } \\
+    p _ Z ( x ) & \coloneqq & Z _ { 2, x } \\
+    n _ Z ( x ) & \coloneqq & Z _ { 3, x } \\
   \end{eqnarray*}
 </math>
 
@@ -244,16 +244,16 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 <math>
   \begin{eqnarray*}
-    D _ S ( x, n ) & \coloneqq &
+    D _ Z ( x, n ) & \coloneqq &
       \begin{cases}
-        P _ S ( x, n ^ + ) + D _ S ( P _ S ( x, n ), n ) & ( n < N _ S ( x ) ) \\
-        d _ S ( x )                                      & ( n = N _ S ( x ) ) \\
-        0                                                & ( n > N _ S ( x ) ) \\
+        P _ Z ( x, n ^ + ) + D _ Z ( P _ Z ( x, n ), n ) & ( n < N _ Z ( x ) ) \\
+        d _ Z ( x )                                      & ( n = N _ Z ( x ) ) \\
+        0                                                & ( n > N _ Z ( x ) ) \\
       \end{cases} \\
-    P _ S ( x, n ) & \coloneqq &
+    P _ Z ( x, n ) & \coloneqq &
       \begin{cases}
-        \mathrm{idx} ( \mathrm{reverse} ( d _ S ( x ) ), n _ S ( x ) - n ) & ( n \leq N _ S ( x ) ) \\
-        0                                                                  & ( n >    N _ S ( x ) ) \\
+        \mathrm{idx} ( \mathrm{reverse} ( d _ Z ( x ) ), n _ Z ( x ) - n ) & ( n \leq N _ Z ( x ) ) \\
+        0                                                                  & ( n >    N _ Z ( x ) ) \\
       \end{cases} \\
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
@@ -268,6 +268,6 @@ D, P は言わずもがな山を作る関数である。補助関数として id
 
 <math>
   \begin{eqnarray*}
-    S & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ S ( x, 1 ), \mathrm{enumFromTo} ( 1, X ) ) \\
+    S & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X ) ) \\
   \end{eqnarray*}
 </math>
