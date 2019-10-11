@@ -377,6 +377,13 @@ R が D への bad root だとしたら r は P と N への bad root である�
         1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
         0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
       \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+位置 x と深さ n を取って親が上昇するかどうかを決める。いや、上昇するよりはずれるかどうかのほうが正しいかもしれない。もし、先祖を辿って行って、親が bad root に行き着いたのなら、一緒にずれる。そうでないなら、みょーんと伸びてずれない。
+
+<math>
+  \begin{eqnarray*}
     \mathrm{bas} _ S ( x ) & \coloneqq &
       \begin{cases}
         P _ S ( X )             & ( x = 1 ) \\
