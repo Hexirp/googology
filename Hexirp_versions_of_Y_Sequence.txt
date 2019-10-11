@@ -372,15 +372,15 @@ R が D への bad root だとしたら r は P と N への bad root である�
 
 <math>
   \begin{eqnarray*}
-    a _ S ( x, n ) & \coloneqq &
+    a _ S ( y, n ) & \coloneqq &
       \begin{cases}
-        1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
-        0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+        1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + y, n ) ) \\
+        0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + y, n ) ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
 
-位置 x と深さ n を取って親が上昇するかどうかを決める。いや、上昇するよりはずれるかどうかのほうが正しいかもしれない。もし、先祖を辿って行って、親が bad root に行き着いたのなら、一緒にずれる。そうでないなら、みょーんと伸びてずれない。
+位置 y と深さ n を取って親がずれるかどうかを決める。もし、先祖を辿って行って、親が bad root に行き着いたのなら、一緒にずれる。そうでないなら、みょーんと伸びてずれない。ここで位置に y を使っているのは bad part の内部の位置であるため。全体の位置なら x になる。
 
 <math>
   \begin{eqnarray*}
