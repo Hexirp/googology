@@ -278,6 +278,42 @@ DPN形式の展開はクラス 1 に対するものだけ完成している。
 
 d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    R _ Z & \coloneqq & p _ a \quad ( p _ Z ( X ) = p _ a \cons p _ s ) \\
+    G _ Z & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, R _ Z - 1 } \\
+          Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, R _ Z - 1 } \\
+          Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, R _ Z - 1 } \\
+        \end{array}
+      \right ) \\
+    B _ Z & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          Z _ { 1, R _ Z - 1 + 1 } & Z _ { 1, R _ Z - 1 + 2 } & \cdots & Z _ { 1, X - 1 } \\
+          Z _ { 2, R _ Z - 1 + 1 } & Z _ { 2, R _ Z - 1 + 2 } & \cdots & Z _ { 2, X - 1 } \\
+          Z _ { 3, R _ Z - 1 + 1 } & Z _ { 3, R _ Z - 1 + 2 } & \cdots & Z _ { 3, X - 1 } \\
+        \end{array}
+      \right ) \\
+    C _ Z & \coloneqq &
+      \left (
+        \begin{array}{c}
+          Z _ { 1, X } \\
+          Z _ { 2, X } \\
+          Z _ { 3, X } \\
+        \end{array}
+      \right ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り落とされる要素である。
+
 === DPN形式から山への解凍 ===
 
 DPN形式から山への解凍は既に完成している。
