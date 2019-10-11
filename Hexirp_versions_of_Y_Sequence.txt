@@ -262,7 +262,21 @@ T はカットする部分の中で最も深いゼロではない要素の深さ
 
 === DPN形式の展開 ===
 
-空白。
+DPN形式の展開はクラス 1 に対するものだけ完成している。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    d _ Z ( x ) & \coloneqq & Z _ { 1, x } \\
+    p _ Z ( x ) & \coloneqq & Z _ { 2, x } \\
+    n _ Z ( x ) & \coloneqq & Z _ { 3, x } \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 === DPN形式から山への解凍 ===
 
