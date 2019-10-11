@@ -127,6 +127,22 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
   \end{eqnarray*}
 </math>
 
+DPN形式に関する表記は以下のようになる。
+
+<math>
+  \begin{eqnarray*}
+    X _ Z & = & \mathrm{length} ( Z ) \\
+    Z & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, X _ S } \\
+          Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, X _ S } \\
+          Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, X _ S } \\
+        \end{array}
+      \right ) \\
+  \end{eqnarray*}
+</math>
+
 === 数列から山への展開 ===
 
 数列から山への展開は既に完成している。
