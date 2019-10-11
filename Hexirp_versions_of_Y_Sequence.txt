@@ -119,6 +119,14 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
   \end{eqnarray*}
 </math>
 
+リストに関する表記は以下のように定義される。
+
+<math>
+  \begin{eqnarray*}
+    [ x _ 0, x _ 1, \ldots, x _ n ] & = & x _ 0 \cons x _ 1 \cons \cdots x _ n \cons \nil \\
+  \end{eqnarray*}
+</math>
+
 === 数列から山への展開 ===
 
 数列から山への展開は既に完成している。
