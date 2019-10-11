@@ -101,13 +101,19 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
 
 ゼロを含まない自然数全体の集合は以下のように表記する。
 
+{{User:Hexirp/Template:Scroll Top}}
+
 <math>
   \begin{eqnarray*}
     \mathbb{N} ^ + & = & \{ x \in \mathbb{N} \mid x \neq 0 \} \\
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 再帰により減少および増加していく引数の増減には以下のような表記を使う。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -116,7 +122,11 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 数列に関する表記は以下のようになる。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -125,7 +135,11 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 リストに関する表記は以下のように定義される。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -133,7 +147,11 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 DPN形式に関する表記は以下のようになる。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -148,6 +166,8 @@ DPN形式に関する表記は以下のようになる。
       \right ) \\
   \end{eqnarray*}
 </math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
 
 === 数列から山への展開 ===
 
@@ -190,6 +210,8 @@ D (Diff) は差分を記述し、 P (Parent) はそれらの親を記述する�
 
 第一に、どの深さで展開するか定める。
 
+{{User:Hexirp/Template:Scroll Top}}
+
 <math>
   \begin{eqnarray*}
     T _ S & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( X, n ) > 0 \} \\
@@ -202,9 +224,13 @@ D (Diff) は差分を記述し、 P (Parent) はそれらの親を記述する�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 T はカットする部分の中で最も深いゼロではない要素の深さである。 c は T の要素の値であり、これが数列のクラスである。 t は展開する深さである。ここで c が 1 だと T - 1 になるが、それ以外ではそのままである。ここは (1,2,4,8) などを展開しようとするときに深さを 1 つ減らさないとできなかったため、こうなった。このような定義が必要なのは横へ展開するか斜めへ展開するかの違いが原因だと私は見ている。
 
 第二に、どこからどこまで親のデータを保存するか決める。さっきもちらっと触れたが、「親が変化し始めてから最大の深さに到達するまでの親」が範囲である。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -214,9 +240,13 @@ T はカットする部分の中で最も深いゼロではない要素の深さ
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 ここで最大の深さとは n である。 u は親が変化し始めた箇所である。補助関数として親が存在する最も深い深さを返す btm が用意されている。
 
 第三に、DPN形式を構築する。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -226,11 +256,15 @@ T はカットする部分の中で最も深いゼロではない要素の深さ
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 ここで n は一番下に書かれているくせに他の個所から使われているので注意である。その意味は、さっきも書いた通り「最大の深さ」である。どのくらい深く潜れるか (btm) と展開の深さ (t) を合わせて決定する。 d ( x ) は n での D である。 p は m から n までの P のリストである。
 
 === DPN形式から山への解凍 ===
 
 DPN形式から山への解凍は既に完成している。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -240,7 +274,11 @@ DPN形式から山への解凍は既に完成している。
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 d, p, n はそれぞれ対応する要素へのアクセス関数である。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -264,14 +302,20 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 D, P は言わずもがな山を作る関数である。補助関数として idx という親のリストから目的の親を取り出すための関数がある。
 
 === 山から数列への変換 ===
 
 山から数列への変換は既に完成している。
 
+{{User:Hexirp/Template:Scroll Top}}
+
 <math>
   \begin{eqnarray*}
     S & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X ) ) \\
   \end{eqnarray*}
 </math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
