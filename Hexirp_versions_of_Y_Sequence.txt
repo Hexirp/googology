@@ -301,7 +301,7 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 <math>
   \begin{eqnarray*}
-    R _ Z & \coloneqq & p _ a \quad ( p _ Z ( X _ Z ) = p _ a \cons p _ s ) \\
+    R _ Z & \coloneqq & \mathrm{last} ( p _ Z ( X _ Z ) ) \\
     G _ Z & \coloneqq &
       \left (
         \begin{array}{cccc}
