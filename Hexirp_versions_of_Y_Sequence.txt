@@ -169,6 +169,25 @@ DPN形式に関する表記は以下のようになる。
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
+リストに関する汎用関数は以下の通りである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{idx} ( p, n ) & \coloneqq &
+      \begin{cases}
+        p _ a                                     & ( p = p _ a \cons \nil                           ) \\
+        p _ a                                     & ( p = p _ a \cons \p _ b \cons p _ s \land n = 0 ) \\
+        \mathrm{idx} ( p _ b \cons p _ s, n ^ - ) & ( p = p _ a \cons \p _ b \cons p _ s \land n > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+idx (index) はリストの要素へ 0 始まりの添字でアクセスする。だが、要素がもうないときはエラーにならず最後の要素を返す。この関数はもっぱらDPN形式のP、つまり親のリストから全ての深さでの親を復元するために使われる。
+
 === 数列から山への展開 ===
 
 数列から山への展開は既に完成している。
@@ -316,12 +335,6 @@ R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り
 
 <math>
   \begin{eqnarray*}
-    \mathrm{idx} ( p, n ) & \coloneqq &
-      \begin{cases}
-        p _ a                                     & ( p = p _ a \cons \nil                           ) \\
-        p _ a                                     & ( p = p _ a \cons \p _ b \cons p _ s \land n = 0 ) \\
-        \mathrm{idx} ( p _ b \cons p _ s, n ^ - ) & ( p = p _ a \cons \p _ b \cons p _ s \land n > 0 ) \\
-      \end{cases} \\
     \mathrm{pnt} _ Z ( x, n ) & \coloneqq &
       \begin{cases}
         \mathrm{idx} ( p _ Z ( x ), n _ Z ( x ) - n ) & ( n \leq n _ Z ( x ) ) \\
@@ -335,7 +348,7 @@ R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り
   \end{eqnarray*}
 </math>
 
-idx (index) はアクセス関数。 pnt (parent) は親の情報を全て復元する。そのデータを使って anc (ancestor) は祖先を計算する。
+pnt (parent) は親の情報を全て復元する。そのデータを使って anc (ancestor) は祖先を計算する。
 
 === DPN形式から山への解凍 ===
 
@@ -370,18 +383,12 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
         \mathrm{idx} ( \mathrm{reverse} ( d _ Z ( x ) ), n _ Z ( x ) - n ) & ( n \leq N _ Z ( x ) ) \\
         0                                                                  & ( n >    N _ Z ( x ) ) \\
       \end{cases} \\
-    \mathrm{idx} ( p, n ) & \coloneqq &
-      \begin{cases}
-        p _ a                                     & ( p = p _ a \cons \nil                           ) \\
-        p _ a                                     & ( p = p _ a \cons \p _ b \cons p _ s \land n = 0 ) \\
-        \mathrm{idx} ( p _ b \cons p _ s, n ^ - ) & ( p = p _ a \cons \p _ b \cons p _ s \land n > 0 ) \\
-      \end{cases} \\
   \end{eqnarray*}
 </math>
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-D, P は言わずもがな山を作る関数である。補助関数として idx という親のリストから目的の親を取り出すための関数がある。
+D, P は言わずもがな山を作る関数である。
 
 === 山から数列への変換 ===
 
