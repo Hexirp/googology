@@ -266,6 +266,10 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 D, P は言わずもがな山を作る関数である。補助関数として idx という親のリストから目的の親を取り出すための関数がある。
 
+=== 山から数列への変換 ===
+
+山から数列への変換は既に完成している。
+
 <math>
   \begin{eqnarray*}
     S & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X ) ) \\
