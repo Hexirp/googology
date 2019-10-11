@@ -414,13 +414,20 @@ ris (rising) は親をずらしていく部分。うん、自分から上昇で�
 
 <math>
   \begin{eqnarray*}
-    d _ S ( m, x ) & \coloneqq & D _ S ( r _ S - 1 + x ) \\
-    p _ S ( m, x ) & \coloneqq &
+    b _ S ( m, y ) & \coloneqq & d _ S ( r _ S - 1 + y ) \\
+    q _ S ( m, y ) & \coloneqq &
       \begin{cases}
-        \mathrm{ris} _ S ( m - 1, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) ) & ( x = r _ S ) \\
-        \mathrm{ris} _ S ( m, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) )     & ( x > r _ S ) \\
+        \mathrm{ris} _ S ( m - 1, y, \mathrm{bas} _ S ( y ), n _ S ( r _ S - 1 + y ) ) & ( y = 1 ) \\
+        \mathrm{ris} _ S ( m, y, \mathrm{bas} _ S ( y ), n _ S ( r _ S - 1 + y ) )     & ( y > 1 ) \\
       \end{cases} \\
-    n _ S ( m, x ) & \coloneqq & N _ S ( r _ S - 1 + x ) \\
+    m _ S ( m, y ) & \coloneqq & n _ S ( r _ S - 1 + y ) \\
+  \end{eqnarray*}
+</math>
+
+d, n は普通のコピペ。
+
+<math>
+  \begin{eqnarray*}
     B _ S ( m ) & \coloneqq &
       \left (
         \begin{array}{cccc}
