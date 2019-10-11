@@ -161,3 +161,47 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
 D (Diff) は差分を記述し、 P (Parent) はそれらの親を記述する。親を決定する際、バシク行列システムのバージョン 4 と同じように Upper-branch ignoring モデルを使う。その決定に必要になるため Anc (Ancestor) が補助関数として用意されている。
 
 [[]]
+
+=== 山からDPN形式への圧縮 ===
+
+山からDPN形式への圧縮は既に完成している。圧縮の仕方は次の通りである。
+
+第一に、どの深さで展開するか定める。
+
+<math>
+  \begin{eqnarray*}
+    T _ S & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( X, n ) > 0 \} \\
+    c _ S & \coloneqq & D _ S ( X, T _ S ) \\
+    t _ S & \coloneqq &
+      \begin{cases}
+        T _ S - 1 & ( c _ S = 1 ) \\
+        T _ S     & ( c _ S > 1 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+T はカットする部分の中で最も深いゼロではない要素の深さである。 c は T の要素の値であり、これが数列のクラスである。 t は展開する深さである。ここで c が 1 だと T - 1 になるが、それ以外ではそのままである。ここは (1,2,4,8) などを展開しようとするときに深さを 1 つ減らさないとできなかったため、こうなった。このような定義が必要なのは横へ展開するか斜めへ展開するかの違いが原因だと私は見ている。
+
+第二に、どこからどこまで親のデータを保存するか決める。さっきもちらっと触れたが、「親が変化し始めてから最大の深さに到達するまでの親」が範囲である。
+
+<math>
+  \begin{eqnarray*}
+    m            _ S ( x ) & \coloneqq & \min ( n _ S ( x ), u _ S ( x ) ) \\
+    u            _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \} \\
+    \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} \\
+  \end{eqnarray*}
+</math>
+
+ここで最大の深さとは n ( x ) である。 u ( x ) は親が変化し始めた箇所である。補助関数として親が存在する最も深い深さを返す btm ( x ) が用意されている。
+
+第三に、DPN形式を構築する。
+
+<math>
+  \begin{eqnarray*}
+    d _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
+    p _ S ( x ) & \coloneqq & \mathrm{map} ( \lambda v \ldotp P _ S ( x, v ), \mathrm{enumFromTo} ( m _ S ( x ), n _ S ( x ) ) ) \\
+    n _ S ( x ) & \coloneqq & \min ( t _ S, \mathrm{btm} _ S ( x ) ) \\
+  \end{eqnarray*}
+</math>
+
+ここで n ( x ) は一番下に書かれているくせに基本的な関数である。その意味は、さっきも書いた通り「最大の深さ」である。どのくらい深く潜れるか (btm) と展開の深さ (t) を合わせて決定する。 d ( x ) は n での D である。 p は m から n までの P のリストである。
