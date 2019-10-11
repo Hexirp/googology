@@ -214,8 +214,8 @@ D (Diff) は差分を記述し、 P (Parent) はそれらの親を記述する�
 
 <math>
   \begin{eqnarray*}
-    T _ S & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( X, n ) > 0 \} \\
-    c _ S & \coloneqq & D _ S ( X, T _ S ) \\
+    T _ S & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( X _ S, n ) > 0 \} \\
+    c _ S & \coloneqq & D _ S ( X _ S, T _ S ) \\
     t _ S & \coloneqq &
       \begin{cases}
         T _ S - 1 & ( c _ S = 1 ) \\
@@ -282,7 +282,7 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 <math>
   \begin{eqnarray*}
-    R _ Z & \coloneqq & p _ a \quad ( p _ Z ( X ) = p _ a \cons p _ s ) \\
+    R _ Z & \coloneqq & p _ a \quad ( p _ Z ( X _ Z ) = p _ a \cons p _ s ) \\
     G _ Z & \coloneqq &
       \left (
         \begin{array}{cccc}
@@ -294,17 +294,17 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
     B _ Z & \coloneqq &
       \left (
         \begin{array}{cccc}
-          Z _ { 1, R _ Z - 1 + 1 } & Z _ { 1, R _ Z - 1 + 2 } & \cdots & Z _ { 1, X - 1 } \\
-          Z _ { 2, R _ Z - 1 + 1 } & Z _ { 2, R _ Z - 1 + 2 } & \cdots & Z _ { 2, X - 1 } \\
-          Z _ { 3, R _ Z - 1 + 1 } & Z _ { 3, R _ Z - 1 + 2 } & \cdots & Z _ { 3, X - 1 } \\
+          Z _ { 1, R _ Z - 1 + 1 } & Z _ { 1, R _ Z - 1 + 2 } & \cdots & Z _ { 1, X _ Z - 1 } \\
+          Z _ { 2, R _ Z - 1 + 1 } & Z _ { 2, R _ Z - 1 + 2 } & \cdots & Z _ { 2, X _ Z - 1 } \\
+          Z _ { 3, R _ Z - 1 + 1 } & Z _ { 3, R _ Z - 1 + 2 } & \cdots & Z _ { 3, X _ Z - 1 } \\
         \end{array}
       \right ) \\
     C _ Z & \coloneqq &
       \left (
         \begin{array}{c}
-          Z _ { 1, X } \\
-          Z _ { 2, X } \\
-          Z _ { 3, X } \\
+          Z _ { 1, X _ Z } \\
+          Z _ { 2, X _ Z } \\
+          Z _ { 3, X _ Z } \\
         \end{array}
       \right ) \\
   \end{eqnarray*}
@@ -368,7 +368,7 @@ D, P は言わずもがな山を作る関数である。補助関数として id
 
 <math>
   \begin{eqnarray*}
-    S & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X ) ) \\
+    S & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X _ Z ) ) \\
   \end{eqnarray*}
 </math>
 
