@@ -350,6 +350,54 @@ R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り
 
 pnt (parent) は親の情報を全て復元する。そのデータを使って anc (ancestor) は祖先を計算する。
 
+==== クラス１の場合 ====
+
+ここでクラスによる分岐がある。この分岐に跨る関数が二つあり、それは r と e である。
+
+<math>
+  \begin{eqnarray*}
+    r _ S & \coloneqq & R _ S \\
+  \end{eqnarray*}
+</math>
+
+R が D への bad root だとしたら r は P と N への bad root である。この値は P と N がコピーされる範囲を決めるが、それよりも重要なのが、展開された後のDPN形式の行列の長さ <math> X _ { Z [ n ] } </math> は <math> X _ Z - 1 + r \times n </math> に等しいということである。
+
+<math>
+  \begin{eqnarray*}
+    \delta _ S & \coloneqq & X - r _ S \\
+    a _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+        0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+      \end{cases} \\
+    \mathrm{bas} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        P _ S ( X )             & ( x = 1 ) \\
+        P _ S ( r _ S - 1 + x ) & ( x > 1 ) \\
+      \end{cases} \\
+    \mathrm{ris} _ S ( m, x, p, n ) & \coloneqq &
+      \begin{cases}
+        [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
+        \mathrm{ris} _ S ( m, p _ s \frown [ p _ b ], n ^ - ) \frown [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ] & ( p = p _ s \frown [ p _ b, p _ a ] ) \\
+      \end{cases} \\
+    d _ S ( m, x ) & \coloneqq & D _ S ( r _ S - 1 + x ) \\
+    p _ S ( m, x ) & \coloneqq &
+      \begin{cases}
+        \mathrm{ris} _ S ( m - 1, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) ) & ( x = r _ S ) \\
+        \mathrm{ris} _ S ( m, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) )     & ( x > r _ S ) \\
+      \end{cases} \\
+    n _ S ( m, x ) & \coloneqq & N _ S ( r _ S - 1 + x ) \\
+    B _ S ( m ) & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, X - r _ S ) \\
+          p _ S ( m, 1 ) & p _ S ( m, 2 ) & \cdots & p _ S ( m, X - r _ S ) \\
+          n _ S ( m, 1 ) & n _ S ( m, 2 ) & \cdots & n _ S ( m, X - r _ S ) \\
+        \end{array}
+      \right ) \\
+  \end{eqnarray*}
+</math>
+
 === DPN形式から山への解凍 ===
 
 DPN形式から山への解凍は既に完成している。
