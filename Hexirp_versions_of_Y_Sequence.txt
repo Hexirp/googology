@@ -424,7 +424,7 @@ b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先�
 
 <math>
   \begin{eqnarray*}
-    B _ Z ( m ) & \coloneqq & \mathrm{map} ( \lambda y \ldots ( b _ Z ( m, y ), q _ Z ( m, y ), m _ Z ( m, y ) ), \mathrm{enumFromTo} ( 1, \delta _ Z ) ) \\
+    B _ Z ( m ) & \coloneqq & \mathrm{map} ( \lambda y \ldotp ( b _ Z ( m, y ), q _ Z ( m, y ), m _ Z ( m, y ) ), \mathrm{enumFromTo} ( 1, \delta _ Z ) ) \\
   \end{eqnarray*}
 </math>
 
