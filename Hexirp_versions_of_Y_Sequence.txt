@@ -617,9 +617,9 @@ DPN形式に関する表記は以下のようになる。
   \begin{eqnarray*}
     \mathrm{idx} ( p, n ) & \coloneqq &
       \begin{cases}
-        p _ a                                     & ( p = p _ a \cons \nil                           ) \\
-        p _ a                                     & ( p = p _ a \cons \p _ b \cons p _ s \land n = 0 ) \\
-        \mathrm{idx} ( p _ b \cons p _ s, n ^ - ) & ( p = p _ a \cons \p _ b \cons p _ s \land n > 0 ) \\
+        p _ a                                     & ( p = p _ a \cons \nil                          ) \\
+        p _ a                                     & ( p = p _ a \cons p _ b \cons p _ s \land n = 0 ) \\
+        \mathrm{idx} ( p _ b \cons p _ s, n ^ - ) & ( p = p _ a \cons p _ b \cons p _ s \land n > 0 ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
