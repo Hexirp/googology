@@ -57,13 +57,13 @@ Y数列はY数列、一つであるべき
 
 DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述するにあたって中核とした概念である。その基本的なアイデアは、Y数列の展開が山（差分を取り上に書き並べていく図）で説明されているのをみたときの体験にある。その時、どこが展開されて新しい山の元になるのか、どこが無視されて新しい山では使われないのかわからなかったのだ。
 
-[https://raw.githubusercontent.com/Hexirp/googology/master/DPN_Form_1.png]
+[https://raw.githubusercontent.com/Hexirp/googology/master/DPN_Form_1.png DPN_Form_1.png]
 
 上の画像で青い線で囲まれているのが展開される部分である。他の部分は無視され、後に再構成される。
 
 このように、捨てられる部分があるのであれば、わかりやすく、その部分は除いてしまえばいいのではないか。その発想がDPN形式の始まりである。最初は Diff と Parent の二つしか含んでいなかったが、すぐに Depth も加わった。このとき、頭文字がかぶってしまったため、数式の中では Depth を主に n で表すようになった。これが DPN という名前の由来である。
 
-[https://raw.githubusercontent.com/Hexirp/googology/master/DPN_Form_2.png]
+[https://raw.githubusercontent.com/Hexirp/googology/master/DPN_Form_2.png DPN_Form_2.png]
 
 次の大きな変化は Parent が複数含まれるようになったことだ。これは (1,2,4,8,10,8) の展開を考察する途中で必要に迫られて加わった。上の画像を見てもらえばわかるように、この数列では親が途中で変わる。そうなるように、バシク行列システムの Upper-branch ignoring モデルを参考にして親の定義を定めた。そっちのほうが自然だったからだ。すると、この例の展開にみられるように、親の変化の履歴も保存する必要が生じた。こうして、複数の親を含めることを許すようになった。DPN形式は親が変化し始めてから最大の深さに到達するまでの親を全て記録する。
 
@@ -655,7 +655,7 @@ idx (index) はリストの要素へ 0 始まりの添字でアクセスする�
 
 D (Diff) は差分を記述し、 P (Parent) はそれらの親を記述する。親を決定する際、バシク行列システムのバージョン 4 と同じように Upper-branch ignoring モデルを使う。その決定に必要になるため Anc (Ancestor) が補助関数として用意されている。
 
-[https://raw.githubusercontent.com/Hexirp/googology/master/v1.0_2.png]
+[https://raw.githubusercontent.com/Hexirp/googology/master/v1.0_2.png v1.0_2.png]
 
 === 山からDPN形式への圧縮 ===
 
@@ -715,7 +715,7 @@ T はカットする部分の中で最も深いゼロではない要素の深さ
 
 ここで、深さを返す大量の関数 (T, t, btm, n, u, m) が出てくるためわかりづらいかもしれない。色がごちゃごちゃしてしまったためわかりづらくなってしまったが、理解の一助になればと図を描いた。
 
-[https://raw.githubusercontent.com/Hexirp/googology/master/v1.0_1.png]
+[https://raw.githubusercontent.com/Hexirp/googology/master/v1.0_1.png v1.0_1.png]
 
 === DPN形式の展開 ===
 
