@@ -840,7 +840,7 @@ R が D への bad root だとしたら r は P と N への bad root である�
   \begin{eqnarray*}
     \mathrm{bas} _ Z ( y ) & \coloneqq &
       \begin{cases}
-        p _ Z ( X _ Z )         & ( y = 1 ) \\ % ここは \mathrm{last} ( p _ Z ( X _ Z ) ) になるかもしれない。これは (1,2,4,8,10) の展開を合わせるため。
+        p _ Z ( X _ Z )         & ( y = 1 ) \\
         p _ Z ( r _ Z - 1 + y ) & ( y > 1 ) \\
       \end{cases} \\
   \end{eqnarray*}
