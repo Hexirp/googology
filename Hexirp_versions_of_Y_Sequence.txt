@@ -979,3 +979,7 @@ D, P は言わずもがな山を作る関数である。
 </math>
 
 {{User:Hexirp/Template:Scroll Bottom}}
+
+== 脚注 ==
+
+<references/>
