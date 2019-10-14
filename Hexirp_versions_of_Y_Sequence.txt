@@ -5,8 +5,8 @@
   \newcommand{\coloneqq}{\vcentcolon{\mathrel{\mkern-1.2mu}}=}
 
   \newcommand{\nil}{[{\mkern3.0mu}]}
-  \newcommand{\cons}{\vcentcolon{\mathrel{\mkern-1.2mu}}\vcentcolon}
-  \newcommand{\append}{+{\mathrel{\mkern-3.0mu}}+}
+  \newcommand{\cons}{{\vcentcolon}{\mathrel{\mkern-1.2mu}}{\vcentcolon}}
+  \newcommand{\append}{{+}{\mathrel{\mkern-3.0mu}}{+}}
 
 </math></div>
 
