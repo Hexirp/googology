@@ -691,7 +691,7 @@ T はカットする部分の中で最も深いゼロではない要素の深さ
 <math>
   \begin{eqnarray*}
     m            _ S ( x ) & \coloneqq & \min ( n _ S ( x ), u _ S ( x ) ) \\
-    u            _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \} \\
+    u            _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \le \mathrm{btm} _ S  ( x ) \} \\
     \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} \\
   \end{eqnarray*}
 </math>
