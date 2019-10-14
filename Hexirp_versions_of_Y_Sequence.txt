@@ -779,7 +779,7 @@ R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り
     \mathrm{pnt} _ Z ( x, n ) & \coloneqq &
       \begin{cases}
         \mathrm{idx} ( \mathrm{reverse} ( p _ Z ( x ) ), n _ Z ( x ) - n ) & ( n \leq n _ Z ( x ) ) \\
-        0                                             & ( n >    n _ Z ( x ) ) \\
+        0                                                                  & ( n >    n _ Z ( x ) ) \\
       \end{cases} \\
     \mathrm{anc} _ Z ( x, n ) & \coloneqq &
       \begin{cases}
