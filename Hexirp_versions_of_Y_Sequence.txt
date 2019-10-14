@@ -774,6 +774,8 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り落とされる要素である。
 
+{{User:Hexirp/Template:Scroll Top}}
+
 <math>
   \begin{eqnarray*}
     \mathrm{pnt} _ Z ( x, n ) & \coloneqq &
@@ -789,9 +791,13 @@ R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 pnt (parent) は親の情報を全て復元する。そのデータを使って anc (ancestor) は祖先を計算する。
 
 ここで本来であればクラスによる分岐がある。この分岐に跨る関数が二つあり、それは r と e である。しかしながら、ここではクラス 1 だけ取り扱うため分岐がなくなっている。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -799,7 +805,11 @@ pnt (parent) は親の情報を全て復元する。そのデータを使って 
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 R が D への bad root だとしたら r は P と N への bad root である。この値は P と N がコピーされる範囲を決めるが、それよりも重要なのが、展開された後のDPN形式の行列の長さ <math> X _ { Z [ n ] } </math> は <math> X _ Z - 1 + r \times n </math> に等しいということである。この性質は、クラス n での定義で重要になる。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -807,7 +817,11 @@ R が D への bad root だとしたら r は P と N への bad root である�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 Δ はコピーされる部分の長さであり、主に親を参照するインデックスがどれだけずれるかを決める。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -819,7 +833,11 @@ R が D への bad root だとしたら r は P と N への bad root である�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 位置 y と深さ n を取って親がずれるかどうかを決める。もし、先祖を辿って行って bad root に行き着くならば一緒にずれる。そうでないならば、ずれない。ここで位置に y を使っているのは bad part の内部の位置であるため。全体の位置なら x になる。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -831,7 +849,11 @@ R が D への bad root だとしたら r は P と N への bad root である�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 bas (base) はコピーされた bad part の基本の親を決める。これが必要なのは接ぎ木があるからである。元の bad part とは違って、コピーされた bad part は一番最初の要素の親がカットされた要素の親になる。カットされた部分に接ぎ木するイメージである。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -845,9 +867,13 @@ bas (base) はコピーされた bad part の基本の親を決める。これ�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 ris (rising) は親をずらしていく部分。引数の m はコピーされた行列の中で 1 始まりで何番目か、 y はコピーされた行列で 1 始まりで何番目か、 p は親のデータ群、 n は深さである。
 
 rise の定義は最難関かもしれない。継続っぽい手法を使ってリストの構造と逆向きの再帰 (foldl) を順向きの再帰 (foldr) に変換している。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -861,7 +887,11 @@ rise の定義は最難関かもしれない。継続っぽい手法を使って
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先頭のところだけ m が一つずれる。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -873,9 +903,13 @@ b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先�
   \end{eqnarray*}
 </math>
 
+{{User:Hexirp/Template:Scroll Bottom}}
+
 B は、コピーされた悪い部分である。
 
 最終的に、全体の展開は以下のようになる。
+
+{{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
@@ -886,6 +920,8 @@ B は、コピーされた悪い部分である。
       \end{cases} \\
   \end{eqnarray*}
 </math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
 
 === DPN形式から山への解凍 ===
 
