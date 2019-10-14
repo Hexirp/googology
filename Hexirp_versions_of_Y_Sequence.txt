@@ -658,7 +658,7 @@ idx (index) はリストの要素へ 0 始まりの添字でアクセスする�
 
 D (Diff) は差分を記述し、 P (Parent) はそれらの親を記述する。親を決定する際、バシク行列システムのバージョン 4 と同じように Upper-branch ignoring モデルを使う。その決定に必要になるため Anc (Ancestor) が補助関数として用意されている。
 
-[[]]
+[https://raw.githubusercontent.com/Hexirp/googology/master/v1.0_2.png]
 
 === 山からDPN形式への圧縮 ===
 
