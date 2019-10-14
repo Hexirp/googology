@@ -98,7 +98,7 @@ DPN (Diff, Parent, and Depth) 形式は、Y数列 Hexirp 版の定義を記述�
 
 展開部はこのように未完成な状況だが、圧縮部と解凍部は既に完成している。
 
-== 汎用関数／表記 ==
+=== 汎用関数／表記 ===
 
 <math>
   \begin{eqnarray*}
