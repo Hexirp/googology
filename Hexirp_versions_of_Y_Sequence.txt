@@ -822,7 +822,7 @@ R が D への bad root だとしたら r は P と N への bad root である�
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-Δ はコピーされる部分の長さであり、主に親を参照するインデックスがどれだけずれるかを決める。
+δ はコピーされる部分の長さであり、主に親を参照するインデックスがどれだけずれるかを決める。
 
 {{User:Hexirp/Template:Scroll Top}}
 
