@@ -37,7 +37,7 @@ Y数列はY数列、一つであるべき<br/>
 * p進大好きbot (2019/9/19) - [https://googology.wikia.org/wiki/User_blog:P%E9%80%B2%E5%A4%A7%E5%A5%BD%E3%81%8Dbot/New_Difference_Sequence_System User blog:P進大好きbot/New Difference Sequence System]
 * Syst3ms (2019/9/28) - [https://googology.wikia.org/wiki/User_blog:Syst3ms/Bismuth_:_not_Y_sequence,_but_close User blog:Syst3ms/Bismuth : not Y sequence, but close]
 
-また、これらと別にゆきと氏の[[東方巨大数]]3に投稿された定義を数式で形式化しようとする試みも存在する。
+また、これらと別にゆきと氏の[[東方巨大数3]]に投稿された定義を数式で形式化しようとする試みも存在する。
 
 * Koteitan (2019/10/8) - [[ユーザーブログ:Koteitan/(1,3)未満のY数列の定義]]
 
