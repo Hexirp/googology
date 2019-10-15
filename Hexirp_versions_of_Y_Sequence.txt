@@ -1164,6 +1164,8 @@ DPN形式に関する表記は以下のようになる。特に添字が 1 始�
 
 DPN形式の展開はクラス 1 に対するものだけ完成している。そのため、クラス n に関する定義は存在せず、ここではクラスが 1 であると仮定している。
 
+d, p, n はそれぞれ対応する要素へのアクセス関数である。のちの b, q, m という関数と対になっている。
+
 {{User:Hexirp/Template:Scroll Top}}
 
 <math>
@@ -1176,7 +1178,7 @@ DPN形式の展開はクラス 1 に対するものだけ完成している。�
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-d, p, n はそれぞれ対応する要素へのアクセス関数である。
+R は分割する位置で G は良い部分で B は悪い部分で C は切り落とされる要素である。クラスが 1 よりも大きいときは、ここに変化が生じるが、まだ構想段階のため語らないでおく。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1212,7 +1214,7 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り落とされる要素である。
+pnt (parent) は親の情報を全て復元する。そのデータを使って anc (ancestor) は祖先を計算する。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1233,9 +1235,9 @@ R は分割する位置、 G は良い部分、 B は悪い部分、 C は切り
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-pnt (parent) は親の情報を全て復元する。そのデータを使って anc (ancestor) は祖先を計算する。
+ここで本来であればクラスによる分岐がある。この分岐を纏める関数が二つあり、それは r と e である。しかしながら、ここではクラス 1 だけ取り扱うため分岐がなくなっている。
 
-ここで本来であればクラスによる分岐がある。この分岐に跨る関数が二つあり、それは r と e である。しかしながら、ここではクラス 1 だけ取り扱うため分岐がなくなっている。
+r はクラス 1 では意味を持たないが、それ以上では大きな意味を持つようになる。重要なのが、展開された後のDPN形式の行列の長さ <math> X _ { Z [ n ] } </math> は <math> X _ Z - 1 + r \times n </math> に等しいということである。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1247,7 +1249,7 @@ pnt (parent) は親の情報を全て復元する。そのデータを使って 
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-R が D への bad root だとしたら r は P と N への bad root である。この値は P と N がコピーされる範囲を決めるが、それよりも重要なのが、展開された後のDPN形式の行列の長さ <math> X _ { Z [ n ] } </math> は <math> X _ Z - 1 + r \times n </math> に等しいということである。この性質は、クラス n での定義で重要になる。
+δ はコピーされる部分の長さであり、主に親を参照するインデックスがどれだけずれる（上昇する）かを決めるのが役割である。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1259,7 +1261,9 @@ R が D への bad root だとしたら r は P と N への bad root である�
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-δ はコピーされる部分の長さであり、主に親を参照するインデックスがどれだけずれるかを決める。
+関数 a は位置 y と深さ n を取って親がずれるかどうかを決める。もし、先祖を辿って行って bad root に行き着くならば一緒にずれる。そうでないならば、ずれない。
+
+ここで位置を表すのに y を使っているのは、全体の位置が x で表されるのと違い bad part の内部の位置を表すからである。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1275,7 +1279,7 @@ R が D への bad root だとしたら r は P と N への bad root である�
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-位置 y と深さ n を取って親がずれるかどうかを決める。もし、先祖を辿って行って bad root に行き着くならば一緒にずれる。そうでないならば、ずれない。ここで位置に y を使っているのは bad part の内部の位置であるため。全体の位置なら x になる。
+bas (base) はコピーされた bad part の基本の親を決める。これが必要なのは接ぎ木があるからである。この接ぎ木というのは、コピーされた bad part は一番最初の要素の親がカットされた要素の親で上書きされる現象につけた名称である。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1291,7 +1295,9 @@ R が D への bad root だとしたら r は P と N への bad root である�
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-bas (base) はコピーされた bad part の基本の親を決める。これが必要なのは接ぎ木があるからである。元の bad part とは違って、コピーされた bad part は一番最初の要素の親がカットされた要素の親になる。カットされた部分に接ぎ木するイメージである。
+ris (rising) は親をずらしていく部分。引数の m はコピーされた行列の中で 1 始まりで何番目か、 y はコピーされた行列で 1 始まりで何番目か、 p は親のデータ群、 n は深さである。
+
+rise の定義は最難関かもしれない。継続っぽい手法を使ってリストの構造と逆向きの再帰 (foldl) を順向きの再帰 (foldr) に変換している。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1309,9 +1315,7 @@ bas (base) はコピーされた bad part の基本の親を決める。これ�
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-ris (rising) は親をずらしていく部分。引数の m はコピーされた行列の中で 1 始まりで何番目か、 y はコピーされた行列で 1 始まりで何番目か、 p は親のデータ群、 n は深さである。
-
-rise の定義は最難関かもしれない。継続っぽい手法を使ってリストの構造と逆向きの再帰 (foldl) を順向きの再帰 (foldr) に変換している。
+b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先頭のところだけ m が一つずれる。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1329,7 +1333,7 @@ rise の定義は最難関かもしれない。継続っぽい手法を使って
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先頭のところだけ m が一つずれる。
+B は、コピーされた悪い部分である。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1344,8 +1348,6 @@ b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先�
 </math>
 
 {{User:Hexirp/Template:Scroll Bottom}}
-
-B は、コピーされた悪い部分である。
 
 最終的に、全体の展開は以下のようになる。
 
