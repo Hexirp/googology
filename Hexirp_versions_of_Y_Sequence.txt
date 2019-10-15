@@ -1261,7 +1261,7 @@ r はクラス 1 では意味を持たないが、それ以上では大きな意
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-関数 a は位置 y と深さ n を取って親がずれるかどうかを決める。もし、先祖を辿って行って bad root に行き着くならば一緒にずれる。そうでないならば、ずれない。
+関数 a は位置 y を取って親がずれるかどうかを決める。もし、深さ 1 において先祖を辿って行って bad root に行き着くならば一緒にずれる。そうでないならば、ずれない。
 
 ここで位置を表すのに y を使っているのは、全体の位置が x で表されるのと違い bad part の内部の位置を表すからである。
 
@@ -1269,10 +1269,10 @@ r はクラス 1 では意味を持たないが、それ以上では大きな意
 
 <math>
   \begin{eqnarray*}
-    a _ Z ( y, n ) & \coloneqq &
+    a _ Z ( y ) & \coloneqq &
       \begin{cases}
-        1 & ( r _ Z \in    \mathrm{anc} _ Z ( r _ Z - 1 + y, n ) ) \\
-        0 & ( r _ Z \notin \mathrm{anc} _ Z ( r _ Z - 1 + y, n ) ) \\
+        1 & ( r _ Z \in    \mathrm{anc} _ Z ( r _ Z - 1 + y, 1 ) ) \\
+        0 & ( r _ Z \notin \mathrm{anc} _ Z ( r _ Z - 1 + y, 1 ) ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
@@ -1295,21 +1295,14 @@ bas (base) はコピーされた bad part の基本の親を決める。これ�
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-ris (rising) は親をずらしていく部分。引数の m はコピーされた行列の中で 1 始まりで何番目か、 y はコピーされた行列で 1 始まりで何番目か、 p は親のデータ群、 n は深さである。
-
-rise の定義は最難関かもしれない。継続っぽい手法を使ってリストの構造と逆向きの再帰 (foldl) を順向きの再帰 (foldr) に変換している。
+ris (rising) は親をずらしていく部分。引数の m はコピーされた行列の中で 1 始まりで何番目かで y はコピーされた行列で 1 始まりで何番目かで p は親のデータ群である。
 
 {{User:Hexirp/Template:Scroll Top}}
 
 <math>
   \begin{eqnarray*}
-    \mathrm{rising} _ Z ( m, y, p, n ) & \coloneqq & p + m \times \delta _ Z \times a _ Z ( y, n ) \\
-    \mathrm{rise} _ Z ( m, y, p, n ) & \coloneqq &
-      \begin{cases}
-        ( \nil, n )                                                  & ( p = \nil                                                                      ) \\
-        ( \mathrm{rising} _ Z ( m, y, p _ v, n' ) \cons p', n' - 1 ) & ( p = p _ v \cons p _ s \land ( p', n' ) = \mathrm{rise} _ Z ( m, y, p _ s, n ) ) \\
-      \end{cases} \\
-    \mathrm{ris} _ Z ( m, y, p, n ) & \coloneqq & p' \quad ( ( p', \_ ) = \mathrm{rise} _ Z ( m, y, p, n ) ) \\
+    \mathrm{rising} _ Z ( m, y, p ) & \coloneqq & p + m \times \delta _ Z \times a _ Z ( y ) \\
+    \mathrm{ris} _ Z ( m, y, p ) & \coloneqq & \mathrm{map} ( \lambda p _ e \ldotp \mathrm{rising} _ Z ( m, y, p _ e ), p ) \\
   \end{eqnarray*}
 </math>
 
@@ -1324,8 +1317,8 @@ b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先�
     b _ Z ( m, y ) & \coloneqq & d _ Z ( r _ Z - 1 + y ) \\
     q _ Z ( m, y ) & \coloneqq &
       \begin{cases}
-        \mathrm{ris} _ Z ( m - 1, y, \mathrm{bas} _ Z ( y ), n _ Z ( r _ Z - 1 + y ) ) & ( y = 1 ) \\
-        \mathrm{ris} _ Z ( m, y, \mathrm{bas} _ Z ( y ), n _ Z ( r _ Z - 1 + y ) )     & ( y > 1 ) \\
+        \mathrm{ris} _ Z ( m - 1, y, \mathrm{bas} _ Z ( y ) ) & ( y = 1 ) \\
+        \mathrm{ris} _ Z ( m, y, \mathrm{bas} _ Z ( y ) )     & ( y > 1 ) \\
       \end{cases} \\
     m _ Z ( m, y ) & \coloneqq & n _ Z ( r _ Z - 1 + y ) \\
   \end{eqnarray*}
