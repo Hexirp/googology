@@ -1085,6 +1085,19 @@ DPN形式に関する表記は以下のようになる。特に添字が 1 始�
 
 === 数列からDPN形式への変換 ===
 
+この節が提供する関数は以下の通りである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    c ( S ) & \coloneqq & c _ S \\
+    v ( S ) & \coloneqq & \mathrm{map} ( \lambda x \ldotp ( d _ S ( x ), p _ S ( x ), n _ S ( x ) ), \mathrm{enumFromTo} ( 1, X _ S ) ) \\ 
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
 数列から山への展開は以下の関数で記述される。 D (Difference) は階差を記述し、 P (Parent) はそれらの親を記述する。親を決定する際、バシク行列システムのバージョン 4 と同じように Upper-branch ignoring モデルを使う。その決定に必要になるため Anc (Ancestor) が補助関数として用意されている。ちなみに私が言う山とは、ここの D と P の値全体である。
 
 {{User:Hexirp/Template:Scroll Top}}
@@ -1162,7 +1175,36 @@ DPN形式に関する表記は以下のようになる。特に添字が 1 始�
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
+最終的に、以下のようにしてDPN形式を構築する。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    c & \coloneqq & c _ S \\
+    Z & \coloneqq & \mathrm{map} ( \lambda x \ldotp ( d _ S ( x ), p _ S ( x ), n _ S ( x ) ), \mathrm{enumFromTo} ( 1, X _ S ) ) \\ 
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
 === DPN形式の展開 ===
+
+この節が提供する関数は以下の通りである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    e ( Z, c, n ) & \coloneqq &
+      \begin{cases}
+        G _ Z \append \mathrm{concat} ( \mathrm{map} ( \lambda m \ldotp B _ Z ( m ), \mathrm{enumFromTo} ( 0, n ) ) & ( c = 1 ) \\
+        \mathrm{undefined}                                                                                          & ( c > 1 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
 
 DPN形式の展開はクラス 1 に対するものだけ完成している。そのため、クラス n に関する定義は存在せず、ここではクラスが 1 であると仮定している。
 
@@ -1362,6 +1404,18 @@ B は、コピーされた悪い部分である。
 
 === DPN形式から数列への変換 ===
 
+この節が提供する関数は以下の通りである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    u ( Z ) & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X _ Z ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
 DPN形式から山への解凍はこのようになっている。
 
 d, p, n はそれぞれ対応する要素へのアクセス関数である。
@@ -1407,6 +1461,53 @@ D, P は山を作り直す関数である。
 <math>
   \begin{eqnarray*}
     S & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X _ Z ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+=== まとめ ===
+
+上の三つの節から提供された関数を用いて全体の定義を記述する。
+
+前提として、数列を分割する三つの集合は以下のように定義する。
+
+* <math> S \in \mathrm{O} \Longleftrightarrow S = ( ) </math> である。
+* <math> S \in \mathrm{S} \Longleftrightarrow S _ { X _ S } = 1 </math> である。
+* <math> S \in \mathrm{L} \Longleftrightarrow S \notin \mathrm{O} \land S \notin \mathrm{S} </math> である。
+
+まず、数列 <math> S </math> と自然数 <math> n </math> に対する関数として <math> S [ n ] </math> を定義する。ただし、ここでは <math> S \in \mathrm{L} </math> である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    S [ n ] & \coloneqq & u ( e ( v ( S ), c ( S ), n ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+次に、後者関数 <math> \mathrm{pred} ( \_ ) </math> を定義する。ただし、ここでは <math> S \in \mathrm{S} </math> である。
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{pred} & \coloneqq & ( S _ 1, S _ 2, \ldots, S _ { X _ S - 1 } ) \\
+  \end{eqnarray*}
+</math>
+
+最後に、表記 <math> S { [ n ] } ' </math> を展開の繰り返しとして定義する。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    S { [ n ] } ' & \coloneqq &
+      \begin{cases}
+        n                               & ( S \in \mathrm{O} ) \\
+        ( pred ( S ) ) { [ n + 1 ] } '  & ( S \in \mathrm{S} ) \\
+        ( S [ n ] ) { [ n + 1 ] } ' & ( S \in \mathrm{L} ) \\
+      \end{cases} \\
   \end{eqnarray*}
 </math>
 
