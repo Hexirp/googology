@@ -1504,9 +1504,9 @@ D, P は山を作り直す関数である。
   \begin{eqnarray*}
     S { [ n ] } ' & \coloneqq &
       \begin{cases}
-        n                              & ( S \in \mathrm{O} ) \\
-        ( pred ( S ) ) { [ n + 1 ] } ' & ( S \in \mathrm{S} ) \\
-        ( S [ n ] ) { [ n + 1 ] } '    & ( S \in \mathrm{L} ) \\
+        n                                       & ( S \in \mathrm{O} ) \\
+        ( \mathrm{pred} ( S ) ) { [ n + 1 ] } ' & ( S \in \mathrm{S} ) \\
+        ( S [ n ] ) { [ n + 1 ] } '             & ( S \in \mathrm{L} ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
