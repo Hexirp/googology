@@ -1492,7 +1492,7 @@ D, P は山を作り直す関数である。
 
 <math>
   \begin{eqnarray*}
-    \mathrm{pred} & \coloneqq & ( S _ 1, S _ 2, \ldots, S _ { X _ S - 1 } ) \\
+    \mathrm{pred} ( S ) & \coloneqq & ( S _ 1, S _ 2, \ldots, S _ { X _ S - 1 } ) \\
   \end{eqnarray*}
 </math>
 
