@@ -1365,9 +1365,11 @@ B は、コピーされた悪い部分である。
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-=== DPN形式から山への解凍 ===
+=== DPN形式から数列への変換 ===
 
-DPN形式から山への解凍は既に完成している。
+DPN形式から山への解凍はこのようになっている。
+
+d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1381,7 +1383,7 @@ DPN形式から山への解凍は既に完成している。
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-d, p, n はそれぞれ対応する要素へのアクセス関数である。
+D, P は山を作り直す関数である。
 
 {{User:Hexirp/Template:Scroll Top}}
 
@@ -1403,11 +1405,7 @@ d, p, n はそれぞれ対応する要素へのアクセス関数である。
 
 {{User:Hexirp/Template:Scroll Bottom}}
 
-D, P は言わずもがな山を作る関数である。
-
-=== 山から数列への変換 ===
-
-山から数列への変換は既に完成している。
+山から数列への変換は深さが 1 の部分を取り出すだけである。
 
 {{User:Hexirp/Template:Scroll Top}}
 
