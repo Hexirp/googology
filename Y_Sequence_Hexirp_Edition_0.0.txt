@@ -1,0 +1,438 @@
+<div style="display:none"><math>
+
+  \newcommand{\ordinarycolon}{:}
+  \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
+  \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+
+</math></div>
+
+'''Y数列'''を数式で定義する。この定義は圧縮・展開・解凍の三段階を使っている。また、圧縮／解凍の形式は D (difference), P (parent), N (depth) の三行で構成された形式（DPN形式と名付けた）を使っている。
+
+== 現状 ==
+
+この記事の定義は <math> ( 1, n ) </math> のY数列に対する定義であるが、現時点ではいくつかの異常が見つかっている。
+
+* <math> ( 1, 2, 4, 8, 10, 8 ) </math> が意図通りに展開されない。これは展開の節の <math> \mathrm{idx} ( p, n ) </math> の定義を変更するだけで容易に解決する見込みであるが、現在の定義のほうも整合性を持っているため、修正した後もどこかに控えておきたいと思う。
+* <math> ( 1, 3, 3, 2, 5, 6, 5 ) </math> が意図通りに展開されない。これは山が飛ぶ挙動が再現できていなかったためである。修正するのは難しそうだが近日中に修正する。
+
+展開部はこのように未完成な状況だが、圧縮部と解凍部は既に完成している。
+
+== 汎用関数／表記 ==
+
+<math>
+  \begin{eqnarray*}
+  x ^ - & \coloneqq & x - 1 \\
+  x ^ + & \coloneqq & x + 1 \\
+  \mathbb{N} ^ + & \coloneqq & \{ x \in \mathbb{N} \mid x \neq 0 \} \\
+  [ x, \ldots, y ] & \coloneqq &
+    \begin{cases}
+      [ \,\, ]                          & ( x >    y ) \\
+      [ x ] \frown [ x ^ +, \ldots, y ] & ( x \leq y ) \\
+    \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+リスト版の内包表記も使っているが、定義を書ききる自信はないので Haskell でのリスト内包表記の動作を参考にしてほしい。
+
+== 圧縮 ==
+
+ここでは <math> S </math> という数列を <math> Z </math> というDPN形式の行列へ圧縮する関数を記述している。また数列 <math> S </math> からクラスを表す自然数 <math> C </math> を求める関数も記述している。
+
+山を構成する部分。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    S & = & ( S _ 1, S _ 2, \ldots, S _ X ) \\
+    D _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        S _ x                                                    & ( n = 1                              ) \\
+        0                                                        & ( n > 1 \land P _ S ( x, n ^ - ) = 0 ) \\
+        D _ S ( x, n ^ - ) - D _ S ( P _ S ( x, n ^ - ), n ^ - ) & ( n > 1 \land P _ S ( x, n ^ - ) > 0 ) \\
+      \end{cases} \\
+    P _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        0                                                                                                                          & ( n = 1 \land D _ S ( x, n ) = 1 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid p < x \land D _ S ( p, n ) < D _ S ( x, n ) \}                                           & ( n = 1 \land D _ S ( x, n ) > 1 ) \\
+        0                                                                                                                          & ( n > 1 \land D _ S ( x, n ) = 0 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid p < x \land D _ S ( p, n ) < D _ S ( x, n ) \land p \in \mathrm{Anc} _ S ( x, n ^ - ) \} & ( n > 1 \land D _ S ( x, n ) > 0 ) \\
+      \end{cases} \\
+    \mathrm{Anc} _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                           & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{Anc} _ S ( P _ S ( x, n ), n ) & ( x > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+山をDPN形式へ圧縮する部分。
+
+<math>
+  \begin{eqnarray*}
+    T _ S & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( X, n ) > 0 \} \\
+    c _ S & \coloneqq & D _ S ( X, T _ S ) \\
+    t _ S & \coloneqq &
+      \begin{cases}
+        T _ S - 1 & ( c _ S = 1 ) \\
+        T _ S     & ( c _ S > 1 ) \\
+      \end{cases} \\
+    \mathrm{btm} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        0                                                       & ( D _ S ( x, 1 ) = 1 ) \\
+        \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} & ( D _ S ( x, 1 ) > 1 ) \\
+      \end{cases} \\
+    u _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \leq n _ S ( x ) \} \\
+    v _ S ( x ) & \coloneqq & n _ S ( x ) \\
+    d _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
+    p _ S ( x ) & \coloneqq & [ P _ S ( x, n ) \mid n \leftarrow [ u _ S ( x ), \ldots, v _ S ( x ) ] ] \\
+    n _ S ( x ) & \coloneqq & \max ( \mathrm{btm} _ S ( x ), t _ S ) \\
+  \end{eqnarray*}
+</math>
+
+DPN形式への圧縮を行う関数は以下のようになる。
+
+<math>
+  z ( S ) \coloneqq
+    \left (
+      \begin{array}{cccc}
+        d _ S ( 1 ) & d _ S ( 2 ) & \cdots & d _ S ( X ) \\
+        p _ S ( 1 ) & p _ S ( 2 ) & \cdots & p _ S ( X ) \\
+        n _ S ( 1 ) & n _ S ( 2 ) & \cdots & n _ S ( X ) \\
+      \end{array}
+    \right )
+</math>
+
+また、付随して行列のクラスも必要な情報に含まれる。
+
+<math>
+  c ( S ) \coloneqq c _ S
+</math>
+
+この <math> z ( S ) </math> が <math> Z </math> となる。また <math> c ( S ) </math> が <math> C </math> となる。
+
+== 展開 ==
+
+ここではDPN形式の行列 <math> S </math> とクラスを表す整数 <math> C </math> と展開数 <math> m </math> から展開済みのDPN形式の行列 <math> Z </math> を求める関数を記述する。
+
+DPN形式の行列の要素へアクセスする関数の部分。
+
+<math>
+  \begin{eqnarray*}
+    S & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, X } \\
+          S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, X } \\
+          S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, X } \\
+        \end{array}
+      \right ) \\
+    D _ S ( x ) & \coloneqq & S _ { 1, x } \\
+    P _ S ( x ) & \coloneqq & S _ { 2, x } \\
+    N _ S ( x ) & \coloneqq & S _ { 3, x } \\
+  \end{eqnarray*}
+</math>
+
+良い部分と悪い部分と刈られた部分の分割の部分。
+
+<math>
+  \begin{eqnarray*}
+    R _ S & \coloneqq & p _ a \quad ( P _ S ( X ) = p _ s \frown [ p _ a ] ) \\
+    G _ S & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, R _ S - 1 } \\
+          S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, R _ S - 1 } \\
+          S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, R _ S - 1 } \\
+        \end{array}
+      \right ) \\
+    B _ S & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          S _ { 1, R _ S - 1 + 1 } & S _ { 1, R _ S - 1 + 2 } & \cdots & S _ { 1, X - 1 } \\
+          S _ { 2, R _ S - 1 + 1 } & S _ { 2, R _ S - 1 + 2 } & \cdots & S _ { 2, X - 1 } \\
+          S _ { 3, R _ S - 1 + 1 } & S _ { 3, R _ S - 1 + 2 } & \cdots & S _ { 3, X - 1 } \\
+        \end{array}
+      \right ) \\
+    C _ S & \coloneqq &
+      \left (
+        \begin{array}{c}
+          S _ { 1, X } \\
+          S _ { 2, X } \\
+          S _ { 3, X } \\
+        \end{array}
+      \right ) \\
+  \end{eqnarray*}
+</math>
+
+下の <math> e ( S, C, n ) </math> が <math> Z </math> である。
+
+=== クラス１ ===
+
+悪い部分をコピーする部分。
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{idx} ( p, n ) & \coloneqq &
+      \begin{cases}
+        p _ a                                          & ( p =              [ p _ a ]                    ) \\
+        p _ a                                          & ( p = p _ s \frown [ p _ b, p _ a ] \land n = 1 ) \\
+        \mathrm{idx} ( p _ s \frown [ p _ b ], n ^ - ) & ( p = p _ s \frown [ p _ b, p _ a ] \land n > 1 ) \\
+      \end{cases} \\
+    \mathrm{pnt} _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \mathrm{idx} ( P _ S ( x ), N _ S ( x ) + 1 - n ) & ( n \leq N _ S ( x ) ) \\
+        0                                                 & ( n >    N _ S ( x ) ) \\
+      \end{cases} \\
+    \mathrm{anc} _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                                      & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{anc} _ S ( \mathrm{pnt} _ S ( x, n ), n ) & ( x > 0 ) \\
+      \end{cases} \\
+    r _ S & \coloneqq & R _ S \\
+    \delta _ S & \coloneqq & X - r _ S \\
+    a _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+        0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+      \end{cases} \\
+    \mathrm{bas} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        P _ S ( X )             & ( x = 1 ) \\
+        P _ S ( r _ S - 1 + x ) & ( x > 1 ) \\
+      \end{cases} \\
+    \mathrm{ris} _ S ( m, x, p, n ) & \coloneqq &
+      \begin{cases}
+        [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
+        \mathrm{ris} _ S ( m, p _ s \frown [ p _ b ], n ^ - ) \frown [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ] & ( p = p _ s \frown [ p _ b, p _ a ] ) \\
+      \end{cases} \\
+    d _ S ( m, x ) & \coloneqq & D _ S ( r _ S - 1 + x ) \\
+    p _ S ( m, x ) & \coloneqq &
+      \begin{cases}
+        \mathrm{ris} _ S ( m - 1, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) ) & ( x = r _ S ) \\
+        \mathrm{ris} _ S ( m, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) )     & ( x > r _ S ) \\
+      \end{cases} \\
+    n _ S ( m, x ) & \coloneqq & N _ S ( r _ S - 1 + x ) \\
+    B _ S ( m ) & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, X - r _ S ) \\
+          p _ S ( m, 1 ) & p _ S ( m, 2 ) & \cdots & p _ S ( m, X - r _ S ) \\
+          n _ S ( m, 1 ) & n _ S ( m, 2 ) & \cdots & n _ S ( m, X - r _ S ) \\
+        \end{array}
+      \right ) \\
+  \end{eqnarray*}
+</math>
+
+新しい行列を求める部分。
+
+<math>
+  e ( S, 1, m ) \coloneqq G _ S \frown B _ S \frown B _ S ( 1 ) \frown B _ S ( 2 ) \frown \cdots \frown B _ S ( m )
+</math>
+
+怒る親を求める部分。
+
+<math>
+  r ( S ) \coloneqq r _ S
+</math>
+
+=== クラスｎ ===
+
+悪い部分をコピーする部分。
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{idx} ( p, n ) & \coloneqq &
+      \begin{cases}
+        p _ a                                          & ( p =              [ p _ a ]                    ) \\
+        p _ a                                          & ( p = p _ s \frown [ p _ b, p _ a ] \land n = 1 ) \\
+        \mathrm{idx} ( p _ s \frown [ p _ b ], n ^ - ) & ( p = p _ s \frown [ p _ b, p _ a ] \land n > 1 ) \\
+      \end{cases} \\
+    \mathrm{pnt} _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \mathrm{idx} ( P _ S ( x ), N _ S ( x ) + 1 - n ) & ( n \leq N _ S ( x ) ) \\
+        0                                                 & ( n >    N _ S ( x ) ) \\
+      \end{cases} \\
+    \mathrm{anc} _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                                      & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{anc} _ S ( \mathrm{pnt} _ S ( x, n ), n ) & ( x > 0 ) \\
+      \end{cases} \\
+    \mathrm{npt} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        0                                                                                                                & ( N _ S ( x ) = 1 ) \\
+        \max \{ p \in \mathbb{N} ^ + \mid p < x \land N _ S ( p ) < N _ S ( x ) \land p \in \mathrm{anc} _ S ( x, 1 ) \} & ( N _ S ( x ) > 1 ) \\
+      \end{cases} \\
+    \mathrm{nan} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                                & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{nan} _ S ( \mathrm{npt} _ S ( x ) ) & ( x > 0 ) \\
+      \end{cases} \\
+    { B' } _ S & \coloneqq & \mathrm{expand} ( B _ S, m ) \\
+    r _ S & \coloneqq & R _ S + ( r ( B _ S ) - 1 ) \\
+    \delta _ S & \coloneqq & X - r _ S \\
+    a _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        1 & ( r _ S \in    \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+        0 & ( r _ S \notin \mathrm{anc} _ S ( r _ S - 1 + x, n ) ) \\
+      \end{cases} \\
+    \mathrm{bas} _ S ( x ) & \coloneqq &
+      \begin{cases}
+        P _ S ( X )             & ( x = 1 ) \\
+        P _ S ( r _ S - 1 + x ) & ( x > 1 ) \\
+      \end{cases} \\
+    \mathrm{ris} _ S ( m, x, p, n ) & \coloneqq &
+      \begin{cases}
+        [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ]                                                              & ( p =              [ p _ a ]        ) \\
+        \mathrm{ris} _ S ( m, p _ s \frown [ p _ b ], n ^ - ) \frown [ p _ a + m \times \delta _ S \times a _ S ( x, n ) ] & ( p = p _ s \frown [ p _ b, p _ a ] ) \\
+      \end{cases} \\
+    \epsilon _ S & \coloneqq & N _ S ( X ) - N _ S ( r _ S ) \\
+    b _ S ( x ) & \coloneqq &
+      \begin{cases}
+        1 & ( r _ S \in    \mathrm{nan} _ S ( r _ S - 1 + x, n ) ) \\
+        0 & ( r _ S \notin \mathrm{nan} _ S ( r _ S - 1 + x, n ) ) \\
+      \end{cases} \\
+    \mathrm{des} _ S ( m, x ) & \coloneqq & N _ S ( r _ S - 1 + x ) + m \times \epsilon _ S \times b _ S ( x ) \\
+    d _ S ( m, x ) & \coloneqq & { { B' } _ S } _ { ( r _ S - R _ S ) + ( m - 1 ) \times ( X - r _ S ) + x } \\
+    p _ S ( m, x ) & \coloneqq &
+      \begin{cases}
+        \mathrm{ris} _ S ( m - 1, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) ) & ( x = r _ S ) \\
+        \mathrm{ris} _ S ( m, x, \mathrm{bas} _ S ( x ), N _ S ( r _ S - 1 + x ) )     & ( x > r _ S ) \\
+      \end{cases} \\
+    n _ S ( m, x ) & \coloneqq & \mathrm{des} _ S ( m, N _ S ( r _ S - 1 + x ) ) \\
+    B _ S ( m ) & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, X - r _ S ) \\
+          p _ S ( m, 1 ) & p _ S ( m, 2 ) & \cdots & p _ S ( m, X - r _ S ) \\
+          n _ S ( m, 1 ) & n _ S ( m, 2 ) & \cdots & n _ S ( m, X - r _ S ) \\
+        \end{array}
+      \right ) \\
+  \end{eqnarray*}
+</math>
+
+新しい行列を求める部分。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  e ( S, C, n ) \coloneqq
+    \left (
+      \begin{array}{cccc|cccc|cccc|cccc|c|cccc}
+
+        S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, R _ S - 1 } &
+        { { B' } _ S } _ { ( R _ S - 1 ) + 1 } & { { B' } _ S } _ { ( R _ S - 1 ) + 2 } & \cdots & { { B' } _ S } _ { r _ S - 1 } &
+        d _ S ( 1, 1 ) & d _ S ( 1, 2 ) & \cdots & d _ S ( 1, X - r _ S ) &
+        d _ S ( 2, 1 ) & d _ S ( 2, 2 ) & \cdots & d _ S ( 2, X - r _ S ) &
+        \cdots &
+        d _ S ( m, 1 ) & d _ S ( m, 2 ) & \cdots & d _ S ( m, X - r _ S ) \\
+
+        S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 1, R _ S - 1 } &
+        S _ { 2, ( R _ S - 1 ) + 1 } & S _ { 2, ( R _ S - 1 ) + 2 } & \cdots & S _ { 3, r _ S - 1 } &
+        p _ S ( 1, 1 ) & p _ S ( 1, 2 ) & \cdots & p _ S ( 1, X - r _ S ) &
+        p _ S ( 2, 1 ) & p _ S ( 2, 2 ) & \cdots & p _ S ( 2, X - r _ S ) &
+        \cdots &
+        p _ S ( m, 1 ) & p _ S ( m, 2 ) & \cdots & p _ S ( m, X - r _ S ) \\
+
+        S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 1, R _ S - 1 } &
+        S _ { 3, ( R _ S - 1 ) + 1 } & S _ { 3, ( R _ S - 1 ) + 2 } & \cdots & S _ { 3, r _ S - 1 } &
+        n _ S ( 1, 1 ) & n _ S ( 1, 2 ) & \cdots & n _ S ( 1, X - r _ S ) &
+        n _ S ( 2, 1 ) & n _ S ( 2, 2 ) & \cdots & n _ S ( 2, X - r _ S ) &
+        \cdots
+        & n _ S ( m, 1 ) & n _ S ( m, 2 ) & \cdots & n _ S ( m, X - r _ S ) \\
+
+      \end{array}
+    \right )
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+怒る親を求める部分。
+
+<math>
+  r ( S ) \coloneqq r _ S
+</math>
+
+== 解凍 ==
+
+ここではDPN形式の行列 <math> S </math> から数列 <math> Z </math> へ復元する関数を記述する。
+
+DPN形式の行列の要素へアクセスする関数の部分。
+
+<math>
+  \begin{eqnarray*}
+    S & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          S _ { 1, 1 } & S _ { 1, 2 } & \cdots & S _ { 1, X } \\
+          S _ { 2, 1 } & S _ { 2, 2 } & \cdots & S _ { 2, X } \\
+          S _ { 3, 1 } & S _ { 3, 2 } & \cdots & S _ { 3, X } \\
+        \end{array}
+      \right ) \\
+    D _ S ( x ) & \coloneqq & S _ { 1, x } \\
+    P _ S ( x ) & \coloneqq & S _ { 2, x } \\
+    N _ S ( x ) & \coloneqq & S _ { 3, x } \\
+  \end{eqnarray*}
+</math>
+
+DPN形式を山へ解凍する部分。
+
+<math>
+  \begin{eqnarray*}
+    d _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        d _ S ( x, n ^ + ) + d _ S ( p _ S ( x, n ), n ) & ( n < N _ S ( x ) ) \\
+        D _ S ( x )                                      & ( n = N _ S ( x ) ) \\
+        0                                                & ( n > N _ S ( x ) ) \\
+      \end{cases} \\
+    p _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \mathrm{idx} ( P _ S ( x ), N _ S ( x ) + 1 - n ) & ( n \leq N _ S ( x ) ) \\
+        0                                                 & ( n >    N _ S ( x ) ) \\
+      \end{cases} \\
+    \mathrm{idx} ( p, n ) & \coloneqq &
+      \begin{cases}
+        p _ a                                          & ( p =              [ p _ a ]                    ) \\
+        p _ a                                          & ( p = p _ s \frown [ p _ b, p _ a ] \land n = 1 ) \\
+        \mathrm{idx} ( p _ s \frown [ p _ b ], n ^ - ) & ( p = p _ s \frown [ p _ b, p _ a ] \land n > 1 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+展開後の数列。
+
+<math>
+  u ( S ) \coloneqq ( d _ S ( 1, 1 ), d _ S ( 2, 1 ), \ldots, d _ S ( X, 1 ) )
+</math>
+
+この <math> u ( S ) </math> が <math> Z </math> となる。
+
+== 全体 ==
+
+<math> S [ n ] </math> を <math> S' </math> へ展開する。
+
+<math>
+  \begin{eqnarray*}
+    S & = & ( S _ 1, S _ 2, \ldots, S _ X ) \\
+    \mathrm{expand} ( S, n ) & \coloneqq & u ( e ( z ( S ), c ( S ), n ) ) \\
+  \end{eqnarray*}
+</math>
+
+この <math> \mathrm{expand} ( S, n ) </math> は <math> S' </math> である。
+
+== 性質 ==
+
+期待しているもの。
+
+# <math> u \circ z = \mathrm{id} </math> である。
+# 辞書式順序で <math> \forall n, \, \mathrm{expand} ( S, n ) < S </math> である。
+
+== 参考文献 ==
+
+* [https://docs.google.com/presentation/d/14xksfL9P3A4Vb_-yIY0jdvCvg77MhjUq08LSHrO4iQE/edit?usp=sharing Y数列の解説] - Y数列の基本的な展開はここを参考にしています。
+* [https://twitter.com/Y_Y_Googology/status/1165222093857804288 Twitter での質疑応答] - 定義を作る際の助けになりました。
+* [[ユーザーブログ:Koteitan/バシク行列の数式的定義]] - 多くの部分はここを元にさせていただきました。
+* [[ユーザーブログ:Hexirp/バシク行列を Haskell に移植]] - Ans や ans や nan などが Haskell への移植の際に導入した関数に由来しています。
+* [[ユーザーブログ:Hassium108/数列・行列関連]] - リストの結合を <math> \frown </math> で表すのは Hassium108 さんの影響です。
