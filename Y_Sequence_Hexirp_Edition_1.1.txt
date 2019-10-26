@@ -472,14 +472,14 @@ D, P は山を作り直す関数である。
   \begin{eqnarray*}
     D _ Z ( x, n ) & \coloneqq &
       \begin{cases}
-        P _ Z ( x, n ^ + ) + D _ Z ( P _ Z ( x, n ), n ) & ( n < N _ Z ( x ) ) \\
-        d _ Z ( x )                                      & ( n = N _ Z ( x ) ) \\
-        0                                                & ( n > N _ Z ( x ) ) \\
+        P _ Z ( x, n ^ + ) + D _ Z ( P _ Z ( x, n ), n ) & ( n < n _ Z ( x ) ) \\
+        d _ Z ( x )                                      & ( n = n _ Z ( x ) ) \\
+        0                                                & ( n > n _ Z ( x ) ) \\
       \end{cases} \\
     P _ Z ( x, n ) & \coloneqq &
       \begin{cases}
-        \mathrm{idx} ( \mathrm{reverse} ( d _ Z ( x ) ), n _ Z ( x ) - n ) & ( n \leq N _ Z ( x ) ) \\
-        0                                                                  & ( n >    N _ Z ( x ) ) \\
+        \mathrm{idx} ( \mathrm{reverse} ( d _ Z ( x ) ), n _ Z ( x ) - n ) & ( n \leq n _ Z ( x ) ) \\
+        0                                                                  & ( n >    n _ Z ( x ) ) \\
       \end{cases} \\
   \end{eqnarray*}
 </math>
