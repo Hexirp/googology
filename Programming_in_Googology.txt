@@ -1,0 +1,42 @@
+巨大数界隈でのプログラム事情が気になったので調べてみた。
+
+== Java ==
+
+[https://twitter.com/GoogologyBot/status/1188331285405585410 巨大数大好きbot] 氏など使用者が数人いる模様である。
+
+どうやら JDoodle.com でソースコードの共有をするケースが多いようだ。
+
+== JavaScript ==
+
+koteitan 氏と Naruyoko 氏が多用している。その多くがウェブ・アプリケーションとして公開されている。
+
+== BASIC ==
+
+バシク氏が多用している。
+
+== Kotlin ==
+
+[https://github.com/Syst3ms/Bismuth Bismuth] にて使用されている。
+
+== C ==
+
+[https://github.com/kyodaisuu/basmat basmat] にて使用されている。
+
+== Python ==
+
+[https://github.com/kyodaisuu/gramod gramod] にて使用されている。
+
+== Haskell ==
+
+私が好んで使っている。
+
+== 発端 ==
+
+この一連のツイートである。
+
+# https://twitter.com/GoogologyBot/status/1188331285405585410
+# https://twitter.com/kanrokoti/status/1188331840542666752
+# https://twitter.com/hexirp_prixeh/status/1188336863850876929
+# https://twitter.com/hexirp_prixeh/status/1188336999876288517
+# https://twitter.com/hexirp_prixeh/status/1188337612760608768
+# https://twitter.com/kyodaisuu/status/1188405146805362688
