@@ -1,0 +1,36 @@
+原始帰納的な全順序を持った整礎構造 I, A を取る。
+
+I の元を index 、 I の元 i と A の元 a の対 ( i, a ) を value と呼ぶ。 0 を独立な記号とする。
+
+いくつかの点と点をつなぐ線からなる有限の tree を考える。
+
+このような tree は I で表される initial point と O で表される non-initial point を持つ。
+
+各 initial point に記号 0 を、 non-initial point に value を与える。
+
+［図形としての解釈］
+
+このような diagram の複雑さは tree の形と value の二つによる。
+
+ordinal diagram とその順序を合わせたものを O ( I, A ) と書き、それらの元を ordinal diagram という。
+
+o.d. は直接証明図と対応する。始式は 0 、各推論には value を与える。
+
+i は推論の複雑さ、 a は推論の適用される式の難しさを表すと思って良い。
+
+# 0 は o.d. である。
+# ( i, a, α ) は o.d. である。
+# 1 と 2 によるものを connected ordinal diagram (c.o.d.) といい、二つ以上の c.o.d. を # で# 繋げたものは o.d. である。
+
+_ = _ は # による順序を無視した同値判定により定められる。
+
+i-section を次のように定義する。
+
+# 0 は i-section を持たない。
+# a が connected でないとき a の各部品の i-section が a の i-section である。
+# a が ( j, a, b) の形とする。
+## j < i なら a は i-section を持たない。
+## j = i なら a の i-section は b である。
+## j > i なら a の i-section は b の i-section である。
+
+順序は……難しい。
