@@ -130,7 +130,7 @@ DPN形式に関する表記は以下のようになる。特に添字が 1 始�
 <math>
   \begin{eqnarray*}
     c ( S ) & \coloneqq & c _ S \\
-    v ( S ) & \coloneqq & \mathrm{map} ( \lambda x \ldotp ( d _ S ( x ), p _ S ( x ), n _ S ( x ) ), \mathrm{enumFromTo} ( 1, X _ S ) ) \\ 
+    v ( S ) & \coloneqq & \mathrm{map} ( \lambda x \ldotp ( d _ S ( x ), p _ S ( x ), n _ S ( x ) ), \mathrm{enumFromTo} ( 1, X _ S ) ) \\
   \end{eqnarray*}
 </math>
 
@@ -219,7 +219,7 @@ DPN形式に関する表記は以下のようになる。特に添字が 1 始�
 <math>
   \begin{eqnarray*}
     c & \coloneqq & c _ S \\
-    Z & \coloneqq & \mathrm{map} ( \lambda x \ldotp ( d _ S ( x ), p _ S ( x ), n _ S ( x ) ), \mathrm{enumFromTo} ( 1, X _ S ) ) \\ 
+    Z & \coloneqq & \mathrm{map} ( \lambda x \ldotp ( d _ S ( x ), p _ S ( x ), n _ S ( x ) ), \mathrm{enumFromTo} ( 1, X _ S ) ) \\
   \end{eqnarray*}
 </math>
 
