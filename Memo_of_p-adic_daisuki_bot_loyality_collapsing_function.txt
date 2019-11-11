@@ -16,7 +16,7 @@
 
 極限順序数 \( \kappa \) の中で \( C \) がクラブ集合 (club set) であることを \( \mathrm{club} ( \kappa, C ) \) とする。ここで \( C \subset \kappa \) という条件が含意されている。
 
-クラス \( X \) に対して \( \pi \in \mathrm{Reg} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap X \neq \emptyset \) を満たす順序数 \( \pi ) 全体のなすクラスを \( S ( X ) \) と置く。
+クラス \( X \) に対して \( \pi \in \mathrm{Reg} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap X \neq \emptyset \) を満たす順序数 \( \pi \) 全体のなすクラスを \( S ( X ) \) と置く。
 
 この \( S ( X ) \) の定義は定常集合の定義に類似している。これを具体的に示すと「非可算な共終数を持つ基数 \( \kappa \) の中で \( S \) が定常集合であるとは \( \S \subseteq \kappa \land \forall C \ldotp \mathrm{club} ( \kappa, C ) \rightarrow C \cap S \neq \emptyset \) である」である。
 
