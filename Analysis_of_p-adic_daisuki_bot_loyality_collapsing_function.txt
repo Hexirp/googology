@@ -6,7 +6,7 @@
 
 順序数全体のなすクラスを \( \mathrm{Ord} \) と置く。
 
-非可算正則基数全体のなすを \( \mathrm{Reg} \) と置く。これは \( \mathrm{Reg} = \{ \omega _ 1, \omega _ 2, \omega _ { \omega _ 0 + 1 }, \omega _ { \omega _ 0 + 2 }, \omega _ { \omega _ 0 + \omega _ 0 + 1 }, \omega _ { \omega _ 1 + 1 }, \ldots \} \) である。また \( \mathrm{Reg} \subset \mathrm{Ord} \) である。
+非可算正則基数全体のなすクラスを \( \mathrm{Reg} \) と置く。これは \( \mathrm{Reg} = \{ \omega _ 1, \omega _ 2, \omega _ { \omega _ 0 + 1 }, \omega _ { \omega _ 0 + 2 }, \omega _ { \omega _ 0 + \omega _ 0 + 1 }, \omega _ { \omega _ 1 + 1 }, \ldots \} \) である。また \( \mathrm{Reg} \subset \mathrm{Ord} \) である。
 
 コンパクト基数全体のなすクラスを \( \mathrm{Cmp} \) と置く。これは \( \mathrm{Cmp} \subset \mathrm{Reg} \) である。
 
