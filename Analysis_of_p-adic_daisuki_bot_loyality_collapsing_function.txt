@@ -1,0 +1,21 @@
+[[ユーザーブログ:P進大好きbot/忠誠心崩壊関数]]を解析します。たぶん途中で止まってしまうのです。
+
+== 記法 ==
+
+そもそもの甘いスウィート・ケーキ。
+
+順序数全体のなすクラスを \( \mathrm{Ord} \) と置く。
+
+非可算正則基数全体のなすを \( \mathrm{Reg} \) と置く。これは \( \mathrm{Reg} = \{ \omega _ 1, \omega _ 2, \omega _ { \omega _ 0 + 1 }, \omega _ { \omega _ 0 + 2 }, \omega _ { \omega _ 0 + \omega _ 0 + 1 }, \omega _ { \omega _ 1 + 1 }, \ldots \} \) である。また \( \mathrm{Reg} \subset \mathrm{Ord} \) である。
+
+コンパクト基数全体のなすクラスを \( \mathrm{Cmp} \) と置く。これは \( \mathrm{Cmp} \subset \mathrm{Reg} \) である。
+
+クラス \( \mathrm{Cmp} \) はもしかしたら空であるかもしれない。また、有限集合であるかもしれず、可算集合であるかもしれず、真のクラスであるかもしれない。
+
+クラス \( X \) に対して \( X \) の部分集合全体のなすクラスを \( \mathcal{P} ( X ) \) と置く。
+
+集合の冪に似ているが、この \( \mathcal{P} ( X ) \) に含まれるのは高々集合であり、真のクラスは含まれない。
+
+極限順序数 \( \kappa \) の中で \( C \) がクラブ集合 (club set) であることを \( \mathrm{club} ( \kappa, C ) \) とする。
+
+クラス \( X \) に対して \( \pi \in \mathrm{Reg} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap X \neq \emptyset \) を満たす順序数 \( \pi ) 全体のなすクラスを \( S ( X ) \) と置く。
