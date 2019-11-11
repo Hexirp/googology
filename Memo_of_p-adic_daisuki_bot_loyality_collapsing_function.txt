@@ -22,7 +22,7 @@
 
 この \( S ( X ) \) の定義は定常集合の定義に類似している。これを具体的に示すと「非可算な共終数を持つ基数 \( \kappa \) の中で \( S \) が定常集合であるとは \( \S \subseteq \kappa \land \forall C \ldotp \mathrm{club} ( \kappa, C ) \rightarrow C \cap S \neq \emptyset \) である」である。
 
-\( \mathrm{ZFC} \) に加えて \( \bigcap _ { n \in \mathbb{N} } S ^ n ( \textrm{Cmp} ) \neq \emptyset \) を課する。ここで \( \textrm{🍰} = \min \bigcap _ { n \in \mathbb{N} } S ^ n ( \textrm{Cmp} ) \) とする。
+\( \mathrm{ZFC} \) に加えて \( \bigcap _ { n \in \mathbb{N} } S ^ n ( \textrm{Cmp} ) \neq \emptyset \) を課する。ここで \( \Delta = \textrm{🍰} = \min \bigcap _ { n \in \mathbb{N} } S ^ n ( \textrm{Cmp} ) \) とする。
 
 ここではより一般的な（弱い）公理をとっているが、ケーキ一つだけがあれば充分である。
 
