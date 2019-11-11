@@ -16,7 +16,7 @@
 
 集合の冪に似ているが、この \( \mathcal{P} ( X ) \) に含まれるのは高々集合であり、真のクラスは含まれない。
 
-極限順序数 \( \kappa \) の中で \( C \) がクラブ集合 (club set) であることを \( \mathrm{club} ( \kappa, C ) \) とする。
+極限順序数 \( \kappa \) の中で \( C \) がクラブ集合 (club set) であることを \( \mathrm{club} ( \kappa, C ) \) とする。ここで \( C \subset \kappa \) という条件がある。
 
 クラス \( X \) に対して \( \pi \in \mathrm{Reg} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap X \neq \emptyset \) を満たす順序数 \( \pi ) 全体のなすクラスを \( S ( X ) \) と置く。
 
