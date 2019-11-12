@@ -65,3 +65,19 @@
 \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subseteq \mathrm{Cmp} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) を \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subset \mathrm{Cmp} \cap \pi \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) に変形する。これは club 集合の性質から \( C \subset \pi \) である。よって \( C \cap K \neq \emptyset \) を成立させるためには \( K \) は \( \pi \) に含まれる範囲だけの集合だけ含んでいればよい。よって、この変形は正しい。
 
 \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subset \mathrm{Cmp} \cap \pi \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) を \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K = \{ k \in \mathrm{Cmp} \mid k < \pi \} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) に変形する。これは \( C \cap K \neq \emptyset \) が \( K \) が大きくなればなるほど成立しやすくなり小さくなれば小さくなるほど成立しづらくなる、厳密にいえば \( K \) で成立したときそれを部分集合に持つ \( K' \) でも成立するため、そのような \( K \) の中でもっとも「大きい」もので代表させるのは問題ない。よって、この変形は正しい。
+
+……英語版 Wikipedia を覗いてみたら Mahlo operation というものがあった。これは \( M ( X ) \) という \( X \) から新しいクラスを作る操作で、それの中でそれと \( X \) の共通部分が定常集合である非可算な共終数を持つ順序数が具体的な中身である。これは、ほぼ \( S ( X ) \) と同じだと言っても問題ないだろう。
+
+例えば \( X \) を正則基数のクラスとする、つまり \( X = \{ \omega _ 0 \} \cup \mathrm{Reg} \) とすると、その \( M ( X ) \) は弱マーロ基数のクラスとなる。つまり \( M ( \mathrm{Reg} ) \) は弱マーロ基数のクラスである。
+
+さらに繰り返し適用が以下のように定められる。
+
+# \( M _ 0 ( X ) = X \) である。
+# \( M _ { \alpha + 1 } ( X ) = M ( M _ \alpha ( X ) ) \) である。
+# \( \alpha \) が極限順序数の時 \( M _ \alpha ( X ) = \bigcap _ { \beta < \alpha } M _ \beta ( X ) \) である。
+
+これにより \( \alpha \)-弱マーロ基数が \( M _ \alpha ( \mathrm{Reg} ) \) によって構成できるはずである（ウィキペディア自体には書いてないが）。
+
+さらに \( \forall \beta \ldotp \beta < \alpha \rightarrow \alpha \in M _ \beta ( X ) \) のような \( \alpha \) を取ることで対角化できる。これは hyper-弱マーロ基数などを生成する。
+
+こうしてみると、弱到達不能基数と似たような形になっていることがわかる。
