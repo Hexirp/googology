@@ -57,3 +57,11 @@
 最終的に \( S ( \mathrm{Cmp} ) \) は、それ未満の弱コンパクト基数の集合がそれの中で定常集合である非可算正則基数のクラスとなる。すなわち、それ未満の弱コンパクト基数の集合がそれの中で定常集合である弱マーロ基数である、としてもよいと思う。このような基数を短く言う方法は知らない。
 
 式を色々変形したが、それらは全く知識的な裏付けがないものである。
+
+……再考してみた。
+
+\( \{ \pi \in \mathrm{Reg} \mid \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap \mathrm{Cmp} \neq \emptyset \} \) を \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subseteq \mathrm{Cmp} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) に変形する。これは、定常集合の性質に関わるのは、必ずしも \( \mathrm{Cmp} \) の全体ではなく、その一部分しか働かない場合もあるということである。ここで \( K = \mathrm{Cmp} \) と取れるので、この変形は正しい。
+
+\( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subseteq \mathrm{Cmp} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) を \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subset \mathrm{Cmp} \cap \pi \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) に変形する。これは club 集合の性質から \( C \subset \pi \) である。よって \( C \cap K \neq \emptyset \) を成立させるためには \( K \) は \( \pi \) に含まれる範囲だけの集合だけ含んでいればよい。よって、この変形は正しい。
+
+\( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subset \mathrm{Cmp} \cap \pi \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) を \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K = \{ k \in \mathrm{Cmp} \mid k < \pi \} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) に変形する。これは \( C \cap K \neq \emptyset \) が \( K \) が大きくなればなるほど成立しやすくなり小さくなれば小さくなるほど成立しづらくなる、厳密にいえば \( K \) で成立したときそれを部分集合に持つ \( K' \) でも成立するため、そのような \( K \) の中でもっとも「大きい」もので代表させるのは問題ない。よって、この変形は正しい。
