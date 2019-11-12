@@ -49,3 +49,5 @@
 まず、クラス \( S ( \mathrm{Cmp} ) \) を考えてみる。これは \( \{ \pi \in \mathrm{Reg} \mid \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap \mathrm{Cmp} \neq \emptyset \} \) である。
 
 定常集合と似ている。ここで、これを \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subseteq \mathrm{Cmp} \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) と変形してみる。これが正しいのかは、実際の所、まったくわからないし、私は数学者でもないのでまったく保証できない。だが、感覚的にはあっているように思う。
+
+さらに変形して \( \{ \pi \in \mathrm{Reg} \mid \exists K \ldotp K \subseteq \mathrm{Cmp} \cup \pi \land \forall C \ldotp \mathrm{club} ( \pi, C ) \rightarrow C \cap K \neq \emptyset \} \) としてみる。
