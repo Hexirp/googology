@@ -91,3 +91,26 @@
 # \( \alpha \) が極限順序数の時 \( M _ X ( \alpha ) = \bigcap _ { \beta < \alpha } M _ X ( \beta ) \) である。
 
 すると \( \Delta = \min M _ \mathrm{Cmp} ( \omega ) \) と綺麗に書ける。
+
+== 写像 ==
+
+四つの関数がある。
+
+\[
+\begin{eqnarray*}
+\mathrm{Ord} ^ 2 & \rightarrow & \mathcal{P} ( \mathrm{Ord} ) \\
+( \alpha, \beta ) & \mapsto & C ( \alpha, \beta ) \\
+\end{eqnarray*}
+\begin{eqnarray*}
+\mathrm{Ord} & \rightarrow & \mathcal{P} ( \Delta ) \\
+\alpha & \mapsto & M ( \alpha ) \\
+\end{eqnarrat*}
+\begin{eqnarray*}
+\mathrm{Ord} & \rightarrow & \Delta + 1 \\
+\alpha & \mapsto & \mu ( \alpha ) \\
+\end{eqnarrat*}
+\begin{eqnarray*}
+\mathrm{Ord} ^ 3 & \rightarrow & \mathcal{P} ( \mathrm{Ord} ) \\
+( \pi, \xi, \alpha ) & \mapsto & \delta ( \pi, \xi, \alpha ) \\
+\end{eqnarray*}
+\]
