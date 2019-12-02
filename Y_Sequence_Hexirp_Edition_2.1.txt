@@ -1,0 +1,544 @@
+<div style="display:none"><math>
+
+  \newcommand{\ordinarycolon}{:}
+  \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
+  \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+
+  \newcommand{\nil}{[\mkern3.0mu]}
+  \newcommand{\cons}{\vcentcolon\mathrel{\mkern-1.2mu}\vcentcolon}
+  \newcommand{\append}{\mathrel{{+}\mkern-3.0mu{+}}}
+
+</math></div>
+
+親記事は[[ユーザーブログ:Hexirp/Y数列 Hexirp 版]]である。
+
+----
+
+Y数列 Hexirp 版 2.1 は、 Hexirp 版 1.1.1 をベースとして、 Hexirp 版 1.1 のアルゴリズムを引き継ぎながらも底なし山バグを修正したバージョンである。このバージョンはプログラムでの実装が先行していた。
+
+=== 型とパターン ===
+
+数列は自然数のリストである。DPN形式は D, P, N のタプルのリストである。リストは何らかの列である。リストは添字が 0 から始まるが、特別に数列とDPN形式だけは添字が 1 から始まる。数列は丸括弧とコンマで表され、DPN形式は行列で表され、リストは角括弧とコンマで表される。いずれも基本構造は <math> \_ \cons \_, \nil </math> である。
+
+数列やDPN形式に関係して現れる 0 は何らかの例外を示す。リストに関係して現れる 0 はそうでない。例えば、親のインデックスの 0 は親が計算できないことを示す。また、階差が 0 になるのはこれ以上階差が計算できないことを示す。深さが 0 になることはない。
+
+=== 一般的な表記 ===
+
+ゼロを含まない自然数全体の集合は以下のように表記する。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    \mathbb{N} ^ + & = & \{ x \in \mathbb{N} \mid x \neq 0 \} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+再帰により減少および増加していく引数の増減には以下のような表記を使う。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    x ^ - & = & x - 1 \\
+    x ^ + & = & x + 1 \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+数列に関する表記は以下のようになる。特に添字が 1 始まりだということが重要である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    X _ S & = & \mathrm{length} ( S ) \\
+    S & = & ( S _ 1, S _ 2, \ldots, S _ { X _ S } ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+リストに関する表記は以下のようになる。特に添字が 0 始まりだということが重要である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    [ x _ 0, x _ 1, \ldots, x _ n ] & = & x _ 0 \cons x _ 1 \cons \cdots \cons x _ n \cons \nil \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+DPN形式に関する表記は以下のようになる。特に添字が 1 始まりだということが重要である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    X _ Z & = & \mathrm{length} ( Z ) \\
+    Z & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, X _ Z } \\
+          Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, X _ Z } \\
+          Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, X _ Z } \\
+        \end{array}
+      \right ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+リストに関する汎用関数は以下の通りである。その他にも <math> \mathrm{reverse}, \mathrm{map}, \mathrm{enumFromTo}, \mathrm{concat} </math> などを使っているが、これらの意味は Haskell の同名関数を参照してほしい。
+
+ここだけの関数である idx (index) はリストの要素へ 0 始まりの添字でアクセスする。そして、要素がもうないときはエラーにならず最後の要素を返す。この関数はもっぱらDPN形式のP、つまり親のリストから全ての深さでの親を復元するために使われる。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{idx} ( p, n ) & \coloneqq &
+      \begin{cases}
+        p _ a                                     & ( p = p _ a \cons \nil                          ) \\
+        p _ a                                     & ( p = p _ a \cons p _ b \cons p _ s \land n = 0 ) \\
+        \mathrm{idx} ( p _ b \cons p _ s, n ^ - ) & ( p = p _ a \cons p _ b \cons p _ s \land n > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+=== 数列からDPN形式への変換 ===
+
+この節が提供する関数は以下の通りである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    c ( S ) & \coloneqq & c _ S \\
+    v ( S ) & \coloneqq & \mathrm{map} ( \lambda x \ldotp ( d _ S ( x ), p _ S ( x ), n _ S ( x ) ), \mathrm{enumFromTo} ( 1, X _ S ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+数列から山への展開は以下の関数で記述される。 D (Difference) は階差を記述し、 P (Parent) はそれらの親を記述する。親を決定する際、バシク行列システムのバージョン 4 と同じように Upper-branch ignoring モデルを使う。その決定に必要になるため Anc (Ancestor) が補助関数として用意されている。ちなみに私が言う山とは、ここの D と P の値全体である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    D _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        S _ x                                                    & ( n = 1                                                                            ) \\
+        0                                                        & ( n > 1 \land P _ S ( x, n ^ - ) = 0                                               ) \\
+        0                                                        & ( n > 1 \land P _ S ( x, n ^ - ) = 0 \land D _ S ( P _ S ( x, n ^ - ), n ^ - ) = 0 ) \\
+        D _ S ( x, n ^ - ) - D _ S ( P _ S ( x, n ^ - ), n ^ - ) & ( n > 1 \land P _ S ( x, n ^ - ) > 0 \land D _ S ( P _ S ( x, n ^ - ), n ^ - ) > 0 ) \\
+      \end{cases} \\
+    P _ S ( x, n ) & \coloneqq & \max ( \{ 0 \} \cup \{ p \in \mathbb{N} ^ + \mid p < x \land D _ S ( p, n ) < D _ S ( x, n ) \land \mathrm{IsAnc} _ S ( x, n ^ -, p ) \} ) \\
+    \mathrm{IsAnc} _ S ( x, n, p ) & \coloneqq &
+      \begin{cases}
+        \mathrm{True}                       & ( n = 1 ) \\
+        p \in \mathrm{Anc} _ S ( x, n - 1 ) & ( n > 1 ) \\
+      \end{cases} \\
+    \mathrm{Anc} _ S ( x, n ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                           & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{Anc} _ S ( P _ S ( x, n ), n ) & ( x > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+山からDPN形式への圧縮は次の通りである。余談だが、検討しなおすと圧縮よりも切り出しの方が正確なような気がする。とはいえ、可逆な操作ではあるので圧縮のままにしておく。
+
+第一に、どの深さで圧縮するか定める。 T はカットする部分の中で最も深いゼロではない要素の深さである。 c は T の要素の値であり、これが数列のクラスである。 t は圧縮する深さである。ここで c が 1 だと T - 1 になるが、それ以外ではそのままである。ここは (1,2,4,8) などを展開しようとするときに深さを 1 つ減らさないとできなかったため、こうなった。このような定義が必要なのは横へ展開するか斜めへ展開するかの違いが原因だと私は見ている。補助関数として親が存在する最も深い深さを返す btm が用意されている。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    T _ S & \coloneqq & \mathrm{btm} _ S ( X _ S ) \\
+    c _ S & \coloneqq & D _ S ( X _ S, T _ S ) \\
+    t _ S & \coloneqq &
+      \begin{cases}
+        T _ S - 1 & ( c _ S = 1 ) \\
+        T _ S     & ( c _ S > 1 ) \\
+      \end{cases} \\
+    \mathrm{btm} _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid D _ S ( x, n ) > 0 \} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+第二に、どこからどこまで親のデータを保存するか決める。さっきもちらっと触れたが、「親が変化し始めてから上限の深さに到達するまでの親」が範囲である。ここで上限の深さとは n である。 u は親が変化し始めた箇所である。最後に m は親を保存し始める深さである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    m            _ S ( x ) & \coloneqq & \min ( n _ S ( x ), u _ S ( x ) ) \\
+    u            _ S ( x ) & \coloneqq & \max \{ n \in \mathbb{N} ^ + \mid P _ S ( x, 1 ) = P _ S ( x, n ) \land n \le \mathrm{btm} _ S  ( x ) \} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+第三に、DPN形式を構築する。 d ( x ) は n での D である。 p は m から n までの P のリストである。これらの定義に使われていることから分かるように n は重要な値である。この段階での n は上限の深さであり、どのくらい深く潜れるか (btm) と展開の深さ (t) を合わせて決定される。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    d _ S ( x ) & \coloneqq & D _ S ( x, n _ S ( x ) ) \\
+    p _ S ( x ) & \coloneqq & \mathrm{map} ( \lambda v \ldotp P _ S ( x, v ), \mathrm{enumFromTo} ( m _ S ( x ), n _ S ( x ) ) ) \\
+    n _ S ( x ) & \coloneqq & \min ( t _ S, \mathrm{btm} _ S ( x ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+最終的に、以下のようにしてDPN形式を構築する。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    c & \coloneqq & c _ S \\
+    Z & \coloneqq & \mathrm{map} ( \lambda x \ldotp ( d _ S ( x ), p _ S ( x ), n _ S ( x ) ), \mathrm{enumFromTo} ( 1, X _ S ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+=== DPN形式の展開 ===
+
+この節が提供する関数は以下の通りである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    e ( Z, c, n ) & \coloneqq &
+      \begin{cases}
+        G _ Z \append \mathrm{concat} ( \mathrm{map} ( \lambda m \ldotp B _ Z ( m ), \mathrm{enumFromTo} ( 0, n ) ) & ( c = 1 ) \\
+        \mathrm{undefined}                                                                                          & ( c > 1 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+DPN形式の展開はクラス 1 に対するものだけ完成している。そのため、クラス n に関する定義は存在せず、ここではクラスが 1 であると仮定している。
+
+d, p, n はそれぞれ対応する要素へのアクセス関数である。のちの b, q, m という関数と対になっている。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    d _ Z ( x ) & \coloneqq & Z _ { 1, x } \\
+    p _ Z ( x ) & \coloneqq & Z _ { 2, x } \\
+    n _ Z ( x ) & \coloneqq & Z _ { 3, x } \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+R は分割する位置で G は良い部分で B は悪い部分で C は切り落とされる要素である。クラスが 1 よりも大きいときは、ここに変化が生じるが、まだ構想段階のため語らないでおく。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    R _ Z & \coloneqq & \mathrm{last} ( p _ Z ( X _ Z ) ) \\
+    G _ Z & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          Z _ { 1, 1 } & Z _ { 1, 2 } & \cdots & Z _ { 1, R _ Z - 1 } \\
+          Z _ { 2, 1 } & Z _ { 2, 2 } & \cdots & Z _ { 2, R _ Z - 1 } \\
+          Z _ { 3, 1 } & Z _ { 3, 2 } & \cdots & Z _ { 3, R _ Z - 1 } \\
+        \end{array}
+      \right ) \\
+    B _ Z & \coloneqq &
+      \left (
+        \begin{array}{cccc}
+          Z _ { 1, R _ Z - 1 + 1 } & Z _ { 1, R _ Z - 1 + 2 } & \cdots & Z _ { 1, X _ Z - 1 } \\
+          Z _ { 2, R _ Z - 1 + 1 } & Z _ { 2, R _ Z - 1 + 2 } & \cdots & Z _ { 2, X _ Z - 1 } \\
+          Z _ { 3, R _ Z - 1 + 1 } & Z _ { 3, R _ Z - 1 + 2 } & \cdots & Z _ { 3, X _ Z - 1 } \\
+        \end{array}
+      \right ) \\
+    C _ Z & \coloneqq &
+      \left (
+        \begin{array}{c}
+          Z _ { 1, X _ Z } \\
+          Z _ { 2, X _ Z } \\
+          Z _ { 3, X _ Z } \\
+        \end{array}
+      \right ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+pnt (parent) は親の情報を全て復元する。そのデータを使って anc (ancestor) は祖先を計算する。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{pnt} _ Z ( x, n ) & \coloneqq &
+      \begin{cases}
+        \mathrm{idx} ( \mathrm{reverse} ( p _ Z ( x ) ), n _ Z ( x ) - n ) & ( n \leq n _ Z ( x ) ) \\
+        0                                                                  & ( n >    n _ Z ( x ) ) \\
+      \end{cases} \\
+    \mathrm{anc} _ Z ( x, n ) & \coloneqq &
+      \begin{cases}
+        \emptyset                                                      & ( x = 0 ) \\
+        \{ x \} \cup \mathrm{anc} _ Z ( \mathrm{pnt} _ Z ( x, n ), n ) & ( x > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+ここで本来であればクラスによる分岐がある。この分岐を纏める関数が二つあり、それは r と e である。しかしながら、ここではクラス 1 だけ取り扱うため分岐がなくなっている。
+
+r はクラス 1 では意味を持たないが、それ以上では大きな意味を持つようになる。重要なのが、展開された後のDPN形式の行列の長さ <math> X _ { Z [ n ] } </math> は <math> X _ Z - 1 + r \times n </math> に等しいということである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    r _ Z & \coloneqq & R _ Z \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+δ はコピーされる部分の長さであり、主に親を参照するインデックスがどれだけずれる（上昇する）かを決めるのが役割である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    \delta _ Z & \coloneqq & X _ Z - r _ Z \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+関数 a は位置 y を取って親がずれるかどうかを決める。もし、深さ 1 において先祖を辿って行って bad root に行き着くならば一緒にずれる。そうでないならば、ずれない。
+
+ここで位置を表すのに y を使っているのは、全体の位置が x で表されるのと違い bad part の内部の位置を表すからである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    a _ Z ( y ) & \coloneqq & r _ Z \in \mathrm{anc} _ Z ( r _ Z - 1 + y, 1 ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+bas (base) はコピーされた bad part の基本の親を決める。これが必要なのは接ぎ木があるからである。この接ぎ木というのは、コピーされた bad part は一番最初の要素の親がカットされた要素の親で上書きされる現象につけた名称である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{bas} _ Z ( y ) & \coloneqq &
+      \begin{cases}
+        p _ Z ( X _ Z )         & ( y = 1 ) \\
+        p _ Z ( r _ Z - 1 + y ) & ( y > 1 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+ris (rising) は親をずらしていく部分。引数の m はコピーされた行列の中で 1 始まりで何番目かで y はコピーされた行列で 1 始まりで何番目かで p は親のデータ群である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{rising} _ Z ( m, y, p ) & \coloneqq &
+      \begin{cases}
+        p + m \times \delta _ Z & ( a _ Z ( y ) = \mathrm{True}  ) \\
+        p                       & ( a _ Z ( y ) = \mathrm{False} ) \\
+      \end{cases} \\
+    \mathrm{ris} _ Z ( m, y, p ) & \coloneqq & \mathrm{map} ( \lambda p _ e \ldotp \mathrm{rising} _ Z ( m, y, p _ e ), p ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+b, q は普通のコピペ。 q は bas で接ぎ木している関係上、先頭のところだけ m が一つずれる。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    b _ Z ( m, y ) & \coloneqq & d _ Z ( r _ Z - 1 + y ) \\
+    q _ Z ( m, y ) & \coloneqq &
+      \begin{cases}
+        \mathrm{ris} _ Z ( m - 1, y, \mathrm{bas} _ Z ( y ) ) & ( y = 1 ) \\
+        \mathrm{ris} _ Z ( m, y, \mathrm{bas} _ Z ( y ) )     & ( y > 1 ) \\
+      \end{cases} \\
+    m _ Z ( m, y ) & \coloneqq & n _ Z ( r _ Z - 1 + y ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+B は、コピーされた悪い部分である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    B _ Z ( m ) & \coloneqq &
+      \begin{cases}
+        B _ Z                                                                                                                       & ( c = 0 ) \\
+        \mathrm{map} ( \lambda y \ldotp ( b _ Z ( m, y ), q _ Z ( m, y ), m _ Z ( m, y ) ), \mathrm{enumFromTo} ( 1, \delta _ Z ) ) & ( c > 0 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+最終的に、全体の展開は以下のようになる。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    Z' & \coloneqq &
+      \begin{cases}
+        G _ Z \append \mathrm{concat} ( \mathrm{map} ( \lambda m \ldotp B _ Z ( m ), \mathrm{enumFromTo} ( 0, n ) ) & ( c = 1 ) \\
+        \mathrm{undefined}                                                                                          & ( c > 1 ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+=== DPN形式から数列への変換 ===
+
+この節が提供する関数は以下の通りである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    u ( Z ) & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X _ Z ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+DPN形式から山への解凍はこのようになっている。
+
+d, p, n はそれぞれ対応する要素へのアクセス関数である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    d _ Z ( x ) & \coloneqq & Z _ { 1, x } \\
+    p _ Z ( x ) & \coloneqq & Z _ { 2, x } \\
+    n _ Z ( x ) & \coloneqq & Z _ { 3, x } \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+D, P は山を作り直す関数である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    D _ Z ( x, n ) & \coloneqq &
+      \begin{cases}
+        P _ Z ( x, n ^ + ) + D _ Z ( P _ Z ( x, n ), n ) & ( n < n _ Z ( x ) ) \\
+        d _ Z ( x )                                      & ( n = n _ Z ( x ) ) \\
+        0                                                & ( n > n _ Z ( x ) ) \\
+      \end{cases} \\
+    P _ Z ( x, n ) & \coloneqq &
+      \begin{cases}
+        \mathrm{idx} ( \mathrm{reverse} ( d _ Z ( x ) ), n _ Z ( x ) - n ) & ( n \leq n _ Z ( x ) ) \\
+        0                                                                  & ( n >    n _ Z ( x ) ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+山から数列への変換は深さが 1 の部分を取り出すだけである。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    S & \coloneqq & \mathrm{map} ( \lambda x \ldotp D _ Z ( x, 1 ), \mathrm{enumFromTo} ( 1, X _ Z ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+=== まとめ ===
+
+上の三つの節から提供された関数を用いて全体の定義を記述する。
+
+前提として、数列を分割する三つの集合は以下のように定義する。
+
+* <math> S \in \mathrm{O} \Longleftrightarrow S = ( ) </math> である。
+* <math> S \in \mathrm{S} \Longleftrightarrow S _ { X _ S } = 1 </math> である。
+* <math> S \in \mathrm{L} \Longleftrightarrow S \notin \mathrm{O} \land S \notin \mathrm{S} </math> である。
+
+まず、数列 <math> S </math> と自然数 <math> n </math> に対する関数として <math> S [ n ] </math> を定義する。ただし、ここでは <math> S \in \mathrm{L} </math> である。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    S [ n ] & \coloneqq & u ( e ( v ( S ), c ( S ), n ) ) \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
+
+次に、後者関数 <math> \mathrm{pred} ( \_ ) </math> を定義する。ただし、ここでは <math> S \in \mathrm{S} </math> である。
+
+<math>
+  \begin{eqnarray*}
+    \mathrm{pred} ( S ) & \coloneqq & ( S _ 1, S _ 2, \ldots, S _ { X _ S - 1 } ) \\
+  \end{eqnarray*}
+</math>
+
+最後に、表記 <math> S { [ n ] } ' </math> を展開の繰り返しとして定義する。
+
+{{User:Hexirp/Template:Scroll Top}}
+
+<math>
+  \begin{eqnarray*}
+    S { [ n ] } ' & \coloneqq &
+      \begin{cases}
+        n                                       & ( S \in \mathrm{O} ) \\
+        ( \mathrm{pred} ( S ) ) { [ n + 1 ] } ' & ( S \in \mathrm{S} ) \\
+        ( S [ n ] ) { [ n + 1 ] } '             & ( S \in \mathrm{L} ) \\
+      \end{cases} \\
+  \end{eqnarray*}
+</math>
+
+{{User:Hexirp/Template:Scroll Bottom}}
