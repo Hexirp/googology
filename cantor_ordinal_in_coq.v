@@ -2,6 +2,8 @@
 
 Require Import Coq.Init.Prelude.
 
+Open Scope list_scope.
+
 (* 今日はね Coq で ε_0 の整礎性を証明したいと思う。 *)
 (* そうそう、この記事は巨大数の紹介でもある。 *)
 (* 巨大数は、大きな数のことだ。巨大数論は大きな数を研究する学問だ。 *)
@@ -28,18 +30,20 @@ Definition cantor_ordinal_term : Type := { n & nat_iter Empty_set list n }.
 
 (* 順序数表記の順序を定義する。 *)
 
-Definition relation (A : Type) : Type := A -> A -> Type.
+Definition order (A : Type) : Type := A -> A -> comparison.
 
-Definition empty_order : relation Empty_set
-  := @Empty_set_rect (fun _ => Empty_set -> Type).
+Definition empty_order : order Empty_set
+  := @Empty_set_rect (fun _ => Empty_set -> comparison).
 
-Open Scope list_scope.
-
-Definition lexicographical_order (A : Type) (order_A : relation A) : relation (list A)
-  := fix order (x : list A) (y : list A) : Type
+Definition lexicographical_order (A : Type) (order_A : order A) : order (list A)
+  := fix f (x : list A) (y : list A) : comparison
     := match x, y with
-      | nil, nil => Empty_set
-      | nil, yv :: ys => unit
-      | xv :: xs, nil => Empty_set
-      | xv :: xs, yv :: ys => sum (order_A xv yv) (order xs ys)
+      | nil, nil => Eq
+      | nil, yv :: ys => Lt
+      | xv :: xs, nil => Gt
+      | xv :: xs, yv :: ys => match order_A xv yv with
+        | Eq => f xs ys
+        | Lt => Lt
+        | Gt => Gt
+      end
     end.
