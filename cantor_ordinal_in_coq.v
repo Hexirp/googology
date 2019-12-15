@@ -126,23 +126,39 @@ Definition cantor_ordinal_order : order cantor_ordinal_term
 
 (* 順序数表記の標準形の判定を定義する。 *)
 
-Fixpoint is_lower_bound_of {A : Type} (order_A : order A) (a : A) (x : list A) : bool
+Fixpoint all {A : Type} (p : A -> bool) (x : list A) : bool
   := match x with
     | nil => true
-    | xv :: xs => match order_A a xv with
-      | Eq => false
-      | Lt => is_lower_bound_of order_A a xs
-      | Gt => false
+    | xv :: xs => match p xv with
+      | true => all p xs
+      | false => false
     end
   end.
+
+Fixpoint is_lower_bound_of {A : Type} (order_A : order A) (a : A) (x : list A) : bool
+  := let pred : A -> bool
+    := fun x => match order_A a x with
+      | Eq => false
+      | Lt => true
+      | Gt => false
+    end
+  in
+    all pred x.
 
 Fixpoint is_sorted {A : Type} (order_A : order A) (x : list A) : bool
   := match x with
     | nil => true
-    | xv :: xs => is_lower_bound_of order_A xv xs && is_sorted order_A xs
+    | xv :: xs => match is_lower_bound_of order_A xv xs with
+      | true => is_sorted order_A xs
+      | false => false
+    end
   end.
 
 Fixpoint cantor_iter_standard (n : nat) (x : cantor_iter n) : bool
   := match n with
     | O => true
-    | S np => .
+    | S np => match all (cantor_iter_standard np x) with
+      | true => is_sorted (cantor_iter_order np) x
+      | false => false
+    end
+  end.
