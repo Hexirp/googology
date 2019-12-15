@@ -132,12 +132,12 @@ Fixpoint all {A : Type} (p : A -> bool) (x : list A) : bool
     | xv :: xs => p xv && all p xs
   end.
 
-Fixpoint is_lower_bound_of {A : Type} (order_A : order A) (a : A) (x : list A) : bool
+Fixpoint is_upper_bound_of {A : Type} (order_A : order A) (a : A) (x : list A) : bool
   := let pred : A -> bool
     := fun x => match order_A a x with
-      | Eq => false
-      | Lt => true
-      | Gt => false
+      | Eq => true
+      | Lt => false
+      | Gt => true
     end
   in
     all pred x.
@@ -145,7 +145,7 @@ Fixpoint is_lower_bound_of {A : Type} (order_A : order A) (a : A) (x : list A) :
 Fixpoint is_sorted {A : Type} (order_A : order A) (x : list A) : bool
   := match x with
     | nil => true
-    | xv :: xs => is_lower_bound_of order_A xv xs && is_sorted order_A xs
+    | xv :: xs => is_upper_bound_of order_A xv xs && is_sorted order_A xs
   end.
 
 Fixpoint cantor_iter_standard (n : nat) (x : cantor_iter n) : bool
