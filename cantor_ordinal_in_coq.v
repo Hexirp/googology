@@ -157,3 +157,8 @@ Fixpoint cantor_iter_standard (n : nat) (x : cantor_iter n) : bool
     end
   in
     matcher x.
+
+Definition cantor_ordinal_standard (x : cantor_ordinal_term) : bool
+  := match x with
+    | existT _ xn xp => cantor_iter_standard xn xp
+  end.
