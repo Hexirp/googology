@@ -37,7 +37,9 @@ Definition order (A : Type) : Type := A -> A -> comparison.
 Definition nat_iter {P : Type} (o : P) (s : P -> P) (n : nat) : P
   := @nat_rect (fun _ => P) o (fun _ => s) n.
 
-Definition cantor_ordinal_term : Type := { n & nat_iter Empty_set list n }.
+Definition cantor_iter (n : nat) : Type := nat_iter Empty_set list n.
+
+Definition cantor_ordinal_term : Type := { n & cantor_iter n }.
 
 (* 順序数表記の順序を定義する。 *)
 
@@ -89,7 +91,7 @@ Proof.
     exact p.
 Defined.
 
-Fixpoint cantor_nat_iter_order (n : nat) : order (nat_iter Empty_set list n)
+Fixpoint cantor_nat_iter_order (n : nat) : order (cantor_iter n)
   := match n with
     | O => empty_order
     | S np => lexicographical_order (cantor_nat_iter_order np)
@@ -104,20 +106,17 @@ Definition cantor_ordinal_order : order cantor_ordinal_term
           return nat_order xn yn = c -> comparison
         with
           | Eq => fun p =>
-            let iter : nat -> Type
-              := fun x => nat_iter Empty_set list x
+            let elimer : nat -> nat -> Type
+              := fun x y => cantor_iter x -> cantor_iter y -> comparison
             in
-              let elimer : nat -> nat -> Type
-                := fun x y => iter x -> iter y -> comparison
-              in
-                eq_rect_nop
-                  (fun x y => elimer x y)
-                  (fun z xs ys => cantor_nat_iter_order z xs ys)
-                  xn
-                  yn
-                  (eq_reflection_nat_order xn yn p)
-                  xe
-                  ye
+              eq_rect_nop
+                (fun x y => elimer x y)
+                (fun z xs ys => cantor_nat_iter_order z xs ys)
+                xn
+                yn
+                (eq_reflection_nat_order xn yn p)
+                xe
+                ye
           | Lt => fun _ => Lt
           | Gt => fun _ => Gt
         end
