@@ -35,7 +35,7 @@ Definition order (A : Type) : Type := A -> A -> comparison.
 Definition empty_order : order Empty_set
   := @Empty_set_rect (fun _ => Empty_set -> comparison).
 
-Definition lexicographical_order (A : Type) (order_A : order A) : order (list A)
+Definition lexicographical_order {A : Type} (order_A : order A) : order (list A)
   := fix f (x : list A) (y : list A) : comparison
     := match x, y with
       | nil, nil => Eq
@@ -45,5 +45,20 @@ Definition lexicographical_order (A : Type) (order_A : order A) : order (list A)
         | Eq => f xs ys
         | Lt => Lt
         | Gt => Gt
+      end
+    end.
+
+Fixpoint cantor_nat_iter_order (n : nat) : order (nat_iter Empty_set list n)
+  := match n with
+    | O => empty_order
+    | S np => lexicographical_order (cantor_nat_iter_order np)
+  end.
+
+Definition cantor_ordinal_order : order cantor_ordinal_term
+  := fun x y => match x, y with
+    | existT _ xn xe, existT _ yn ye => match nat_order xn yn with
+      | Eq => cantor_nat_iter_order xyn xe ye
+      | Lt => Lt
+      | Gt => Gt
       end
     end.
