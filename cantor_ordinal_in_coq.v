@@ -97,18 +97,30 @@ Fixpoint cantor_nat_iter_order (n : nat) : order (nat_iter Empty_set list n)
 
 Definition cantor_ordinal_order : order cantor_ordinal_term
   := fun x y => match x, y with
-    | existT _ xn xe, existT _ yn ye => (match nat_order xn yn as c return nat_order xn yn = c -> comparison with
-      | Eq => fun p =>
-  eq_rect_nop
-    (fun x y => nat_iter Empty_set list x -> nat_iter Empty_set list y -> comparison)
-    (fun z xs ys => cantor_nat_iter_order z xs ys)
-    xn
-    yn
-    (eq_reflection_nat_order xn yn p)
-    xe
-    ye
-      | Lt => fun _ => Lt
-      | Gt => fun _ => Gt
-      end)
-  eq_refl
+    | existT _ xn xe, existT _ yn ye =>
+      let matcher : nat_order xn yn = nat_order xn yn -> comparison :=
+        match nat_order xn yn
+          as c
+          return nat_order xn yn = c -> comparison
+        with
+          | Eq => fun p =>
+            let iter : nat -> Type
+              := fun x => nat_iter Empty_set list x
+            in
+              let elimer : nat -> nat -> Type
+                := fun x y => iter x -> iter y -> comparison
+              in
+                eq_rect_nop
+                  (fun x y => elimer x y)
+                  (fun z xs ys => cantor_nat_iter_order z xs ys)
+                  xn
+                  yn
+                  (eq_reflection_nat_order xn yn p)
+                  xe
+                  ye
+          | Lt => fun _ => Lt
+          | Gt => fun _ => Gt
+        end
+      in
+        matcher eq_refl
     end.
