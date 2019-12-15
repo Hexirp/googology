@@ -129,10 +129,7 @@ Definition cantor_ordinal_order : order cantor_ordinal_term
 Fixpoint all {A : Type} (p : A -> bool) (x : list A) : bool
   := match x with
     | nil => true
-    | xv :: xs => match p xv with
-      | true => all p xs
-      | false => false
-    end
+    | xv :: xs => p xv && all p xs
   end.
 
 Fixpoint is_lower_bound_of {A : Type} (order_A : order A) (a : A) (x : list A) : bool
@@ -148,17 +145,15 @@ Fixpoint is_lower_bound_of {A : Type} (order_A : order A) (a : A) (x : list A) :
 Fixpoint is_sorted {A : Type} (order_A : order A) (x : list A) : bool
   := match x with
     | nil => true
-    | xv :: xs => match is_lower_bound_of order_A xv xs with
-      | true => is_sorted order_A xs
-      | false => false
-    end
+    | xv :: xs => is_lower_bound_of order_A xv xs && is_sorted order_A xs
   end.
 
 Fixpoint cantor_iter_standard (n : nat) (x : cantor_iter n) : bool
-  := match n with
-    | O => true
-    | S np => match all (cantor_iter_standard np x) with
-      | true => is_sorted (cantor_iter_order np) x
-      | false => false
+  := let matcher : cantor_iter n -> bool
+    := match n with
+      | O => fun x => true
+      | S np => fun x =>
+        (all (cantor_iter_standard np) x && is_sorted (cantor_iter_order np) x)%bool
     end
-  end.
+  in
+    matcher x.
