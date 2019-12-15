@@ -91,10 +91,10 @@ Proof.
     exact p.
 Defined.
 
-Fixpoint cantor_nat_iter_order (n : nat) : order (cantor_iter n)
+Fixpoint cantor_iter_order (n : nat) : order (cantor_iter n)
   := match n with
     | O => empty_order
-    | S np => lexicographical_order (cantor_nat_iter_order np)
+    | S np => lexicographical_order (cantor_iter_order np)
   end.
 
 Definition cantor_ordinal_order : order cantor_ordinal_term
@@ -111,7 +111,7 @@ Definition cantor_ordinal_order : order cantor_ordinal_term
             in
               eq_rect_nop
                 (fun x y => elimer x y)
-                (fun z xs ys => cantor_nat_iter_order z xs ys)
+                (fun z xs ys => cantor_iter_order z xs ys)
                 xn
                 yn
                 (eq_reflection_nat_order xn yn p)
@@ -122,4 +122,27 @@ Definition cantor_ordinal_order : order cantor_ordinal_term
         end
       in
         matcher eq_refl
-    end.
+  end.
+
+(* 順序数表記の標準形の判定を定義する。 *)
+
+Fixpoint is_lower_bound_of {A : Type} (order_A : order A) (a : A) (x : list A) : bool
+  := match x with
+    | nil => true
+    | xv :: xs => match order_A a xv with
+      | Eq => false
+      | Lt => is_lower_bound_of order_A a xs
+      | Gt => false
+    end
+  end.
+
+Fixpoint is_sorted {A : Type} (order_A : order A) (x : list A) : bool
+  := match x with
+    | nil => true
+    | xv :: xs => is_lower_bound_of order_A xv xs && is_sorted order_A xs
+  end.
+
+Fixpoint cantor_iter_standard (n : nat) (x : cantor_iter n) : bool
+  := match n with
+    | O => true
+    | S np => .
