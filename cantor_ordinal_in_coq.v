@@ -148,15 +148,28 @@ Fixpoint is_sorted {A : Type} (order_A : order A) (x : list A) : bool
     | xv :: xs => is_upper_bound_of order_A xv xs && is_sorted order_A xs
   end.
 
-Fixpoint cantor_iter_standard (n : nat) (x : cantor_iter n) : bool
+Fixpoint cantor_iter_sorted (n : nat) (x : cantor_iter n) : bool
   := let matcher : cantor_iter n -> bool
     := match n with
       | O => fun x => true
       | S np => fun x =>
-        (all (cantor_iter_standard np) x && is_sorted (cantor_iter_order np) x)%bool
+        (all (cantor_iter_sorted np) x && is_sorted (cantor_iter_order np) x)%bool
     end
   in
     matcher x.
+
+Fixpoint cantor_iter_depth (n : nat) (x : cantor_iter n) : nat
+  := match n with
+    | O => O
+    | S np => let search_maximum : list (cantor_iter np) -> nat
+      := (fix f (x : list (cantor_iter np)) : nat
+        := match x with
+          | nil => 1
+          | xv :: xs => max (cantor_iter_depth np xv) (f xs)
+        end)
+    in
+      search_maximum x
+  end.
 
 Definition cantor_ordinal_standard (x : cantor_ordinal_term) : bool
   := match x with
