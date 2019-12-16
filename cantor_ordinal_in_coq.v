@@ -174,6 +174,16 @@ Fixpoint cantor_iter_depth (n : nat) (x : cantor_iter n) : nat
   in
     matcher x.
 
+Definition cantor_iter_filled (n : nat) (x : cantor_iter n) : bool
+  := match nat_order n (cantor_iter_depth n x) with
+    | Eq => true
+    | Lt => false (* impossible *)
+    | Gt => false
+  end.
+
+Definition cantor_iter_standard (n : nat) (x : cantor_iter n) : bool
+  := cantor_iter_sorted n x && cantor_iter_filled n x.
+
 Definition cantor_ordinal_standard (x : cantor_ordinal_term) : bool
   := match x with
     | existT _ xn xp => cantor_iter_standard xn xp
