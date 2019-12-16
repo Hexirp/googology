@@ -68,28 +68,32 @@ Definition nat_order : order nat
       | S xp, S yp => f xp yp
     end.
 
-Definition eq_reflection_nat_order : forall x y, nat_order x y = Eq -> x = y.
-Proof.
-  refine (fix f (x : nat) (y : nat) {struct x} : nat_order x y = Eq -> x = y := _).
-  refine (match x, y with
-    | O, O => _
-    | O, S yp => _
-    | S xp, O => _
-    | S xp, S yp => _
-  end).
-  - refine (fun _ => eq_refl).
-  - refine (fun p => _).
-    change (Lt = Eq) in p.
-    discriminate.
-  - refine (fun p => _).
-    change (Gt = Eq) in p.
-    discriminate.
-  - refine (fun p => _).
-    change (nat_order xp yp = Eq) in p.
-    apply eq_S.
-    apply f.
-    exact p.
-Defined.
+Definition eq_reflection_nat_order : forall x y, nat_order x y = Eq -> x = y
+  := fix f (x : nat) (y : nat) {struct x} : nat_order x y = Eq -> x = y
+    := match x, y with
+      | O, O => fun _ => eq_refl
+      | O, S yp => fun p => let H : False
+        := let discr : comparison -> Prop
+          := fun x => match x with
+            | Lt => True
+            | _ => False
+          end
+        in
+          eq_ind Lt discr I Eq p
+      in
+        False_ind (0 = S yp) H
+      | S xp, O => fun p => let H : False
+        := let discr : comparison -> Prop
+          := fun x => match x with
+            | Gt => True
+            | _ => False
+          end
+        in
+          eq_ind Gt discr I Eq p
+      in
+        False_ind (S xp = 0) H
+      | S xp, S yp => fun p => eq_S xp yp (f xp yp p)
+    end.
 
 Fixpoint cantor_iter_order (n : nat) : order (cantor_iter n)
   := match n with
