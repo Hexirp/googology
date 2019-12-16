@@ -166,7 +166,7 @@ Fixpoint cantor_iter_depth (n : nat) (x : cantor_iter n) : nat
         := (fix f (x : list (cantor_iter np)) : nat
           := match x with
             | nil => 1
-            | xv :: xs => max (cantor_iter_depth np xv) (f xs)
+            | xv :: xs => max (1 + cantor_iter_depth np xv) (f xs)
           end)
       in
         search_maximum x
