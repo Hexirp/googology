@@ -101,7 +101,7 @@ Fixpoint cantor_iter_order (n : nat) : order (cantor_iter n)
     | S np => lexicographical_order (cantor_iter_order np)
   end.
 
-Definition cantor_ordinal_order : order cantor_ordinal_term
+Definition cantor_ordinal_term_order : order cantor_ordinal_term
   := fun x y => match x, y with
     | existT _ xn xe, existT _ yn ye =>
       let matcher : nat_order xn yn = nat_order xn yn -> comparison :=
@@ -192,3 +192,18 @@ Definition cantor_ordinal_standard (x : cantor_ordinal_term) : bool
   := match x with
     | existT _ xn xp => cantor_iter_standard xn xp
   end.
+
+(* 順序数表記の本体を定義する。 *)
+
+Definition cantor_ordinal : Type
+  := { x : cantor_ordinal_term & cantor_ordinal_standard x = true }.
+
+Definition cantor_ordinal_order : order cantor_ordinal
+  := fun x y => match x, y with
+    | existT _ xv xe, existT _ yv ye => cantor_ordinal_term_order xv yv
+  end.
+
+Definition cantor_ordinal_rel : cantor_ordinal -> cantor_ordinal -> Type
+  := fun x y => cantor_ordinal_order x y = Lt.
+
+(* 後は…… cantor_ordinal_rel の三分律と整礎性を証明するだけだ。 *)
