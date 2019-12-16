@@ -1,0 +1,45 @@
+[[ユーザーブログ:Merliborn/一階順序数算術]]というブログ記事がこないだ投稿された。その前文を読んで共感を覚えた。私も一階述語論理で集合が排除されている順序数の理論を作ろうとした時があったからだ。そして、それは大量の公理が必要になりそうで、少なくとも面白いものにはならなさそうと感じてやめたのだ。
+
+さて、この記事に動機付けされて順序数の理論を再考してみる。しかし、一階述語論理ではだめそうなのだ。そこで、新たに順序数から順序数への関数を言語に加えることにする。すなわち、二階述語順序数論だ。（なお、普通の二階の理論は、この場合で言えば、順序数の集合か、順序数を受け取る引数が一つの述語を、言語に加える。このような場合も二階述語論理といってもいいのか分からないが、取り敢えずはこう書いておく。後で修正するかもしれない。）
+
+== 言語 ==
+
+量化することが出来るのは二つある。順序数と順序数から順序数への関数である。また、新たな記法 \( \_ ( \_ ) \) を加えることにする。これは関数の適用を表す。
+
+さらに \( \_ < \_ \) も言語に加える。これは順序数と順序数の比較である。また \( \_ = \_ \) も存在すると明記しておく。
+
+== 公理 ==
+
+これらの公理には不要なものがあるかもしれない。
+
+=== ゼロの存在 ===
+
+\[ \exists x \ldotp \forall y \ldotp x = y \lor x < y \]
+
+=== より大きいものの存在 ===
+
+\[ \forall x \ldotp \exists y \ldotp x < y \]
+
+=== 上限の存在 ===
+
+\[ \forall x \ldotp \forall f \ldotp \exists y \ldotp \forall z \ldotp ( \exists w \ldotp w < x \land z < f ( w ) ) \rightarrow z < y \]
+
+=== 整礎再帰 ===
+
+\[ [ \forall P ] ( \forall x \ldotp ( \forall y \ldotp y < x \rightarrow \exists z \ldotp P ( y, z ) ) \rightarrow \exists y \ldotp P ( x, y ) ) \rightarrow \exists f \ldotp \forall x \ldotp P ( x, f ( x ) ) \]
+
+たぶん他の公理から導ける。
+
+=== 三分律 ===
+
+\[ \forall y \ldotp \forall y \ldotp x = y \land x < y \land y < x \]
+
+=== 整礎帰納法 ===
+
+\[ [ \forall P ] ( \forall x \ldotp ( \forall y \ldotp y < x \rightarrow P ( y ) ) \rightarrow P ( x ) ) \rightarrow \forall x \ldotp P ( x ) \]
+
+ここでの角括弧は公理図式を表す。
+
+=== 関数の存在／選択公理？ ===
+
+\[ [ \forall P ] ( forall x \ldotp \exists y \ldotp P ( x, y ) ) \rightarrow \exists f \ldotp \forall x \ldotp P ( x, f ( x ) ) \]]
