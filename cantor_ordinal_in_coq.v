@@ -159,17 +159,20 @@ Fixpoint cantor_iter_sorted (n : nat) (x : cantor_iter n) : bool
     matcher x.
 
 Fixpoint cantor_iter_depth (n : nat) (x : cantor_iter n) : nat
-  := match n with
-    | O => O
-    | S np => let search_maximum : list (cantor_iter np) -> nat
-      := (fix f (x : list (cantor_iter np)) : nat
-        := match x with
-          | nil => 1
-          | xv :: xs => max (cantor_iter_depth np xv) (f xs)
-        end)
-    in
-      search_maximum x
-  end.
+  := let matcher : cantor_iter n -> nat
+    := match n with
+      | O => fun _ => O
+      | S np => fun x => let search_maximum : list (cantor_iter np) -> nat
+        := (fix f (x : list (cantor_iter np)) : nat
+          := match x with
+            | nil => 1
+            | xv :: xs => max (cantor_iter_depth np xv) (f xs)
+          end)
+      in
+        search_maximum x
+    end
+  in
+    matcher x.
 
 Definition cantor_ordinal_standard (x : cantor_ordinal_term) : bool
   := match x with
