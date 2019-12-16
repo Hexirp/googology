@@ -52,7 +52,7 @@
 
 === 全単射性 ===
 
-\[ \mathrm{Bij} ( x, y, f ) \coloneqq \forall z \ldotp z < y \rightarrow \exists w \ldot w < x \land f ( w ) = z \land ( \forall v \ldotp v < x \land f ( v ) = z \rightarrow w = v ) ) \]
+\[ \mathrm{Bij} ( x, y, f ) \coloneqq \forall z \ldotp z < y \rightarrow \exists w \ldotp w < x \land f ( w ) = z \land ( \forall v \ldotp v < x \land f ( v ) = z \rightarrow w = v ) ) \]
 
 === 基数性 ===
 
