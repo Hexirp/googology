@@ -255,5 +255,48 @@ Definition RO_to_Tri
   (order_A : A -> A -> comparison)
   : ReflectionOrder A R order_A -> Trichotomy A R
   := fun (H : ReflectionOrder A R order_A) => fun x y =>
-    let macher : order_A x y = order_A x y -> forall x y, sum (x = y) (sum (R x y) (R y x))
-      := match order_A x y as c return order_A x y = c
+    let matcher_0 : comparison -> Type
+      := fun c => match c return Type with
+        | Eq => x = y
+        | Lt => R x y
+        | Gt => R y x
+      end
+    in let matcher_1 : matcher_0 (order_A x y) -> sum (x = y) (sum (R x y) (R y x))
+      := match order_A x y as c return matcher_0 c -> sum (x = y) (sum (R x y) (R y x)) with
+        | Eq => fun t => inl t
+        | Lt => fun t => inr (inl t)
+        | Gt => fun t => inr (inr t)
+      end
+    in
+      matcher_1 (H x y).
+
+Definition ReflectionOrder_nat_order
+: ReflectionOrder nat (fun x y => nat_order x y = Lt) nat_order.
+
+(* これの証明には eq_reflection_nat_order と nat_order x y Lt -> nat_order y x = Gt が。 *)
+
+(* empty_order と lex..._order も RO を証明して *)
+
+(* そこから cantor_iter_order の RO を構成する。 *)
+
+(* あとはドミノ式に cantor_ordinal_order の RO も行けるはず。 *)
+
+(* 整礎性は、まずは empty_order と lex..._order で行ける。 *)
+
+(* cantor_iter_order は整礎にならない。 pp_cantor_ordinal_order ならなる。 *)
+
+(* pp_cantor_ordinal_order の整礎性を証明するためには、まず n で帰納する。 *)
+
+(* そして np の整礎性から x => xv :: xs => xv :: xsv :: xss => ... という分割による帰納法の
+   正当性を得る。これは sorted なので必ず広義減少していき list の長さも有限なので行けるはず。 *)
+
+(* 後は acc xs から acc (xv :: xs) を得るような帰納法を行う。これの正当性のためにさっきの準備がある。
+   ここで xs < xv :: xs を証明するために sorted を使う。 *)
+
+(* ここで { n : nat & pp_cantor_ordinal n } が順序数表記であることの証明ができる。 *)
+
+(* そして、ある関係について、整礎な関係への関係を保つ写像があれば、その関係も整礎であるという基本的な定理を
+   使って、 p_cantor_ordinal_order についての整礎性を得て、順序数表記であることも証明する。 *)
+
+(* 最後に { n : p_cantor_ordinal n } <~> cantor_ordinal になっているはずなので、
+   これを使って終わり。 *)
