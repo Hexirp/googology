@@ -248,3 +248,12 @@ Definition ReflectionOrder
     | Lt => R x y
     | Gt => R y x
   end.
+
+Definition RO_to_Tri
+  (A : Type)
+  (R : A -> A -> Type)
+  (order_A : A -> A -> comparison)
+  : ReflectionOrder A R order_A -> Trichotomy A R
+  := fun (H : ReflectionOrder A R order_A) => fun x y =>
+    let macher : order_A x y = order_A x y -> forall x y, sum (x = y) (sum (R x y) (R y x))
+      := match order_A x y as c return order_A x y = c
