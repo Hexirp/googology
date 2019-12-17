@@ -232,3 +232,19 @@ Definition pp_cantor_ordinal_order (n : nat) : order (pp_cantor_ordinal n)
 Definition pp_cantor_ordinal_rel (n : nat)
   : pp_cantor_ordinal n -> pp_cantor_ordinal n -> Type
   := fun x y => pp_cantor_ordinal_order n x y = Lt.
+
+(* 三分律を証明する。 *)
+
+Definition Trichotomy (A : Type) (R : A -> A -> Type) : Type
+  := forall x y, sum (x = y) (sum (R x y) (R y x)).
+
+Definition ReflectionOrder
+  (A : Type)
+  (R : A -> A -> Type)
+  (order_A : A -> A -> comparison)
+  : Type
+  := forall x y, match order_A x y return Type with
+    | Eq => x = y
+    | Lt => R x y
+    | Gt => R y x
+  end.
