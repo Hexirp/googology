@@ -207,3 +207,28 @@ Definition cantor_ordinal_rel : cantor_ordinal -> cantor_ordinal -> Type
   := fun x y => cantor_ordinal_order x y = Lt.
 
 (* 後は…… cantor_ordinal_rel の三分律と整礎性を証明するだけだ。 *)
+
+(* 整礎性を証明するために階層を作る。 *)
+
+Definition p_cantor_ordinal (n : nat) : Type
+  := { x : cantor_iter n & cantor_iter_standard n x = true }.
+
+Definition p_cantor_ordinal_order (n : nat) : order (p_cantor_ordinal n)
+  := fun x y => match x, y with
+    | existT _ xv xe, existT _ yv ye => cantor_iter_order n xv yv
+  end.
+
+Definition p_cantor_ordinal_rel (n : nat) : p_cantor_ordinal n -> p_cantor_ordinal n -> Type
+  := fun x y => p_cantor_ordinal_order n x y = Lt.
+
+Definition pp_cantor_ordinal (n : nat) : Type
+  := { x : cantor_iter n & cantor_iter_sorted n x = true }.
+
+Definition pp_cantor_ordinal_order (n : nat) : order (pp_cantor_ordinal n)
+  := fun x y => match x, y with
+    | existT _ xv xe, existT _ yv ye => cantor_iter_order n xv yv
+  end.
+
+Definition pp_cantor_ordinal_rel (n : nat)
+  : pp_cantor_ordinal n -> pp_cantor_ordinal n -> Type
+  := fun x y => pp_cantor_ordinal_order n x y = Lt.
