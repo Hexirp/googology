@@ -61,3 +61,15 @@
 === 正則性 ===
 
 \[ \mathrm{Reg} ( x ) \coloneqq \forall y \ldotp \forall f \ldotp ( \forall z \ldotp z < x \rightarrow ( \exists w \ldotp w < y \land f ( w ) < x \land z < f ( w ) ) ) \rightarrow x = y \lor x < y \]
+
+=== マーロ性 ===
+
+\[ \mathrm{Mahlo} ( x ) \coloneqq \forall f \ldotp \exists y \ldotp y < x \land \forall z \ldotp z < y \rightarrow f ( z ) < y \]
+
+== 基数に関する公理 ==
+
+巨大数！　巨大基数！
+
+=== 無限順序数の存在 ===
+
+\[ \exists x \ldotp \forall y \ldotp y < x \rightarrow \exists z \ldotp z < x \land y < z \]
