@@ -2,19 +2,17 @@
 
 [[ユーザーブログ:Merliborn/一階順序数算術]]というブログ記事がこないだ投稿された。その前文を読んで共感を覚えた。私も一階述語論理で集合が排除されている順序数の理論を作ろうとした時があったからだ。そして、それは大量の公理が必要になりそうで、少なくとも面白いものにはならなさそうと感じてやめたのだ。
 
-さて、この記事に動機付けされて順序数の理論を再考してみる。しかし、一階述語論理ではだめそうなのだ。そこで、新たに順序数から順序数への関数を言語に加えることにする。すなわち、二階述語順序数論 (second-order ordinal theory, SOOT) だ。（なお、普通の二階の理論は、この場合で言えば、順序数の集合か、順序数を受け取る引数が一つの述語を、言語に加える。このような場合も二階述語論理といってもいいのか分からないが、取り敢えずはこう書いておく。後で修正するかもしれない。）
+さて、この記事に動機付けされて順序数の理論を再考してみる。しかし、一階述語論理ではだめそうなのだ。そこで、新たに順序数から順序数への関数を言語に加えることにする。すなわち、二階述語順序数論 (second-order ordinal theory, SOOT) だ。
 
-== 言語 ==
+== 言語について ==
 
-量化することが出来るのは二つある。順序数と順序数から順序数への関数である。また、新たな記法 \( \_ ( \_ ) \) を加えることにする。これは関数の適用を表す。
+二階述語論理と言ったら普通は、個体の集合と、個体を受け取る述語と、個体を受け取って返す関数についても量化できるものを指す。このブログでは、もともと一つの個体を受け取って返す関数だけを量化できる範囲に追加していたが、[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/%E4%BA%8C%E9%9A%8E%E8%BF%B0%E8%AA%9E%E9%A0%86%E5%BA%8F%E6%95%B0%E8%AB%96#comm-4357 コメントによる議論]を経て、通常の二階述語論理で扱える範囲に言語を広げることにした。
 
-さらに \( \_ < \_ \) も言語に加える。これは順序数と順序数の比較である。また \( \_ = \_ \) も存在すると明記しておく。
-
-== 公理 ==
+== 公理について ==
 
 これらの公理には不要なものがあるかもしれない。
 
-=== ゼロの存在 ===
+=== 最小元の存在 ===
 
 \[ \exists x \ldotp \forall y \ldotp x = y \lor x < y \]
 
@@ -22,15 +20,9 @@
 
 \[ \forall x \ldotp \exists y \ldotp x < y \]
 
-=== 上限の存在 ===
+=== 上界の存在 ===
 
-\[ \forall x \ldotp \forall f \ldotp \exists y \ldotp \forall z \ldotp ( \exists w \ldotp w < x \land z < f ( w ) ) \rightarrow z < y \]
-
-=== 整礎再帰 ===
-
-\[ [ \forall P ] ( \forall x \ldotp ( \forall y \ldotp y < x \rightarrow \exists z \ldotp P ( y, z ) ) \rightarrow \exists y \ldotp P ( x, y ) ) \rightarrow \exists f \ldotp \forall x \ldotp P ( x, f ( x ) ) \]
-
-たぶん他の公理から導ける。
+\[ \forall x \ldotp \forall f \ldotp \exists y \ldotp \forall z \ldotp ( \exists w \ldotp w < x \land z < f ( w ) ) \rightarrow z = y \lor z < y \]
 
 === 三分律 ===
 
@@ -45,6 +37,40 @@
 === 関数の存在／選択公理？ ===
 
 \[ [ \forall P ] ( \forall x \ldotp \exists y \ldotp P ( x, y ) ) \rightarrow \exists f \ldotp \forall x \ldotp P ( x, f ( x ) ) \]
+
+== 定理について ==
+
+様々な定理が公理から直接的に得られる。
+
+=== 整礎再帰 ===
+
+\[ [ \forall P ] ( \forall x \ldotp ( \forall y \ldotp y < x \rightarrow \exists z \ldotp P ( y, z ) ) \rightarrow \exists y \ldotp P ( x, y ) ) \rightarrow \exists f \ldotp \forall x \ldotp P ( x, f ( x ) ) \]
+
+整礎帰納法で \( P' ( x ) \coloneqq \exists y \ldotp P ( x, y ) \) を \( P \) に代入し、関数の存在を使えばよい。
+
+=== 非反射性 ===
+
+\[ \forall x \ldotp x < x \]
+
+整礎帰納法より出る。
+
+=== 非対称性 ===
+
+\[ \forall x \ldotp \forall y \ldotp x < y \rightarrow \lnot ( y < x ) \]
+
+整礎帰納法より出る。
+
+=== 推移性 ===
+
+\[ \forall x \ldotp \forall y \ldotp \forall z \ldotp x < y \land y < z \rightarrow x < z \]
+
+三分律と整礎帰納法より出る。
+
+=== 外延性 ===
+
+\[ \forall x \ldotp \forall y \ldotp ( \forall z \ldotp ( z < x \rightarrow z < y ) \land ( z < y \rightarrow z < x ) ) \rightarrow x = y \]
+
+三分律と整礎帰納法より出る。
 
 == 性質の表現 ==
 
