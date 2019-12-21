@@ -270,6 +270,34 @@ Definition RO_to_Tri
     in
       matcher_1 (H x y).
 
+Definition sym_gt_nat_order : forall x y, nat_order x y = Gt -> nat_order y x = Lt
+  := fix f (x : nat) (y : nat) : nat_order x y = Gt -> nat_order y x = Lt :=
+    match x, y with
+      | O, O => fun p => let H : False
+        := let discr : comparison -> Prop
+          := fun x => match x with
+            | Eq => True
+            | _ => False
+          end
+        in
+          eq_ind Eq discr I Gt p
+      in
+        False_ind (Eq = Lt) H
+      | O, S yp => fun p => let H : False
+        := let discr : comparison -> Prop
+          := fun x => match x with
+            | Lt => True
+            | _ => False
+          end
+        in
+          eq_ind Lt discr I Gt p
+      in
+        False_ind (Gt = Lt) H
+      | S xp, O => fun _ => eq_refl
+      | S xp, S yp => fun p => _
+    end.
+Proof. Admitted.
+
 Definition ReflectionOrder_nat_order
 : ReflectionOrder nat (fun x y => nat_order x y = Lt) nat_order.
 
