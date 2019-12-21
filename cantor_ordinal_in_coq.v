@@ -319,6 +319,17 @@ Definition ReflectionOrder_nat_order
       in
         matcher_1 eq_refl.
 
+Definition RedlectionOrder_empty_order
+  : ReflectionOrder Empty_set (fun x y => empty_order x y = Lt) empty_order 
+  := let matcher : Empty_set -> Empty_set -> Type
+    := fun x y => match empty_order x y return Type with
+        | Eq => x = y
+        | Lt => empty_order x y = Lt
+        | Gt => empty_order y x = Lt
+      end
+  in
+    @Empty_set_rect (fun x => forall y, matcher x y).
+
 (* これの証明には eq_reflection_nat_order と nat_order x y Lt -> nat_order y x = Gt が。 *)
 
 (* empty_order と lex..._order も RO を証明して *)
