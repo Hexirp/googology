@@ -270,6 +270,15 @@ Definition RO_to_Tri
     in
       matcher_1 (H x y).
 
+Definition nat_order_S : forall x y, nat_order x y = nat_order (S x) (S y)
+  := fix f (x : nat) (y : nat) : nat_order x y = nat_order (S x) (S y) :=
+    match x, y with
+      | O, O => eq_refl
+      | O, S yp => eq_refl
+      | S xp, O => eq_refl
+      | S xp, S yp => eq_refl
+    end.
+
 Definition sym_gt_nat_order : forall x y, nat_order x y = Gt -> nat_order y x = Lt
   := fix f (x : nat) (y : nat) : nat_order x y = Gt -> nat_order y x = Lt :=
     match x, y with
