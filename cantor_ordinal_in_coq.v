@@ -297,7 +297,7 @@ Definition sym_gt_nat_order : forall x y, nat_order x y = Gt -> nat_order y x = 
       in
         False_ind (Gt = Lt) H
       | S xp, O => fun _ => eq_refl
-      | S xp, S yp => fun p => _
+      | S xp, S yp => fun p => eq_trans (eq_sym (nat_order_S yp xp)) (f xp yp (eq_trans (nat_order_S xp yp) p))
     end.
 Proof. Admitted.
 
