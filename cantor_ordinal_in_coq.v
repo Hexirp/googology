@@ -302,7 +302,22 @@ Definition sym_gt_nat_order : forall x y, nat_order x y = Gt -> nat_order y x = 
     end.
 
 Definition ReflectionOrder_nat_order
-: ReflectionOrder nat (fun x y => nat_order x y = Lt) nat_order.
+  : ReflectionOrder nat (fun x y => nat_order x y = Lt) nat_order
+  := fun x y => let matcher_0 : comparison -> Type
+    := fun c => match c return Type with
+        | Eq => x = y
+        | Lt => nat_order x y = Lt
+        | Gt => nat_order y x = Lt
+      end
+    in
+      let matcher_1 : nat_order x y = nat_order x y -> matcher_0 (nat_order x y)
+        := match nat_order x y as c return nat_order x y = c -> matcher_0 c with
+          | Eq => fun p => eq_reflection_nat_order x y p
+          | Lt => fun p => p
+          | Gt => fun p => sym_gt_nat_order x y p
+        end
+      in
+        matcher_1 eq_refl.
 
 (* これの証明には eq_reflection_nat_order と nat_order x y Lt -> nat_order y x = Gt が。 *)
 
