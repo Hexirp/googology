@@ -1,0 +1,33 @@
+<div style="display:none">\[ \newcommand{\ordinarycolon}{:} \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}} \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=} \]</div>
+
+こんなツイートがあった。
+
+[https://twitter.com/taketo1024/status/1207180395529134080 一番目]がこれだ。
+
+{{User:Hexirp/Template:Quote Top}}
+
+0! = 1 であるべき理由をプログラマが一瞬で納得する方法:
+
+与えられた配列の要素の総積を計算する関数を fold で実装するとき、初期値に与えるのは 1 で、n! はそれに [1, 2, ... n] を入れた特殊なものと考えれば、0! は特に空配列を与えた場合なんだから、その値はもちろん初期値の 1 ☝️
+
+{{User:Hexirp/Template:Quote Bottom}}
+
+[https://twitter.com/emptst/status/1207187953572671488 二番目]がこれだ。
+
+{{User:Hexirp/Template:Quote Top}}
+
+なるほど、階乗って一般の整礎順序入りモノイドに拡張できるのかあ、とかいうことをこのツイートを見て思った。群だったら二項係数も拡張できそう。 >rt
+
+{{User:Hexirp/Template:Quote Bottom}}
+
+それなら、順序数がおあつらえ向きだ。
+
+== 定義 ==
+
+ある適切な基本列系を取る。それは \( \alpha = \beta + 1 \) であったとき \( \forall \eta \ldotp \alpha [ \eta ] = \beta \) でなければならない。
+
+\[ \alpha ! _ n \coloneqq \begin{case} 1 & ( \alpha = 0 ) \\ \alpha \times \alpha [ n ] ! _ n & ( \alpha > 0 ) \\ \end{cases} \]
+
+== 計算 ==
+
+\[ \begin{eqnarray*} \omega ^ 3 ! _ 1 & = & \omega ^ 3 \times \omega ^ 2 ! _ 1 \\ & = & \omega ^ 3 \times \omega ^ 2 \times \omega ! _ 1 \\ & = & \omega ^ 3 \times \omega ^ 2 \times \omega \times 1 ! _ 1 \\ & = & \omega ^ 3 \times \omega ^ 2 \times \omega \times 1 \times 0 ! _ 1 \\ & = & \omega ^ 3 \times \omega ^ 2 \times \omega \times 1 \times 1 \\ & = & \omega ^ 6 \\ \end{eqnarray*} \]
