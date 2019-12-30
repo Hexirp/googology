@@ -28,6 +28,10 @@
 
 \[ \alpha ! _ n \coloneqq \begin{cases} 1 & ( \alpha = 0 ) \\ \alpha \times \alpha [ n ] ! _ n & ( \alpha > 0 ) \\ \end{cases} \]
 
+あるいは、また別の適切な基本列系を取る。ゼロであるというクラスを \( \mathrm{O} \) とし後続順序数であるというクラスを \( \mathrm{S} \) とし極限順序数であるというクラスを \( \mathrm{L} \) とする。前者を求める関数を \( \mathrm{pred} ( \_ ) \) とする。
+
+\[ \alpha ! _ n \coloneqq \begin{cases} 1 & ( \alpha \in \mathrm{O} ) \\ \mathrm{pred} ( \alpha ) & ( \alpha \in \mathrm{S} ) \\ \alpha \times \alpha [ n ] ! _ n & ( \alpha \in \mathrm{L} ) \\ \end{cases} \]
+
 == 計算 ==
 
 \[ \begin{eqnarray*} \omega ^ 3 ! _ 1 & = & \omega ^ 3 \times \omega ^ 2 ! _ 1 \\ & = & \omega ^ 3 \times \omega ^ 2 \times \omega ! _ 1 \\ & = & \omega ^ 3 \times \omega ^ 2 \times \omega \times 1 ! _ 1 \\ & = & \omega ^ 3 \times \omega ^ 2 \times \omega \times 1 \times 0 ! _ 1 \\ & = & \omega ^ 3 \times \omega ^ 2 \times \omega \times 1 \times 1 \\ & = & \omega ^ 6 \\ \end{eqnarray*} \]
