@@ -26,7 +26,7 @@
 
 ある適切な基本列系を取る。それは \( \alpha = \beta + 1 \) であったとき \( \forall \eta \ldotp \alpha [ \eta ] = \beta \) でなければならない。
 
-\[ \alpha ! _ n \coloneqq \begin{case} 1 & ( \alpha = 0 ) \\ \alpha \times \alpha [ n ] ! _ n & ( \alpha > 0 ) \\ \end{cases} \]
+\[ \alpha ! _ n \coloneqq \begin{cases} 1 & ( \alpha = 0 ) \\ \alpha \times \alpha [ n ] ! _ n & ( \alpha > 0 ) \\ \end{cases} \]
 
 == 計算 ==
 
