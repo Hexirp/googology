@@ -1,4 +1,4 @@
-\[ \DeclareMathSymbol{\mhyph}{\mathalpha}{operators}{`-} \]
+\[ \mathchardef\mhyph="2D \]
 
 私は巨大数界隈で間違った情報が広まっていたり、正しい情報であったとしてもその出典が分からないという状況に不満を感じています。そんな状況を解決するために、確かな論文を利用しましょう。
 
