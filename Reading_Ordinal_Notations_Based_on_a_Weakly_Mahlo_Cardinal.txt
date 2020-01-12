@@ -1,3 +1,5 @@
+\[ \DeclareMathSymbol{\mhyph}{\mathalpha}{operators}{`-} \]
+
 私は巨大数界隈で間違った情報が広まっていたり、正しい情報であったとしてもその出典が分からないという状況に不満を感じています。そんな状況を解決するために、確かな論文を利用しましょう。
 
 この記事では Ordinal Notations Based on a Weakly Mahlo Cardinal (Michael Rathjen) という論文を読み、その中から出典として使える部分を抜き出してリストアップします。そのリストは記事を書きたいときに簡単に引用できるように整えてあります。私が利用するためのものですが、他の人にも使ってもらいたいと思っています。
@@ -22,9 +24,9 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 
 「今まで」は、この論文が書かれるまでとなる。つまり1990年までと思っていいだろう。
 
-\( \Delta _ 2 ^ 1 \)-内包とバー帰納法により構成される二階算術のサブシステム (the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-comprehension and Bar-induction) を略記するならば \( \Delta _ 2 ^ 1 \mathchar`- \mathrm{CA} + \mathrm{BI} \) となるであろう。この体系が何であるか理解するためには Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] を参照すればいいであろう。なぜか Wikipedia や nLab より詳しい。
+\( \Delta _ 2 ^ 1 \)-内包とバー帰納法により構成される二階算術のサブシステム (the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-comprehension and Bar-induction) を略記するならば \( \Delta _ 2 ^ 1 \mhyph \mathrm{CA} + \mathrm{BI} \) となるであろう。この体系が何であるか理解するためには Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] を参照すればいいであろう。なぜか Wikipedia や nLab より詳しい。
 
-\( \Delta _ 2 ^ 1 \)-内包 (\( \Delta _ 2 ^ 1 \mathchar`- \mathrm{CA} \), \( \Delta _ 2 ^ 1 \)-comprehension) とは \( \Delta _ 2 ^ 1 \) 文に対する内包公理である。詳細に書くならば \( \forall \phi \in \Delta _ 2 ^ 1 [ \exists X \ldotp \forall x \ldotp x \in X \leftrightarrow \phi ( x ) ] \) となるであろう。ここで角括弧は公理図式であることを表す。
+\( \Delta _ 2 ^ 1 \)-内包 (\( \Delta _ 2 ^ 1 \mhyph \mathrm{CA} \), \( \Delta _ 2 ^ 1 \)-comprehension) とは \( \Delta _ 2 ^ 1 \) 文に対する内包公理である。詳細に書くならば \( \forall \phi \in \Delta _ 2 ^ 1 [ \exists X \ldotp \forall x \ldotp x \in X \leftrightarrow \phi ( x ) ] \) となるであろう。ここで角括弧は公理図式であることを表す。
 
 \( \Sigma _ n ^ 1 \) と \( \Pi _ n ^ 1 \) と \( \Delta _ n ^ 1 \) とは、解析的階層 ({{w|analytical hierarchy}}) のことであり、算術的階層 ({{w|arithmetical hierarchy}}) を二階算術の論理式に対して拡張したものである。そもそも旧来の算術的階層はペアノ算術の論理式を \( \Sigma _ n ^ 0 \) と \( \Pi _ n ^ 0 \) と分類するものである。そのペアノ算術の式における定義は以下のようなものであった。
 
