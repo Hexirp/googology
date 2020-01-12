@@ -1,0 +1,43 @@
+私は巨大数界隈で間違った情報が広まっていたり、正しい情報であったとしてもその出典が分からないという状況に不満を感じています。そんな状況を解決するために、確かな論文を利用しましょう。
+
+この記事では Ordinal Notations Based on a Weakly Mahlo Cardinal (Michael Rathjen) という論文を読み、その中から出典として使える部分を抜き出してリストアップします。それらは記事を書きたいときに簡単に引用できるように整えてあります。私が利用するためのものですが、他の人にも使ってもらいたいと思っています。
+
+== 形式 ==
+
+見出しはハーバード方式による出典の記法です。それぞれの節は一文に対応します。本文は訳であり、その後にもしあれば解説が続きます。
+
+== Rathjen 1990, p. 1 ==
+
+この部分は Introduction です。ここに限っては一次資料ではなく二次資料として使うこともできるでしょう。
+
+=== 最大の順序数解析 ===
+
+今までに限るならばは、 \( \Delta ^ 1 _ 2 \)-内包とバー帰納法により構成される二階算術のサブシステムが、その証明論的順序を私たちが算出できる最大の理論です。
+
+==== 解説 ====
+
+「今まで」は、この論文が書かれるまでとなる。つまり1990年までと思っていいだろう。
+
+\( \Delta _ 2 ^ 1 \)-内包とバー帰納法により構成される二階算術のサブシステム (the subsystem of second order arithmetic with \( \Delta _ 2 - 1 \)-comprehension and Bar-induction) を略記するならば \( \Delta _ 2 ^ 1 \mathchar{`-} \mathrm{CA} + \mathrm{BI} \) となるであろう。この体系が何であるか理解するためには Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic] を参照すればいいであろう。なぜか Wikipedia や nLab より詳しい。
+
+\( \Delta _ 2 ^ 1 \mathchar{`-} \mathrm{CA} \) とは \( \Delta _ 2 ^ 1 \) 文に対する内包公理である。詳細に書くならば \( \forall \phi \in \Delta _ 2 ^ 1 [ \exists X \ldotp \forall x \ldotp x \in X \leftrightarrow \phi ( x ) ] \) となるであろう。ここで角括弧は公理図式であることを表す。
+
+\( \Sigma _ n ^ 1 \) と \( \Pi _ n ^ 1 \) と \( \Delta _ n ^ 1 \) とは、解析的階層 (analytical hierarchy) のことであり、算術的階層 (arithmetical hierarchy) を二階算術の論理式に対して拡張したものである。そもそも旧来の算術的階層はペアノ算術の論理式を \( \Sigma _ n ^ 0 \) と \( \Pi _ n ^ 0 \) と分類するものである。そのペアノ算術の式における定義は以下のようなものであった。
+
+# ある式 \( \phi \) が \( \Sigma _ n ^ 0 \) に属する条件：
+## \( n = 0 \) のとき、 \( \phi \) の量化が有界であれば \( \Sigma _ n ^ 0 \) に属する。
+## \( n > 0 \) のとき、 \( \Pi _ { n - 1 } ^ 0 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の変数に対する存在量化を加えた \( \exists n _ 0 \ldotp \exists n _ 1 \ldotp \cdots \exists n _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Sigma _ n ^ 0 \) に属する。
+# ある式 \( \phi \) が \( \Pi _ n ^ 0 \) に属する条件：
+## \( n = 0 \) のとき、 \( \phi \) の量化が全て有界であれば \( \Pi _ n ^ 0 \) に属する。
+## \( n > 0 \) のとき、 \( \Sigma _ { n - 1 } ^ 0 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の変数に対する全称量化を加えた \( \forall n _ 0 \ldotp \forall n _ 1 \ldotp \cdots \forall n _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Pi _ n ^ 0 \) に属する。
+
+解析的階層 (analytical hierarchy) の定義は上記の定義を少し変えて、以下のようになる。
+
+# ある式 \( \phi \) が \( \Sigma _ n ^ 1 \) に属する条件：
+## \( n = 0 \) のとき、 \( \phi \) の量化が全て自然数に対するものであれば \( \Sigma _ n ^ 1 \) に属する。
+## \( n > 0 \) のとき、 \( \Pi _ { n - 1 } ^ 0 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の集合の変数に対する存在量化を加えた \( \exists X _ 0 \ldotp \exists X _ 1 \ldotp \cdots \exists X _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Sigma _ n ^ 0 \) に属する。
+# ある式 \( \phi \) が \( \Pi _ n ^ 0 \) に属する条件：
+## \( n = 0 \) のとき、 \( \phi \) の量化が全て自然数に対するものであれば \( \Pi _ n ^ 0 \) に属する。
+## \( n > 0 \) のとき、 \( \Sigma _ { n - 1 } ^ 0 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の集合変数に対する全称量化を加えた \( \forall X _ 0 \ldotp \forall X _ 1 \ldotp \cdots \forall X _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Pi _ n ^ 0 \) に属する。
+
+バー帰納法 \( \mathrm{BI} \) とは、二階算術の式で表せる整礎半順序 \( \_ \prec \_ \) 全てと、論理式 \( \phi \) 全てに対して \( ( \forall j \ldotp ( \forall i \prec j \ldotp \phi ( i ) ) \rightarrow \phi ( j ) ) \rightarrow \forall n \ldotp \phi ( n ) \) が成り立つという公理図式である。
