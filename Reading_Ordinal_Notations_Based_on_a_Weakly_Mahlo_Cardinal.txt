@@ -50,20 +50,20 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 
 バー帰納法 (\( \mathrm{BI} \), {{w|bar induction}}) とは、二階算術の式で表せる整礎半順序 \( \_ \prec \_ \) 全てに対して \( \forall X \ldotp ( \forall j \ldotp ( \forall i \prec j \ldotp i \in X ) \rightarrow j \in X ) \rightarrow \forall n \ldotp n \in X \) が成り立つという公理図式である。ここで \( \_ \in X \) は \( \phi ( \_ ) \) に取り換えることができる。なお wikipedia においては relations to other fields にある reverse mathematics における bar induction として記載されているものに該当すると思われる。ここで Wikipedia および Googology Wiki の書き方では整礎半順序であるという性質がメタなものなのかはっきりしないので Well-Ordering Principles and Bar Induction (Rathjen and Vizcaíno  2015) の p. 5 にある Definition 1.8 を参考にして定義を書こう。
 
-二項関係 \( \_ \proc \_ \) と、二階算術においての任意の項 \( F ( \_ ) \) を渡る。一つ目の述語は progressiveness についてである。
+二項関係 \( \_ \prec \_ \) と、二階算術においての任意の項 \( F ( \_ ) \) を渡る。一つ目の述語は progressiveness についてである。
 
-\[ \mathrm{Prog} ( \_ \proc \_, F ) \coloneqq \forall x \ldotp ( \forall y \ldotp y \proc x \rightarrow F ( y ) ) \rightarrow F ( x ) \]
+\[ \mathrm{Prog} ( \_ \prec \_, F ) \coloneqq \forall x \ldotp ( \forall y \ldotp y \prec x \rightarrow F ( y ) ) \rightarrow F ( x ) \]
 
 二つ目の述語は transfinite induction についてである。
 
-\[ \mathbf{TI} ( \_ \proc \_, F ) \coloneqq \mathrm{Prog} ( \_ \proc \_, F ) \rightarrow \forall x \ldotp F ( x ) \]
+\[ \mathbf{TI} ( \_ \prec \_, F ) \coloneqq \mathrm{Prog} ( \_ \prec \_, F ) \rightarrow \forall x \ldotp F ( x ) \]
 
 三つ目の述語は well-foundedness についてである。アンダースコアを使っている部分は不思議かもしれないが部分は \( F ( x ) \coloneqq x \in X \) というように展開される。
 
-\[ \mathrm{WF} ( \_ \proc \_ ) \coloneqq \forall X \ldotp \mathbf{TI} ( \_ \proc \_, \_ \in X ) \]
+\[ \mathrm{WF} ( \_ \prec \_ ) \coloneqq \forall X \ldotp \mathbf{TI} ( \_ \prec \_, \_ \in X ) \]
 
-これらによりバー帰納法という公理図式が以下のように定義される。ここで \( \_ \proc \_ \) と \( F \) の引数は両方とも自然数であるか両方とも集合であるかのどちらかである。どちらでもいいような書き方になっていることに注意してほしい。
+これらによりバー帰納法という公理図式が以下のように定義される。ここで \( \_ \prec \_ \) と \( F \) の引数は両方とも自然数であるか両方とも集合であるかのどちらかである。どちらでもいいような書き方になっていることに注意してほしい。
 
-\[ \forall \_ \proc \_ \ldotp \forall F \ldotp [ \mathrm{WF} ( \_ \proc \_ ) \rightarrow \mathbf{TI} ( \_ \proc \_, F ) ] \]
+\[ \forall \_ \prec \_ \ldotp \forall F \ldotp [ \mathrm{WF} ( \_ \prec \_ ) \rightarrow \mathbf{TI} ( \_ \prec \_, F ) ] \]
 
-ここで \( \_ \proc \_ \) は整礎半順序ではなく整礎関係であることだけが要請されているが、これはバリエーションと考えていいだろう。あるいは Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] の方が間違っているのかもしれない。
+ここで \( \_ \prec \_ \) は整礎半順序ではなく整礎関係であることだけが要請されているが、これはバリエーションと考えていいだろう。あるいは Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] の方が間違っているのかもしれない。
