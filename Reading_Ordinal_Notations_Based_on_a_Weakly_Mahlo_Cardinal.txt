@@ -2,6 +2,10 @@
 
 この記事では Ordinal Notations Based on a Weakly Mahlo Cardinal (Michael Rathjen) という論文を読み、その中から出典として使える部分を抜き出してリストアップします。そのリストは記事を書きたいときに簡単に引用できるように整えてあります。私が利用するためのものですが、他の人にも使ってもらいたいと思っています。
 
+== 表示されない数式 ==
+
+\[ \newcommand{\ordinarycolon}{:} \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}} \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=} \]
+
 == 形式 ==
 
 見出しはハーバード方式による出典の記法です。それぞれの節は一文に対応します。本文は訳であり、その後にもしあれば解説が続きます。
@@ -44,4 +48,22 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 ## \( n = 0 \) のとき、 \( \phi \) の量化が全て自然数に対するものであれば \( \Pi _ n ^ 1 \) に属する。
 ## \( n > 0 \) のとき、 \( \Sigma _ { n - 1 } ^ 1 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の集合変数に対する全称量化を加えた \( \forall X _ 0 \ldotp \forall X _ 1 \ldotp \cdots \forall X _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Pi _ n ^ 1 \) に属する。
 
-バー帰納法 (\( \mathrm{BI} \), {{w|bar induction}}) とは、二階算術の式で表せる整礎半順序 \( \_ \prec \_ \) 全てと、論理式 \( \phi \) 全てに対して \( ( \forall j \ldotp ( \forall i \prec j \ldotp \phi ( i ) ) \rightarrow \phi ( j ) ) \rightarrow \forall n \ldotp \phi ( n ) \) が成り立つという公理図式である。なお wikipedia においては relations to other fields にある reverse mathematics における bar induction として記載されているものに該当すると思われる。
+バー帰納法 (\( \mathrm{BI} \), {{w|bar induction}}) とは、二階算術の式で表せる整礎半順序 \( \_ \prec \_ \) 全てに対して \( \forall X \ldotp ( \forall j \ldotp ( \forall i \prec j \ldotp i \in X ) \rightarrow j \in X ) \rightarrow \forall n \ldotp n \in X \) が成り立つという公理図式である。ここで \( \_ \in X \) は \( \phi ( \_ ) \) に取り換えることができる。なお wikipedia においては relations to other fields にある reverse mathematics における bar induction として記載されているものに該当すると思われる。ここで Wikipedia および Googology Wiki の書き方では整礎半順序であるという性質がメタなものなのかはっきりしないので Well-Ordering Principles and Bar Induction (Rathjen and Vizcaíno  2015) の p. 5 にある Definition 1.8 を参考にして定義を書こう。
+
+二項関係 \( \_ \proc \_ \) と、二階算術においての任意の項 \( F ( \_ ) \) を渡る。一つ目の述語は progressiveness についてである。
+
+\[ \mathrm{Prog} ( \_ \proc \_, F ) \coloneqq \forall x \ldotp ( \forall y \ldotp y \proc x \rightarrow F ( y ) ) \rightarrow F ( x ) \]
+
+二つ目の述語は transfinite induction についてである。
+
+\[ \mathbf{TI} ( \_ \proc \_, F ) \coloneqq \mathrm{Prog} ( \_ \proc \_, F ) \rightarrow \forall x \ldotp F ( x ) \]
+
+三つ目の述語は well-foundedness についてである。アンダースコアを使っている部分は不思議かもしれないが部分は \( F ( x ) \coloneqq x \in X \) というように展開される。
+
+\[ \mathrm{WF} ( \_ \proc \_ ) \coloneqq \forall X \ldotp \mathbf{TI} ( \_ \proc \_, \_ \in X ) \]
+
+これらによりバー帰納法という公理図式が以下のように定義される。ここで \( \_ \proc \_ \) と \( F \) の引数は両方とも自然数であるか両方とも集合であるかのどちらかである。どちらでもいいような書き方になっていることに注意してほしい。
+
+\[ \forall \_ \proc \_ \ldotp \forall F \ldotp [ \mathrm{WF} ( \_ \proc \_ ) \rightarrow \mathbf{TI} ( \_ \proc \_, F ) ] \]
+
+ここで \( \_ \proc \_ \) は整礎半順序ではなく整礎関係であることだけが要請されているが、これはバリエーションと考えていいだろう。あるいは Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] の方が間違っているのかもしれない。
