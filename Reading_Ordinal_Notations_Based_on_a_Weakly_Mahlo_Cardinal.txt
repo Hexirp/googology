@@ -35,13 +35,13 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 ## \( n = 0 \) のとき、 \( \phi \) の量化が全て有界であれば \( \Pi _ n ^ 0 \) に属する。
 ## \( n > 0 \) のとき、 \( \Sigma _ { n - 1 } ^ 0 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の変数に対する全称量化を加えた \( \forall n _ 0 \ldotp \forall n _ 1 \ldotp \cdots \forall n _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Pi _ n ^ 0 \) に属する。
 
-解析的階層 (analytical hierarchy) の定義は上記の定義を少し変えて、以下のようになる。二階算術の式を分類するものになっている。
+解析的階層 (analytical hierarchy) の定義は上記の定義を少し変えて、以下のようになる。二階算術の式を分類するものになっている。　なお、算術的階層も自然に二階算術の式に対して定義できることに注意してほしい。
 
 # ある式 \( \phi \) が \( \Sigma _ n ^ 1 \) に属する条件：
 ## \( n = 0 \) のとき、 \( \phi \) の量化が全て自然数に対するものであれば \( \Sigma _ n ^ 1 \) に属する。
-## \( n > 0 \) のとき、 \( \Pi _ { n - 1 } ^ 0 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の集合の変数に対する存在量化を加えた \( \exists X _ 0 \ldotp \exists X _ 1 \ldotp \cdots \exists X _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Sigma _ n ^ 0 \) に属する。
-# ある式 \( \phi \) が \( \Pi _ n ^ 0 \) に属する条件：
-## \( n = 0 \) のとき、 \( \phi \) の量化が全て自然数に対するものであれば \( \Pi _ n ^ 0 \) に属する。
-## \( n > 0 \) のとき、 \( \Sigma _ { n - 1 } ^ 0 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の集合変数に対する全称量化を加えた \( \forall X _ 0 \ldotp \forall X _ 1 \ldotp \cdots \forall X _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Pi _ n ^ 0 \) に属する。
+## \( n > 0 \) のとき、 \( \Pi _ { n - 1 } ^ 1 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の集合の変数に対する存在量化を加えた \( \exists X _ 0 \ldotp \exists X _ 1 \ldotp \cdots \exists X _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Sigma _ n ^ 1 \) に属する。
+# ある式 \( \phi \) が \( \Pi _ n ^ 1 \) に属する条件：
+## \( n = 0 \) のとき、 \( \phi \) の量化が全て自然数に対するものであれば \( \Pi _ n ^ 1 \) に属する。
+## \( n > 0 \) のとき、 \( \Sigma _ { n - 1 } ^ 1 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の集合変数に対する全称量化を加えた \( \forall X _ 0 \ldotp \forall X _ 1 \ldotp \cdots \forall X _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Pi _ n ^ 1 \) に属する。
 
 バー帰納法 (\( \mathrm{BI} \), {{w|bar induction}}) とは、二階算術の式で表せる整礎半順序 \( \_ \prec \_ \) 全てと、論理式 \( \phi \) 全てに対して \( ( \forall j \ldotp ( \forall i \prec j \ldotp \phi ( i ) ) \rightarrow \phi ( j ) ) \rightarrow \forall n \ldotp \phi ( n ) \) が成り立つという公理図式である。なお wikipedia においては relations to other fields にある reverse mathematics における bar induction として記載されているものに該当すると思われる。
