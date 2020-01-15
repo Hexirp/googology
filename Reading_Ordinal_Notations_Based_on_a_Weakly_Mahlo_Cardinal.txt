@@ -78,4 +78,4 @@ This was done in [9] by Jäger and Pohlers.
 
 ==== 解説 ====
 
-ここでの [9] は Eine beweistheoretische Untersuchung von \( ( \Delta _ 2 ^ 1 \operatorname{-}CA} ) + ( \mathrm{BI} ) \) und verwandter Systeme (Jäger and Pohlers 1982) のことである。タイトルを Google 翻訳で英訳すると A theoretical proof of \( ( \Delta _ 2 ^ 1 \operatorname{-}CA} ) + ( \mathrm{BI} ) \) and related systems となった。私はドイツ語に詳しくないので間違っているかもしれないが、たいだいこんな意味なのだろう。
+ここでの [9] は Eine beweistheoretische Untersuchung von \( ( \Delta _ 2 ^ 1 \operatorname{-CA} ) + ( \mathrm{BI} ) \) und verwandter Systeme (Jäger and Pohlers 1982) のことである。タイトルを Google 翻訳で英訳すると A theoretical proof of \( ( \Delta _ 2 ^ 1 \operatorname{-CA} ) + ( \mathrm{BI} ) \) and related systems となった。私はドイツ語に詳しくないので間違っているかもしれないが、たいだいこんな意味なのだろう。
