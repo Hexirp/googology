@@ -67,3 +67,15 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 \[ \forall \_ \prec \_ \ldotp \forall F \ldotp [ \mathrm{WF} ( \_ \prec \_ ) \rightarrow \mathbf{TI} ( \_ \prec \_, F ) ] \]
 
 ここで \( \_ \prec \_ \) は整礎半順序ではなく整礎関係であることだけが要請されているが、これはバリエーションと考えていいだろう。あるいは Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] の方が間違っているのかもしれない。
+
+=== それを成した人 ===
+
+それは [9] において Jäger と Pohlers により成された。
+
+==== 原文 ====
+
+This was done in [9] by Jäger and Pohlers.
+
+==== 解説 ====
+
+ここでの [9] は Eine beweistheoretische Untersuchung von \( ( \Delta _ 2 ^ 1 \operatorname{-}CA} ) + ( \mathrm{BI} ) \) und verwandter Systeme (Jäger and Pohlers 1982) のことである。タイトルを Google 翻訳で英訳すると A theoretical proof of \( ( \Delta _ 2 ^ 1 \operatorname{-}CA} ) + ( \mathrm{BI} ) \) and related systems となった。私はドイツ語に詳しくないので間違っているかもしれないが、たいだいこんな意味なのだろう。
