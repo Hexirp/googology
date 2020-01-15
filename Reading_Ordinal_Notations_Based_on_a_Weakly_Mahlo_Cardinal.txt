@@ -1,6 +1,6 @@
 私は巨大数界隈で間違った情報が広まっていたり、正しい情報であったとしてもその出典が分からないという状況に不満を感じています。そんな状況を解決するために、確かな論文を利用しましょう。
 
-この記事では Ordinal Notations Based on a Weakly Mahlo Cardinal (Michael Rathjen) という論文を読み、その中から出典として使える部分を抜き出してリストアップします。そのリストは記事を書きたいときに簡単に引用できるように整えてあります。私が利用するためのものですが、他の人にも使ってもらいたいと思っています。
+この記事では "Ordinal Notations Based on a Weakly Mahlo Cardinal" (Michael Rathjen) という論文を読み、その中から出典として使える部分を抜き出してリストアップします。そのリストは記事を書きたいときに簡単に引用できるように整えてあります。私が利用するためのものですが、他の人にも使ってもらいたいと思っています。
 
 == 表示されない数式 ==
 
@@ -48,7 +48,7 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 ## \( n = 0 \) のとき、 \( \phi \) の量化が全て自然数に対するものであれば \( \Pi _ n ^ 1 \) に属する。
 ## \( n > 0 \) のとき、 \( \Sigma _ { n - 1 } ^ 1 \) に属する文 \( \psi \) が存在し、さらにある自然数 \( k \) が存在して、 \( \psi \) へと \( k \) 個の集合変数に対する全称量化を加えた \( \forall X _ 0 \ldotp \forall X _ 1 \ldotp \cdots \forall X _ k \ldotp \psi \)が \( \phi \) と論理的に等価になるとき、 \( \phi \) は \( \Pi _ n ^ 1 \) に属する。
 
-バー帰納法 (\( \mathrm{BI} \), {{w|bar induction}}) とは、二階算術の式で表せる整礎半順序 \( \_ \prec \_ \) 全てに対して \( \forall X \ldotp ( \forall j \ldotp ( \forall i \prec j \ldotp i \in X ) \rightarrow j \in X ) \rightarrow \forall n \ldotp n \in X \) が成り立つという公理図式である。ここで \( \_ \in X \) は \( \phi ( \_ ) \) に取り換えることができる。なお wikipedia においては relations to other fields にある reverse mathematics における bar induction として記載されているものに該当すると思われる。ここで Wikipedia および Googology Wiki の書き方では整礎半順序であるという性質がメタなものなのかはっきりしないので Well-Ordering Principles and Bar Induction (Rathjen and Vizcaíno  2015) の p. 5 にある Definition 1.8 を参考にして定義を書こう。
+バー帰納法 (\( \mathrm{BI} \), {{w|bar induction}}) とは、二階算術の式で表せる整礎半順序 \( \_ \prec \_ \) 全てに対して \( \forall X \ldotp ( \forall j \ldotp ( \forall i \prec j \ldotp i \in X ) \rightarrow j \in X ) \rightarrow \forall n \ldotp n \in X \) が成り立つという公理図式である。ここで \( \_ \in X \) は \( \phi ( \_ ) \) に取り換えることができる。なお wikipedia においては relations to other fields にある reverse mathematics における bar induction として記載されているものに該当すると思われる。ここで Wikipedia および Googology Wiki の書き方では整礎半順序であるという性質がメタなものなのかはっきりしないので Well-Ordering Principles and Bar Induction (Rathjen and Vizcaíno 2015) の p. 5 にある Definition 1.8 を参考にして定義を書こう。
 
 二項関係 \( \_ \prec \_ \) と、二階算術においての任意の項 \( F ( \_ ) \) を渡る。一つ目の述語は progressiveness についてである。
 
