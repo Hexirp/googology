@@ -30,7 +30,7 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 
 \( \Delta _ 2 ^ 1 \)-内包 (\( \Delta _ 2 ^ 1 \operatorname{-CA} \), \( \Delta _ 2 ^ 1 \)-comprehension) とは \( \Delta _ 2 ^ 1 \) 文に対する内包公理である。詳細に書くならば \( \forall \phi \in \Delta _ 2 ^ 1 \ldotp [ \exists X \ldotp \forall x \ldotp x \in X \leftrightarrow \phi ( x ) ] \) となるであろう。ここで角括弧は公理図式であることを表す。
 
-\( \Sigma _ n ^ 1 \) と \( \Pi _ n ^ 1 \) と \( \Delta _ n ^ 1 \) とは、解析的階層 ({{w|analytical hierarchy}}) のことであり、算術的階層 ({{w|arithmetical hierarchy}}) を二階算術の論理式に対して拡張したものである。そもそも旧来の算術的階層はペアノ算術の論理式を \( \Sigma _ n ^ 0 \) と \( \Pi _ n ^ 0 \) と分類するものである。そのペアノ算術の式における定義は以下のようなものであった。
+\( \Sigma _ n ^ 1 \) と \( \Pi _ n ^ 1 \) と \( \Delta _ n ^ 1 \) とは、解析的階層 ({{w|analytical hierarchy}}) のことであり、算術的階層 ({{w|arithmetical hierarchy}}, {{wja|算術的階層}}) を二階算術の論理式に対して拡張したものである。そもそも旧来の算術的階層はペアノ算術の論理式を \( \Sigma _ n ^ 0 \) と \( \Pi _ n ^ 0 \) と分類するものである。そのペアノ算術の式における定義は以下のようなものであった。
 
 # ある式 \( \phi \) が \( \Sigma _ n ^ 0 \) に属する条件：
 ## \( n = 0 \) のとき、 \( \phi \) の量化が全て有界であれば \( \Sigma _ n ^ 0 \) に属する。
