@@ -26,7 +26,7 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 
 「今まで」は、この論文が書かれるまでとなる。つまり1990年までと思っていいだろう。
 
-\( \Delta _ 2 ^ 1 \)-内包とバー帰納法により構成される二階算術のサブシステム (the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-comprehension and Bar-induction) を略記するならば \( \Delta _ 2 ^ 1 \operatorname{-CA} + \mathrm{BI} \) となるであろう。この体系が何であるか理解するためには Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] を参照すればいいであろう。なぜか Wikipedia や nLab より詳しい。
+\( \Delta _ 2 ^ 1 \)-内包とバー帰納法により構成される二階算術のサブシステム (the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-comprehension and Bar-induction) を略記するならば \( \Delta _ 2 ^ 1 \operatorname{-CA} + \mathrm{BI} \) となるであろう。この体系が何であるか理解するためには Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] を参照すればいいであろう。なぜか Wikipedia や nLab より詳しい。巨大数研究wikiに訳もあるが、進んでいないため大して変わらない。
 
 \( \Delta _ 2 ^ 1 \)-内包 (\( \Delta _ 2 ^ 1 \operatorname{-CA} \), \( \Delta _ 2 ^ 1 \)-comprehension) とは \( \Delta _ 2 ^ 1 \) 文に対する内包公理である。詳細に書くならば \( \forall \phi \in \Delta _ 2 ^ 1 \ldotp [ \exists X \ldotp \forall x \ldotp x \in X \leftrightarrow \phi ( x ) ] \) となるであろう。ここで角括弧は公理図式であることを表す。
 
