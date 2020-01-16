@@ -68,6 +68,8 @@ Up to now, the subsystem of second order arithmetic with \( \Delta _ 2 ^ 1 \)-co
 
 ここで \( \_ \prec \_ \) は整礎半順序ではなく整礎関係であることだけが要請されているが、これはバリエーションと考えていいだろう。あるいは Googology Wiki の [https://googology.wikia.org/wiki/Second-order_arithmetic second-order arithmetic] の方が間違っているのかもしれない。
 
+Googology Wiki ([https://googology.wikia.org/wiki/Second-order_arithmetic?oldid=275101 second-order arithmetic]) では整礎半順序であることが条件とされ、 Wikipedia ([https://en.wikipedia.org/w/index.php?title=Bar_induction&oldid=903373375 bar induction]) では整列順序であることが条件とされている。
+
 === それを成した人 ===
 
 それは [9] において Jäger と Pohlers により成された。
