@@ -81,3 +81,25 @@ This was done in [9] by Jäger and Pohlers.
 ==== 解説 ====
 
 ここでの [9] は Eine beweistheoretische Untersuchung von \( ( \Delta _ 2 ^ 1 \operatorname{-CA} ) + ( \mathrm{BI} ) \) und verwandter Systeme (Jäger and Pohlers 1982) のことである。タイトルを Google 翻訳で英訳すると A theoretical proof of \( ( \Delta _ 2 ^ 1 \operatorname{-CA} ) + ( \mathrm{BI} ) \) and related systems となった。私はドイツ語に詳しくないので間違っているかもしれないが、たいだいこんな意味なのだろう。
+
+=== Δ_2^1-CA + BI と KPi の関連 ===
+
+上記のシステムは Kripke-Pratek 集合論の拡張の一つと密接につながっている。それは \( \mathrm{KPi} \) である。
+
+==== 原文 ====
+
+The above mentioned system is nearly connected to an extension of Kripke-Platek set theory, called \( \mathrm{KPi} \).
+
+==== 解説 ====
+
+上記のシステムを具体的に書くと \( \Delta _ 2 ^ 1 \operatorname{-CA} + \mathrm{BI} \) が \( \mathrm{KPi} \) とつながっていることになる。
+
+まず Kripke-Pratek 集合論 (KP集合論, \( \mathrm{KP} \), Kripke-Platek set theory, {{w|Kripke–Platek set theory}}, [https://googology.wikia.org/wiki/Kripke%E2%80%93Platek_set_theory Kripke-Pratek set theory], [https://googology.wikia.org/ja/wiki/KP%E9%9B%86%E5%90%88%E8%AB%96 KP集合論]]) は挙げたリンク先を参照すれば意義は別の話として理解できるだろう。KP集合論は許容順序数の定義に使われるということが重要なことであろう。
+
+許容集合 ({{w|admissible se}}t) とは、それがKP集合論の推移モデルになるような集合である。具体的に言うならば \( A \models \mathrm{KP} \) の時 \( A \) は許容集合である。
+
+許容順序数 ({{w|admissible ordinal}}) とは、 \( L _ \alpha \) が許容集合であるような順序数 \( \alpha \) のことである。
+
+ここで \( \mathrm{KP} \) のモデルになることが分かっているので、許容集合は具体的な性質の集まりにより定義されることを注意してほしい。これにより \( \mathrm{KP} \) の言語の上で許容集合という概念を定義できることになる。
+
+\( \mathrm{KPi} \) とはKP集合論の拡張である。それは許容
