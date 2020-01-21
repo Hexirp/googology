@@ -84,15 +84,15 @@ This was done in [9] by Jäger and Pohlers.
 
 === Δ_2^1-CA + BI と KPi の関連 ===
 
-上記のシステムは Kripke-Pratek 集合論の拡張の一つと密接につながっていて、それは \( \mathrm{KPi} \) と呼ばれている。
+上記のシステムは Kripke-Pratek 集合論の拡張の一つと正々つながっていて、それは \( \mathrm{KPi} \) と呼ばれている。
 
 ==== 原文 ====
 
-The above mentioned system is nearly connected to an extension of Kripke-Platek set theory, called \( \mathrm{KPi} \).
+The above mentioned system is neatly connected to an extension of Kripke-Platek set theory, called \( \mathrm{KPi} \).
 
 ==== 解説 ====
 
-上記のシステムを具体的に書くと \( \Delta _ 2 ^ 1 \operatorname{-CA} + \mathrm{BI} \) が \( \mathrm{KPi} \) とつながっていることになる。
+上記のシステムを具体的に示すと \( \Delta _ 2 ^ 1 \operatorname{-CA} + \mathrm{BI} \) が \( \mathrm{KPi} \) と正々つながっている、とになる。この部分は意味が捉えきれなかったが、きちんとしたつながりがある、正確な対応関係がある、ぐらいの意味なのだろう。
 
 まず Kripke-Pratek 集合論 (KP集合論, \( \mathrm{KP} \), Kripke-Platek set theory, {{w|Kripke–Platek set theory}}, [https://googology.wikia.org/wiki/Kripke%E2%80%93Platek_set_theory Kripke-Pratek set theory], [https://googology.wikia.org/ja/wiki/KP%E9%9B%86%E5%90%88%E8%AB%96 KP集合論]]) は挙げたリンク先を参照すれば意義は別の話として理解できるだろう。KP集合論は許容順序数の定義に使われるということが重要なことであろう。
 
