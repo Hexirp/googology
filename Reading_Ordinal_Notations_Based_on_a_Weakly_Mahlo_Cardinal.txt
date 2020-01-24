@@ -98,7 +98,7 @@ The above mentioned system is neatly connected to an extension of Kripke-Platek 
 
 許容集合 ({{w|admissible set}}) とは、それがKP集合論の推移モデルになるような集合である。具体的に言うならば \( A \models \mathrm{KP} \) の時 \( A \) は許容集合である。
 
-許容順序数 ({{w|admissible ordinal}}) とは、 \( L _ \alpha \) が許容集合であるような順序数 \( \alpha \) のことである。チャーチ＝クリーネ順序数 \( \omega _ 1 ^ \mathrm{CK} \) は最小の非再帰的順序数であると定義されるが、最小の許容順序数でもある。二つの間につながりはないように見えるのに不思議である。
+許容順序数 ({{w|admissible ordinal}}) とは、 \( L _ \alpha \) が許容集合であるような順序数 \( \alpha \) のことである。チャーチ＝クリーネ順序数 \( \omega _ 1 ^ \mathrm{CK} \) は最小の非再帰順序数であると定義されるが、最小の許容順序数でもある。二つの間につながりはないように見えるのに不思議である。
 
 ここで \( \mathrm{KP} \) のモデルになることが分かっているので、許容集合は具体的な性質の集まりにより定義されることを注意してほしい。これにより \( \mathrm{KP} \) の言語の上で許容集合という概念を定義できることになる。
 
