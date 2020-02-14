@@ -156,12 +156,6 @@
 *** \( X _ s = _ \oplus Y _ s \) のとき、
 **** \( X = _ \oplus Y \) である。
 
-\( OT _ \varphi \) と \( OT _ \oplus \) を相互再帰により定義する。
-
-\( OT _ \varphi \) を定義する。
-
-* 任意の自然数 \( n \) を取る。 \( A _ 0, A _ 1, \ldots, A _ n \in OT _ \oplus \) と \( B _ 0, B _ 1, \ldots, B _ n \in OT _ \oplus \) を取る。 \( A _ 0 > _ \oplus A _ 1 > _ \oplus \cdots > _ \oplus A _ n \) であるとする。 \( A _ n = 0 \) であるとする。 \( A _ 0, A _ 1, \ldots, A _ n \) と \( B _ 0, B _ 1, \ldots, B _ n \) は \( \_ = _ \oplus \) を満たさないとする。このとき、 \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ n \\ B _ 0 & B _ 1 & \cdots & B _ n \\ \end{matrix} \right) \in T _ \varphi \) である。
-
 == 解析 ==
 
 ...
