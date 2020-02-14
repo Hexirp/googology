@@ -120,7 +120,7 @@
 ** \( X _ v > _ \varphi Y _ v \) のとき、
 *** \( X \sim _ \oplus Y \) の値は \( G \) と等しい。
 ** \( X _ v = _ \varphi Y _ v \) のとき、
-*** \( X \sim _ \oplus Y \) の値は \( X _ s = _ \oplus Y _ s \) と等しい。
+*** \( X \sim _ \oplus Y \) の値は \( X _ s \sim _ \oplus Y _ s \) と等しい。
 
 == 解析 ==
 
