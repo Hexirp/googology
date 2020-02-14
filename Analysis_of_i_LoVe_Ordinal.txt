@@ -36,28 +36,125 @@
 
 == 順序数表記 ==
 
-上記の定義には不完全な部分が多くある。それを完全な物にするために書き直す。
+上記の定義には不完全な部分が多くある。それを完全な物にするために書き直す。なお、ここでは自然数には 0 が含まれるものとする。
 
-\( T _ \varphi \) と \( T _ \oplus \) と \( \_ < _ \varphi \_ \) と \( \_ < _ \oplus \_ \) を相互帰納により定義する。
+\( T _ \varphi \) と \( T _ \oplus \) を相互再帰により定義する。
 
 \( T _ \varphi \) を定義する。
 
-* 任意の自然数 \( n \) を取る。 \( A _ 0, A _ 1, \ldots, A _ n \in T _ + \) と \( B _ 0, B _ 1, \ldots, B _ n \in T _ + \) を取る。 \( A _ 0 > _ \oplus A _ 1 > _ \oplus \cdots > _ \oplus A _ n \) であるとする。 \( A _ n = 0 \) であるとする。このとき、 \( \left[ \begin{matrix} A _ 1 & A _ 2 & \cdots & A _ n \\ B _ 1 & B _ 2 & \cdots & B _ n \\ \end{matrix} \right] \in T _ \varphi \) である。
+* 任意の自然数 \( n \) を取る。 \( A _ 0, A _ 1, \ldots, A _ n \in T _ + \) と \( B _ 0, B _ 1, \ldots, B _ n \in T _ + \) を取る。このとき、 \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ n \\ B _ 0 & B _ 1 & \cdots & B _ n \\ \end{matrix} \right) \in T _ \varphi \) である。
 
 \( T _ \oplus \) を定義する。
 
 * \( 0 \in T _ \oplus \) である。
 * \( A \in T _ \varphi \) を取る。 \( B \in T _ \oplus \) を取る。 \( A \oplus B \in T _ \oplus \) である。
 
-\( T _ \oplus \) に関する略記を定義する。いずれも紛れがない時のみである。
+\( T _ \oplus \) に関する略記を定義する。これらは紛れがない時のみである。
 
 * \( A \oplus 0 \) を \( A \) と略記してもよい。
 ** ゆえに \( A _ 1 \oplus A _ 2 \oplus \cdots A _ n \oplus 0 \) を \( A _ 1 \oplus A _ 2 \oplus \cdots A _ n \) と略記してもよい。
 
+\( \_ < _ \varphi \_ \) と \( \_ < _ \oplus \_ \) を相互再帰により定義する。
+
 \( \_ < _ \varphi \_ \) を定義する。
 
 * \( X, Y \in T _ \varphi \) を取る。
-* \(
+* \( X \) の行の長さを \( m \) とする。
+* \( Y \) の行の長さを \( n \) とする。
+* \( X = \left( \begin{matrix} A _ 0 ( X ) & A _ 1 ( X ) & \cdots & A _ { m - 1 } ( X ) \\ B _ 0 ( X ) & B _ 1 ( X ) & \cdots & B _ { m - 1 } ( X ) \\ \end{matrix} \right) \) とする。
+* \( Y = \left( \begin{matrix} A _ 0 ( Y ) & A _ 1 ( Y ) & \cdots & A _ { n - 1 } ( Y ) \\ B _ 0 ( Y ) & B _ 1 ( Y ) & \cdots & B _ { n - 1 } ( Y ) \\ \end{matrix} \right) \) とする。
+* \( m \) と \( n \) の値で場合分けする。
+* \( m = 1 \) かつ \( n = 1 \) のとき、
+** \( A _ 0 ( X ) \) と \( A _ 0 ( Y ) \) を比較する。
+** \( A _ 0 ( X ) < _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( X < _ \varphi Y \) である。
+** \( A _ 0 ( X ) > _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( X > _ \varphi Y \) である。
+** \( A _ 0 ( X ) = _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( B _ 0 ( X ) \) と \( B _ 0 ( Y ) \) を比較する。
+*** \( B _ 0 ( X ) < _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X < _ \varphi Y \) である。
+*** \( B _ 0 ( X ) > _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X > _ \varphi Y \) である。
+*** \( B _ 0 ( X ) = _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X = _ \varphi Y \) である。
+* \( m = 1 \) かつ \( n > 1 \) のとき、
+** \( A _ 0 ( X ) \) と \( A _ 0 ( Y ) \) を比較する。
+** \( A _ 0 ( X ) < _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( X < _ \varphi Y \) である。
+** \( A _ 0 ( X ) > _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( X > _ \varphi Y \) である。
+** \( A _ 0 ( X ) = _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( B _ 0 ( X ) \) と \( B _ 0 ( Y ) \) を比較する。
+*** \( B _ 0 ( X ) < _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X < _ \varphi Y \) である。
+*** \( B _ 0 ( X ) > _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X > _ \varphi Y \) である。
+*** \( B _ 0 ( X ) = _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X < _ \varphi Y \) である。
+* \( m > 1 \) かつ \( n = 1 \) のとき、
+** \( A _ 0 ( X ) \) と \( A _ 0 ( Y ) \) を比較する。
+** \( A _ 0 ( X ) < _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( X < _ \varphi Y \) である。
+** \( A _ 0 ( X ) > _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( X > _ \varphi Y \) である。
+** \( A _ 0 ( X ) = _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( B _ 0 ( X ) \) と \( B _ 0 ( Y ) \) を比較する。
+*** \( B _ 0 ( X ) < _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X < _ \varphi Y \) である。
+*** \( B _ 0 ( X ) > _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X > _ \varphi Y \) である。
+*** \( B _ 0 ( X ) = _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X > _ \varphi Y \) である。
+* \( m > 1 \) かつ \( n > 1 \) のとき、
+** \( A _ 0 ( X ) \) と \( A _ 0 ( Y ) \) を比較する。
+** \( A _ 0 ( X ) < _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( X < _ \varphi Y \) である。
+** \( A _ 0 ( X ) > _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( X > _ \varphi Y \) である。
+** \( A _ 0 ( X ) = _ \oplus A _ 0 ( Y ) \) のとき、
+*** \( B _ 0 ( X ) \) と \( B _ 0 ( Y ) \) を比較する。
+*** \( B _ 0 ( X ) < _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X < _ \varphi Y \) である。
+*** \( B _ 0 ( X ) > _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X > _ \varphi Y \) である。
+*** \( B _ 0 ( X ) = _ \oplus B _ 0 ( Y ) \) のとき、
+**** \( X' = \left( \begin{matrix} A _ 1 ( X ) & \cdots & A _ { m - 1 } ( X ) \\ B _ 1 ( X ) & \cdots & B _ { m - 1 } ( X ) \\ \end{matrix} \right) \) とする。
+**** \( Y' = \left( \begin{matrix} A _ 1 ( Y ) & \cdots & A _ { n - 1 } ( Y ) \\ B _ 1 ( Y ) & \cdots & B _ { n - 1 } ( Y ) \\ \end{matrix} \right) \) とする。
+**** \( X' \) と \( Y' \) を比較する。
+**** \( X' < _ \varphi Y' \) のとき、
+***** \( X < _ \varphi Y \) である。
+**** \( X' > _ \varphi Y' \) のとき、
+***** \( X > _ \varphi Y \) である。
+**** \( X' = _ \varphi Y' \) のとき、
+***** \( X = _ \varphi Y \) である。
+
+\( \_ < _ \oplus \_ \) を定義する。
+
+* \( X, Y \in T _ \oplus \) を取る。
+* \( X \) と \( Y \) の項の形で場合分けする。
+* \( X = 0 \) かつ \( Y = 0 \) のとき、
+** \( X = _ \oplus Y \) である。
+* \( X = 0 \) かつ \( Y = Y _ v \oplus Y _ s \) のとき、
+** \( X < _ \oplus Y \) である。
+* \( X = X _ v \oplus X _ s \) かつ \( Y = 0 \) のとき、
+** \( X > _ \oplus Y \) である。
+* \( X = X _ v \oplus X _ s \) \( Y = Y _ v \oplus Y _ s \) のとき、
+** \( X _ v \) と \( Y _ v \) を比較する。
+** \( X _ v < _ \varphi Y _ v \) のとき、
+*** \( X < _ \oplus Y \) である。
+** \( X _ v > _ \varphi Y _ v \) のとき、
+*** \( X > _ \oplus Y \) である。
+** \( X _ v = _ \varphi Y _ v \) のとき、
+*** \( X _ s \) と \( Y _ s \) で比較する。
+*** \( X _ s < _ \oplus Y _ s \) のとき、
+**** \( X < _ \oplus Y \) である。
+*** \( X _ s > _ \oplus Y _ s \) のとき、
+**** \( X > _ \oplus Y \) である。
+*** \( X _ s = _ \oplus Y _ s \) のとき、
+**** \( X = _ \oplus Y \) である。
+
+\( A _ 0 > _ \oplus A _ 1 > _ \oplus \cdots > _ \oplus A _ n \) であるとする。 \( A _ n = 0 \) であるとする。
 
 == 解析 ==
 
