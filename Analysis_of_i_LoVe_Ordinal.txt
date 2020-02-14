@@ -128,6 +128,16 @@
 ** \( E \) のとき、
 *** \( X \sim _ \oplus Y \) の値は \( X _ s \sim _ \oplus Y _ s \) の値と等しい。
 
+\( O _ \varphi \) と \( O _ \oplus \) を相互再帰で定義する。
+
+\( O _ \varphi \) を定義する。
+
+* \( X \in T _ \varphi \) を取る。 \( X = \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ n \\ B _ 0 & B _ 1 & \cdots & B _ n \\ \end{matrix} \right) \) とする。 \( B _ 0, B _ 1, \ldots B _ n < _ \oplus X \oplus 0 \) であるとする。このとき、 \( X \in O _ \varphi \) である。
+
+\( O _ \oplus \) を定義する。
+
+* \( X \in T _ \oplus \) を取る。このとき、 \( X \in O _ \oplus \) である。
+
 == 解析 ==
 
 ...
