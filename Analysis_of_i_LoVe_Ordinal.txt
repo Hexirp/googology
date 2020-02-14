@@ -42,7 +42,7 @@
 
 \( T _ \varphi \) を定義する。
 
-* 任意の自然数 \( n \) を取る。 \( A _ 0, A _ 1, \ldots, A _ n \in T _ \oplus \) と \( B _ 0, B _ 1, \ldots, B _ n \in T _ \oplus \) を取る。このとき、 \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ n \\ B _ 0 & B _ 1 & \cdots & B _ n \\ \end{matrix} \right) \in T _ \varphi \) である。
+* 任意の自然数 \( n \) を取る。 \( A _ 0, A _ 1, \ldots, A _ n \in T _ \oplus \) と \( B _ 0, B _ 1, \ldots, B _ n \in T _ \oplus \) を取る。。 \( A _ 0 > _ \oplus A _ 1 > _ \oplus \cdots > _ \oplus A _ n \) であるとする。 \( A _ n = 0 \) であるとする。このとき、 \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ n \\ B _ 0 & B _ 1 & \cdots & B _ n \\ \end{matrix} \right) \in T _ \varphi \) である。
 
 \( T _ \oplus \) を定義する。
 
@@ -67,63 +67,43 @@
 * \( Y = \left( \begin{matrix} A _ 0 ( Y ) & A _ 1 ( Y ) & \cdots & A _ { n - 1 } ( Y ) \\ B _ 0 ( Y ) & B _ 1 ( Y ) & \cdots & B _ { n - 1 } ( Y ) \\ \end{matrix} \right) \) とする。
 * \( m \) と \( n \) の値で場合分けする。
 * \( m = 1 \) かつ \( n = 1 \) のとき、
-** \( A _ 0 ( X ) \sim _ \opuls A _ 0 ( Y ) \) の値で場合分けする。
+** \( A _ 0 ( X ) \sim _ \olus A _ 0 ( Y ) \) の値で場合分けする。
 ** \( L \) のとき、
-*** \( B _ 0 ( X ) \sim _ \oplus Y \oplus 0 \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+*** あり得ない状態である。
 ** \( G \) のとき、
-*** \( X \oplus 0 \sim _ \oplus B _ 0 ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
-** \( A _ 0 ( X ) = _ \oplus A _ 0 ( Y ) \) のとき、
+*** あり得ない状態である。
+** \( E \) のとき、
 *** \( B _ 0 ( X ) \sim _ \oplus B _ 0 ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
 * \( m = 1 \) かつ \( n > 1 \) のとき、
 ** \( A _ 0 ( X ) \sim _ \opuls A _ 0 ( Y ) \) の値で場合分けする。
 ** \( L \) のとき、
-*** 
+*** \( B _ 0 ( X ) \sim _ \oplus Y \oplus 0 \) の値は \( X \sim _ \varphi Y \) の値と等しい。
 ** \( G \) のとき、
-*** ...
+*** あり得ない状態である。
 ** \( E \) のとき、
-*** \( B _ 0 ( X ) \) と \( B _ 0 ( Y ) \) を比較する。
-*** \( B _ 0 ( X ) < _ \oplus B _ 0 ( Y ) \) のとき、
-**** ...
-*** \( B _ 0 ( X ) > _ \oplus B _ 0 ( Y ) \) のとき、
-**** ...
-*** \( B _ 0 ( X ) = _ \oplus B _ 0 ( Y ) \) のとき、
-**** ...
+*** あり得ない状態である。
 * \( m > 1 \) かつ \( n = 1 \) のとき、
-** \( A _ 0 ( X ) \) と \( A _ 0 ( Y ) \) を比較する。
-** \( A _ 0 ( X ) < _ \oplus A _ 0 ( Y ) \) のとき、
-*** ...
-** \( A _ 0 ( X ) > _ \oplus A _ 0 ( Y ) \) のとき、
-*** ...
-** \( A _ 0 ( X ) = _ \oplus A _ 0 ( Y ) \) のとき、
-*** \( B _ 0 ( X ) \) と \( B _ 0 ( Y ) \) を比較する。
-*** \( B _ 0 ( X ) < _ \oplus B _ 0 ( Y ) \) のとき、
-**** ...
-*** \( B _ 0 ( X ) > _ \oplus B _ 0 ( Y ) \) のとき、
-**** ...
-*** \( B _ 0 ( X ) = _ \oplus B _ 0 ( Y ) \) のとき、
-**** ...
+** \( A _ 0 ( X ) \sim _ \opuls A _ 0 ( Y ) \) の値で場合分けする。
+** \( L \) のとき、
+*** あり得ない状態である。
+** \( G \) のとき、
+*** \( X \oplus 0 \sim _ \oplus B _ 0 ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+** \( E \) のとき、
+*** あり得ない状態である。
 * \( m > 1 \) かつ \( n > 1 \) のとき、
-** \( A _ 0 ( X ) \) と \( A _ 0 ( Y ) \) を比較する。
-** \( A _ 0 ( X ) < _ \oplus A _ 0 ( Y ) \) のとき、
-*** ...
-** \( A _ 0 ( X ) > _ \oplus A _ 0 ( Y ) \) のとき、
-*** ...
-** \( A _ 0 ( X ) = _ \oplus A _ 0 ( Y ) \) のとき、
-*** \( B _ 0 ( X ) \) と \( B _ 0 ( Y ) \) を比較する。
-*** \( B _ 0 ( X ) < _ \oplus B _ 0 ( Y ) \) のとき、
-**** ...
-*** \( B _ 0 ( X ) > _ \oplus B _ 0 ( Y ) \) のとき、
-**** ...
-*** \( B _ 0 ( X ) = _ \oplus B _ 0 ( Y ) \) のとき、
-**** \( X' = \left( \begin{matrix} A _ 1 ( X ) & \cdots & A _ { m - 1 } ( X ) \\ B _ 1 ( X ) & \cdots & B _ { m - 1 } ( X ) \\ \end{matrix} \right) \) とする。
-**** \( Y' = \left( \begin{matrix} A _ 1 ( Y ) & \cdots & A _ { n - 1 } ( Y ) \\ B _ 1 ( Y ) & \cdots & B _ { n - 1 } ( Y ) \\ \end{matrix} \right) \) とする。
-**** \( X' \) と \( Y' \) を比較する。
-**** \( X' < _ \varphi Y' \) のとき、
-***** \( X < _ \varphi Y \) である。
-**** \( X' > _ \varphi Y' \) のとき、
-***** \( X > _ \varphi Y \) である。
-**** \( X' = _ \varphi Y' \) のとき、
-***** \( X = _ \varphi Y \) である。
+** \( A _ 0 ( X ) \sim _ \opuls A _ 0 ( Y ) \) の値で場合分けする。
+** \( L \) のとき、
+*** \( B _ { m - 1 } ( X ) \sim _ \oplus Y \oplus 0 \) の値は \( X \sim _ \varphi Y \) の値と等しい。 
+** \( G \) のとき、
+*** \( X \oplus 0 \sim _ \oplus B _ { n - 1 } ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+** \( E \) のとき、
+*** \( B _ 0 ( X ) \sim _ \opuls B _ 0 ( Y ) \) の値で場合分けする。
+*** \( L \) のとき、
+**** \( B _ { m - 1 } ( X ) \sim _ \oplus Y \oplus 0 \) の値は \( X \sim _ \varphi Y \) の値と等しい。 
+*** \( G \) のとき、
+**** \( X \oplus 0 \sim _ \oplus B _ { n - 1 } ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+*** \( E \) のとき、
+**** \( \left( \begin{matrix} A _ 1 ( X ) & \cdots & A _ { m - 1 } ( X ) \\ B _ 1 ( X ) & \cdots & B _ { m - 1 } ( X ) \\ \end{matrix} \right) \sim _ \oplus \left( \begin{matrix} A _ 1 ( Y ) & \cdots & A _ { n - 1 } ( Y ) \\ B _ 1 ( Y ) & \cdots & B _ { n - 1 } ( Y ) \\ \end{matrix} \right) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
 
 \( \_ < _ \oplus \_ \) を定義する。
 
