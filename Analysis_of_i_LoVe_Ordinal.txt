@@ -54,8 +54,6 @@
 * \( A \oplus 0 \) を \( A \) と略記してもよい。
 ** ゆえに \( A _ 1 \oplus A _ 2 \oplus \cdots A _ n \oplus 0 \) を \( A _ 1 \oplus A _ 2 \oplus \cdots A _ n \) と略記してもよい。
 
-項 \( T \) を \( T _ \oplus \) とする。
-
 \( \_ < _ \varphi \_ \) と \( \_ < _ \oplus \_ \) を相互再帰により定義する。
 
 \( \_ < _ \varphi \_ \) を定義する。そのために比較演算子 \( \_ \sim _ \varphi \_ \) を定義する。この比較演算子の返り値は \( L, G, E \) の三種であり、それぞれ \( \_ < \_, \_ > \_, \_ = \_ \) に対応している。
@@ -73,62 +71,56 @@
 ** \( G \) のとき、
 *** あり得ない状態である。
 ** \( E \) のとき、
-*** \( B _ 0 ( X ) \sim _ \oplus B _ 0 ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+*** \( X \sim _ \varphi Y \) の値は \( B _ 0 ( X ) \sim _ \oplus B _ 0 ( Y ) \) の値と等しい。
 * \( m = 1 \) かつ \( n > 1 \) のとき、
-** \( A _ 0 ( X ) \sim _ \opuls A _ 0 ( Y ) \) の値で場合分けする。
+** \( A _ 0 ( X ) \sim _ \oplus A _ 0 ( Y ) \) の値で場合分けする。
 ** \( L \) のとき、
-*** \( B _ 0 ( X ) \sim _ \oplus Y \oplus 0 \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+*** \( X \sim _ \varphi Y \) の値は \( B _ 0 ( X ) \sim _ \oplus Y \oplus 0 \) の値と等しい。
 ** \( G \) のとき、
 *** あり得ない状態である。
 ** \( E \) のとき、
 *** あり得ない状態である。
 * \( m > 1 \) かつ \( n = 1 \) のとき、
-** \( A _ 0 ( X ) \sim _ \opuls A _ 0 ( Y ) \) の値で場合分けする。
+** \( A _ 0 ( X ) \sim _ \oplus A _ 0 ( Y ) \) の値で場合分けする。
 ** \( L \) のとき、
 *** あり得ない状態である。
 ** \( G \) のとき、
-*** \( X \oplus 0 \sim _ \oplus B _ 0 ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+*** \( X \sim _ \varphi Y \) の値は \( X \oplus 0 \sim _ \oplus B _ 0 ( Y ) \) の値と等しい。
 ** \( E \) のとき、
 *** あり得ない状態である。
 * \( m > 1 \) かつ \( n > 1 \) のとき、
-** \( A _ 0 ( X ) \sim _ \opuls A _ 0 ( Y ) \) の値で場合分けする。
+** \( A _ 0 ( X ) \sim _ \oplus A _ 0 ( Y ) \) の値で場合分けする。
 ** \( L \) のとき、
-*** \( B _ { m - 1 } ( X ) \sim _ \oplus Y \oplus 0 \) の値は \( X \sim _ \varphi Y \) の値と等しい。 
+*** \( X \sim _ \varphi Y \) の値は \( B _ { m - 1 } ( X ) \sim _ \oplus Y \oplus 0 \) の値と等しい。 
 ** \( G \) のとき、
-*** \( X \oplus 0 \sim _ \oplus B _ { n - 1 } ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+*** \( X \sim _ \varphi Y \) の値は \( X \oplus 0 \sim _ \oplus B _ { n - 1 } ( Y ) \) の値と等しい。
 ** \( E \) のとき、
-*** \( B _ 0 ( X ) \sim _ \opuls B _ 0 ( Y ) \) の値で場合分けする。
+*** \( B _ 0 ( X ) \sim _ \oplus B _ 0 ( Y ) \) の値で場合分けする。
 *** \( L \) のとき、
-**** \( B _ { m - 1 } ( X ) \sim _ \oplus Y \oplus 0 \) の値は \( X \sim _ \varphi Y \) の値と等しい。 
+**** \( X \sim _ \varphi Y \) の値は \( B _ { m - 1 } ( X ) \sim _ \oplus Y \oplus 0 \) の値と等しい。 
 *** \( G \) のとき、
-**** \( X \oplus 0 \sim _ \oplus B _ { n - 1 } ( Y ) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+**** \( X \sim _ \varphi Y \) の値は \( X \oplus 0 \sim _ \oplus B _ { n - 1 } ( Y ) \) の値と等しい。
 *** \( E \) のとき、
-**** \( \left( \begin{matrix} A _ 1 ( X ) & \cdots & A _ { m - 1 } ( X ) \\ B _ 1 ( X ) & \cdots & B _ { m - 1 } ( X ) \\ \end{matrix} \right) \sim _ \oplus \left( \begin{matrix} A _ 1 ( Y ) & \cdots & A _ { n - 1 } ( Y ) \\ B _ 1 ( Y ) & \cdots & B _ { n - 1 } ( Y ) \\ \end{matrix} \right) \) の値は \( X \sim _ \varphi Y \) の値と等しい。
+**** \( X \sim _ \varphi Y \) の値は \( \left( \begin{matrix} A _ 1 ( X ) & \cdots & A _ { m - 1 } ( X ) \\ B _ 1 ( X ) & \cdots & B _ { m - 1 } ( X ) \\ \end{matrix} \right) \sim _ \oplus \left( \begin{matrix} A _ 1 ( Y ) & \cdots & A _ { n - 1 } ( Y ) \\ B _ 1 ( Y ) & \cdots & B _ { n - 1 } ( Y ) \\ \end{matrix} \right) \) の値と等しい。
 
-\( \_ < _ \oplus \_ \) を定義する。
+\( \_ < _ \oplus \_ \) を定義する。そのために比較演算子 \( \_ \sim _ \oplus \_ \) を定義する。
 
 * \( X, Y \in T _ \oplus \) を取る。
 * \( X \) と \( Y \) の項の形で場合分けする。
 * \( X = 0 \) かつ \( Y = 0 \) のとき、
-** \( X = _ \oplus Y \) である。
+** \( X \sim _ \oplus Y \) の値は \( E \) と等しい。
 * \( X = 0 \) かつ \( Y = Y _ v \oplus Y _ s \) のとき、
-** \( X < _ \oplus Y \) である。
+** \( X \sim _ \oplus Y \) の値は \( L \) と等しい。
 * \( X = X _ v \oplus X _ s \) かつ \( Y = 0 \) のとき、
-** \( X > _ \oplus Y \) である。
+** \( X \sim _ \oplus Y \) の値は \( G \) と等しい。
 * \( X = X _ v \oplus X _ s \) \( Y = Y _ v \oplus Y _ s \) のとき、
 ** \( X _ v \) と \( Y _ v \) を比較する。
 ** \( X _ v < _ \varphi Y _ v \) のとき、
-*** \( X < _ \oplus Y \) である。
+*** \( X \sim _ \oplus Y \) の値は \( L \) と等しい。
 ** \( X _ v > _ \varphi Y _ v \) のとき、
-*** \( X > _ \oplus Y \) である。
+*** \( X \sim _ \oplus Y \) の値は \( G \) と等しい。
 ** \( X _ v = _ \varphi Y _ v \) のとき、
-*** \( X _ s \) と \( Y _ s \) で比較する。
-*** \( X _ s < _ \oplus Y _ s \) のとき、
-**** \( X < _ \oplus Y \) である。
-*** \( X _ s > _ \oplus Y _ s \) のとき、
-**** \( X > _ \oplus Y \) である。
-*** \( X _ s = _ \oplus Y _ s \) のとき、
-**** \( X = _ \oplus Y \) である。
+*** \( X \sim _ \oplus Y \) の値は \( X _ s = _ \oplus Y _ s \) と等しい。
 
 == 解析 ==
 
