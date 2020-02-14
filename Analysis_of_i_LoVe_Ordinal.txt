@@ -1,0 +1,31 @@
+えのき氏により投稿された i LoVe Ordinal を解析します。定義は https://twitter.com/enoki_fugue/status/1227166763453947904 とします。
+
+## 定義
+
+定義をここに書き下す。一部改変しているが重要な部分はそのままである。
+
+花を定義する。
+
+* \( 0 \) は花である。
+* \( [ ] \) は花である。これは便宜上 2 行 0 列の行列である。
+* \( A \) と \( B \) が花であるとき \( A \oplus B \) は花である。
+** \( A \) が花であるとき、それと \( A \oplus 0 \) は花として等しい。
+* \( A _ 1, A _ 2, \ldots, A _ n \) と \( B _ 1, B _ 2, \ldotp. B _ n \) が花ならば、この 2 行 n 列の行列 \( \left[ \begin{matrix} A _ 1 & A _ 2 & \cdots & A _ n \\ B _ 1 & B _ 2 & \cdots & B _ n \\ \end{matrix} \right] \) は行列である。
+** 下の行の要素が \( 0 \) である場合、その列を削除しても花として等しい。
+
+基本列の関数を定義する。まず、定数として \( m \) を固定する。これは成長度と呼ぶ。
+
+* \( X \) を花とする。
+** \( X = 0 \) であれば、 \( X' = 0 \) である。
+** \( X = [ ] \) であれば、 \( X' = 0 \) である。
+** \( X = A \oplus B \) であれば、 \( X' = A \oplus B' \) である。
+** \( X = \left[ \begin{matrix} 0 \\ B _ 1 \\ \end{matrix} \right] \) であれば、 \( X' = f ^ m ( 0 ) \) である。
+*** ただし、 \( f ( Y ) = \left[ \begin{matrix} 0 \\ { B _ 1 }' \\ \end{matrix} \right] \oplus Y \) である。
+** \( X = \left[ \begin{matrix} A _ 1 & A _ 2 & \cdots & A _ n & 0 \\ B _ 1 & B _ 2 & \cdots & B _ n & B _ { n + 1 } \\ \end{matrix} \right] \) であれば、 \( X' = g ^ m ( B _ { n + 1 } ) \) である。
+*** ただし、 \( g ( Y ) = \left[ \begin{matrix} A _ 1 & A _ 2 & \cdots & A _ n & { A _ n }' \\ B _ 1 & B _ 2 & \cdots & { B _ n }' & Y \\ \end{matrix} \right] \) である。
+
+\( X \) の基本列の \( n \) 番目の要素は \( m = n \) とした時の \( X' \) である。
+
+## 解析
+
+...
