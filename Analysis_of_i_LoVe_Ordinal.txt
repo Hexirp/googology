@@ -410,7 +410,7 @@
 * \( \omega ^ { \omega ^ \omega } [ 0 ] = 0 \)
 * \( \omega ^ { \omega ^ \omega } [ 1 ] = \omega ^ \omega \)
 * \( \omega ^ { \omega ^ \omega } [ 2 ] = \omega ^ { \omega ^ { 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 } } \oplus \omega ^ { \omega ^ { 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 } } \)
-* \( \omega ^ { \omega ^ \omega } [ 3 ] = \omega { \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } } \oplus \omega { \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } } \oplus \omega { \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } } \)
+* \( \omega ^ { \omega ^ \omega } [ 3 ] = \omega ^ { \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } } \oplus \omega ^ { \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } } \oplus \omega ^ { \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } \oplus \omega ^ { 1 \oplus 1 \oplus 1 } } \)
 
 \( \epsilon _ 0 [ n ] \) を計算する。
 
