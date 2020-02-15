@@ -205,7 +205,7 @@
 * \( X = \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & B _ { m - 1 } \\ \end{matrix} \right) \) とする。
 * \( m \) の値で場合分けする。
 * \( m = 1 \) のとき、
-** \( j _ \oplus ( B _ { m - 1 } \) の値で場合分けする。
+** \( j _ \oplus ( B _ { m - 1 } ) \) の値で場合分けする。
 ** \( O \) のとき、
 *** あり得ない状態である。
 ** \( S \) のとき、
@@ -255,24 +255,24 @@
 ***** \( { B _ { m - 2 } } ^ - > _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & { A _ { m - 1 } } ^ - & 0 \\ B _ 0 & B _ 1 & \cdots & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & { A _ { m - 2 } } ^ - & 0 \\ B _ 0 & B _ 1 & \cdots & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 ***** \( { B _ { m - 2 } } ^ - > _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & { A _ { m - 1 } } ^ - & 0 \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 2 } } ^ - & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & { A _ { m - 2 } } ^ - & 0 \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 2 } } ^ - & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 **** \( L \) のとき、
 ***** \( B _ { m - 2 } [ n ] \) の値で場合分けする。
 ***** \( B _ { m - 2 } [ n ] = _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & { A _ { m - 1 } } ^ - & 0 \\ B _ 0 & B _ 1 & \cdots & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & { A _ { m - 2 } } ^ - & 0 \\ B _ 0 & B _ 1 & \cdots & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 ***** \( B _ { m - 2 } [ n ] > _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & { A _ { m - 1 } } ^ - & 0 \\ B _ 0 & B _ 1 & \cdots & B _ { m - 2 } [ n ] & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & { A _ { m - 2 } } ^ - & 0 \\ B _ 0 & B _ 1 & \cdots & B _ { m - 2 } [ n ] & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 ** \( L \) のとき、
-*** \( A _ { m - 1 } [ n ] \) の値で場合分けする。
-*** \( A _ { m - 1 } [ n ] = _ \oplus 0 \) のとき、
+*** \( A _ { m - 2 } [ n ] \) の値で場合分けする。
+*** \( A _ { m - 2 } [ n ] = _ \oplus 0 \) のとき、
 **** \( j _ \oplus ( B _ { m - 2 } ) \) の値で場合分けする。
 **** \( O \) のとき、
 ***** あり得ない状態である。
@@ -281,22 +281,22 @@
 ***** \( { B _ { m - 2 } } ^ - = _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } [ n ] \\ B _ 0 & B _ 1 & \cdots & Y \\ \end{matrix} \right) \oplus 0 \) である。
+******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & 0 \\ B _ 0 & B _ 1 & \cdots & Y \\ \end{matrix} \right) \oplus 0 \) である。
 ***** \( { B _ { m - 2 } } ^ - > _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & A _ { m - 1 } [ n ] \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 2 } } ^ - & Y \\ \end{matrix} \right) \oplus 0 \) である。
+******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & 0 \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 2 } } ^ - & Y \\ \end{matrix} \right) \oplus 0 \) である。
 **** \( L \) のとき、
 ***** \( B _ { m - 2 } [ n ] \) の値で場合分けする。
 ***** \( B _ { m - 2 } [ n ] = _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-****** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } [ n ] \\ B _ 0 & B _ 1 & \cdots & Y \\ \end{matrix} \right) \oplus 0 \) である。
+****** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & 0 \\ B _ 0 & B _ 1 & \cdots & Y \\ \end{matrix} \right) \oplus 0 \) である。
 ***** \( B _ { m - 2 } [ n ] > _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-****** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & A _ { m - 1 } [ n ] \\ B _ 0 & B _ 1 & \cdots & B _ { m - 2 } [ n ] & Y \\ \end{matrix} \right) \oplus 0 \) である。
-*** \( A _ { m - 1 } [ n ] > _ \oplus 0 \) のとき、
+****** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & 0 \\ B _ 0 & B _ 1 & \cdots & B _ { m - 2 } [ n ] & Y \\ \end{matrix} \right) \oplus 0 \) である。
+*** \( A _ { m - 2 } [ n ] > _ \oplus 0 \) のとき、
 **** \( j _ \oplus ( B _ { m - 2 } ) \) の値で場合分けする。
 **** \( O \) のとき、
 ***** あり得ない状態である。
@@ -305,21 +305,21 @@
 ***** \( { B _ { m - 2 } } ^ - = _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 ***** \( { B _ { m - 2 } } ^ - > _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & A _ { m - 1 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 2 } } ^ - & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+******* \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & A _ { m - 2 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 2 } } ^ - & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 **** \( L \) のとき、
 ***** \( B _ { m - 2 } [ n ] \) の値で場合分けする。
 ***** \( B _ { m - 2 } [ n ] = _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-****** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+****** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 ***** \( B _ { m - 2 } [ n ] > _ \oplus 0 \) のとき、
 ****** \( X [ n ] \) の値は \( g ^ n ( B _ { m - 1 } ) \) に等しい。
 ******* ただし、 \( Y \mapsto g ( Y ) \) は以下のように定義される関数である。
-****** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & A _ { m - 1 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & B _ { m - 2 } [ n ] & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+****** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & A _ { m - 2 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & B _ { m - 2 } [ n ] & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 
 == 解析 ==
 
