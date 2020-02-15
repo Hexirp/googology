@@ -377,7 +377,7 @@
 まず、略記を定める。
 
 * \( \left( \begin{matrix} 0 \\ 0 \\ \end{matrix} \right) \) を \( 1 \) と略記する。
-* \( \left( \begin{matrix} 0 \\ 1 \\ \end{matrix} \right) \) を \( 1 \) と略記する。
+* \( \left( \begin{matrix} 0 \\ 1 \\ \end{matrix} \right) \) を \( \omega \) と略記する。
 * \( \left( \begin{matrix} 0 \\ X \\ \end{matrix} \right) \) を \( \omega ^ X \) と略記する。
 * \( \left( \begin{matrix} 1 & 0 \\ 1 & X \\ \end{matrix} \right) \) を \( \varepsilon _ X \) と略記する。
 * \( \left( \begin{matrix} 1 & 0 \\ Y & X \\ \end{matrix} \right) \) を \( \varphi _ Y ( X ) \) と略記する。
