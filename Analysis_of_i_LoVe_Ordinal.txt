@@ -184,7 +184,8 @@
 
 後続順序数に対する基本列は \( X \mapsto X ^ - \) により定められる。
 
-* \( X \in T _ \oplus \) を取る。
+\( X \mapsto X ^ - \) を定義する。
+
 * \( X \) の項の形により場合分けする。
 * \( X = 0 \) のとき、
 ** \( X ^ - \) の値は \( 0 \) である。
@@ -352,6 +353,24 @@
 ******** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & 0 \\ B _ 0 & B _ 1 & \cdots & B _ { m - 2 } [ n ] & 0 \\ \end{matrix} \right) \oplus 0 \) である。
 ******* \( Y > _ \oplus 0 \) のとき、
 ******** \( g ( Y ) \) の値は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 2 } & A _ { m - 2 } [ n ] & 0 \\ B _ 0 & B _ 1 & \cdots & B _ { m - 2 } [ n ] & Y & 0 \\ \end{matrix} \right) \oplus 0 \) である。
+
+\( ( X, n ) \mapsto X [ n ] _ \oplus \) を定義する。
+
+* \( X \) の項の形により場合分けする。
+* \( X = 0 \) のとき、
+** あり得ない状態である。
+* \( X = X _ v \oplus X _ s \) のとき、
+** \( X [ n ] _ \oplus \) の値は \( \mathrm{init} ( X _ v, X _ s ) \) である。
+*** ただし、 \( ( X, Y ) \mapsto \mathrm{init} ( X, Y ) \) は以下のように定義される関数である。
+*** \( Y \) の項の形で場合分けする。
+*** \( Y = 0 \) のとき、
+**** \( \mathrm{init} ( X, Y ) \) の値は \( X [ n ] _ \oplus \) である。
+*** \( Y = Y _ v \oplus Y _ s \) のとき、
+**** \( \mathrm{init} ( X, Y ) \) の値は \( X \oplus \mathrm{init} ( Y _ v, Y _ s ) \) である。
+
+\( ( X, n ) \mapsto X [ n ] \) を定義する。
+
+* \( ( X, n ) \mapsto X [ n ] \) の値は \( ( X, n ) \mapsto X [ n ] _ \oplus \) の値に等しい。
 
 == 解析 ==
 
