@@ -215,7 +215,7 @@
 **** \( { B _ { m - 1 } } ^ - \) と \( \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) の比較で場合分けする。
 **** \( { B _ { m - 1 } } ^ - = _ \oplus \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) のとき、
 ***** \( B' \oplus 0 = { B _ { m - 1 } } ^ - \) とする。
-***** \( f ( Y ) \) の値は \B' \oplus Y \) である。
+***** \( f ( Y ) \) の値は \( \B' \oplus Y \) である。
 **** \( { B _ { m - 1 } } ^ - < _ \oplus \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) のとき、
 ***** \( f ( Y ) \) の値は \( \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus Y \) である。
 ** \( L \) のとき、
@@ -224,7 +224,7 @@
 **** \( B _ { m - 1 } [ n ] \) と \( \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) の比較で場合分けする。
 **** \( B _ { m - 1 } [ n ] = _ \oplus \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) のとき、
 ***** \( B' \oplus 0 = B _ { m - 1 } [ n ] \) とする。
-***** \( f ( Y ) \) の値は B' \oplus Y \) である。
+***** \( f ( Y ) \) の値は \( B' \oplus Y \) である。
 **** \( B _ { m - 1 } [ n ] < _ \oplus \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) のとき、
 ***** \( f ( Y ) \) の値は \( \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus Y \) である。
 * \( m > 1 \) のとき、
