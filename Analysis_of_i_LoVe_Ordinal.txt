@@ -212,11 +212,21 @@
 ** \( S \) のとき、
 *** \( X [ n ] \) の値は \( f ^ n ( 0 ) \) に等しい。
 **** ただし、 \( Y \mapsto f ( Y ) \) は以下のように定義される関数である。
-**** \( f ( Y ) \) の値は \( \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus Y \) である。
+**** \( { B _ { m - 1 } } ^ - \) と \( \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) の比較で場合分けする。
+**** \( { B _ { m - 1 } } ^ - = _ \oplus \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) のとき、
+***** \( B' \oplus 0 = { B _ { m - 1 } } ^ - \) とする。
+***** \( f ( Y ) \) の値は \( \left( \begin{matrix} 0 \\ B' \\ \end{matrix} \right) \oplus Y \) である。
+**** \( { B _ { m - 1 } } ^ - < _ \oplus \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) のとき、
+***** \( f ( Y ) \) の値は \( \left( \begin{matrix} 0 \\ { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus Y \) である。
 ** \( L \) のとき、
 *** \( X [ n ] \) の値は \( f ^ n ( 0 ) \) に等しい。
 **** ただし、 \( Y \mapsto f ( Y ) \) は以下のように定義される関数である。
-**** \( f ( Y ) \) の値は \( \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus Y \) である。
+**** \( B _ { m - 1 } [ n ] \) と \( \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) の比較で場合分けする。
+**** \( B _ { m - 1 } [ n ] = _ \oplus \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) のとき、
+***** \( B' \oplus 0 = B _ { m - 1 } [ n ] \) とする。
+***** \( f ( Y ) \) の値は \( \left( \begin{matrix} 0 \\ B' \\ \end{matrix} \right) \oplus Y \) である。
+**** \( B _ { m - 1 } [ n ] < _ \oplus \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) のとき、
+***** \( f ( Y ) \) の値は \( \left( \begin{matrix} 0 \\ B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus Y \) である。
 * \( m > 1 \) のとき、
 ** \( j _ \oplus ( A _ { m - 2 } ) \) の値で場合分けする。
 ** \( O \) のとき、
