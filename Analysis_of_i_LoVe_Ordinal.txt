@@ -860,23 +860,30 @@
 
 \( \varphi _ \omega ( 0 ) [ n ] \) を計算する。
 
-\ \( \varphi _ \omega ( 0 ) [ 0 ] = 0 \)
-\ \( \varphi _ \omega ( 0 ) [ 1 ] = \varepsilon _ 0 \)
-\ \( \varphi _ \omega ( 0 ) [ 2 ] = \varphi _ { 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 } ( 0 ) ) \)
-\ \( \varphi _ \omega ( 0 ) [ 3 ] = \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( 0 ) ) ) \)
+* \( \varphi _ \omega ( 0 ) [ 0 ] = 0 \)
+* \( \varphi _ \omega ( 0 ) [ 1 ] = \varepsilon _ 0 \)
+* \( \varphi _ \omega ( 0 ) [ 2 ] = \varphi _ { 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 } ( 0 ) ) \)
+* \( \varphi _ \omega ( 0 ) [ 3 ] = \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( 0 ) ) ) \)
 
 \( \varphi _ \omega ( 1 ) [ n ] \) を計算する。
 
-\ \( \varphi _ \omega ( 1 ) [ 0 ] = \varphi _ \omega ( 0 ) \oplus 1 \)
-\ \( \varphi _ \omega ( 1 ) [ 1 ] = \varepsilon _ { \varphi _ \omega ( 0 ) \oplus 1 } \)
-\ \( \varphi _ \omega ( 1 ) [ 2 ] = \varphi _ { 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 } ( \varphi _ \omega ( 0 ) \oplus 1 ) ) \)
-\ \( \varphi _ \omega ( 1 ) [ 3 ] = \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ \omega ( 0 ) \oplus 1 ) ) ) \)
+* \( \varphi _ \omega ( 1 ) [ 0 ] = \varphi _ \omega ( 0 ) \oplus 1 \)
+* \( \varphi _ \omega ( 1 ) [ 1 ] = \varepsilon _ { \varphi _ \omega ( 0 ) \oplus 1 } \)
+* \( \varphi _ \omega ( 1 ) [ 2 ] = \varphi _ { 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 } ( \varphi _ \omega ( 0 ) \oplus 1 ) ) \)
+* \( \varphi _ \omega ( 1 ) [ 3 ] = \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ \omega ( 0 ) \oplus 1 ) ) ) \)
 
 \( \varphi _ \omega ( \omega ) [ n ] \) を計算する。
 
-\ \( \varphi _ \omega ( \omega ) [ 0 ] = \varphi _ \omega ( 0 ) \oplus 1 \)
-\ \( \varphi _ \omega ( \omega ) [ 1 ] = \varepsilon _ { \varphi _ \omega ( 1 ) \oplus 1 } \)
-\ \( \varphi _ \omega ( \omega ) [ 2 ] = \varphi _ { 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 } ( \varphi _ \omega ( 1 \oplus 1 ) \oplus 1 ) ) \)
-\ \( \varphi _ \omega ( \omega ) [ 3 ] = \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ \omega ( 1 \oplus 1 \oplus 1 ) \oplus 1 ) ) ) \)
+* \( \varphi _ \omega ( \omega ) [ 0 ] = \varphi _ \omega ( 0 ) \oplus 1 \)
+* \( \varphi _ \omega ( \omega ) [ 1 ] = \varepsilon _ { \varphi _ \omega ( 1 ) \oplus 1 } \)
+* \( \varphi _ \omega ( \omega ) [ 2 ] = \varphi _ { 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 } ( \varphi _ \omega ( 1 \oplus 1 ) \oplus 1 ) ) \)
+* \( \varphi _ \omega ( \omega ) [ 3 ] = \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ { 1 \oplus 1 \oplus 1 } ( \varphi _ \omega ( 1 \oplus 1 \oplus 1 ) \oplus 1 ) ) ) \)
+
+\( \left( \begin{matrix} \omega & 0 \\ 1 & 0 \\ \end{matrix} \right) [ n ] \) を計算する。
+
+* \( \left( \begin{matrix} \omega & 0 \\ 1 & 0 \\ \end{matrix} \right) [ 0 ] = 0 \)
+* \( \left( \begin{matrix} \omega & 0 \\ 1 & 0 \\ \end{matrix} \right) [ 1 ] = 1 \)
+* \( \left( \begin{matrix} \omega & 0 \\ 1 & 0 \\ \end{matrix} \right) [ 2 ] = \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \)
+* \( \left( \begin{matrix} \omega & 0 \\ 1 & 0 \\ \end{matrix} \right) [ 3 ] = \left( \begin{matrix} 1 \oplus 1 \oplus 1 & 0 \\ \left( \begin{matrix} 1 \oplus 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) & 0 \\ \end{matrix} \right) \)
 
 ...
