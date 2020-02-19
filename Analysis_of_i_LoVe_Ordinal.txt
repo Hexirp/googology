@@ -704,9 +704,19 @@
 *** \( O \) のとき、
 **** \( X' \) は \( 0 \) に等しい。
 *** \( S \) のとき、
-**** \( X' \) は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus \left( \begin{matrix} 1 \\ 1 \\ \end{matrix} \right) \oplus 0 \) に等しい。
+**** \( { B _ { m - 1 } } ^ - \) と \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) の比較で場合分けする。
+**** \( { B _ { m - 1 } } ^ - = _ \oplus \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) のとき、
+***** \( B' \oplus 0 = { B _ { m - 1 } } ^ - \) とする。
+***** \( X' \) は \( B' \oplus \left( \begin{matrix} 0 \\ 0 \\ \end{matrix} \right) \oplus 0 \) に等しい。
+**** \( { B _ { m - 1 } } ^ - < _ \oplus \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus 0 \) のとき、
+***** \( X' \) は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & { B _ { m - 1 } } ^ - \\ \end{matrix} \right) \oplus \left( \begin{matrix} 0 \\ 0 \\ \end{matrix} \right) \oplus 0 \) に等しい。
 *** \( L \) のとき、
-**** \( X' \) は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus \left( \begin{matrix} 1 \\ 1 \\ \end{matrix} \right) \oplus 0 \) に等しい。
+**** \( B _ { m - 1 } [ n ] \) と \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) の比較で場合分けする。
+**** \( B _ { m - 1 } [ n ] = _ \oplus \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) のとき、
+***** \( B' \oplus 0 = B _ { m - 1 } [ n ] \) とする。
+***** \( X' \) は \( B' \oplus \left( \begin{matrix} 0 \\ 0 \\ \end{matrix} \right) \oplus 0 \) に等しい。
+**** \( B _ { m - 1 } [ n ] < _ \oplus \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus 0 \) のとき、
+***** \( X' \) は \( \left( \begin{matrix} A _ 0 & A _ 1 & \cdots & A _ { m - 1 } \\ B _ 0 & B _ 1 & \cdots & B _ { m - 1 } [ n ] \\ \end{matrix} \right) \oplus \left( \begin{matrix} 0 \\ 0 \\ \end{matrix} \right) \oplus 0 \) に等しい。
 ** \( { A _ { m - 2 } }' \) の値で場合分けする。
 ** \( { A _ { m - 2 } }' = _ \oplus 0 \) のとき、
 *** \( { B _ { m - 2 } }' \) の値で場合分けする。
