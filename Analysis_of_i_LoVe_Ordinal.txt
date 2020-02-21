@@ -923,13 +923,19 @@
 * \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) [ 2 ] = \varepsilon _ 0 \)
 * \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) [ 3 ] = \varphi _ { \varepsilon _ 0 } ( 0 ) \)
 
-
 \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 1 \\ \end{matrix} \right) [ n ] \) を計算する。
 
 * \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 1 \\ \end{matrix} \right) [ 0 ] = \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \oplus 1 \)
-* \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 1 \\ \end{matrix} \right) [ 0 ] = \varphi _ { \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \oplus 1 } ( 0 ) \)
-* \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 1 \\ \end{matrix} \right) [ 0 ] = \varphi _ { \varphi _ { \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \oplus 1 } ( 0 ) } ( 0 ) \)
-* \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 1 \\ \end{matrix} \right) [ 0 ] = \varphi _ { \varphi _ { \varphi _ { \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \oplus 1 } ( 0 ) } ( 0 ) } ( 0 ) \)
+* \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 1 \\ \end{matrix} \right) [ 1 ] = \varphi _ { \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \oplus 1 } ( 0 ) \)
+* \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 1 \\ \end{matrix} \right) [ 2 ] = \varphi _ { \varphi _ { \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \oplus 1 } ( 0 ) } ( 0 ) \)
+* \( \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 1 \\ \end{matrix} \right) [ 3 ] = \varphi _ { \varphi _ { \varphi _ { \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \oplus 1 } ( 0 ) } ( 0 ) } ( 0 ) \)
+
+\( \left( \begin{matrix} 1 \oplus 1 & 1 & 0 \\ 1 & 1 & 0 \\ \end{matrix} \right) [ n ] \) を計算する。
+
+* \( \left( \begin{matrix} 1 \oplus 1 & 1 & 0 \\ 1 & 1 & 0 \\ \end{matrix} \right) [ 0 ] = 0 \)
+* \( \left( \begin{matrix} 1 \oplus 1 & 1 & 0 \\ 1 & 1 & 0 \\ \end{matrix} \right) [ 0 ] = \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \)
+* \( \left( \begin{matrix} 1 \oplus 1 & 1 & 0 \\ 1 & 1 & 0 \\ \end{matrix} \right) [ 0 ] = \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \\ \end{matrix} \right) \)
+* \( \left( \begin{matrix} 1 \oplus 1 & 1 & 0 \\ 1 & 1 & 0 \\ \end{matrix} \right) [ 0 ] = \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & \left( \begin{matrix} 1 \oplus 1 & 0 \\ 1 & 0 \\ \end{matrix} \right) \\ \end{matrix} \right) \\ \end{matrix} \right) \)
 
 \( \left( \begin{matrix} \omega & 0 \\ 1 & 0 \\ \end{matrix} \right) [ n ] \) を計算する。
 
