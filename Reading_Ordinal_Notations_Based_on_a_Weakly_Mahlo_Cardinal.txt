@@ -125,3 +125,17 @@ The standard model of \( \mathrm{KPi} \) is the initial segment of the construct
 始切片は、順序集合に関する用語であり、ある順序集合 \( ( A, \_ < \_ ) \) があったとき、その \( a \) での始切片は \( \{ x \in A \mid x < a \} \) である。ここで \( L _ \alpha \) も \( \_ \subset \_ \) に関して始切片になっていることに注意。
 
 ここまでくると、原文の意味を理解できる。すなわち、「 \( \mathrm{KPi} \) の標準モデルは \( L _ \alpha \) である。ただし \( \alpha \) は最小の再帰的到達不能順序数である」となる。
+
+=== 次のステップ ===
+
+そして、 \( \Pi _ 2 ^ 1 \)-内包により構成される二階算術のサブシステムの順序数解析に向けた次のステップは、 \( \mathrm{L} ( \mu _ 0 ) \) の本質的な特徴を公理化している集合論によって提供される、ここで \( \mu _ 0 \) は最初の再帰的マーロ順序数を表している。
+
+==== 原文 ====
+
+So a next step towards an ordinal analysis of the subsystem of second order arithmetic based on \( \Pi _ 2 ^ 1 \)-comprehension is offered by a set theory which axiomatizes essential features of \( \mathrm{L} ( \mu _ 0 ) \), where \( \mu _ 0 \) denotes the first recursively Mahlo ordinal.
+
+==== 解説 ====
+
+...
+
+===
