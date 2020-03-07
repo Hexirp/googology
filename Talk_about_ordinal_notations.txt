@@ -26,7 +26,7 @@
 
 何はともあれ比較関数との相互再帰は、項と加算列と項に対する比較関数と加算列に対する比較関数の四つがそれぞれ相互再帰するというものである。これは[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/%E8%A7%A3%E6%9E%90_(i_LoVe_Ordinal) 解析 (i_LoVe_Ordinal)] にて明示されている。現在の Coq や Agda ではこのようなことは不可能であり、だが homotopy type theory の高階帰納型 (higher inductive type) で正当化できるのではないかと考えている。 Haskell 風の疑似コードで仮想的に定義するなら、このようになるのではないかと思う。
 
-<pre>
+<pre><code>
 data Unary :: Type where
   Omega :: Sequence -> Unary
 
@@ -56,4 +56,4 @@ all_ge u := go where
   go :: Sequence -> Bool
   go Zero             := True
   go (OPlus xu xs xH) := ge_u u xu && go xs
-</pre>
+</code></pre>
