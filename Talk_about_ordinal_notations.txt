@@ -104,3 +104,4 @@ Buchholz's ψ function の操作に乗法を付け加えてみる。標準形の
 
 * \( \alpha \times \psi _ 0 ( 0 ) = \alpha \)
 * \( ( \alpha \times \beta ) \times \gamma = \alpha \times ( \beta \times \gamma ) \)
+* \( \alpha \times ( \beta + \gamma ) = \alpha \times \beta + \alpha \times \gamma\ \)
