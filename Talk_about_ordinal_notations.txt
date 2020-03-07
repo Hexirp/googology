@@ -77,7 +77,7 @@ Three Equivalent Ordinal Notation Systems in Cubical Agda ([https://arxiv.org/ab
 * 何もない場合、底値は \( 1 \) である。例は Buchholz's ψ function などである。
 * \( x, y \mapsto x \times y \) の場合、底値はおそらく \( 1 \) である。しかし、表記としてはかなり奇妙なものになると思われる。
 * \( x, y \mapsto x \times y \) と \( x, y \mapsto x ^ y \) の場合、底値は \( \epsilon _ 0 \) である。例は Madore's ψ function などである。
-* \( x \mapsto \omega ^ y \) の場合、底値は \( \epsilon _ 0 \) である。例は Bachman's recasted ψ function などである。
+* \( x \mapsto \omega ^ y \) の場合、底値は \( \epsilon _ 0 \) である。例は recasted Bachman's ψ function などである。
 * \( x, y \mapsto \varphi _ x ( y ) \) の場合、底値は \( \Gamma _ 0 \) である。例は Jäger's ψ function などである。
 
 さらに、多変数ヴェブレン関数を使えば \( \mathrm{SVO} \) となり、超限変数ヴェブレン関数を使えば \( \mathrm{LVO} \) になると思われ、おそらくこれが上限となる。ちなみに、これらの操作は別に結果が重複するようなものが同時に存在してもよく、 \( x \mapsto \omega ^ y \) と \( x, y \mapsto \varphi _ x ( y ) \) という取り合わせでもよい。その場合はどれが標準形となるか決定する作業が必要になりいささか面倒くさく無駄があるが、順序数表記としては成立するだろう。
