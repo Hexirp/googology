@@ -83,3 +83,24 @@ Three Equivalent Ordinal Notation Systems in Cubical Agda ([https://arxiv.org/ab
 さらに、多変数ヴェブレン関数を使えば \( \mathrm{SVO} \) となり、超限変数ヴェブレン関数を使えば \( \mathrm{LVO} \) になると思われ、おそらくこれが上限となる。ちなみに、これらの操作は別に結果が重複するようなものが同時に存在してもよく、 \( x \mapsto \omega ^ y \) と \( x, y \mapsto \varphi _ x ( y ) \) という取り合わせでもよい。その場合はどれが標準形となるか決定する作業が必要になりいささか面倒くさく無駄があるが、順序数表記としては成立するだろう。
 
 では、 Buchholz 系ではないものにも自由度はあるのかといえば、あるだろう。例えば Feferman's θ function では到達不能基数レベルまで拡張したものが論文の上に載って発表されている。
+
+=== 乗法だけを加えた変な奴 ===
+
+Buchholz's ψ function の操作に乗法を付け加えてみる。標準形の設定としては、分配法則を使って出来るだけ分解するものとしている。
+
+* \( \psi _ 0 ( 0 ) = 1 \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) ) = \omega \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) ) = \omega ^ 2 \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) ) = \omega ^ 3 \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) = \omega ^ \omega \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) ) = \omega ^ { \omega + 1 } \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) ) = \omega ^ { \omega + 2 } \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) = \omega ^ { \omega + \omega } \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) = \omega ^ { \omega + \omega + \omega } \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) \times \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) = \omega ^ { \omega + \omega + \omega } \)
+* \( \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) = \omega ^ { \omega ^ 2 } \)
+
+これに特徴的な非標準形として、このようなものが現れる。
+
+* \( \alpha \times \psi _ 0 ( 0 ) = \alpha \)
+* \( ( \alpha \times \beta ) \times \gamma = \alpha \times ( \beta \times \gamma ) \)
