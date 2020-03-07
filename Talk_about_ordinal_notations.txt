@@ -12,7 +12,7 @@
 
 == 順序数表記の定義に関するテクニック ==
 
-順序数表記の定義をする際に、私が考案したテクニックが二つある。それらは[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/%E8%A7%A3%E6%9E%90_(i_LoVe_Ordinal) 解析_(i_LoVe_Ordinal)] において完成を見た。
+順序数表記の定義をする際に、私が考案したテクニックが二つある。それらは[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/%E8%A7%A3%E6%9E%90_(i_LoVe_Ordinal) 解析 (i_LoVe_Ordinal)] において完成を見た。
 
 一つ目は、単項と加算列での相互再帰である。私が見る限り Googology Wiki に記載されている順序数表記の多くは単項と加算を一つの型（集合）で表している。その一例は [https://googology.wikia.org/wiki/Buchholz%27s_function?oldid=278444 Buchholz's function (the revision on 2020-02-16)] にある。しかしながら、これは、項を二つの場合に分ける必要が出てくることになり、比較や基本列の定義が複雑になってしまう。そこで単項 (additively indecomposable ordinal) と加算列の二つへと最初から分ける。
 
@@ -24,32 +24,12 @@
 
 「悪い非標準形」という概念はきちんと定義できていないのだが、その一例を挙げることが出来る。標準形である項 \( \omega \) に対して \( 1 + \omega \) がそれである。これは順序数へと変換したとき \( o ( \omega ) = o ( 1 + \omega ) \) となる。しかし、順序数として変換する前の項としては \( \omega > _ \mathrm{T} 1 + \omega \) となるのである。一方で \( \epsilon _ 0 \) に対する \( \omega ^ { \epsilon _ 0 } \) は良い非標準形である。それは \( \epsilon _ 0 \neq \omega ^ { \epsilon _ 0 } \) である、つまり項として等しくないが、 \( o ( \epsilon _ 0 ) \neq o ( \omega ^ { \epsilon _ 0 } ) \) であり、さらに \( \epsilon _ 0 = _ \mathrm{T} \omega ^ { \epsilon _ 0 } \) である。ここでの例は使われる順序数表記の定義に強く依存しており、それがきちんと定義できていない理由である。
 
-何はともあれ、比較関数との相互再帰というのも説明しなければならない。これは単純なことであり、諸々の制限を無視する限り Coq では以下のように書けるであろう。
+何はともあれ比較関数との相互再帰は、項と加算列と項に対する比較関数と加算列に対する比較関数の四つがそれぞれ相互再帰するというものである。これは[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/%E8%A7%A3%E6%9E%90_(i_LoVe_Ordinal) 解析 (i_LoVe_Ordinal)] にて明示されている。現在の Coq や Agda ではこのようなことは不可能であり、だが homotopy type theory の高階帰納型 (higher inductive type) で正当化できるのではないかと考えている。 Haskell 風の疑似コードで仮想的に定義するなら、このようになるのではないかと思う。
 
 <pre>
-Inductive prm : Type :=
-  | omega_up : seq -> prm.
+data Unary :: Type where
+  Omega :: Sequence -> Unary
 
-Inductive seq : Type :=
-  | zero : seq
-  | plus : forall (p : prm) (s : seq), all_ge p s = true -> seq.
-
-Definition all_ge (p : prm) (s : seq) : bool :=
-  match s with
-    | zero => true
-    | plus sp ss => andb (comp p sp) (all_ge p ss)
-  end.
-
-Definition comp_prm (x y : prm) : bool :=
-  match x with
-    | omega_up xs => match y with
-      | omega_up ys => ge_seq xs ys
-    end
-  end.
-
-Definition ge_seq (x y : seq) : bool :=
-  match x with
-    | zero => match y with
-      | zero => true
-      |
-</pre>
+data Sequence :: Type where
+  Zero :: Sequence
+  OPlus :: pi (u :: Unary) (s :: Sequence). 
