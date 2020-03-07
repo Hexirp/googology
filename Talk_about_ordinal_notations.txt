@@ -80,6 +80,6 @@ Three Equivalent Ordinal Notation Systems in Cubical Agda ([https://arxiv.org/ab
 * \( x \mapsto \omega ^ y \) の場合、底値は \( \epsilon _ 0 \) である。例は Bachman's recasted ψ function などである。
 * \( x, y \mapsto \varphi _ x ( y ) \) の場合、底値は \( \Gamma _ 0 \) である。例は Jäger's ψ function などである。
 
-さらに、多変数ヴェブレン関数を使えば \( \mathrm{SVO} \) となり、超限変数ヴェブレン関数を使えば \( \mathrm{LVO} \) になると思われ、おそらくこれが上限となる。
+さらに、多変数ヴェブレン関数を使えば \( \mathrm{SVO} \) となり、超限変数ヴェブレン関数を使えば \( \mathrm{LVO} \) になると思われ、おそらくこれが上限となる。ちなみに、これらの操作は別に結果が重複するようなものが同時に存在してもよく、 \( x \mapsto \omega ^ y \) と \( x, y \mapsto \varphi _ x ( y ) \) という取り合わせでもよい。その場合はどれが標準形となるか決定する作業が必要になりいささか面倒くさく無駄があるが、順序数表記としては成立するだろう。
 
 では、 Buchholz 系ではないものにも自由度はあるのかといえば、あるだろう。例えば Feferman's θ function では到達不能基数レベルまで拡張したものが論文の上に載って発表されている。
