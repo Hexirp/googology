@@ -82,4 +82,4 @@ Three Equivalent Ordinal Notation Systems in Cubical Agda ([https://arxiv.org/ab
 
 さらに、多変数ヴェブレン関数を使えば \( \mathrm{SVO} \) となり、超限変数ヴェブレン関数を使えば \( \mathrm{LVO} \) になると思われ、おそらくこれが上限となる。
 
-では、 Buchholz 系ではないものにも自由度はあるのかといえば、あるだろう。例えば Feferman's θ function にも到達不能基数レベルまで拡張したものが論文の上に載って発表されている。
+では、 Buchholz 系ではないものにも自由度はあるのかといえば、あるだろう。例えば Feferman's θ function では到達不能基数レベルまで拡張したものが論文の上に載って発表されている。
