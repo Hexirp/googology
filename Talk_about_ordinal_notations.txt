@@ -32,4 +32,28 @@ data Unary :: Type where
 
 data Sequence :: Type where
   Zero :: Sequence
-  OPlus :: pi (u :: Unary) (s :: Sequence). 
+  OPlus :: pi (u :: Unary) (s :: Sequence). all_ge u s = True -> Sequence
+
+comp_u :: Unary -> Unary -> Ordering
+comp_u (Omega xv) (Omega yv) := comp_s xv yv
+
+comp_s :: Sequence -> Sequence -> Ordering
+comp_s Zero             Zero             := EQ
+comp_s Zero             (OPlus yu ys yH) := LT
+comp_s (OPlus xu xs xH) Zero             := GT
+comp_s (OPlus xu xs xH) (OPlus yu ys yH) := comp_u xu yu <> comp_s xs ys
+
+comp := comp_s
+
+ge_u :: Unary -> Unary -> Bool
+ge_u x y := case comp_u x y of
+  LT -> False
+  EQ -> True
+  GT -> True
+
+all_ge :: Unary -> Sequence -> Bool
+all_ge u := go where
+  go :: Sequence -> Bool
+  go Zero             := True
+  go (OPlus xu xs xH) := ge_u u xu && go xs
+</pre>
