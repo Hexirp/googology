@@ -26,7 +26,7 @@
 
 何はともあれ比較関数との相互再帰は、項と加算列と項に対する比較関数と加算列に対する比較関数の四つがそれぞれ相互再帰するというものである。これは[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/%E8%A7%A3%E6%9E%90_(i_LoVe_Ordinal) 解析 (i_LoVe_Ordinal)] にて明示されている。現在の Coq や Agda ではこのようなことは不可能であり、だが homotopy type theory の高階帰納型 (higher inductive type) で正当化できるのではないかと考えている。 Haskell 風の疑似コードで仮想的に定義するなら、以下のようになるのではないかと思う。もし、これを高階帰納型で表すならば <code> all_ge </code> などを関数ではなくデータ型に変更する必要があるだろう。なお、これが高階帰納型で表されると考える根拠は [https://homotopytypetheory.org/2014/02/22/surreals-plump-ordinals/ The surreals contain the plump ordinals | Homotopy Type Theory] に載っている plump ordinal の高階帰納型による定義に構文の上おいて類似するものが見られるためである。すなわち、これは \( \mathrm{POrd} : \mathrm{Type} \) と \( \mathrm{Ge} : \mathrm{POrd} \rightarrow \mathrm{POrd} \rightarrow \mathrm{Type} \) の相互帰納型による定義であり、これが許されるならば件のような定義が許されるであろうという考えである。
 
-<pre><code>
+<pre>
 data Unary :: Type where
   Omega :: Sequence -> Unary
 
@@ -56,7 +56,7 @@ all_ge u := go where
   go :: Sequence -> Bool
   go Zero             := True
   go (OPlus xu xs xH) := ge_u u xu && go xs
-</code></pre>
+</pre>
 
 === 先行研究 ===
 
