@@ -24,7 +24,7 @@
 
 「悪い非標準形」という概念はきちんと定義できていないのだが、その一例を挙げることが出来る。標準形である項 \( \omega \) に対して \( 1 + \omega \) がそれである。これは順序数へと変換したとき \( o ( \omega ) = o ( 1 + \omega ) \) となる。しかし、順序数として変換する前の項としては \( \omega > _ \mathrm{T} 1 + \omega \) となるのである。一方で \( \epsilon _ 0 \) に対する \( \omega ^ { \epsilon _ 0 } \) は良い非標準形である。それは \( \epsilon _ 0 \neq \omega ^ { \epsilon _ 0 } \) である、つまり項として等しくないが、 \( o ( \epsilon _ 0 ) \neq o ( \omega ^ { \epsilon _ 0 } ) \) であり、さらに \( \epsilon _ 0 = _ \mathrm{T} \omega ^ { \epsilon _ 0 } \) である。ここでの例は使われる順序数表記の定義に強く依存しており、それがきちんと定義できていない理由である。
 
-何はともあれ比較関数との相互再帰は、項と加算列と項に対する比較関数と加算列に対する比較関数の四つがそれぞれ相互再帰するというものである。これは[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/%E8%A7%A3%E6%9E%90_(i_LoVe_Ordinal) 解析 (i_LoVe_Ordinal)] にて明示されている。現在の Coq や Agda ではこのようなことは不可能であり、だが homotopy type theory の高階帰納型 (higher inductive type) で正当化できるのではないかと考えている。 Haskell 風の疑似コードで仮想的に定義するなら、このようになるのではないかと思う。
+何はともあれ比較関数との相互再帰は、項と加算列と項に対する比較関数と加算列に対する比較関数の四つがそれぞれ相互再帰するというものである。これは[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/%E8%A7%A3%E6%9E%90_(i_LoVe_Ordinal) 解析 (i_LoVe_Ordinal)] にて明示されている。現在の Coq や Agda ではこのようなことは不可能であり、だが homotopy type theory の高階帰納型 (higher inductive type) で正当化できるのではないかと考えている。 Haskell 風の疑似コードで仮想的に定義するなら、このようになるのではないかと思う。もし、これを高階帰納型で表すならば <code> all_ge </code> などを関数ではなくデータ型に変更する必要があるだろう。
 
 <pre><code>
 data Unary :: Type where
