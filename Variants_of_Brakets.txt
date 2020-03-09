@@ -13,12 +13,12 @@ Gaoji 氏により、三元括弧という興味深い概念が開発されて�
 == 二元カッコ ==
 
 <pre>
-newtype DFATransit state input_alphabet stack_alphabet = DFATransit ((state, Maybe input_alphabet, Maybe stack_alphabet) -> Set (state, Maybe stack_alphabet))
+newtype PDATransit state input_alphabet stack_alphabet = PFATransit ((state, Maybe input_alphabet, Maybe stack_alphabet) -> Set (state, Maybe stack_alphabet))
 
-data PDA state input_alphabet stack_alphabet = PDA (DFATransit state input_alphabet stack_alphabet) state (Set state)
+data PDA state input_alphabet stack_alphabet = PDA (PDATransit state input_alphabet stack_alphabet) state (Set state)
 
-runPDA :: PDATransit state input_alphabet stack_alphabet -> state -> [input_alphabet] -> [stack_alphabet] -> [(state, [stack_alphabet])]
-runPDA (PDATransit delta) = go where
+runPDATransit :: PDATransit state input_alphabet stack_alphabet -> state -> [input_alphabet] -> [stack_alphabet] -> [(state, [stack_alphabet])]
+runPDATransit (PDATransit delta) = go where
   go q input stack =
     case input of
       [] -> case stack of
@@ -43,6 +43,12 @@ runPDA (PDATransit delta) = go where
           case stack_push' of
             Nothing -> go q' input_rest stack_rest
             Just stack_push -> go q' input_rest (stack_push : stack_rest)
+
+runPDA :: PDA state input_alphabet stack_alphabet -> [input_alphabet] -> [(state, [stack_alphabet])]
+runPDA (PDA delta q_0 q_f) input = runPDATransit delta q_0 input []
+
+matchPDA :: [input_alphabet] -> PDA state input_alphabet stack_alphabet -> Bool
+matchPDA input (PDA delta q_0 q_f) = any (\result -> case result of (q, _) -> S.member q q_f) $ runPDA (PDA delta q_0 q_f) input
 </pre>
 
 <pre>
