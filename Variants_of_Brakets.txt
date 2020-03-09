@@ -48,10 +48,12 @@ runPDA :: PDA state input_alphabet stack_alphabet -> [input_alphabet] -> [(state
 runPDA (PDA delta q_0 q_f) input = runPDATransit delta q_0 input []
 
 matchPDA :: [input_alphabet] -> PDA state input_alphabet stack_alphabet -> Bool
-matchPDA input (PDA delta q_0 q_f) = any (\result -> case result of (q, _) -> S.member q q_f) $ runPDA (PDA delta q_0 q_f) input
+matchPDA input (PDA delta q_0 q_f) = any (\(q, _) -> S.member q q_f) $ runPDA (PDA delta q_0 q_f) input
 </pre>
 
 == 二元カッコ ==
+
+このように表される。
 
 <pre>
 1 > <
@@ -59,4 +61,21 @@ matchPDA input (PDA delta q_0 q_f) = any (\result -> case result of (q, _) -> S.
 2
   (, /0
   ), 0/
+</pre>
+
+つまり、上のコードに沿うと下のようになる。
+
+<pre>
+data State = One | Two
+
+data InputAlphabet = Left | Right
+
+data StackAlphabet = Zero
+
+delta :: PDATransit State InputAlphabet StackAlphabet
+delta = PDATransit $ \(state, input_pop', stack_pop') ->
+  case state of
+    case input_pop' of
+      Nothing -> case stack_pop' of
+        Nothing ->
 </pre>
