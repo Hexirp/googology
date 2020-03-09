@@ -14,6 +14,33 @@ Gaoji 氏により、三元括弧という興味深い概念が開発されて�
 
 <pre>
 data PDA state input_alphabet stack_alphabet = PDA ((state, Maybe input_alphabet, Maybe stack_alphabet) -> Set (state, Maybe stack_alphabet)) state (Set state)
+
+runPDA :: PDA state input_alphabet stack_alphabet -> state -> [input_alphabet] -> [stack_alphabet] -> [(state, [stack_alphabet])]
+runPDA (PDA delta q_0 q_f) = go where
+  go q input stack =
+    case input of
+      [] -> case stack of
+        [] -> do
+          (q', stack_push') <- S.toList $ delta (q, Nothing, Nothing)
+          case stack_push' of
+            Nothing -> if S.member q' q_f then pure (q', []) else empty
+            Just stack_push -> if S.member q' q_f then pure (q', stack_push : []) else empty
+        stack_pop : stack_rest -> do
+          (q', stack_push') <- S.toList $ delta (q, Nothing, Just stack_pop)
+          case stack_push' of
+            Nothing -> if S.member q' q_f then pure (q', stack_rest) else empty
+            Just stack_push -> if S.member q' q_f then pure (q', stack_push : stack_rest) else empty
+      input_pop : input_rest -> case stack of
+        [] -> do
+          (q', stack_push') <- S.toList $ delta (q, Just input_pop, Nothing)
+          case stack_push' of
+            Nothing -> go q' input_rest []
+            Just stack_push -> go q' input_rest (stack_push : [])
+        stack_pop : stack_rest -> do
+          (q', stack_push') <- S.toList $ delta (q, Just input_pop, Just stack_pop)
+          case stack_push' of
+            Nothing -> go q' input_rest stack_rest
+            Just stack_push -> go q' input_rest (stack_push : stack_rest)
 </pre>
 
 <pre>
