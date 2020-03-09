@@ -23,13 +23,13 @@ runPDA (PDA delta q_0 q_f) = go where
         [] -> do
           (q', stack_push') <- S.toList $ delta (q, Nothing, Nothing)
           case stack_push' of
-            Nothing -> if S.member q' q_f then pure (q', []) else empty
-            Just stack_push -> if S.member q' q_f then pure (q', stack_push : []) else empty
+            Nothing -> pure (q', [])
+            Just stack_push -> pure (q', stack_push : [])
         stack_pop : stack_rest -> do
           (q', stack_push') <- S.toList $ delta (q, Nothing, Just stack_pop)
           case stack_push' of
-            Nothing -> if S.member q' q_f then pure (q', stack_rest) else empty
-            Just stack_push -> if S.member q' q_f then pure (q', stack_push : stack_rest) else empty
+            Nothing -> pure (q', stack_rest)
+            Just stack_push -> pure (q', stack_push : stack_rest)
       input_pop : input_rest -> case stack of
         [] -> do
           (q', stack_push') <- S.toList $ delta (q, Just input_pop, Nothing)
