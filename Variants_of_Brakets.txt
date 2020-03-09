@@ -10,7 +10,7 @@ Gaoji 氏により、三元括弧という興味深い概念が開発されて�
 
 プッシュダウンオートマトンは、単純に言えばスタック付きの有限オートマトンである。
 
-== 二元カッコ ==
+山本真基『オートマトンと言語理論』というテキストを参考にして Haskell で表現してみよう。
 
 <pre>
 newtype PDATransit state input_alphabet stack_alphabet = PFATransit ((state, Maybe input_alphabet, Maybe stack_alphabet) -> Set (state, Maybe stack_alphabet))
@@ -50,6 +50,8 @@ runPDA (PDA delta q_0 q_f) input = runPDATransit delta q_0 input []
 matchPDA :: [input_alphabet] -> PDA state input_alphabet stack_alphabet -> Bool
 matchPDA input (PDA delta q_0 q_f) = any (\result -> case result of (q, _) -> S.member q q_f) $ runPDA (PDA delta q_0 q_f) input
 </pre>
+
+== 二元カッコ ==
 
 <pre>
 1 > <
