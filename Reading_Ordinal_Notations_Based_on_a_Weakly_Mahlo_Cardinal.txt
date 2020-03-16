@@ -144,7 +144,7 @@ So a next step towards an ordinal analysis of the subsystem of second order arit
 
 ==== 原文 ====
 
- Let us call such a theory \( \mathrm{KPM} \).
+Let us call such a theory \( \mathrm{KPM} \).
 
 ==== 解説 ====
 
@@ -157,3 +157,19 @@ So a next step towards an ordinal analysis of the subsystem of second order arit
 ==== 原文 ====
 
 Now, \( \mu _ 0 \) allows descriptions by concepts from higher recursion theory which do not prima facie rely on the realm of recursively large ordinals: \( \mu _ 0 \) is the first ordinal which is not recursive in the superjump (see [7]), and \( \mu _ 0 \) is the supremum of the closure ordinals of non monotonic \( \Pi _ 2 ^ 0 \)-definitions of a special kind (see [13]). 
+
+==== 解説 ====
+
+...
+
+=== 期待 ===
+
+...
+
+==== 原文 ====
+
+So it is much to be hoped for that a proof theory of KPM　would be a starting point for a proof theory of the superjump as well as a proof　theory of non monotonic inductive definitions.
+
+==== 解説 ====
+
+....
