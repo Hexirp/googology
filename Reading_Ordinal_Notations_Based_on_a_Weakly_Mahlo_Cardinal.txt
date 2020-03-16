@@ -132,7 +132,7 @@ The standard model of \( \mathrm{KPi} \) is the initial segment of the construct
 
 ==== 原文 ====
 
-So a next step towards an ordinal analysis of the subsystem of second order arithmetic based on \( \Pi _ 2 ^ 1 \)-comprehension is offered by a set theory which axiomatizes essential features of \( \mathrm{L} ( \mu _ 0 ) \), where \( \mu _ 0 \) denotes the first recursively Mahlo ordinal. Let us call such a theory \( \mathrm{KPM} \). 
+So a next step towards an ordinal analysis of the subsystem of second order arithmetic based on \( \Pi _ 2 ^ 1 \)-comprehension is offered by a set theory which axiomatizes essential features of \( \mathrm{L} ( \mu _ 0 ) \), where \( \mu _ 0 \) denotes the first recursively Mahlo ordinal.
 
 ==== 解説 ====
 
@@ -144,11 +144,15 @@ So a next step towards an ordinal analysis of the subsystem of second order arit
 
 ==== 原文 ====
 
+ Let us call such a theory \( \mathrm{KPM} \).
+
+==== 解説 ====
+
 ...
 
 === 再帰的マーロ順序数の性質 ===
 
-ここでは、 \( \mu _ 0 \) は、記述を許可する、概念によって、高次再帰理論からの、一見したところでは再帰的巨大順序数の分野に依拠しない：
+ここでは、 \( \mu _ 0 \) は、一見したところでは再帰的巨大順序数の領域に依拠しない、高次再帰理論からの概念による記述を許す： \( \mu _ 0 \) はスーパージャンプにおいて再帰的ではない最初の順序数であり（ [7] を見よ）、特別な種類の非単調 \( \Pi _ 2 - 0 \)-定義の閉順序数の上限である（ [13] を見よ）。
 
 ==== 原文 ====
 
