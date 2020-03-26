@@ -45,4 +45,8 @@ Buchholz's function は木構造によって項が表現されています。「
 
 == ちなみに ==
 
-NIECF では \( \psi _ 0 ( \psi _ 2 ( 0 ) ) \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 2 ( 0 ) ) ) \) というルールがあって、それを挿入ルールと呼ぶという記憶があるのですが、これは自分の脳が捏造した記憶だと思っています。
+NIECF では \( \psi _ 0 ( \psi _ 2 ( 0 ) ) \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 2 ( 0 ) ) ) \) というルールがあって、それを挿入ルールと呼ぶという記憶があるのですが、<del>これは自分の脳が捏造した記憶だと思っています。</del>
+
+<blockquote cite="https://googology.wikia.org/ja/wiki/%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%A0%94%E7%A9%B6_Wiki:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9?diff=21941&oldid=21940"><p>それも挿入ルールって呼ぶらしいですよ。まずψ_1が挟まって、次にψ_2がψ_1のネストに変わる、っていう2ステップで展開されます。2ステップとも挿入ルールと呼ばれているようで、Buchholzは後者だけなのでNIECFの（もしくはその元ネタのUNOCFの）特徴の１つです。</p><div class="footer">—p進大好きbot, <span class="cite">巨大数研究 Wiki:サンドボックス | 巨大数研究 Wiki | Fandom</span></div></blockquote>
+
+こうらしいです。
