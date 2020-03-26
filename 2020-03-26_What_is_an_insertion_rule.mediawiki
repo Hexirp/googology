@@ -6,17 +6,17 @@
 
 ツイッターでこんな会話をしました。
 
-<blockquote cite="https://twitter.com/hexirp_prixeh/status/1236976532184129536"><p>挿入ルールが何なのかわからないアレ</p><div class="footer">—Hexirp, <cite>Twitter</cite></div></blockquote>
+<blockquote cite="https://twitter.com/hexirp_prixeh/status/1236976532184129536"><p>挿入ルールが何なのかわからないアレ</p><div class="footer">—Hexirp, <span class="cite">Twitter</span></div></blockquote>
 
-<blockquote cite="https://twitter.com/kanrokoti/status/1236977349733699584"><p>ネスト構造の塊をネストするやつですね</p><div class="footer">—甘露東風, <cite>Twitter</cite></div></blockquote>
+<blockquote cite="https://twitter.com/kanrokoti/status/1236977349733699584"><p>ネスト構造の塊をネストするやつですね</p><div class="footer">—甘露東風, <span class="cite">Twitter</span></div></blockquote>
 
-<blockquote cite="https://twitter.com/hexirp_prixeh/status/1236978033614942209"><p>「ネスト構造の塊」とは、ネストされる物であり、ネストのための「穴」があるものでＯＫ？</p><div class="footer">—Hexirp, <cite>Twitter</cite></div></blockquote>
+<blockquote cite="https://twitter.com/hexirp_prixeh/status/1236978033614942209"><p>「ネスト構造の塊」とは、ネストされる物であり、ネストのための「穴」があるものでＯＫ？</p><div class="footer">—Hexirp, <span class="cite">Twitter</span></div></blockquote>
 
-<blockquote cite="https://twitter.com/kanrokoti/status/1236979447732916230"><p>よくわかりませんが、<br />(((0)2+(0)2)1)0の展開とかですかね</p><div class="footer">—甘露東風, <cite>Twitter</cite></div></blockquote>
+<blockquote cite="https://twitter.com/kanrokoti/status/1236979447732916230"><p>よくわかりませんが、<br />(((0)2+(0)2)1)0の展開とかですかね</p><div class="footer">—甘露東風, <span class="cite">Twitter</span></div></blockquote>
 
-<blockquote cite="https://twitter.com/hexirp_prixeh/status/1236981438022443009"><p>(((0)2+(0)2)1)0 は ψ を使って書き直すなら ψ0(ψ1(ψ2(0)+ψ2(0))) であってます？</p><p>そして、これは ψ1(ψ2(0)+ψ1(_)) というのが繰り返される形で展開されるんですが、これがネスト構造の塊ということなんじゃないんか、というころですね</p><div class="footer">—Hexirp, <cite>Twitter</cite></div></blockquote>
+<blockquote cite="https://twitter.com/hexirp_prixeh/status/1236981438022443009"><p>(((0)2+(0)2)1)0 は ψ を使って書き直すなら ψ0(ψ1(ψ2(0)+ψ2(0))) であってます？</p><p>そして、これは ψ1(ψ2(0)+ψ1(_)) というのが繰り返される形で展開されるんですが、これがネスト構造の塊ということなんじゃないんか、というころですね</p><div class="footer">—Hexirp, <span class="cite">Twitter</span></div></blockquote>
 
-<blockquote cite="https://twitter.com/kanrokoti/status/1236982244142510080"><p>そのψがバシクψなら多分そうです<br />そうそう、そういうことです</p><div class="footer">—甘露東風, <cite>Twitter</cite></div></blockquote>
+<blockquote cite="https://twitter.com/kanrokoti/status/1236982244142510080"><p>そのψがバシクψなら多分そうです<br />そうそう、そういうことです</p><div class="footer">—甘露東風, <span class="cite">Twitter</span></div></blockquote>
 
 要約すると、以下のようになります。
 
