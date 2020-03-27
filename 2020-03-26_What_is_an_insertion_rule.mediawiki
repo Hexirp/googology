@@ -43,10 +43,20 @@ Buchholz's ψ function は木構造によって項が表現されています。
 
 ここにおいて挿入ルールは基本列から自然に現れる概念なので、挿入ルールを組み入れるという考え方に私は微妙に違和感を感じています。
 
-== ちなみに ==
+== p進大好きbot さんとの会話での挿入ルール ==
 
-NIECF では \( \psi _ 0 ( \psi _ 2 ( 0 ) ) \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 2 ( 0 ) ) ) \) というルールがあって、それを挿入ルールと呼ぶという記憶があるのですが、<del>これは自分の脳が捏造した記憶だと思っています。</del>
+NIECF では \( \psi _ 0 ( \psi _ 2 ( 0 ) ) \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 2 ( 0 ) ) ) \) というルールがあって、それを挿入ルールと呼ぶという記憶があるのですが、<del>これは自分の脳が捏造した記憶だと思っています。</del>……という風に書きました。すると p進大好きbot さんから返信を受けました。そこからこのような会話が始まりました。
 
 <blockquote cite="https://googology.wikia.org/ja/wiki/%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%A0%94%E7%A9%B6_Wiki:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9?diff=21941&oldid=21940"><p>それも挿入ルールって呼ぶらしいですよ。まずψ_1が挟まって、次にψ_2がψ_1のネストに変わる、っていう2ステップで展開されます。2ステップとも挿入ルールと呼ばれているようで、Buchholzは後者だけなのでNIECFの（もしくはその元ネタのUNOCFの）特徴の１つです。</p><div class="footer">—p進大好きbot, <span class="cite">巨大数研究 Wiki:サンドボックス | 巨大数研究 Wiki | Fandom</span></div></blockquote>
 
-こうらしいです。
+<blockquote cite="https://googology.wikia.org/ja/wiki/%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%A0%94%E7%A9%B6_Wiki:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9?diff=21942&oldid=21941"><p>そうなんですか。こっちの方が「挿入」ルールっぽいですね。</p><div class="footer">—Hexirp, <span class="cite">巨大数研究 Wiki:サンドボックス | 巨大数研究 Wiki | Fandom</span></div></blockquote>
+
+<blockquote cite="https://googology.wikia.org/ja/wiki/%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%A0%94%E7%A9%B6_Wiki:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9?diff=21944&oldid=21942"><p>あ、[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/(2020-03-26)_%E6%8C%BF%E5%85%A5%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%A3%E3%81%A6%E4%BD%95%EF%BC%9F?oldid=21943 新しい記事]にてp進大好きbotさんのコメントを引用させていただきました。</p><div class="footer">—Hexirp, <span class="cite">巨大数研究 Wiki:サンドボックス | 巨大数研究 Wiki | Fandom</span></div></blockquote>
+
+<blockquote cite="https://googology.wikia.org/ja/wiki/%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%A0%94%E7%A9%B6_Wiki:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9?diff=21945&oldid=21944"><p>僕の根拠は巨大数たんの[https://twitter.com/GoogologyBot/status/1128929953267867648 このツイート]なので、一般にどういう時に挿入と呼ぶかの推論は少し乱暴だったかもしれません。これも前者を意図してるのかも？　rpakrさんが挿入と言っている時は前者だけを指してそうな気もしますし、人もしかしたら後者は挿入じゃないのかもしれません。</p><p>それはさておき上の章でBuchholzの順序数表記をψと+で書いていますが、オリジナルはDと(,)です。（見やすくするためかもしれませんが）</p><div class="footer">—p進大好きbot, <span class="cite">巨大数研究 Wiki:サンドボックス | 巨大数研究 Wiki | Fandom</span></div></blockquote>
+
+<blockquote cite="https://googology.wikia.org/ja/wiki/%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%A0%94%E7%A9%B6_Wiki:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9?diff=21946&oldid=21945"><p>ふむ、なるほど。やっぱり曖昧な言葉……？　私としては \( \psi _ 0 ( \psi _ 2 ( 0 ) ) \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 2 ( 0 ) ) ) \) を挿入ルールと呼んで \( \psi _ 0 ( \psi _ 2 ( 0 ) ) \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( \ldots ) ) ) \) をネストルールと呼んだ方が違和感がない感じですね。</p><p>確かに論文ではその通りですね。分かりやすさのためということで見逃してただけませんかね。</p><div class="footer">—Hexirp, <span class="cite">巨大数研究 Wiki:サンドボックス | 巨大数研究 Wiki | Fandom</span></div></blockquote>
+
+<blockquote cite="https://googology.wikia.org/ja/wiki/%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%A0%94%E7%A9%B6_Wiki:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9?diff=21947&oldid=21946"><p>まあ分かってて書いてるならいいと思います。（以前英語版で完全に混同している人がいたので一応ツッコみました）</p><div class="footer">—p進大好きbot, <span class="cite">巨大数研究 Wiki:サンドボックス | 巨大数研究 Wiki | Fandom</span></div></blockquote>
+
+というわけで、挿入ルールはまだ確かな定義が出来るような言葉ではないようです。
