@@ -127,16 +127,31 @@
 : Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) ) \)
 : Jäger's ψ function: \( \f _ { \f _ 0 ( 0 ) } ( 0 ) \)
 : 基本列。[[ε₀|エプシロン・ヌルまたはカントール順序数]]に到達。原始数列システムの限界である。
+; \( (0,0)(1,1)(0,0)(1,1) \)
+: Buchholz's ψ function: \( \p _ 0 ( \p _ 1 ( 0 ) ) + \p _ 0 ( \p _ 1 ( 0 ) ) \)
+: Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) ) + \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) ) \)
+: Jäger's ψ function: \( \f _ { \f _ 0 ( 0 ) } ( 0 ) + \f _ { \f _ 0 ( 0 ) } ( 0 ) \)
+: 2-推測。
 ; \( (0,0)(1,1)(1,0) \)
-: Buchholz's ψ function: \( \mathrm{???} \)
-: Buchholz's extended ψ function: \( \mathrm{???} \)
-: Jäger's ψ function: \( \mathrm{???} \)
-: ...
+: Buchholz's ψ function: \( \p _ 0 ( \p _ 1 ( 0 ) + \p _ 0 ( 0 ) ) \)
+: Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) + \p _ 0 ( 0 ) ) \)
+: Jäger's ψ function: \( \f _ 0 ( \f _ { \f _ 0 ( 0 ) } ( 0 ) + \f _ 0 ( 0 ) ) \)
+: 基本列。
+; \( (0,0)(1,1)(1,0)(2,0) \)
+: Buchholz's ψ function: \( \p _ 0 ( \p _ 1 ( 0 ) + \p _ 0 ( \p _ 0 ( 0 ) ) ) \)
+: Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) + \p _ 0 ( \p _ 0 ( 0 ) ) ) \)
+: Jäger's ψ function: \( \f _ 0 ( \f _ { \f _ 0 ( 0 ) } ( 0 ) + \f _ 0 ( \f _ 0 ( 0 ) ) ) \)
+: 基本列。
+; \( (0,0)(1,1)(1,0)(2,0)(3,0) \)
+: Buchholz's ψ function: \( \p _ 0 ( \p _ 1 ( 0 ) + \p _ 0 ( \p _ 0 ( \p _ 0 ( 0 ) ) ) ) \)
+: Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) + \p _ 0 ( \p _ 0 ( \p _ 0 ( 0 ) ) ) ) \)
+: Jäger's ψ function: \( \f _ 0 ( \f _ { \f _ 0 ( 0 ) } ( 0 ) + \f _ 0 ( \f _ 0 ( \f _ 0 ( 0 ) ) ) ) \)
+: 1-推測。
 ; \( (0,0)(1,1)(1,0)(2,1) \)
-: Buchholz's ψ function: \( \mathrm{???} \)
-: Buchholz's extended ψ function: \( \mathrm{???} \)
-: Jäger's ψ function: \( \mathrm{???} \)
-: ...
+: Buchholz's ψ function: \( \p _ 0 ( \p _ 1 ( 0 ) + \p _ 0 ( \p _ 1 ( 0 ) ) \)
+: Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) + \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) ) ) \)
+: Jäger's ψ function: \( \f _ 0 ( \f _ { \f _ 0 ( 0 ) } ( 0 ) + \f _ { \f _ 0 ( 0 ) } ( 0 ) ) \)
+: 2-推測。
 ; \( (0,0)(1,1)(1,1) \)
 : Buchholz's ψ function: \( \mathrm{???} \)
 : Buchholz's extended ψ function: \( \mathrm{???} \)
@@ -179,7 +194,7 @@
 
 === 1 ===
 
-横へとコピーされる。増えるところが[[ω|オメガ]]倍される。増えるところは根元からじゃなくても良い。
+横へとコピーされる。増えるところが[[ω|オメガ]]倍される。増えるところは根元からじゃなくても良い。 Buchholz の場合は +1 である。 Jaegar の場合は φ_0 の場合は +1 で φ_0 の不動点の場合は φ_0 を補ってから +1 である。
 
 * \( (0)(1) \)
 * \( (0)(1)(0)(1) \)
@@ -187,9 +202,12 @@
 * \( (0)(1)(1)(1) \)
 * \( (0)(1)(2) \)
 * \( (0)(1)(2)(3) \)
+* \( (0,0)(1,1)(1,0) \)
+* \( (0,0)(1,1)(1,0)(2,0) \)
 
 === 2 ===
 
 斜め上にコピーされる。
 
 * \( (0,0)(1,1) \)
+* \( (0,0)(1,1)(1,0)(2,1) \)
