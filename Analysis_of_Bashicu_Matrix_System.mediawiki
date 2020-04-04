@@ -48,3 +48,5 @@
 : [[:en:Buchholz's function]]
 ; Jäger's ψ function
 : [[:en:Jäger's function]]
+
+他にも[[ヴェブレンのϕ表記]]をベースにした順序数表記や Rathjen's ψ function を加えたかったんですが、高望みしすぎてもいけないのでやめました。
