@@ -1,11 +1,11 @@
-<nowiki><div style="display:none">\[
+<div style="display:none"><nowiki>\[
 
   \newcommand{\w}{\omega}
   \newcommand{\f}{\phi}
   \newcommand{\p}{\psi}
   \newcommand{\I}{I}
 
-\]</div></nowiki>
+\]</nowiki></div>
 
 バシク行列の解析を以前に行ったことがあります。その記録は[[ユーザーブログ:Hexirp/バシク行列システムの解析]]で見れます。ついこないだ、この解析の続きをしようと思い立ちました。ですが、解析を続きから始めることが出来ませんでした。パターンを既に忘れてしまっていたのです。覚えなおすには最初からやり直すのが一番早そうでした。
 
