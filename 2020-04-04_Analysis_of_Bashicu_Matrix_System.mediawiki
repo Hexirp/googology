@@ -117,11 +117,16 @@
 : Buchholz's extended ψ function: \( \p _ 0 ( \p _ 0 ( \p _ 0 ( 0 ) ) ) \)
 : Jäger's ψ function: \( \f _ 0 ( \f _ 0 ( \f _ 0 ( 0 ) ) ) \)
 : 基本列。
+; \( (0)(1)(2)(3) \)
+: Buchholz's ψ function: \( \p _ 0 ( \p _ 0 ( \p _ 0 ( \p _ 0 ( 0 ) ) ) ) \)
+: Buchholz's extended ψ function: \( \p _ 0 ( \p _ 0 ( \p _ 0 ( \p _ 0 ( 0 ) ) ) ) \)
+: Jäger's ψ function: \( \f _ 0 ( \f _ 0 ( \f _ 0 ( \f _ 0 ( 0 ) ) ) ) \)
+: 1-推測。
 ; \( (0,0)(1,1) \)
-: Buchholz's ψ function: \( \mathrm{???} \)
-: Buchholz's extended ψ function: \( \mathrm{???} \)
-: Jäger's ψ function: \( \mathrm{???} \)
-: ...
+: Buchholz's ψ function: \( \p _ 0 ( \p _ 1 ( 0 ) ) \)
+: Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) ) \)
+: Jäger's ψ function: \( \f _ { \f _ 0 ( 0 ) } ( 0 ) \)
+: 基本列。[[ε₀|エプシロン・ヌルまたはカントール順序数]]に到達。
 ; \( B \)
 : Buchholz's ψ function: \( \mathrm{???} \)
 : Buchholz's extended ψ function: \( \mathrm{???} \)
@@ -141,3 +146,10 @@
 * \( (0)(1)(1) \)
 * \( (0)(1)(1)(1) \)
 * \( (0)(1)(2) \)
+* \( (0)(1)(2)(3) \)
+
+=== 2 ===
+
+斜め上にコピーされる。
+
+* \( (0,0)(1,1) \)
