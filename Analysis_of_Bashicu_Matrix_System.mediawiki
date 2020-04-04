@@ -50,3 +50,11 @@
 : [[:en:Jäger's function]]
 
 他にも[[ヴェブレンのϕ表記]]をベースにした順序数表記や Rathjen's ψ function を加えたかったんですが、高望みしすぎてもいけないのでやめました。
+
+== 解析 ==
+
+; \( B \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: バシク行列の極限であり、対応する順序数は未だ分かっていない。
