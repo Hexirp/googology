@@ -53,6 +53,16 @@
 
 == 解析 ==
 
+; \( \varepsilon \)
+: Buchholz's ψ function: \( 0 \)
+: Buchholz's extended ψ function: \( 0 \)
+: Jäger's ψ function: \( 0 \)
+: 自明である。
+; \( (0)(1) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
 ; \( B \)
 : Buchholz's ψ function: \( \mathrm{???} \)
 : Buchholz's extended ψ function: \( \mathrm{???} \)
