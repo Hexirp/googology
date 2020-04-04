@@ -1,7 +1,7 @@
 <div style="display:none"><nowiki>\[
 
   \newcommand{\w}{\omega}
-  \newcommand{\f}{\phi}
+  \newcommand{\f}{\varphi}
   \newcommand{\p}{\psi}
   \newcommand{\I}{I}
 
