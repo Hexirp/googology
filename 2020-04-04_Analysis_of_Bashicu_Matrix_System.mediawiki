@@ -126,7 +126,47 @@
 : Buchholz's ψ function: \( \p _ 0 ( \p _ 1 ( 0 ) ) \)
 : Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) ) \)
 : Jäger's ψ function: \( \f _ { \f _ 0 ( 0 ) } ( 0 ) \)
-: 基本列。[[ε₀|エプシロン・ヌルまたはカントール順序数]]に到達。
+: 基本列。[[ε₀|エプシロン・ヌルまたはカントール順序数]]に到達。原始数列システムの限界である。
+; \( (0,0)(1,1)(1,0) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
+; \( (0,0)(1,1)(1,0)(2,1) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
+; \( (0,0)(1,1)(1,1) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
+; \( (0,0)(1,1)(2,0) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
+; \( (0,0)(1,1)(2,0)(3,1) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
+; \( (0,0)(1,1)(2,1) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
+; \( (0,0)(1,1)(2,2) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
+; \( (0,0,0)(1,1,1) \)
+: Buchholz's ψ function: \( \mathrm{???} \)
+: Buchholz's extended ψ function: \( \mathrm{???} \)
+: Jäger's ψ function: \( \mathrm{???} \)
+: ...
 ; \( B \)
 : Buchholz's ψ function: \( \mathrm{???} \)
 : Buchholz's extended ψ function: \( \mathrm{???} \)
