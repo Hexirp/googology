@@ -58,3 +58,7 @@
 : Buchholz's extended ψ function: \( \mathrm{???} \)
 : Jäger's ψ function: \( \mathrm{???} \)
 : バシク行列の極限であり、対応する順序数は未だ分かっていない。存在するかどうかも分かっていない。
+
+== パターン ==
+
+...
