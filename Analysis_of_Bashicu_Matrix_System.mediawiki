@@ -37,3 +37,14 @@
 また、基本列を取ることにより出来た木構造を折り畳み表示として記事に反映してみようかと思っています。
 
 パターンの記録は辞書に近い形で行います。同じパターンが現れるたびに辞書に追加していく予定です。
+
+== 順序数表記 ==
+
+以下の順序数表記を使用します。
+
+; Buchholz's ψ function
+: [[:en:Buchholz's function]]
+; Buchholz's extended ψ function
+: [[:en:Buchholz's function]]
+; Jäger's ψ function
+: [[:en:Jäger's function]]
