@@ -1299,6 +1299,8 @@ Jäger ψ の崩壊に関わるパターンである。パターン 2 と Buchho
 
 \( \varphi _ \Omega ( 1 ) \) の共終数は \( \Omega \) である。
 
+\( \Gamma _ 0 = \psi _ { I _ 0 ( 0 ) } ( 0 ) < \Omega = I _ 0 ( 0 ) < \Gamma _ { I _ 0 ( 0 ) + 1 } = \psi _ { I _ 0 ( 1 ) } ( 0 ) < \Omega _ 2 = I _ 0 ( 1 ) < \cdots < \Omega _ \omega = \I _ 0 ( \omega ) < \Gamma _ { I _ 0 ( \omega ) + 1 } = \psi _ { I _ 0 ( \omega + 1 ) } ( 0 ) < \cdots \) という崩壊の段階がある。
+
 {| class="article-table"
 ! Buchholz ψ
 ! Jäger ψ
