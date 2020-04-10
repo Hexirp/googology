@@ -8,17 +8,17 @@
 
 第二回[[東方巨大数]]というイベントが2018年に開催された。 Twitter の上で #東方巨大数2 というハッシュタグをつけて巨大数を投稿して、その大きさを競い合うというイベントである。
 
-その中で[https://twitter.com/GoogologyBot 巨大数大好きbot]氏が投稿したのが『フラン数第四形態改』という数である<ref>[https://twitter.com/GoogologyBot/status/975184382364237825 https://twitter.com/GoogologyBot/status/975184382364237825]</ref>。しかし、この数は rpakr 氏により無効だと判断された<ref>[https://twitter.com/rpakr_googology/status/975878512115699724 https://twitter.com/rpakr_googology/status/975878512115699724]</ref>。そこで巨大数大好きbot氏は『フラン数第四形態改二』という修正版を投稿した<ref>[https://twitter.com/GoogologyBot/status/975885932271304704 https://twitter.com/GoogologyBot/status/975885932271304704]</ref>。これは巨大数の定義が間違っているため無効になった<ref>[https://twitter.com/rpakr_googology/status/976603716961886210 https://twitter.com/rpakr_googology/status/976603716961886210]</ref>。この簡単な誤りは巨大数大好きbot氏によりすぐさま訂正された<ref>[https://twitter.com/GoogologyBot/status/976604232466931713 https://twitter.com/GoogologyBot/status/976604232466931713]</ref>。
+その中で[https://twitter.com/GoogologyBot 巨大数大好きbot]氏が投稿したのが『フラン数第四形態改』という数である<ref>https://twitter.com/GoogologyBot/status/975184382364237825</ref>。しかし、この数は rpakr 氏により無効だと判断された<ref>https://twitter.com/rpakr_googology/status/975878512115699724</ref>。そこで巨大数大好きbot氏は『フラン数第四形態改二』という修正版を投稿した<ref>https://twitter.com/GoogologyBot/status/975885932271304704</ref>。これは巨大数の定義が間違っているため無効になった<ref>https://twitter.com/rpakr_googology/status/976603716961886210</ref>。この簡単な誤りは巨大数大好きbot氏によりすぐさま訂正された<ref>https://twitter.com/GoogologyBot/status/976604232466931713</ref>。
 
 これを rpakr 氏は無効とし、その理由を一連のツイートで伝えた。
 
-<blockquote cite="https://twitter.com/rpakr_googology/status/976607780755988480"><p>その数は10^100より小さいので無効です。</p><div class="footer">—rpakr, <span class="cite">Twitter<ref>[https://twitter.com/rpakr_googology/status/976607780755988480 https://twitter.com/rpakr_googology/status/976607780755988480]</ref></span></div></blockquote>
+<blockquote cite="https://twitter.com/rpakr_googology/status/976607780755988480"><p>その数は10^100より小さいので無効です。</p><div class="footer">—rpakr, <span class="cite">Twitter<ref>https://twitter.com/rpakr_googology/status/976607780755988480</ref></span></div></blockquote>
 
-<blockquote cite="https://twitter.com/rpakr_googology/status/976608160285937666"><p>6になります。</p><div class="footer">—rpakr, <span class="cite">Twitter<ref>[https://twitter.com/rpakr_googology/status/976608160285937666 https://twitter.com/rpakr_googology/status/976608160285937666]</ref></span></div></blockquote>
+<blockquote cite="https://twitter.com/rpakr_googology/status/976608160285937666"><p>6になります。</p><div class="footer">—rpakr, <span class="cite">Twitter<ref>https://twitter.com/rpakr_googology/status/976608160285937666</ref></span></div></blockquote>
 
 巨大数においては定義が間違っていて期待する大きさにならないことはよくあることだが、それでも 6 という結果は衝撃的である。それゆえにミームとして広まったと私は考える。
 
-なお、その後に巨大数大好きbot氏は[[フラン数第四形態改三]]という巨大数を投稿している[https://twitter.com/GoogologyBot/status/976610291591950336 https://twitter.com/GoogologyBot/status/976610291591950336]。こちらは計算可能部門で有効となった数の 72 個の中で 12 位となった。
+なお、その後に巨大数大好きbot氏は[[フラン数第四形態改三]]という巨大数を投稿している<ref>https://twitter.com/GoogologyBot/status/976610291591950336</ref>。こちらは計算可能部門で有効となった数の 72 個の中で 12 位となった。
 
 == 広がり ==
 
@@ -26,7 +26,7 @@
 
 2019年に開催された第三回東方巨大数では、巨大数大好きbot本人がＮ原始という表記により６という巨大数を定義した<ref>名前は全角の 6 である</ref>。その表記の構想はバシク行列システム越えという飛びぬけて大きいものである。その大きさは未だ分かっていない。
 
-かくいう私も、みんなで作ろう巨大数２０１９<ref>[http://googology.seesaa.net/article/467914451.html http://googology.seesaa.net/article/467914451.html]</ref>に投稿した「破壊措置完了バージョン」にて、このミームを使った。これは「シラン数第四形態改二」という構想の定義を与えるものであり、「破壊措置完了バージョン」においては構想が No.6 として登録され定義が No.6 として登録され値が 6 であるという三つの 6 が現れることを意図したものである。
+かくいう私も、みんなで作ろう巨大数２０１９<ref>http://googology.seesaa.net/article/467914451.html</ref>に投稿した「破壊措置完了バージョン」にて、このミームを使った。これは「シラン数第四形態改二」という構想の定義を与えるものであり、「破壊措置完了バージョン」においては構想が No.6 として登録され定義が No.6 として登録され値が 6 であるという三つの 6 が現れることを意図したものである。
 
 == 脚注 ==
 
