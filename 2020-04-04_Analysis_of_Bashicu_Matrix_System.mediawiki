@@ -76,20 +76,19 @@
 
 == 解析 ==
 
-<div class="mw-collapsible mw-collapsed" style="margin: 0.5em; padding: 0.5em; border: thin solid #000000; overflow: auto;">
+{{User:Hexirp/tcu}}
 \( B[0] \)
-<div class="mw-collapsible-content">
+{{User:Hexirp/tcm}}
 ; \( \varepsilon \)
 : from: \( B[0] \)
 : Buchholz's ψ function: \( 0 \)
 : Buchholz's extended ψ function: \( 0 \)
 : Jäger's ψ function: \( 0 \)
 : 自明。
-</div>
-</div>
-<div class="mw-collapsible mw-collapsed" style="margin: 0.5em; padding: 0.5em; border: thin solid #000000; overflow: auto;">
+{{User:Hexirp/tcl}}
+{{User:Hexirp/tcu}}
 \( B[1] \)
-<div class="mw-collapsible-content">
+{{User:Hexirp/tcm}}
 ; \( (0) \)
 : from: \( (0)(1)[0] \)
 : Buchholz's ψ function: \( \p _ 0 ( 0 ) \)
@@ -114,11 +113,10 @@
 : Buchholz's extended ψ function: \( \p _ 0 ( \p _ 0 ( 0 ) ) \)
 : Jäger's ψ function: \( \f _ 0 ( \f _ 0 ( 0 ) ) \)
 : 基本列。[[ω|オメガ]]に到達。
-</div>
-</div>
-<div class="mw-collapsible mw-collapsed" style="margin: 0.5em; padding: 0.5em; border: thin solid #000000; overflow: auto;">
+{{User:Hexirp/tcl}}
+{{User:Hexirp/tcu}}
 \( B[2] \)
-<div class="mw-collapsible-content">
+{{User:Hexirp/tcm}}
 ; \( (0)(1)(0) \)
 : from: \( (0)(1)(0)(1)[0] \)
 : Buchholz's ψ function: \( \p _ 0 ( \p _ 0 ( 0 ) ) + \p _ 0 ( 0 ) \)
@@ -167,11 +165,10 @@
 : Buchholz's extended ψ function: \( \p _ 0 ( \p _ { \p _ 0 ( 0 ) } ( 0 ) ) \)
 : Jäger's ψ function: \( \f _ { \f _ 0 ( 0 ) } ( 0 ) \)
 : 基本列。[[ε₀|エプシロン・ゼロまたはカントール順序数]]に到達。原始数列システムの限界である。
-</div>
-</div>
-<div class="mw-collapsible mw-collapsed" style="margin: 0.5em; padding: 0.5em; border: thin solid #000000; overflow: auto;">
+{{User:Hexirp/tcl}}
+{{User:Hexirp/tcu}}
 \( B[3] \)
-<div class="mw-collapsible-content">
+{{User:Hexirp/tcm}}
 ; \( (0,0)(1,1)(0,0)(1,1) \)
 : from: \( (0,0)(1,1)(1,0)[1] \)
 : Buchholz's ψ function: \( \p _ 0 ( \p _ 1 ( 0 ) ) + \p _ 0 ( \p _ 1 ( 0 ) ) \)
@@ -1138,8 +1135,7 @@
 : Buchholz's extended ψ function: \( \mathrm{???} \)
 : Jäger's ψ function: \( \mathrm{???} \)
 : ...
-</div>
-</div>
+{{User:Hexirp/tcl}}
 ; \( B \)
 : from: \( \mathrm{???} \)
 : Buchholz's ψ function: \( \mathrm{???} \)
