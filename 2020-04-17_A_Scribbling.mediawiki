@@ -87,6 +87,7 @@ a よりも大きい f b = b を満たす b を求める方法がある。
 すなわち forall x : A, exists y : A, x <= y /\ f y = y である。
 
 y [ 0 ] = x
+
 y [ n + 1 ] = f ( y [ n ] )
 
 このような列を作る。
@@ -125,4 +126,4 @@ Bachmann’s recasted ψ function では ψ ( x ) = min { a | sup ( C ( x, a ) \
 
 たとえば Bachmann’s recasted ψ function で ψ_Ω(Ω) を fun v => ψ_Ω(v) に対応づけるとか。
 
-これ自体は Coq の Inductive 定義における制限に引っかかって出来ないけど PHOAS のように回避は出来るはず
+これ自体は Coq の Inductive 定義における制限に引っかかって出来ないけど PHOAS のように回避は出来るはず。
