@@ -1,0 +1,59 @@
+<div style="display:none"><nowiki>\[
+
+  \newcommand{\f}{\varphi}
+
+\]</nowiki></div>
+
+この記事ではヴェブレン階層と極限が等しい順序数表記を定義します。
+
+この記事は三つの節に分かれています。一つ目は項を定義する節です。二つ目は大小関係を定義する節です。三つ目は標準形を定義する節です。四つ目は共終数と基本列を定義する節です。
+
+== 項 ==
+
+写像 \( \mathrm{ShowDupleNat} \colon \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N} \) を以下のように定めます。
+
+* \( \mathrm{ShowDupleNat} ( x, y ) \) を以下のように定める。
+*# \( x \) と \( y \) について同時に場合分けをする。
+*#* \( x = x' \times 2 \) かつ \( y = y' \times 2 \) であるとき、
+*#*# \( \mathrm{ShowDupleNat} ( x, y ) = \mathrm{ShowDupleNat} ( x', y' ) \times 4 \) である。
+*#* \( x = x' \times 2 \) かつ \( y = y' \times 2 + 1 \) であるとき、
+*#*# \( \mathrm{ShowDupleNat} ( x, y ) = \mathrm{ShowDupleNat} ( x', y' ) \times 4 + 2 \) である。
+*#* \( x = x' \times 2 + 1 \) かつ \( y = y' \times 2 \) であるとき、
+*#*# \( \mathrm{ShowDupleNat} ( x, y ) = \mathrm{ShowDupleNat} ( x', y' ) \times 4 + 1 \) である。
+*#* \( x = x' \times 2 + 1 \) かつ \( y = y' \times 2 + 1 \) であるとき、
+*#*# \( \mathrm{ShowDupleNat} ( x, y ) = \mathrm{ShowDupleNat} ( x', y' ) \times 4 + 3 \) である。
+
+集合 \( \mathrm{NestArray} \) を以下のように定めます。
+
+# 任意の \( A \in \mathrm{NestArray} ^ { < \omega } \) に対して \( A \in \mathrm{NestArray} \) である。
+
+写像 \( \mathrm{ShowNestArray} \colon \mathrm{NestArray} \rightarrow \mathbb{N} \) を以下のように定めます。
+
+* \( \mathrm{ShowNestArray} ( x ) \) を以下のように定める。
+*# \( x \) について場合分けする。
+*#* \( x = ( ) \) であるとき、
+*#*# \( \mathrm{ShowNestArray} ( x ) = 0 \) である。
+*#* \( x = ( x _ h ) \frown x _ t \) であるとき、
+*#*# \( \mathrm{ShowNestArray} ( x ) = \mathrm{ShowDupleNat} ( \mathrm{ShowNestArray} ( x _ h ), \mathrm{ShowNestArray} ( x _ t ) ) \) である。
+
+\( ( x, y ) \mapsto \f _ x ( y ) \) と \( ( ) \mapsto 0 \) と \( ( x, y ) \mapsto x + y \) を以下のように定めます。
+
+* \( ( x, y ) \mapsto \f _ x ( y ) \) を以下のように定める。
+*# \( \f _ x ( y ) = ( 0, ( 0, x, y ) ) \) である。
+* \( ( ) \mapsto 0 \) を以下のように定める。
+*# \( 0 = ( 1, ( 0 ) ) \) である。
+* \( ( x, y ) \mapsto x + y \) を以下のように定める。
+*# \( x + y = ( 1, ( 1, x, y ) ) \) である。
+
+\( T _ p \) と \( T _ s \) を以下のような条件を満たす最小の集合として定めます。
+
+* \( T _ p \) についての条件を以下のように定める。
+*# 任意の \( x \in T _ s \) と \( y \in T _ s \) に対して \( \f _ x ( y ) \in T _ p \) である。
+* \( T _ s \) についての条件を以下のように定める。
+*# \( 0 \in T _ s \) である。
+*# 任意の \( x _ p \in T _ p \) と \( x _ s \in T _ s \) に対して \( x _ p + x _ s \in T _ s \) である。
+
+\( T \) を以下のように定めます。
+
+* \( T \) を以下のように定める。
+*# \( T = T _ s \) である。
