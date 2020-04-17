@@ -1,6 +1,8 @@
 <div style="display:none"><nowiki>\[
 
-  \newcommand{\f}{\varphi}
+  \newcommand{\f}{\bar{\varphi}}
+  \newcommand{\0}{\bar{0}}
+  \newcommand{\p}{\bar{+}}
 
 \]</nowiki></div>
 
@@ -36,22 +38,22 @@
 *#* \( x = ( x _ h ) \frown x _ t \) であるとき、
 *#*# \( \mathrm{ShowNestArray} ( x ) = \mathrm{ShowDupleNat} ( \mathrm{ShowNestArray} ( x _ h ), \mathrm{ShowNestArray} ( x _ t ) ) \) である。
 
-\( ( x, y ) \mapsto \f _ x ( y ) \) と \( ( ) \mapsto 0 \) と \( ( x, y ) \mapsto x + y \) を以下のように定めます。
+\( ( x, y ) \mapsto \f _ x ( y ) \) と \( ( ) \mapsto \0 \) と \( ( x, y ) \mapsto x \p y \) を以下のように定めます。
 
 * \( ( x, y ) \mapsto \f _ x ( y ) \) を以下のように定める。
 *# \( \f _ x ( y ) = ( 0, ( 0, x, y ) ) \) である。
-* \( ( ) \mapsto 0 \) を以下のように定める。
-*# \( 0 = ( 1, ( 0 ) ) \) である。
+* \( ( ) \mapsto \0 \) を以下のように定める。
+*# \( \0 = ( 1, ( 0 ) ) \) である。
 * \( ( x, y ) \mapsto x + y \) を以下のように定める。
-*# \( x + y = ( 1, ( 1, x, y ) ) \) である。
+*# \( x \+ y = ( 1, ( 1, x, y ) ) \) である。
 
 \( T _ p \) と \( T _ s \) を以下のような条件を満たす最小の集合として定めます。
 
 * \( T _ p \) についての条件を以下のように定める。
 *# 任意の \( x \in T _ s \) と \( y \in T _ s \) に対して \( \f _ x ( y ) \in T _ p \) である。
 * \( T _ s \) についての条件を以下のように定める。
-*# \( 0 \in T _ s \) である。
-*# 任意の \( x _ p \in T _ p \) と \( x _ s \in T _ s \) に対して \( x _ p + x _ s \in T _ s \) である。
+*# \( \0 \in T _ s \) である。
+*# 任意の \( x _ p \in T _ p \) と \( x _ s \in T _ s \) に対して \( x _ p \+ x _ s \in T _ s \) である。
 
 \( T \) を以下のように定めます。
 
