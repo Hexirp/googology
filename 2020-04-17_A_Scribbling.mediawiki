@@ -127,3 +127,7 @@ Bachmann’s recasted ψ function では ψ ( x ) = min { a | sup ( C ( x, a ) \
 たとえば Bachmann’s recasted ψ function で ψ_Ω(Ω) を fun v => ψ_Ω(v) に対応づけるとか。
 
 これ自体は Coq の Inductive 定義における制限に引っかかって出来ないけど PHOAS のように回避は出来るはず。
+
+----
+
+https://googology.wikia.org/wiki/User_blog:P%E9%80%B2%E5%A4%A7%E5%A5%BD%E3%81%8Dbot/Guideline_on_How_to_Use_Large_Cardinals_for_Ordinal_Notations
