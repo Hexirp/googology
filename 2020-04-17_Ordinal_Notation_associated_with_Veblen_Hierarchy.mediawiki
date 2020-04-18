@@ -127,9 +127,9 @@
 * \( x \in T _ p \) について \( \mathrm{cof} _ p ( x ) \) を以下のように定める。
 *# \( x \) について場合分けする。
 *#* \( x = \f _ \0 ( \0 ) \) であるとき、
-*#*# \( \mathrm{cof} _ p ( x ) = \f _ \0 ( \0 ) \) である。
+*#*# \( \mathrm{cof} _ p ( x ) = \f _ \0 ( \0 ) \p \0 \) である。
 *#* それ以外のとき、
-*#*# \( \mathrm{cof} _ p ( x ) = \f _ \0 ( \f _ \0 ( \0 ) ) \) である。
+*#*# \( \mathrm{cof} _ p ( x ) = \f _ \0 ( \f _ \0 ( \0 ) ) \p \0 \) である。
 * \( x \in T _ s \) について \( \mathrm{cof} _ p ( x ) \) を以下のように定める。
 *# \( x \) について場合分けする。
 *#* \( x = \0 \) であるとき、
@@ -138,3 +138,8 @@
 *#*# \( \mathrm{cof} _ s ( x ) = \mathrm{cof} _ p ( x _ p ) \) である。
 *#* \( x = x _ p \p x _ s \) であるとき、
 *#*# \( \mathrm{cof} _ s ( x ) = \mathrm{cof} _ s ( x _ s ) \) である。
+
+\( T \) に対する共終数 \( \mathrm{cof} \colon T \rightarrow T \) を以下のように定めます。
+
+* \( x \in T \) について \( \mathrm{cof} ( x ) \) を以下のように定める。
+*# \( \mathrm{cof} ( x ) = \mathrm{cof} _ s ( x ) \) である。
