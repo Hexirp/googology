@@ -2,7 +2,7 @@
 
   \newcommand{\f}{\bar{\varphi}}
   \newcommand{\0}{\bar{0}}
-  \newcommand{\p}{\bar{+}}
+  \newcommand{\p}{\mathbin{\bar{+}}}
 
 \]</nowiki></div>
 
