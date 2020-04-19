@@ -29,7 +29,7 @@
 
 ヴェブレン階層の定義は以下に挙げるようなものが一般的なようです。
 
-\[ \alpha \in \mathbf{AP} \colonarrow 0 < \alpha \land \forall \xi \ldotp \xi < \alpha \rightarrow \forall \eta \ldotp \eta < \alpha \rightarrow \xi + \eta < \alpha \]
+\[ \alpha \in \mathbf{AP} \colonarrow 0 < \alpha \land \forall \xi \ldotp \forall \eta \ldotp \xi < \alpha \land \eta < \alpha \rightarrow \xi + \eta < \alpha \]
 
 まず、加法的に素な数 (additive principal number) のクラスを定義します。このクラスは \( \alpha \mapsto \omega ^ \alpha \) の値域と一致します。
 
@@ -39,7 +39,7 @@
 
 === 基本列 ===
 
-基本列は非形式的には以下のように書けます。ここの基本列は完全ではありません。
+非形式的には基本列の要旨は以下のように書けます。ここの基本列は完全ではありません。
 
 * \( \alpha = \varphi ( 0, 0 ) \) のとき \( \mathrm{cof} ( \alpha ) = 1 \) で \( \alpha [ 0 ] = 0 \) である。
 * \( \alpha = \varphi ( 0, \gamma + 1 ) \) のとき \( \mathrm{cof} ( \alpha ) = \omega \) で \( \alpha [ \eta ] = \varphi ( 0, \gamma ) \times \eta \) である。
@@ -48,8 +48,8 @@
 * \( \alpha = \varphi ( \beta + 1, \gamma + 1 ) \) のとき \( \mathrm{cof} ( \alpha ) = \omega \) で \( \alpha [ 0 ] = \varphi ( \beta + 1, \gamma ) + 1 \) かつ \( \alpha [ \eta + 1 ] = \varphi ( \beta, \alpha [ \eta ] ) \) である。
 * \( \alpha = \varphi ( \beta + 1, \gamma ) \) かつ \( \mathrm{cof} ( \gamma ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \gamma ) \) で \( \alpha [ \eta ] = \varphi ( \beta + 1, \gamma [ \eta ] ) \) である。
 * \( \alpha = \varphi ( \beta, 0 ) \) かつ \( \mathrm{cof} ( \beta ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \beta ) \) で \( \alpha [ \eta ] = \varphi ( \beta [ \eta ], 0 ) \) である。
-* \( \alpha = \varphi ( \beta, \gamma + 1 \) かつ \( \mathrm{cof} ( \beta ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \beta ) \) で \( \alpha [ \eta ] = \varphi ( \beta [ \eta ], \varphi ( \beta, \gamma ) + 1 ) \) である。
-* \( \alpha = \varphi ( \beta, \gamma \) かつ \( \mathrm{cof} ( \gamma ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \gamma ) \) で \( \alpha [ \eta ] = \varphi ( \beta, \gamma [ \eta ] ) \) である。
+* \( \alpha = \varphi ( \beta, \gamma + 1 ) \) かつ \( \mathrm{cof} ( \beta ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \beta ) \) で \( \alpha [ \eta ] = \varphi ( \beta [ \eta ], \varphi ( \beta, \gamma ) + 1 ) \) である。
+* \( \alpha = \varphi ( \beta, \gamma ) \) かつ \( \mathrm{cof} ( \gamma ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \gamma ) \) で \( \alpha [ \eta ] = \varphi ( \beta, \gamma [ \eta ] ) \) である。
 
 == 項 ==
 
