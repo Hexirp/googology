@@ -4,9 +4,16 @@
   \newcommand{\0}{\bar{0}}
   \newcommand{\p}{\mathbin{\bar{+}}}
 
+  \newcommand{\ordinarycolon}{:}
+  \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
+  \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+  \newcommand{\colonarrow}{\vcentcolon\mathrel{\mkern-1.2mu}\Leftrightarrow}
+
 \]</nowiki></div>
 
 この記事ではヴェブレン階層に関連した順序数表記を定義します。
+
+== 序文 ==
 
 まず、ヴェブレン関数 (Veblen function) はオズワルド・ヴェブレン (Oswald Veblen) が定義した関数です。それは "Continuous Increasing Functions of Finite and Transfinite Ordinals" と題される論文で定義されています。それは "Transactions of the American Mathematical Society" という雑誌の第 9 巻の第 3 号に記載されています。なんと、その雑誌が発行されたのは 1908 年のことです。
 
@@ -17,6 +24,32 @@
 なお、ヴェブレン階層は関数としてみなされる時に英語では複数形で呼ばれるようです。推測になりますが \( x \mapsto \varphi _ \alpha ( x ) \) がそれぞれ別の関数だという考え方に拠っているのかもしれません。
 
 この記事では一つ目の節で項を定義します。ここでは自然数からの順序数表記の項への単射を与えています。また項の定義は[[ユーザーブログ:Hexirp/順序数表記について話す]]で記載した相互再帰による手法を使用しています。二つ目の節では大小関係を定義しています。三つ目の節では標準形を定義しています。四つ目の節では基本列を定義しています。この基本列においてはある種の妥協があり、非標準形が現れることを許しています。ここで現れるような非標準形は、本来あるべき標準形を \( x \) として非標準形を \( x' \) とすると \( x = _ T x' \) を満たすようなものです。この性質があるために大小関係において問題が生じないのと、取り除こうと思えば取り除けるが定義が複雑になることを考えて、そのままにしています。
+
+=== 定義 ===
+
+ヴェブレン階層の定義は以下に挙げるようなものが一般的なようです。
+
+\[ \alpha \in \mathbf{AP} \colonarrow 0 < \alpha \land \forall \xi \ldotp \xi < \alpha \rightarrow \forall \eta \ldotp \eta < \alpha \rightarrow \xi + \eta < \alpha \]
+
+まず、加法的に素な数 (additive principal number) のクラスを定義します。このクラスは \( \alpha \mapsto \omega ^ \alpha \) の値域と一致します。
+
+\[ \varphi _ \alpha \coloneqq \mathrm{Enum} [ \{ \xi \in \mathbf{AP} : \forall \eta \ldotp \eta < \alpha \rightarrow \varphi _ \eta ( \xi ) = \xi \} ] \]
+
+そして数え上げ操作によってヴェブレン階層を表現する関数を定義します。
+
+=== 基本列 ===
+
+基本列は非形式的には以下のように書けます。ここの基本列は完全ではありません。
+
+* \( \alpha = \varphi ( 0, 0 ) \) のとき \( \mathrm{cof} ( \alpha ) = 1 \) で \( \alpha [ 0 ] = 0 \) である。
+* \( \alpha = \varphi ( 0, \gamma + 1 ) \) のとき \( \mathrm{cof} ( \alpha ) = \omega \) で \( \alpha [ \eta ] = \varphi ( 0, \gamma ) \times \eta \) である。
+* \( \alpha = \varphi ( 0, \gamma ) \) で \( \mathrm{cof} ( \gamma ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \gamma ) \) で \( \alpha [ \eta ] = \varphi ( 0, \gamma [ \eta ] ) \) である。
+* \( \alpha = \varphi ( \beta + 1, 0 ) \) のとき \( \mathrm{cof} ( \alpha ) = \omega \) で \( \alpha [ 0 ] = 0 \) かつ \( \alpha [ \eta + 1 ] = \varphi ( \beta, \alpha [ \eta ] ) \) である。
+* \( \alpha = \varphi ( \beta + 1, \gamma + 1 ) \) のとき \( \mathrm{cof} ( \alpha ) = \omega \) で \( \alpha [ 0 ] = \varphi ( \beta + 1, \gamma ) + 1 \) かつ \( \alpha [ \eta + 1 ] = \varphi ( \beta, \alpha [ \eta ] ) \) である。
+* \( \alpha = \varphi ( \beta + 1, \gamma ) \) かつ \( \mathrm{cof} ( \gamma ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \gamma ) \) で \( \alpha [ \eta ] = \varphi ( \beta + 1, \gamma [ \eta ] ) \) である。
+* \( \alpha = \varphi ( \beta, 0 ) \) かつ \( \mathrm{cof} ( \beta ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \beta ) \) で \( \alpha [ \eta ] = \varphi ( \beta [ \eta ], 0 ) \) である。
+* \( \alpha = \varphi ( \beta, \gamma + 1 \) かつ \( \mathrm{cof} ( \beta ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \beta ) \) で \( \alpha [ \eta ] = \varphi ( \beta [ \eta ], \varphi ( \beta, \gamma ) + 1 ) \) である。
+* \( \alpha = \varphi ( \beta, \gamma \) かつ \( \mathrm{cof} ( \gamma ) \ge \omega \) のとき \( \mathrm{cof} ( \alpha ) = \mathrm{cof} ( \gamma ) \) で \( \alpha [ \eta ] = \varphi ( \beta, \gamma [ \eta ] ) \) である。
 
 == 項 ==
 
