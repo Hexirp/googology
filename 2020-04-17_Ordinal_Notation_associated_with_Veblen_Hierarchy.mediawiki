@@ -58,7 +58,11 @@
 * \( \mathrm{ShowDupleNat} ( x, y ) \) を以下のように定める。
 *# \( x \) と \( y \) について同時に場合分けをする。
 *#* \( x = x' \times 2 \) かつ \( y = y' \times 2 \) であるとき、
-*#*# \( \mathrm{ShowDupleNat} ( x, y ) = \mathrm{ShowDupleNat} ( x', y' ) \times 4 \) である。
+*#*# \( x' \) と \( y' \) について同時に場合分けをする。
+*#*#* \( x' = 0 \) かつ \( y' = 0 \) のとき、
+*#*#*# \( \mathrm{ShowDupleNat} ( x, y ) = 0 \) である。
+*#*#* それ以外のとき、
+*#*#*# \( \mathrm{ShowDupleNat} ( x, y ) = \mathrm{ShowDupleNat} ( x', y' ) \times 4 \) である。
 *#* \( x = x' \times 2 \) かつ \( y = y' \times 2 + 1 \) であるとき、
 *#*# \( \mathrm{ShowDupleNat} ( x, y ) = \mathrm{ShowDupleNat} ( x', y' ) \times 4 + 2 \) である。
 *#* \( x = x' \times 2 + 1 \) かつ \( y = y' \times 2 \) であるとき、
