@@ -3,6 +3,9 @@
 <nowiki>
 \[
   \newcommand{\then}{\rightarrow}
+  \newcommand{\Nat}{\mathrm{Nat}}
+  \newcommand{\zero}{\mathrm{zero}}
+  \newcommand{\succ}{\mathrm{succ}}
 \]
 </nowiki>
 
@@ -28,7 +31,7 @@
 
 すなわち、ある型付きラムダ計算の体系は、ある論理の体系と対応します。なので、明確に矛盾している体系でもない限り、評価が停止しない項を作ることは出来ないと信じられています。それは評価が停止しない項が、論理では矛盾に対応するからです。もちろん、ペアノ算術が矛盾している可能性があるように確実なことは言えませんが。
 
-型付きラムダ計算には様々な種類があり、例を挙げると、単純型付きラムダ計算 (simply typed lambda calculus, λ, λ<sup>→</sup>, \( \lambda \), \( \lambda ^ \rightarrow \)) 、システム・エフ<ref>訳語を確認できなかったので音読を記載しました</ref>・二階ラムダ計算・（ジラール＝レイノルズ）多相ラムダ計算 (System F, second-order lambda calculus, (Girard–Reynolds) polymorphic lambda calculus, λ2, \( \lambda 2 \)) 、システム・ティー<ref>訳語を確認できなかったので音読を記載しました</ref> (System T) 、システム・ユー<ref>訳語を確認できなかったので音読を記載しました</ref> (System U) 、構成計算<ref>訳語を確認できなかったので独自に訳語を作成しました。中国語で「构造演算」と訳されていることを参考にして construction が「建設」「構築」「構造」と訳されることから「建設計算」「構築計算」「構造計算」などを考案しましたが建設業界の用語と被ってるため没としました。その後 construction から連想した constructor が「構成子」と訳されることから「構成計算」を考案して採用しました</ref> (calculus of construction, λC, CoC, \( \lambda \mathrm{C} \), \( \mathrm{CoC} \)) 、帰納構成計算 (calculus of inductive construction, CIC, \( \mathrm{CIC} \)) 、可述的帰納構成計算 (predicative calculus of inductive construction, pCIC, \( \mathrm{pCIC} \)) 、純粋型体系 (pure type system, PTS, \( \mathrm{PTS} \)) 、などが挙げられます。
+型付きラムダ計算には様々な種類があり、例を挙げると、単純型付きラムダ計算 (simply typed lambda calculus, λ, λ<sup>→</sup>, \( \lambda \), \( \lambda ^ \rightarrow \)) 、システム・エフ<ref>訳語を確認できなかったので音読を記載しました</ref>・二階ラムダ計算・（ジラール＝レイノルズ）多相ラムダ計算 (System F, second-order lambda calculus, (Girard–Reynolds) polymorphic lambda calculus, λ2, \( \lambda 2 \)) 、システム・ティー<ref>訳語を確認できなかったので音読を記載しました</ref> (System T) 、システム・ユー<ref>訳語を確認できなかったので音読を記載しました</ref> (System U) 、システム・エフ・サブ<ref>訳語を確認できなかったので音読を記載しました</ref> (System F-sub, System F<sub>&lt;:</sub>) 、構成計算<ref>訳語を確認できなかったので独自に訳語を作成しました。中国語で「构造演算」と訳されていることを参考にして construction が「建設」「構築」「構造」と訳されることから「建設計算」「構築計算」「構造計算」などを考案しましたが建設業界の用語と被ってるため没としました。その後 construction から連想した constructor が「構成子」と訳されることから「構成計算」を考案して採用しました</ref> (calculus of construction, λC, CoC, \( \lambda \mathrm{C} \), \( \mathrm{CoC} \)) 、帰納構成計算<ref>訳語を確認できなかったので独自に訳語を作成しました</ref> (calculus of inductive construction, CIC, \( \mathrm{CIC} \)) 、可述的帰納構成計算<ref>訳語を確認できなかったので独自に訳語を作成しました</ref> (predicative calculus of inductive construction, pCIC, \( \mathrm{pCIC} \)) 、純粋型体系 (pure type system, PTS, \( \mathrm{PTS} \)) 、などが挙げられます。
 
 明確に矛盾している体系として System U があります。この体系が矛盾することはジラールのパラドックス (Girard's paradox) と呼ばれます。具体的な証明を知りたい方は A Simplification of Girard's Paradox という論文の第 3 章を読むのがお勧めです。
 
@@ -36,6 +39,20 @@
 
 == 計算可能関数 ==
 
-ある程度強い型付きラムダ計算ではペアノの公理を満たす三つ組 \( ( \mathrm{Nat}, \mathrm{zero}, \mathrm{succ} ) \) が構成できます。では、任意の \( \mathrm{Nat} \then \mathrm{Nat} \) \) と型付けされる項 \( f \) が計算可能関数を表現することは言えるでしょうか？　これが言えるのであれば、その体系の中で定義できた関数は計算可能だと言えます。
+ある程度強い型付きラムダ計算ではペアノの公理を満たす三つ組 \( ( \Nat, \zero, \succ ) \) が構成できます。では、任意の \( \Nat \then \Nat \) \) と型付けされる項 \( f \) が計算可能関数を表現することは言えるでしょうか？　これが言えるのであれば、その体系の中で定義できた関数は計算可能だと言えます。
 
-私の答えは「その体系が強正規化性を持っていて、簡約の結果が唯一つしかなくて、 \( \mathrm{Nat} \) で型付けされる項が \( \mathrm{zero}, \mathrm{succ} ( \mathrm{zero} ), \mathrm{succ} ( \mathrm{succ} ( \mathrm{zero} ) ), \ldots \) しかなければ、言える」です。強正規化性 (strong normalization property) とは書き換え系 (rewrite system) において、書き換えの列が常に既約項に到達して終わるという性質です。簡約を書き換えとしてみなせるのでラムダ計算も書き換え系です。
+私の答えは「その体系が強正規化性を持っていて、簡約の結果がただ一つしかなくて、 \( \Nat \) で型付けされる項が \( \zero, \succ ( \zero ), \succ ( \succ ( \zero ) ), \ldots \) しかなければ、言える」です。強正規化性 (strong normalization property) とは書き換え系 (rewrite system) において、書き換えの列が常に既約項に到達して終わるという性質です。簡約を書き換えとしてみなせるのでラムダ計算も書き換え系です。
+
+\( \Nat \then \Nat \) と型付けされる項 \( f \) から計算可能関数 \( \hat{f} \) を構成するアルゴリズムを与えることを考えてみましょう。
+
+# \( \hat{f} ( n ) \) の値を定める。
+# まず、自然数 \( n \) を項 \( \bar{n} \) に変換する。これは \( \zero \) などの項を使えばよい。
+# \( f ( \bar{n} ) \) を簡約する。その結果を \( m \) とする。
+# 項 \( m \) を自然数 \( \hat{m} \) に変換する。これは \( \zero \) と \( \succ \) のみで構成されていれば可能である。
+# \( \hat{f} ( n ) = \hat{m} \) である。
+
+ここではいくつかの問題になりうる箇所があります。一つ目は、簡約が終わらないことです。これは強正規化性により排除できます。二つ目は、簡約の過程によって複数の結果が出てしまうことです。これは簡約の結果がただ一つしかないことを課したことにより排除できます。三つめは、出てきた結果が自然数に戻せないことです。これは \( \Nat \) に余計な要素が含まれないことを条件にしたことにより排除できます。
+
+では、これらの条件はどのくらい厳しいのでしょうか。私の予想になりますが、二つ目と三つ目の条件は証明するのは比較的簡単です。しかし、一つ目の条件、つまり強正規化性は、論理として見ればカット除去定理が成り立つことに対応します<ref>ただし、これは私が勝手にそう思っているだけです</ref>。つまり、証明することは困難になると思われます。
+
+実際に強正規化性が証明されている例としては、単純型付きラムダ計算や System F 、さらに Calculus of Constructions などがあげられます。
