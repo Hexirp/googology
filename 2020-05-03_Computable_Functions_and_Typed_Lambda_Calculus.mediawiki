@@ -7,7 +7,7 @@
   \newcommand{\Nat}{\mathrm{Nat}}
   \newcommand{\zero}{\mathrm{zero}}
   \newcommand{\succ}{\mathrm{succ}}
-\]</nowiki></pre>
+\]</nowiki></div>
 
 == 型付きラムダ計算 ==
 
