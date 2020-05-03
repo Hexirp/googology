@@ -1,6 +1,6 @@
 今日は、計算可能関数と型付きラムダ計算の関係について語りましょうか。といっても、主題は「型付きラムダ計算の内部で表現できる関数は計算可能関数であるかどうか」なのですが。
 
-この記事は「 \( \mathrm{pCIC} \) を巨大数論の根本に据える」という考えの元に書かれています。これは私が最初に投稿したブログ記事から考えていることなのですが、英語圏で活動していた Emlightened 氏も [https://googology.wikia.org/wiki/User_blog:Emlightened/Definition_of_Googology Definition of Googology] を見るに似たようなことを考えていたようです。
+この記事は「 \( \mathrm{pCIC} \) を巨大数論の根本に据える」という考えの元に書かれています。これは私がブログ記事を最初に投稿した時から考えていることなのですが、英語圏で活動していた Emlightened 氏も [https://googology.wikia.org/wiki/User_blog:Emlightened/Definition_of_Googology Definition of Googology] を見るに似たようなことを考えていたようです。
 
 <nowiki>
 \[
@@ -56,7 +56,7 @@ de Bruijin index はラムダ計算の式を表すための方法の一つです
 
 明確に矛盾している体系として System U があります。この体系が矛盾することはジラールのパラドックス (Girard's paradox) と呼ばれます。具体的な証明を知りたい方は A Simplification of Girard's Paradox という論文の第 3 章を読むのがお勧めです。
 
-型付きラムダ計算はカリー＝ハワード対応により論理と見なすことができます。そのような論理の中には強力なものがあります。私が知る最も強力な例は \( \mathrm{pCIC} \) が \( \mathrm{ZFC} + \textrm{“There are countably many inaccessible cardinals”} \) と無矛盾性が等しいというものです。直観主義的かつ構成的である<ref>ここでの「直観主義的」と「構成的」という表現は私の主観です</ref>体系としてはとても強いように見えます<ref>ここでの「構成的なのにとても強い」という表現は構成的集合論の一つである CZF の強さが ZF と比べて弱いことに由来する私の主観です</ref>。
+型付きラムダ計算はカリー＝ハワード対応により論理と見なすことができます。そのような論理の中には強力なものがあります。私が知る最も強力な例は \( \mathrm{pCIC} \) が \( \mathrm{ZFC} + \textrm{&ldquo;There are countably many inaccessible cardinals&rdquo;} \) と無矛盾性が等しいというものです。直観主義的かつ構成的である<ref>ここでの「直観主義的」と「構成的」という表現は私の主観です</ref>体系としてはとても強いように見えます<ref>ここでの「構成的なのにとても強い」という表現は構成的集合論の一つである CZF の強さが ZF と比べて弱いことに由来する私の主観です</ref>。
 
 == 強正規化性 ==
 
