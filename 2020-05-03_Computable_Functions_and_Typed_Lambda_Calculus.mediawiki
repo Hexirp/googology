@@ -32,7 +32,7 @@ Inductive lambda : nat -> Type :=
 
 <code>lambda</code> は一つの自然数を受け取る依存型であり、 <code>lambda n</code> は <code> n </code> 個の自由変数を内部に含むラムダ計算の式です。また、その構成子である <code>abs</code> が「引数を取る」という部分に対応します。 <code>abs n t</code> と書いたとき <code>λx. t</code> になぞらえることができます。そのため、 <code>t</code> の中にある自由変数の数は <code>abs n t</code> よりも一つ増えます。さらに、別の構成子である <code>app</code> は単純に「適用する」に対応します。
 
-一つだけ仲間はずれなのが <code>var</code> なのですが、これはある自由変数を表します。 <code>fin n</code> としたとき、それは <code>n + 1</code> 個の値が存在する型となり<ref>本来なら <code>n</code> 個の値というのが自然なのですが、なぜか当時の私はこう実装していたようです</code>、 <code>var</code> は環境に存在する自由変数の一つを表すことになります。ここで何番目の値がどの自由変数を表すかには自由度がありますが、ここでは de Bruijin index であるため \( \lambda z \ldotp ( \lambda y \ldotp y ( \lambda x \ldotp x ) ) ( \lambda x \ldotp z x) \) が <code>abs _ (app _ (abs _ (app _ (var _ 0) (abs _ (var _ 0)))) (abs _ (app _ (var _ 1) (var _ 0))))</code> となります。
+一つだけ仲間はずれなのが <code>var</code> なのですが、これはある変数を表します。 <code>fin n</code> としたとき、それは <code>n + 1</code> 個の値が存在する型となり<ref>本来なら <code>n</code> 個の値というのが自然なのですが、なぜか当時の私はこう実装していたようです</code>、 <code>var</code> は環境に存在する自由変数の一つを表すことになります。ここで何番目の値がどの自由変数を表すかには自由度がありますが、ここでは de Bruijin index であるため \( \lambda z \ldotp ( \lambda y \ldotp y ( \lambda x \ldotp x ) ) ( \lambda x \ldotp z x) \) が <code>abs _ (app _ (abs _ (app _ (var _ 0) (abs _ (var _ 0)))) (abs _ (app _ (var _ 1) (var _ 0))))</code> となります。
 
 de Bruijin index はラムダ計算の式を表すための方法の一つです。変数の名前を使う方法よりも優れている点は、アルファ変換を考えなくてもいいこと、「自由変数に <code>x</code> が含まれていない」というような Coq で扱うには面倒くさい条件を考えなくてもいいこと、その他です。ただし、変数の名前で変数の意味を表現するということは出来ません。さらに、ベータ簡約をする際にも de Bruijin index の利点があります。たとえば <code>t</code> という <code>lambda 0</code> となる自由変数がない式を考えましょう。それを使った式 <code>s t</code> をベータ簡約しようと思ったら <code>s</code> の中に <code>t</code> をそのままはめ込んで <code>s</code> の index を振り直せばいいだけなのです。
 
@@ -44,15 +44,14 @@ de Bruijin index はラムダ計算の式を表すための方法の一つです
 
 次に、型付きラムダ計算を説明します。型付きラムダ計算は、ラムダ計算の引数に型が付き、さらに適用も \( A \then B \) と型付けられた値と \( A \) と型付けされた値の間に制限されたりしたものです。型無しラムダ計算でも Church encoding によって疑似的な型を仮想することが出来ますが、意図しない値が与えられると簡単に壊れます。型が組み込まれているとそのようなことがなくなります。また、型無しラムダ計算には簡約が停止しない式が存在します。そのような一例は <code>(λx. x x) (λx. x x)</code> という式です。それが型付きラムダ計算になると、全ての項についての簡約が停止するような体系が存在するようになります。
 
-== カリー＝ハワード対応 ==
+型付きラムダ計算には様々な種類があり、例をあげると、単純型付きラムダ計算 (simply typed lambda calculus, λ, λ<sup>→</sup>, \( \lambda \), \( \lambda ^ \rightarrow \)) 、システム・エフ<ref>訳語を確認できなかったので音読を記載しました</ref>・二階ラムダ計算・（ジラール＝レイノルズ）多相ラムダ計算 (System F, second-order lambda calculus, (Girard–Reynolds) polymorphic lambda calculus, λ2, \( \lambda 2 \)) 、システム・ティー<ref>訳語を確認できなかったので音読を記載しました</ref> (System T) 、システム・ユー<ref>訳語を確認できなかったので音読を記載しました</ref> (System U) 、システム・エフ・サブ<ref>訳語を確認できなかったので音読を記載しました</ref> (System F-sub, System F<sub>&lt;:</sub>) 、構成計算<ref>訳語を確認できなかったので独自に訳語を作成しました。中国語で「构造演算」と訳されていることを参考にして construction が「建設」「構築」「構造」と訳されることから「建設計算」「構築計算」「構造計算」などを考案しましたが建設業界の用語と被ってるため没としました。その後 construction から連想した constructor が「構成子」と訳されることから「構成計算」を考案して採用しました</ref> (calculus of construction, λC, CoC, CC, \( \lambda C \), \( \mathrm{CoC}. \mathrm{CC} \)) 、帰納構成計算<ref>訳語を確認できなかったので CoC と同様に独自に訳語を作成しました</ref> (calculus of inductive construction, CIC, \( \mathrm{CIC} \)) 、可述的帰納構成計算<ref>訳語を確認できなかったので CoC と同様に独自に訳語を作成しました</ref> (predicative calculus of inductive construction, pCIC, \( \mathrm{pCIC} \)) 、純粋型体系 (pure type system, PTS, \( \mathrm{PTS} \)) 、などがあげられます。
 
-では、型付きラムダ計算では評価が停止しない項を作ることが出来るでしょうか。実は体系にもよりますが、作ることが出来ないと考えられています。その理由はカリー＝ハワード対応によります。
+== カリー＝ハワード対応 ==
 
 カリー＝ハワード対応は論理と計算を結び付ける対応関係です。たとえば \( A \then A \) という恒真式である論理式があったとしましょう。これをカリー＝ハワード対応を通して移すと \( [A] \then [A] \) となります。ただし、型 \( [A] \) は命題 \( A \) に対応するものだと考えてください。また、この型は \( \lambda x \ldotp x \) という値を持ちます。これは移す前の論理式に証明が存在するという事実に対応します。
 
 すなわち、ある型付きラムダ計算の体系は、ある論理の体系と対応します。なので、明確に矛盾している体系でもない限り、評価が停止しない項を作ることは出来ないと信じられています。それは評価が停止しない項が、論理側では矛盾に対応するからです<ref>なお、項と評価をいじくれば矛盾に対応しないけど評価が停止しない項を作れます。なので、この記述は不正確かもしれません</ref>。もちろん、ペアノ算術が矛盾している可能性があるように確実なことは言えませんが。
 
-型付きラムダ計算には様々な種類があり、例をあげると、単純型付きラムダ計算 (simply typed lambda calculus, λ, λ<sup>→</sup>, \( \lambda \), \( \lambda ^ \rightarrow \)) 、システム・エフ<ref>訳語を確認できなかったので音読を記載しました</ref>・二階ラムダ計算・（ジラール＝レイノルズ）多相ラムダ計算 (System F, second-order lambda calculus, (Girard–Reynolds) polymorphic lambda calculus, λ2, \( \lambda 2 \)) 、システム・ティー<ref>訳語を確認できなかったので音読を記載しました</ref> (System T) 、システム・ユー<ref>訳語を確認できなかったので音読を記載しました</ref> (System U) 、システム・エフ・サブ<ref>訳語を確認できなかったので音読を記載しました</ref> (System F-sub, System F<sub>&lt;:</sub>) 、構成計算<ref>訳語を確認できなかったので独自に訳語を作成しました。中国語で「构造演算」と訳されていることを参考にして construction が「建設」「構築」「構造」と訳されることから「建設計算」「構築計算」「構造計算」などを考案しましたが建設業界の用語と被ってるため没としました。その後 construction から連想した constructor が「構成子」と訳されることから「構成計算」を考案して採用しました</ref> (calculus of construction, λC, CoC, \( \lambda \mathrm{C} \), \( \mathrm{CoC} \)) 、帰納構成計算<ref>訳語を確認できなかったので独自に訳語を作成しました</ref> (calculus of inductive construction, CIC, \( \mathrm{CIC} \)) 、可述的帰納構成計算<ref>訳語を確認できなかったので独自に訳語を作成しました</ref> (predicative calculus of inductive construction, pCIC, \( \mathrm{pCIC} \)) 、純粋型体系 (pure type system, PTS, \( \mathrm{PTS} \)) 、などがあげられます。
 
 明確に矛盾している体系として System U があります。この体系が矛盾することはジラールのパラドックス (Girard's paradox) と呼ばれます。具体的な証明を知りたい方は A Simplification of Girard's Paradox という論文の第 3 章を読むのがお勧めです。
 
