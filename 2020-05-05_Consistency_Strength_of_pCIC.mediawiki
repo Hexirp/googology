@@ -1,0 +1,11 @@
+\( \mathrm{pCIC} \) の無矛盾性は \( \mathrm{ZFC} + \textrm{&ldquo;There are countably many inaccessible cardinals&rdquo;} \) と等しいことが知られています。
+
+ですが、より弱い体系である \( \mathrm{CoC} \) の無矛盾性は知られていません。それがローダー数の比較が出来ていない理由の一つでもあります。
+
+今日は、その無矛盾性の強さについて情報を書いておきます。
+
+2010年12月に Chris Casinghino により Strong Normalization for the Calculus of Constructions という論文が出ています。これは \( \mathrm{CoC} \) の強正規化性の証明を三つ紹介しています。
+
+このように \( \mathrm{CoC} \) の強正規化性は証明されていています。それは \( \mathrm{CoC} \) の無矛盾性を導きます。証明は普通の集合論で行われているように見えるので \( \mathrm{ZFC} \vdash \mathrm{Con} ( \mathrm{CoC} ) \) だということだと思います。
+
+ならば、その逆である \( \mathrm{CoC} \vdash \mathrm{Con} ( \mathrm{ZFC} ) \) なのでしょうか？
