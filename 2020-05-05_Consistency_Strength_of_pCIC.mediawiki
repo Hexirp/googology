@@ -12,8 +12,8 @@ https://mathoverflow.net/questions/69229/proof-strength-of-calculus-of-inductive
 
 https://coq.discourse.group/t/proof-on-normalization-of-cic-and-its-consistency/444 には \( \mathrm{CIC} \) の無矛盾性の強さは \( \mathrm{ZFC} + \textrm{&ldquo;There are countably many inaccessible cardinals&rdquo;} \) が上限であると書いてあります。
 
-どちらも Sets in Types, Types in Sets を根拠としているようですが、この状況はいささか不気味です。後者が正しいのであれば私は誤った情報を広げていたことになるので、がっくりします
+どちらも Sets in Types, Types in Sets を根拠としているようですが、この状況はいささか不気味です。後者が正しいのであれば私は誤った情報を広げていたことになるので、がっくりします。
 
 一応、公式のウィキの[https://github.com/coq/coq/wiki/Presentation#what-do-i-have-to-trust-when-i-see-a-proof-checked-by-coq 記述]には "The theory of Coq version 8.9 is generally admitted to be consistent wrt Zermelo-Fraenkel set theory + inaccessible cardinals. Proofs of consistency of subsystems of the theory of Coq can be found in the literature." とあるようですが……。
 
-なお、 \( \mathrm{CIC} \) と \( \mathrm{pCIC} \) は厳密には違いますが <code>Set</code> という特殊な用途に設けられたソートが predicative になっているだけであり、重要なソートである <code>Type</code> における違いは存在しないので無矛盾性の強さは同じだと思われます。
+なお、 \( \mathrm{CIC} \) と \( \mathrm{pCIC} \) は厳密には違いますが、その違いは <code>Set</code> という本質ではない特殊な用途に設けられたソートが predicative になっているかどうかだけであり、重要なソートである <code>Type</code> における違いは存在しないので無矛盾性の強さは同じだと思われます。
