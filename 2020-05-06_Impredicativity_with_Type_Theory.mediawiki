@@ -1,0 +1,5 @@
+今日は非可述性と型理論について考えたことを書いておきます。
+
+https://ncatlab.org/nlab/show/predicative+mathematics によると \( \forall \alpha \colon \mathrm{Type} \ldotp \alpha \rightarrow \alpha \) のような型を許すことは非可述であるそうです。
+
+確かに説明を読むとその通りだと考えられます。まず、体系は \( \mathrm{CoC} \) だと考えると \( ( \forall \alpha : \mathrm{Type} \ldotp \alpha \rightarrow \alpha ) : \mathrm{Type} \) となります。型を集合にそのまま翻訳すると \( \forall \alpha \colon \mathrm{Type} \ldotp \alpha \rightarrow \alpha \) は \( \forall \alpha \ldotp \exists _ 1 f \ldotp f \colon \alpha \rightarrow \alpha \land \langle \alpha, f \rangle \in A \) を満たす集合 \( A \) と見なされます。これは明らかに真クラスであり集合として存在できません。しかし、集合論とは違い \( \mathrm{CoC} \) ではこれも \( \mathrm{Type} \) という型が付きます。実際には \( \forall \alpha : \mathrm{Type} \ldotp \alpha \rightarrow \alpha \) の値は \( \mathrm{id} \) しか考えられないのが問題が生じない理由だと私は予想しています。
