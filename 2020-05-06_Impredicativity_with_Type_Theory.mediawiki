@@ -2,4 +2,35 @@
 
 https://ncatlab.org/nlab/show/predicative+mathematics によると \( \forall \alpha \colon \mathrm{Type} \ldotp \alpha \rightarrow \alpha \) のような型を許すことは非可述であるそうです。
 
-確かに説明を読むとその通りだと考えられます。まず、体系は \( \mathrm{CoC} \) だと考えると \( ( \forall \alpha : \mathrm{Type} \ldotp \alpha \rightarrow \alpha ) : \mathrm{Type} \) となります。型を集合にそのまま翻訳すると \( \forall \alpha \colon \mathrm{Type} \ldotp \alpha \rightarrow \alpha \) は \( \forall \alpha \ldotp \exists _ 1 f \ldotp f \colon \alpha \rightarrow \alpha \land \langle \alpha, f \rangle \in A \) を満たす集合 \( A \) と見なされます。これは明らかに真クラスであり集合として存在できません。しかし、集合論とは違い \( \mathrm{CoC} \) ではこれも \( \mathrm{Type} \) という型が付きます。実際には \( \forall \alpha : \mathrm{Type} \ldotp \alpha \rightarrow \alpha \) の値は \( \mathrm{id} \) しか考えられないのが問題が生じない理由だと私は予想しています。
+確かに説明を読むとその通りだと考えられます。まず、体系は \( \mathrm{CoC} \) だと考えることにします。型を集合にそのまま翻訳すると \( \forall \alpha \colon \mathrm{Type} \ldotp \alpha \rightarrow \alpha \) は \( \forall \alpha \ldotp \exists _ 1 f \ldotp f \colon \alpha \rightarrow \alpha \land \langle \alpha, f \rangle \in A \) を満たす集合 \( A \) と見なされます。これは明らかに真クラスであり集合として存在できません。しかし、集合論とは違い \( \mathrm{CoC} \) ではこれも \( \( ( \forall \alpha : \mathrm{Type} \ldotp \alpha \rightarrow \alpha ) : \mathrm{Type} \) \) となります。実際には \( \forall \alpha : \mathrm{Type} \ldotp \alpha \rightarrow \alpha \) の値は \( \mathrm{id} \) しか考えられないというのが問題が生じない理由だと私は予想しています。
+
+ここで付け加えなければならないのが \( \mathrm{pCIC} \) のことです。 \( \mathrm{pCIC} \) では宇宙の階層が導入されており可述性となっていいるそうです。さっきの例を使うと \( \forall \alpha \colon \mathrm{Type} _ i \ldotp \alpha \rightarrow \alpha \) は \( i < j \) となる任意のレベル \( j \) に対して \( \mathrm{Type} _ j \) と型が付きます。このように \( \mathrm{Type} _ 0 : \mathrm{Type} _ 1 \), \( \mathrm{Type} _ 1 : \mathrm{Type} _ 2 \), \( \mathrm{Type} _ 2 : \mathrm{Type} _ 3 \), ... という \( \omega \) の長さの宇宙の階層が存在するため \( \mathrm{pCIC} \) は可述だそうです。
+
+<div style="display:none">
+  <nowiki>
+    \[
+      \newcommand{\ordinarycolon}{:}
+      \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}}
+      \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=}
+    \]
+  </nowiki>
+</div>
+
+\( \mathrm{CoC} \) の非可述性について別の角度から考えてみます。
+
+<nowiki>
+  \begin{align}
+    \mathrm{Sigma} & :         \forall A : \mathrm{Type} \ldotp ( A \rightarrow \mathrm{Type} ) \rightarrow \mathrm{Type} \\
+                   & \coloneqq \lambda A : \mathrm{Type} \ldotp \lambda P : A \rightarrow \mathrm{Type} \ldotp \forall R : \mathrm{Type} \ldotp ( \forall x : A \ldotp P ( x ) \rightarrow R ) \rightarrow R \\
+  \end{aligin}
+</nowiki>
+
+\( \mathrm{CoC} \) では存在型を上のように導入できます。ここで \( \mathrm{Sigma} ( A ) ( P ) : \mathrm{Type} \) となり、内包公理による定義が非可述だと言われるのと何か似ているように思います。
+
+<nowiki>
+  \[
+    \mathrm{Sigma} _ { i, j } : \forall A : \mathrm{Type} _ i \ldotp ( A \rightarrow \mathrm{Type} _ j ) \rightarrow \mathrm{Type} _ { i \sqcap j } \\
+  \]
+</nowiki>
+
+一方で \( \mathrm{pCIC} \) では宇宙の階層が入ったことにより \( \mathrm{Sigma} \) は上のような型になります。ここで \( i \ge j \) であるようなレベルを与えることが出来れば \( \mathrm{CoC} \) の定義を再現できますが、どうやら \( A : \mathrm{Type} _ i \) に対して \( A \rightarrow \mathrm{Type} _ j \) を \( i \ge j \) であるときに定義しようとすると \( \lambda x : A \ldotp \mathrm{Unit} _ j \) のように引数を無視した定義しかできないようです。
