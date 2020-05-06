@@ -14,10 +14,10 @@ https://ncatlab.org/nlab/show/predicative+mathematics によると \( \forall \a
 
 \( \mathrm{CoC} \) の非可述性について別の角度から考えてみます。
 
-<nowiki>\begin{align*}
-  \mathrm{Sigma} & :         \forall A : \mathrm{Type} \ldotp ( A \rightarrow \mathrm{Type} ) \rightarrow \mathrm{Type} \\
-                 & \coloneqq \lambda A : \mathrm{Type} \ldotp \lambda P : A \rightarrow \mathrm{Type} \ldotp \forall R : \mathrm{Type} \ldotp ( \forall x : A \ldotp P ( x ) \rightarrow R ) \rightarrow R \\
-\end{aligin*}</nowiki>
+<nowiki>\begin{eqnarray*}
+  \mathrm{Sigma} & :         & \forall A : \mathrm{Type} \ldotp ( A \rightarrow \mathrm{Type} ) \rightarrow \mathrm{Type} \\
+                 & \coloneqq & \lambda A : \mathrm{Type} \ldotp \lambda P : A \rightarrow \mathrm{Type} \ldotp \forall R : \mathrm{Type} \ldotp ( \forall x : A \ldotp P ( x ) \rightarrow R ) \rightarrow R \\
+\end{eqnarray*}</nowiki>
 
 \( \mathrm{CoC} \) では存在型を上のように導入できます。ここで \( \mathrm{Sigma} ( A ) ( P ) : \mathrm{Type} \) となり、内包公理による定義が非可述だと言われるのと何か似ているように思います。
 
