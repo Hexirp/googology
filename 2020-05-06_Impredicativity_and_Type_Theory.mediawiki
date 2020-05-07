@@ -26,3 +26,11 @@ https://ncatlab.org/nlab/show/predicative+mathematics によると \( \forall \a
 \]</nowiki>
 
 一方で \( \mathrm{pCIC} \) では宇宙の階層が入ったことにより \( \mathrm{Sigma} \) は上のような型になります。ここで \( i \ge j \) であるようなレベルを与えることが出来れば \( \mathrm{CoC} \) の定義を再現できますが、どうやら \( i \ge j \) であるときに \( A : \mathrm{Type} _ i \) に対して \( A \rightarrow \mathrm{Type} _ j \) を定義しようとすると \( \lambda x : A \ldotp \mathrm{Unit} _ j \) のように引数を無視した定義しかできないようです。
+
+== 余談 ==
+
+Haskell というプログラミング言語では <code>List (forall a. a -> a)</code> という型が impredicative polymorphism と言われており、言語拡張として <code>ImpredicativeType</code> を指定しないといけません。ただし、この <code>forall a. a -> a</code> を newtype でラップすると <code>RankNType</code> 言語拡張だけで普通に書けるようになることもあり、これには <code>f a :~: g b -> a :~: b</code> が成り立つという Haskell 独自の事情が関わっている可能性があります。そのため、ここでの impredicative は本記事の中での impredicative と同じだとは言い切れません。
+
+Homotopy Type Theory では propositional resizing という公理が提案されていますが、これは homotopy 的に述語である型（つまり (-1)-truncated である型）について宇宙の階層を潰すものです。この公理を認めるとき、その体系は非可述性になるようです。
+
+この記事の「～そうです」「～だそうです」「～ようです」というぼかした所を断言できるような知識を持っている人に書き直してほしい。
