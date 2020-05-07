@@ -4,13 +4,13 @@
 
 2010年12月に Chris Casinghino により Strong Normalization for the Calculus of Constructions という論文が出ています。これは \( \mathrm{CoC} \) の強正規化性の証明を三つ紹介しています。
 
-このように \( \mathrm{CoC} \) の強正規化性は証明されていています。それは \( \mathrm{CoC} \) の無矛盾性を導きます。証明は普通の集合論で行われているように見えるので \( \mathrm{ZFC} \vdash \mathrm{Con} ( \mathrm{CoC} ) \) だということだと思います。ならば、その逆である \( \mathrm{CoC} \vdash \mathrm{Con} ( \mathrm{ZFC} ) \) は成り立つかどうか調べてみたのですが、そもそも情報を全く見つけられませんでした。
+このように \( \mathrm{CoC} \) の強正規化性は証明されていています。それは \( \mathrm{CoC} \) の無矛盾性を導きます。証明は普通の集合論で行われているように見えるので \( \mathrm{ZFC} \vdash \mathrm{Con} ( \mathrm{CoC} ) \) だということだと思います。ならば、下側から無矛盾性の強さを測る文献を探したのですが全く見つけられませんでした。ただし、特筆すべきこととして CoC は System F<sub>ω</sub> と無矛盾性が等しいです。
 
-\( \mathrm{pCIC} \) の無矛盾性の強さはどうでしょうか。
+\( \mathrm{CIC} \) の無矛盾性の強さはどうでしょうか。
 
 https://mathoverflow.net/questions/69229/proof-strength-of-calculus-of-inductive-constructions の Neel Krishnaswami による答えは \( \mathrm{CIC} \) が \( \mathrm{ZFC} + \textrm{&ldquo;There are countably many inaccessible cardinals&rdquo;} \) と equi-interpretable だとしています。
 
-https://coq.discourse.group/t/proof-on-normalization-of-cic-and-its-consistency/444 には \( \mathrm{CIC} \) の無矛盾性の強さは \( \mathrm{ZFC} + \textrm{&ldquo;There are countably many inaccessible cardinals&rdquo;} \) が上限であると書いてあります。
+https://coq.discourse.group/t/proof-on-normalization-of-cic-and-its-consistency/444 には \( \mathrm{CIC} \) の無矛盾性の強さは \( \mathrm{ZFC} + \textrm{&ldquo;There are countably many inaccessible cardinals&rdquo;} \) が上限であると書いてあります。これは
 
 どちらも Sets in Types, Types in Sets を根拠としているようですが、この状況はいささか不気味です。後者が正しいのであれば私は誤った情報を広げていたことになるので、がっくりします。
 
@@ -20,4 +20,4 @@ https://coq.discourse.group/t/proof-on-normalization-of-cic-and-its-consistency/
 
 == 余談 ==
 
-‪ローダー数は超越整数との比較が知られていないそうです。ですが、少なくとも CoC の無矛盾性の強さは ZFC 以下なので、ローダー数よりも超越整数の方が大きそうです。まだ CoC と ZFC の無矛盾性が等しい可能性は残されていますし、私が定義をきちんと理解していないので、確実なことは言えないのですが。
+‪ローダー数は超越整数との比較が知られていないそうです。ですが、少なくとも CoC の無矛盾性の強さは ZFC よりも小さいのでローダー数よりも超越整数の方が大きそうです。私が定義をきちんと理解していないので、確実なことは言えないのですが。
