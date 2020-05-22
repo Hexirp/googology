@@ -1,0 +1,12 @@
+いつか使えそうな出典付きの事実を箇条書きで集めただけです。
+
+== 本体 ==
+
+* 今までに証明論的順序数の計算が行われた理論の中では \( \textrm{\( \Delta _ 2 ^ 1 \)-CA} + \textrm{BI} \) が最も強い。これは Jäger と Pohlers が "Eine beweistheoretische Untersuchung von \( ( \textrm{\( \Delta _ 2 ^ 1 \)-CA} ) + ( \textrm{BI} ) \) und verwandter Systeme で行ったものである。<ref>Rathjen 1990, pp. 1.</ref>
+
+== 参考文献 ==
+
+# Rathjen 1990
+#* Michael Rathjen, "Ordinal notations based on a weakly Mahlo cardinal", Archive for Mathematical Logic, vol. 29 (1990), pp. 249-263.
+#* Rathjen, M. Ordinal notations based on a weakly Mahlo cardinal. Arch Math Logic 29, 249–263 (1990). doi:[https://doi.org/10.1007/BF01651328 10.1007/BF01651328].
+#* Rathjen, Michael. [https://www1.maths.leeds.ac.uk/~rathjen/Ord_Notation_Weakly_Mahlo.pdf Ordinal notations based on a weakly Mahlo cardinal] (PDF). Rathjen's Personal Home Page. Retrieved 2020-05-22. There is [https://web.archive.org/web/20190415131723/https://www1.maths.leeds.ac.uk/~rathjen/Ord_Notation_Weakly_Mahlo.pdf an archive] at Mon, 15 Apr 2019 13:17:23 GMT.
