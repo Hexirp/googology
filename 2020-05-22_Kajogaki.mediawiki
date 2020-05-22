@@ -12,7 +12,7 @@
 * 私たちは \( \alpha < \mathrm{M} ^ \Gamma \) に対して関数 \( \chi _ \alpha : \mathrm{M} \rightarrow \mathrm{M} \) を \( \alpha \) についての超限再帰により定義する。<ref>Rathjen 1990, p. 4, 3. The functions χ<sub>α</sub>.</ref>
 * 全ての \( \alpha < \Gamma _ 0 \) と \( \beta < \mathrm{M} \) に対して \( I _ \alpha ( \beta ) = \chi _ \alpha ( \beta ) \) である。<ref>Rathjen 1990, p. 8, 4.2. Corollary.</ref>
 * 私たちは \( \chi _ \alpha ( \beta ) \) の形に書ける全ての正則基数 \( \kappa \) に対して順序数関数 \( \psi _ \kappa : \mathrm{M} ^ \Gamma \rightarrow \kappa \) を定義する。<ref>Rathjen 1990, p. 8, 5. The functions ψ<sub>α</sub>.</ref>
-* \( \gamma \in \mathrm{T} ( \mathrm{M} ) \) ならば \( \gamma \in C _ \kappa ( \xi ) \) であることと \( \mathrm{K} _ \kappa ( \gamma ) < \xi \) であることは同値である。<ref>Rathjen 1990, p. 12, 7. A Primitive Reeursive Notation System.</ref>
+* \( \gamma \in \mathrm{T} ( \mathrm{M} ) \) ならば \( \gamma \in C _ \kappa ( \xi ) \) であることと \( \mathrm{K} _ \kappa ( \gamma ) < \xi \) であることは同値である。<ref>Rathjen 1990, p. 12, 7.2. Lemma.</ref>
 
 == 注釈 ==
 
