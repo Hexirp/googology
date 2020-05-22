@@ -4,6 +4,10 @@
 
 * 今までに証明論的順序数の計算が行われた理論の中では \( \textrm{\( \Delta _ 2 ^ 1 \)-CA} + \textrm{BI} \) が最も強い。これは Jäger と Pohlers が "Eine beweistheoretische Untersuchung von \( ( \textrm{\( \Delta _ 2 ^ 1 \)-CA} ) + ( \textrm{BI} ) \) und verwandter Systeme で行ったものである。<ref>Rathjen 1990, pp. 1.</ref>
 
+== 出典 ==
+
+<references />
+
 == 参考文献 ==
 
 # Rathjen 1990
