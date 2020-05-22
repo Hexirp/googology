@@ -2,7 +2,21 @@
 
 == 本体 ==
 
-* 今までに証明論的順序数の計算が行われた理論の中では \( \textrm{\( \Delta _ 2 ^ 1 \)-CA} + \textrm{BI} \) が最も強い。これは Jäger と Pohlers が "Eine beweistheoretische Untersuchung von \( ( \textrm{\( \Delta _ 2 ^ 1 \)-CA} ) + ( \textrm{BI} ) \) und verwandter Systeme で行ったものである。<ref>Rathjen 1990, pp. 1.</ref>
+* 今までに証明論的順序数の計算が行われた理論の中では \( \textrm{\( \Delta _ 2 ^ 1 \)-CA} + \textrm{BI} \) が最も強い。これは Jäger と Pohlers が "Eine beweistheoretische Untersuchung von \( ( \textrm{\( \Delta _ 2 ^ 1 \)-CA} ) + ( \textrm{BI} ) \) und verwandter Systeme" で行ったものである。<ref>Rathjen 1990, p. 1, Introduction.</ref>
+* "A new system of proof-theoretic ordinal functions" では Buchholz が彼の ψ-関数を発明した。<ref>Rathjen 1990, p. 1, Introduction.</ref>
+* Buchholz と Schütte による "Ein Ordinalzahlensystem für die beweistheoretische Abgrenzung der \( \Pi _ 2 ^ 1 \)-Separation und Bar-Induktion" では関数群 \( \psi _ \kappa \) を与えた。ここで \( \kappa \) は \( \omega \) 以上で \( I _ 0 \) 以下の正則基数を渡る。ここで \( I _ 0 \) は最初の弱到達不能基数である。<ref>Rathjen 1990, p. 1, Introduction.</ref>
+* Jäger は上記の階層を \( \kappa < \Lambda _ 0 \) までの崩壊関数群 \( \psi _ \kappa \) を得るために拡張した。 ここで \( \Lambda _ 0 \) は、全ての \( \varrho < \mu \) に対して \( \varrho \)-到達不能である最小の基数 \( \mu \) である<ref group="注釈">すなわち最小の hyper-到達不能基数である。</ref>。<ref>Rathjen 1990, p. 1, Introduction.</ref>
+* ψ-関数は Θ-関数と強く関係している。<ref>Rathjen 1990, p. 1, Introduction.</ref>
+* Pohlers の " Ordinal notations based on a hierarchy of inaccessible cardinals" はを二重に添え字付けられた階層 \( \lambda \beta \ldotp \Theta ( \varrho, \alpha, \beta ) \) を定義することによって Θ-関数階層を拡張した。これはまた \( \varrho \)-到達不能基数をベースにしている。<ref>Rathjen 1990, p. 1, Introduction.</ref>
+* Schütte は Jäger の表記システムを "Eine Erweiterung \( T ( V' ) \) des Ordinalzahlensystems \( C _ \Omega ( \Lambda _ 0 ) \) von G. Jäger" で拡張している。<ref>Rathjen 1990, p. 1, Introduction.</ref>
+* 私たちは \( \alpha < \mathrm{M} ^ \Gamma \) に対して関数 \( \chi _ \alpha : \mathrm{M} \rightarrow \mathrm{M} \) を \( \alpha \) についての超限再帰により定義する。<ref>Rathjen 1990, p. 4, 3. The functions χ<sub>α</sub>.</ref>
+* 全ての \( \alpha < \Gamma _ 0 \) と \( \beta < \mathrm{M} \) に対して \( I _ \alpha ( \beta ) = \chi _ \alpha ( \beta ) \) である。<ref>Rathjen 1990, p. 8, 4.2. Corollary.</ref>
+* 私たちは \( \chi _ \alpha ( \beta ) \) の形に書ける全ての正則基数 \( \kappa \) に対して順序数関数 \( \psi _ \kappa : \mathrm{M} ^ \Gamma \rightarrow \kappa \) を定義する。<ref>Rathjen 1990, p. 8, 5. The functions ψ<sub>α</sub>.</ref>
+* \( \gamma \in \mathrm{T} ( \mathrm{M} ) \) ならば \( \gamma \in C _ \kappa ( \xi ) \) であることと \( \mathrm{K} _ \kappa ( \gamma ) < \xi \) であることは同値である。<ref>Rathjen 1990, p. 12, 7. A Primitive Reeursive Notation System.</ref>
+
+== 注釈 ==
+
+<references group="注釈" />
 
 == 出典 ==
 
