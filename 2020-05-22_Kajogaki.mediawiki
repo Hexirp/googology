@@ -24,7 +24,13 @@
 
 == 参考文献 ==
 
+# Buchholz 1986
+#* Wilfried Buchholz, "A new system of proof-theoretic ordinal functions", Annals of Pure and Applied Logic, vol. 32 (1986), pp. 195-207. doi:[https://doi.org/10.1016/0168-0072(86)90052-7 10.1016/0168-0072(86)90052-7].
+#* Buchholz, Wilfried. [https://www.sciencedirect.com/science/article/pii/0168007286900527 A new system of proof-theoretic ordinal functions - ScienceDirect]. ScienceDirect. Retrieved 2020-05-22.
 # Rathjen 1990
 #* Michael Rathjen, "Ordinal notations based on a weakly Mahlo cardinal", Archive for Mathematical Logic, vol. 29 (1990), pp. 249-263.
 #* Rathjen, M. Ordinal notations based on a weakly Mahlo cardinal. Arch Math Logic 29, 249–263 (1990). doi:[https://doi.org/10.1007/BF01651328 10.1007/BF01651328].
 #* Rathjen, Michael. [https://www1.maths.leeds.ac.uk/~rathjen/Ord_Notation_Weakly_Mahlo.pdf Ordinal notations based on a weakly Mahlo cardinal] (PDF). Rathjen's Personal Home Page. Retrieved 2020-05-22. There is [https://web.archive.org/web/20190415131723/https://www1.maths.leeds.ac.uk/~rathjen/Ord_Notation_Weakly_Mahlo.pdf an archive] at Mon, 15 Apr 2019 13:17:23 GMT.
+# Schütte 1988
+#* Kurt Schütte, "Eine Erweiterung T(V′) des Ordinalzahlensystems C<sub>Ω</sub>(Λ<sub>0</sub>) von G. Jäger", Archive for Mathematical Logic, vol. 27 (1988), pp. 85–99. doi:[https://doi.org/10.1007/BF01625837 10.1007/BF01625837].
+#* Schütte, K. Eine ErweiterungT(V′) des Ordinalzahlensystems 58-0158-0158-01(Λ0) von G. Jäger. Arch Math Logic 27, 85–99 (1988). doi:[https://doi.org/10.1007/BF01625837 10.1007/BF01625837].
