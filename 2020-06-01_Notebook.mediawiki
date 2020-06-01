@@ -14,3 +14,7 @@ Wikia あるいは Fandom で MathJax を使うことについて。
 この定理は \( \Bool \) から \( \exists f : T \funt T \ldotp \forall x : T \ldotp f ( x ) = x \funt \mathrm{Void} \) が成り立つ型 \( T \) へと一般化できる。ここで面白いのは \( T \) として \( \mathrm{Void} \) も取れることである。
 
 この定理は左逆射の存在を使用しているが、これを単射であることに置き換えると証明ができなくなる。単射から左逆射の存在を示すためには \( \mathrm{dec} ( A ) \) と \( \mathrm{dec} ( B ) \) と \( \forall y : B \ldotp \mathrm{dec} ( \exists x : A \ldotp f ( x ) = y ) \) が必要である。
+
+----
+
+左逆射を持つ単射のことを分裂単射 (split monomorphism) という。実際には左逆射を持てば単射であるので、左逆射を持つ射と単純化できる。なお、分裂単射は日本語版ウィキペディアの [https://ja.wikipedia.org/w/index.php?title=%E5%B0%84_(%E5%9C%8F%E8%AB%96)&oldid=50769783 50769783] 版から広まった訳ではないかと疑ったが、ベーシック圏論には分裂モノ (split monic) という訳があり、これが圏論においての monomorphism をモノ射と呼ばず単射と呼ぶ流儀と組み合わさったものだと考えれば受け入れることができる。さらに 2012 年の橋本光靖の『圏と関手入門』では「分裂単射」の語が先駆けて使われている。
