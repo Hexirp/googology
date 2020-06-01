@@ -1,0 +1,6 @@
+Wikia あるいは Fandom で MathJax を使うことについて。
+
+* https://www.mathjax.org/#gettingstarted
+* https://dev.fandom.com/wiki/Thread:6025
+* https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Aycabta/MathJax_Task
+* https://math.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Limitofempty/MathJax%E3%81%AE%E4%BD%BF%E7%94%A8
