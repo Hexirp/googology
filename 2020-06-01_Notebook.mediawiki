@@ -4,3 +4,13 @@ Wikia あるいは Fandom で MathJax を使うことについて。
 * https://dev.fandom.com/wiki/Thread:6025
 * https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Aycabta/MathJax_Task
 * https://math.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Limitofempty/MathJax%E3%81%AE%E4%BD%BF%E7%94%A8
+
+----
+
+\[ \newcommand{\ordinarycolon}{:} \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}} \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=} \newcommand{\funt}{\rightarrow} \newcommand{\Type}{\mathrm{Type}} \newcommand{\Bool}{\mathrm{Bool}} \forall A : \Type \ldotp \forall ( f : ( A \funt \Bool ) \funt A ) ( g : A \funt ( A \funt \Bool ) ) \ldotp ( \forall x : A \funt \Bool \ldotp g ( f ( x ) ) = x ) \funt \mathrm{Void} \]
+
+'''証明）'''まず、対角線を走る関数 \( d \coloneqq \lambda x : A \ldotp \mathrm{not} ( g ( x ) ( x ) ) \) を定義する。これを仮定に与えて \( g ( f ( d ) ) = d \) とする。さらに \( \lambda x : A \ldotp g ( f ( d ) ) ( x ) = d ( x ) \) として \( g ( f ( d ) ) ( f ( d ) ) = d ( f ( d ) ) \) とする。矛盾。
+
+この定理は \( \Bool \) から \( \exists f : T \funt T \ldotp \forall x : T \ldotp f ( x ) = x \funt \mathrm{Void} \) が成り立つ型 \( T \) へと一般化できる。ここで面白いのは \( T \) として \( \mathrm{Void} \) も取れることである。
+
+この定理は左逆射の存在を使用しているが、これを単射であることに置き換えると証明ができなくなる。単射から左逆射の存在を示すためには \( \mathrm{dec} ( A ) \) と \( \mathrm{dec} ( B ) \) と \( \forall y : B \ldotp \mathrm{dec} ( \exists x : A \ldotp f ( x ) = y ) \) が必要である。
