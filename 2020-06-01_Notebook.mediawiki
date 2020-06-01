@@ -5,6 +5,8 @@ Wikia あるいは Fandom で MathJax を使うことについて。
 * https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Aycabta/MathJax_Task
 * https://math.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Limitofempty/MathJax%E3%81%AE%E4%BD%BF%E7%94%A8
 
+とりあえず MediaWiki:Common.js を編集すればよい感じ。
+
 ----
 
 \[ \newcommand{\ordinarycolon}{:} \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}} \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=} \newcommand{\funt}{\rightarrow} \newcommand{\Type}{\mathrm{Type}} \newcommand{\Bool}{\mathrm{Bool}} \forall A : \Type \ldotp \forall ( f : ( A \funt \Bool ) \funt A ) ( g : A \funt ( A \funt \Bool ) ) \ldotp ( \forall x : A \funt \Bool \ldotp g ( f ( x ) ) = x ) \funt \mathrm{Void} \]
