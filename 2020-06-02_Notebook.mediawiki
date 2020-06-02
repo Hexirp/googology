@@ -1,0 +1,26 @@
+Coq における余帰納型を帰納型へ変換する方法について考察する。
+
+<pre>
+CoInductive Stream@{i} (A : Type@{i}) : Type@{i}.
+  Destructor head : Stream A -> A.
+  Destructor tail : Stream A -> Stream A.
+End Stream.
+</pre>
+
+これが通常の Stream となる。
+
+<pre>
+Inductive StreamSpine@{i} : Type@{i}.
+  Constructor zeroStreamSp : StreamSpine.
+  Constructor succStreamSp : StreamSpine.
+End StreamSpine.
+
+Inductive StreamBody@{i I’} (A : Type@{i’}) : StreamSpine@{i} -> Type@{i’}.
+  Constructor thankStream : StreamBody zeroStreamSp.
+  Constructor makeStream : pi sp, A -> StreamBody A sp -> StreamBody A (succStreamSp sp).
+End StreamBody.
+
+Definition Stream@{i i’} (A : Type@{i’}) Type@{i’} := sigma (f : pi (sp : StreamSpine), StreamBody A sp), Prod (thankStream = f zeroStreamSp) (pi (sp : StreamSpine), sigma (x : A), makeStream sp x (f sp) = f (succStreamSp sp))
+</pre>
+
+これが帰納型に変換された Stream である。
