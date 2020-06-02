@@ -15,12 +15,12 @@ Inductive StreamSpine@{i} : Type@{i}.
   Constructor succStreamSp : StreamSpine.
 End StreamSpine.
 
-Inductive StreamBody@{i I’} (A : Type@{i’}) : StreamSpine@{i} -> Type@{i’}.
+Inductive StreamBody@{i i'} (A : Type@{i'}) : StreamSpine@{i} -> Type@{i'}.
   Constructor thankStream : StreamBody zeroStreamSp.
   Constructor makeStream : pi sp, A -> StreamBody A sp -> StreamBody A (succStreamSp sp).
 End StreamBody.
 
-Definition Stream@{i i’} (A : Type@{i’}) Type@{i’} := sigma (f : pi (sp : StreamSpine), StreamBody A sp), Prod (thankStream = f zeroStreamSp) (pi (sp : StreamSpine), sigma (x : A), makeStream sp x (f sp) = f (succStreamSp sp))
+Definition Stream@{i i'} (A : Type@{i'}) Type@{i'} := sigma (f : pi (sp : StreamSpine), StreamBody A sp), Prod (thankStream = f zeroStreamSp) (pi (sp : StreamSpine), sigma (x : A), makeStream sp x (f sp) = f (succStreamSp sp))
 </pre>
 
 これが帰納型に変換された Stream である。
