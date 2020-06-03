@@ -1,0 +1,19 @@
+3 ページ目。 I 部、第 1 章、 1.1 「入門編」の準備、集合の記法。
+
+0 個の交わりは全ての集合の真クラスである。
+
+\( \newcommand{\ordinarycolon}{:} \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}} \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=} \prescript{b}{}{a} \coloneqq \{ f : f : a \rightarrow b \} \) と書いている。初めてこういう記法を見た。
+
+単射であるのは \( \forall x y \ldotp f ( x ) = f ( y ) \rightarrow x = y \) で前者であるのは \( \forall y \ldotp \exists x \ldotp f ( x ) = y \) であるということ。原語は injection と surjection であり、 monomorphism と epimorphism との混同に注意しないと。
+
+4 ページ目。 I 部、第 1 章、 1.1 「入門編」の準備、集合の記法。
+
+集合族 \( \{ x _ i \} _ { i \in I } \) の直和 (direct sum) \( \sum_{ i \in I } x _ i \) は以下のようになる。
+
+\[ \sum_{ i \in I } x _ i \coloneqq \{ \langle i, u \rangle : i \in I \land u \in x _ i \} \]
+
+直積は以下のようになる。
+
+\[ \prod_{ i \in I } x _ i \coloneqq \{ f : f : I \rightarrow \bigcup_{ i \in I } x _ i \land \forall i \in I \ldotp f ( i ) \in x _ i \} \]
+
+直和型とか直積型に慣れていると分かりにくい……
