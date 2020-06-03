@@ -2,7 +2,7 @@
 
 0 個の交わりは全ての集合の真クラスである。
 
-\( \newcommand{\ordinarycolon}{:} \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}} \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=} \prescript{b}{}{a} \coloneqq \{ f : f : a \rightarrow b \} \) と書いている。初めてこういう記法を見た。
+\( \newcommand{\ordinarycolon}{:} \newcommand{\vcentcolon}{\mathrel{\mathop\ordinarycolon}} \newcommand{\coloneqq}{\vcentcolon\mathrel{\mkern-1.2mu}=} {}^b a \coloneqq \{ f : f : a \rightarrow b \} \) と書いている。初めてこういう記法を見た。
 
 単射であるのは \( \forall x y \ldotp f ( x ) = f ( y ) \rightarrow x = y \) で前者であるのは \( \forall y \ldotp \exists x \ldotp f ( x ) = y \) であるということ。原語は injection と surjection であり、 monomorphism と epimorphism との混同に注意しないと。
 
