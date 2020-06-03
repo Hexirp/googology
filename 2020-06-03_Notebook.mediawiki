@@ -14,6 +14,6 @@
 
 直積は以下のようになる。
 
-\[ \prod_{ i \in I } x _ i \coloneqq \{ f : f : I \rightarrow \bigcup_{ i \in I } x _ i \land \forall i \in I \ldotp f ( i ) \in x _ i \} \]
+\[ \prod_{ i \in I } x _ i \coloneqq \Big\{ f : f : I \rightarrow \bigcup_{ i \in I } x _ i \land \forall i \in I \ldotp f ( i ) \in x _ i \Big\} \]
 
 直和型とか直積型に慣れていると分かりにくい……
