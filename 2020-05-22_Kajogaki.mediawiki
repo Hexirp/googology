@@ -3,6 +3,7 @@
 == 本体 ==
 
 * 今までに証明論的順序数の計算が行われた理論の中では \( \textrm{\( \Delta _ 2 ^ 1 \)-CA} + \textrm{BI} \) が最も強い。これは Jäger と Pohlers が "Eine beweistheoretische Untersuchung von \( ( \textrm{\( \Delta _ 2 ^ 1 \)-CA} ) + ( \textrm{BI} ) \) und verwandter Systeme" で行ったものである。<ref>Rathjen 1990, p. 1, Introduction.</ref>
+** 1989 年に新井敏康が \( \mathrm{KPM} \) の順序数解析を未出版で行っているらしい。<ref>https://twitter.com/AlweLogic/status/1266382121158840320</ref>
 * "A new system of proof-theoretic ordinal functions" では Buchholz が彼の ψ-関数を発明した。<ref>Rathjen 1990, p. 1, Introduction.</ref>
 * Buchholz と Schütte による "Ein Ordinalzahlensystem für die beweistheoretische Abgrenzung der \( \Pi _ 2 ^ 1 \)-Separation und Bar-Induktion" では関数群 \( \psi _ \kappa \) を与えた。ここで \( \kappa \) は \( \omega \) 以上で \( I _ 0 \) 以下の正則基数を渡る。ここで \( I _ 0 \) は最初の弱到達不能基数である。<ref>Rathjen 1990, p. 1, Introduction.</ref>
 * Jäger は上記の階層を \( \kappa < \Lambda _ 0 \) までの崩壊関数群 \( \psi _ \kappa \) を得るために拡張した。 ここで \( \Lambda _ 0 \) は、全ての \( \varrho < \mu \) に対して \( \varrho \)-到達不能である最小の基数 \( \mu \) である<ref group="注釈">すなわち最小の hyper-到達不能基数である。</ref>。<ref>Rathjen 1990, p. 1, Introduction.</ref>
