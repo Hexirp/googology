@@ -1,0 +1,12 @@
+出典のテンプレートを作成するために。
+
+* https://ja.wikipedia.org/wiki/Template:Sfn
+* https://ja.wikipedia.org/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB:Footnotes
+* https://ja.wikipedia.org/wiki/Wikipedia:Lua
+* https://ja.wikipedia.org/wiki/Template:%E7%BD%B2%E5%90%8D%E5%BF%98%E3%82%8C
+* https://ja.wikipedia.org/wiki/Help:%E3%83%9E%E3%82%B8%E3%83%83%E3%82%AF%E3%83%AF%E3%83%BC%E3%83%89
+* https://ja.wikipedia.org/wiki/Help:%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88
+* https://en.wikipedia.org/wiki/Template:Safesubst
+* https://ja.wikipedia.org/wiki/Template:User
+* https://en.wikipedia.org/wiki/Help:Template
+* https://ja.wikipedia.org/wiki/Help:%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88#%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E5%86%85%E5%AE%B9%E3%81%A7%E7%BD%AE%E3%81%8D%E6%8F%9B%E3%81%88%E3%82%8B
