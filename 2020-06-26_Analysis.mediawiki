@@ -36,12 +36,16 @@ main(){
 
 <math display="block"> f ( x ) = x \times 2 ^ { 9 x } </math>
 
-上記のように関数 <math> f </math> を定義する。
+上記のように関数 <math> f </math> を定義する。 <math> f </math> は狭義単調な関数同士の積であるため狭義単調である。
 
 <code>A</code> は <math> x \mapsto f ^ { 10 } ( x ) </math> に等しく、 <code>B</code> は <math> x \mapsto f ^ { { 10 } ^ 2 } ( x ) </math> である。さらに、 <code>C</code> は <math> x \mapsto f ^ { { 10 } ^ 3 } ( x ) </math> と続き、最終的に <code>Y</code> は <math> x \mapsto f ^ { { 10 } ^ { 25 } } ( x ) </math> である。
 
 <code>output-2.c</code> が計算する値は <math> f ^ { { 10 } ^ { 25 } } ( 1 ) </math> である。
 
-また、 <math> f </math> は単調である。
+=== 近似 ===
+
+……。
 
 == 結果 ==
+
+……
