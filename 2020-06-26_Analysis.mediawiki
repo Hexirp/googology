@@ -32,6 +32,16 @@ main(){
 
 <code>a<<=9;</code> が一つ実行されるたびに <code>a</code> の値は <math> 2 ^ 9 </math> 倍になる。たとえば、上記のプログラムが表示する値は <math> 512 </math> になる。
 
-<code>A</code> は <code>a<<=9;</code> を <code>b</code> 回実行する。ここで <code>b</code> はループを開始した時の <code>a</code> に等しい。すなわち、 <code>a</code> が指す値が <math> x </math> であるとき、 <code>A</code> を実行し終えた時の <code>a</code> の値は（オーバーフローがなければ） <math> x \times { ( 2 ^ 9 ) } ^ x </math> である。すなわち、 <math> x \times 2 ^ { 9 x } </math> である。
+<code>A</code> は <code>a<<=9;</code> を <code>b</code> 回実行する。ここで <code>b</code> はループを開始した時の <code>a</code> に等しい。すなわち、 <code>a</code> が指す値が <math> x </math> であるとき、 <code>A</code> を実行し終えた時の <code>a</code> の値は（オーバーフローがなければ） <math> x \times { ( 2 ^ 9 ) } ^ x </math> である。すなわち、 <math> x \times 2 ^ { 9 x } </math> である。これは上記のプログラムの結果と一致している。
+
+<math display="block"> f ( x ) = x \times 2 ^ { 9 x } </math>
+
+上記のように関数 <math> f </math> を定義する。
+
+<code>A</code> は <math> x \mapsto f ^ { 10 } ( x ) </math> に等しく、 <code>B</code> は <math> x \mapsto f ^ { { 10 } ^ 2 } ( x ) </math> である。さらに、 <code>C</code> は <math> x \mapsto f ^ { { 10 } ^ 3 } ( x ) </math> と続き、最終的に <code>Y</code> は <math> x \mapsto f ^ { { 10 } ^ { 25 } } ( x ) </math> である。
+
+<code>output-2.c</code> が計算する値は <math> f ^ { { 10 } ^ { 25 } } ( 1 ) </math> である。
+
+また、 <math> f </math> は単調である。
 
 == 結果 ==
