@@ -10,10 +10,12 @@
 ** 大丈夫。
 * スペースとタブが混在しているが大丈夫か？
 ** 大丈夫。
-* <code><nowiki>#include <stdio.h><nowiki></code> がないが大丈夫か？
+* <code><nowiki>#include <stdio.h></nowiki></code> がないが大丈夫か？
 ** 大丈夫。
 * チェックには何を使った？
 ** [https://repl.it/languages/c Repl.it] 。
+* 数値をそのまま外に返しているけど大丈夫？
+** このくらいなら認める。
 
 値を求める。
 
@@ -38,13 +40,15 @@ main(){
 
 上記のように関数 <math> f </math> を定義する。 <math> f </math> は狭義単調な関数同士の積であるため狭義単調である。
 
-<code>A</code> は <math> x \mapsto f ^ { 10 } ( x ) </math> に等しく、 <code>B</code> は <math> x \mapsto f ^ { { 10 } ^ 2 } ( x ) </math> である。さらに、 <code>C</code> は <math> x \mapsto f ^ { { 10 } ^ 3 } ( x ) </math> と続き、最終的に <code>Y</code> は <math> x \mapsto f ^ { { 10 } ^ { 25 } } ( x ) </math> である。
+<math> { ( f ^ a ) } ^ b ( x ) = f ^ { a b } ( x ) </math> である。これより、まず <code>B</code> は <math> x \mapsto f ^ { 10 } ( x ) </math> に等しく、 <code>C</code> は <math> x \mapsto f ^ { { 10 } ^ 2 } ( x ) </math> である。さらに、 <code>D</code> は <math> x \mapsto f ^ { { 10 } ^ 3 } ( x ) </math> と続き、最終的に <code>Y</code> は <math> x \mapsto f ^ { { 10 } ^ { 26 } } ( x ) </math> である。
 
-<code>output-2.c</code> が計算する値は <math> f ^ { { 10 } ^ { 25 } } ( 1 ) </math> である。
+<code>output-2.c</code> が計算する値は <math> f ^ { { 10 } ^ { 26 } } ( 1 ) </math> である。
 
 === 近似 ===
 
-……。
+関数を見るとテトレーションレベルであると目途が付く。
+
+最初に 2 を底とするテトレーションで極めて大雑把な近似を行うことを試みる。
 
 == 結果 ==
 
