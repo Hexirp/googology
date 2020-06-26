@@ -70,7 +70,7 @@ main(){
 次に、 \( x = n \) である場合に式が正しいと仮定した上で \( x = n + 1 \) であるときを考える。
 {{User:Hexirp/tcl}}
 
-この式は [https://www.wolframalpha.com/input/?i=2%5E%282%5Ex%29%3Dx*2%5E%286x%29&lang=ja Wolfram Alpha の結果]を参考にして立てた。また、両辺の対数を取るとより厳密な値を計算してくれる（[https://www.wolframalpha.com/input/?i=2%5Ex%3Dlog_2%28x*2%5E%286x%29%29&lang=ja 結果]）。
+この式は [https://www.wolframalpha.com/input/?i=2%5E%282%5Ex%29%3Dx*2%5E%289x%29&lang=ja Wolfram Alpha の結果]を参考にして立てた。また、両辺の対数を取るとより厳密な値を計算してくれる（[https://www.wolframalpha.com/input/?i=2%5Ex%3Dlog_2%28x*2%5E%289x%29%29&lang=ja 結果]）。
 
 == 結果 ==
 
