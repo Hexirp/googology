@@ -40,9 +40,9 @@ main(){
 
 上記のように関数 \( f \) を定義する。 \( f \) は狭義単調な関数同士の積であるため狭義単調である。
 
-\( { ( f ^ a ) } ^ b ( x ) = f ^ { a b } ( x ) \) である。これより、まず <code>B</code> は \( x \mapsto f ^ { 10 } ( x ) \) に等しく、 <code>C</code> は \( x \mapsto f ^ { { 10 } ^ 2 } ( x ) \) である。さらに、 <code>D</code> は \( x \mapsto f ^ { { 10 } ^ 3 } ( x ) \) と続き、最終的に <code>Y</code> は \( x \mapsto f ^ { { 10 } ^ { 26 } } ( x ) \) である。
+\( { ( f ^ a ) } ^ b ( x ) = f ^ { a b } ( x ) \) である。これより、まず <code>B</code> は \( x \mapsto f ^ { 10 } ( x ) \) に等しく、 <code>C</code> は \( x \mapsto f ^ { { 10 } ^ 2 } ( x ) \) である。さらに、 <code>D</code> は \( x \mapsto f ^ { { 10 } ^ 3 } ( x ) \) と続き、最終的に <code>Y</code> は \( x \mapsto f ^ { { 10 } ^ { 25 } } ( x ) \) である。
 
-<code>output-2.c</code> が計算する値は \( f ^ { { 10 } ^ { 26 } } ( 1 ) \) である。
+<code>output-2.c</code> が計算する値は \( f ^ { { 10 } ^ { 25 } } ( 1 ) \) である。
 
 === 近似 ===
 
@@ -54,24 +54,20 @@ main(){
 
 上記のような関数を導入する。これは指数のタワーを使いやすく表記するものである。
 
-\[ 1 \le x \Longrightarrow 2 ^ x \le f ( x ) = x \times 2 ^ { 6 x } \tag{1} \]
+\[ 1 \le x \Longrightarrow 2 ^ x \le f ( x ) = x \times 2 ^ { 9 x } \tag{1} \]
 
-'''証明）'''まず、 \( 1 \le x \rightarrow 2 ^ { 6 x } \le x \times 2 ^ { 6 x } \) である。次に、 \( 0 \le x \rightarrow x \le 6 x \) であるから \( 0 \le x \rightarrow 2 ^ x \le 2 ^ { 6 x } \) である。この二つを合わせて \( 1 \le x \rightarrow 2 ^ x \le x \times 2 ^ { 6 x } \) である。
+'''証明）'''まず、 \( 1 \le x \rightarrow 2 ^ { 9 x } \le x \times 2 ^ { 9 x } \) である。次に、 \( 0 \le x \rightarrow x \le 9 x \) であるから \( 0 \le x \rightarrow 2 ^ x \le 2 ^ { 9 x } \) である。この二つを合わせて \( 1 \le x \rightarrow 2 ^ x \le x \times 2 ^ { 9 x } \) である。
 
-\[ 6 \le x \Longrightarrow f ( x ) = x \times 2 ^ { 6 x } \le 2 ^ { 2 ^ x } \tag{2} \]
+\[ 6 \le x \Longrightarrow f ( x ) = x \times 2 ^ { 9 x } \le 2 ^ { 2 ^ x } \tag{2} \]
 
 {{User:Hexirp/tcu}}
 '''証明）'''
 {{User:Hexirp/tcm}}
 ここは数学的帰納法を使う。
 
-まず、 \( x = 6 \) である時を考える。すると、左辺は \( 6 \times 2 ^ { 6 \times 6 } = 6 \times 2 ^ { 36 } \le 8 \times 2 ^ { 36 } = 2 ^ { 39 } \) と概算できる。右辺は \( 2 ^ { 2 ^ 6 } = 2 ^ { 64 } \) である。ゆえに、 \( 6 \times 2 ^ { 6 \times 6 } \le 2 ^ { 2 ^ 6 } \) である。
+まず、 \( x = 6 \) である時を考える。すると、左辺は \( 6 \times 2 ^ { 9 \times 6 } = 6 \times 2 ^ { 54 } \le 8 \times 2 ^ { 54 } = 2 ^ { 57 } \) と概算できる。右辺は \( 2 ^ { 2 ^ 6 } = 2 ^ { 64 } \) である。ゆえに、 \( 6 \times 2 ^ { 6 \times 6 } \le 2 ^ { 2 ^ 6 } \) である。
 
-次に、 \( x = n \) である場合に式が正しいと仮定した上で \( x = n + 1 \) であるときを考える。すると、左辺は \( ( n + 1 ) \times 2 ^ { 6 \times ( n + 1 ) } = n \times 2 ^ { 6 n + 6 } + 2 ^ { 6 n + 6 } = 2 ^ 6 ( n \times 2 ^ { 6 n } + 2 ^ { 6 n } ) \) である。ここに仮定を適用して \( 2 ^ 6 ( n \times 2 ^ { 6 n } + 2 ^ { 6 n } ) \le 2 ^ 6 ( 2 ^ { 2 ^ n } + 2 ^ { 6 n } ) \) である。
-
-右辺は \( 2 ^ { 2 ^ { n + 1 } } = 2 ^ { 2 ^ n \times 2 } = 2 ^ { 2 ^ n } \times 2 ^ { 2 ^ n } \) である。ここで仮定を適用して \( 2 ^ { 2 ^ n } \times 2 ^ { 2 ^ n } \ge 2 ^ { 2 ^ n } \times  n \times 2 ^ { 6 n } \) であり、
-
-眠い……。
+次に、 \( x = n \) である場合に式が正しいと仮定した上で \( x = n + 1 \) であるときを考える。
 {{User:Hexirp/tcl}}
 
 この式は [https://www.wolframalpha.com/input/?i=2%5E%282%5Ex%29%3Dx*2%5E%286x%29&lang=ja Wolfram Alpha の結果]を参考にして立てた。また、両辺の対数を取るとより厳密な値を計算してくれる（[https://www.wolframalpha.com/input/?i=2%5Ex%3Dlog_2%28x*2%5E%286x%29%29&lang=ja 結果]）。
