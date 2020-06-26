@@ -1,0 +1,37 @@
+[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Seruranblue/sikigamig_entry?oldid=23186 ユーザーブログ:Seruranblue/sikigamig_entry]を解析する。
+
+== 解析 ==
+
+有効かどうか確かめる。
+
+* <code>main</code> の前に <code>int</code> がないが大丈夫か？
+** 古い C 言語の仕様では、暗黙の <code>int</code> が許されている。現在のコンパイラーでも警告を出すがエラーは出さないものがある。
+* <code>for</code> 文を改行なしで重ねて大丈夫か？
+** 大丈夫。
+* スペースとタブが混在しているが大丈夫か？
+** 大丈夫。
+* <code><nowiki>#include <stdio.h><nowiki></code> がないが大丈夫か？
+** 大丈夫。
+* チェックには何を使った？
+** [https://repl.it/languages/c Repl.it] 。
+
+値を求める。
+
+<pre>
+#include <stdio.h>
+
+#define A for(b=a;b!=0;b--){a<<=9;}
+
+main(){
+    int a=1,b;
+    A
+	printf("%d\n", a);
+  return 0;
+}
+</pre>
+
+<code>a<<=9;</code> が一つ実行されるたびに <code>a</code> の値は <math> 2 ^ 9 </math> 倍になる。たとえば、上記のプログラムが表示する値は <math> 512 </math> になる。
+
+<code>A</code> は <code>a<<=9;</code> を <code>b</code> 回実行する。ここで <code>b</code> はループを開始した時の <code>a</code> に等しい。すなわち、 <code>a</code> が指す値が <math> x </math> であるとき、 <code>A</code> を実行し終えた時の <code>a</code> の値は（オーバーフローがなければ） <math> x \times { ( 2 ^ 9 ) } ^ x </math> である。すなわち、 <math> x \times 2 ^ { 9 x } </math> である。
+
+== 結果 ==
