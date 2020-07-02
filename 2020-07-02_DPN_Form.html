@@ -5,7 +5,7 @@
     <title>DPN Form with JavaScript</title>
     <script type="text/javascript">
       function draw() {
-        var canvas = document.getElementById('tutorial');
+        var canvas = document.getElementById('top');
 
         if (canvas.getContext) {
           var ctx = canvas.getContext('2d');
@@ -19,12 +19,15 @@
       canvas { border: 1px solid black; }
     </style>
   </head>
-  <body onload="draw();">
+  <body>
     <h1>DPN Form with JavaScript</h1>
     <form name="top">
-      <textarea id="input" style="width:500px; height:60px; display:block; overflow:auto; background-color:white; border:darkgray solid 1px;">1,2,4,8,10,8</textarea>
+      <textarea id="input" cols="80" rows="4">1,2,4,8,10,8</textarea>
       <input type="button" value="draw" onclick="javascript:draw();" />
     </form>
-    <canvas id="tutorial" width="150" height="150"></canvas>
+    <p>
+      DPN Form:
+    </p>
+    <canvas id="top" width="400" height="400"></canvas>
   </body>
 </html>
