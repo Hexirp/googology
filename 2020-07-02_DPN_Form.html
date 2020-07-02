@@ -4,6 +4,14 @@
     <meta charset="utf-8" />
     <title>DPN Form with JavaScript</title>
     <script type="text/javascript">
+      function load() {
+        var form = document.forms["top"];
+        var input = form.elements["input"];
+        var itext = input.textContent;
+
+        return itext;
+      }
+
       function draw() {
         var canvas = document.getElementById('top');
 
@@ -12,6 +20,7 @@
 
           ctx.font = "20px sans-serif";
           ctx.fillText("1", 0, 20);
+          ctx.fillText(load(), 0, 40);
         }
       }
     </script>
