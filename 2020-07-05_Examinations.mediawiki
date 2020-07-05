@@ -1,0 +1,50 @@
+式神巨大数の審査が行われている。この記事では、その進みを紹介する。
+
+== 1 ==
+
+2020/06/27 00:19 (JST) に Hexirp 氏により[[ユーザーブログ:Hexirp/(2020-06-26) 解析]]の初版が投稿された。この記事は[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Seruranblue/sikigamig_entry?oldid=23186 ユーザーブログ:Seruranblue/sikigamig entry]で投稿されたプログラム <code>output-2.c</code> で計算される巨大数 "output-2.c" を審査するものである。
+
+\[ \exp _ b ^ n ( a ) = \begin{cases} a & ( n = 0 ) \\ \exp _ b ( \exp _ b ^ { n' } ( a ) ) & ( n = n' + 1 ) \\ \end{cases} \]
+
+この投稿は上記のような関数を導入して解析を行っている。なお、 \( \exp _ b ( a ) = b ^ a \) である。
+
+* \( \exp _ 2 ^ { { 10 } ^ { 24 } } ( 9 ) \) 以上である。
+* \( \exp _ 2 ^ { 2 \times { 10 } ^ { 24 } - 1 } ( 9 ) \) 以下である。
+
+その結果、上記のような結果を得ている。
+
+== 2 ==
+
+2020/07/04 06:13 (JST) に Okkuu 氏により「式神巨大数運営's server」に[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Nayuta_Ito/2020%E5%B9%B4%E5%BC%8F%E7%A5%9E%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%AC%AC%E4%B8%80%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC?oldid=23037 ユーザーブログ:Nayuta Ito/2020年式神巨大数第一エントリー]の審査が投稿された（[https://discordapp.com/channels/710454519086972979/710454519669981257/728720084255768668 発言へのリンク]）。
+
+<pre>
+https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Nayuta_Ito/2020%E5%B9%B4%E5%BC%8F%E7%A5%9E%E5%B7%A8%E5%A4%A7%E6%95%B0%E7%AC%AC%E4%B8%80%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC を解析します
+結果1:有効です
+結果2:停止します
+結果3:大きさはf\_ε\_ε\_ε\_ε\_5(6)で近似されます
+理由:ζ₀未満の順序数をBuchholz ψで表しψ₀(なんか)をψ(なんか)に、ψ₁(なんか)をꇼなんかꇾΩに置換した後ꇼ0ꇾΩをΩに置換するとこの表記と対応するので
+</pre>
+
+それは上記のような内容であった。
+
+== 3 ==
+
+2020/07/04 21:34 (JST) に Okkuu 氏により[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/(2020-06-26)_%E8%A7%A3%E6%9E%90 ユーザーブログ:Hexirp/(2020-06-26) 解析]での近似の改善が投稿された（[https://discordapp.com/channels/710454519086972979/710454519669981257/728951947847139351 発言へのリンク]）。
+
+<pre>
+これ(https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Hexirp/(2020-06-26)_%E8%A7%A3%E6%9E%90 )の近似の細かいバージョンです
+exp^10^24_2(12.173)<f^10^24(1)<exp^10^24_2(12.174)
+解析の投稿はまた今度やります
+</pre>
+
+それは上記のような内容であった。
+
+
+== 4 ==
+
+2020/07/05 07:48 (JST) に Nayuta Ito 氏により[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Nayuta_Ito/output-2.c%E3%81%AE%E6%9B%B4%E3%81%AA%E3%82%8B%E8%A7%A3%E6%9E%90 ユーザーブログ:Nayuta Ito/output-2.cの更なる解析]が投稿された。この記事は[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Seruranblue/sikigamig_entry?oldid=23186 ユーザーブログ:Seruranblue/sikigamig entry]の解析をより詳細におこなうものである。
+
+* \( \exp _ 2 ^ { { 10 } ^ { 24 } } ( 9 ) \) 以上である。
+* \( \exp _ 2 ^ { { 10 } ^ { 24 } + 1 } ( 9 ) \) 以下である。
+
+上記のように結論している。
