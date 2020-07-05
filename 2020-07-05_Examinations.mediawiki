@@ -39,7 +39,6 @@ exp^10^24_2(12.173)<f^10^24(1)<exp^10^24_2(12.174)
 
 それは上記のような内容であった。
 
-
 == 4 ==
 
 2020/07/05 07:48 (JST) に Nayuta Ito 氏により[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Nayuta_Ito/output-2.c%E3%81%AE%E6%9B%B4%E3%81%AA%E3%82%8B%E8%A7%A3%E6%9E%90 ユーザーブログ:Nayuta Ito/output-2.cの更なる解析]が投稿された。この記事は[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Seruranblue/sikigamig_entry?oldid=23186 ユーザーブログ:Seruranblue/sikigamig entry] の解析をより詳細におこなうものである。
