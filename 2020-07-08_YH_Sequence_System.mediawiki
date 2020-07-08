@@ -34,7 +34,7 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
 
 === 定義 ===
 
-[https://docs.google.com/document/d/1dA3V_5ZMfXN-z3X-g-yoJfmoTvKuk3efeaKaBFw8Vhs/edit?usp=sharing ゆきと本人による文書]の2020年7月8日時点における内容は、数列の一部に対してのみ定義を与えるものである<ref name="survey" />。
+[https://docs.google.com/document/d/1dA3V_5ZMfXN-z3X-g-yoJfmoTvKuk3efeaKaBFw8Vhs/edit?usp=sharing ゆきと本人による文書]の2020年7月8日時点における内容は、数列の一部に対してのみ定義を与えるものである<ref name="survey" />。その定義の一部を取り出して私が整えて書き下すと以下のようになる<ref name="assertion" />。
 
 <nowiki>\begin{eqnarray*}
   \mathbf{Y} ( ) [ n ] & = & n \\
@@ -42,8 +42,6 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
   \mathbf{Y} ( S _ 1 ) [ n ] & = & \mathbf{Y} ( ) [ n + 1 ] \\
   \mathbf{Y} ( S _ 1, S _ 1, \ldots, S _ { m - 1 }, 1 ) [ n ] & = & \mathbf{Y} ( S _ 1, S _ 1, \ldots, S _ { m - 1 } ) [ n ] \\
 \end{eqnarray*}</nowiki>
-
-その定義の一部を取り出して私が整えて書き下すと以上のようになる<ref name="assertion" />。
 
 Y数列を使用する巨大数として、[[#Y数列数]]が \( f ( n ) = Y ( 1, \omega ) [ n ] \) としたときの \( f ^ { 2000 } ( 1 ) \) として定義されている<ref name="survey" />。
 
@@ -81,7 +79,7 @@ Y数列を使用する巨大数として、[[#Y数列数]]が \( f ( n ) = Y ( 1
 
 == グーゴロジストの社交場（仮） ==
 
-グーゴロジストの社交場（仮）は、日本語圏の巨大数界隈における最大の discord サーバーである。
+グーゴロジストの社交場（仮）は、日本語圏の巨大数界隈における最大の discord サーバーである<ref name="assertion" />。
 
 == ゆきと ==
 
