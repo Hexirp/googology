@@ -2,7 +2,7 @@ YH数列システムは、私により定義された[[#階差数列システム
 
 == Y数列 ==
 
-Y数列は、[[#ゆきと]]により定義された[[#階差数列システム]]の一種である<ref name="assertion" />。ゆきと自身がツイッターにて[[#ハイパー原始数列]]の拡張であるとしている（[https://twitter.com/Y_Y_Googology/status/1147491262817136640 当該ツイート]）<ref name="survey">筆者による調査。</ref>。
+Y数列は、[[#ゆきと]]により定義された[[#階差数列システム]]の一種である<ref name="assertion" />。ゆきと自身がツイッターにて[[#ハイパー原始数列システム]]の拡張であるとしている（[https://twitter.com/Y_Y_Googology/status/1147491262817136640 当該ツイート]）<ref name="survey">筆者による調査。</ref>。
 
 === 概要 ===
 
@@ -14,7 +14,7 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
 
 == 歴史 ==
 
-2018年6月15日、Y数列の原型が完成する<ref name="self">この記事</ref>。
+2018年6月15日、Y数列の原型が完成する<ref name="self">この記事。</ref>。
 
 2018年から2019年を跨いでY数列の研究と解析が行われる<ref name="assertion" />。
 
@@ -30,7 +30,7 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
 
 2020年6月30日、 [[#Googology Server]] にて y-sequence チャンネルが復活する（[https://discordapp.com/channels/206932820206157824/614633397649670145/727194618910998629 復活後の最初のコメント]）<ref name="survey" />。
 
-2020年7月3日、 [[#Ecl1psed]] が \( ( 1, 2, 4, 8, 10, 8 ) \) を \( ( 1, 2, 4, 8, 10, 7, 12, 15, \ldots ) \) と展開するタイプの[[#Y的数列システム]]において無限ループを発見した<ref>[[ユーザーブログ:Hexirp/(2020-07-03)_Y数列_Hexirp_版_2.1_の無限ループ]]。</ref>。
+2020年7月3日、 [[#Ecl1psed]] が \( ( 1, 2, 4, 8, 10, 8 ) \) を \( ( 1, 2, 4, 8, 10, 7, 12, 15, \ldots ) \) と展開するタイプの[[#Y的数列システム]]において無限ループを発見した<ref name="2020-07-03" />[[ユーザーブログ:Hexirp/(2020-07-03)_Y数列_Hexirp_版_2.1_の無限ループ]]。</ref>。
 
 === 定義 ===
 
@@ -45,13 +45,67 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
 
 その定義の一部を取り出して私が整えて書き下すと以上のようになる<ref name="assertion" />。
 
-Y数列を使用する巨大数として、Y数列数が \( f ( n ) = Y ( 1, \omega ) [ n ] \) としたときの \( f ^ { 2000 } ( 1 ) \) として定義されている<ref name="survey" />。
+Y数列を使用する巨大数として、[[#Y数列数]]が \( f ( n ) = Y ( 1, \omega ) [ n ] \) としたときの \( f ^ { 2000 } ( 1 ) \) として定義されている<ref name="survey" />。
 
 === 展開 ===
 
-2020年7月現在、Y数列の定義は存在しない<ref name="assertion" />。しかしながら、展開についての例は豊富に存在する<ref name="assertion" />。たとえば、短い数列に対して列挙するもの（[https://docs.google.com/spreadsheets/d/1dHcT7kQ7bZeJlBp26OlcYmUfbeP_UaxfBtIUISendt4/edit?usp=sharing リンク]）や、展開の予測が困難な数列や展開が定まっていない数列を纏めたもの（[https://docs.google.com/spreadsheets/d/1ixioIFZcLGk_Gk3FvSLtpOz3HHOVCzLemsMMVjUe380/edit?usp=sharing リンク]）や、Y数列とは少し離れるが[[#Y的数列システム]]の展開を比較したもの（[https://docs.google.com/spreadsheets/d/1Rp9twxUbD-xbp05zTfQ6w2rYCTEGs7M5EqBjsvCuTYE/edit?usp=sharing リンク]）が存在する。
+2020年7月現在、Y数列の定義は存在しない<ref name="assertion" />。しかしながら、展開についての例は豊富に存在する<ref name="assertion" />。たとえば、短い数列に対して列挙するもの（[https://docs.google.com/spreadsheets/d/1dHcT7kQ7bZeJlBp26OlcYmUfbeP_UaxfBtIUISendt4/edit?usp=sharing リンク]）や、展開の予測が困難な数列や展開が定まっていない数列を纏めたもの（[https://docs.google.com/spreadsheets/d/1ixioIFZcLGk_Gk3FvSLtpOz3HHOVCzLemsMMVjUe380/edit?usp=sharing リンク]）や、Y数列とは少し離れるが[[#Y的数列システム]]の展開を比較したもの（[https://docs.google.com/spreadsheets/d/1Rp9twxUbD-xbp05zTfQ6w2rYCTEGs7M5EqBjsvCuTYE/edit?usp=sharing リンク]）が存在する<ref name="survey" />。
 
-2020年6月末に[[#ゆきと]]による \( (1,2,4,8,10,8) \) の公式の展開が \( (1,2,4,8,7,12,15,11,17,21) \) から \( (1,2,4,8,10,7,14,11,17,19) \) に変更された<ref name="self" />。これについて koteitan は[https://twitter.com/koteitan/status/1277219049999482882 このツイート]のような指摘が発端であるというツイートを行っている（[https://twitter.com/koteitan/status/1278115455954292738 当該ツイート]）。このことからゆきとが変更を決めたのは、おそらく、2020年6月28日から2020年6月29日にかけての夜である<ref name="assertion" />。
+2020年6月末に[[#ゆきと]]による \( (1,2,4,8,10,8) \) の公式の展開が \( (1,2,4,8,7,12,15,11,17,21) \) から \( (1,2,4,8,10,7,14,11,17,19) \) に変更された<ref name="self" />。これについて koteitan は[https://twitter.com/koteitan/status/1277219049999482882 このツイート]のような指摘が発端であるというツイートを行っている（[https://twitter.com/koteitan/status/1278115455954292738 当該ツイート]）。このことからゆきとが変更を決めたのは、おそらく、2020年6月28日から2020年6月29日にかけての夜であると考えられる<ref name="assertion" />。
+
+=== 関連項目 ===
+
+* [[en:Y sequence]]
+
+== Y数列数 ==
+
+執筆中。
+
+== 階差数列システム ==
+
+* [[en:difference sequence]]
+
+== ハイパー原始数列システム ==
+
+* [[en:hyper primitive sequence system]]
+
+== 東方巨大数3 ==
+
+* [[東方巨大数]]
+
+== 活性化関数 ==
+
+活性化関数は[[原始数列システム]]や[[バシク行列システム]]のような表記を定義する際に必要となる関数である<ref name="assertion" />。原始数列システムやバシク行列システムのような表記は、右に位置する数列や行列を「減らす」代わりに左に位置する自然数を増やしていく<ref name="assertion" />が、その自然数を増やす関数が活性化関数である<ref name="assertion" />。
+
+[https://gyafun.jp/ln/basmat.cgi Bashicu Matrix Calculator] において ''n increment'' と書かれている部分で選択するのが活性化関数に該当する<ref name="assertion" />。私が知る限り活性化関数という名称を最初に使ったのは[[ユーザーブログ:Koteitan/バシク行列の数式的定義]]である<ref name="survey" />
+
+== グーゴロジストの社交場（仮） ==
+
+グーゴロジストの社交場（仮）は、日本語圏の巨大数界隈における最大の discord サーバーである。
+
+== ゆきと ==
+
+執筆中。
+
+== koteitan ==
+
+執筆中。
+
+== Naruyoko ==
+
+執筆中。
+
+== Ecl1psed ==
+
+執筆中。
+
+== whY notation ==
+
+執筆中。
+
+== Y的数列システム ==
+
+執筆中。
 
 == 出典 ==
 
