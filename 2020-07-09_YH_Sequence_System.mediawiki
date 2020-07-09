@@ -10,7 +10,7 @@ YH数列システムは、私 (Hexirp) が作成した階差数列システム�
 
 === 山 ===
 
-YH数列システムにおいて、全てのバージョンにおいて現れる最も重要な概念が山である<ref name="assertion" />。単純に言うと、山とは以下のように定義される三つの関数 \( \mathrm{d}, \mathrm{p}, \mathrm{a} \) のグラフ<ref group="注">[[wp:ja:グラフ (関数)|グラフ]]を参照。</ref>である<ref name="assertion" />。
+YH数列システムにおいて、全てのバージョンにおいて現れる最も重要な概念が山である<ref name="assertion" />。単純に言うと、山とは以下のように定義される三つの関数 \( \mathrm{d}, \mathrm{p}, \mathrm{a} \) のグラフ<ref group="注">[[グラフ (関数)|グラフ]]を参照。</ref>である<ref name="assertion" />。
 
 <p style="overflow: auto;"><nowiki>\begin{eqnarray*}
   \mathrm{d} _ S ( x, n ) & \coloneqq &
@@ -33,7 +33,9 @@ YH数列システムにおいて、全てのバージョンにおいて現れる
     \end{cases} \\
 \end{eqnarray*}</nowiki></p>
 
-ここで三つの関数の名前や内容はバージョンによって異なることもあるが、全てのバージョンにおいてこれらの関数は現れる<ref name="assertion" />。例示した関数は 3 番目の定義であり、それ以前の定義は問題があるため破棄された<ref name="assertion" />。
+厳密に定義するならば、 \( S \) に対する山は、三つの関数 \( \mathrm{d} _ S, \mathrm{p} _ S, \mathrm{a} _ S \) のグラフであり、その定義域は \( x \) においては \( 1 \) 以上 \( S \) の長さ以下の自然数であり \( n \) においては \( 1 \) 以上の自然数である<ref name="assertion" />。もちろん、そのままでは効率が悪いためプログラムの中では配列などで表され、高速に値へとアクセスできるようになっている<ref name="assertion" />。山という名称は [[whY notation]] において別の意味で使われているが、こちらの方が九ヶ月ほど早い<ref name="survey" />。
+
+三つの関数の名前や内容はバージョンによって異なることもあるが、全てのバージョンにおいてこれらの関数は現れる<ref name="assertion" />。例示した関数は 3 番目の定義であり、それ以前の定義は問題があるため破棄された<ref name="assertion" />。
 
 ==== 山の 1 番目の定義 ====
 
