@@ -10,7 +10,7 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
 
 ゆきと自身による数学的に厳密な定義は存在しない<ref name="assertion" />。2019年5月に、Y数列を使用する巨大数がゆきとにより[[#東方巨大数3]]へ投稿されたが、無効となった（[https://twitter.com/rpakr_googology/status/1142025591866003456 リンク]）<ref name="survey" />。この定義は [https://docs.google.com/document/d/1dA3V_5ZMfXN-z3X-g-yoJfmoTvKuk3efeaKaBFw8Vhs/edit?usp=sharing Google ドキュメントで作成された文書]として投稿されたが、今では内容が大幅に削除されていて当時の定義を知ることはできない<ref name="survey" />。しかし、削除される前に \( (1,3) \) 未満の行列に対する定義について [[ユーザーブログ:Koteitan/(1,3)未満のY数列の定義|Koteitan による数式化]]が行われているため、この記事を通して削除された定義の内容を伺うことはできる<ref name="survey" />。特に重要なのは Koteitan が[[#活性化関数]]と呼ぶものに該当する関数が \( n \mapsto n + 1 \) であると知ることができることだろう<ref name="assertion" />。
 
-ゆきとはツイッターにおいて、[[#グーゴロジストの社交場（仮）]]においての議論を通して原型ができたのは2018年6月15日のことだとしている（[https://twitter.com/Y_Y_Googology/status/1278895135388925953 当該ツイート]）<ref name="assertion" />。
+ゆきとはツイッターにおいて、 Discord での議論を通して原型ができたのは2018年6月15日のことだとしている（[https://twitter.com/Y_Y_Googology/status/1278895135388925953 当該ツイート]）<ref name="assertion" />。
 
 === 歴史 ===
 
