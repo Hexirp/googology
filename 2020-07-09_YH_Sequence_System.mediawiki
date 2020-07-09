@@ -28,12 +28,61 @@ YH数列システムにおいて、全てのバージョンにおいて現れる
     \end{cases} \\
   \mathrm{a} _ S ( x, n ) & \coloneqq &
     \begin{cases}
+      \{ x \}                                                    & ( \mathrm{p} _ S ( x, n ) = 0 ) \\
+      \{ x \} \cup \mathrm{a} _ S ( \mathrm{p} _ S ( x, n ), n ) & ( \mathrm{p} _ S ( x, n ) > 0 ) \\
+    \end{cases} \\
+\end{eqnarray*}</nowiki></p>
+
+ここで三つの関数の名前や内容はバージョンによって異なることもあるが、全てのバージョンにおいてこれらの関数は現れる<ref name="assertion" />。例示した関数は 3 番目の定義であり、それ以前の定義は問題があるため破棄された<ref name="assertion" />。
+
+==== 1 番目の定義 ====
+
+バージョン 0.0, 1.0, 1.1, 1.1.1 における定義である<ref name="assertion" />。この定義には \( \mathrm{d} _ { ( 1, 2 ) } ( 2, 3 ) \) が \( 0 \) にならないという問題がある<ref name="2019-10-30">[[ユーザーブログ:Hexirp/(2019-10-30)_Y数列_Hexirp_版のバグが発見]]。</ref>。
+
+<p style="overflow: auto;"><nowiki>\begin{eqnarray*}
+  \mathrm{d} _ S ( x, n ) & \coloneqq &
+    \begin{cases}
+      S _ x                                                                               & ( n = 1                                       ) \\
+      0                                                                                   & ( n > 1 \land \mathrm{p} _ S ( x, n ^ - ) = 0 ) \\
+      \mathrm{d} _ S ( x, n ^ - ) - \mathrm{d} _ S ( \mathrm{p} _ S ( x, n ^ - ), n ^ - ) & ( n > 1 \land \mathrm{p} _ S ( x, n ^ - ) > 0 ) \\
+    \end{cases} \\
+  \mathrm{p} _ S ( x, n ) & \coloneqq & \max ( \{ 0 \} \cup \{ p \in \mathbb{N} ^ + \mid p < x \land \mathrm{d} _ S ( p, n ) < \mathrm{d} _ S ( x, n ) \land \mathrm{isAnc} _ S ( x, n, \mathrm{p} ) \} ) \\
+  \mathrm{isAnc} _ S ( x, n, p ) & \coloneqq &
+    \begin{cases}
+      \mathrm{True}                     & ( n = 1 ) \\
+      p \in \mathrm{a} _ S ( x, n - 1 ) & ( n > 1 ) \\
+    \end{cases} \\
+  \mathrm{a} _ S ( x, n ) & \coloneqq &
+    \begin{cases}
       \emptyset                                                  & ( x = 0 ) \\
       \{ x \} \cup \mathrm{a} _ S ( \mathrm{p} _ S ( x, n ), n ) & ( x > 0 ) \\
     \end{cases} \\
 \end{eqnarray*}</nowiki></p>
 
-ここで三つの関数の名前はバージョンによって異なることもあるが、全てのバージョンにおいてこれらの関数は現れる<ref name="assertion" />。
+==== 2 番目の定義 ====
+
+バージョン 2.0, 2.1 における定義である<ref name="assertion" />。この定義には再帰のために \( \mathrm{a} _ S ( x, n ) \) の \( x \) が \( 0 \) となってしまうという問題があった<ref name="assertion" />。これは些細な問題であるが、メモ化の際に障害となった<ref name="assertion" />。
+
+<p style="overflow: auto;"><nowiki>\begin{eqnarray*}
+  \mathrm{d} _ S ( x, n ) & \coloneqq &
+    \begin{cases}
+      S _ x                                                                               & ( n = 1                                                                                                       ) \\
+      0                                                                                   & ( n > 1 \land \mathrm{p} _ S ( x, n ^ - ) = 0                                                                 ) \\
+      0                                                                                   & ( n > 1 \land \mathrm{p} _ S ( x, n ^ - ) = 0 \land \mathrm{d} _ S ( \mathrm{p} _ S ( x, n ^ - ), n ^ - ) = 0 ) \\
+      \mathrm{d} _ S ( x, n ^ - ) - \mathrm{d} _ S ( \mathrm{p} _ S ( x, n ^ - ), n ^ - ) & ( n > 1 \land \mathrm{p} _ S ( x, n ^ - ) > 0 \land \mathrm{d} _ S ( \mathrm{p} _ S ( x, n ^ - ), n ^ - ) > 0 ) \\
+    \end{cases} \\
+  \mathrm{p} _ S ( x, n ) & \coloneqq & \max ( \{ 0 \} \cup \{ p \in \mathbb{N} ^ + \mid p < x \land \mathrm{d} _ S ( p, n ) < \mathrm{d} _ S ( x, n ) \land \mathrm{isAnc} _ S ( x, n, \mathrm{p} ) \} ) \\
+  \mathrm{isAnc} _ S ( x, n, p ) & \coloneqq &
+    \begin{cases}
+      \mathrm{True}                     & ( n = 1 ) \\
+      p \in \mathrm{a} _ S ( x, n - 1 ) & ( n > 1 ) \\
+    \end{cases} \\
+  \mathrm{a} _ S ( x, n ) & \coloneqq &
+    \begin{cases}
+      \emptyset                                                  & ( x = 0 ) \\
+      \{ x \} \cup \mathrm{a} _ S ( \mathrm{p} _ S ( x, n ), n ) & ( x > 0 ) \\
+    \end{cases} \\
+\end{eqnarray*}</nowiki></p>
 
 === Y数列 Hexirp 版 ===
 
