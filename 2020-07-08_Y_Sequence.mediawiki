@@ -49,7 +49,7 @@ Y数列を使用する巨大数として、[[#Y数列数]]が \( f ( n ) = Y ( 1
 
 2020年7月現在、Y数列の定義は存在しない<ref name="assertion" />。しかしながら、展開についての例は豊富に存在する<ref name="assertion" />。たとえば、短い数列に対して列挙するもの（[https://docs.google.com/spreadsheets/d/1dHcT7kQ7bZeJlBp26OlcYmUfbeP_UaxfBtIUISendt4/edit?usp=sharing リンク]）や、展開の予測が困難な数列や展開が定まっていない数列を纏めたもの（[https://docs.google.com/spreadsheets/d/1ixioIFZcLGk_Gk3FvSLtpOz3HHOVCzLemsMMVjUe380/edit?usp=sharing リンク]）や、Y数列とは少し離れるが[[#Y的数列システム]]の展開を比較したもの（[https://docs.google.com/spreadsheets/d/1Rp9twxUbD-xbp05zTfQ6w2rYCTEGs7M5EqBjsvCuTYE/edit?usp=sharing リンク]）が存在する<ref name="survey" />。
 
-2020年6月末に[[#ゆきと]]による \( (1,2,4,8,10,8) \) の公式の展開が \( (1,2,4,8,7,12,15,11,17,21) \) から \( (1,2,4,8,10,7,14,11,17,19) \) に変更された<ref name="self" />。これについて koteitan は[https://twitter.com/koteitan/status/1277219049999482882 このツイート]のような指摘が発端であるというツイートを行っている（[https://twitter.com/koteitan/status/1278115455954292738 当該ツイート]）。このことからゆきとが変更を決めたのは、おそらく、2020年6月28日から2020年6月29日にかけての夜であると考えられる<ref name="assertion" />。
+2020年6月末に[[#ゆきと]]による \( (1,2,4,8,10,8) \) の公式の展開が \( (1,2,4,8,7,12,15,11,17,21) \) から \( (1,2,4,8,10,7,14,11,17,19) \) に変更された<ref name="self" />。これについて koteitan は[https://twitter.com/koteitan/status/1277219049999482882 このツイート]のような指摘が発端であるというツイートを行っている（[https://twitter.com/koteitan/status/1278115455954292738 当該ツイート]）<ref name="survey" />。このことからゆきとが変更を決めたのは、おそらく、2020年6月28日から2020年6月29日にかけての夜であると考えられる<ref name="assertion" />。
 
 === 関連項目 ===
 
