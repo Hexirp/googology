@@ -112,7 +112,7 @@ Y数列を使用する巨大数として、[[#Y数列数]]が \( f ( n ) = Y ( 1
 
 == whY notation ==
 
-執筆中。
+whY notation は、 [[#Naruyoko]] により作成されたウェブアプリである（[https://naruyoko.github.io/whYmountain/ リンク]）<ref name="survey" />。[[#Y数列]]の階差数列の表示および山の表示を行う<ref name="survey" />。
 
 == Y的数列システム ==
 
