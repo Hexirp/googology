@@ -6,7 +6,7 @@ Y数列は、[[#ゆきと]]により定義された[[#階差数列システム]]
 
 === 概要 ===
 
-Y数列の表記は[[バシク行列システム]]に類似しており、数列 \( S \) と自然数 \( n \) を取って、自然数 \( \mathbf{Y} S [ n ] \) を表す（省略して \( S [ n ] \) と書く時もある）<ref name="survey" />。そのため、バシク行列システムと同様に、どのように数列を展開するかどうかが重要な点になる<ref name="assertion" />。
+Y数列の表記は[[バシク行列システム]]に類似しており、数列 \( S \) と自然数 \( n \) を取って、自然数 \( \mathsf{Y} S [ n ] \) を表す（省略して \( S [ n ] \) と書く時もある）<ref name="survey" />。そのため、バシク行列システムと同様に、どのように数列を展開するかどうかが重要な点になる<ref name="assertion" />。
 
 ゆきと自身による数学的に厳密な定義は存在しない<ref name="assertion" />。2019年5月に、Y数列を使用する巨大数がゆきとにより[[#東方巨大数3]]へ投稿されたが、無効となった（[https://twitter.com/rpakr_googology/status/1142025591866003456 リンク]）<ref name="survey" />。この定義は [https://docs.google.com/document/d/1dA3V_5ZMfXN-z3X-g-yoJfmoTvKuk3efeaKaBFw8Vhs/edit?usp=sharing Google ドキュメントで作成された文書]として投稿されたが、今では内容が大幅に削除されていて当時の定義を知ることはできない<ref name="survey" />。しかし、削除される前に \( (1,3) \) 未満の行列に対する定義について [[ユーザーブログ:Koteitan/(1,3)未満のY数列の定義|Koteitan による数式化]]が行われているため、この記事を通して削除された定義の内容を伺うことはできる<ref name="survey" />。特に重要なのは Koteitan が[[#活性化関数]]と呼ぶものに該当する関数が \( n \mapsto n + 1 \) であると知ることができることだろう<ref name="assertion" />。
 
@@ -37,10 +37,10 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
 [https://docs.google.com/document/d/1dA3V_5ZMfXN-z3X-g-yoJfmoTvKuk3efeaKaBFw8Vhs/edit?usp=sharing ゆきと本人による文書]の2020年7月8日時点における内容は、数列の一部に対してのみ定義を与えるものである<ref name="survey" />。その定義の一部を取り出して私が整えて書き下すと以下のようになる<ref name="assertion" />。
 
 <nowiki>\begin{eqnarray*}
-  \mathbf{Y} ( ) [ n ] & = & n \\
-  \mathbf{Y} ( 1, \omega ) [ n ] & = & \mathbf{Y} ( 1, n ) [ n ] \\
-  \mathbf{Y} ( S _ 1 ) [ n ] & = & \mathbf{Y} ( ) [ n + 1 ] \\
-  \mathbf{Y} ( S _ 1, S _ 1, \ldots, S _ { m - 1 }, 1 ) [ n ] & = & \mathbf{Y} ( S _ 1, S _ 1, \ldots, S _ { m - 1 } ) [ n + 1 ] \\
+  \mathsf{Y} ( ) [ n ] & = & n \\
+  \mathsf{Y} ( 1, \omega ) [ n ] & = & \mathsf{Y} ( 1, n ) [ n ] \\
+  \mathsf{Y} ( S _ 1 ) [ n ] & = & \mathsf{Y} ( ) [ n + 1 ] \\
+  \mathsf{Y} ( S _ 1, S _ 1, \ldots, S _ { m - 1 }, 1 ) [ n ] & = & \mathsf{Y} ( S _ 1, S _ 1, \ldots, S _ { m - 1 } ) [ n + 1 ] \\
 \end{eqnarray*}</nowiki>
 
 Y数列を使用する巨大数として、[[#Y数列数]]が \( f ( n ) = Y ( 1, \omega ) [ n ] \) としたときの \( f ^ { 2000 } ( 1 ) \) として定義されている<ref name="survey" />。
@@ -57,7 +57,7 @@ Y数列を使用する巨大数として、[[#Y数列数]]が \( f ( n ) = Y ( 1
 
 == Y数列数 ==
 
-[[#Y数列数]]は、[[#Y数列]]を使って \( f ( n ) = Y ( 1, \omega ) [ n ] \) としたときの \( f ^ { 2000 } ( 1 ) \) である<ref name="survey" />。
+[[#Y数列数]]は、[[#Y数列]]を使って \( f ( n ) = \mathsf{Y} ( 1, \omega ) [ n ] \) としたときの \( f ^ { 2000 } ( 1 ) \) である<ref name="survey" />。
 
 === 関連項目 ===
 
