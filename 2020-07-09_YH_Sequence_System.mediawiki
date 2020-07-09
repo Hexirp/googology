@@ -72,7 +72,7 @@ YH数列システムのバージョンは複数ある。
 
 == 注釈 ==
 
-<reference group="注" />
+<references group="注" />
 
 == 出典 ==
 
