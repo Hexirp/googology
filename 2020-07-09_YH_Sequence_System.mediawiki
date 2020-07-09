@@ -37,7 +37,7 @@ YH数列システムにおいて、全てのバージョンにおいて現れる
 
 ==== 1 番目の定義 ====
 
-バージョン 0.0, 1.0, 1.1, 1.1.1 における定義である<ref name="assertion" />。この定義には \( \mathrm{d} _ { ( 1, 2 ) } ( 2, 3 ) \) が \( 0 \) にならないという問題がある<ref name="2019-10-30">[[ユーザーブログ:Hexirp/(2019-10-30)_Y数列_Hexirp_版のバグが発見]]。</ref>。
+バージョン 0.0, 1.0, 1.1, 1.1.1 における定義である<ref name="assertion" />。この定義には \( \mathrm{d} _ { ( 1, 2 ) } ( 2, 3 ) \) が \( 0 \) にならないという問題がある<ref name="2019-10-30">[[ユーザー:Hexirp]]、[[ユーザーブログ:Hexirp/(2019-10-30)_Y数列_Hexirp_版のバグが発見]]。</ref>。
 
 <p style="overflow: auto;"><nowiki>\begin{eqnarray*}
   \mathrm{d} _ S ( x, n ) & \coloneqq &
@@ -119,7 +119,7 @@ YH数列システムのバージョンは複数ある。
 |-
 | 0.0<ref name="2019-10-14" />
 | \( ( 1, \omega ) \)<ref name="2019-10-14" />
-| false<ref name="2019-10-14" /><ref name="2019-10-30">[[ユーザー:Hexirp]]、[[ユーザーブログ:Hexirp/(2019-10-30)_Y数列_Hexirp_版のバグが発見]]。</ref>
+| false<ref name="2019-10-14" /><ref name="2019-10-30" />
 | false<ref name="obvious">自明。</ref>
 | ……。
 |-
