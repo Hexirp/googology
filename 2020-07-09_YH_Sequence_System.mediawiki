@@ -1,6 +1,12 @@
 YH数列システムは、私 (Hexirp) が作成した階差数列システムの一種である<ref name="assertion">筆者による主張。</ref>。より詳しく言えば、Y的数列システムの一種である<ref name="assertion" />。
 
-== 説明 ==
+== 名称 ==
+
+「YH数列システム」は、名称を変更する前は「Y数列 Hexirp 版」としていた<ref name="assertion" />。しかし、様々な思惑もあり2020年7月5日に名称を変更することを決めた<ref name="assertion" />。この名称は以前の名称を捻ったものである<ref name="assertion" />。
+
+バージョンは引き継ぐため、今までのY数列 Hexirp 版 ''[version]'' は、YH数列システム ''[version]'' というように変更される<ref name="assertion" />。
+
+== Y数列 Hexirp 版 ==
 
 2018年6月15日、Y数列がゆきと氏により考案されて以降、Y数列についての研究が進められてきた<ref name="assertion" />。ゆきと氏による定義は未だ存在しないが、展開の例は豊富に存在する<ref name="assertion" />。
 
@@ -11,5 +17,3 @@ YH数列システムは、私 (Hexirp) が作成した階差数列システム�
 2020年6月末、Y数列の展開が変更された<ref name="2020-07-08">[[ユーザー:Hexirp]]、[[ユーザーブログ:Hexirp/(2020-07-08)_Y数列]]。</ref>。これにより p進大好きbot 氏がY数列への追随を断念することをツイートする（[https://twitter.com/non_archimedean/status/1278629588134883328 リンク]）などの影響があった<ref name="survey">筆者による調査。</ref>。これに対してY数列 Hexirp 版はバージョン 2.0 と一致していたため無問題であった<ref name="assertion" />。
 
 ここ最近、Y数列の研究が活発になり、本家の展開の変更に繋がっている<ref name="assertion" />。また、この件に関連してY数列 Hexirp 版が話題になることも増えた<ref name="assertion" />。これらの状況により、私はY数列 Hexirp 版 3.0 を作成しようと考えた<ref name="assertion" />。Y数列 Hexirp 版 3.0 は、今まで未完成であった \( (1,3) \) 以上への展開を記述することを目標としていた<ref name="assertion" />。
-
-しかしながら、その作成過程の途中で、自分の中で「Y数列の定義を与える」よりも「美しい定義を作る」の方が重視されていることに気付いた<ref name="assertion" />。これに「Y数列 Hexirp 版」の「版」は "edition" のつもりだけど伝わりにくそう、「Y数列 Hexirp 版」の略は "yhseq" だったけど他の人に "hyseq" と略された、なども積み重なって「Y数列 Hexirp 版」を「YH数列システム」というように変更することを決めた<ref name="assertion" />。
