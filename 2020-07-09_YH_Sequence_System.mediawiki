@@ -1,4 +1,4 @@
-YH数列システムは、私 (Hexirp) が作成した階差数列システムの一種である<ref name="assertion">筆者による主張。</ref>。より詳しく言えば、Y的数列システムの一種である<ref name="assertion" />。
+'''YH数列システム''' (YH sequence system, YHSS) は、私 (Hexirp) が作成した階差数列システムの一種である<ref name="assertion">筆者による主張。</ref>。より詳しく言えば、Y的数列システムの一種である<ref name="assertion" />。
 
 <div style="display: none;"><nowiki>\[
   \newcommand{\ordinarycolon}{:}
