@@ -8,9 +8,13 @@
 
 == 説明 ==
 
-YH数列システムは、順序数表記と類似した表記として定義されている<ref name="assertion" />。すなわち、 \( \mathbb{N} _ { + } \) を \( \{ x \in \mathbb{N} \mid x > 0 \} \) として \( { \mathbb{N} _ { + } } ^ { \_ < \omega } \) を \( \mathrm{T} _ \mathrm{YH} \) とする<ref name="assertion" />。 \( \mathrm{T} _ \mathrm{YH} \) の部分集合を \( \mathrm{OT} _ \mathrm{YH} \) とし、関数 \( \mathrm{cof} _ \mathrm{YH} : \mathrm{OT} _ \mathrm{YH} \rightarrow \{ 0, 1, \omega \} \) を定義する<ref name="assertion" />。順序 \( \_ < _ \mathrm{YH} \_ \) は辞書式順序により定義される<ref name="assertion" />。展開の関数が基本列としても働き、それは項 \( S \in \mathrm{OT} _ \mathrm{YH} \) と数 \( n \in \mathrm{cof} _ \mathrm{YH} ( S ) \) に対して項 \( S [ n ] _ \mathrm{YH} \in \mathrm{OT} _ \mathrm{YH} \) となる<ref name="assertion" />。
+YH数列システムは、順序数表記と類似した表記として定義されている<ref name="assertion" />。すなわち、 \( \mathbb{N} _ { + } \) を \( \{ x \in \mathbb{N} \mid x > 0 \} \) として \( { \mathbb{N} _ { + } } ^ { \_ < \omega } \) を \( \mathrm{T} _ \mathrm{YH} \) とする<ref name="assertion" />。 \( \mathrm{T} _ \mathrm{YH} \) の部分集合を \( \mathrm{OT} _ \mathrm{YH} \) とし、関数 \( \mathrm{cof} _ \mathrm{YH} : \mathrm{OT} _ \mathrm{YH} \rightarrow \{ 0, 1, \omega \} \) を定義する<ref name="assertion" />。順序 \( \_ < _ \mathrm{YH} \_ \) は辞書式順序により定義される<ref name="assertion" />。展開の関数が基本列としても働き、それは項 \( S \in \mathrm{OT} _ \mathrm{YH} \) と数 \( n \in \mathrm{cof} _ \mathrm{YH} ( S ) \) に対して項 \( S [ n ] _ \mathrm{YH} \in \mathrm{OT} _ \mathrm{YH} \) となる<ref name="assertion" />。このような形式を取ることによって、急成長階層的な構成で巨大数を作ることも、ハーディ階層的な構成で巨大数を作ることも可能になる<ref name="assertion" />。
 
-このような形式を取ることによって、急成長階層的な構成で巨大数を作ることも、ハーディ階層的な構成で巨大数を作ることも可能になる<ref name="assertion" />。
+=== 定義 ===
+
+YH数列システムの定義はバージョンによって異なる。詳細についてはそれぞれのページで説明し、ここでは全てのバージョンに共通する事柄だけを説明する。
+
+YH数列システムの定義で特徴的なのは 0 を例外を表す値と見なしていることにある。 \( S \) を数列および列というが、ここでの添字は 1 始まりである。また、深さなどのほとんどのパラメータが 1 始まりである。このような設計をしたため、 0 に例外を割り当てるのが自然なことになった。たとえば、親を表すときに 0 と書くと親が存在しないことを示し、階差で 0 と書くと階差が存在しない（空白である）ことを示す。深さが 0 になることは現時点ではありえない。
 
 === 山 ===
 
