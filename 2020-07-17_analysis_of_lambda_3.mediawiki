@@ -9,9 +9,9 @@
 ----
 
 <nowiki>\begin{eqnarray*}
-  \mathbf{B}  & \equiv & \lambda x y z \ldotp x ( y z )
-  \mathbf{B}' & \equiv & \Lambda A B C \ldotp \lambda x ^ { B \rightarrow C } y ^ { A \rightarrow B } z ^ A \ldotp x ( y z )
-              & :      & \forall A B C \ldotp ( B \rightarrow C ) \rightarrow ( A \rightarrow B ) \rightarrow A \rightarrow C
+  \mathbf{B}  & \equiv & \lambda x y z \ldotp x ( y z ) \\
+  \mathbf{B}' & \equiv & \Lambda A B C \ldotp \lambda x ^ { B \rightarrow C } y ^ { A \rightarrow B } z ^ A \ldotp x ( y z ) \\
+              & :      & \forall A B C \ldotp ( B \rightarrow C ) \rightarrow ( A \rightarrow B ) \rightarrow A \rightarrow C \\
 \end{eqnarray*}</nowiki>
 
 関数の合成である。 Haskell では <code>(.)</code> 演算子に該当する。
@@ -19,16 +19,16 @@
 ----
 
 <nowiki>\begin{eqnarray*}
-  \mathtt{h} _ 0      & \equiv & \lambda m n \ldotp n m
-  { \mathtt{h} _ 0 }' & \equiv & \Lambda A B \ldotp \lambda m ^ A n ^ { A \rightarrow B } \ldotp n m
-                      & :      & \forall A B \ldotp A \rightarrow ( A \rightarrow B ) \rightarrow B
+  \mathtt{h} _ 0      & \equiv & \lambda m n \ldotp n m \\
+  { \mathtt{h} _ 0 }' & \equiv & \Lambda A B \ldotp \lambda m ^ A n ^ { A \rightarrow B } \ldotp n m \\
+                      & :      & \forall A B \ldotp A \rightarrow ( A \rightarrow B ) \rightarrow B \\
 \end{eqnarray*}</nowiki>
 
 関数の適用である。 Haskell では <code>(&)</code> 演算子に該当する。
 
 <nowiki>\begin{eqnarray*}
-  { \mathtt{h} _ 0 }' & \equiv & \lambda m ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } n ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } \ldotp \Lambda A \ldotp n ( A \rightarrow A ) ( m A )
-                      & :      & ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A
+  { \mathtt{h} _ 0 }' & \equiv & \lambda m ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } n ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } \ldotp \Lambda A \ldotp n ( A \rightarrow A ) ( m A ) \\
+                      & :      & ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \\
 \end{eqnarray*}</nowiki>
 
 ただし、自然数を引数に取るならば、このように型付けされるだろう。
