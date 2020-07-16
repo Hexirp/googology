@@ -1,1 +1,34 @@
 [https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Merliborn/%EF%BC%BBsikigamig%EF%BC%BDLambda-zip?oldid=23748 ユーザーブログ:Merliborn/［sikigamig］Lambda-zip] を解析する。
+
+== 型付け ==
+
+型を利用してラムダ式の停止性を検証する。これはプログラムが正しく実装できているのであればプログラムの停止性へと直接的に繋がる。ここでは System F で解釈を行う。一番目に元々の式を書き、二番目に型についての情報を加えた式を書き、三番目に型を書く。
+
+自然数を表現する項は \( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \) という型を持っているものとする。これは Böhm–Berarducci encoding と呼ばれる物である（[https://math.stackexchange.com/questions/2522624/are-all-simply-typed-lambda-terms-of-type-a-to-a-to-a-to-a-church-numerals リンク１]、[http://oleg.fi/gists/posts/2019-06-26-linear-church-encodings.html リンク２]、[http://okmij.org/ftp/tagless-final/course/Boehm-Berarducci.html リンク３]）。なお、細かいことだが \( \forall A \ldotp A \rightarrow ( A \rightarrow A ) \rightarrow A \) の方が <code>data Nat = Z | S Nat</code> というような定義と順序が同じになって好きである。
+
+----
+
+<nowiki>\begin{eqnarray*}
+  \mathbf{B}  & \equiv & \lambda x y z \ldotp x ( y z )
+  \mathbf{B}' & \equiv & \Lambda A B C \ldotp \lambda x ^ { B \rightarrow C } y ^ { A \rightarrow B } z ^ A \ldotp x ( y z )
+              & :      & \forall A B C \ldotp ( B \rightarrow C ) \rightarrow ( A \rightarrow B ) \rightarrow A \rightarrow C
+\end{eqnarray*}</nowiki>
+
+関数の合成である。 Haskell では <code>(.)</code> 演算子に該当する。
+
+----
+
+<nowiki>\begin{eqnarray*}
+  \mathtt{h} _ 0      & \equiv & \lambda m n \ldotp n m
+  { \mathtt{h} _ 0 }' & \equiv & \Lambda A B \ldotp \lambda m ^ A n ^ { A \rightarrow B } \ldotp n m
+                      & :      & \forall A B \ldotp A \rightarrow ( A \rightarrow B ) \rightarrow B
+\end{eqnarray*}</nowiki>
+
+関数の適用である。 Haskell では <code>(&)</code> 演算子に該当する。
+
+<nowiki>\begin{eqnarray*}
+  { \mathtt{h} _ 0 }' & \equiv & \lambda m ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } n ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } \ldotp \Lambda A \ldotp n ( A \rightarrow A ) ( m A )
+                      & :      & ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A
+\end{eqnarray*}</nowiki>
+
+ただし、自然数を引数に取るならば、このように型付けされるだろう。
