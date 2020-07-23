@@ -10,6 +10,16 @@
 
 YH数列システムは、順序数表記と類似した表記として定義されている<ref name="assertion" />。すなわち、 \( \mathbb{N} _ { + } \) を \( \{ x \in \mathbb{N} \mid x > 0 \} \) として \( { \mathbb{N} _ { + } } ^ { \_ < \omega } \) を \( \mathrm{T} _ \mathrm{YH} \) とする<ref name="assertion" />。 \( \mathrm{T} _ \mathrm{YH} \) の部分集合を \( \mathrm{OT} _ \mathrm{YH} \) とし、関数 \( \mathrm{cof} _ \mathrm{YH} : \mathrm{OT} _ \mathrm{YH} \rightarrow \{ 0, 1, \omega \} \) を定義する<ref name="assertion" />。順序 \( \_ < _ \mathrm{YH} \_ \) は辞書式順序により定義される<ref name="assertion" />。展開の関数が基本列としても働き、それは項 \( S \in \mathrm{OT} _ \mathrm{YH} \) と数 \( n \in \mathrm{cof} _ \mathrm{YH} ( S ) \) に対して項 \( S [ n ] _ \mathrm{YH} \in \mathrm{OT} _ \mathrm{YH} \) となる<ref name="assertion" />。このような形式を取ることによって、急成長階層的な構成で巨大数を作ることも、ハーディ階層的な構成で巨大数を作ることも可能になる<ref name="assertion" />。
 
+=== 名称 ===
+
+「YH数列システム」は、名称を変更する前は「Y数列 Hexirp 版」としていた<ref name="assertion" />。しかし、様々な思惑もあり2020年7月5日に名称を変更することを決めた<ref name="assertion" />。この名称は以前の名称を捻ったものである<ref name="assertion" />。
+
+バージョンは引き継ぐため、今までのY数列 Hexirp 版 ''[version]'' は、YH数列システム ''[version]'' というように変更される<ref name="assertion" />。
+
+=== 歴史 ===
+
+……。
+
 === 定義 ===
 
 YH数列システムの定義はバージョンによって異なる。詳細についてはそれぞれのページで説明し、ここでは全てのバージョンに共通する事柄だけを説明する。
@@ -109,16 +119,6 @@ Y数列 Hexirp 版は、YH数列システムの古い呼び方である<ref name
 ここ最近、Y数列の研究が活発になり、本家の展開の変更に繋がっている<ref name="assertion" />。また、この件に関連してY数列 Hexirp 版が話題になることも増えた<ref name="assertion" />。これらの状況により、私はY数列 Hexirp 版 3.0 を作成しようと考えた<ref name="assertion" />。Y数列 Hexirp 版 3.0 は、今まで未完成であった \( (1,3) \) 以上への展開を記述することを目標としていた<ref name="assertion" />。
 
 以上の出来事をきっかけとして、Y数列 Hexirp 版 3.0 の開発中にYH数列システムへと名称の変更が行われた<ref name="assertion" />。YH数列システムでは、「美しい定義を作る」ことが「Y数列の定義を作る」ことよりも優先されることになる<ref name="assertion" />。
-
-== 名称 ==
-
-「YH数列システム」は、名称を変更する前は「Y数列 Hexirp 版」としていた<ref name="assertion" />。しかし、様々な思惑もあり2020年7月5日に名称を変更することを決めた<ref name="assertion" />。この名称は以前の名称を捻ったものである<ref name="assertion" />。
-
-バージョンは引き継ぐため、今までのY数列 Hexirp 版 ''[version]'' は、YH数列システム ''[version]'' というように変更される<ref name="assertion" />。
-
-== 歴史 ==
-
-……。
 
 == バージョン ==
 
