@@ -122,7 +122,7 @@ Y数列 Hexirp 版は、YH数列システムの古い呼び方である<ref name
 
 === yhseq ===
 
-yhseq は、YH数列システムをプログラムで定義するプロジェクトである<ref name="assertion" />。 GitHub にホストされていて（[[https://github.com/Hexirp/yhseq Hexirp/yhseq]）、 Haskell で書かれている<ref name="assertion" />。 stack というツールで簡単に実行できるということを売りにしていたが、その期待に反して、2020年7月23日現在、コンパイルして実行した人は Koteitan 氏しか確認できていない<ref name="assertion" />。
+yhseq は、YH数列システムをプログラムで定義するプロジェクトである<ref name="assertion" />。 GitHub にホストされていて（[[https://github.com/Hexirp/yhseq リンク]）、 Haskell で書かれている<ref name="assertion" />。 stack というツールで簡単に実行できるということを売りにしていたが、その期待に反して、2020年7月23日現在、コンパイルして実行した人は Koteitan 氏しか確認できていない<ref name="assertion" />。
 
 # git と stack をインストールする<ref name="assertion" />。
 # <code>git clone git@github.com:Hexirp/yhseq.git</code> という風に、リポジトリをクローンする<ref name="assertion" />。
