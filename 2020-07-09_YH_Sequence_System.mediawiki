@@ -120,6 +120,17 @@ Y数列 Hexirp 版は、YH数列システムの古い呼び方である<ref name
 
 以上の出来事をきっかけとして、Y数列 Hexirp 版 3.0 の開発中にYH数列システムへと名称の変更が行われた<ref name="assertion" />。YH数列システムでは、「美しい定義を作る」ことが「Y数列の定義を作る」ことよりも優先されることになる<ref name="assertion" />。
 
+=== yhseq ===
+
+yhseq は、YH数列システムをプログラムで定義するプロジェクトである<ref name="assertion" />。 GitHub にホストされていて（[[https://github.com/Hexirp/yhseq Hexirp/yhseq]）、 Haskell で書かれている<ref name="assertion" />。 stack というツールで簡単に実行できるということを売りにしていたが、その期待に反して、2020年7月23日現在、コンパイルして実行した人は Koteitan 氏しか確認できていない<ref name="assertion" />。
+
+# git と stack をインストールする<ref name="assertion" />。
+# <code>git clone git@github.com:Hexirp/yhseq.git</code> という風に、リポジトリをクローンする<ref name="assertion" />。
+# <code>cd yhseq</code> という風に、リポジトリのルートディレクトリに入る<ref name="assertion" />。
+# <code>stack build</code> という風に、プロジェクトをビルドする<ref name="assertion" />。
+# <code>stack exec -- yhseq [1,2,4,8,10,8] 3</code> という風に、プロジェクトを実行する<ref name="assertion" />。
+# <code>[1,2,4,8,10,7,12,14,11,17,19,16,23,25]</code> というような出力を得る<ref name="assertion" />。
+
 == バージョン ==
 
 YH数列システムのバージョンは複数ある。
