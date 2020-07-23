@@ -12,7 +12,7 @@ YH数列システムは、順序数表記と類似した表記として定義さ
 
 === 名称 ===
 
-「YH数列システム」は、名称を変更する前は「Y数列 Hexirp 版」としていた<ref name="assertion" />。しかし、様々な思惑もあり2020年7月5日に名称を変更することを決めた<ref name="assertion" />。この名称は以前の名称を捻ったものである<ref name="assertion" />。
+「YH数列システム」は、名称を変更する前は「Y数列 Hexirp 版」としていた<ref name="assertion" />。しかし、様々な思惑もあり2020年7月5日に名称を変更することを決めた<ref name="assertion" />。この名称は yhseq が元になっている<ref name="assertion" />。
 
 バージョンは引き継ぐため、今までのY数列 Hexirp 版 ''[version]'' は、YH数列システム ''[version]'' というように変更される<ref name="assertion" />。
 
@@ -130,6 +130,8 @@ yhseq は、YH数列システムをプログラムで定義するプロジェク
 # <code>stack build</code> という風に、プロジェクトをビルドする<ref name="assertion" />。
 # <code>stack exec -- yhseq [1,2,4,8,10,8] 3</code> という風に、プロジェクトを実行する<ref name="assertion" />。
 # <code>[1,2,4,8,10,7,12,14,11,17,19,16,23,25]</code> というような出力を得る<ref name="assertion" />。
+
+名称は、Y数列 Hexirp 版に由来する<ref name="assertion" />。Y数列 Hexirp 版を英語に訳すると Y sequence Hexirp edition となる<ref name="assertion" />。これを縮めると Y Seq H E という感じになるが、これでは格好悪いので H を前に持ってきて YHSeq とした<ref name="assertion" />。
 
 == バージョン ==
 
