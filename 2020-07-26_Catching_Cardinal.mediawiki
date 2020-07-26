@@ -1,0 +1,5 @@
+追付基数 (catching cardinal) とは、 \( \aleph _ \kappa = \beth _ \kappa \) を満たす基数 \( \kappa \) のことである。
+
+== 余談 ==
+
+catching cardinal というのがいつか出てきそうなので、先に定義するというただのいたずら。
