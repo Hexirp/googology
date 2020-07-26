@@ -33,6 +33,86 @@
 
 ただし、自然数を引数に取るならば、このように型付けされるだろう。
 
+----
+
+次は \( \mathrm{H} _ 3 \) を型付けしたいところだが、これは複雑すぎるため後回しにしておく。これは内側の型と外側の型から攻めていきたい。なので \( \lambda _ 3 \) の型を考える。
+
+<nowiki>\begin{eqnarray*}
+  \lambda _ 0      & \equiv & \Lambda _ 3 \underline{\mathtt{3}} \underline{\mathtt{3}} \\
+  { \lambda _ 0 }' & \equiv & { \Lambda _ 3 }' { \underline{\mathtt{3}} }' { \underline{\mathtt{3}} }' \\
+                   & :      & \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \\
+\end{eqnarray*}</nowiki>
+
+これの型は当然自然数となる。というより、そうならなかったら巨大数ではない。
+
+----
+
+次は \( \underline{\mathtt{3}} \) の型付けを行う。
+
+<nowiki>\begin{eqnarray*}
+  \underline{\mathtt{3}}      & \equiv & \lambda f x \ldotp f ( f ( f x ) ) \\
+  { \underline{\mathtt{3}} }' & \equiv & \Lambda A \ldotp \lambda f ^ { A \rightarrow A } x ^ A \ldotp f ( f ( f x ) ) \\
+                              & :      & \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \\
+\end{eqnarray*}</nowiki>
+
+これも名前ろ値から考えて自然数である。
+
+----
+
+上記の二つの式の型から \( \Lambda _ 3 \) の型を計算することが可能になる。
+
+<nowiki>\begin{eqnarray*}
+  \Lambda _ 3      & \equiv & \lambda m n \ldotp n \mathrm{H} _ 3 \mathtt{h} _ 0 m m \\
+  { \Lambda _ 3 }' & \equiv & \textrm{???} \\
+                   & :      & ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \\
+\end{eqnarray*}</nowiki>
+
+ここでようやく全体像が見えてくる。つまり、 \( \mathtt{h} _ 0 \) 、すなわち冪乗を何らかの形式で繰り返したものが \( \Lambda _ 3 \) であり、冪乗の繰り返しを行うのが \( \mathrm{H} _ 3 \) だと予想される。
+
+\[ \lambda m ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } n ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } \ldotp [ n \mathrm{H} _ 3 \mathtt{h} _ 0 m m ] : \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \]
+
+ここで \( [ \_ ] \) はまだ型付けがされていない式を表す穴である。ここでは自然数であるべき箇所が示されている。
+
+\[ \lambda m ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } n ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } \ldotp \Lambda A \ldotp [ n \mathrm{H} _ 3 \mathtt{h} _ 0 m m ] : ( A \rightarrow A ) \rightarrow A \rightarrow A \]
+
+\( A \) を外側に括りだしてみる。この先の推論が上手く行かないため、これは失敗である。
+
+\[ \lambda m ^ \mathbb{N} n ^ \mathbb{N} \ldotp [ n \mathrm{H} _ 3 \mathtt{h} _ 0 m m ] : \mathbb{N} \]
+
+\( \mathbb{N} \coloneqq \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \) を導入する。
+
+\[ \lambda m ^ \mathbb{N} n ^ \mathbb{N} \ldotp n ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) { \mathrm{H} _ 3 }' { \mathtt{h} _ 0 }' m m \]
+
+\( n \) が何を繰り返すのか考えるとこうなる。まず、 \( { \mathtt{h} _ 0 }' m m : \mathbb{N} \), \( { \mathrm{H} _ 3 }' { \mathtt{h} _ 0 }' m m : \mathbb{N} \), \( { \mathrm{H} _ 3 }' ( { \mathrm{H} _ 3 }' { \mathtt{h} _ 0 }' ) m m : \mathbb{N} \), ... であることを押さえておく。すると、 \( \mathrm{H} _ 3 \) は自然数に関する二項演算子を受け取って自然数に関する二項演算子を返す関数となる。これは \( n \) で繰り返し可能な操作である。
+
+<nowiki>\begin{eqnarray*}
+  \Lambda _ 3      & \equiv & \lambda m n \ldotp n \mathrm{H} _ 3 \mathtt{h} _ 0 m m \\
+  { \Lambda _ 3 }' & \equiv & \lambda m ^ \mathbb{N} n ^ \mathbb{N} \ldotp n ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) { \mathrm{H} _ 3 }' { \mathtt{h} _ 0 }' m m \\
+                   & :      & \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} \\
+\end{eqnarray*}</nowiki>
+
+最終的にこうなる。
+
+----
+
+この結果から \( { \mathrm{H} _ 3 }' : ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) \rightarrow \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} \) であると分かる。
+
+<nowiki>\begin{eqnarray*}
+  \mathrm{H} _ 3      & \equiv & \lambda H m n \ldotp H n n ( \lambda T L k \ldotp L k \mathtt{h} _ 0 k k T \mathbf{B} ) ( \lambda L k \ldotp k ( \lambda F x y \ldotp L y F x x ) ) \mathtt{h} _ 0 m m \\
+  { \mathrm{H} _ 3 }' & \equiv & \textrm{???} \\
+                   & :      & ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) \rightarrow \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} \\
+\end{eqnarray*}</nowiki>
+
+つまり、こうである。
+
+<nowiki>\begin{eqnarray*}
+  \mathrm{H} _ 3      & \equiv & \lambda H m n \ldotp H n n ( \lambda T L k \ldotp L k \mathtt{h} _ 0 k k T \mathbf{B} ) ( \lambda L k \ldotp k ( \lambda F x y \ldotp L y F x x ) ) \mathtt{h} _ 0 m m \\
+  { \mathrm{H} _ 3 }' & \equiv & \lambda H ^ { \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} } m ^ \mathbb{N} n ^ \mathbb{N} \ldotp \textrm{???} \\
+                   & :      & ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) \rightarrow \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} \\
+\end{eqnarray*}</nowiki>
+
+さらに、簡単に分かる範囲の式を埋めていく。
+
 == 関連項目 ==
 
 {{User:Hexirp/式神巨大数}}
