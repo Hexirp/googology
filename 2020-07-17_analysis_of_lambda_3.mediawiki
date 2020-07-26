@@ -55,7 +55,7 @@
                               & :      & \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \\
 \end{eqnarray*}</nowiki>
 
-これも名前ろ値から考えて自然数である。
+これも名前と値から考えて自然数である。
 
 ----
 
@@ -79,7 +79,7 @@
 
 \[ \lambda m ^ \mathbb{N} n ^ \mathbb{N} \ldotp [ n \mathrm{H} _ 3 \mathtt{h} _ 0 m m ] : \mathbb{N} \]
 
-\( \mathbb{N} \coloneqq \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \) を導入する。
+\( \mathbb{N} \equiv \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \) を導入する。
 
 \[ \lambda m ^ \mathbb{N} n ^ \mathbb{N} \ldotp n ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) { \mathrm{H} _ 3 }' { \mathtt{h} _ 0 }' m m \]
 
