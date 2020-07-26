@@ -113,6 +113,20 @@
 
 さらに、簡単に分かる範囲の式を埋めていく。
 
+<nowiki>\begin{eqnarray*}
+  \mathrm{H} _ 3      & \equiv & \lambda H m n \ldotp H n n ( \lambda T L k \ldotp L k \mathtt{h} _ 0 k k T \mathbf{B} ) ( \lambda L k \ldotp k ( \lambda F x y \ldotp L y F x x ) ) \mathtt{h} _ 0 m m \\
+  { \mathrm{H} _ 3 }' & \equiv & \lambda H ^ { \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} } m ^ \mathbb{N} n ^ \mathbb{N} \ldotp ( H n n \mathsf{T} ( [ \lambda T L k \ldotp L k \mathtt{h} _ 0 k k T \mathbf{B} ] : \mathsf{T} \rightarrow \mathsf{T} ) ( [ \lambda L k \ldotp k ( \lambda F x y \ldotp L y F x x ) ] : \mathsf{T} ) : \mathsf{T} ) { \mathtt{h} _ 0 }' m m \\
+                   & :      & ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) \rightarrow \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} \\
+\end{eqnarray*}</nowiki>
+
+さらに、未知の型 \( \mathsf{T} \) を使って埋めてやる。ここで、未知の型 \( \mathsf{T} \) は \( ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) \rightarrow \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} \) のことだと分かる。そのため、 \( \mathsf{T} \equiv ( \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} ) \rightarrow \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} \) とする。
+
+\( [ \lambda T L k \ldotp L k \mathtt{h} _ 0 k k T \mathbf{B} ] : \mathsf{T} \rightarrow \mathsf{T} \) にフォーカスしよう。
+
+\[ \lambda T ^ \mathsf{T} L ^ { \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N} } k ^ \mathbb{N} \ldotp [ L k \mathtt{h} _ 0 k k T \mathbf{B} ] : \mathbb{N} \rightarrow \mathbb{N} \]
+
+このようになる。
+
 == 関連項目 ==
 
 {{User:Hexirp/式神巨大数}}
