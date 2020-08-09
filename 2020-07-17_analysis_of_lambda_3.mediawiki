@@ -24,14 +24,14 @@
                       & :      & \forall A B \ldotp A \rightarrow ( A \rightarrow B ) \rightarrow B \\
 \end{eqnarray*}</nowiki>
 
-関数の適用である。 Haskell では <code>(&)</code> 演算子に該当する。
+自然な型付けを行うと、関数の適用となる。 Haskell では <code>(&)</code> 演算子に該当する。しかし、エンコードされた自然数を引数に取る時は、この型付けではダメである。
 
 <nowiki>\begin{eqnarray*}
   { \mathtt{h} _ 0 }' & \equiv & \lambda m ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } n ^ { \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A } \ldotp \Lambda A \ldotp n ( A \rightarrow A ) ( m A ) \\
                       & :      & ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow ( \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A ) \rightarrow \forall A \ldotp ( A \rightarrow A ) \rightarrow A \rightarrow A \\
 \end{eqnarray*}</nowiki>
 
-ただし、自然数を引数に取るならば、このように型付けされるだろう。
+このように型付けすると、二つの自然数を取り一つの自然数を返す関数となる。これは累乗を表す関数となる。
 
 ----
 
