@@ -20,4 +20,4 @@
 [[#Buchholz-1986|Buchholz 1986]] によると……。
 
 <span id="Buchholz-1986">W. Buchholz, A New System of Proof-Theoretic Ordinal Functions, Annals of Pure and Applied Logic, vol. 32 (1986), pp. 195--207.</span>
-<pre>
+</pre>
