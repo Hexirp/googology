@@ -1,6 +1,8 @@
 FANDOM では <code><nowiki><math>2 ^ 3</math></nowiki></code> のように math タグを使って数式を書くことが出来ます。これは Math という MediaWiki の拡張機能（[https://www.mediawiki.org/wiki/Extension:Math/ja リンク]）により実現されています。
 
-しかし、私は MediaWiki:Common.js というインターフェイスのカスタマイズ機能を用いて MathJax を読み込んで使用する方が好きです。その理由は Math 拡張では出来ないことがあるからです。
+別の方法として、コミュニティ側で独自に JavaScript インターフェイスのカスタマイズ機能を用いて MathJax を読み込んで使用する方法があります。
+
+私は Math 拡張の機能は不十分だと感じているため JavaScript インターフェイスによる MathJax を使う方が好きです。しかし、どちらにも利点と欠点があることは間違いなく、それぞれの点についてこの記事で検討を行いたいと思います。。
 
 == 入れ子の数式 ==
 
@@ -10,10 +12,12 @@ LaTeX には \textrm などのような数式の中で通常の文章を書く�
 
 LaTeX では <code>\[ 1729 = 9 ^ 3 + 10 ^ 3 \]</code> のように書くことで数式を一つの段落として記述することが出来ます。 MathJax でも大きく表示したいときや数式に番号を付けたいときなどに使用することが出来ます。 Math 拡張では、 display style を使用することが出来ないようです。
 
-== 別の立場 ==
+== モバイル版 ==
 
-もちろん、 MediaWiki の Math という拡張機能を使用する方法に利点がないわけでもないし、 MediaWiki:Common.js で MathJax を読み込む方法に欠点がないわけでもありません。
+MediaWiki:Common.js を使う方法を取ると、スマートフォンなどのモバイル環境では「 PC 版サイトを見る」機能などを使わない限り MediaWiki:Common.js が読み込まれないため、スマートフォンから閲覧する時は数式が表示されないようです。それに対して、 Math 機能では、 MediaWiki に組み込みであり一つのプロジェクトとして開発が行われているため、スマートフォン環境も考慮されており、スマートフォンでも数式が表示されます。
 
-MediaWiki:Common.js を使う方法を取ると、スマートフォン環境では「 PC 版サイトを見る」機能などを使わない限り MediaWiki:Common.js が読み込まれないため、スマートフォンから閲覧する時は数式が表示されないようです。対して、 Math 機能では、 MediaWiki に組み込みであり一つのプロジェクトとして開発が行われているため、スマートフォン環境も考慮されており、スマートフォンでも数式が表示されます。
+しかし、調査のために [https://www.mediawiki.org/wiki/Manual:Interface/JavaScript Manual:Interface/JavaScript] を見てみると [https://www.mediawiki.org/wiki/Extension:MobileFrontend MobileFrontend 拡張]により提供されるモバイル版のページでは MediaWiki:Common.js が読み込まれないと書いてあります。そして、モバイル環境で読み込まれるのは MediaWiki:Mobile.js だと記述されています。このことから、 MediaWiki:Mobile.js で MathJax を読み込んでやれば、スマートフォンで普通に閲覧した時のページ、すなわちモバイル版のページでも MathJax が動くのではないかと考えられます。
+
+== 構文の強調 ==
 
 FANDOM において、記事の編集を行うためのエディタにおいては HTML タグの形式を取る構文について一般的にハイライトが行われるため、 math タグについても同様にハイライトが行われ、どこからどこまでが数式なのか分かりやすくなります。
