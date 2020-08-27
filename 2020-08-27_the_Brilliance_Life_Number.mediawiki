@@ -22,7 +22,7 @@
     0 & ( a ( m, n ) = 1 \land x \notin \{ 2, 3 \} ) \\
     1 & ( a ( m, n ) = 1 \land x \in    \{ 2, 3 \} ) \\
   \end{cases} \\
-  x                & = & a ( m - 1, n - 1 ) + a ( m - 1, n ) + a ( m - 1, n + 1) + a ( m, n - 1 ) + a ( m, n + 1) + a ( m + 1, n - 1 ) + a ( m + 1, n ) + a ( m + 1, n + 1) \\
+  x                & = & - a ( m, n ) + \sum_{ i \in \{ -1, 0, 1 \} } \sum_{ j \in \{ -1, 0, 1 \} } a ( m + i, m + j ) \\
 \end{eqnarray*}</nowiki>
 
 ライフゲームの状態 \( a \) に対して、そのセル数 \( n ( a ) \) を次のように定義する。 \( n ( a ) \) は基数である。
