@@ -59,7 +59,7 @@
 いのちの輝き数 \( \textrm{tBoLN} \) を次のように定義する。
 
 <nowiki>\[
-  \textrm{tBoLN} = g ( { 10 } ^ { 100 } )
+  \textrm{tBoLN} = g \left ( { 10 } ^ { 100 } \right )
 \]</nowiki>
 
 == いのちの輝き関数の解析 ==
