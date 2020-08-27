@@ -1,0 +1,67 @@
+いのちの輝き数 (いのちのかがやきすう, the brilliance of life number) を次のように定義する。
+
+== ライフゲーム ==
+
+ライフゲームの状態 \( a \) を \( a \in \mathfrak{P} ( \mathbb{Z} \times \mathbb{Z} ) \) である集合として定義する。
+
+ライフゲームの状態 \( a \) と整数 \( m \) と \( n \) に対して、順序数 \( 2 \) の要素である集合 \( a ( m, n ) \) を次のように定義する。
+
+<nowiki>\[
+  a ( m, n ) = \begin{cases}
+    0 & ( \langle m, n \rangle \notin a ) \\
+    1 & ( \langle m, n \rangle \in    a ) \\
+  \end{cases}
+\]</nowiki>
+
+ライフゲームの状態 \( a \) に対して、ライフゲームの状態 \( f ( a ) \) を次のような式を満たすものとして定義する。
+
+<nowiki>\begin{eqnarray*}
+  f ( a ) ( m, n ) & = & \begin{cases}
+    0 & ( a ( m, n ) = 0 \land x \notin \{ 3 \}    ) \\
+    1 & ( a ( m, n ) = 0 \land x \in    \{ 3 \}    ) \\
+    0 & ( a ( m, n ) = 1 \land x \notin \{ 2, 3 \} ) \\
+    1 & ( a ( m, n ) = 1 \land x \in    \{ 2, 3 \} ) \\
+  \end{cases} \\
+  x                & = & a ( m - 1, n - 1 ) + a ( m - 1, n ) + a ( m - 1, n + 1) + a ( m, n - 1 ) + a ( m, n + 1) + a ( m + 1, n - 1 ) + a ( m + 1, n ) + a ( m + 1, n + 1) \\
+\end{eqnarray*}</nowiki>
+
+ライフゲームの状態 \( a \) に対して、そのセル数 \( n ( a ) \) を次のように定義する。 \( n ( a ) \) は基数である。
+
+<nowiki>\[
+  n ( a ) = | a |
+\]</nowiki>
+
+== いのちの輝き関数 ==
+
+ライフゲームの状態 \( a \) に対して、そのステップ数 \( s ( a ) \) を次のように定義する。
+
+<nowiki>\[
+  s ( a ) = \min ( \{ n \mid n \in \mathbb{N} \land f ^ n ( a ) = f ^ { n + 1 } ( a ) \} \cup \{ \omega \} )
+\]</nowiki>
+
+ライフゲームの状態 \( a \) に対して、その出力 \( o ( a ) \) を次のように定義する。
+
+<nowiki>\[
+  o ( a ) = \begin{cases}
+    n ( f ^ n ( a ) ) & ( s ( a ) = n \land n \in \omega ) \\
+    \omega            & ( s ( a ) = \omega               ) \\
+  \end{cases}
+\]</nowiki>
+
+いのちの輝き関数 \( g \colon \mathbb{N} \rightarrow \mathbb{N} \) を次のように定義する。
+
+<nowiki>\[
+  g ( n ) = \max ( \{ o ( a ) \mid a \in  \mathfrak{P} ( \mathbb{Z} \times \mathbb{Z} ) \land n ( a ) = n \} \cap \omega )
+\]</nowiki>
+
+== いのちの輝き数 ==
+
+いのちの輝き数 \( \textrm{tBoL} \) を次のように定義する。
+
+<nowiki>\[
+  \textrm{tBoL} = g ( { 10 } ^ { 100 } )
+\]</nowiki>
+
+== 余談 ==
+
+[https://twitter.com/1Hassium/status/1298914316247134210 108Hassium さんによる素晴らしい作品]に着想を得ています。
