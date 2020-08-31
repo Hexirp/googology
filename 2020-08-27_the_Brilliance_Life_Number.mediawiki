@@ -36,13 +36,13 @@
 ライフゲームの状態 \( a \) に対して、そのサイズ \( s ( a ) \) を次のように定義する。
 
 <nowiki>\[
-  s ( a ) = \min \{ x \mid  < \omega + 1 \land \forall m _ 1 n _ 1 m _ 2 n _ 2 \ldotp \langle m _ 1, n _ 1 \rangle \in a \land \langle m _ 2, n _ 2 \rangle \in a \rightarrow \max ( | m _ 1 - m _ 2 |, | n _ 1 - n _ 2 | ) \leq x \}
+  s ( a ) = \min \{ x \in \omega + 1 \mid \forall m _ 1 n _ 1 m _ 2 n _ 2 \ldotp \langle m _ 1, n _ 1 \rangle \in a \land \langle m _ 2, n _ 2 \rangle \in a \rightarrow \max ( | m _ 1 - m _ 2 |, | n _ 1 - n _ 2 | ) \leq x \}
 \]</nowiki>
 
 ライフゲームの状態 \( a \) に対して、その出力 \( o ( a ) \) を次のように定義する。
 
 <nowiki>\[
-  o ( a ) = \min \{ x \mid x < \omega + 1 \land \forall n \ldotp n ( f ^ n ( a ) ) \leq x \}
+  o ( a ) = \min \{ x \in \omega + 1 \mid \forall n \ldotp n ( f ^ n ( a ) ) \leq x \}
 \]</nowiki>
 
 いのちの輝き関数 \( g \colon \mathbb{N} \rightarrow \mathbb{N} \) を次のように定義する。
