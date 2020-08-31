@@ -33,6 +33,12 @@
 
 == いのちの輝き関数 ==
 
+ライフゲームの状態 \( a \) に対して、そのサイズ \( s ( a ) \) を次のように定義する。
+
+<nowiki>\[
+  s ( a ) = \min \{ x \mid  < \omega + 1 \land \forall m _ 1 n _ 1 m _ 2 n _ 2 \ldotp \langle m _ 1, n _ 1 \rangle \in a \land \langle m _ 2, n _ 2 \rangle \in a \rightarrow \max ( | m _ 1 - m _ 2 |, | n _ 1 - n _ 2 | ) \leq x \}
+\]</nowiki>
+
 ライフゲームの状態 \( a \) に対して、その出力 \( o ( a ) \) を次のように定義する。
 
 <nowiki>\[
@@ -41,9 +47,13 @@
 
 いのちの輝き関数 \( g \colon \mathbb{N} \rightarrow \mathbb{N} \) を次のように定義する。
 
-<nowiki>\[
-  g ( n ) = \max ( \{ o ( a ) \mid a \in \mathfrak{P} ( \mathbb{Z} \times \mathbb{Z} ) \land n ( a ) = n \} \cap \omega )
-\]</nowiki>
+<nowiki>\begin{eqnarray*}
+  g ( n ) & = & \max ( \{ o ( a ) \mid a \in \mathfrak{P} ( \mathbb{Z} \times \mathbb{Z} ) \land n ( a ) = n \land P \} \cap \omega ) \\
+  P & \leftrightarrow & \begin{cases}
+    \top               & ( n = 0      ) \\
+    s ( a ) = g ( n' ) & ( n = n' + 1 ) \\
+  \end{cases} \\
+\end{eqnarray*}</nowiki>
 
 == いのちの輝き数 ==
 
@@ -122,3 +132,5 @@
 [https://twitter.com/1Hassium/status/1298914316247134210 108Hassium さんによる素晴らしい作品]に着想を得ています。
 
 2020年08月28日、より多くの輝きを認めるようにバージョンアップしました。
+
+2020年08月31日、 Mituki さんと Emk さんの変更案を取り入れました。
