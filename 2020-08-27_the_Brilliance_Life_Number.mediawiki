@@ -49,10 +49,10 @@
 いのちの輝き関数 \( g \colon \mathbb{N} \rightarrow \mathbb{N} \) を次のように定義する。
 
 <nowiki>\begin{eqnarray*}
-  g ( n ) & =               & \max ( \{ o ( a ) \mid a \in \mathfrak{P} ( \mathbb{Z} \times \mathbb{Z} ) \land n ( a ) = n \land P \} \cap \omega ) \\
+  g ( n ) & =               & \max ( \{ o ( a ) \mid a \in \mathfrak{P} ( \mathbb{Z} \times \mathbb{Z} ) \land n ( a ) \leq n \land P \} \cap \omega ) \\
   P       & \leftrightarrow & \begin{cases}
-    \top               & ( n = 0      ) \\
-    s ( a ) = g ( n' ) & ( n = n' + 1 ) \\
+    \top                  & ( n = 0      ) \\
+    s ( a ) \leq g ( n' ) & ( n = n' + 1 ) \\
   \end{cases} \\
 \end{eqnarray*}</nowiki>
 
