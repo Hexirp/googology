@@ -2,7 +2,7 @@
 
 == 定義 ==
 
-\( \Omega \) を都合の良い巨大な順序数とする。例えば \( \Omega = \omega _ 1 \) などである。
+\( \Omega \) を都合の良い巨大な順序数とする。例えば \( \omega _ 1 \) などである。
 
 \( C ^ \Omega ( \alpha, \beta ) \) を \( + \) と \( \xi \mapsto \omega ^ \xi \) と \( \xi _ { \_ < \Omega } \mapsto \psi _ \Omega ( \xi ) \) に対する \( \beta \cup \{ 0, \Omega \} \) の閉包とする。
 
