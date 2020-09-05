@@ -7,3 +7,9 @@
 \( C ^ \Omega ( \alpha, \beta ) \) を \( + \) と \( \xi \mapsto \omega ^ \xi \) と \( \xi _ { \_ < \Omega } \mapsto \psi _ \Omega ( \xi ) \) に対する \( \beta \cup \{ 0, \Omega \} \) の閉包とする。
 
 \( \psi _ \Omega ( \alpha ) \) を \( \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \) とする。
+
+=== 定義の解説 ===
+
+\( \psi _ \Omega ( \alpha ) \) は超限再帰により定義されます。もっと詳しくするならば \( [ \psi _ \Omega ( \alpha ) = \gamma ] \) という \( \alpha \) と \( \gamma \) を取るアリティが 2 の述語に対して、次の論理式が成り立つことが超限帰納法により証明されるという形となるはずです。
+
+\[ \forall \alpha \ldotp \alpha \in \mathrm{On} \rightarrow \exists \gamma \ldotp \gamma \in \mathrm{On} \land [ \psi _ \Omega ( \alpha ) = \gamma ] \land \forall \gamma' \ldotp \gamma' \in \mathrm{On} \land [ \psi _ \Omega ( \alpha ) = \gamma' ] \rightarrow \gamma = \gamma' \]
