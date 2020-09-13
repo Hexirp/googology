@@ -36,7 +36,7 @@
 \( x \in \mathrm{AP} \) は \( x \in \mathrm{On} \land \forall \alpha \beta \gamma \ldotp \alpha \in x \land \beta \in x \land [ \alpha + \beta = \gamma ] \rightarrow \gamma \in x \) と同値であるとする。
 {{User:Hexirp/bxl}}
 
-加素順序数<ref group="note>筆者による独自の訳である。</ref> (additive principal number) のクラスを定義する。これはのちの性質を記述するために必要になる。
+加素順序数<ref group="note">筆者による独自の訳である。</ref> (additive principal number) のクラスを定義する。これはのちの性質を記述するために必要になる。
 
 {{User:Hexirp/bxu|仮定 2.4}}
 \[ \forall x y z \ldotp [ x + y = z ] \land ( \exists w \ldotp w \in \mathrm{AP} \land x < w \land w \leq y ) \rightarrow y = z \]
