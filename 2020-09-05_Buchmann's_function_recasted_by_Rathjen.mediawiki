@@ -4,7 +4,7 @@
 
 \( \Omega \) を都合の良い巨大な順序数とする。例えば \( \omega _ 1 \) などである。
 
-\( C ^ \Omega ( \alpha, \beta ) \) を \( + \) と \( \xi \mapsto \omega ^ \xi \) と \( \xi _ { \_ < \alpha } \mapsto \psi _ \Omega ( \xi ) \) に対する \( \beta \cup \{ 0, \Omega \} \) の閉包とする。
+\( C ^ \Omega ( \alpha, \beta ) \) を \( ( \xi, \zeta ) \mapsto \xi + \zeta \) と \( \xi \mapsto \omega ^ \xi \) と \( \xi _ { \_ < \alpha } \mapsto \psi _ \Omega ( \xi ) \) に対する \( \beta \cup \{ 0, \Omega \} \) の閉包とする。
 
 \( \psi _ \Omega ( \alpha ) \) を \( \min \{ \rho < \Omega : C ^ \Omega ( \alpha, \rho ) \cap \Omega = \rho \} \) とする。
 
@@ -14,4 +14,40 @@
 
 \[ \forall \alpha \ldotp \alpha \in \mathrm{On} \rightarrow \exists \gamma \ldotp \gamma \in \mathrm{On} \land [ \psi _ \Omega ( \alpha ) = \gamma ] \land \forall \gamma' \ldotp \gamma' \in \mathrm{On} \land [ \psi _ \Omega ( \alpha ) = \gamma' ] \rightarrow \gamma = \gamma' \]
 
-\( + \) と \( \xi \mapsto \omega ^ \xi \) と \( \xi _ { \_ < \alpha } \mapsto \psi _ \Omega ( \xi ) \) の定義域は \( \mathrm{On} \) であるが、 \( \xi _ { \_ < \alpha } \mapsto \psi _ \Omega ( \xi ) \) にある \( \_ < \alpha \) は定義域を \( \alpha \) 未満に制限することを示している。
+\( ( \xi, \zeta ) \mapsto \xi + \zeta \) の定義域は \( \rangle \mathrm{On}, \mathrm{On} \langle \) であり \( \xi \mapsto \omega ^ \xi \) と \( \xi \mapsto \psi _ \Omega ( \xi ) \) の定義域は \( \mathrm{On} \) である。 \( \xi _ { \_ < \alpha } \mapsto \psi _ \Omega ( \xi ) \) にある \( \_ < \alpha \) は定義域を \( \alpha \) 未満に制限することを示している。
+
+==== 加算 ====
+
+定義の基本的なパーツとして順序数の加算がある。順序数の加算は \( [ \alpha + \beta = \gamma ] \) という述語として考えられる。これについて私が期待する性質を紹介する。これらの性質はおそらく正しいが、それを私が証明できるわけではない。
+
+{{User:Hexirp/bxu|仮定 2.1}}
+\[ \forall \alpha \beta \ldotp \alpha \in \mathrm{On} \land \beta \in \mathrm{On} \rightarrow \exists _ 1 \gamma \ldotp \gamma \in \mathrm{On} \land [ \alpha + \beta = \gamma ] \]
+{{User:Hexirp/bxl}}
+
+これは \( [ \alpha + \beta = \gamma ] \) が関数であるということである。
+
+{{User:Hexirp/bxu|仮定 2.2}}
+\[ \forall x y z w v u t \ldotp \{ x, y, z, w, v, u, t \} \in \mathcal{P} \land [ x + y = z ] \land [ z + w = v ] \land [ x + u = t ] \land [ y + z = u ] \rightarrow v = t \]
+{{User:Hexirp/bxl}}
+
+これは順序数の加算について結合法則が成り立つことを表す。つまり、 \( x + ( y + z ) = ( x + y ) + z \) ということである。
+
+{{User:Hexirp/bxu|定義 2.3}}
+\( x \in \mathrm{AP} \) は \( x \in \mathrm{On} \land \forall \alpha \beta \gamma \ldotp \alpha \in x \land \beta \in x \land [ \alpha + \beta = \gamma ] \rightarrow \gamma \in x \) と同値であるとする。
+{{User:Hexirp/bxl}}
+
+加素順序数<ref group="note>筆者による独自の訳である。</ref> (additive principal number) のクラスを定義する。これはのちの性質を記述するために必要になる。
+
+{{User:Hexirp/bxu|仮定 2.4}}
+\[ \forall x y z \ldotp [ x + y = z ] \land ( \exists w \ldotp w \in \mathrm{AP} \land x < w \land w \leq y ) \rightarrow y = z \]
+
+ただし、 \( x, y, z, w \) は \( \mathrm{On} \) の要素である。
+{{User:Hexirp/bxl}}
+
+これは加法において順序数が変わらないことがあることを示す。
+
+仮定 2.2 と仮定 2.4 を使えば順序数の可算に関する標準形を計算できるはずである。
+
+== 注釈 ==
+
+<references group="note" />
