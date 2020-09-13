@@ -27,26 +27,28 @@
 これは \( [ \alpha + \beta = \gamma ] \) が関数であるということである。
 
 {{User:Hexirp/bxu|仮定 2.2}}
-\[ \forall x y z w v u t \ldotp \{ x, y, z, w, v, u, t \} \in \mathcal{P} \land [ x + y = z ] \land [ z + w = v ] \land [ x + u = t ] \land [ y + z = u ] \rightarrow v = t \]
+\[ \forall x y z w v u t \ldotp [ x + y = z ] \land [ z + w = v ] \land [ x + u = t ] \land [ y + z = u ] \rightarrow v = t \]
+
+ただし、 \( x, y, z, w, v, u, t \) は \( \mathrm{On} \) の要素である。
 {{User:Hexirp/bxl}}
 
 これは順序数の加算について結合法則が成り立つことを表す。つまり、 \( x + ( y + z ) = ( x + y ) + z \) ということである。
 
 {{User:Hexirp/bxu|定義 2.3}}
-\( x \in \mathrm{AP} \) は \( x \in \mathrm{On} \land \forall \alpha \beta \gamma \ldotp \alpha \in x \land \beta \in x \land [ \alpha + \beta = \gamma ] \rightarrow \gamma \in x \) と同値であるとする。
+\( x \in \mathrm{AP} \) は \( x \in \mathrm{On} \land \forall \alpha \beta \gamma \ldotp \alpha \in x \land \beta \in x \land [ \alpha + \beta = \gamma ] \rightarrow \gamma \in x \) と同値であるとする。これにより \( \mathrm{AP} \) というクラスが定義される。
 {{User:Hexirp/bxl}}
 
 加素順序数<ref group="note">筆者による独自の訳である。</ref> (additive principal number) のクラスを定義する。これはのちの性質を記述するために必要になる。
 
 {{User:Hexirp/bxu|仮定 2.4}}
-\[ \forall x y z \ldotp [ x + y = z ] \land ( \exists w \ldotp w \in \mathrm{AP} \land x < w \land w \leq y ) \rightarrow y = z \]
+\[ \forall x y \ldotp ( \exists z \ldotp w \in \mathrm{AP} \land x < z \land z \leq y ) \leftrightarrow [ x + y = y ] \]
 
-ただし、 \( x, y, z, w \) は \( \mathrm{On} \) の要素である。
+ただし、 \( x, y, z \) は \( \mathrm{On} \) の要素である。
 {{User:Hexirp/bxl}}
 
-これは加法において順序数が変わらないことがあることを示す。
+これは順序数の加算の第二引数における不動点の必要十分条件を示す。
 
-仮定 2.2 と仮定 2.4 を使えば順序数の可算に関する標準形を計算できるはずである。
+仮定 2.2 と仮定 2.4 を使えば順序数の加算に関する標準形を計算できるはずである。ある \( x \) に対して \( \min \{ y \in \mathrm{AP} : x < y \} \) なる順序数を計算できたら、 \( x + y \) を \( y \) に簡約できるか分かるはずである。
 
 == 注釈 ==
 
