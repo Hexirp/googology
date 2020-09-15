@@ -69,16 +69,10 @@
 これは \( \left[ \omega ^ \alpha = \beta \right] \) が関数であるということである。
 
 {{User:Hexirp/bxu|仮定 2.2}}
-\[ \forall \alpha \beta \ldotp \alpha \in \mathrm{On} \land \beta \in \mathrm{On} \land \left[ \omega ^ \alpga = \beta \right] \rightarrow \beta \in \mathrm{AP} \]
+\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow ( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \left[ \omega ^ \alpha = \beta \right] ) \leftrightarrow \beta \in \mathrm{AP} \]
 {{User:Hexirp/bxl}}
 
 これは \( \omega \) の冪と \( \mathrm{AP} \) の関係である。
-
-{{User:Hexirp/bxu|仮定 2.3}}
-\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow ( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \left[ \omega ^ \alpga = \beta \right] ) \leftrightarrow \beta \in \mathrm{AP} \]
-{{User:Hexirp/bxl}}
-
-仮定 2.2 をさらに強める。これは \( \xi \mapsto \omega ^ \xi \) の最小の値域が \( \mathrm{AP} \) であることを意味する。
 
 == 注釈 ==
 
