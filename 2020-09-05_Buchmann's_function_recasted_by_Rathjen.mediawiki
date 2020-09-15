@@ -16,6 +16,14 @@
 
 \( ( \xi, \zeta ) \mapsto \xi + \zeta \) の定義域は \( \rangle \mathrm{On}, \mathrm{On} \langle \) であり \( \xi \mapsto \omega ^ \xi \) と \( \xi \mapsto \psi _ \Omega ( \xi ) \) の定義域は \( \mathrm{On} \) である。 \( \xi _ { \_ < \alpha } \mapsto \psi _ \Omega ( \xi ) \) にある \( \_ < \alpha \) は定義域を \( \alpha \) 未満に制限することを示している。
 
+==== 量化子 ====
+
+以後、「ただ一つ存在する」を意味する量化子を次のように定義する。
+
+{{User:Hexirp/bxu|定義 1.1}}
+\( \exists _ 1 x \ldotp P ( x ) \) は \( \exists x \ldotp P ( x ) \land \forall y \ldotp P ( y ) \rightarrow x = y \) の略記とする。
+{{User:Hexirp/bxl}}
+
 ==== 加算 ====
 
 定義の基本的なパーツとして順序数の加算がある。順序数の加算は \( [ \alpha + \beta = \gamma ] \) という述語として考えられる。これについて私が期待する性質を紹介する。これらの性質はおそらく正しいが、それを私が証明できるわけではない。
@@ -49,6 +57,28 @@
 これは順序数の加算の第二引数における不動点の必要十分条件を示す。
 
 仮定 2.2 と仮定 2.4 を使えば順序数の加算に関する標準形を計算できるはずである。ある \( x \) に対して \( \min \{ y \in \mathrm{AP} : x < y \} \) なる順序数を計算できたら、 \( x + y \) を \( y \) に簡約できるか分かるはずである。
+
+==== ω の冪 ====
+
+\( \omega \) の冪も同様に述語として定義できる。
+
+{{User:Hexirp/bxu|仮定 2.1}}
+\[ \forall \alpha \ldotp \alpha \in \mathrm{On} \rightarrow \exists _ 1 \beta \ldotp \beta \in \mathrm{On} \land \left[ \omega ^ \alpha = \beta \right] \]
+{{User:Hexirp/bxl}}
+
+これは \( \left[ \omega ^ \alpha = \beta \right] \) が関数であるということである。
+
+{{User:Hexirp/bxu|仮定 2.2}}
+\[ \forall \alpha \beta \ldotp \alpha \in \mathrm{On} \land \beta \in \mathrm{On} \land \left[ \omega ^ \alpga = \beta \right] \rightarrow \beta \in \mathrm{AP} \]
+{{User:Hexirp/bxl}}
+
+これは \( \omega \) の冪と \( \mathrm{AP} \) の関係である。
+
+{{User:Hexirp/bxu|仮定 2.3}}
+\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow ( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \left[ \omega ^ \alpga = \beta \right] ) \leftrightarrow \beta \in \mathrm{AP} \]
+{{User:Hexirp/bxl}}
+
+仮定 2.2 をさらに強める。これは \( \xi \mapsto \omega ^ \xi \) の最小の値域が \( \mathrm{AP} \) であることを意味する。
 
 == 注釈 ==
 
