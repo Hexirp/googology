@@ -18,15 +18,15 @@
 
 ==== 量化子 ====
 
-以後、「ただ一つ存在する」を意味する量化子を次のように定義する。
+「ただ一つ存在する」を意味する量化子を次のように定義する。
 
 {{User:Hexirp/bxu|定義 1.1}}
-\( \exists _ 1 x \ldotp P ( x ) \) は \( \exists x \ldotp P ( x ) \land \forall y \ldotp P ( y ) \rightarrow x = y \) の略記とする。
+\( \exists _ 1 x \ldotp P ( x ) \) を \( \exists x \ldotp P ( x ) \land \forall y \ldotp P ( y ) \rightarrow x = y \) の略記とする。
 {{User:Hexirp/bxl}}
 
 ==== 加算 ====
 
-定義の基本的なパーツとして順序数の加算がある。順序数の加算は \( [ \alpha + \beta = \gamma ] \) という述語として考えられる。これについて私が期待する性質を紹介する。これらの性質はおそらく正しいが、それを私が証明できるわけではない。
+定義の基本的なパーツとして順序数の加算がある。順序数の加算は \( [ \alpha + \beta = \gamma ] \) という述語として考えられる。
 
 {{User:Hexirp/bxu|仮定 2.1}}
 \[ \forall \alpha \beta \ldotp \alpha \in \mathrm{On} \land \beta \in \mathrm{On} \rightarrow \exists _ 1 \gamma \ldotp \gamma \in \mathrm{On} \land [ \alpha + \beta = \gamma ] \]
@@ -43,13 +43,13 @@
 これは順序数の加算について結合法則が成り立つことを表す。つまり、 \( x + ( y + z ) = ( x + y ) + z \) ということである。
 
 {{User:Hexirp/bxu|定義 2.3}}
-\( x \in \mathrm{AP} \) は \( x \in \mathrm{On} \land \forall \alpha \beta \gamma \ldotp \alpha \in x \land \beta \in x \land [ \alpha + \beta = \gamma ] \rightarrow \gamma \in x \) と同値であるとする。これにより \( \mathrm{AP} \) というクラスが定義される。
+\( x \in \mathrm{AP} \) を \( x \in \mathrm{On} \land \forall \alpha \beta \gamma \ldotp \alpha \in x \land \beta \in x \land [ \alpha + \beta = \gamma ] \rightarrow \gamma \in x \) と同値であるとする。これにより \( \mathrm{AP} \) というクラスが定義される。
 {{User:Hexirp/bxl}}
 
 加素順序数<ref group="note">筆者による独自の訳である。</ref> (additive principal number) のクラスを定義する。これはのちの性質を記述するために必要になる。
 
 {{User:Hexirp/bxu|仮定 2.4}}
-\[ \forall x y \ldotp ( \exists z \ldotp w \in \mathrm{AP} \land x < z \land z \leq y ) \leftrightarrow [ x + y = y ] \]
+\[ \forall x y \ldotp ( \exists z \ldotp z \in \mathrm{AP} \land x < z \land z \leq y ) \leftrightarrow [ x + y = y ] \]
 
 ただし、 \( x, y, z \) は \( \mathrm{On} \) の要素である。
 {{User:Hexirp/bxl}}
@@ -73,6 +73,10 @@
 {{User:Hexirp/bxl}}
 
 これは \( \omega \) の冪と \( \mathrm{AP} \) の関係である。
+
+==== 閉包 ====
+
+\( C ^ \Omega ( \alpha, \beta ) \) は \( \psi _ \Omega ( \alpha ) \) と共に超限帰納法により定義されるが、ここで \( C ^ \Omega ( \alpha, \beta ) \) は自身を定義に使っていないため、 \( \psi _ \Omega ( \alpha ) \) のみを超限帰納法の対象とすることが出来る。
 
 == 注釈 ==
 
