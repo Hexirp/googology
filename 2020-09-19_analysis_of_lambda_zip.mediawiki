@@ -1,0 +1,244 @@
+[[ユーザーブログ:Merliborn/［sikigamig］Lambda-zip]] の解析を続けます。既にバグが見つかっていますが、これによる問題が発生しないことも考えられます。そこで詳細な解析を行って計算を試みます。
+
+== 便利なソフト探し ==
+
+まずはラムダ計算が出来るソフトが必要です。ウェブページだけで完結するようなソフトを探すと、最初に見つかったのは [https://crypto.stanford.edu/~blynn/lambda/ Lambda Calculus] でした。
+
+<pre>
+B = \x y z -> x (y z)
+h0 = \m n -> n m
+H3 = \H m n -> H n n (\T L k -> L k h0 k k T B) (\L k -> k (\F x y -> L y F x x)) h0 m m
+L3 = \m n -> n H3 h0 m m
+3 = \f x -> f (f (f x ))
+l3 = L3 3 3
+
+l3
+</pre>
+
+このテキストを入力して走らせてみましたが固まってしまいました。そのため、別のサイトを探すと [https://www.cl.cam.ac.uk/~rmk35/lambda_calculus/lambda_calculus.html Lambda-Calculus Evaluator] が見つかりました。
+
+<pre>
+let B fn x y z => x (y z)
+let h0 fn m n => n m
+let H3 fn H m n => H n n (fn T L k => L k h0 k k T B) (fn L k => k (fn F x y => L y F x x)) h0 m m
+let L3 fn m n => n H3 h0 m m
+let 3 fn f x => f (f (f x ))
+let l3 L3 3 3
+
+l3
+</pre>
+
+これを入力してみましたがエラーになりました。
+
+<pre>
+let B fn x => fn y => fn z => x (y z)
+let h0 fn m => fn n => n m
+let H3 fn H => fn m => fn n => H n n (fn T => fn L => fn k => L k h0 k k T B) (fn L => fn k => k (fn F => fn x => fn y => L y F x x)) h0 m m
+let L3 fn m => fn n => n H3 h0 m m
+let 3 fn f => fn x => f (f (f x ))
+let l3 L3 3 3
+
+l3
+</pre>
+
+これに入れてみたりと色々変えてみましたが、上手く行かず、使うのを止めました。次は簡約の途中を表示できるようなサイトを探しました。すると [https://github.com/nikosai/lambda-friends らむだフレンズ] というソフトが見つかりました。
+
+<pre>
+B = \x y z -> x (y z)
+h0 = \m n -> n m
+H3 = \H m n -> H n n (\T L k -> L k <h0> k k T <B>) (\L k -> k (\F x y -> L y F x x)) <h0> m m
+L3 = \m n -> n <H3> <h0> m m
+3 = \f x -> f (f (f x ))
+l3 = <L3> 3 3
+
+<l3>
+</pre>
+
+これを入力してみましたが上手く行かず、ドキュメントを読むと、定義は別のファイルで読み込ませるようです。
+
+<pre>
+B = \x y z. x (y z)
+h0 = \m n. n m
+H3 = \H m n. H n n (\T L k. L k <h0> k k T <B>) (\L k. k (\F x y. L y F x x)) <h0> m m
+L3 = \m n. n <H3> <h0> m m
+l3 = <L3> <3> <3>
+</pre>
+
+これを読み込ませてみた所、上手く行きました。
+
+== 解析 ==
+
+まずは <code><nowiki><h0> <3> <3></nowiki></code> から始めましょう。これは <code><nowiki><27></nowiki></code> になるはずです。
+
+<pre>
+<h0><3><3>
+-: (macro) = (\mn.nm)<3><3>
+1: (beta) --> (\n.n<3>)<3>
+2: (beta) --> <3><3>
+-: (macro) = (\sz.s(s(sz)))<3>
+3: (beta) --> \z.<3>(<3>(<3>z))
+-: (macro) = \z.(\sz.s(s(sz)))(<3>(<3>z))
+4: (beta) --> \za.<3>(<3>z)(<3>(<3>z)(<3>(<3>z)a))
+-: (macro) = \za.(\sz.s(s(sz)))(<3>z)(<3>(<3>z)(<3>(<3>z)a))
+5: (beta) --> \za.(\a.<3>z(<3>z(<3>za)))(<3>(<3>z)(<3>(<3>z)a))
+6: (beta) --> \za.<3>z(<3>z(<3>z(<3>(<3>z)(<3>(<3>z)a))))
+-: (macro) = \za.(\sz.s(s(sz)))z(<3>z(<3>z(<3>(<3>z)(<3>(<3>z)a))))
+7: (beta) --> \za.(\a.z(z(za)))(<3>z(<3>z(<3>(<3>z)(<3>(<3>z)a))))
+8: (beta) --> \za.z(z(z(<3>z(<3>z(<3>(<3>z)(<3>(<3>z)a))))))
+-: (macro) = \za.z(z(z((\sz.s(s(sz)))z(<3>z(<3>(<3>z)(<3>(<3>z)a))))))
+9: (beta) --> \za.z(z(z((\a.z(z(za)))(<3>z(<3>(<3>z)(<3>(<3>z)a))))))
+10: (beta) --> \za.z(z(z(z(z(z(<3>z(<3>(<3>z)(<3>(<3>z)a))))))))
+-: (macro) = \za.z(z(z(z(z(z((\sz.s(s(sz)))z(<3>(<3>z)(<3>(<3>z)a))))))))
+11: (beta) --> \za.z(z(z(z(z(z((\a.z(z(za)))(<3>(<3>z)(<3>(<3>z)a))))))))
+12: (beta) --> \za.z(z(z(z(z(z(z(z(z(<3>(<3>z)(<3>(<3>z)a))))))))))
+-: (macro) = \za.z(z(z(z(z(z(z(z(z((\sz.s(s(sz)))(<3>z)(<3>(<3>z)a))))))))))
+13: (beta) --> \za.z(z(z(z(z(z(z(z(z((\a.<3>z(<3>z(<3>za)))(<3>(<3>z)a))))))))))
+14: (beta) --> \za.z(z(z(z(z(z(z(z(z(<3>z(<3>z(<3>z(<3>(<3>z)a))))))))))))
+-: (macro) = \za.z(z(z(z(z(z(z(z(z((\sz.s(s(sz)))z(<3>z(<3>z(<3>(<3>z)a))))))))))))
+15: (beta) --> \za.z(z(z(z(z(z(z(z(z((\a.z(z(za)))(<3>z(<3>z(<3>(<3>z)a))))))))))))
+16: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(<3>z(<3>z(<3>(<3>z)a))))))))))))))
+-: (macro) = \za.z(z(z(z(z(z(z(z(z(z(z(z((\sz.s(s(sz)))z(<3>z(<3>(<3>z)a))))))))))))))
+17: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z((\a.z(z(za)))(<3>z(<3>(<3>z)a))))))))))))))
+18: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(<3>z(<3>(<3>z)a))))))))))))))))
+-: (macro) = \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\sz.s(s(sz)))z(<3>(<3>z)a))))))))))))))))
+19: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\a.z(z(za)))(<3>(<3>z)a))))))))))))))))
+20: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(<3>(<3>z)a))))))))))))))))))
+-: (macro) = \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\sz.s(s(sz)))(<3>z)a))))))))))))))))))
+21: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\a.<3>z(<3>z(<3>za)))a))))))))))))))))))
+22: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(<3>z(<3>z(<3>za))))))))))))))))))))
+-: (macro) = \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\sz.s(s(sz)))z(<3>z(<3>za))))))))))))))))))))
+23: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\a.z(z(za)))(<3>z(<3>za))))))))))))))))))))
+24: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(<3>z(<3>za))))))))))))))))))))))
+-: (macro) = \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\sz.s(s(sz)))z(<3>za))))))))))))))))))))))
+25: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\a.z(z(za)))(<3>za))))))))))))))))))))))
+26: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(<3>za))))))))))))))))))))))))
+-: (macro) = \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\sz.s(s(sz)))za))))))))))))))))))))))))
+27: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\a.z(z(za)))a))))))))))))))))))))))))
+28: (beta) --> \za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(za))))))))))))))))))))))))))    (normal form)
+  = 27 (as nat)
+</pre>
+
+このようになり、上手く行きました。ちなみに TeX として出力することも出来るようです。
+
+<nowiki>\begin{eqnarray*}
+&& \underline{\strut \,\overline{\bf h0}\,}\,\overline{\bf 3}\,\,\overline{\bf 3}\, \\
+&\equiv& (\strut \lambda{\underline{m}}n.nm)\underline{\strut \,\overline{\bf 3}\,}\,\overline{\bf 3}\, \\
+&\longrightarrow_{\beta}& (\strut \lambda{\underline{n}}.n\,\overline{\bf 3}\,)\underline{\strut \,\overline{\bf 3}\,} \\
+&\longrightarrow_{\beta}& \underline{\strut \,\overline{\bf 3}\,}\,\overline{\bf 3}\, \\
+&\equiv& (\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut \,\overline{\bf 3}\,} \\
+&\longrightarrow_{\beta}& \lambda{z}.\underline{\strut \,\overline{\bf 3}\,}(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)) \\
+&\equiv& \lambda{z}.(\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut (\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z))} \\
+&\longrightarrow_{\beta}& \lambda{za}.\underline{\strut \,\overline{\bf 3}\,}(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)) \\
+&\equiv& \lambda{za}.(\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut (\,\overline{\bf 3}\,z)}(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)) \\
+&\longrightarrow_{\beta}& \lambda{za}.(\strut \lambda{\underline{a}}.\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,za)))\underline{\strut (\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a))} \\
+&\longrightarrow_{\beta}& \lambda{za}.\underline{\strut \,\overline{\bf 3}\,}z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))) \\
+&\equiv& \lambda{za}.(\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))) \\
+&\longrightarrow_{\beta}& \lambda{za}.(\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut (\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a))))} \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(\underline{\strut \,\overline{\bf 3}\,}z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))) \\
+&\equiv& \lambda{za}.z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z((\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut (\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))}))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z((\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut (\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a))})))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}(\,\overline{\bf 3}\,z)(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut (\,\overline{\bf 3}\,z)}(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{a}}.\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,za)))\underline{\strut (\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)}))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut (\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))}))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut (\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a))})))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}z(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))))))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}(\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut (\,\overline{\bf 3}\,(\,\overline{\bf 3}\,z)a)}))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}(\,\overline{\bf 3}\,z)a)))))))))))))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut (\,\overline{\bf 3}\,z)}a)))))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{a}}.\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,za)))\underline{\strut a})))))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}z(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,za)))))))))))))))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}(\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,za)))))))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut (\,\overline{\bf 3}\,z(\,\overline{\bf 3}\,za))})))))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}z(\,\overline{\bf 3}\,za)))))))))))))))))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}(\,\overline{\bf 3}\,za)))))))))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut (\,\overline{\bf 3}\,za)}))))))))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(\underline{\strut \,\overline{\bf 3}\,}za)))))))))))))))))))))))) \\
+&\equiv& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{s}}z.s(s(sz)))\underline{\strut z}a)))))))))))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda{za}.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z((\strut \lambda{\underline{a}}.z(z(za)))\underline{\strut a})))))))))))))))))))))))) \\
+&\longrightarrow_{\beta}& \lambda za.z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(z(za))))))))))))))))))))))))))\not\longrightarrow
+\end{eqnarray*}</nowiki>
+
+すっごーい！
+
+次は <code><nowiki><H3> (\m n s x. m s (n x)) <1> <1></nowiki></code> を入力してみましょう。
+
+<pre>
+<H3>(\mnsx.ms(nx))<1><1>
+-: (macro) = (\Hmn.Hnn(\TLk.Lk<h0>kkT<B>)(\Lk.k(\Fxy.LyFxx))<h0>mm)(\mnsx.ms(nx))<1><1>
+1: (beta) --> (\mn.(\mnsx.ms(nx))nn(\TLk.Lk<h0>kkT<B>)(\Lk.k(\Fxy.LyFxx))<h0>mm)<1><1>
+2: (beta) --> (\n.(\mnsx.ms(nx))nn(\TLk.Lk<h0>kkT<B>)(\Lk.k(\Fxy.LyFxx))<h0><1><1>)<1>
+3: (beta) --> (\mnsx.ms(nx))<1><1>(\TLk.Lk<h0>kkT<B>)(\Lk.k(\Fxy.LyFxx))<h0><1><1>
+4: (beta) --> (\nsx.<1>s(nx))<1>(\TLk.Lk<h0>kkT<B>)(\Lk.k(\Fxy.LyFxx))<h0><1><1>
+5: (beta) --> (\sx.<1>s(<1>x))(\TLk.Lk<h0>kkT<B>)(\Lk.k(\Fxy.LyFxx))<h0><1><1>
+6: (beta) --> (\x.<1>(\TLk.Lk<h0>kkT<B>)(<1>x))(\Lk.k(\Fxy.LyFxx))<h0><1><1>
+7: (beta) --> <1>(\TLk.Lk<h0>kkT<B>)(<1>(\Lk.k(\Fxy.LyFxx)))<h0><1><1>
+-: (macro) = (\sz.sz)(\TLk.Lk<h0>kkT<B>)(<1>(\Lk.k(\Fxy.LyFxx)))<h0><1><1>
+8: (beta) --> (\z.(\TLk.Lk<h0>kkT<B>)z)(<1>(\Lk.k(\Fxy.LyFxx)))<h0><1><1>
+9: (beta) --> (\TLk.Lk<h0>kkT<B>)(<1>(\Lk.k(\Fxy.LyFxx)))<h0><1><1>
+10: (beta) --> (\Lk.Lk<h0>kk(<1>(\Lk.k(\Fxy.LyFxx)))<B>)<h0><1><1>
+11: (beta) --> (\k.<h0>k<h0>kk(<1>(\Lk.k(\Fxy.LyFxx)))<B>)<1><1>
+12: (beta) --> <h0><1><h0><1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+-: (macro) = (\mn.nm)<1><h0><1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+13: (beta) --> (\n.n<1>)<h0><1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+14: (beta) --> <h0><1><1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+-: (macro) = (\mn.nm)<1><1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+15: (beta) --> (\n.n<1>)<1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+16: (beta) --> <1><1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+-: (macro) = (\sz.sz)<1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+17: (beta) --> (\z.<1>z)<1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+18: (beta) --> <1><1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+-: (macro) = (\sz.sz)<1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+19: (beta) --> (\z.<1>z)(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+20: (beta) --> <1>(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+-: (macro) = (\sz.sz)(<1>(\Lk.k(\Fxy.LyFxx)))<B><1>
+21: (beta) --> (\z.<1>(\Lk.k(\Fxy.LyFxx))z)<B><1>
+22: (beta) --> <1>(\Lk.k(\Fxy.LyFxx))<B><1>
+-: (macro) = (\sz.sz)(\Lk.k(\Fxy.LyFxx))<B><1>
+23: (beta) --> (\z.(\Lk.k(\Fxy.LyFxx))z)<B><1>
+24: (beta) --> (\Lk.k(\Fxy.LyFxx))<B><1>
+25: (beta) --> (\k.k(\Fxy.<B>yFxx))<1>
+26: (beta) --> <1>(\Fxy.<B>yFxx)
+-: (macro) = (\sz.sz)(\Fxy.<B>yFxx)
+27: (beta) --> \z.(\Fxy.<B>yFxx)z
+28: (beta) --> \zxy.<B>yzxx
+-: (macro) = \zxy.(\xyz.x(yz))yzxx
+29: (beta) --> \zxy.(\az.y(az))zxx
+30: (beta) --> \zxy.(\b.y(zb))xx
+31: (beta) --> \zxy.y(zx)x    (normal form)
+</pre>
+
+自然数になりませんでした。[[ユーザーブログ:Hexirp/(2020-07-17)_lambda_3_の解析]]で行った型付けにより <code><nowiki><H3></nowiki></code> にバグが存在することが分かっています。これにより簡約の結果が自然数にならなかったものと思われます。もし Meriborn さんの意図通りならば、この式の簡約結果は自然数になるはずです。
+
+このことから、 \( \lambda _ 3 \) の値を示す <code><nowiki><l3> = <L3> <3> <3> = (\m n. n <H3> <h0> m m) <3> <3></nowiki></code> もまた自然数にならないのではないかと推論されます。ゆえに Scheme でのプログラムにおいても <code>fromChurchNum</code> が計算される際に何かが起こるのではないかと考えられます。
+
+実際に <code>\z x y. y (z x) x</code> に該当する項である <code>(lambda (z) (lambda (x) (lambda (y) (y (z x)))))</code> を <code>fromChurchNum</code> に与えるプログラムを書いてみました。
+
+<pre>
+(define succ
+	(lambda (n) (+ n 1)))
+
+(define fromChurchNum
+	(lambda (n)
+		((n succ) 0)))
+
+(define e
+  (lambda (z)
+    (lambda (x)
+      (lambda (y)
+        (y (z x))))))
+
+(write (fromChurchNum e))
+</pre>
+
+これを [https://repl.it/languages/scheme Repl.it] で実行すると、エラーは起きなかったものの出力結果が <code><nowiki>#<Closure></nowiki></code> となりました。これは投稿されたプログラムでも同じ状態になる可能性が高いでしょう。
+
+よって、厳密な証明はありませんが、[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Merliborn/%EF%BC%BBsikigamig%EF%BC%BDLambda-zip?oldid=23748 ユーザーブログ:Merliborn/［sikigamig］Lambda-zip] を無効とします。

@@ -1,0 +1,5 @@
+B = \x y z. x (y z)
+h0 = \m n. n m
+H3 = \H m n. H n n (\T L k. L k <h0> k k T <B>) (\L k. k (\F x y. L y F x x)) <h0> m m
+L3 = \m n. n <H3> <h0> m m
+l3 = <L3> <3> <3>

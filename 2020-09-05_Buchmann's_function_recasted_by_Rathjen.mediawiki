@@ -69,7 +69,7 @@
 これは \( \left[ \omega ^ \alpha = \beta \right] \) が関数であるということである。
 
 {{User:Hexirp/bxu|仮定 2.2}}
-\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow ( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \left[ \omega ^ \alpha = \beta \right] ) \leftrightarrow \beta \in \mathrm{AP} \]
+\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow \left( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \left[ \omega ^ \alpha = \beta \right] \right) \leftrightarrow \beta \in \mathrm{AP} \]
 {{User:Hexirp/bxl}}
 
 これは \( \omega \) の冪と \( \mathrm{AP} \) の関係である。
@@ -77,6 +77,8 @@
 ==== 閉包 ====
 
 \( C ^ \Omega ( \alpha, \beta ) \) は \( \psi _ \Omega ( \alpha ) \) と共に超限帰納法により定義されるが、ここで \( C ^ \Omega ( \alpha, \beta ) \) は自身を定義に使っていないため、 \( \psi _ \Omega ( \alpha ) \) のみを超限帰納法の対象とすることが出来る。
+
+
 
 == 注釈 ==
 
