@@ -242,3 +242,7 @@ l3 = <L3> <3> <3>
 これを [https://repl.it/languages/scheme Repl.it] で実行すると、エラーは起きなかったものの出力結果が <code><nowiki>#<Closure></nowiki></code> となりました。これは投稿されたプログラムでも同じ状態になる可能性が高いでしょう。
 
 よって、厳密な証明はありませんが、[https://googology.wikia.org/ja/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%96%E3%83%AD%E3%82%B0:Merliborn/%EF%BC%BBsikigamig%EF%BC%BDLambda-zip?oldid=23748 ユーザーブログ:Merliborn/［sikigamig］Lambda-zip] を無効とします。
+
+== 関連項目 ==
+
+{{User:Hexirp/式神巨大数}}
