@@ -35,10 +35,10 @@
 この定義は [[#新井-2016|新井 2016]] の 132 ページの定義 4.3.4 に拠る。
 
 {{User:Hexirp/bxu|定義 2.2}}
-\( [ \min X = \alpha ] \) を \( X \in \mathcal{P} ( \mathrm{On} ) \land X \neq \emptyset \land \alpha \in X \land \forall x \ldotp x \in X \rightarrow \alpha \leq x \) の略記とする。
+\( [ \min X = \alpha ] \) を \( X \in \mathcal{P} ( \mathrm{On} ) \land \alpha \in X \land \forall x \ldotp x \in X \rightarrow \alpha \leq x \) の略記とする。
 {{User:Hexirp/bxl}}
 
-順序数の集合についての最小元の表記を定義する。
+順序数の集合についての最小元の表記を定義する。なお、ここで \( X \) はクラスであっても良いとする。
 
 {{User:Hexirp/bxu|定義 2.3}}
 \( [ \sup X = \alpha ] \) を \( X \in \mathcal{P} ( \mathrm{On} ) \land \bigcup X = \alpha \) の略記とする。
@@ -81,10 +81,18 @@
 仮定 2.2 と仮定 2.4 を使えば順序数の加算に関する標準形を計算できるはずである。ある \( x \) に対して \( \min \{ y \in \mathrm{AP} : x < y \} \) なる順序数を計算できたら、 \( x + y \) を \( y \) に簡約できるか分かるはずである。
 
 {{User:Hexirp/bxu|定義 3.5}}
-\( [ \mathrm{succ} _ \mathrm{AP} ( x ) = y \) を \( [ \min \{ x' \in | \mathcal{P} ( x ) } | : x' \in \mathrm{AP} \land x < x' \land  \} = y ] \) の略記とする。
+\( [ \mathrm{succ} _ \mathrm{AP} ( x ) = y \) を \( [ \min \{ x' \in \mathrm{AP} : x < x' \} = y ] \) の略記とする。
 {{User:Hexirp/bxl}}
 
-\( \mathrm{AP} \) において次に大きい順序数を計算する関数を定義する。 \( \{ x' \in | \mathcal{P} ( x ) } | : x' \in \mathrm{AP} \land x < x' \land  \} \) の部分は \( \{ x' \in \mathrm{AP} : x < x' \land  \} \) と書くのが簡単だが、これでは真のクラスになってしまう。
+標準形の定義の補助のための関数を定義する。
+
+{{User:Hexirp/bxu|仮定 3.6}}
+\[ [ \forall x \ldotp x \in \mathrm{On} \rightarrow \exists _ 1 y \ldotp y \in \mathrm{On} \land \mathrm{succ} _ \mathrm{AP} ( x ) = y \]
+
+\( \mathrm{AP} \) には上限がなく、それゆえに \( \min \{ x' \in \mathrm{AP} : x < x' \} \) の値は存在する。最小性より一意性も成り立つ。
+{{User:Hexirp/bxl}}
+
+\( \mathrm{succ} _ \mathrm{AP} ( x ) \) が定義できていることを仮定する。
 
 {{User:Hexirp/bxu|定義 3.6}}
 \( \mathrm{NF} _ { + } ( \alpha, \beta ) \) を \( \alpha \in \mathrm{AP} \land 
@@ -101,7 +109,7 @@
 これは \( \left[ \omega ^ \alpha = \beta \right] \) が関数であるということである。
 
 {{User:Hexirp/bxu|仮定 4.2}}
-\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow \left( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \left[ \omega ^ \alpha = \beta \right] \right) \leftrightarrow \beta \in \mathrm{AP} \]
+\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow \beta = 0 \lor \left( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \left[ \omega ^ \alpha = \beta \right] \right) \leftrightarrow \beta \in \mathrm{AP} \]
 {{User:Hexirp/bxl}}
 
 これは \( \omega \) の冪と \( \mathrm{AP} \) の関係である。
