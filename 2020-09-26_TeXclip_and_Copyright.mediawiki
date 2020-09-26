@@ -1,0 +1,7 @@
+数式の画像を生成できるウェブサイトとして [https://texclip.marutank.net/ TeXclip] というものが存在する。これにより生成された画像を CC-BY-SA でライセンスすることは可能であろうか。
+
+まず、ソフトウェアにより自動生成された画像の著作権はどうなるのか。これについては、[https://storialaw.jp/blog/3573 萌えキャラ生成AIを題材に「AIビジネスと法律」を学ぼう] ([https://web.archive.org/web/20170930151832/https://storialaw.jp/blog/3573 archive]) という記事を参考にすると、「人間の寄与が、「創作的寄与」が認められないような簡単な指示に留まる場合」に該当すると思われ、誰も権利を保有しないことになる。つまり、パブリック・ドメインになる。
+
+しかし、ここでフォントについてのライセンスも考慮しなければならないと考えられる。 TeXclip ではフォントの選択が可能であり、デフォルトである Computer Modern はドナルド・クヌース氏により作成（！）されたフォントである。このフォントは Wikipedia の項目 ([https://en.wikipedia.org/w/index.php?title=Computer_Modern&oldid=979490656 Computer Modern]) を読む限り 、画像に変えて利用することは自由なようである。
+
+よって、 TeXclip において Computer Modern を選択する限り、生成された画像はパブリック・ドメインで利用できると考えられる。
