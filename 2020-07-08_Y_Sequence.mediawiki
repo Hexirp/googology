@@ -14,7 +14,7 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
 
 ゆきと自身による数学的に厳密な定義は存在しない<ref name="assertion" />。2019年5月に、Y数列を使用する巨大数がゆきとにより[[#東方巨大数3]]へ投稿されたが、無効となった（[https://twitter.com/rpakr_googology/status/1142025591866003456 リンク]）<ref name="survey" />。この定義は [https://docs.google.com/document/d/1dA3V_5ZMfXN-z3X-g-yoJfmoTvKuk3efeaKaBFw8Vhs/edit?usp=sharing Google ドキュメントで作成された文書]として投稿されたが、今では内容が大幅に削除されていて当時の定義とは一致していない<ref name="survey" />。削除される前に \( (1,3) \) 未満の行列に対する定義について [[ユーザーブログ:Koteitan/(1,3)未満のY数列の定義|Koteitan による数式化]]が行われているため、この記事を通して削除された定義の内容を伺うことはできる<ref name="survey" />。特に重要なのは Koteitan が[[#活性化関数]]と呼ぶものに該当する関数が \( n \mapsto n + 1 \) であると知ることができることだろう<ref name="assertion" />。ゆきとが内容を履歴から復元したドキュメントも存在する（[https://googology.wikia.org/ja/wiki/%E3%83%88%E3%83%BC%E3%82%AF:Y%E6%95%B0%E5%88%97/@comment-35560820-20200827135313?oldid=28043 リンク]）<ref name="survey" />。
 
-ゆきとは、2020年8月16日にY数列の定義の完成を示唆しており、 Naruyoko によるウェブアプリ（[https://yny-sequence.glitch.me/ リンク]）で実装される YNy Sequence に問題がなければ、それをY数列の定義とするとしている（[https://twitter.com/Y_Y_Googology/status/1294665262394818560 リンク]）<ref name="survey" />。2020年9月1日、ゆきとによりY数列の完成が宣言された（[https://twitter.com/Y_Y_Googology/status/1300502321114177536 リンク]）<ref name="survey" />。
+ゆきとは、2020年8月16日にY数列の定義の完成を示唆しており、 Naruyoko によるウェブアプリ（[https://yny-sequence.glitch.me/ リンク]）で実装される YNy Sequence に問題がなければ、それをY数列の定義とするとしている（[https://twitter.com/Y_Y_Googology/status/1294665262394818560 リンク]）<ref name="survey" />。2020年9月1日、ゆきとにより YNy Sequence がY数列の定義となるとして定義の完成が宣言された（[https://twitter.com/Y_Y_Googology/status/1300502321114177536 リンク]）<ref name="survey" />。
 
 ゆきとはツイッターにおいて、 Discord での議論を通して原型ができたのは2018年6月15日のことだとしている（[https://twitter.com/Y_Y_Googology/status/1278895135388925953 当該ツイート]）<ref name="assertion" />。
 
@@ -38,6 +38,8 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
 
 2020年7月3日、 [[#Ecl1psed]] が \( ( 1, 2, 4, 8, 10, 8 ) \) を \( ( 1, 2, 4, 8, 10, 7, 12, 15, \ldots ) \) と展開するタイプの[[#Y的数列システム]]において無限ループを発見した<ref name="2020-07-03">[[ユーザーブログ:Hexirp/(2020-07-03)_Y数列_Hexirp_版_2.1_の無限ループ]]。</ref>。
 
+2020年9月1日、ゆきとがY数列の定義の完成を宣言した（[https://twitter.com/Y_Y_Googology/status/1300502321114177536 リンク]）<ref name="survey" />。
+
 === 定義 ===
 
 [https://docs.google.com/document/d/1dA3V_5ZMfXN-z3X-g-yoJfmoTvKuk3efeaKaBFw8Vhs/edit?usp=sharing ゆきと本人による文書]の2020年7月8日時点における内容は、数列の一部に対してのみ定義を与えるものである<ref name="survey" />。その定義の一部を取り出して私が整えて書き下すと以下のようになる<ref name="assertion" />。
@@ -49,11 +51,15 @@ Y数列の表記は[[バシク行列システム]]に類似しており、数列
   \mathsf{Y} ( S _ 1, S _ 1, \ldots, S _ { m - 1 }, 1 ) [ n ] & = & \mathsf{Y} ( S _ 1, S _ 1, \ldots, S _ { m - 1 } ) [ n + 1 ] \\
 \end{eqnarray*}</nowiki>
 
+2020年9月1日、Y数列の定義が YNy Sequence により定まった（[https://twitter.com/Y_Y_Googology/status/1300502321114177536 リンク]）<ref name="survey" />。
+
 Y数列を使用する巨大数として、[[#Y数列数]]が \( f ( n ) = Y ( 1, \omega ) [ n ] \) としたときの \( f ^ { 2000 } ( 1 ) \) として定義されている<ref name="survey" />。
 
 === 展開 ===
 
-2020年7月現在、Y数列の定義は存在しない<ref name="assertion" />。しかしながら、展開についての例は豊富に存在する<ref name="assertion" />。たとえば、短い数列に対して列挙するもの（[https://docs.google.com/spreadsheets/d/1dHcT7kQ7bZeJlBp26OlcYmUfbeP_UaxfBtIUISendt4/edit?usp=sharing リンク]）や、展開の予測が困難な数列や展開が定まっていない数列を纏めたもの（[https://docs.google.com/spreadsheets/d/1ixioIFZcLGk_Gk3FvSLtpOz3HHOVCzLemsMMVjUe380/edit?usp=sharing リンク]）や、Y数列とは少し離れるが[[#Y的数列システム]]の展開を比較したもの（[https://docs.google.com/spreadsheets/d/1Rp9twxUbD-xbp05zTfQ6w2rYCTEGs7M5EqBjsvCuTYE/edit?usp=sharing リンク]）が存在する<ref name="survey" />。
+2020年7月時点では、Y数列の定義は存在しない<ref name="assertion" />。しかしながら、展開についての例は豊富に存在する<ref name="assertion" />。たとえば、短い数列に対して列挙するもの（[https://docs.google.com/spreadsheets/d/1dHcT7kQ7bZeJlBp26OlcYmUfbeP_UaxfBtIUISendt4/edit?usp=sharing リンク]）や、展開の予測が困難な数列や展開が定まっていない数列を纏めたもの（[https://docs.google.com/spreadsheets/d/1ixioIFZcLGk_Gk3FvSLtpOz3HHOVCzLemsMMVjUe380/edit?usp=sharing リンク]）や、Y数列とは少し離れるが[[#Y的数列システム]]の展開を比較したもの（[https://docs.google.com/spreadsheets/d/1Rp9twxUbD-xbp05zTfQ6w2rYCTEGs7M5EqBjsvCuTYE/edit?usp=sharing リンク]）が存在する<ref name="survey" />。
+
+2020年9月初め、Y数列の定義が定まった（[https://twitter.com/Y_Y_Googology/status/1300502321114177536 リンク]）<ref name="survey" />。
 
 2020年6月末に[[#ゆきと]]による \( (1,2,4,8,10,8) \) の公式の展開が \( (1,2,4,8,7,12,15,11,17,21) \) から \( (1,2,4,8,10,7,14,11,17,19) \) に変更された<ref name="self" />。これについて koteitan は[https://twitter.com/koteitan/status/1277219049999482882 このツイート]のような指摘が発端であるというツイートを行っている（[https://twitter.com/koteitan/status/1278115455954292738 当該ツイート]）<ref name="survey" />。このことからゆきとが変更を決めたのは、おそらく、2020年6月28日から2020年6月29日にかけての夜であると考えられる<ref name="assertion" />。
 
