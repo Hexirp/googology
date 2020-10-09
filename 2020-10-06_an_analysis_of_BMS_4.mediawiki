@@ -484,7 +484,7 @@
 {{User:Hexirp/bxl}}
 {{User:Hexirp/tcl}}
 {{User:Hexirp/tcu}}
-\( (0)(1)(1)[2] = (0)(1)(0)(1)
+\( (0)(1)(1)[2] = (0)(1)(0)(1)(0)(1) \)
 {{User:Hexirp/tcm}}
 法則-2 より \( \w + \w + \w \) に対応する。
 
