@@ -483,6 +483,9 @@
 \( A \) に \( (0)(1) \) を加えることは、それに対応する順序数 \( a \) に \( \w \) を足すことに等しい。
 {{User:Hexirp/bxl}}
 {{User:Hexirp/tcl}}
+{{User:Hexirp/tcu}}
+\( (0)(1)(1)[2] = (0)(1)(0)(1)
+{{User:Hexirp/tcm}}
 法則-2 より \( \w + \w + \w \) に対応する。
 
 * CNF - \( \w ^ { \w ^ 0 } + \w ^ { \w ^ 0 } + \w ^ { \w ^ 0 } \)
@@ -561,6 +564,7 @@
 * RFM(A) - \( \w ^ 2 \)
 * RFM(ME) - \( \w ^ 2 \)
 <!-- 途中 -->
+{{User:Hexirp/tcl}}
 {{User:Hexirp/tcl}}
 {{User:Hexirp/tcl}}
 {{User:Hexirp/tcl}}
