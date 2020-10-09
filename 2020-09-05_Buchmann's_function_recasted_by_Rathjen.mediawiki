@@ -57,7 +57,9 @@
 これは \( [ \alpha + \beta = \gamma ] \) が \( \mathrm{On} \) における関数であることを表す。
 
 {{User:Hexirp/bxu|仮定 3.2}}
-\[ \forall x y z \in \mathrm{On} \ldotp \( \{ x, y, z \} \in \mathcal{P} ( \mathrm{On} ) \) \rightarrow x + ( y + z ) = ( x + y ) + z \]
+\[ \forall x y z \ldotp x + ( y + z ) = ( x + y ) + z \]
+
+ただし、 \( x, y, z \) は \( \mathrm{On} \) の要素である。
 {{User:Hexirp/bxl}}
 
 これは順序数の加算の結合法則を表す。
@@ -106,17 +108,41 @@
 \[ \forall \alpha \ldotp \alpha \in \mathrm{On} \rightarrow \exists _ 1 \beta \ldotp \beta \in \mathrm{On} \land \left[ \omega ^ \alpha = \beta \right] \]
 {{User:Hexirp/bxl}}
 
-これは \( \left[ \omega ^ \alpha = \beta \right] \) が関数であるということである。
+これは \( \left[ \omega ^ \alpha = \beta \right] \) が関数であることを表す。
 
 {{User:Hexirp/bxu|仮定 4.2}}
-\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow \beta = 0 \lor \left( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \left[ \omega ^ \alpha = \beta \right] \right) \leftrightarrow \beta \in \mathrm{AP} \]
+\[ \forall \beta \ldotp \beta \in \mathrm{On} \rightarrow \left( \exists \alpha \ldotp \alpha \in \mathrm{On} \land \omega ^ \alpha = \beta \right) \leftrightarrow \beta \in \mathrm{AP} \]
 {{User:Hexirp/bxl}}
 
-これは \( \omega \) の冪と \( \mathrm{AP} \) の関係である。
+これは \( \omega \) の冪と \( \mathrm{AP} \) の関係を表す。
+
+{{User:Hexirp/bxu|定義 4.3}}
+\( x \in \mathrm{Cr} \) を \( \alpha \in \mathrm{On} \land \omega ^ \alpha = \alpha \) と同値であるとする。
+{{User:Hexirp/bxl}}
+
+臨界順序数<ref group="note">筆者による "strong critical" を参考にした造語である。</ref> (critical ordinal<ref group="note">筆者による "strong critical" を参考にした造語である。</ref>) のクラスを定義する。
+
+{{User:Hexirp/bxu|定義 4.4}}
+\( x \in \mathrm{NCr} \) を \( \alpha \in \mathrm{On} \land \alpha < \omega ^ \alpha \) と同値であるとする。
+{{User:Hexirp/bxl}}
+
+非臨界順序数<ref group="note">筆者による "strong critical" を参考にした造語である。</ref> (non-critical ordinal<ref group="note">筆者による "strong critical" を参考にした造語である。</ref>) のクラスを定義する。
+
+{{User:Hexirp/bxu|仮定 4.5}}
+\[ \forall \alpha \ldotp ( \alpha \in \mathrm{Cr} \lor \alpha \in \mathrm{NCr} ) \land \lnot ( \alpha \in \mathrm{Cr} \land \alpha \in \mathrm{NCr} \]
+{{User:Hexirp/bxl}}
+
+\( \mathrm{Cr} \) と \( \mathrm{NCr} \) が順序数を二分することを示す。
 
 ==== 閉包 ====
 
 \( C ^ \Omega ( \alpha, \beta ) \) は \( \psi _ \Omega ( \alpha ) \) と共に超限帰納法により定義されるが、ここで \( C ^ \Omega ( \alpha, \beta ) \) は自身を定義に使っていないため、 \( \psi _ \Omega ( \alpha ) \) のみを超限帰納法の対象とすることが出来る。
+
+{{User:Hexirp/bxu|仮定 5.1}}
+\[ C ^ \Omega ( \alpha, \beta ) = \bigcup \{ C : \beta \cup \{ 0, \Omega \} \subset C \land ( \forall x y \ldotp x \in C \land y \in C \rightarrow ( x + y ) \in C ) \land ( \forall x \ldotp x \in C \rightarrow \omega ^ x \in C ) \land ( \forall x \ldotp x \in C \land x < \alpha \rightarrow \psi _ \Omega ( x ) \in C ) \} \]
+{{User:Hexirp/bxl}}
+
+\( C ^ \Omega ( \alpha, \beta ) \) の定義を直接的に翻訳したものとの一致を示す。
 
 == 注釈 ==
 
