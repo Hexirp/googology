@@ -1,17 +1,31 @@
-Michael Rathjen さんは、証明論の大家であり、巨大数論と関わりが深い順序数解析において、その名前が何度も出てきます。しかしながら、その名前のカタカナ表記は、様々な説が存在していて、一つに統一されていない状況です。そこで、この記事ではそれぞれの説を紹介して比較検討します。
+Michael Rathjen さんは証明論の大家であり、巨大数論と関わりが深い順序数解析において、その名前が何度も出てきます<ref>{{cite claim|Hexirp}}</ref>。しかしながら、その名前のカタカナ表記は、様々な説が存在していて、一つに統一されていない状況です<ref>{{cite claim|Hexirp}}</ref>。そこで、この記事ではそれぞれの説を紹介して比較検討します<ref>{{cite claim|Hexirp}}</ref>。
 
 == ラスジェン説 ==
 
-この説は Rathjen を英語風に読んでいます。恐らく最も分かりやすい表記でしょう。
+この説は Rathjen を英語風に読んでいます<ref>{{cite claim|Hexirp}}</ref>。恐らく最も分かりやすい表記でしょう<ref>{{cite claim|Hexirp}}</ref>。
 
-"How to pronounce Rathjen" で検索すると、ラスジェンと読むと主張するサイトが見つかります。このサイトで記載されているのは、アメリカ合衆国での読み方のようです。
+"How to pronounce Rathjen" で検索すると、ラスジェンと読むと主張するサイトが見つかります<ref>{{cite investigate|Hexirp|[[#PronounceNames-2013-09|PronounceNames-2013-09]] によります。}}</ref>。このサイトで記載されているのは、アメリカ合衆国での読み方のようです<ref>{{cite investigate|Hexirp|[[#PronounceNames-2013-09|PronounceNames-2013-09]] によります。}}</ref>。
+
+実際の発音を知る人からは「ラスジェン」ではないことは確かだと否定されています<ref>{{cite investigate|Hexirp|[[#Alwe-2020-10-22|Alwe-2020-10-22]] によります。}}</ref>。
+
+== ラティエン説 ==
+
+この説は Rathjen をドイツ語風に読んでいます<ref>{{cite claim|Hexirp}}</ref>。
+
+この表記を使用するツイッターでの検索で見つかった最古のツイートは Ryota Akiyosi (@georg_logic) さんのものでした<ref>{{cite investigate|Hexirp|[[#Akiyoshi-2010-04|Akiyoshi-2010-04]] によります。}}</ref>。
+
+巨大数研究 Wiki において Rathjen のカタカナ表記が議論されたことがありますが、それはラティエンが正しいという結論で決着しました<ref>{{cite investigate|Hexirp|[[#GoogologyWiki-Vai-2020-10|GoogologyWiki-Vai-2020-10]] によります。}}</ref>。ここでラティエンと主張したのは Alwe さんです<ref>{{cite investigate|Hexirp|[[#GoogologyWiki-Vai-2020-10|GoogologyWiki-Vai-2020-10]] によります。}}</ref>。
 
 == 参考文献 ==
 
-# <span id="2020-10-23+09-07-22">How to say or pronounce Rathjen - PronounceNames.com</span>
-#* "[https://www.pronouncenames.com/Rathjen How to say or pronounce Rathjen - PronounceNames.com]". ''Pronounce Names''. Retrieved 2020-10-23.
-#* "[https://web.archive.org/web/20201023090722/https://www.pronouncenames.com/Rathjen How to say or pronounce Rathjen - PronounceNames.com]". ''Wayback Machine''. Internet Archive. Retrived 2020-10-23.
-
-cite claim
-cite check
-cite investigate
+# <span id="PronounceNames-2013-09">PronounceNames-2013-09</span>
+#* "[https://www.pronouncenames.com/Rathjen How to say or pronounce Rathjen - PronounceNames.com]". ''Pronounce Names''. 2013-09-02. Retrieved 2020-10-23.
+#* "[https://web.archive.org/web/20201023090722/https://www.pronouncenames.com/Rathjen How to say or pronounce Rathjen - PronounceNames.com]". ''Wayback Machine''. Internet Archive. 2020-10-23. Retrived 2020-10-23.
+# <span id="Akiyoshi-2010-04">Akiyoshi-2010-04</span>
+#* "[https://twitter.com/georg_logic/status/11537489580 Ryota AkiyoshiさんはTwitterを使っています 「@ytb_at_twt ですね。お恥ずかしながら、巨大基数系をもうちょいちゃんと知る必要がありますね。タイプ理論ですが、余帰納法関連は証明論系ではあまり見ないです。やっぱり非単調な再帰的定義とかをよく見ます。ラティエンも書いていたと思います」 / Twitter]". ''Twitter''. 2020-04-03. Twitter, Inc. Retrieved 2020-10-23.
+#* "[https://web.archive.org/web/20201023093535/https://twitter.com/georg_logic/status/11537489580 Ryota Akiyoshi on Twitter: "@ytb_at_twt ですね。お恥ずかしながら、巨大基数系をもうちょいちゃんと知る必要がありますね。タイプ理論ですが、余帰納法関連は証明論系ではあまり見ないです。やっぱり非単調な再帰的定義とかをよく見ます。ラティエンも書いていたと思います"]". ''Wayback Machine''. Internet Archive. 2020-10-23. Retrieved 2020-10-23.
+# <span id="GoogologyWiki-Vai-2020-10">GoogologyWiki-Vai-2020-10</span>
+#* "[https://googology.wikia.org/ja/wiki/%E3%83%B4%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%CF%91%E9%96%A2%E6%95%B0 ヴァイアーマンのϑ関数 | 巨大数研究 Wiki | Fandom]". ''巨大数研究 Wiki''. Fandom. Retrieved 2020-10-23.
+#* "[https://web.archive.org/web/20201023094947/https://googology.wikia.org/ja/wiki/%E3%83%B4%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%CF%91%E9%96%A2%E6%95%B0 ヴァイアーマンのϑ関数 | 巨大数研究 Wiki | Fandom]". ''Wayback Machine''. Internet Archive. 2020-10-23. Retrieved 2020-10-23.
+# <span id="Alwe-2020-10-22">Alwe-2020-10-22</span>
+#* "[https://twitter.com/Alwe_Logic/status/1318948130574848000 AlweさんはTwitterを使っています 「@hexirp_prixeh まあとりあえずラスジェンではないことは確かですね……」 / Twitter]". ''Twitter''. Twitter Inc. Retrieved 2020-10-23.
