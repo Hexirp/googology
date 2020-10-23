@@ -20,7 +20,7 @@ Michael Rathjen さんは証明論の大家であり、巨大数論と関わり�
 
 この説は Rathjen をドイツ語風に読んでいます<ref>{{cite claim|Hexirp}}</ref>。
 
-Rathjen 本人に名前の発音の仕方を聞いたところ、ラティアンに一番近かったという証言があります<ref>{{cite investigate|Hexirp|[[#nemototakako-2020-10-22|nemototakako-2020-10-22]] によります。}}。
+Rathjen 本人に名前の発音の仕方を聞いたところ、ラティアンに一番近かったという証言があります<ref>{{cite investigate|Hexirp|[[#nemototakako-2020-10-22|nemototakako-2020-10-22]] によります。}}</ref>。
 
 == 出典 ==
 
@@ -41,6 +41,7 @@ Rathjen 本人に名前の発音の仕方を聞いたところ、ラティアン
 #* "[https://twitter.com/Alwe_Logic/status/1318948130574848000 AlweさんはTwitterを使っています 「@hexirp_prixeh まあとりあえずラスジェンではないことは確かですね……」 / Twitter]". ''Twitter''. Twitter Inc. 2020-10-22. Retrieved 2020-10-23.
 # <span id="nemototakako-2020-10-22">nemototakako-2020-10-22</span>
 #* "[https://twitter.com/ytb_at_twt/status/1318854000612028418 nemototakakoさんはTwitterを使っています 「@Alwe_Logic ご本人に直でどう発音するの？て聞いたら"ラティアン" が一番近かったような気がします」 / Twitter]". ''Twitter''. Twitter Inc. 2020-10-22. Retrieved 2020-10-22.
+#* "[https://web.archive.org/web/20201023124108/https://twitter.com/nemototakako/status/1318945386799767555 nemototakako on Twitter: "ご本人に直でどう発音するの？て聞いたら"ラティアン" が一番近かったような気がします… "]". ''Wayback Machine''. Internet Archive. 2020-10-23. Retrieved 2020-10-23.
 
 {{DEFAULTSORT:Hexirp/(2020-10-23) Rathjen しのなまえをにほんこてかくときは、とのひようきかてきせつか？}}
 
