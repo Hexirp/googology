@@ -16,6 +16,10 @@ Michael Rathjen さんは証明論の大家であり、巨大数論と関わり�
 
 巨大数研究 Wiki において Rathjen のカタカナ表記が議論されたことがありますが、それはラティエンが正しいという結論で決着しました<ref>{{cite investigate|Hexirp|[[#GoogologyWiki-Vai-2020-10|GoogologyWiki-Vai-2020-10]] によります。}}</ref>。ここでラティエンと主張したのは Alwe さんです<ref>{{cite investigate|Hexirp|[[#GoogologyWiki-Vai-2020-10|GoogologyWiki-Vai-2020-10]] によります。}}</ref>。
 
+== 出典 ==
+
+<references />
+
 == 参考文献 ==
 
 # <span id="PronounceNames-2013-09">PronounceNames-2013-09</span>
