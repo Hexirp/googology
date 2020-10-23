@@ -38,9 +38,9 @@ Rathjen 本人に名前の発音の仕方を聞いたところ、ラティアン
 #* "[https://googology.wikia.org/ja/wiki/%E3%83%B4%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%CF%91%E9%96%A2%E6%95%B0 ヴァイアーマンのϑ関数 | 巨大数研究 Wiki | Fandom]". ''巨大数研究 Wiki''. Fandom. 2020-07-12. Retrieved 2020-10-23.
 #* "[https://web.archive.org/web/20201023094947/https://googology.wikia.org/ja/wiki/%E3%83%B4%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%CF%91%E9%96%A2%E6%95%B0 ヴァイアーマンのϑ関数 | 巨大数研究 Wiki | Fandom]". ''Wayback Machine''. Internet Archive. 2020-10-23. Retrieved 2020-10-23.
 # <span id="Alwe-2020-10-22">Alwe-2020-10-22</span>
-#* "[https://twitter.com/Alwe_Logic/status/1318948130574848000 AlweさんはTwitterを使っています 「@hexirp_prixeh まあとりあえずラスジェンではないことは確かですね……」 / Twitter]". ''Twitter''. Twitter Inc. 2020-10-22. Retrieved 2020-10-23.
+#* "[https://twitter.com/Alwe_Logic/status/1318948130574848000 AlweさんはTwitterを使っています 「@hexirp_prixeh まあとりあえずラスジェンではないことは確かですね……」 / Twitter]". ''Twitter''. Twitter, Inc. 2020-10-22. Retrieved 2020-10-23.
 # <span id="nemototakako-2020-10-22">nemototakako-2020-10-22</span>
-#* "[https://twitter.com/ytb_at_twt/status/1318854000612028418 nemototakakoさんはTwitterを使っています 「@Alwe_Logic ご本人に直でどう発音するの？て聞いたら"ラティアン" が一番近かったような気がします」 / Twitter]". ''Twitter''. Twitter Inc. 2020-10-22. Retrieved 2020-10-22.
+#* "[https://twitter.com/ytb_at_twt/status/1318854000612028418 nemototakakoさんはTwitterを使っています 「@Alwe_Logic ご本人に直でどう発音するの？て聞いたら"ラティアン" が一番近かったような気がします」 / Twitter]". ''Twitter''. Twitter, Inc. 2020-10-22. Retrieved 2020-10-22.
 #* "[https://web.archive.org/web/20201023124108/https://twitter.com/nemototakako/status/1318945386799767555 nemototakako on Twitter: "ご本人に直でどう発音するの？て聞いたら"ラティアン" が一番近かったような気がします… "]". ''Wayback Machine''. Internet Archive. 2020-10-23. Retrieved 2020-10-23.
 
 {{DEFAULTSORT:Hexirp/(2020-10-23) Rathjen しのなまえをにほんこてかくときは、とのひようきかてきせつか？}}
