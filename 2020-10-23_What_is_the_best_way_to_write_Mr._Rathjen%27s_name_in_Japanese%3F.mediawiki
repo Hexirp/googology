@@ -1,0 +1,17 @@
+Michael Rathjen さんは、証明論の大家であり、巨大数論と関わりが深い順序数解析において、その名前が何度も出てきます。しかしながら、その名前のカタカナ表記は、様々な説が存在していて、一つに統一されていない状況です。そこで、この記事ではそれぞれの説を紹介して比較検討します。
+
+== ラスジェン説 ==
+
+この説は Rathjen を英語風に読んでいます。恐らく最も分かりやすい表記でしょう。
+
+"How to pronounce Rathjen" で検索すると、ラスジェンと読むと主張するサイトが見つかります。このサイトで記載されているのは、アメリカ合衆国での読み方のようです。
+
+== 参考文献 ==
+
+# <span id="2020-10-23+09-07-22">How to say or pronounce Rathjen - PronounceNames.com</span>
+#* "[https://www.pronouncenames.com/Rathjen How to say or pronounce Rathjen - PronounceNames.com]". ''Pronounce Names''. Retrieved 2020-10-23.
+#* "[https://web.archive.org/web/20201023090722/https://www.pronouncenames.com/Rathjen How to say or pronounce Rathjen - PronounceNames.com]". ''Wayback Machine''. Internet Archive. Retrived 2020-10-23.
+
+cite claim
+cite check
+cite investigate
