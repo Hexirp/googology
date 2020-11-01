@@ -1,0 +1,54 @@
+関数型順序数崩壊関数 (functional ordinal collapsing function) の一例に対して、定義を与えます。
+
+functional ordinal collapsing function は、 Fejfo 氏により [https://googology.wikia.org/wiki/User_blog:Fejfo/Functional_OCFs User_blog:Fejfo/Fucntional_OCFs] で導入された概念です。順序数崩壊関数の定義に対して新基軸を与える概念であることは興味深く、しかしながら Fejfo 氏は良定義 (well-defined) な例を与えることは出来ませんでした。
+
+== 発端 ==
+
+甘露東風: [https://twitter.com/kanrokoti/status/1321043232021565440 ocfcfという概念を思い付いた]
+
+Hexirp: [https://twitter.com/hexirp_prixeh/status/1321044461669920769 functional OCFs の一歩先にありそうな概念だ]
+
+甘露東風: [https://twitter.com/kanrokoti/status/1321046008353075206 なんじゃそりゃ]
+
+Hexirp: [https://twitter.com/hexirp_prixeh/status/1321095616748019721 普通の順序数崩壊関数は ω, ω^ω, ω^ω^ω, ... という感じに順序数に対して大きくする操作を C の中で繰り返しますが、 functional OCFs では順序数に対して強めるのを繰り返すのと同時に関数に対して強める操作を繰り返します。]
+
+甘露東風: [https://twitter.com/kanrokoti/status/1321097253998657542 よぐわがんね]
+
+Hexirp: [https://twitter.com/hexirp_prixeh/status/1321097886386376705 ぴえん]
+
+甘露東風: [https://twitter.com/kanrokoti/status/1321098315228803072 例えばどんな表記がありますか？]
+
+Hexirp: [https://twitter.com/hexirp_prixeh/status/1322171886705369088 まだ well-defined な表記がないので、今作ってます。]
+
+甘露東風: [https://twitter.com/kanrokoti/status/1322175603852767232 ぴえん]
+
+== 定義 ==
+
+\( \Omega \) を、 \( \omega _ 1 \) と等しい順序数であるとする。
+
+\( \kappa \) を、次の条件を満たす最小の順序数であるとする。
+
+# \( \Omega < \kappa \)
+# \( \forall \{ x _ i \} _ { i < \kappa } \ldotp ( \forall i \ldotp x _ i < \kappa ) \to \sup _ { i < \kappa } x _ i < \kappa \)
+
+\( \mathrm{Type} \newcommand{\Type}{\mathrm{Type}} \) を、次の条件を満たす最小の集合であるとする。
+
+# \( \kappa \in \Type \)
+# \( \forall \alpha \ldotp \alpha < \kappa \to \alpha \in \Type \)
+# \( x \in \Type \land y \in \Type \to \langle x, y \rangle \in \Type \)
+
+\( \langle \_, \_ \rangle \) は、次の条件を満たす対である。
+
+# \( \langle V, V \rangle \cap \mathrm{On} = \emptyset \)
+
+\( f \) を、次の式を満たす関数であるとする。
+
+# \( f ( \kappa ) = \kappa \)
+# \( \forall \alpha \ldotp \alpha < \kappa \to f ( \alpha ) = \alpha \)
+# \( \forall x \ldotp \forall y \ldotp f ( \langle x, y \rangle ) = ( f ( x ) \to f ( y ) ) \)
+
+\( \mathrm{Value} \newcommand{\Value}{\mathrm{Value}} \) を、次の条件を満たす最小の集合であるとする。
+
+# \( f ( \Type ) \subseteq \Value \)
+# \( \forall x \ldotp x \in \Value \to \forall y \ldotp y \in x \to y \in \Value \)
+# \( \forall I \ldotp I \in \Value \to \forall \{ x _ i \} _ { i \in I } \ldotp ( \forall i \ldotp i \in I \to x _ i \in \Value ) \to \bigcup _ { i \in I } x _ i \in \Value \)
