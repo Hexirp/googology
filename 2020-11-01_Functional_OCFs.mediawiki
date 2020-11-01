@@ -66,11 +66,13 @@ Hexirp: [https://twitter.com/hexirp_prixeh/status/1322171886705369088 まだ wel
 # \( \closure _ 0 ( A ) = A \)
 # \( \closure _ { n + 1 } ( A ) = \closure _ n ( A ) \cup \{ \langle f ( x ), T \rangle : \langle x, S \rangle \in \closure _ n ( A ) \land \langle f, \langle S, T \rangle \rangle \in \closure _ n ( A ) \} \)
 
+{{User:Hexirp/Template:Scroll_Top}}
 \( \psi _ \Omega ( \alpha ) \) を、次の式を満たす関数であるとする。
 
-# \( \psi _ \Omega ( \alpha ) = \min \{ \beta \in \mathrm{On} : \closure ( \{ \langle \gamma, \kappa \rangle : \gamma < \beta \} \cup \{ \langle 0, \kappa \rangle, \langle \Omega, \kappa \rangle, \langle +, \langle \kappa, \langle \kappa, \kappa \rangle \rangle \rangle, \langle \psi _ \Omega \restriction _ \alpha, \kappa \to \kappa \} ) \cap \Omega = \beta \} \)
+# \( \psi _ \Omega ( \alpha ) = \min \{ \beta \in \mathrm{On} : \closure ( \{ \langle \gamma, \kappa \rangle : \gamma < \beta \} \cup \{ \langle 0, \kappa \rangle, \langle \Omega, \kappa \rangle, \langle +, \langle \kappa, \langle \kappa, \kappa \rangle \rangle \rangle, \langle \psi _ \Omega { \restriction _ \alpha }, \kappa \to \kappa \} ) \cap \Omega = \beta \} \)
+{{User:Hexirp/Template:Scroll_Bottom}}
 
 \( \psi _ \Omega \restriction _ \alpha \) を、次の式を満たす関数であるとする。
 
-# \( \forall \beta \ldotp \beta < \alpha \to \psi _ \Omega \restriction _ \alpha ( \beta ) = \psi _ \Omega ( \beta ) \)
-# \( \forall \beta \ldotp \beta \geq \alpha \to \psi _ \Omega \restriction _ \alpha ( \beta ) = 0 \)
+# \( \forall \beta \ldotp \beta < \alpha \to \psi _ \Omega { \restriction _ \alpha } ( \beta ) = \psi _ \Omega ( \beta ) \)
+# \( \forall \beta \ldotp \beta \geq \alpha \to \psi _ \Omega { \restriction _ \alpha } ( \beta ) = 0 \)
