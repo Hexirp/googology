@@ -69,7 +69,7 @@ Hexirp: [https://twitter.com/hexirp_prixeh/status/1322171886705369088 まだ wel
 {{User:Hexirp/Template:Scroll_Top}}
 \( \psi _ \Omega ( \alpha ) \) を、次の式を満たす関数であるとする。
 
-# \( \psi _ \Omega ( \alpha ) = \min \{ \beta \in \mathrm{On} : \closure ( \{ \langle \gamma, \kappa \rangle : \gamma < \beta \} \cup \{ \langle 0, \kappa \rangle, \langle \Omega, \kappa \rangle, \langle +, \langle \kappa, \langle \kappa, \kappa \rangle \rangle \rangle, \langle \psi _ \Omega { \restriction _ \alpha }, \kappa \to \kappa \} ) \cap \Omega = \beta \} \)
+# \( \psi _ \Omega ( \alpha ) = \min \{ \beta \in \mathrm{On} : \closure ( \{ \langle \gamma, \kappa \rangle : \gamma < \beta \} \cup \{ \langle 0, \kappa \rangle, \langle \Omega, \kappa \rangle, \langle +, \langle \kappa, \langle \kappa, \kappa \rangle \rangle \rangle, \langle \psi _ \Omega { \restriction _ \alpha }, \langle \kappa, \kappa \rangle \} ) \cap \Omega = \beta \} \)
 {{User:Hexirp/Template:Scroll_Bottom}}
 
 \( \psi _ \Omega \restriction _ \alpha \) を、次の式を満たす関数であるとする。
