@@ -34,7 +34,6 @@ Hexirp: [https://twitter.com/hexirp_prixeh/status/1322171886705369088 まだ wel
 \( \mathrm{Type} \newcommand{\Type}{\mathrm{Type}} \) を、次の式を満たす最小の集合であるとする。
 
 # \( \kappa \in \Type \)
-# \( \forall \alpha \ldotp \alpha < \kappa \to \alpha \in \Type \)
 # \( x \in \Type \land y \in \Type \to \langle x, y \rangle \in \Type \)
 
 \( \langle \_, \_ \rangle \) は、次の式を満たす対である。
@@ -44,7 +43,6 @@ Hexirp: [https://twitter.com/hexirp_prixeh/status/1322171886705369088 まだ wel
 \( f \) を、次の式を満たす関数であるとする。
 
 # \( f ( \kappa ) = \kappa \)
-# \( \forall \alpha \ldotp \alpha < \kappa \to f ( \alpha ) = \alpha \)
 # \( \forall x \ldotp \forall y \ldotp f ( \langle x, y \rangle ) = ( f ( x ) \to f ( y ) ) \)
 
 \( \mathrm{Value} \newcommand{\Value}{\mathrm{Value}} \) を、次の条件を満たす最小の集合であるとする。
@@ -70,4 +68,9 @@ Hexirp: [https://twitter.com/hexirp_prixeh/status/1322171886705369088 まだ wel
 
 \( \psi _ \Omega ( \alpha ) \) を、次の式を満たす関数であるとする。
 
-# \( \psi _ \Omega ( \alpha ) = \min \{ \beta \in \mathrm{On} : \closure ( \{ \langle \gamma, \kappa \rangle : \gamma < \beta \} \cup \{ \langle 0, \kappa \rangle, \langle \Omega, \kappa \rangle, \langle +, \langle \kappa, \langle \kappa, \kappa \rangle \rangle \rangle, \langle \psi _ { \restriction _ \alpha }, \kappa \to \kappa \} ) \cap \Omega = \beta \} \)
+# \( \psi _ \Omega ( \alpha ) = \min \{ \beta \in \mathrm{On} : \closure ( \{ \langle \gamma, \kappa \rangle : \gamma < \beta \} \cup \{ \langle 0, \kappa \rangle, \langle \Omega, \kappa \rangle, \langle +, \langle \kappa, \langle \kappa, \kappa \rangle \rangle \rangle, \langle \psi _ \Omega \restriction _ \alpha, \kappa \to \kappa \} ) \cap \Omega = \beta \} \)
+
+\( \psi _ \Omega \restriction _ \alpha \) を、次の式を満たす関数であるとする。
+
+# \( \forall \beta \ldotp \beta < \alpha \to \psi _ \Omega \restriction _ \alpha ( \beta ) = \psi _ \Omega ( \beta ) \)
+# \( \forall \beta \ldotp \beta \geq \alpha \to \psi _ \Omega \restriction _ \alpha ( \beta ) = 0 \)
