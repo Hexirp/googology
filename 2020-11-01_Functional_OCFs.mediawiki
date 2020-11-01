@@ -26,18 +26,18 @@ Hexirp: [https://twitter.com/hexirp_prixeh/status/1322171886705369088 まだ wel
 
 \( \Omega \) を、 \( \omega _ 1 \) と等しい順序数であるとする。
 
-\( \kappa \) を、次の条件を満たす最小の順序数であるとする。
+\( \kappa \) を、次の式を満たす最小の順序数であるとする。
 
 # \( \Omega < \kappa \)
 # \( \forall \{ x _ i \} _ { i < \kappa } \ldotp ( \forall i \ldotp x _ i < \kappa ) \to \sup _ { i < \kappa } x _ i < \kappa \)
 
-\( \mathrm{Type} \newcommand{\Type}{\mathrm{Type}} \) を、次の条件を満たす最小の集合であるとする。
+\( \mathrm{Type} \newcommand{\Type}{\mathrm{Type}} \) を、次の式を満たす最小の集合であるとする。
 
 # \( \kappa \in \Type \)
 # \( \forall \alpha \ldotp \alpha < \kappa \to \alpha \in \Type \)
 # \( x \in \Type \land y \in \Type \to \langle x, y \rangle \in \Type \)
 
-\( \langle \_, \_ \rangle \) は、次の条件を満たす対である。
+\( \langle \_, \_ \rangle \) は、次の式を満たす対である。
 
 # \( \langle V, V \rangle \cap \mathrm{On} = \emptyset \)
 
@@ -49,6 +49,21 @@ Hexirp: [https://twitter.com/hexirp_prixeh/status/1322171886705369088 まだ wel
 
 \( \mathrm{Value} \newcommand{\Value}{\mathrm{Value}} \) を、次の条件を満たす最小の集合であるとする。
 
-# \( f ( \Type ) \subseteq \Value \)
-# \( \forall x \ldotp x \in \Value \to \forall y \ldotp y \in x \to y \in \Value \)
-# \( \forall I \ldotp I \in \Value \to \forall \{ x _ i \} _ { i \in I } \ldotp ( \forall i \ldotp i \in I \to x _ i \in \Value ) \to \bigcup _ { i \in I } x _ i \in \Value \)
+# \( \forall x \ldotp x \in \Type \to f ( x ) \subseteq \Value \)
+
+\( [ x : T ] \) を、次の条件を満たす述語であるとする。
+
+# \( x \in \Value \) かつ \( T \in \Type \) であるときに定義される。
+# \( x \in f ( T ) \) と論理的に等しい。
+
+\( \mathrm{Environment} \newcommand{Environment}{\mathrm{Environment}} \) を、 \( \{ \langle x, T \rangle : x \in \Value \land T \in \Type \land [ x : T ] \} \) に等しい集合であるとする。
+
+\( \mathrm{closure} ( A ) \newcommand{\closure}{\mathrm{closure}} \) を、次の条件を満たす関数であるとする。
+
+# \( A \subseteq \Environment \) であるときに定義される。
+# \( \bigcup _ { n < \omega } \closure _ n ( A ) \) と等しい。
+
+\( \closure _ n ( A ) \) を、次の式を満たす関数であるとする。
+
+# \( \closure _ 0 ( A ) = A \)
+# \( \closure _ { n + 1 } ( A ) = \closure _ n ( A ) \cup \{ \langle f ( x ), T \rangle : \langle x, S \rangle \in \closure _ n ( A ) \land \langle f, \langle S, T \rangle \rangle \in \closure _ n ( A ) \} \)
