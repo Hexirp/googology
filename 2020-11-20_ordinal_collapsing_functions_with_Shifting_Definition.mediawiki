@@ -25,19 +25,27 @@
 
 \( \mathrm{Reg} \newcommand{\Reg}{\mathrm{Reg}} \) を非可算正則基数のクラスとします。 \( \Reg _ \kappa \) を \( \kappa \) 未満の非可算正則基数のクラスとします<ref group="note">ちなみに、「未満」と「以下」の違いは弱到達不能基数の時に出ます。</ref>。
 
-\( \Omega ( \alpha ) \) を \( \aleph _ { 1 + \alpha } \) と定義します。 \( \Omega ( o _ \A ( \alpha ) ) \) を \( \alpha \) と略記します。 \( \Omega ( \alpha ) < \Omega ( A ) \) である時に、 <nowiki>\( \Omega ( o _ \A ( A [[ X ]] _ \A ) ) = \Omega ( \alpha ) \)</nowiki> になり、そのような中で辞書式順序において最大である \( X \) が取れることに注意してください。何も断わり無しに基数から配列を取り出しているときは、これを使っていると思ってください。
+\( \Omega ( \alpha ) \) を \( \aleph _ { 1 + \alpha } \) と定義します。 \( \Omega ( o _ \A ( \alpha ) ) \) を \( \alpha \) と略記します。 \( \Omega ( \alpha ) \le \Omega ( A ) \) である時に、 <nowiki>\( \Omega ( o _ \A ( A [[ X ]] _ \A ) ) = \Omega ( \alpha ) \)</nowiki> になり、そのような中で辞書式順序において最大である \( X \) が取れることに注意してください。何も断わり無しに基数から配列を取り出しているときは、これを使っていると思ってください。
 
 \( \Omega \) を \( \aleph _ 1 \) と定義します。 \( A \) の基本列を取る操作を不動点になるまで繰り返した時に、それを \( \alpha = \A [ 0 ] _ \A [ 0 ] _ \A \cdots [ 0 ] _ \A \) とすると、それを使って \( \Omega = \Omega ( o _ \A ( \alpha )) \) となることに注意してください。
 
 相互再帰により \( \psi : ( \Reg _ A \cup \{ A \} ) \times \mathrm{On} \rightarrow \mathrm{On} \) と \( \mathrm{C} : \mathrm{On} \times \mathrm{On} \rightarrow \mathfrak{P} ( \mathrm{On} ) \newcommand{\C}{\mathrm{C}} \) を定義します。ここ以下の定義は、ひとまとまりの相互再帰です。
 
-\( \mathrm{NF} _ 0 ( \alpha, x ) \newcommand{\NF}{\mathrm{NF}} \) を次のように定義します。
+\( \mathrm{M} ( \alpha ) \newcommand{\N}{\mathrm{N}} \newcommand{\T}{\mathrm{T}} \newcommand{\NF}{\mathrm{NF}} \) を次のようにして定義します。
+
+\[ \M ( \alpha ) = \begin{cases} \{ \} & ( \NF _ 0 ( x ) ) \\ \{ \epsilon \} & ( \NF _ A ( x ) ) \\ \M ( \xi ) \cup \M ( \zeta ) & ( \NF _ + ( x, \xi, \zeta ) ) \\ \{ X \} & \NF _ \Omega ( x, X ) \\ \end{cases} \]
+
+\( \mathrm{N} ( \alpha ) \) を次のようにして定義します。
+
+\[ \N ( \alpha ) = \M ( \alpha ) \cup \{ X [ n ] _ \A : X \in \M ( \alpha ) \land n < \omega \} \]
+
+\( \mathrm{NF} _ 0 ( \alpha, x ) \) を次のように定義します。
 
 \[ \NF _ 0 ( \alpha, x ) \Leftrightarrow x = 0 \]
 
 \( \NF _ A ( \alpha, x ) \) を次のように定義します。
 
-<nowiki>\[ \NF _ A ( \alpha, x ) \Leftrightarrow x = \Omega ( o _ \A ( A [[ \epsilon ]] _ \A ) ) \land \epsilon \in N ( \alpha ) \]</nowiki>
+<nowiki>\[ \NF _ A ( \alpha, x ) \Leftrightarrow x = \Omega ( o _ \A ( A [[ \epsilon ]] _ \A ) ) \land \epsilon \in \N ( \alpha ) \]</nowiki>
 
 \( \NF _ + ( \alpha, x, \xi, \zeta ) \) を次のように定義します。
 
@@ -45,13 +53,13 @@
 
 \( \NF _ \Omega ( \alpha, x ) \) を次のように定義します。
 
-<nowiki>\[ \NF _ \Omega ( \alpha, x ) \Leftrightarrow \exists X \ldotp x = \Omega ( o _ \A ( A [[ X ]] _ \A ) ) \land X \in N ( \alpha ) \]</nowiki>
+<nowiki>\[ \NF _ \Omega ( \alpha, x ) \Leftrightarrow \exists X \ldotp x = \Omega ( o _ \A ( A [[ X ]] _ \A ) ) \land X \in \N ( \alpha ) \]</nowiki>
 
 \( \NF _ \psi ( \alpha, x, \pi, \xi ) \) を次のように定義します。
 
-\[ \NF _ \psi ( \alpha, x, \pi, \xi ) \Leftrightarrow x = \psi _ \pi ( \xi ) \land \xi \in \C ( \xi, \psi _ \pi ( \xi ) ) \land T ( \alpha, \xi ) \]
+\[ \NF _ \psi ( \alpha, x, \pi, \xi ) \Leftrightarrow x = \psi _ \pi ( \xi ) \land \xi \in \C ( \xi, \psi _ \pi ( \xi ) ) \land \T ( \alpha, \xi ) \land \pi \in \N ( \alpha ) \]
 
-\( \mathrm{T} ( \alpha, \xi ) \newcommand{\T}{\mathrm{T}} \) を次のように定義します。
+\( \mathrm{T} ( \alpha, \xi ) \) を次のように定義します。
 
 \[ \T ( \alpha, \xi ) \Leftrightarrow \NF _ 0 ( \alpha, x ) \land \NF _ A ( \alpha, x ) \land ( \exists \xi \ldotp \exists \zeta \ldotp \NF _ + ( \alpha, x, \xi, \zeta ) ) \land \NF _ \Omega ( \alpha, x ) \land ( \exists \pi \ldotp \exists \xi \ldotp \NF _ \psi ( \alpha, x, \pi, \xi ) ) \]
 
@@ -167,7 +175,7 @@
 
 == 最後に ==
 
-分かんねー。
+あー、めちゃくちゃだよ。
 
 == 注釈 ==
 
