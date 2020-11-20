@@ -6,18 +6,18 @@
 
 基本列付き順序数表記として \( \mathbb{A} \newcommand{\A}{\mathbb{A}} \) を取ります。
 
-# \( \mathrm{T} _ \A \newcommand{\T}{{\mathrm{T} _ \A}} \) は項の集合です。
-# \( \mathrm{OT} _ \A \newcommand{\OT}{{\mathrm{OT} _ \A}} \) は標準項の集合です。 \( \OT \) は \( T \) の部分集合です。
+# <nowiki>\( \mathrm{T} _ \A \newcommand{\T}{{\mathrm{T} _ \A}} \)</nowiki> は項の集合です。
+# <nowiki>\( \mathrm{OT} _ \A \newcommand{\OT}{{\mathrm{OT} _ \A}} \)</nowiki> は標準項の集合です。 \( \OT \) は \( T \) の部分集合です。
 # \( \_ < _ \A \_ \) は \( \T \) の上での関係です。 \( \OT \) に制限すると整礎関係になります。
-# \( \mathrm{tp} _ \A \newcommand{\tp}{{\mathrm{tp} _ \A}} \) は項の共終タイプを判定する関数です。結果は \( \{ 0, 1, \omega \} \) の三つだけです。
+# <nowiki>\( \mathrm{tp} _ \A \newcommand{\tp}{{\mathrm{tp} _ \A}} \)</nowiki> は項の共終タイプを判定する関数です。結果は \( \{ 0, 1, \omega \} \) の三つだけです。
 # \( \_ [ \_ ] _ \A \) は項の基本列を計算する関数です。 \( ( \OT, \_ < _ \A \_ ) \) の上で \( \alpha \in \OT \rightarrow \sup _ { n < \tp ( \alpha ) } \alpha [ n ] _ \A = \alpha \) を満たします。これは \( \T \times \mathbb{N} \rightarrow \T \) の関数であり、 \( \OT \times \mathbb{N} \rightarrow \OT \) の関数としても見なすことが出来ます。さらに、 \( \tp ( \alpha ) < n \rightarrow \alpha [ n ] _ \A = \alpha \) を満たします。
 
-ここで、 \( X \in \mathbb{N} ^ { _ < \omega } \) に対して \( \alpha [[ X ]] _ \A = \alpha [ X _ 0 ] _ \A [ X _ 1 ] _ \A \cdots [ X _ n ] _ \A \) とします。
+ここで、 \( X \in \mathbb{N} ^ { _ < \omega } \) に対して <nowiki>\( \alpha [[ X ]] _ \A = \alpha [ X _ 0 ] _ \A [ X _ 1 ] _ \A \cdots [ X _ n ] _ \A \)</nowiki> とします。
 
 さらに、次のような性質を課します。
 
 # \( ( \OT, \_ < _ \A \_ ) \) は最大元が存在し、それを \( A \) と書きます。
-# \( \alpha \in \OT \) に対して、 \( A [[ X ]] _ \A \) を満たす配列 \( X \) が存在し、それはそのような性質を満たす配列の中で辞書式順序による比較において最大である。
+# \( \alpha \in \OT \) に対して、 <nowiki>\( A [[ X ]] _ \A \)</nowiki> を満たす配列 \( X \) が存在し、それはそのような性質を満たす配列の中で辞書式順序による比較において最大である。
 
 さらに、 \( ( \OT, \_ < _ A \_ ) \) の整列順序型を \( \mathbf{\alpha} \) と書き、それへの順序同型写像を \( o _ \A : \OT \to \mathbf{\alpha} \) とします。
 
@@ -41,5 +41,9 @@
 # \[ 0 \in \C ( \alpha, \beta ) \]
 # \[ \A \in \C ( \alpha, \beta ) \]
 # \[ \xi \in \C ( \alpha, \beta ) \land \zeta \in \C ( \alpha, \beta ) \rightarrow ( \xi + \zeta ) \in \C ( \alpha, \beta ) \]
-# \[ \A [[ X ]] _ \A \in \C ( \alpha, \beta ) \rightarrow \A [[ X ]] _ \A [ n ] _ \A \in \C ( \alpha, \beta ) \]
+# <nowiki>\[ \A [[ X ]] _ \A \in \C ( \alpha, \beta ) \rightarrow \A [[ X ]] _ \A [ n ] _ \A \in \C ( \alpha, \beta ) \]</nowiki>
 # \[ \T ( \xi, \alpha ) \land \xi \in \C ( \alpha, \beta ) \cap \alpha \land \pi \in \C ( \alpha, \beta ) \cap \Reg _ A \rightarrow \psi _ \pi ( \xi ) \in C ( \alpha, \beta ) \]
+
+== 最後に ==
+
+間違えている気しかない。
