@@ -23,17 +23,39 @@
 
 == 定義 ==
 
-\( \mathrm{Reg} \newcommand{\Reg}{\mathrm{Reg}} \) を非可算正則基数のクラスとします。 \( \Reg _ \kappa \) を \( \kappa \) 未満の非可算正則基数のクラスとします。
+\( \mathrm{Reg} \newcommand{\Reg}{\mathrm{Reg}} \) を非可算正則基数のクラスとします。 \( \Reg _ \kappa \) を \( \kappa \) 未満の非可算正則基数のクラスとします<ref group="note">ちなみに、「未満」と「以下」の違いは弱到達不能基数の時に出ます。</ref>。
 
-\( \Omega ( \alpha ) \) を \( \aleph _ { 1 + \alpha } \) と定義します。 \( \Omega ( o _ \A ( \alpha ) ) \) を \( \alpha \) と略記します。
+\( \Omega ( \alpha ) \) を \( \aleph _ { 1 + \alpha } \) と定義します。 \( \Omega ( o _ \A ( \alpha ) ) \) を \( \alpha \) と略記します。 \( \Omega ( \alpha ) < \Omega ( A ) \) である時に、 <nowiki>\( \Omega ( o _ \A ( A [[ X ]] _ \A ) ) = \Omega ( \alpha ) \)</nowiki> になり、そのような中で辞書式順序において最大である \( X \) が取れることに注意してください。
 
-\( \mathrm{T} ( \xi, \alpha ) \newcommand{\T}{\mathrm{T}} \) を
+\( \Omega \) を \( \aleph _ 1 \) と定義します。 \( A \) の基本列を取る操作を不動点になるまで繰り返した時に、それを \( \alpha = \A [ 0 ] _ \A [ 0 ] _ \A \cdots [ 0 ] _ \A \) とすると、それを使って \( \Omega = \Omeha ( o _ \A ( \alpha )) \) となることに注意してください。
+
+相互再帰により \( \psi : ( \Reg _ A \cup \{ A \} ) \times \mathrm{On} \rightarrow \mathrm{On} \) を定義します。ここ以下の定義は、ひとまとまりの相互再帰です。
+
+\( \mathrm{NF} _ 0 ( \alpha, x ) \newcommand{\NF}{\mathrm{NF}} \) を次のように定義します。
+
+\[ \NF _ 0 ( \alpha, x ) \Leftrightarrow x = 0 \]
+
+\( \NF _ A ( \alpha, x ) \) を次のように定義します。
+
+\[ \NF _ A ( \alpha, x ) \Leftrightarrow x = \Omega ( o _ \A ( A [[ \epsilon ]] _ \A ) ) \land \epsilon \in N ( \alpha ) \]
+
+\( \NF _ + ( \alpha, x, \xi, \zeta ) \) を次のように定義します。
+
+\[ \NF _ + ( \alpha, x, \xi, \zeta ) \Leftrightarrow x = \xi + \zeta \land ( \exists \alpha \ldotp \alpha \in \mathrm{AP} \land \xi < \alpha \land \alpha \leq \zeta ) \land \NF ( \alpha, \xi ) \land \NF ( \alpha, zeta \) \]
+
+\( \NF _ \Omega ( \alpha, x ) \) を次のように定義します。
+
+<nowiki>\[ \NF _ \Omega ( \alpha, x ) \Leftrightarrow \exists X \ldotp x = \Omega ( o _ \A ( A [[ X ]] _ \A ) ) \land X \in N ( \alpha ) \]</nowiki>
+
+\( \NF _ \psi ( \alpha, x, \pi, \xi ) \) を次のように定義します。
+
+\[ \NF _ \psi ( \alpha, x, \pi, \xi ) \) \Leftrightarrow x = \psi _ \pi ( \xi ) \land \xi \in \C ( \xi, \psi _ \pi ( \xi ) ) \land T ( \alpha, \xi ) \]
+
+\( \mathrm{T} ( \alpha, \xi ) \newcommand{\T}{\mathrm{T}} \) を次のように定義します。
+
+\[ \T ( \alpha, \xi ) \Leftrightarrow \NF _ 0 ( \alpha, x ) \land \NF _ A ( \alpha, x ) \land ( \exists \xi \ldotp \exists \zeta \ldotp \NF _ + ( \alpha, x, \xi, \zeta ) ) \land \NF _ \Omega ( \alpha, x ) \land ( \exists \pi \ldotp \exists \xi \ldotp \NF _ \psi ( \alpha, x, \pi, \xi ) ) \]
 
 \( \psi _ \kappa ( \alpha ) \) と \( \mathrm{C} ( \alpha, \beta ) \newcommand{\C}{\mathrm{C}} \) を相互再帰により定義します。
-
-\( \psi _ \kappa ( \alpha ) \) を次のように定義します。
-
-\[ \psi _ \kappa ( \alpha ) = \min \{ \xi \in \mathrm{On} \mid \kappa \in \C ( \alpha, \xi ) \land \C ( \alpha, \xi ) \cap \kappa \subseteq \xi \} \]
 
 \( \C ( \alpha, \beta ) \) を次の条件を満たす最小の集合とします。
 
@@ -42,7 +64,11 @@
 # \[ \A \in \C ( \alpha, \beta ) \]
 # \[ \xi \in \C ( \alpha, \beta ) \land \zeta \in \C ( \alpha, \beta ) \rightarrow ( \xi + \zeta ) \in \C ( \alpha, \beta ) \]
 # <nowiki>\[ \A [[ X ]] _ \A \in \C ( \alpha, \beta ) \rightarrow \A [[ X ]] _ \A [ n ] _ \A \in \C ( \alpha, \beta ) \]</nowiki>
-# \[ \T ( \xi, \alpha ) \land \xi \in \C ( \alpha, \beta ) \cap \alpha \land \pi \in \C ( \alpha, \beta ) \cap \Reg _ A \rightarrow \psi _ \pi ( \xi ) \in C ( \alpha, \beta ) \]
+# \[ \T ( \alpha, \xi ) \land \xi \in \C ( \alpha, \beta ) \cap \alpha \land \pi \in \C ( \alpha, \beta ) \cap \Reg _ A \rightarrow \psi _ \pi ( \xi ) \in C ( \alpha, \beta ) \]
+
+\( \psi _ \kappa ( \alpha ) \) を次のように定義します。
+
+\[ \psi _ \kappa ( \alpha ) = \begin{cases} \min \{ \xi \in \mathrm{On} \mid \kappa \in \C ( \alpha, \xi ) \land \C ( \alpha, \xi ) \cap \kappa \subseteq \xi \} & ( \kappa < A ) \\ \min \{ \xi \in \mathrm{On} \mid \Omega \in \C ( \alpha, \xi ) \land \C ( \alpha, \xi ) \cap \Omega \subseteq \xi \} & ( \kappa = A ) \\ \end{cases} \]
 
 == 動き ==
 
@@ -144,3 +170,7 @@
 == 最後に ==
 
 定義は明らかに間違ってます。
+
+== 注釈 ==
+
+<references group="note" />
