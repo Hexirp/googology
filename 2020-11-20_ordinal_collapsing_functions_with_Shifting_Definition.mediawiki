@@ -25,7 +25,7 @@
 
 \( \mathrm{Reg} \newcommand{\Reg}{\mathrm{Reg}} \) を非可算正則基数のクラスとします。 \( \Reg _ \kappa \) を \( \kappa \) 未満の非可算正則基数のクラスとします。
 
-\( \Omega ( \alpha \) \) を \( \aleph _ { 1 + \alpha } \) と定義します。 \( \Omega ( o _ \A ( \alpha ) ) \) を \( \alpha \) と略記します。
+\( \Omega ( \alpha ) \) を \( \aleph _ { 1 + \alpha } \) と定義します。 \( \Omega ( o _ \A ( \alpha ) ) \) を \( \alpha \) と略記します。
 
 \( \mathrm{T} ( \xi, \alpha ) \newcommand{\T}{\mathrm{T}} \) を
 
@@ -49,6 +49,9 @@
 \( \A \) が \( \psi _ 0 ( \psi _ \omega ( 0 ) ) \) である時に期待する挙動です。
 
 {| class="wikitable"
+! この記事で定義された表記
+! ブーフホルツのプサイ関数
+|-
 | \( 0 \)
 | \( 0 \)
 |-
@@ -121,7 +124,10 @@
 
 計算の補助のための表を次に置いておきます。
 
-{|
+{| class="wikitable"
+! 外表記
+! 内表記
+|-
 | \( A \)
 | \( \psi _ 0 ( \psi _ \omega ( 0 ) ) \)
 |-
