@@ -44,6 +44,81 @@
 # <nowiki>\[ \A [[ X ]] _ \A \in \C ( \alpha, \beta ) \rightarrow \A [[ X ]] _ \A [ n ] _ \A \in \C ( \alpha, \beta ) \]</nowiki>
 # \[ \T ( \xi, \alpha ) \land \xi \in \C ( \alpha, \beta ) \cap \alpha \land \pi \in \C ( \alpha, \beta ) \cap \Reg _ A \rightarrow \psi _ \pi ( \xi ) \in C ( \alpha, \beta ) \]
 
+== 動き ==
+
+\( \A \) が \( \psi _ 0 ( \psi _ \omega ( 0 ) ) \) である時に期待する挙動です。
+
+{| class="wikitable"
+| \( 0 \)
+| \( 0 \)
+|-
+| \( \psi _ A ( 0 ) \)
+| \( \psi _ 0 ( 0 ) \)
+|-
+| \( \psi _ A ( 0 ) + \psi _ A ( 0 ) \)
+| \( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) \)
+|-
+| \( \psi _ A ( \psi _ A ( 0 ) ) \)
+| \( \psi _ 0 ( \psi _ 0 ( 0 ) ) \)
+|-
+| \( \psi _ A ( A ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) ) \)
+|-
+| \( \psi _ A ( A + \psi _ { A [ 0 ] } ( 0 ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) \)
+|-
+| \( \psi _ A ( A + \psi _ { A [ 0 ] } ( A ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) ) ) \)
+|-
+| \( \psi _ A ( A + \psi _ { A [ 0 ] } ( A + \psi _ { A [ 0 ] } ( 0 ) ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) ) \)
+|-
+| \( \psi _ A ( A + \psi _ { A [ 0 ] } ( A + \psi _ { A [ 0 ] } ( A ) ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( 0 ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( A ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( A + \psi _ { A [ 0 ] } ( 0 ) ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( A + \psi _ { A [ 0 ] } ( A ) ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( A + \psi _ { A [ 0 ] } ( A ) ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( A + A [ 0 ] ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( A + A [ 0 ] ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( 0 ) ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( A + A [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( 0 ) ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + A [ 0 ] [ 0 ] ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + A [ 0 ] [ 0 ] + \psi _ { A [ 0 ] [ 0 ] } ( 0 ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + A [ 0 ] [ 0 ] + A [ 0 ] [ 0 ] ) \)
+| \( \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) \)
+|-
+| \( \psi _ A ( A + A [ 0 ] + \psi _ { A [ 0 ] } ( 0 ) ) \)
+| \( \psi _ 0 ( \psi _ 1 ( \psi _ 0 ( 0 ) ) ) \)
+|}
+
 == 最後に ==
 
-間違えている気しかない。
+定義は明らかに間違ってます。
