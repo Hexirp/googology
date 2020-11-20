@@ -1,0 +1,45 @@
+定義ずらしとは、じぇいそん氏が発明した概念です。
+
+この記事では、定義ずらしを含む順序数崩壊関数を作成することを試みます。ただし、これは定義ずらしとは異なる概念である可能性が高いことに注意してください。
+
+== 順序数表記 ==
+
+基本列付き順序数表記として \( \mathbb{A} \newcommand{\A}{\mathbb{A}} \) を取ります。
+
+# \( \mathrm{T} _ \A \newcommand{\T}{{\mathrm{T} _ \A}} \) は項の集合です。
+# \( \mathrm{OT} _ \A \newcommand{\OT}{{\mathrm{OT} _ \A}} \) は標準項の集合です。 \( \OT \) は \( T \) の部分集合です。
+# \( \_ < _ \A \_ \) は \( \T \) の上での関係です。 \( \OT \) に制限すると整礎関係になります。
+# \( \mathrm{tp} _ \A \newcommand{\tp}{{\mathrm{tp} _ \A}} \) は項の共終タイプを判定する関数です。結果は \( \{ 0, 1, \omega \} \) の三つだけです。
+# \( \_ [ \_ ] _ \A \) は項の基本列を計算する関数です。 \( ( \OT, \_ < _ \A \_ ) \) の上で \( \alpha \in \OT \rightarrow \sup _ { n < \tp ( \alpha ) } \alpha [ n ] _ \A = \alpha \) を満たします。これは \( \T \times \mathbb{N} \rightarrow \T \) の関数であり、 \( \OT \times \mathbb{N} \rightarrow \OT \) の関数としても見なすことが出来ます。さらに、 \( \tp ( \alpha ) < n \rightarrow \alpha [ n ] _ \A = \alpha \) を満たします。
+
+ここで、 \( X \in \mathbb{N} ^ { _ < \omega } \) に対して \( \alpha [[ X ]] _ \A = \alpha [ X _ 0 ] _ \A [ X _ 1 ] _ \A \cdots [ X _ n ] _ \A \) とします。
+
+さらに、次のような性質を課します。
+
+# \( ( \OT, \_ < _ \A \_ ) \) は最大元が存在し、それを \( A \) と書きます。
+# \( \alpha \in \OT \) に対して、 \( A [[ X ]] _ \A \) を満たす配列 \( X \) が存在し、それはそのような性質を満たす配列の中で辞書式順序による比較において最大である。
+
+さらに、 \( ( \OT, \_ < _ A \_ ) \) の整列順序型を \( \mathbf{\alpha} \) と書き、それへの順序同型写像を \( o _ \A : \OT \to \mathbf{\alpha} \) とします。
+
+== 定義 ==
+
+\( \mathrm{Reg} \newcommand{\Reg}{\mathrm{\Reg}} \) を非可算正則基数のクラスとします。 \( \Reg _ \kappa \) を \( \kappa \) 未満の非可算正則基数のクラスとします。
+
+\( \Omega ( \alpha \) \) を \( \Aleph _ { 1 + \alpha } \) と定義します。 \( \Omega ( o _ \A ( \alpha ) ) \) を \( \alpha \) と略記します。
+
+\( \mathrm{T} ( \xi, \alpha ) \newcommand{\T}{\mathrm{T}} \) を
+
+\( \psi _ \kappa ( \alpha ) \) と \( \mathrm{C} ( \alpha, \beta ) \newcommand{\C}{\mathrm{C}} \) を相互再帰により定義します。
+
+\( \psi _ \kappa ( \alpha ) \) を次のように定義します。
+
+\[ \psi _ \kappa ( \alpha ) = \min \{ \xi \in \mathrm{On} \mid \kappa \in \C ( \alpha, \xi ) \land \C ( \alpha, \xi ) \cap \kappa \subseteq \xi \} \]
+
+\( \C ( \alpha, \beta ) \) を次の条件を満たす最小の集合とします。
+
+# \[ \beta \subseteq \C ( \alpha, \beta ) \]
+# \[ 0 \in \C ( \alpha, \beta ) \]
+# \[ \A \in \C ( \alpha, \beta ) \]
+# \[ \xi \in \C ( \alpha, \beta ) \land \zeta \in \C ( \alpha, \beta ) \rightarrow ( \xi + \zeta ) \in \C ( \alpha, \beta ) \]
+# \[ \A [[ X ]] _ \A \in \C ( \alpha, \beta ) \rightarrow \A [[ X ]] _ \A [ n ] _ \A \in \C ( \alpha, \beta ) \]
+# \[ \T ( \xi, \alpha ) \land \xi \in \C ( \alpha, \beta ) \cap \alpha \land \pi \in \C ( \alpha, \beta ) \cap \Reg _ A \rightarrow \psi _ \pi ( \xi ) \in C ( \alpha, \beta ) \]
