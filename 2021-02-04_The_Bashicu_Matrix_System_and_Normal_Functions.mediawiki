@@ -21,11 +21,11 @@
 
 {{User:Hexirp/bxu|定義 2.1}}
 \( 1 \) 行 \( n \) 列の行列 \( A \) と \( m \) 行 \( n \) 列の行列 \( X \) を取る。 \( ( A \oplus X ) _ { m, n } = A _ { 1, n } + X _ { m, n } \) であるとする。
+{{User:Hexirp/bxl}}
 
 つまり、次のように計算されます。
 
 \[ \begin{pmatrix} 1 \\ 1 \\ \end{pmatrix} \oplus \begin{pmatrix} 0 & 1 & 2 \\ 0 & 1 & 1 \\ \end{pmatrix} = \begin{pmatrix} 1 + 0 & 1 + 1 & 1 + 2 \\ 1 + 0 & 1 + 1 & 1 + 1 \\ \end{pmatrix} = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 2 & 2 \\ \end{pmatrix} \]
-{{User:Hexirp/bxl}}
 
 最初は原始数列から説明します。
 
