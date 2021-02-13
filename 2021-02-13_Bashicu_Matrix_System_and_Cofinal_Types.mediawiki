@@ -57,4 +57,18 @@
 \end{align*}
 </nowiki>
 
-標準崩壊は上記のようになります。
+はっきりとわかっている標準崩壊は上記のようになります。
+
+<nowiki>
+\begin{align*}
+  ( 2, 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ { \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) } ( 0 ) ) \\
+  ( 2, 1, 1 ) ( 1, 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ { \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) } ( 0 ) + \psi _ 0 ( 0 ) ) \\
+  ( 2, 1, 1 ) ( 1, 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ { \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) } ( 0 ) + \psi _ { \psi _ 0 ( 0 ) } ( 0 ) ) \\
+  ( 2, 1, 1 ) ( 1, 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ { \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) } ( 0 ) + \psi _ { \psi _ 0 ( \psi _ 0 ( 0 ) ) } ( 0 ) ) \\
+  ( 2, 1, 1 ) ( 2, 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ { \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) } ( \psi _ 0 ( 0 ) ) ) \\
+  ( 2, 1, 1 ) ( 2, 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ { \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) } ( \psi _ { \psi _ 0 ( 0 ) } ( 0 ) ) ) \\
+  ( 2, 1, 1 ) ( 2, 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ { \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) } ( 0 ) ) \\
+\end{align*}
+</nowiki>
+
+はっきりとわかっていない標準崩壊は上記のようになります。これらはただの予想です。
