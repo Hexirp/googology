@@ -18,7 +18,7 @@
 
 悪根の位置が変化することが基数が崩壊することになぞらえられるのは言うまでもありません。
 
-== 標準的崩壊 ==
+== 標準崩壊 ==
 
 可崩壊な部分行列 \( X \) があるとき、それに左から結合させて正規形にすることが出来る行列を \( X \) の正規化行列とします。これには様々なものがありますが、そのうちで最小であるものが存在します。
 
@@ -43,16 +43,26 @@
   ( 1, 1 ) ( 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( 0 ) ) + \psi _ 0 ( 0 ) \\
   ( 1, 1 ) ( 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) \\
   ( 1, 1 ) ( 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) \\
-  ( 1, 1 ) ( 2, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( 1 ) ) \\
   ( 2, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) ) \\ 
+  ( 2, 1 ) ( 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) ) + \psi _ 0 ( 0 ) \\ 
   ( 2, 1 ) ( 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) + \psi _ 0 ( 0 ) ) \\ 
   ( 2, 1 ) ( 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) + \psi _ 1 ( 0 ) ) \\ 
   ( 2, 1 ) ( 2, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) ) \\ 
   ( 2, 1 ) ( 2, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) ) \\ 
-  ( 2, 1 ) ( 3, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) ) ) \\ 
   ( 2, 2 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) ) \\
+  ( 2, 2 ) ( 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) ) + \psi _ 0 ( 0 ) \\
   ( 2, 2 ) ( 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 0 ( 0 ) ) \\
   ( 2, 2 ) ( 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 1 ( 0 ) ) \\
-  ( 2, 2 ) ( 2, 0 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 1 ( \psi _ 2 ( 0 ) ) ) \\
-  ( 2, 2 ) ( 2, 1 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 1 ( \psi _ 2 ( 0 ) ) ) \\
-  ( 3, 2 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( \psi _ 2 ( 0 ) ) ) \\
+  ( 2, 2 ) ( 2, 0 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 1 ( \psi _ 2 ( 0 ) + \psi _ 0 ( 0 ) ) ) \\
+  ( 2, 2 ) ( 2, 1 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 1 ( \psi _ 2 ( 0 ) + \psi _ 1 ( 0 ) ) ) \\
+  ( 2, 2 ) ( 2, 2 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 2 ( 0 ) ) \\
+  ( 1, 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) ) \\
+  ( 1, 1, 1 ) ( 0, 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) ) + \psi _ 0 ( 0 ) \\
+  ( 1, 1, 1 ) ( 1, 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) + \psi _ 0 ( 0 ) ) \\
+  ( 1, 1, 1 ) ( 1, 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) + \psi _ 1 ( 0 ) ) \\
+  ( 1, 1, 1 ) ( 1, 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) + \psi _ \omega ( 0 ) ) \\
+  ( 1, 1, 1 ) ( 1, 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) + \psi _ \omega ( 0 ) ) \\
+\end{align*}
+</nowiki>
+
+標準崩壊は上記のようになります。
