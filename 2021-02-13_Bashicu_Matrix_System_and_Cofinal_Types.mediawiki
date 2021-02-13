@@ -30,34 +30,26 @@
 
 <nowiki>
 \begin{align*}
-  ( 0 ) & \rightarrow \psi _ 0 ( 0 ) \\
-  ( 0 ) ( 0 ) & \rightarrow \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) \\
   ( 1 ) & \rightarrow \psi _ 0 ( \psi _ 0 ( 0 ) ) \\
-  ( 1 ) ( 0 ) & \rightarrow \psi _ 0 ( \psi _ 0 ( 0 ) ) + \psi _ 0 ( 0 ) \\
   ( 1 ) ( 1 ) & \rightarrow \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) \\
   ( 2 ) & \rightarrow \psi _ 0 ( \psi _ 0 ( \psi _ 0 ( 0 ) ) ) \\
-  ( 2 ) ( 0 ) & \rightarrow \psi _ 0 ( \psi _ 0 ( \psi _ 0 ( 0 ) ) ) + \psi _ 0 ( 0 ) \\
   ( 2 ) ( 1 ) & \rightarrow \psi _ 0 ( \psi _ 0 ( \psi _ 0 ( 0 ) ) + \psi _ 0 ( 0 ) ) \\
   ( 2 ) ( 2 ) & \rightarrow \psi _ 0 ( \psi _ 0 ( \psi _ 0 ( 0 ) + \psi _ 0 ( 0 ) ) ) \\
   ( 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( 0 ) ) \\
-  ( 1, 1 ) ( 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( 0 ) ) + \psi _ 0 ( 0 ) \\
   ( 1, 1 ) ( 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) \\
   ( 1, 1 ) ( 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) \\
   ( 2, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) ) \\ 
-  ( 2, 1 ) ( 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) ) + \psi _ 0 ( 0 ) \\ 
   ( 2, 1 ) ( 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) + \psi _ 0 ( 0 ) ) \\ 
   ( 2, 1 ) ( 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) ) + \psi _ 1 ( 0 ) ) \\ 
   ( 2, 1 ) ( 2, 0 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) + \psi _ 0 ( 0 ) ) ) \\ 
   ( 2, 1 ) ( 2, 1 ) & \rightarrow \psi _ 0 ( \psi _ 1 ( \psi _ 1 ( 0 ) + \psi _ 1 ( 0 ) ) ) \\ 
   ( 2, 2 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) ) \\
-  ( 2, 2 ) ( 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) ) + \psi _ 0 ( 0 ) \\
   ( 2, 2 ) ( 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 0 ( 0 ) ) \\
   ( 2, 2 ) ( 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 1 ( 0 ) ) \\
   ( 2, 2 ) ( 2, 0 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 1 ( \psi _ 2 ( 0 ) + \psi _ 0 ( 0 ) ) ) \\
   ( 2, 2 ) ( 2, 1 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 1 ( \psi _ 2 ( 0 ) + \psi _ 1 ( 0 ) ) ) \\
   ( 2, 2 ) ( 2, 2 ) & \rightarrow \psi _ 0 ( \psi _ 2 ( 0 ) + \psi _ 2 ( 0 ) ) \\
   ( 1, 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) ) \\
-  ( 1, 1, 1 ) ( 0, 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) ) + \psi _ 0 ( 0 ) \\
   ( 1, 1, 1 ) ( 1, 0, 0 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) + \psi _ 0 ( 0 ) ) \\
   ( 1, 1, 1 ) ( 1, 1, 0 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) + \psi _ 1 ( 0 ) ) \\
   ( 1, 1, 1 ) ( 1, 1, 1 ) & \rightarrow \psi _ 0 ( \psi _ \omega ( 0 ) + \psi _ \omega ( 0 ) ) \\
