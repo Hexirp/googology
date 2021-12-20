@@ -1,0 +1,80 @@
+私は巨大数の研究を始めた当時から順序数へ関心を持ち続けていた。それが順序数崩壊関数として結実した。年の瀬なので成果を纏めようと思う。
+
+== 共通定義 ==
+
+\( \mathrm{pCIC} + \mathrm{UA} + \mathrm{AC} \) で作業を行う。
+
+<div style="display: none;"><nowiki>\[
+  \newcommand{\paren}[1]{ \mathord{ \left ( { #1 } \right ) } }
+  \newcommand{\bracket}[1]{ \mathord{ \left [ { #1 } \right ] } }
+  \newcommand{\brace}[1]{ \mathord{ \left \{ { #1 } \right \} } }
+  \newcommand{\midder}[1]{ \mathrel{ \left | \rule{0em}{#1} \right . } }
+\]</nowiki></div>
+
+=== 集合の型 ===
+
+\( \mathrm{Set} \) は集合の型である。
+
+=== 順序数の型 ===
+
+\( \mathrm{On} \) は順序数の型である。
+
+=== 無限基数の型 ===
+
+\( \mathrm{Card} \) は無限基数の型である。
+
+=== 共終数 ===
+
+\( \mathrm{cf} \paren{ \_ } \) は共終数である。
+
+\( \alpha \in \mathrm{On} \) であるとして、 \( \mathrm{cf} \paren{ \alpha } \in \mathrm{On} \) である。
+
+<nowiki>\[
+  \mathrm{cf} \paren{ \alpha } = \min \brace{ \beta \in \mathrm{On} \midder{1ex} \exists \paren{ f \in \paren{ \beta \rightarrow \alpha } } \ldotp \forall \paren{ x \in \alpha } \ldotp \exists \paren{ y \in \beta } \ldotp x \leq f \paren{ y } }
+\]</nowiki>
+
+\( \kappa \in \mathrm{Card} \) であるとして、 \( \mathrm{cf} \paren{ \kappa } \in \mathrm{Card} \) である。
+
+<nowiki>\[
+  \mathrm{cf} \paren{ \kappa } = \min \brace{ \lambda \in \mathrm{Card} \midder{1ex} \exists \paren{ f \in \paren{ \lambda \rightarrow \kappa } } \ldotp \forall \paren{ x \in \kappa } \ldotp \exists \paren{ y \in \lambda } \ldotp x \leq f \paren{ y } }
+\]</nowiki>
+
+== 無限基数による単純な順序数崩壊関数 ==
+
+無限基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with an Infinite Cardinal, SOCFwaIC) は、
+
+== 無限基数を数え上げる関数による単純な順序数崩壊関数 ==
+
+無限基数を数え上げる関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Function for Counting Infinite Cardinals, SOCFwaFfCIC) は、
+
+== 無限基数を数え上げる二変数関数による単純な順序数崩壊関数 ==
+
+無限基数を数え上げる二変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Bivariate Function for Counting Infinite Cardinals, SOCFwaBFfCIC) は、
+
+== 無限基数を数え上げる多変数関数による単純な順序数崩壊関数 ==
+
+無限基数を数え上げる多変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Multivariate Function for Counting Infinite Cardinals, SOCFwaMFfCIC) は、
+
+== 到達不能基数による単純な順序数崩壊関数 ==
+
+到達不能基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Function with an Inaccessible Cardinal, SOCFwaIC) は、
+
+== 到達不能基数を数え上げる関数による単純な順序数崩壊関数 ==
+
+到達不能基数を数え上げる関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Function with a Function for Counting Inaccessible Cardinals, SOCFwaFfCIC) は、
+
+== 到達不能基数を数え上げる二変数関数による単純な順序数崩壊関数 ==
+
+到達不能基数を数え上げる二変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Bivariate Function for Counting Inaccessible Cardinals, SOCFwaBFfCIC) は、
+
+== 到達不能基数を数え上げる多変数関数による単純な順序数崩壊関数 ==
+
+到達不能基数を数え上げる多変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Multivariate Function for Counting Inaccessible Cardinals, SOCFwaMFfCIC) は、
+
+== 弱マーロ基数を数え上げる club クラスによる単純な順序数崩壊関数 ==
+
+弱マーロ基数を数え上げる club クラスによる単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Club Class for Counting Weakly Mahlo Cardinals, SOCFwaCCfCWMC) は、
+
+== 弱マーロ基数を数え上げる club クラスを数え上げる関数による単純な順序数崩壊関数 ==
+
+弱マーロ基数を数え上げる club クラスを数え上げる関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Function for Counting Club Classes for Counting Weakly Mahlo Cardinals, SOCFwaFfCCCfCWMC) は、
