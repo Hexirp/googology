@@ -98,7 +98,11 @@
 ### \( \Omega \)
 ## \( \alpha = { \psi } _ { { \alpha } _ { 1 } } \paren{ { \alpha } _ { 2 } } \Rightarrow \_ \)
 ### \( { \alpha } _ { 1 } = \Omega \Rightarrow \_ \)
-#### \( \omega \)
+#### \( \mathrm{cf} \paren{ { \alpha } _ { 2 } } = 0 \Rightarrow \_ \)
+##### \( \omega \)
+#### \( \mathrm{cf} \paren{ { \alpha } _ { 2 } } = 1 \Rightarrow \_ \)
+##### \( \omega \)
+#### \( \mathrm{cf} \paren{ { \alpha } _ { 2 } } \geq \omega \land \mathrm{cf} \paren{ { \alpha } _ { 2 } } <
 
 == 無限基数を数え上げる関数による単純な順序数崩壊関数 ==
 
