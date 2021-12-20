@@ -11,6 +11,14 @@
   \newcommand{\midder}[1]{ \mathrel{ \left | \rule{0em}{#1} \right . } }
 \]</nowiki></div>
 
+=== 冪の型 ===
+
+\( \mathcal{P} \paren{ \_ } \) は冪の型である。 \( \mathcal{P} : { \mathrm{Type} } _ { i } \rightarrow { \mathrm{Type} } _ { i } \) である。
+
+<nowiki>\[
+  \mathcal{P} \paren{ A } = A \rightarrow \mathrm{hProp}
+\]</nowiki>
+
 === 集合の型 ===
 
 \( \mathrm{Set} \) は集合の型である。
@@ -41,7 +49,29 @@
 
 == 無限基数による単純な順序数崩壊関数 ==
 
-無限基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with an Infinite Cardinal, SOCFwaIC) は、
+無限基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with an Infinite Cardinal, SOCFwaIC) は、最小の非可算基数だけを崩壊させる関数である。
+
+=== 定義 ===
+
+\( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+
+# Base
+## \( \xi \in \beta \rightarrow C \paren{ \alpha, \beta } \)
+# Addition
+## \( 0 \in C \paren{ \alpha, \beta } \)
+## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, beta } \)
+# Increasing Function
+## \( 1 \in C \paren{ \alpha, \beta } \)
+# Collapsing Target
+## \( \Omega \in C \paren{ \alpha, \beta } \)
+# Recursion
+## \( \xi \in C \paren{ \alpha, \beta } \land \mu \in C \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \psi } _ { \mu } \paren{ \xi } \in C \paren{ \alpha, \beta } \)
+
+\( { \psi } _ { \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+
+<nowiki>\[
+  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \zeta } \cap \nu } \subseteq \xi }
+\]</nowiki>
 
 == 無限基数を数え上げる関数による単純な順序数崩壊関数 ==
 
