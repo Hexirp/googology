@@ -9,6 +9,8 @@
   \newcommand{\bracket}[1]{ \mathord{ \left [ { #1 } \right ] } }
   \newcommand{\brace}[1]{ \mathord{ \left \{ { #1 } \right \} } }
   \newcommand{\midder}[1]{ \mathrel{ \left | \rule{0em}{#1} \right . } }
+  \newcommand{\a}[2]{ { #1 } \paren{ #2 } }
+  \newcommand{\p}[1]{ { \psi } _ { #1 } }
 \]</nowiki></div>
 
 === 冪の型 ===
@@ -77,32 +79,13 @@
 
 === 解析 ===
 
-\( T \) は次の条件を満たす最小の型である。
-
-# \( 0 : T \)
-# \( x : T \land y : T \rightarrow \paren{ x + y } : T \)
-# \( 1 : T \)
-# \( \Omega : T \)
-# \( x : T \land y : T \rightarrow { \psi } _ { x } \paren{ y } : T \)
-
-共終数を計算する。
-
-# \( \mathrm{cf} \paren{ \alpha } = \_ \)
-## \( \alpha = 0 \Rightarrow \_ \)
-### \( 0 \)
-## \( \alpha = 1 \Rightarrow \_ \)
-### \( 1 \)
-## \( \alpha = { \alpha } _ { 1 } + { \alpha } _ { 2 } \Rightarrow \_ \)
-### \( \mathrm{cf} \paren{ { \alpha } _ { 2 } } \)
-## \( \alpha = \Omega \Rightarrow \_ \)
-### \( \Omega \)
-## \( \alpha = { \psi } _ { { \alpha } _ { 1 } } \paren{ { \alpha } _ { 2 } } \Rightarrow \_ \)
-### \( { \alpha } _ { 1 } = \Omega \Rightarrow \_ \)
-#### \( \mathrm{cf} \paren{ { \alpha } _ { 2 } } = 0 \Rightarrow \_ \)
-##### \( \omega \)
-#### \( \mathrm{cf} \paren{ { \alpha } _ { 2 } } = 1 \Rightarrow \_ \)
-##### \( \omega \)
-#### \( \mathrm{cf} \paren{ { \alpha } _ { 2 } } \geq \omega \land \mathrm{cf} \paren{ { \alpha } _ { 2 } } <
+# \( 0 \)
+# \( 1 \)
+## \( 0 \)
+# \( \a{ \p{ \Omega } }{ 0 } \)
+## \( 0 \)
+## \( 1 + 0 \)
+## \( 1 + 1 + 0 \)
 
 == 無限基数を数え上げる関数による単純な順序数崩壊関数 ==
 
