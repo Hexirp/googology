@@ -47,11 +47,13 @@
   \mathrm{cf} \paren{ \kappa } = \min \brace{ \lambda \in \mathrm{Card} \midder{1ex} \exists \paren{ f \in \paren{ \lambda \rightarrow \kappa } } \ldotp \forall \paren{ x \in \kappa } \ldotp \exists \paren{ y \in \lambda } \ldotp x \leq f \paren{ y } }
 \]</nowiki>
 
+=== 最小の非可算基数 ===
+
+\( \Omega \) は最小の非可算基数である。
+
 == 無限基数による単純な順序数崩壊関数 ==
 
 無限基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with an Infinite Cardinal, SOCFwaIC) は、最小の非可算基数だけを崩壊させる関数である。
-
-=== 定義 ===
 
 \( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
 
@@ -72,6 +74,31 @@
 <nowiki>\[
   { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \zeta } \cap \nu } \subseteq \xi }
 \]</nowiki>
+
+=== 解析 ===
+
+\( T \) は次の条件を満たす最小の型である。
+
+# \( 0 : T \)
+# \( x : T \land y : T \rightarrow \paren{ x + y } : T \)
+# \( 1 : T \)
+# \( \Omega : T \)
+# \( x : T \land y : T \rightarrow { \psi } _ { x } \paren{ y } : T \)
+
+共終数を計算する。
+
+# \( \mathrm{cf} \paren{ \alpha } = \_ \)
+## \( \alpha = 0 \Rightarrow \_ \)
+### \( 0 \)
+## \( \alpha = 1 \Rightarrow \_ \)
+### \( 1 \)
+## \( \alpha = { \alpha } _ { 1 } + { \alpha } _ { 2 } \Rightarrow \_ \)
+### \( \mathrm{cf} \paren{ { \alpha } _ { 2 } } \)
+## \( \alpha = \Omega \Rightarrow \_ \)
+### \( \Omega \)
+## \( \alpha = { \psi } _ { { \alpha } _ { 1 } } \paren{ { \alpha } _ { 2 } } \Rightarrow \_ \)
+### \( { \alpha } _ { 1 } = \Omega \Rightarrow \_ \)
+#### \( \omega \)
 
 == 無限基数を数え上げる関数による単純な順序数崩壊関数 ==
 
