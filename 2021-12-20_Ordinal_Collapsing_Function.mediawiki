@@ -80,7 +80,7 @@
 \( { \psi } _ { \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
 
 <nowiki>\[
-  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \zeta } \cap \nu } \subseteq \xi }
+  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
 \]</nowiki>
 
 === 無限基数による単純な順序数崩壊関数の解析 ===
@@ -129,12 +129,52 @@
 \( { \psi } _ { \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
 
 <nowiki>\[
-  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \zeta } \cap \nu } \subseteq \xi }
+  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
 \]</nowiki>
 
 == 無限基数を数え上げる二変数関数による単純な順序数崩壊関数 ==
 
-無限基数を数え上げる二変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Bivariate Function for Counting Infinite Cardinals, SOCFwaBFfCIC) は、
+無限基数を数え上げる二変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Bivariate Function for Counting Infinite Cardinals, SOCFwaBFfCIC) は、無限基数を数え上げる二変数関数を崩壊させる関数である。
+
+=== 無限基数を数え上げる関数による単純な順序数崩壊関数の定義 ===
+
+\( B \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( B \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+
+# Base
+## \( \xi \in \beta \rightarrow B \paren{ \alpha, \beta } \)
+# Addition
+## \( 0 \in B \paren{ \alpha, \beta } \)
+## \( \xi \in B \paren{ \alpha, \beta } \land \zeta \in B \paren{ \alpha, beta } \rightarrow \paren{ \xi + \zeta } \in B \paren{ \alpha, beta } \)
+# Increasing Function
+## \( 1 \in B \paren{ \alpha, \beta } \)
+# Recursion
+## \( \xi \in B \paren{ \alpha, \beta } \land x \in B \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow \Phi \aren{ \xi } \paren{ x } \in B \paren{ \alpha, \beta } \)
+
+\( \Phi \paren{ \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+
+<nowiki>\[
+  \Phi \paren{ \alpha } \paren{ a } = \min \brace{ \xi \in \mathrm{Card} \midder{1ex} \paren{ B \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
+\]</nowiki>
+
+\( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+
+# Base
+## \( \xi \in \beta \rightarrow C \paren{ \alpha, \beta } \)
+# Addition
+## \( 0 \in C \paren{ \alpha, \beta } \)
+## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, beta } \)
+# Increasing Function
+## \( 1 \in C \paren{ \alpha, \beta } \)
+# Collapsing Target
+## \( \xi \in C \paren{ \alpha, \beta } \land x \in C \paren{ \alpha, \beta } \rightarrow \Phi \paren{ \xi } \paren{ x } \in C \paren{ \alpha, \beta } \)
+# Recursion
+## \( \xi \in C \paren{ \alpha, \beta } \land \mu \in C \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \psi } _ { \mu } \paren{ \xi } \in C \paren{ \alpha, \beta } \)
+
+\( { \psi } _ { \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+
+<nowiki>\[
+  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
+\]</nowiki>
 
 == 無限基数を数え上げる多変数関数による単純な順序数崩壊関数 ==
 
