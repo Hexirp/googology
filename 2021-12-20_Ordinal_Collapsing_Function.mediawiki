@@ -153,7 +153,7 @@
 \( \Phi \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
 
 <nowiki>\[
-  \Phi \paren{ a, \alpha } = \mathrm{Enum} \paren{ \brace{ \xi \in \mathrm{Card} \midder{1ex} \paren{ B \paren{ a, \xi } \cap \nu } \subseteq \xi } } \paren{ \alpha }
+  \Phi \paren{ a, \alpha } = \mathrm{Enum} \paren{ \brace{ \xi \in \mathrm{Card} \midder{1ex} B \paren{ a, \xi } \subseteq \xi } } \paren{ \alpha }
 \]</nowiki>
 
 \( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
