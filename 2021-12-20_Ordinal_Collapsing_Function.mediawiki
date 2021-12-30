@@ -69,7 +69,7 @@
 ## \( \xi \in \beta \rightarrow C \paren{ \alpha, \beta } \)
 # Addition
 ## \( 0 \in C \paren{ \alpha, \beta } \)
-## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, beta } \)
+## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, \beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, \beta } \)
 # Increasing Function
 ## \( 1 \in C \paren{ \alpha, \beta } \)
 # Collapsing Target
@@ -118,7 +118,7 @@
 ## \( \xi \in \beta \rightarrow C \paren{ \alpha, \beta } \)
 # Addition
 ## \( 0 \in C \paren{ \alpha, \beta } \)
-## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, beta } \)
+## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, \beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, \beta } \)
 # Increasing Function
 ## \( 1 \in C \paren{ \alpha, \beta } \)
 # Collapsing Target
@@ -138,13 +138,13 @@
 
 === 無限基数を数え上げる関数による単純な順序数崩壊関数の定義 ===
 
-\( B \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( B \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+\( B \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( B \paren{ a, \beta } \) は次の条件を満たす最小のものである。
 
 # Base
 ## \( \xi \in \beta \rightarrow B \paren{ a, \beta } \)
 # Addition
 ## \( 0 \in B \paren{ a, \beta } \)
-## \( \xi \in B \paren{ a, \beta } \land \zeta \in B \paren{ a, beta } \rightarrow \paren{ \xi + \zeta } \in B \paren{ a, \beta } \)
+## \( \xi \in B \paren{ a, \beta } \land \zeta \in B \paren{ a, \beta } \rightarrow \paren{ \xi + \zeta } \in B \paren{ a, \beta } \)
 # Increasing Function
 ## \( 1 \in B \paren{ a, \beta } \)
 # Recursion
