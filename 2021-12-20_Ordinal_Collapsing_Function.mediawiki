@@ -141,19 +141,19 @@
 \( B \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( B \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
 
 # Base
-## \( \xi \in \beta \rightarrow B \paren{ \alpha, \beta } \)
+## \( \xi \in \beta \rightarrow B \paren{ a, \beta } \)
 # Addition
-## \( 0 \in B \paren{ \alpha, \beta } \)
-## \( \xi \in B \paren{ \alpha, \beta } \land \zeta \in B \paren{ \alpha, beta } \rightarrow \paren{ \xi + \zeta } \in B \paren{ \alpha, beta } \)
+## \( 0 \in B \paren{ a, \beta } \)
+## \( \xi \in B \paren{ a, \beta } \land \zeta \in B \paren{ a, beta } \rightarrow \paren{ \xi + \zeta } \in B \paren{ a, \beta } \)
 # Increasing Function
-## \( 1 \in B \paren{ \alpha, \beta } \)
+## \( 1 \in B \paren{ a, \beta } \)
 # Recursion
-## \( \xi \in B \paren{ \alpha, \beta } \land x \in B \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow \Phi \aren{ \xi } \paren{ x } \in B \paren{ \alpha, \beta } \)
+## \( x \in B \paren{ a, \beta } \land \xi \in B \paren{ a, \beta } \land x < a \rightarrow \Phi \paren{ x, \xi } \in B \paren{ a, \beta } \)
 
-\( \Phi \paren{ \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+\( \Phi \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
 
 <nowiki>\[
-  \Phi \paren{ \alpha } \paren{ a } = \min \brace{ \xi \in \mathrm{Card} \midder{1ex} \paren{ B \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
+  \Phi \paren{ a, \alpha } = \mathrm{Enum} \paren{ \brace{ \xi \in \mathrm{Card} \midder{1ex} \paren{ B \paren{ a, \xi } \cap \nu } \subseteq \xi } } \paren{ \alpha }
 \]</nowiki>
 
 \( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
@@ -166,7 +166,7 @@
 # Increasing Function
 ## \( 1 \in C \paren{ \alpha, \beta } \)
 # Collapsing Target
-## \( \xi \in C \paren{ \alpha, \beta } \land x \in C \paren{ \alpha, \beta } \rightarrow \Phi \paren{ \xi } \paren{ x } \in C \paren{ \alpha, \beta } \)
+## \( x \in C \paren{ \alpha, \beta } \land \xi \in C \paren{ \alpha, \beta } \rightarrow \Phi \paren{ x, \xi } \in C \paren{ \alpha, \beta } \)
 # Recursion
 ## \( \xi \in C \paren{ \alpha, \beta } \land \mu \in C \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \psi } _ { \mu } \paren{ \xi } \in C \paren{ \alpha, \beta } \)
 
