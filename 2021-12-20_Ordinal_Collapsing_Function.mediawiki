@@ -57,6 +57,8 @@
 
 無限基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with an Infinite Cardinal, SOCFwaIC) は、最小の非可算基数だけを崩壊させる関数である。
 
+=== 無限基数による単純な順序数崩壊関数の定義 ===
+
 \( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
 
 # Base
@@ -77,7 +79,7 @@
   { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \zeta } \cap \nu } \subseteq \xi }
 \]</nowiki>
 
-=== 解析 ===
+=== 無限基数による単純な順序数崩壊関数の解析 ===
 
 # \( 0 \)
 # \( 1 \)
