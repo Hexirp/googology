@@ -57,6 +57,69 @@
 
 \( { \omega } _ { \alpha } \) は \( \mathrm{Enum} \paren{ \mathrm{Card} } \paren{ \alpha } \) である。
 
+=== 有限個の直積 ===
+
+\( n \in \mathbb{N} \) に対して \( { A } ^ { n } \) を \( n \) 個の \( A \) の直積とする。
+
+その要素は \( \bracket{ { x } _ { 2 }, { x } _ { 1 }, { x } _ { 0 } } \) という風に書くことにする。
+
+\( { A } ^ { m } \) と \( { A } ^ { n } \) を結合して \( { A } ^ { m + n } \) とする演算子を \( \_ \frown \_ \) と書くことにする。
+
+\( { A } ^ { \_ < \omega } \) を \( \bigcup _ { n \in \mathbb{N} } { A } ^ { n } \) とする。
+
+\( { \mathrm{On} } ^ { \_ < \omega } \) のインデックシングを次のように定義する。
+
+<nowiki>\[
+  a \bracket{ n }
+    =
+      \begin{cases}
+        0
+          &
+            \paren{
+                0 = n
+              \land
+                \bracket{ } = a
+            }
+          \\
+        { a } _ { p }
+          &
+            \paren{
+                0 = n
+              \land
+                { a } _ { s } \frown \bracket{ { a } _ { p } } = a
+            }
+          \\
+        0
+          &
+            \paren{
+                { n } _ { p } + 1 = n
+              \land
+                \bracket{ } = a
+            }
+          \\
+        { a } _ { s } \bracket{ { n } _ { p } }
+          &
+            \paren{
+                { n } _ { p } + 1 = n
+              \land
+                { a } _ { s } \frown \bracket{ { a } _ { p } } = a
+            }
+          \\
+      \end{cases}
+\]</nowiki>
+
+\( { \mathrm{On} } ^ { \_ < \omega } \) の上の比較を次のように定義する。
+
+<nowiki>\[
+  a < b
+    =
+      \exists \paren{ n \in \omega } \ldotp
+        \forall \paren{ x \in \omega } \ldotp
+            \paren{ x > n \rightarrow a \bracket{ x } = b \bracket{ x } }
+          \land
+            \paren{ x = n \rightarrow a \bracket{ x } < b \bracket{ x } }
+\]</nowiki>
+
 == 無限基数による単純な順序数崩壊関数 ==
 
 無限基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with an Infinite Cardinal, SOCFwaIC) は、最小の非可算基数だけを崩壊させる関数である。限界の予想は \( { \varepsilon } _ { \omega } \) である。
@@ -136,7 +199,7 @@
 
 無限基数を数え上げる二変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Bivariate Function for Counting Infinite Cardinals, SOCFwaBFfCIC) は、無限基数を数え上げる二変数関数を崩壊させる関数である。
 
-=== 無限基数を数え上げる関数による単純な順序数崩壊関数の定義 ===
+=== 無限基数を数え上げる二変数関数による単純な順序数崩壊関数の定義 ===
 
 \( B \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( B \paren{ a, \beta } \) は次の条件を満たす最小のものである。
 
@@ -162,7 +225,7 @@
 ## \( \xi \in \beta \rightarrow C \paren{ \alpha, \beta } \)
 # Addition
 ## \( 0 \in C \paren{ \alpha, \beta } \)
-## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, beta } \)
+## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, \beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, \beta } \)
 # Increasing Function
 ## \( 1 \in C \paren{ \alpha, \beta } \)
 # Collapsing Target
@@ -178,7 +241,47 @@
 
 == 無限基数を数え上げる多変数関数による単純な順序数崩壊関数 ==
 
-無限基数を数え上げる多変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Multivariate Function for Counting Infinite Cardinals, SOCFwaMFfCIC) は、
+無限基数を数え上げる多変数関数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Multivariate Function for Counting Infinite Cardinals, SOCFwaMFfCIC) は、無限基数を数え上げる多変数関数を崩壊させる関数である。
+
+=== 無限基数を数え上げる多変数関数による単純な順序数崩壊関数の定義 ===
+
+\( B \paren{ \_, \_ } \) は \( { \mathrm{On} } ^ { \_ < \omega } \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( B \paren{ a, \beta } \) は次の条件を満たす最小のものである。
+
+# Base
+## \( \xi \in \beta \rightarrow B \paren{ a, \beta } \)
+# Addition
+## \( 0 \in B \paren{ a, \beta } \)
+## \( \xi \in B \paren{ a, \beta } \land \zeta \in B \paren{ a, \beta } \rightarrow \paren{ \xi + \zeta } \in B \paren{ a, \beta } \)
+# Increasing Function
+## \( 1 \in B \paren{ a, \beta } \)
+# Recursion
+## \( x \in { B \paren{ a, \beta } } ^ { \_ < \omega } \land \xi \in B \paren{ a, \beta } \land x < a \rightarrow \Phi \paren{ x, \xi } \in B \paren{ a, \beta } \)
+
+\( \Phi \paren{ \_, \_ } \) は \( { \mathrm{On} } ^ { \_ < \omega } \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+
+<nowiki>\[
+  \Phi \paren{ a, \alpha } = \mathrm{Enum} \paren{ \brace{ \xi \in \mathrm{Card} \midder{1ex} B \paren{ a, \xi } \subseteq \xi } } \paren{ \alpha }
+\]</nowiki>
+
+\( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+
+# Base
+## \( \xi \in \beta \rightarrow C \paren{ \alpha, \beta } \)
+# Addition
+## \( 0 \in C \paren{ \alpha, \beta } \)
+## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, \beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, \beta } \)
+# Increasing Function
+## \( 1 \in C \paren{ \alpha, \beta } \)
+# Collapsing Target
+## \( x \in { C \paren{ \alpha, \beta } } ^ { \_ < \omega } \land \xi \in C \paren{ \alpha, \beta } \rightarrow \Phi \paren{ x, \xi } \in C \paren{ \alpha, \beta } \)
+# Recursion
+## \( \xi \in C \paren{ \alpha, \beta } \land \mu \in C \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \psi } _ { \mu } \paren{ \xi } \in C \paren{ \alpha, \beta } \)
+
+\( { \psi } _ { \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+
+<nowiki>\[
+  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
+\]</nowiki>
 
 == 到達不能基数による単純な順序数崩壊関数 ==
 
