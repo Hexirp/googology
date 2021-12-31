@@ -33,6 +33,10 @@
 
 \( \mathrm{Card} \) は無限基数の型である。
 
+=== 正則基数の型 ===
+
+\( \mathrm{Reg} \) は正則基数の型である。
+
 === 共終数 ===
 
 \( \mathrm{cf} \paren{ \_ } \) は共終数である。
@@ -257,7 +261,7 @@
 # Recursion
 ## \( x \in { B \paren{ a, \beta } } ^ { \_ < \omega } \land \xi \in B \paren{ a, \beta } \land x < a \rightarrow \Phi \paren{ x, \xi } \in B \paren{ a, \beta } \)
 
-\( \Phi \paren{ \_, \_ } \) は \( { \mathrm{On} } ^ { \_ < \omega } \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+\( \Phi \paren{ \_, \_ } \) は \( { \mathrm{On} } ^ { \_ < \omega } \times \mathrm{On} \rightarrow \mathrm{On} \) である。
 
 <nowiki>\[
   \Phi \paren{ a, \alpha } = \mathrm{Enum} \paren{ \brace{ \xi \in \mathrm{Card} \midder{1ex} B \paren{ a, \xi } \subseteq \xi } } \paren{ \alpha }
@@ -285,7 +289,47 @@
 
 == 到達不能基数による単純な順序数崩壊関数 ==
 
-到達不能基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Function with an Inaccessible Cardinal, SOCFwaIC) は、
+到達不能基数による単純な順序数崩壊関数 (Simple Ordinal Collapsing Function with an Inaccessible Cardinal, SOCFwaIC) は、到達不能基数を崩壊させる関数です。
+
+=== 到達不能基数による単純な順序数崩壊関数の定義 ===
+
+\( B \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。
+
+# Base
+## \( \xi \in \beta \rightarrow B \paren{ \beta } \)
+# Addition
+## \( 0 \in B \paren{ \beta } \)
+## \( \xi \in B \paren{ \beta } \land \zeta \in B \paren{ \beta } \rightarrow \paren{ \xi + \zeta } \in B \paren{ \beta } \)
+# Increasing Function
+## \( 1 \in B \paren{ a, \beta } \)
+## \( \xi \in B \paren{ \beta } \rightarrow { \omega } _ { \xi } \in B \paren{ \beta } \)
+
+\( I \) は \( \mathrm{On} \) である。
+
+<nowiki>\[
+  I = \min \brace{ \xi \in \mathrm{Reg} \midder{1ex} B \paren{ \xi } \subseteq \xi }
+\]</nowiki>
+
+\( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+
+# Base
+## \( \xi \in \beta \rightarrow C \paren{ \alpha, \beta } \)
+# Addition
+## \( 0 \in C \paren{ \alpha, \beta } \)
+## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, \beta } \rightarrow \paren{ \xi + \zeta } \in C \paren{ \alpha, \beta } \)
+# Increasing Function
+## \( 1 \in C \paren{ \alpha, \beta } \)
+# Collapsing Target
+## \( \xi \in C \paren{ \alpha, \beta } \rightarrow { \omega } _ { \xi } \in C \paren{ \alpha, \beta } \)
+## \( \xi \in C \paren{ \alpha, \beta } \rightarrow I \in C \paren{ \alpha, \beta } \)
+# Recursion
+## \( \xi \in C \paren{ \alpha, \beta } \land \mu \in C \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \psi } _ { \mu } \paren{ \xi } \in C \paren{ \alpha, \beta } \)
+
+\( { \psi } _ { \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+
+<nowiki>\[
+  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
+\]</nowiki>
 
 == 到達不能基数を数え上げる関数による単純な順序数崩壊関数 ==
 
