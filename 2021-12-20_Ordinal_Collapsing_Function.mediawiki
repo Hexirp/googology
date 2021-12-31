@@ -63,15 +63,13 @@
 
 === 有限個の直積 ===
 
-\( n \in \mathbb{N} \) に対して \( { A } ^ { n } \) を \( n \) 個の \( A \) の直積とする。
+\( { A } ^ { n } \) は \( n \) 個の \( A \) の直積である。 \( { A } ^ { n } \) の要素は \( \bracket{ { x } _ { 2 }, { x } _ { 1 }, { x } _ { 0 } } \) という風に書かれる。
 
-その要素は \( \bracket{ { x } _ { 2 }, { x } _ { 1 }, { x } _ { 0 } } \) という風に書くことにする。
+\( \_ \frown \_ \) は結合演算子である。 \( x \in { A } ^ { m } \) であるとして、 \( y \in { A } ^ { n } \) であるとして、 \( \paren{ x \frown y } \in { A } ^ { m + n } \) である。
 
-\( { A } ^ { m } \) と \( { A } ^ { n } \) を結合して \( { A } ^ { m + n } \) とする演算子を \( \_ \frown \_ \) と書くことにする。
+\( { A } ^ { \_ < \omega } \) は \( \bigcup _ { n \in \mathbb{N} } { A } ^ { n } \) である。
 
-\( { A } ^ { \_ < \omega } \) を \( \bigcup _ { n \in \mathbb{N} } { A } ^ { n } \) とする。
-
-\( { \mathrm{On} } ^ { \_ < \omega } \) のインデックシングを次のように定義する。
+\( { \mathrm{On} } ^ { \_ < \omega } \) のインデックシングを次のように定義する。 \( x \in { \mathrm{On} } ^ { \_ < \omega } \) であるとして、 \( n \in \omega \) であるとして、 \( x \bracket{ n } \in \mathrm{On} \) である。
 
 <nowiki>\[
   a \bracket{ n }
@@ -112,17 +110,35 @@
       \end{cases}
 \]</nowiki>
 
-\( { \mathrm{On} } ^ { \_ < \omega } \) の上の比較を次のように定義する。
+\( { \mathrm{On} } ^ { \_ < \omega } \) の上の比較は次のようになる。
 
 <nowiki>\[
   a < b
-    =
+    \leftrightarrow
       \exists \paren{ n \in \omega } \ldotp
         \forall \paren{ x \in \omega } \ldotp
             \paren{ x > n \rightarrow a \bracket{ x } = b \bracket{ x } }
           \land
             \paren{ x = n \rightarrow a \bracket{ x } < b \bracket{ x } }
 \]</nowiki>
+
+=== club クラスの型 ===
+
+\( \mathrm{Club} \) は club クラスの型である。
+
+<nowiki>\[
+  x \in \mathrm{Club} \leftrightarrow \textrm{\( \mathrm{Enum} \paren{ x } \) is normal on \( \mathrm{On} \) }
+\]</nowiki>
+
+\( \_ \paren{ \_ } \) は club クラスの適用である。 \( x \in \mathrm{Club} \) であるとして、 \( y \in \mathrm{On} \) であるとして、 \( x \paren{ y } \in \mathrm{On} \) である。
+
+<nowiki>\[
+  x \paren{ y } = \mathrm{Enum} \paren{ x } \paren{ y }
+\]</nowiki>
+
+=== 閉包 ===
+
+\( \mathrm{cl} \paren{ \_ } \) は閉包演算子である。 \( x \in \mathcal{P} \paren{ \mathrm{On} } \) であるとして、 \( \mathrm{cl} \paren{ x } \in \mathrm{Club} \) である。
 
 == 無限基数による単純な順序数崩壊関数 ==
 
