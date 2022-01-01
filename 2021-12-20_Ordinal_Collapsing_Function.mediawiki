@@ -509,7 +509,7 @@
 
 弱マーロ基数を数え上げる club クラスによる単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Club Class for Counting Weakly Mahlo Cardinals, SOCFwaCCfCWMC) は、弱マーロ基数を数え上げる club クラスを崩壊させる関数である。
 
-=== 到達不能基数を数え上げる二変数関数による単純な順序数崩壊関数の定義 ===
+=== 弱マーロ基数を数え上げる club クラスによる単純な順序数崩壊関数の定義 ===
 
 \( { B } _ { 1 } \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。
 
