@@ -135,7 +135,7 @@
 \( \mathrm{Club} \) の上の比較は次のようになる。
 
 <nowiki>\[
-  a < b \leftrightarrow a \superset b
+  a < b \leftrightarrow a \supset b
 \]</nowiki>
 
 == 閉包 ==
@@ -143,7 +143,7 @@
 \( \mathrm{cl} \paren{ \_ } \) は閉包演算子である。 \( x \in \mathcal{P} \paren{ \mathrm{On} } \) であるとして、 \( \mathrm{cl} \paren{ x } \in \mathrm{Club} \) である。
 
 <nowiki>\[
-  \mathrm{cl} \paren{ x } = \brace{ \alpha \in \mathrm{On} \midder{3ex} \forall \paren{ \beta \in \mathrm{On} } \ldotp \forall \paren{ f \in \paren{ \beta \rightarrow x } } \ldotp \paren{ \sup _ { \gamma \in \beta } f \paren{ \gamma } } = \alpha }
+  \mathrm{cl} \paren{ x } = \brace{ \alpha \in \mathrm{On} \midder{5ex} \forall \paren{ \beta \in \mathrm{On} } \ldotp \forall \paren{ f \in \paren{ \beta \rightarrow x } } \ldotp \paren{ \sup _ { \gamma \in \beta } f \paren{ \gamma } } = \alpha }
 \]</nowiki>
 
 === 無限基数を数え上げる関数 ===
