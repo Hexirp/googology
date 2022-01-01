@@ -417,7 +417,7 @@
 \( I \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{Club} \) である。
 
 <nowiki>\[
-  I \paren{ a } = \mathrm{cl} \paren{ \brace{ \xi \in \mathrm{Reg} \midder{1ex} B \paren{ a, \xi } \subseteq \xi } }
+  I \paren{ a } = \mathrm{cl} \paren{ \brace{ \xi \in \mathrm{Reg} \midder{1ex} { B } _ { 1 } \paren{ a, \xi } \subseteq \xi } }
 \]</nowiki>
 
 \( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
