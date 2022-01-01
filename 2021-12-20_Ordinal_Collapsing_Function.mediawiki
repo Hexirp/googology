@@ -558,7 +558,7 @@
 \( { \psi } _ { \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
 
 <nowiki>\[
-  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
+  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ { C } _ { 1 } \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
 \]</nowiki>
 
 == 弱マーロ基数を数え上げる club クラスを数え上げる関数による単純な順序数崩壊関数 ==
