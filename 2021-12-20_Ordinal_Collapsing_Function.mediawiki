@@ -21,46 +21,6 @@
   \mathcal{P} \paren{ A } = A \rightarrow \mathrm{hProp}
 \]</nowiki>
 
-=== 集合の型 ===
-
-\( \mathrm{Set} \) は集合の型である。
-
-=== 順序数の型 ===
-
-\( \mathrm{On} \) は順序数の型である。
-
-=== 無限基数の型 ===
-
-\( \mathrm{Card} \) は無限基数の型である。
-
-=== 正則基数の型 ===
-
-\( \mathrm{Reg} \) は正則基数の型である。
-
-=== 共終数 ===
-
-\( \mathrm{cf} \paren{ \_ } \) は共終数である。
-
-\( \alpha \in \mathrm{On} \) であるとして、 \( \mathrm{cf} \paren{ \alpha } \in \mathrm{On} \) である。
-
-<nowiki>\[
-  \mathrm{cf} \paren{ \alpha } = \min \brace{ \beta \in \mathrm{On} \midder{1ex} \exists \paren{ f \in \paren{ \beta \rightarrow \alpha } } \ldotp \forall \paren{ x \in \alpha } \ldotp \exists \paren{ y \in \beta } \ldotp x \leq f \paren{ y } }
-\]</nowiki>
-
-\( \kappa \in \mathrm{Card} \) であるとして、 \( \mathrm{cf} \paren{ \kappa } \in \mathrm{Card} \) である。
-
-<nowiki>\[
-  \mathrm{cf} \paren{ \kappa } = \min \brace{ \lambda \in \mathrm{Card} \midder{1ex} \exists \paren{ f \in \paren{ \lambda \rightarrow \kappa } } \ldotp \forall \paren{ x \in \kappa } \ldotp \exists \paren{ y \in \lambda } \ldotp x \leq f \paren{ y } }
-\]</nowiki>
-
-=== 最小の非可算基数 ===
-
-\( \Omega \) は最小の非可算基数である。
-
-=== 無限基数を数え上げる関数 ===
-
-\( { \omega } _ { \alpha } \) は \( \mathrm{Enum} \paren{ \mathrm{Card} } \paren{ \alpha } \) である。
-
 === 有限個の直積 ===
 
 \( { A } ^ { n } \) は \( n \) 個の \( A \) の直積である。 \( { A } ^ { n } \) の要素は \( \bracket{ { x } _ { 2 }, { x } _ { 1 }, { x } _ { 0 } } \) という風に書かれる。
@@ -68,6 +28,14 @@
 \( \_ \frown \_ \) は結合演算子である。 \( x \in { A } ^ { m } \) であるとして、 \( y \in { A } ^ { n } \) であるとして、 \( \paren{ x \frown y } \in { A } ^ { m + n } \) である。
 
 \( { A } ^ { \_ < \omega } \) は \( \bigcup _ { n \in \mathbb{N} } { A } ^ { n } \) である。
+
+=== 集合の型 ===
+
+\( \mathrm{Set} \) は集合の型である。
+
+=== 順序数の型 ===
+
+\( \mathrm{On} \) は順序数の型である。
 
 \( { \mathrm{On} } ^ { \_ < \omega } \) のインデックシングを次のように定義する。 \( x \in { \mathrm{On} } ^ { \_ < \omega } \) であるとして、 \( n \in \omega \) であるとして、 \( x \bracket{ n } \in \mathrm{On} \) である。
 
@@ -122,12 +90,40 @@
             \paren{ x = n \rightarrow a \bracket{ x } < b \bracket{ x } }
 \]</nowiki>
 
+=== 無限基数の型 ===
+
+\( \mathrm{Card} \) は無限基数の型である。
+
+=== 共終数 ===
+
+\( \mathrm{cf} \paren{ \_ } \) は共終数である。
+
+\( \alpha \in \mathrm{On} \) であるとして、 \( \mathrm{cf} \paren{ \alpha } \in \mathrm{On} \) である。
+
+<nowiki>\[
+  \mathrm{cf} \paren{ \alpha } = \min \brace{ \beta \in \mathrm{On} \midder{1ex} \exists \paren{ f \in \paren{ \beta \rightarrow \alpha } } \ldotp \forall \paren{ x \in \alpha } \ldotp \exists \paren{ y \in \beta } \ldotp x \leq f \paren{ y } }
+\]</nowiki>
+
+\( \kappa \in \mathrm{Card} \) であるとして、 \( \mathrm{cf} \paren{ \kappa } \in \mathrm{Card} \) である。
+
+<nowiki>\[
+  \mathrm{cf} \paren{ \kappa } = \min \brace{ \lambda \in \mathrm{Card} \midder{1ex} \exists \paren{ f \in \paren{ \lambda \rightarrow \kappa } } \ldotp \forall \paren{ x \in \kappa } \ldotp \exists \paren{ y \in \lambda } \ldotp x \leq f \paren{ y } }
+\]</nowiki>
+
+=== 正則基数の型 ===
+
+\( \mathrm{Reg} \) は正則基数の型である。
+
+<nowiki>\[
+  \mathrm{Reg} = \brace{ \kappa \in \mathrm{Card} \midder{1ex} \mathrm{cf} \paren{ \kappa } = \kappa }
+\]</nowiki>
+
 === club クラスの型 ===
 
 \( \mathrm{Club} \) は club クラスの型である。
 
 <nowiki>\[
-  x \in \mathrm{Club} \leftrightarrow \textrm{\( \mathrm{Enum} \paren{ x } \) is normal on \( \mathrm{On} \) }
+  x \in \mathrm{Club} \leftrightarrow \forall \paren{ \alpha \in \mathrm{On} } \ldotp \forall \paren{ f \in \paren{ \alpha \rightarrow x } } \ldotp \paren{ \sup _ { \beta \in \alpha } f \paren{ \beta } } \in x
 \]</nowiki>
 
 \( \_ \paren{ \_ } \) は club クラスの適用である。 \( x \in \mathrm{Club} \) であるとして、 \( y \in \mathrm{On} \) であるとして、 \( x \paren{ y } \in \mathrm{On} \) である。
@@ -136,9 +132,31 @@
   x \paren{ y } = \mathrm{Enum} \paren{ x } \paren{ y }
 \]</nowiki>
 
-=== 閉包 ===
+\( \mathrm{Club} \) の上の比較は次のようになる。
+
+<nowiki>\[
+  a < b \leftrightarrow a \superset b
+\]</nowiki>
+
+== 閉包 ==
 
 \( \mathrm{cl} \paren{ \_ } \) は閉包演算子である。 \( x \in \mathcal{P} \paren{ \mathrm{On} } \) であるとして、 \( \mathrm{cl} \paren{ x } \in \mathrm{Club} \) である。
+
+<nowiki>\[
+  \mathrm{cl} \paren{ x } = \brace{ \alpha \in \mathrm{On} \midder{3ex} \forall \paren{ \beta \in \mathrm{On} } \ldotp \forall \paren{ f \in \paren{ \beta \rightarrow x } } \ldotp \paren{ \sup _ { \gamma \in \beta } f \paren{ \gamma } } = \alpha }
+\]</nowiki>
+
+=== 無限基数を数え上げる関数 ===
+
+\( { \omega } _ { \_ } \) は無限基数を数え上げる関数である。 \( \alpha \in \mathrm{On} \) として、 \( { \omega } _ { \alpha } \in \mathrm{On} \) である。 \( \alpha \in \mathrm{On} \) として、 \( { \omega } _ { \alpha } \in \mathrm{Card} \) である。
+
+=== 最小の非可算基数 ===
+
+\( \Omega \) は最小の非可算基数である。 \( \Omega \in \mathrm{On} \) である。 \( \Omega \in \mathrm{Card} \) である。
+
+<nowiki>\[
+  \Omega = { \omega } _ { 1 }
+\]</nowiki>
 
 == 無限基数による単純な順序数崩壊関数 ==
 
