@@ -427,7 +427,7 @@
 # Recursion
 ## \( \xi \in { B } _ { 2 } \paren{ a, \beta } \land \zeta \in { B } _ { 1 } \paren{ a, \beta } \rightarrow \xi \paren{ \zeta } \in { B } _ { 1 } \paren{ a, \beta } \)
 
-\( { B } _ { 2 } \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{Club} } \) である。
+\( { B } _ { 2 } \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{Club} } \) である。 \( { B } _ { 2 } \paren{ a, \beta } \) は次の条件を満たす最小のものである。
 
 # Recursion
 ## \( x \in { B } _ { 1 } \paren{ a, \beta } \land x < a \rightarrow I \paren{ x } \in { B } _ { 2 } \paren{ a, \beta } \)
@@ -448,7 +448,6 @@
 # Increasing Function
 ## \( 1 \in C \paren{ \alpha, \beta } \)
 # Collapsing Target
-## \( \xi \in C \paren{ \alpha, \beta } \rightarrow { \omega } _ { \xi } \in C \paren{ \alpha, \beta } \)
 ## \( \xi \in C \paren{ \alpha, \beta } \land \zeta \in C \paren{ \alpha, \beta } \rightarrow I \paren{ \xi } \paren{ \zeta } \in C \paren{ \alpha, \beta } \)
 # Recursion
 ## \( \xi \in C \paren{ \alpha, \beta } \land \mu \in C \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \psi } _ { \mu } \paren{ \xi } \in C \paren{ \alpha, \beta } \)
@@ -475,7 +474,7 @@
 # Recursion
 ## \( \xi \in { B } _ { 2 } \paren{ a, \beta } \land \zeta \in { B } _ { 1 } \paren{ a, \beta } \rightarrow \xi \paren{ \zeta } \in { B } _ { 1 } \paren{ a, \beta } \)
 
-\( { B } _ { 2 } \paren{ \_, \_ } \) は \( { \mathrm{On} } ^ { \_ < \omega } \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{Club} } \) である。
+\( { B } _ { 2 } \paren{ \_, \_ } \) は \( { \mathrm{On} } ^ { \_ < \omega } \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{Club} } \) である。 \( { B } _ { 2 } \paren{ a, \beta } \) は次の条件を満たす最小のものである。
 
 # Recursion
 ## \( x \in { { B } _ { 1 } \paren{ a, \beta } } ^ { \_ < \omega } \land x < a \rightarrow I \paren{ x } \in { B } _ { 2 } \paren{ a, \beta } \)
@@ -496,7 +495,6 @@
 # Increasing Function
 ## \( 1 \in C \paren{ \alpha, \beta } \)
 # Collapsing Target
-## \( \xi \in C \paren{ \alpha, \beta } \rightarrow { \omega } _ { \xi } \in C \paren{ \alpha, \beta } \)
 ## \( \xi \in { C \paren{ \alpha, \beta } } ^ { \_ < \omega } \land \zeta \in C \paren{ \alpha, \beta } \rightarrow I \paren{ \xi } \paren{ \zeta } \in C \paren{ \alpha, \beta } \)
 # Recursion
 ## \( \xi \in C \paren{ \alpha, \beta } \land \mu \in C \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \psi } _ { \mu } \paren{ \xi } \in C \paren{ \alpha, \beta } \)
@@ -509,7 +507,59 @@
 
 == 弱マーロ基数を数え上げる club クラスによる単純な順序数崩壊関数 ==
 
-弱マーロ基数を数え上げる club クラスによる単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Club Class for Counting Weakly Mahlo Cardinals, SOCFwaCCfCWMC) は、
+弱マーロ基数を数え上げる club クラスによる単純な順序数崩壊関数 (Simple Ordinal Collapsing Functions with a Club Class for Counting Weakly Mahlo Cardinals, SOCFwaCCfCWMC) は、弱マーロ基数を数え上げる club クラスを崩壊させる関数である。
+
+=== 到達不能基数を数え上げる二変数関数による単純な順序数崩壊関数の定義 ===
+
+\( { B } _ { 1 } \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。
+
+# Base
+## \( \xi \in \beta \rightarrow { B } _ { 1 } \paren{ \alpha, \beta } \)
+# Addition
+## \( 0 \in { B } _ { 1 } \paren{ \alpha, \beta } \)
+## \( \xi \in { B } _ { 1 } \paren{ \alpha, \beta } \land \zeta \in { B } _ { 1 } \paren{ \alpha, \beta } \rightarrow \paren{ \xi + \zeta } \in { B } _ { 1 } \paren{ \alpha, \beta } \)
+# Increasing Function
+## \( 1 \in { B } _ { 1 } \paren{ \alpha, \beta } \)
+# Recursion
+## \( \xi \in { B } _ { 2 } \paren{ \alpha, \beta } \land \zeta \in { B } _ { 1 } \paren{ \alpha, \beta } \rightarrow \xi \paren{ \zeta } \in { B } _ { 1 } \paren{ \alpha, \beta } \)
+
+\( { B } _ { 2 } \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{Club} } \) である。 \( { B } _ { 2 } \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+
+# Recursion
+## \( \xi \in { B } _ { 1 } \paren{ \alpha, \beta } \land \mu \in { B } _ { 2 } \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \chi } _ { \mu } \paren{ \xi } \in { B } _ { 2 } \paren{ \alpha, \beta } \)
+## \( M \in { B } _ { 2 } \paren{ \alpha, \beta } \)
+
+\( { \chi } _ { \_ } \paren{ \_ } \) は \( \mathrm{Club} \rightarrow \mathrm{On} \rightarrow \mathrm{Club} \) である。
+
+<nowiki>\[
+  { \chi } _ { \nu } \paren{ a } = \mathrm{cl} \paren{ \bigcup _ { \mu \in \nu } \brace{ \xi \in \mathrm{Reg} \midder{1ex} \paren{ { B } _ { 1 } \paren{ a, \xi } \cap \mu } \subseteq \xi } }
+\]</nowiki>
+
+\( { C } _ { 1 } \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( { C } _ { 1 } \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+
+# Base
+## \( \xi \in \beta \rightarrow { C } _ { 1 } \paren{ \alpha, \beta } \)
+# Addition
+## \( 0 \in { C } _ { 1 } \paren{ \alpha, \beta } \)
+## \( \xi \in { C } _ { 1 } \paren{ \alpha, \beta } \land \zeta \in { C } _ { 1 } \paren{ \alpha, \beta } \rightarrow \paren{ \xi + \zeta } \in { C } _ { 1 } \paren{ \alpha, \beta } \)
+# Increasing Function
+## \( 1 \in { C } _ { 1 } \paren{ \alpha, \beta } \)
+# Collapsing Target
+## \( \xi \in { C } _ { 2 } \paren{ \alpha, \beta } \land \zeta \in { C } _ { 1 } \paren{ \alpha, \beta } \rightarrow \xi \paren{ \zeta } \in { C } _ { 1 } \paren{ \alpha, \beta } \)
+# Recursion
+## \( \xi \in { C } _ { 1 } \paren{ \alpha, \beta } \land \mu \in { C } _ { 1 } \paren{ \alpha, \beta } \land \xi < \alpha \rightarrow { \psi } _ { \mu } \paren{ \xi } \in { C } _ { 1 } \paren{ \alpha, \beta } \)
+
+\( { C } _ { 2 } \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{Club} } \) である。 \( { C } _ { 2 } \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
+
+# Collapsing Target
+## \( \xi \in { C } _ { 1 } \paren{ \alpha, \beta } \land \mu \in { C } _ { 2 } \paren{ \alpha, \beta } \rightarrow { \chi } _ { \mu } \paren{ \xi } \in { C } _ { 2 } \paren{ \alpha, \beta } \)
+## \( M \in { C } _ { 2 } \paren{ \alpha, \beta } \)
+
+\( { \psi } _ { \_ } \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathrm{On} \) である。
+
+<nowiki>\[
+  { \psi } _ { \nu } \paren{ \alpha } = \min \brace{ \xi \in \mathrm{On} \midder{1ex} \paren{ C \paren{ \alpha, \xi } \cap \nu } \subseteq \xi }
+\]</nowiki>
 
 == 弱マーロ基数を数え上げる club クラスを数え上げる関数による単純な順序数崩壊関数 ==
 
