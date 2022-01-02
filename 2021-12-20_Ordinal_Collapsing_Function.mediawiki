@@ -380,12 +380,11 @@
 ## \( \xi \in B \paren{ \beta } \land \zeta \in B \paren{ \beta } \rightarrow \paren{ \xi + \zeta } \in B \paren{ \beta } \)
 # Increasing Function
 ## \( 1 \in B \paren{ a, \beta } \)
-## \( \xi \in B \paren{ \beta } \rightarrow { \omega } _ { \xi } \in B \paren{ \beta } \)
 
 \( I \) は \( \mathrm{Club} \) である。
 
 <nowiki>\[
-  I = \mathrm{cl} \paren{ \brace{ \xi \in \mathrm{Reg} \midder{1ex} B \paren{ \xi } \subseteq \xi } }
+  I = \mathrm{cl} \paren{ \brace{ \omega } \cup \brace{ \xi \in \mathrm{Reg} \midder{1ex} B \paren{ \xi } \subseteq \xi } }
 \]</nowiki>
 
 \( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
@@ -435,7 +434,7 @@
 \( I \paren{ \_ } \) は \( \mathrm{On} \rightarrow \mathrm{Club} \) である。
 
 <nowiki>\[
-  I \paren{ a } = \mathrm{cl} \paren{ \brace{ \xi \in \mathrm{Reg} \midder{1ex} { B } _ { 1 } \paren{ a, \xi } \subseteq \xi } }
+  I \paren{ a } = \mathrm{cl} \paren{ \brace{ \omega } \cup \brace{ \xi \in \mathrm{Reg} \midder{1ex} { B } _ { 1 } \paren{ a, \xi } \subseteq \xi } }
 \]</nowiki>
 
 \( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
@@ -482,7 +481,7 @@
 \( I \paren{ \_ } \) は \( { \mathrm{On} } ^ { \_ < \omega } \rightarrow \mathrm{Club} \) である。
 
 <nowiki>\[
-  I \paren{ a } = \mathrm{cl} \paren{ \brace{ \xi \in \mathrm{Reg} \midder{1ex} { B } _ { 1 } \paren{ a, \xi } \subseteq \xi } }
+  I \paren{ a } = \mathrm{cl} \paren{ \brace{ \omega } \cup \brace{ \xi \in \mathrm{Reg} \midder{1ex} { B } _ { 1 } \paren{ a, \xi } \subseteq \xi } }
 \]</nowiki>
 
 \( C \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( C \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
@@ -514,7 +513,7 @@
 \( M \) は \( \mathrm{Club} \) である。
 
 <nowiki>\[
-  M = \mathrm{cl} \paren{ \brace{ \alpha \in \mathrm{Reg} \midder{1ex} \textrm{ \( \brace{ \beta \in \mathrm{Reg} \midder{1ex} \beta < \alpha } \) is stationary in \( \alpha \) } } }
+  M = \mathrm{cl} \paren{ \brace{ \omega } \cup \brace{ \alpha \in \mathrm{Reg} \midder{1ex} \textrm{\( \brace{ \beta \in \mathrm{Reg} \midder{1ex} \beta < \alpha } \) is stationary in \( \alpha \)} } }
 \]</nowiki>
 
 \( { B } _ { 1 } \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。
@@ -538,7 +537,7 @@
 \( { \chi } _ { \_ } \paren{ \_ } \) は \( \mathrm{Club} \rightarrow \mathrm{On} \rightarrow \mathrm{Club} \) である。
 
 <nowiki>\[
-  { \chi } _ { \nu } \paren{ a } = \mathrm{cl} \paren{ \brace{ \xi \in \mathrm{Reg} \midder{1ex} { B } _ { 1 } \paren{ a, \xi } \subseteq \xi } }
+  { \chi } _ { \nu } \paren{ a } = \mathrm{cl} \paren{ \bigcup _ { \mu \in \nu } \brace{ \xi \in \mathrm{Reg} \midder{1ex} \xi < \mu \land \paren{ { B } _ { 1 } \paren{ a, \xi } \cap \mu } \subseteq \xi } }
 \]</nowiki>
 
 \( { C } _ { 1 } \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( { C } _ { 1 } \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
