@@ -511,6 +511,12 @@
 
 === 弱マーロ基数を数え上げる club クラスによる単純な順序数崩壊関数の定義 ===
 
+\( M \) は \( \mathrm{Club} \) である。
+
+<nowiki>\[
+  M = \mathrm{cl} \paren{ \brace{ \alpha \in \mathrm{Reg} \midder{1ex} \textrm{ \( \brace{ \beta \in \mathrm{Reg} \midder{1ex} \beta < \alpha } \) is stationary in \( \alpha \) } } }
+\]</nowiki>
+
 \( { B } _ { 1 } \paren{ \_, \_ } \) は \( \mathrm{On} \rightarrow \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。
 
 # Base
@@ -532,7 +538,7 @@
 \( { \chi } _ { \_ } \paren{ \_ } \) は \( \mathrm{Club} \rightarrow \mathrm{On} \rightarrow \mathrm{Club} \) である。
 
 <nowiki>\[
-  { \chi } _ { \nu } \paren{ a } = \mathrm{cl} \paren{ \bigcup _ { \mu \in \nu } \brace{ \xi \in \mathrm{Reg} \midder{1ex} \paren{ { B } _ { 1 } \paren{ a, \xi } \cap \mu } \subseteq \xi } }
+  { \chi } _ { \nu } \paren{ a } = \mathrm{cl} \paren{ \brace{ \xi \in \mathrm{Reg} \midder{1ex} { B } _ { 1 } \paren{ a, \xi } \subseteq \xi } }
 \]</nowiki>
 
 \( { C } _ { 1 } \paren{ \_, \_ } \) は \( \mathrm{On} \times \mathrm{On} \rightarrow \mathcal{P} \paren{ \mathrm{On} } \) である。 \( { C } _ { 1 } \paren{ \alpha, \beta } \) は次の条件を満たす最小のものである。
