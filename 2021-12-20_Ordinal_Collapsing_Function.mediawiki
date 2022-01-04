@@ -138,7 +138,7 @@
   a < b \leftrightarrow a \supset b
 \]</nowiki>
 
-== 閉包 ==
+=== 閉包 ===
 
 \( \mathrm{cl} \paren{ \_ } \) は閉包演算子である。 \( x \in \mathcal{P} \paren{ \mathrm{On} } \) であるとして、 \( \mathrm{cl} \paren{ x } \in \mathrm{Club} \) である。
 
