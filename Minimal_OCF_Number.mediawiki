@@ -145,11 +145,26 @@
 | \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \omega_0 } } } } \)
 | \( \omega^2 + \omega^2 + \omega \)
 |-
-| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } \p{ 0 } } } } } \)
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } } } } } \)
 | \( \omega^2 + \omega^2 + \omega + 1 \)
 |-
-| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } } } } \)
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } } } } } \)
+| \( \omega^2 + \omega^2 + \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } } } } } } \)
+| \( \omega^2 + \omega^2 + \omega + \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } } } } } } \)
+| \( \omega^2 + \omega^2 + \omega + \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } } } } } \)
 | \( \omega^2 + \omega^2 + \omega^2 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } } \)
+| \( \omega^3 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ 0 } } } \)
+| \( \omega^3 + 1 \)
 |}
 
 == ミニマルオクフの順序数表記 ==
