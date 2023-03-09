@@ -1,0 +1,318 @@
+ミニマルオクフは最小限の順序数崩壊関数である。
+
+東方巨大数 5 へ投稿する予定です。
+
+<p style="display: none;">\( \newcommand{\p}[1]{ \mathord{ \left( #1 \right) } } \newcommand{\b}[1]{ \mathord{ \left[ #1 \right] } } \newcommand{\c}[1]{ \mathord{ \left\{ #1 \right\} } } \newcommand{\a}[1]{ \mathord{ \left\langle #1 \right\rangle } } \)</p>
+
+== ミニマルオクフの定義 ==
+
+\( C \p{ \_, \_ } \) と \( \psi_\_ \p{ \_ } \) を相互再帰により定義する。
+
+\( C \p{ \alpha, \alpha } \) は次の条件を満たす最小の集合である。
+
+# \( \gamma < \beta \to \gamma \in C \p{ \alpha, \beta } \)
+# \( 0 \in C \p{ \alpha, \beta } \)
+# \( \gamma \in C \p{ \alpha, \beta } \to \omega_\gamma \in C \p{ \alpha, \beta } \)
+# \( \xi \in C \p{ \alpha, \beta } \land \mu \in C \p{ \alpha, \beta } \land \xi < \alpha \to \psi_\mu \p{ \xi } \in C \p{ \alpha, \beta } \)
+
+\( \psi_\nu \p{ \alpha } \) は次の式と等しい順序数である。
+
+\[ \min \c{ \xi \in \mathrm{On} : \forall \p{ \zeta \in \mathrm{On} } \ldotp \zeta \in C \p{ \alpha, \xi } \land \zeta < \nu \to \zeta < \xi } \]
+
+== ミニマルオクフの計算 ==
+
+基本的な手順として \( \psi_\_ \p{ \_ } \) の定義での \( \xi \) を下から大きくして調べていく。
+
+\( \psi_0 \p{ 0 } \) を計算する。 \( \xi = 0 \) とする。 \( C \p{ 0, 0 } \) は \( \c{ 0, \omega_0, \omega_{ \omega_0 }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ } \) である。ゆえに条件は成立する。ゆえに \( \psi_0 \p{ 0 } = 0 \) である。
+
+\( \psi_{ \omega_0 } \p{ 0 } \) を計算する。 \( \xi = 0 \) とする。 \( C \p{ 0, 0 } \) は \( \c{ 0, \omega_0, \omega_{ \omega_0 }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0 } \) である。ゆえに条件は成立しない。 \( \xi = 1 \) とする。 \( C \p{ 0, 1 } \) は \( \c{ 0, \omega_0, \omega_{ \omega_0 }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0 } \) である。ゆえに条件は成立する。ゆえに \( \psi_{ \omega_0 } \p{ 0 } = 1 \) である。
+
+\( \psi_0 \p{ \omega_0 } \) を計算する。 \( \xi = 0 \) とする。 \( C \p{ \omega_0, 0 } \) は \( \c{ 0, \omega_0, \omega_{ \omega_0 }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ } \) である。ゆえに条件は成立する。ゆえに \( \psi_0 \p{ \omega_0 } = 0 \) である。
+
+\( \psi_{ \psi_{ \omega_0 } \p{ 0 } } \p{ 0 } \) を計算する。 \( \xi = 0 \) とする。 \( C \p{ 0, 0 } \) は \( \c{ 0, \omega_0, \omega_{ \omega_0 }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0 } \) である。ゆえに条件は成立しない。 \( \xi = 1 \) とする。 \( C \p{ 0, 1 } \) は \( \c{ 0, \omega_0, \omega_{ \omega_0 }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0 } \) である。ゆえに条件は成立する。ゆえに \( \psi_{ \psi_{ \omega_0 } \p{ 0 } } \p{ 0 } = 1 \) である。
+
+\( \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } \) を計算する。 \( \xi = 0 \) とする。 \( C \p{ \psi_{ \omega_0 } \p{ 0 }, 0 } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 } } \) である。ゆえに条件は成立しない。 \( \xi = 1 \) とする。 \( C \p{ \psi_{ \omega_0 } \p{ 0 }, 1 } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 } } \) である。ゆえに条件は成立しない。 \( \xi = 2 \) とする。 \( C \p{ \psi_{ \omega_0 } \p{ 0 }, 2 } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 } } \) である。ゆえに条件は成立する。ゆえに \( \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } = 2 \) である。
+
+\( \psi_{ \omega_0 } \p{ \omega_0 } \) を計算する。 \( \xi = 0 \) とする。 \( C \p{ \omega_0, 0 } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \ldots, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \ldots, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } }, \ldots } \) である。ゆえに条件は成立しない。 \( \xi = 1 \) とする。 \( C \p{ \omega_0, 1 } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \ldots, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \ldots, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } }, \ldots } \) である。ゆえに条件は成立しない。 \( \xi = \omega \) とする。 \( C \p{ \omega_0, \omega } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \ldots, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \ldots, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } }, \ldots } \) である。ゆえに条件は成立する。ゆえに \( \psi_{ \omega_0 } \p{ \omega_0 } = \omega \) である。
+
+\( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } \) を計算する。 \( \xi = 0 \) とする。 \( C \p{ 0, 0 } \) は \( \c{ 0, \omega_0, \omega_{ \omega_0 }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \omega_0 } \) である。ゆえに条件は成立しない。 \( \xi = 1 \) とする。 \( C \p{ 0, 1 } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \ldots, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \ldots, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \omega_0 } \) である。ゆえに条件は成立しない。 \( \xi = \omega \) とする。 \( C \p{ 0, \omega } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \ldots, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \ldots, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } }, \ldots, \omega_0 } \) である。ゆえに条件は成立しない。 \( \xi = \omega + 1 \) とする。 \( C \p{ 0, \omega + 1 } \) は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \ldots, \omega_0, \omega_{ \psi_{ \omega_0 } \p{ 0 } }, \ldots, \omega_{ \omega_0 }, \omega_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } }, \ldots } \) である。 \( \zeta \) の取る値は \( \c{ 0, \psi_{ \omega_0 } \p{ 0 }, \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } }, \ldots, \omega_0 } \) である。ゆえに条件は成立する。ゆえに \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } = \omega + 1 \) である。
+
+== ミニマルオクフの見積もり ==
+
+{| class="article-table"
+! Minimal OCF
+! Common Notation
+|-
+| \( 0 \)
+| \( 0 \)
+|-
+| \( \psi_{ \omega_0 } \p{ 0 } \)
+| \( 1 \)
+|-
+| \( \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } \)
+| \( 2 \)
+|-
+| \( \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } \)
+| \( 3 \)
+|-
+| \( \omega_0 \)
+| \( \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } \)
+| \( \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_0 } \p{ 0 } } \)
+| \( \omega + 2 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } \)
+| \( \omega + 3 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \)
+| \( \omega + 4 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } \)
+| \( \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } } \)
+| \( \omega + \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_0 } \p{ 0 } } } \)
+| \( \omega + \omega + 2 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \)
+| \( \omega + \omega + 3 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } } \)
+| \( \omega + \omega + 4 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } } \)
+| \( \omega + \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } } } \)
+| \( \omega + \omega + \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } } } \)
+| \( \omega + \omega + \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } } } } \)
+| \( \omega + \omega + \omega + \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } } } } \)
+| \( \omega + \omega + \omega + \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \)
+| \( \omega^2 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ 0 } } \)
+| \( \omega^2 + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_0 } \p{ 0 } } } \)
+| \( \omega^2 + 2 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \)
+| \( \omega^2 + 3 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } } \)
+| \( \omega^2 + 4 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \omega_0 } } \)
+| \( \omega^2 + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } } } \)
+| \( \omega^2 + \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } } } \)
+| \( \omega^2 + \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } } } } \)
+| \( \omega^2 + \omega + \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } } } } \)
+| \( \omega^2 + \omega + \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ 0 } } } } } \)
+| \( \omega^2 + \omega + \omega + \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_0 } } } } } \)
+| \( \omega^2 + \omega + \omega + \omega + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } } } \)
+| \( \omega^2 + \omega^2 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ 0 } } } } \)
+| \( \omega^2 + \omega^2 + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \omega_0 } } } } \)
+| \( \omega^2 + \omega^2 + \omega \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } \p{ 0 } } } } } \)
+| \( \omega^2 + \omega^2 + \omega + 1 \)
+|-
+| \( \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } \p{ \psi_{ \omega_{ \psi_{ \omega_0 } \p{ \psi_{ \omega_0 } \p{ 0 } } } } \p{ \omega_{ \psi_{ \omega_0 } \p{ 0 } } } } } } \)
+| \( \omega^2 + \omega^2 + \omega^2 \)
+|}
+
+== ミニマルオクフの順序数表記 ==
+
+適切な方法で自然数との全単射を構成することが出来る文字列の集合 \( T \) を再帰的に定義する。
+
+\( T \) は次の条件を満たす最小の集合である。
+
+# \( \bar{0} \in T \)
+# \( a \in T \to \bar{\omega}_a \in T \)
+# \( a \in T \land n \in T \to \bar{\psi}_n \p{ a } \in T \)
+
+\( \hat{\_} : \mathbb{N} \cup \c{ \omega } \to T \) を再帰的に定義する。
+
+# \( \hat{x} \) は、
+## \( x = 0 \) であるならば、
+### \( \bar{0} \) である。
+## \( x = x_0 + 1 \) であるならば、
+### \( \bar{\psi}_{ \hat{\omega} } \p{ \hat{x_0} } \) である。
+## \( x = \omega \) であるならば、
+### \( \bar{\omega}_{ \bar{0} } \)
+
+=== ミニマルオクフの順序数表記の比較関数 ===
+
+\( \_ < \_ : T \times T \to \mathrm{Bool} \) を再帰的に定義する。
+
+# \( x < y \) は、
+## \( x = \bar{0} \land y = \bar{0} \) であるならば、
+### \( \mathrm{False} \) である。
+## \( x = \bar{0} \land y = \bar{\omega}_{ y_0 } \) であるならば、
+### \( \mathrm{True} \) である。
+## \( x = \bar{0} \land y = \bar{\psi}_{ y_1 } \p{ y_0 } \) であるならば、
+### \( \mathrm{True} \) である。
+## \( x = \bar{\omega}_{ x_0 } \land y = \bar{0} \) であるならば、
+### \( \mathrm{False} \) である。
+## \( x = \bar{\omega}_{ x_0 } \land y = \bar{\omega}_{ y_0 } \) であるならば、
+### \( x_0 < y_0 \) である。
+## \( x = \bar{\omega}_{ x_0 } \land y = \bar{\psi}_{ y_1 } \p{ y_0 } \) であるならば、
+### \( \bar{\omega}_{ x_0 } < y_1 \) である。
+## \( x = \bar{\psi}_{ x_1 } \p{ x_0 } \land y = \bar{0} \) であるならば、
+### \( \mathrm{False} \) である。
+## \( x = \bar{\psi}_{ x_1 } \p{ x_0 } \land y = \bar{\omega}_{ y_0 } \) であるならば、
+### \( \lnot \p{ x_1 > \bar{\omega}_{ y_0 } } \) である。
+## \( x = \bar{\psi}_{ x_1 } \p{ x_0 } \land y = \bar{\psi}_{ y_1 } \p{ y_0 } \) であるならば、
+### \( x_1 = y_1 \) が \( \mathrm{False} \) であるならば、
+#### \( x_1 < y_1 \) である。
+### \( x_1 = y_1 \) が \( \mathrm{True} \) であるならば、
+#### \( x_0 < y_0 \) である。
+
+=== ミニマルオクフの順序数表記の基本列 ===
+
+\( \mathrm{dom} \p{ \_ } : T \to T \) を再帰的に定義する。
+
+# \( \mathrm{dom} \p{ x } \) は、
+## \( x = \bar{0} \) であるならば、
+### \( \bar{0} \) である。
+## \( x = \bar{\omega}_{ x_0 } \) であるならば、
+### \( \mathrm{dom} \p{ x_0 } = \bar{0} \) であるならば、
+#### \( \bar{\omega}_{ x_0 } \) である。
+### \( \mathrm{dom} \p{ x_0 } = \hat{1} \) であるならば、
+#### \( \bar{\omega}_{ x_0 } \) である。
+### \( \mathrm{dom} \p{ x_0 } \neq \bar{0} \land \mathrm{dom} \p{ x_0 } \neq \hat{1} \) であるならば、
+#### \( \mathrm{dom} \p{ x_0 } \) である。
+## \( x = \bar{\psi}_{ x_1 } \p{ x_0 } \) であるならば、
+### \( \mathrm{dom} \p{ x_0 } = \bar{0} \) であるならば、
+#### \( \hat{1} \) である。
+### \( \mathrm{dom} \p{ x_0 } = \hat{1} \) であるならば、
+#### \( \hat{1} \) である。
+### \( \mathrm{dom} \p{ x_0 } \neq \bar{0} \land \mathrm{dom} \p{ x_0 } \neq \hat{1} \) であるならば、
+#### \( \mathrm{dom} \p{ x_0 } < x_1 \) が \( \mathrm{False} \) であるならば、
+##### \( \hat{\omega} \) である。
+#### \( \mathrm{dom} \p{ x_0 } < x_1 \) が \( \mathrm{True} \) であるならば、
+##### \( \mathrm{dom} \p{ x_0 } \) である。
+
+\( \_ \b{ \_ } : T \times T \to T \) を再帰的に定義する。
+
+# \( x \b{ y } \) は、
+## \( x = \bar{0} \) であるならば、
+### \( \bar{0} \) である。
+## \( x = \bar{\omega}_{ x_0 } \) であるならば、
+### \( \mathrm{dom} \p{ x_0 } = \bar{0} \) であるならば、
+#### \( y \) である。
+### \( \mathrm{dom} \p{ x_0 } = \hat{1} \) であるならば、
+#### \( y \) である。
+### \( \mathrm{dom} \p{ x_0 } \neq \bar{0} \land \mathrm{dom} \p{ x_0 } \neq \hat{1} \) であるならば、
+#### \( \bar{\omega}_{ x_0 \b{ y } } \) である。
+## \( x = \bar{\psi}_{ x_1 } \p{ x_0 } \) であるならば、
+### \( \mathrm{dom} \p{ x_0 } = \bar{0} \) であるならば、
+#### \( y = \bar{0} \) であるならば、
+##### \( x_1 = \bar{0} \) であるならば、
+###### \( \bar{0} \) である。
+##### \( x_1 = \bar{\omega}_{ x_{1,0} } \) であるならば、
+###### \( \bar{\omega}_{ x_{1,0} \b{ \bar{0} } } \) である。
+##### \( x_1 = \bar{\psi}_{ x_{1,1} } \p{ x_{1,0} } \) であるならば、
+###### \( x_{1,1} \b{ \bar{0} } \) である。
+#### \( y \neq \bar{0} \) であるならば、
+##### \( \bar{\psi}_{ x_1 } \p{ x_0 } \) である。
+### \( \mathrm{dom} \p{ x_0 } = \hat{1} \) であるならば、
+#### \( \bar{\psi}_{ x_1 } \p{ x_0 \b{ y } } \) である。
+### \( \mathrm{dom} \p{ x_0 } \neq \bar{0} \land \mathrm{dom} \p{ x_0 } \neq \hat{1} \) であるならば、
+#### \( \mathrm{dom} \p{ x_0 } < x_1 \) が \( \mathrm{False} \) であるならば、
+##### \( \mathrm{dom} \p{ x_0 } = \bar{\omega}_{ x_{0,0} } \) であるならば、
+###### \( y = \hat{n} \land 0 < n < \omega \land x \b{ y \b{ \bar{0} } } = \bar{\psi}_{ x_1 } \p{ z } \) であるならば、
+####### \( \bar{\psi}_{ x_1 } \p{ x_0 \b{ \bar{\psi}_{ x_{0,0} \b{ \bar{0} } } \p{ z } } } \) である。
+###### \( \lnot \p{ \exists \p{ n \in \mathbb{N} } \ldotp \exists \p{ z \in T } \ldotp Y = \hat{n} \land 0 < n < \omega \land x \b{ y \b{ \bar{0} } } = \bar{\psi}_{ x_1 } \p{ z } } \) であるならば、
+####### \( \bar{\psi}_{ x_1 } \p{ x_0 \b{ \bar{\psi}_{ x_{0,0} \b{ \bar{0} } } \p{ \bar{0} } } } \) である。
+##### \( \lnot \p{ \exists \p{ x_{0,0} \in T } \ldotp \mathrm{dom} \p{ x_0 } = \bar{\omega}_{ x_{0,0} } } \) であるならば、
+###### \( \bar{0} \) である。
+#### \( \mathrm{dom} \p{ x_0 } < x_1 \) が \( \mathrm{True} \) であるならば、
+##### \( \bar{\psi}_{ x_1 } \p{ x_0 \b{ y } } \) である。
+
+=== ミニマルオクフの順序数表記の標準形 ===
+
+\( G \p{ \_, \_, \_ } : T \times T \to \mathrm{Bool} \) を再帰的に定義する。
+
+# \( G \p{ x, y, z } \) は、
+## \( y = \bar{0} \) であるならば、
+### \( \mathrm{True} \) である。
+## \( y = \bar{\omega}_{ y_0 } \) であるならば、
+### \( \bar{\omega}_{ y_0 } < x \) が \( \mathrm{False} \) であるならば、
+#### \( \mathrm{True} \) である。
+### \( \bar{\omega}_{ y_0 } < x \) が \( \mathrm{True} \) であるならば、
+#### \( G \p{ x, y_0, z } \) である。
+## \( y = \bar{\psi}_{ y_1 } \p{ y_0 } \) であるならば、
+### \( y_1 < x \) が \( \mathrm{False} \) であるならば、
+#### \( \mathrm{True} \) である。
+### \( y_1 < x \) が \( \mathrm{True} \) であるならば、
+#### \( y_0 < z \land G \p{ x, y_0, z } \land G \p{ x, y_1, z } \) である。
+
+\( T_O \) を再帰的に定義する。
+
+# \( \bar{0} \in T_O \)
+# \( x_0 \in T_O \to \bar{\omega}_{ x_0 } \in T_O \)
+# \( x_0 \in T_O \land x_1 \in T_O \land G \p{ x_1, x_0, x_0 } \to \bar{\psi}_{ x_1 } \p{ x_0 } \in T_O \)
+
+=== ミニマルオクフの順序数表記の急増加関数 ===
+
+\( f_\_ \p{ \_ } : T \times \mathbb{N} \to \mathbb{N} \) を再帰的に定義する。
+
+# \( f_x \p{ n } \) は、
+## \( \mathrm{dom} \p{ x } = \bar{0} \) であるならば、
+### \( n + 1 \) である。
+## \( \mathrm{dom} \p{ x } = \hat{1} \) であるならば、
+### \( f_{ x \b{ \bar{0} } }^n ( n ) \) である。
+## \( \mathrm{dom} \p{ x } \neq \bar{0} \land \mathrm{dom} \p{ x } \neq \hat{1} \) であるならば、
+### \( f_{ x \b{ \hat{n} } } \p{ n } \) である。
+
+== ミニマルオクフ数 ==
+
+\( X \p{ \_ } : \mathbb{N} \to T_O \) を再帰的に定義する。
+
+# \( X \p{ n } \) は、
+## \( n = 0 \) であるならば、
+### \( \bar{\omega}_\bar{0} \) である。
+## \( n = n_0 + 1 \) であるならば、
+### \( \bar{\omega}_{ X \p{ n_0 } } \) である。
+
+ミニマルオクフ数は、次の式に等しい。
+
+\[ f_{ \bar{\psi}_{ \bar{\omega}_\hat{1} } \p{ X \p{ { 10 }^{ 100 } } } } \p{ { 10 }^{ 100 } } \]
+
+== 参考文献 ==
+
+# [[ユーザーブログ:P進大好きbot/拡張Buchholz_OCFに伴う順序数表記|拡張 Buchholz OCF に伴う順序数表記]]
+
+[[カテゴリ:ブログ記事]]
