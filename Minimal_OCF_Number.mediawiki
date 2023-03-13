@@ -257,7 +257,10 @@
 ##### \( x_1 = \bar{0} \) であるならば、
 ###### \( \bar{0} \) である。
 ##### \( x_1 = \bar{\omega}_{ x_{1,0} } \) であるならば、
-###### \( \bar{\omega}_{ x_{1,0} \b{ \bar{0} } } \) である。
+###### \( \mathrm{dom} \p{ x_{1,0} } = \bar{0} \) であるならば、
+####### \( x_0 \) である。
+###### \( \mathrm{dom} \p{ x_{1,0} } \neq \bar{0} \) であるならば、
+####### \( \bar{\omega}_{ x_{1,0} \b{ \bar{0} } } \) である。
 ##### \( x_1 = \bar{\psi}_{ x_{1,1} } \p{ x_{1,0} } \) であるならば、
 ###### \( x_{1,1} \b{ \bar{0} } \) である。
 #### \( y \neq \bar{0} \) であるならば、
@@ -268,9 +271,9 @@
 #### \( \mathrm{dom} \p{ x_0 } < x_1 \) が \( \mathrm{False} \) であるならば、
 ##### \( \mathrm{dom} \p{ x_0 } = \bar{\omega}_{ x_{0,0} } \) であるならば、
 ###### \( y = \hat{n} \land 0 < n < \omega \land x \b{ y \b{ \bar{0} } } = \bar{\psi}_{ x_1 } \p{ z } \) であるならば、
-####### \( \bar{\psi}_{ x_1 } \p{ x_0 \b{ \bar{\psi}_{ x_{0,0} \b{ \bar{0} } } \p{ z } } } \) である。
+####### \( \bar{\psi}_{ x_1 } \p{ x_0 \b{ \bar{\psi}_{ \bar{\omega}_{ x_{0,0} } } \p{ z } } } \) である。
 ###### \( \lnot \p{ \exists \p{ n \in \mathbb{N} } \ldotp \exists \p{ z \in T } \ldotp Y = \hat{n} \land 0 < n < \omega \land x \b{ y \b{ \bar{0} } } = \bar{\psi}_{ x_1 } \p{ z } } \) であるならば、
-####### \( \bar{\psi}_{ x_1 } \p{ x_0 \b{ \bar{\psi}_{ x_{0,0} \b{ \bar{0} } } \p{ \bar{0} } } } \) である。
+####### \( \bar{\psi}_{ x_1 } \p{ x_0 \b{ \bar{\omega}_{ x_{0,0} \b{ \bar{0} } } } } \) である。
 ##### \( \lnot \p{ \exists \p{ x_{0,0} \in T } \ldotp \mathrm{dom} \p{ x_0 } = \bar{\omega}_{ x_{0,0} } } \) であるならば、
 ###### \( \bar{0} \) である。
 #### \( \mathrm{dom} \p{ x_0 } < x_1 \) が \( \mathrm{True} \) であるならば、
@@ -281,18 +284,34 @@
 \( G \p{ \_, \_, \_ } : T \times T \to \mathrm{Bool} \) を再帰的に定義する。
 
 # \( G \p{ x, y, z } \) は、
-## \( y = \bar{0} \) であるならば、
-### \( \mathrm{True} \) である。
-## \( y = \bar{\omega}_{ y_0 } \) であるならば、
-### \( \bar{\omega}_{ y_0 } < x \) が \( \mathrm{False} \) であるならば、
-#### \( \mathrm{True} \) である。
-### \( \bar{\omega}_{ y_0 } < x \) が \( \mathrm{True} \) であるならば、
-#### \( G \p{ x, y_0, z } \) である。
-## \( y = \bar{\psi}_{ y_1 } \p{ y_0 } \) であるならば、
-### \( y_1 < x \) が \( \mathrm{False} \) であるならば、
-#### \( \mathrm{True} \) である。
-### \( y_1 < x \) が \( \mathrm{True} \) であるならば、
-#### \( y_0 < z \land G \p{ x, y_0, z } \land G \p{ x, y_1, z } \) である。
+## \( x = \bar{\omega}_{ x_0 } \) であるならば、
+### \( \mathrm{dom} \p{ x_0 } = \bar{0} \) であるならば、
+#### \( y = \bar{0} \) であるならば、
+##### \( \mathrm{True} \) である。
+#### \( y = \bar{\omega}_{ y_0 } \) であるならば、
+##### \( \mathrm{False} \) である。
+#### \( y = \bar{\psi}_{ y_1 } \p{ y_0 } \)
+##### \( y_1 = \hat{\omega} \) であるならば、
+###### \( G \p{ x, y_0, z } \) である。
+##### \( y_1 \neq = \hat{\omega} \) であるならば、
+###### \( \mathrm{False} \) である。
+### \( \mathrm{dom} \p{ x_0 } = \hat{1} \) であるならば、
+#### \( y = \bar{0} \) であるならば、
+##### \( \mathrm{True} \) である。
+#### \( y = \bar{\omega}_{ y_0 } \) であるならば、
+##### \( \bar{\omega}_{ y_0 } < x \) が \( \mathrm{False} \) であるならば、
+###### \( \mathrm{True} \) である。
+##### \( \bar{\omega}_{ y_0 } < x \) が \( \mathrm{True} \) であるならば、
+###### \( G \p{ x, y_0, z } \) である。
+#### \( y = \bar{\psi}_{ y_1 } \p{ y_0 } \) であるならば、
+##### \( y_1 < x \) が \( \mathrm{False} \) であるならば、
+###### \( \mathrm{True} \) である。
+##### \( y_1 < x \) が \( \mathrm{True} \) であるならば、
+###### \( y_0 < z \land G \p{ x, y_0, z } \land G \p{ x, y_1, z } \) である。
+### \( \mathrm{dom} \p{ x_0 } \neq \bar{0} \land \mathrm{dom} \p{ x_0 } \neq \hat{1} \) であるならば、
+#### \( \mathrm{False} \) である。
+### \( \lnot \p{ \exists \p{ x_0 \in T } \ldotp x = \bar{\omega}_{ x_0 } } \) であるならば、
+#### \( \mathrm{False} \) である。
 
 \( T_O \) を再帰的に定義する。
 
@@ -314,7 +333,7 @@
 
 == ミニマルオクフ数 ==
 
-\( X \p{ \_ } : \mathbb{N} \to T_O \) を再帰的に定義する。
+\( X \p{ \_ } : \mathbb{N} \to T \) を再帰的に定義する。
 
 # \( X \p{ n } \) は、
 ## \( n = 0 \) であるならば、
