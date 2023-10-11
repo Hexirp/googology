@@ -1347,7 +1347,7 @@
 # \( ( 0, 0, 0 ) ( 1, 1, 1 ) ( 1, 1, 0 ) ( 2, 2, 0 ) ( 3, 3, 0 ) ( 2, 2, 0 ) ( 3, 2, 0 ) ( 4, 2, 0 ) ( 5, 0, 0 ) \)
 ## \( \psi ( \Omega ( 0 ), \Omega ( \omega ( 0 ) ) + \psi ( \Omega ( 1 ), \phi ( 0, \Omega ( 1 ) + 1 ) + \omega ( \omega ( \omega ( \Omega ( 1 ) + 1 ) ) ) ) ) \)
 # \( ( 0, 0, 0 ) ( 1, 1, 1 ) ( 1, 1, 0 ) ( 2, 2, 0 ) ( 3, 3, 0 ) ( 2, 2, 0 ) ( 3, 2, 0 ) ( 4, 2, 0 ) ( 5, 0, 0 ) ( 6, 1, 1 ) \)
-## \( \psi ( \Omega ( 0 ), \Omega ( \omega ( 0 ) ) + \psi ( \Omega ( 1 ), \phi ( 0, \Omega ( 1 ) + 1 ) + \omega ( \omea ( \omega ( \Omega ( 1 ) + \psi ( \Omega ( 0 ), \Omega ( \omega ( 0 ) ) ) ) ) ) ) ) \)
+## \( \psi ( \Omega ( 0 ), \Omega ( \omega ( 0 ) ) + \psi ( \Omega ( 1 ), \phi ( 0, \Omega ( 1 ) + 1 ) + \omega ( \omega ( \omega ( \Omega ( 1 ) + \psi ( \Omega ( 0 ), \Omega ( \omega ( 0 ) ) ) ) ) ) ) ) \)
 # \( ( 0, 0, 0 ) ( 1, 1, 1 ) ( 1, 1, 0 ) ( 2, 2, 0 ) ( 3, 3, 0 ) ( 2, 2, 0 ) ( 3, 2, 0 ) ( 4, 2, 0 ) ( 5, 0, 0 ) ( 6, 1, 1 ) ( 6, 1, 0 ) \)
 ## \( \psi ( \Omega ( 0 ), \Omega ( \omega ( 0 ) ) + \psi ( \Omega ( 1 ), \phi ( 0, \Omega ( 1 ) + 1 ) + \omega ( \omega ( \omega ( \Omega ( 1 ) + \phi ( 0, \psi ( \Omega ( 0 ), \Omega ( \omega ( 0 ) ) ) + 1 ) ) ) ) ) ) \)
 # \( ( 0, 0, 0 ) ( 1, 1, 1 ) ( 1, 1, 0 ) ( 2, 2, 0 ) ( 3, 3, 0 ) ( 2, 2, 0 ) ( 3, 2, 0 ) ( 4, 2, 0 ) ( 5, 0, 0 ) ( 6, 1, 1 ) ( 6, 1, 0 ) ( 7, 2, 0 ) \)
