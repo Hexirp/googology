@@ -2,29 +2,29 @@
 
 == 共通部分 ==
 
-以下のような恒等式が成り立つ。加算については定義から自明、乗算と累乗については <math> b </math> に関する超限帰納法で証明可能。
+以下のような恒等式が成り立つ。加算については定義から自明、乗算と累乗については \( b \) に関する超限帰納法で証明可能。
 
-<math>
+<nowiki>\[
  \begin{array}{}
   a \langle 1 \rangle b = a [ 1 ] b = a + b \\
   a \langle 2 \rangle b = a [ 2 ] b = a \times b \\
   a \langle 3 \rangle b = a [ 3 ] b = a ^ b \\
  \end{array}
-</math>
+\]</nowiki>
 
 == 超限ハイパー演算子 ==
 
-全ての <math> 4 \leq \alpha </math> に対して <math> \omega \langle \alpha \rangle \omega = \varepsilon _ 0 </math> が成り立つ。確かめていないが超限帰納法で証明可能だと思われる。これ以上に行くには <math> ( \omega \langle 4 \rangle \omega ) \langle 4 \rangle \omega = \varepsilon _ 1 </math> とでもすればいいが、これは超限弱ハイパー演算子の領分である。
+全ての \( 4 \leq \alpha \) に対して \( \omega \langle \alpha \rangle \omega = \varepsilon _ 0 \) が成り立つ。確かめていないが超限帰納法で証明可能だと思われる。これ以上に行くには \( ( \omega \langle 4 \rangle \omega ) \langle 4 \rangle \omega = \varepsilon _ 1 \) とでもすればいいが、これは超限弱ハイパー演算子の領分である。
 
 == 超限弱ハイパー演算子 ==
 
-限界は <math> \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \varphi ( \omega + 1, 0 ) </math> である<ref>[https://docs.google.com/spreadsheets/d/13dF_JysGD8shMOTYL3KfsFmcKOMNXp7hyfgjVbQZm6I/edit#gid=206312705]</ref>。この節の解析の中に現れる恒等式の変数 <math> \alpha </math> の範囲は <math> 1 \leq \alpha </math> である。
+限界は \( \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} = \varphi ( \omega + 1, 0 ) \) である<ref>[https://docs.google.com/spreadsheets/d/13dF_JysGD8shMOTYL3KfsFmcKOMNXp7hyfgjVbQZm6I/edit#gid=206312705]</ref>。この節の解析の中に現れる恒等式の変数 \( \alpha \) の範囲は \( 1 \leq \alpha \) である。
 
 === 4 ===
 
 累乗以上テトレーション未満。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   \omega [ 4 ] 1 & = & \omega \\
   \omega [ 4 ] 2 & = & \omega ^ \omega \\
@@ -41,13 +41,13 @@
   \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] ( 1 + \alpha ) & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } \times \alpha } } \\
   \omega [ 4 ] \omega [ 4 ] \omega [ 4 ] \omega & = & \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } } \times \omega } } = \omega ^ { \omega ^ { \omega ^ { \omega ^ { \omega + 1 } + 1 } } } \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
 === 5 ===
 
-テトレーションレベル。二つの関数 <math> \alpha \mapsto \alpha \langle 4 \rangle \omega </math> と <math> \alpha \mapsto \alpha [ 5 ] \omega </math> は似た効果を持つ。
+テトレーションレベル。二つの関数 \( \alpha \mapsto \alpha \langle 4 \rangle \omega \) と \( \alpha \mapsto \alpha [ 5 ] \omega \) は似た効果を持つ。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   \omega [ 5 ] 1 & = & \omega \\
   \omega [ 5 ] 2 & = & \omega ^ { \omega ^ \omega } \\
@@ -73,33 +73,33 @@
   \omega [ 5 ] \omega [ 5 ] \omega & = & \varepsilon _ 1 \\
   \omega [ 5 ] \omega [ 5 ] \omega [ 5 ] \omega & = & \varepsilon _ 2 \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
-ただし、この節での <math> \alpha \mapsto f ( \alpha ) </math> は以下のように定義される関数である。
+ただし、この節での \( \alpha \mapsto f ( \alpha ) \) は以下のように定義される関数である。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   f ( 1 ) & = & \omega \\
   f ( \alpha + 1 ) & = & \omega ^ { f ( \alpha ) + 1 } \\
   f ( \alpha ) & = & \sup \{ f ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
-また <math> \alpha \mapsto g ( \alpha ) </math> は以下のように定義される関数である。
+また \( \alpha \mapsto g ( \alpha ) \) は以下のように定義される関数である。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   g ( 1 ) & = & \varepsilon _ 0 \\
   g ( \alpha + 1 ) & = & { \varepsilon _ 0 } ^ { g ( \alpha ) + 1 } \\
   g ( \alpha ) & = & \sup \{ g ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
 === 6 ===
 
-テトレーション以上と <math> \alpha \mapsto \varepsilon _ \alpha </math> 未満。
+テトレーション以上と \( \alpha \mapsto \varepsilon _ \alpha \) 未満。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   \omega [ 6 ] 1 & = & \omega \\
   \omega [ 6 ] 2 & = & \varepsilon _ 0 \\
@@ -125,13 +125,13 @@
   \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] 3 & = & \varepsilon _ { \varepsilon _ { \varepsilon _ \omega \times \omega } \times 2 } \\
   \omega [ 6 ] \omega [ 6 ] \omega [ 6 ] \omega & = & \varepsilon _ { \varepsilon _ { \varepsilon _ \omega \times \omega } \times \omega } \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
 === 7 ===
 
-<math> \alpha \mapsto \varepsilon _ \alpha </math> レベル。
+\( \alpha \mapsto \varepsilon _ \alpha \) レベル。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   \omega [ 7 ] 1 & = & \omega \\
   \omega [ 7 ] 2 & = & \varepsilon _ \omega \\
@@ -166,33 +166,33 @@
   \omega [ 7 ] \omega [ 7 ] \omega [ 7 ] 2 & = & \varepsilon _ { { \zeta _ 1 } ^ 2 } \\
   \omega [ 7 ] \omega [ 7 ] \omega [ 7 ] \omega & = & \zeta _ 2 \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
-ただし、この節での <math> \alpha \mapsto f ( \alpha ) </math> は以下のように定義される関数である。
+ただし、この節での \( \alpha \mapsto f ( \alpha ) \) は以下のように定義される関数である。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   f ( 1 ) & = & \varepsilon _ \omega \\
   f ( \alpha + 1 ) & = & \varepsilon _ { f ( \alpha ) \times \omega }  \\
   f ( \alpha ) & = & \sup \{ f ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
-また <math> \alpha \mapsto g ( \alpha ) </math> は以下のように定義される関数である。
+また \( \alpha \mapsto g ( \alpha ) \) は以下のように定義される関数である。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   g ( 1 ) & = & \zeta _ 0 \\
   g ( \alpha + 1 ) & = & \varepsilon _ { f ( \alpha ) \times \zeta _ 0 } \\
   g ( \alpha ) & = & \sup \{ g ( \alpha' ) \mid \alpha' < \alpha \land \alpha' \neq 0 \} \quad ( \mathbf{Limit} ( \alpha ) ) \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
 === 8 ===
 
-<math> \alpha \mapsto \varepsilon _ \alpha </math> 以上と <math> \alpha \mapsto \zeta _ \alpha </math> 未満。
+\( \alpha \mapsto \varepsilon _ \alpha \) 以上と \( \alpha \mapsto \zeta _ \alpha \) 未満。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   \omega [ 8 ] 1 & = & \omega \\
   \omega [ 8 ] 2 & = & \zeta _ 0 \\
@@ -207,13 +207,13 @@
   \omega [ 8 ] \omega [ 8 ] \omega & = & \zeta _ { \zeta _ \omega \times \omega } \\
   \omega [ 8 ] \omega [ 8 ] \omega [ 8 ] \omega & = & \zeta _ { \zeta _ { \zeta _ \omega \times \omega } \times \omega } \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
 === 9 ===
 
-<math> \alpha \mapsto \zeta _ \alpha </math> レベル。
+\( \alpha \mapsto \zeta _ \alpha \) レベル。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   \omega [ 9 ] 1 & = & \omega \\
   \omega [ 9 ] 2 & = & \zeta _ \omega \\
@@ -221,13 +221,13 @@
   \omega [ 9 ] 4 & = & \zeta _ { \zeta _ { \zeta _ \omega \times \omega } \times \omega } \\
   \omega [ 9 ] \omega & = & \eta _ 0 \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
 === ω 以後 ===
 
 ここから先はあまり伸びない。
 
-<math>
+<nowiki>\[
  \begin{eqnarray*}
   \omega [ 1 ] \omega & = & \omega \times 2 \\
   \omega [ 2 ] \omega & = & \omega ^ 2 \\
@@ -271,13 +271,13 @@
   \omega [ \omega [ \omega [ \omega ] \omega ] \omega ] \omega & = & \varphi _ \omega ( \varphi _ \omega ( \varphi _ \omega ( 0 ) ) ) \\
   \sup \{ \omega, \omega [ \omega ] \omega, \omega [ \omega [ \omega ] \omega ] \omega, \ldots \} & = & \varphi _ { \omega + 1 } ( 0 ) \\
  \end{eqnarray*}
-</math>
+\]</nowiki>
 
 === 表 ===
 
-<math> a, b \mapsto \omega [ a ] b </math> による表。前までの解析に書いてある部分だけ埋めてある。
+\( a, b \mapsto \omega [ a ] b \) による表。前までの解析に書いてある部分だけ埋めてある。
 
-<math>
+<nowiki>\[
  \begin{array}{ccccccc}
   \omega + 1 & \omega + 2 & \omega + 3 & \omega + 4 & \omega + 5 & \omega + 6 & \cdots \\
   \omega & \omega \times 2 & \omega \times 3 & \omega \times 4 & \omega \times 5 & \omega \times 6 & \cdots \\
@@ -292,21 +292,21 @@
   \omega & \eta _ \omega & \cdots & & & & \\
   \vdots & \vdots & & & & & \\
  \end{array}
-</math>
+\]</nowiki>
 
 === 緩増加関数との関係 ===
 
 [[緩増加関数]]を通して、超限弱ハイパー演算子が弱ハイパー演算子の順序数への正しい拡張であるということの、ある種の「証拠」が得られる。それは、緩増加関数において以下のような関係が'''経験則'''的に成り立っているからである。
 
-<math>
+<nowiki>\[
  g _ { f ( \omega ) } ( n ) \approx f ( n )
-</math>
+\]</nowiki>
 
-これを使って <math> \omega [ \omega ] \omega </math> がいくつになるべきなのか求めてみよう。まず、上式に代入して <math> g _ { \omega [ \omega ] \omega } ( n ) \approx n [ n ] n </math> を得る。ここで <math> n [ n ] n \approx n { \uparrow ^ n } n </math> であるから、 <math> g _ { \omega [ \omega ] \omega } ( n ) \approx n { \uparrow ^ n } n </math> となる。このような式を満たす順序数を[[緩増加関数]]にある対応の一覧を逆引きすると、 <math> \varphi _ \omega ( 0 ) </math> が求める性質を満たす順序数である。そして、実際に <math> \omega [ \omega ] \omega = \varphi _ \omega ( 0) </math> である。
+これを使って \( \omega [ \omega ] \omega \) がいくつになるべきなのか求めてみよう。まず、上式に代入して \( g _ { \omega [ \omega ] \omega } ( n ) \approx n [ n ] n \) を得る。ここで \( n [ n ] n \approx n { \uparrow ^ n } n \) であるから、 \( g _ { \omega [ \omega ] \omega } ( n ) \approx n { \uparrow ^ n } n \) となる。このような式を満たす順序数を[[緩増加関数]]にある対応の一覧を逆引きすると、 \( \varphi _ \omega ( 0 ) \) が求める性質を満たす順序数である。そして、実際に \( \omega [ \omega ] \omega = \varphi _ \omega ( 0) \) である。
 
 === 補足 ===
 
-なお、ここで出てくる減算 <math> A - B </math> は <math> A \setminus B </math> で残った元に <math> A </math> に沿った順序を入れたものである。
+なお、ここで出てくる減算 \( A - B \) は \( A \setminus B \) で残った元に \( A \) に沿った順序を入れたものである。
 
 == 脚注 ==
 
