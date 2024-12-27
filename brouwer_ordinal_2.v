@@ -1,14 +1,30 @@
+(** ブラウワー順序数と順序数崩壊関数について記述します。 *)
+
+(** << ltac_plugin >> を読み込みます。証明戦術を使えるようにします。 *)
+
 Declare ML Module "ltac_plugin" .
+
+(** << Default Proof Mode >> を << Classic >> に設定します。 *)
 
 Global Set Default Proof Mode "Classic" .
 
+(** << Default Goal Selector >> を << ! >> に設定します。ただ一つの目標を指定している時にだけ証明戦術が働くようにします。 *)
+
 Global Set Default Goal Selector "!" .
+
+(** << Elimination Schemes >> をオフにします。除去関数を独自に定義するため、除去関数の自動生成をオフにします。 *)
 
 Global Unset Elimination Schemes .
 
+(** << Universe Polymorphism >> をオンにします。宇宙多相を使えるようにします。 *)
+
 Global Set Universe Polymorphism .
 
+(** << Polymorphic Inductive Cumulativity >> をオンにします。 *)
+
 Global Set Polymorphic Inductive Cumulativity .
+
+(** << Printing Universes >> をオンにします。 *)
 
 Global Set Printing Universes .
 
