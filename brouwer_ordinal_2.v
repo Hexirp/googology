@@ -28,7 +28,7 @@ Global Set Polymorphic Inductive Cumulativity .
 
 Global Set Printing Universes .
 
-Module Part_1 .
+Module 複数の段階を有するブラウワー順序数 .
 
 Module ゼロ番目のブラウワー順序数 .
 
@@ -1158,4 +1158,4 @@ Definition 順序数崩壊関数@{ i | }
 
 End 順序数崩壊関数その二 .
 
-End Part_1 .
+End 複数の段階を有するブラウワー順序数 .
