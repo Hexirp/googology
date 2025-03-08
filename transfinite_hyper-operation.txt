@@ -1,0 +1,519 @@
+{{tocright}}
+
+== 要旨 ==
+
+この記事では、超限ハイパー演算子の定義について考察する。ただ大きさを求めて作るだけなら他の表記を使えば良いだけなので、ハイパー演算子の形を保ったまま、最も美しい定義を追い求める。その帰結として、有限の範囲において通常のハイパー演算子と完全に一致し、順序数の範囲においては、 \( 1 \) 段と \( 2 \) 段と \( 3 \) 段の演算が加算と乗算と冪乗を完全に再現し、テトレーションを超えても破綻せず、 \( \omega \) 階を超えても破綻せず、 \( \omega \mathbin{ \left [ \mathord{ } \mathbin{ \omega } \mathord{ } \right ] } \omega \) が \( \varphi _ \omega ( 0 ) \) となり、その表記としての限界が \( \Gamma _ 0 \) であり、それでいてハイパー演算子の形を保ち、それらに加えて、その定義が一貫していて美しいような超限ハイパー演算子の定義を示す。
+
+<p style="display: none;"><nowiki>\[
+  \DeclareMathOperator{ \tsup }{ sup }
+  \newcommand{ \cof }{ \mathrm{cof} }
+  \newcommand{ \hyop }[ 1 ]{ \mathbin{ \left [ \mathord{ } \mathbin{ #1 } \mathord{ } \right ] } }
+\]</nowiki></p>
+
+== 序論 ==
+
+超限ハイパー演算子は、ハイパー演算子を超限順序数へ拡張するという単純な発想の表記であり、様々な巨大数研究者が作成している表記でもある。
+
+しかしながら、本来のハイパー演算子の形を保ったまま \( \varepsilon _ 0 \) を超えることができた超限ハイパー演算子は、これまでに存在しない。このような表記は、長い間、不在であり続けていた。
+
+その理由は、加算と乗算と冪乗は超限順序数へ拡張することが容易であるのに対して、テトレーションでは単純に拡張すると \( \omega \uparrow \uparrow \omega = \varepsilon _ 0 \) が成立し \( \omega \uparrow \uparrow ( \omega + 1 ) = \omega ^ { \mkern1mu \omega \mkern1mu \uparrow \uparrow \omega } = \omega ^ { \mkern1mu \varepsilon _ 0 } = \varepsilon _ 0 \) となることから、 \( x \mapsto \omega \uparrow \uparrow x \) が連続であるとすると \( \xi \mapsto \omega \uparrow \uparrow \xi \) の上限が \( \varepsilon _ 0 \) となるという不都合な現象が発生するためである。
+
+これは、ハイパー演算子は単調増加であるべきという点で問題であるが、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点でも問題である。
+
+私を含めた一部の巨大数研究者は \( \omega \hyop{ \omega } \omega = \varphi _ \omega ( 0 ) \) となり \( \omega \) へ \( \xi \mapsto \omega \hyop{ \xi } \omega \) を繰り返し適用した順序数が \( \Gamma _ 0 \) となるのが自然なのではないかと考えており、これに届かないという点で問題なのである。
+
+これを裏付ける状況証拠として、緩増加関数を解析した結果を例に挙げることができる。 \( g _ \alpha ( x ) \) が \( \alpha \) の中の \( \omega \) を \( x \) に置き換えた値と、概ね一致するという経験則がある。それに加えて \( g _ { \varphi _ \omega ( 0 ) } ( n ) \approx n \hyop{ n } n \) であり \( g _ { \varphi _ \alpha ( 0 ) } ( n ) \approx n \hyop{ g _ \alpha ( n ) } n \) である。このことから、前述の予想を立てることができるのである。
+
+超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮するために、様々な巨大数研究者がハイパー演算子の形を崩した表記を作成してきた。たとえば、 "[[:en:User_blog:EricABQ/Formal_definition_of_ordinal_hyper-operators_using_the_climbing_method|Formal definition of ordinal hyper-operators using the climbing method]]" (EricABQ) では Jonathan Bowers が BEAF のために開発した climbing method をハイパー演算子へと転用している。かくいう私も『[[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]』で上付きハイパー演算子ではなく下付きハイパー演算子を超限順序数へ拡張すると \( \varepsilon _ 0 \) を超えて増大することを指摘している。
+
+だが、これらはハイパー演算子の形を崩してしまっているため、ハイパー演算子の形を保存したまま順序数へ拡張するという問題の答えとはならない。それに、 \( \omega \hyop{ \omega } \omega = \varphi _ \omega ( 0 ) \) と \( \omega \hyop{ \cdots \omega \hyop{ \omega \hyop{ \omega } \omega } \omega \cdots } \omega = \Gamma _ 0 \) も成り立たない。
+
+この記事では、有限の範囲において通常のハイパー演算子と完全に一致し、順序数の範囲においては、 \( 1 \) 段と \( 2 \) 段と \( 3 \) 段の演算が加算と乗算と冪乗を完全に再現し、テトレーションを超えても破綻せず、 \( \omega \) 階を超えても破綻せず、 \( \omega \hyop{ \omega } \omega \) が \( \varphi _ \omega ( 0 ) \) となり、その表記としての限界が \( \Gamma _ 0 \) であり、それでいてハイパー演算子の形を保ち、それらに加えて、その定義が一貫していて美しいような超限ハイパー演算子の定義を示す。
+
+== ハイパー演算子 ==
+
+ハイパー演算子とは、加算を繰り返して乗算を定義し、乗算を繰り返して冪乗を定義するという流れを、さらに繰り返した演算子である。つまり、冪乗を繰り返すことによりテトレーションを定義し、テトレーションを繰り返すことによりペンテーションを定義するように続けていくのである。
+
+加算を一番目のハイパー演算子であるとし、乗算を二番目のハイパー演算子であるとし、冪乗を三番目のハイパー演算子であるとし、これを続けていくと、一般に \( n \) 番目のハイパー演算子という概念について考察することができよう。
+
+\( n \) 番目のハイパー演算子を表記するためには、色々な方法があるが、この記事では、新しく \( a \hyop{ n } x \) と表記することにする。角括弧を使うのは、 LaTeX において一文字だけで入力できる括弧の種類が丸括弧と角括弧だけであり、丸括弧は他の用途が多く重複しやすいため、角括弧を採用したからである。角括弧の内側と外側のそれぞれにスペースが入っているのは、三項演算子として組板するために、その外側へ <code><nowiki>\mathbin</nowiki></code> を使用して二項演算子としてのスペースを加え、その内側にも <code><nowiki>\mathbin</nowiki></code> を使用して同等のスペースが入るようにしているからである。
+
+\( a \hyop{ n } x \) と書くとき、 \( a \) を基数と呼び、 \( x \) を指数と呼び、 \( n \) を階数と呼ぶことにする。英語版ウィキペディアの "[https://en.wikipedia.org/w/index.php?title=Hyperoperation&oldid=1110399282 Hyperoperation]" にあった用語法を参考にして、「基数」は "base" の訳として、「指数」は "exponent" の訳として、「階数」は "rank" の訳として、それぞれ充てた。
+
+ハイパー演算子の素朴な定義は、次の通りである。ただし、 \( a \geq 1 \) かつ \( n \geq 1 \) かつ \( x \geq 1 \) であるとする。つまり、基数と指数と階数が正の自然数であるということである。
+
+<nowiki>\[
+  a \hyop{ n } x
+    =
+      \begin{cases}
+        a + x & ( n = 1 ) \\
+        a \times x & ( n = 2 ) \\
+        a ^ x & ( n = 3 ) \\
+        \underbrace{ a \hyop{ n - 1 } ( \cdots a \hyop{ n - 1 } ( a \hyop{ n - 1 } ( a \hyop{ n - 1 } a ) ) \cdots ) } _ \textrm{\( b \) ko no \( a \) ga aru} & ( n \geq 4 ) \\
+      \end{cases}
+\]</nowiki>
+
+ここで、 \( \textrm{\( b \) ko no \( a \) ga aru} \) という点々を使った省略表記は、その解釈が曖昧になる余地がある。もちろん、この場合では問題にならないだろうが、定義の考察をするにあたり障害となることも確かである。
+
+そこで、 \( a \) を並べる部分を省略せずに表記すると、次のように定義することになる。ここで、 \( \langle n , x \rangle \) が \( \mathbb{N} \times \mathbb{N} \) の辞書式順序について減少しているため、この定義は整合的である。
+
+<nowiki>\[
+  a \hyop{ n } x
+    =
+      \begin{cases}
+        a + x & ( n = 1 ) \\
+        a \times x & ( n = 2 ) \\
+        a ^ x & ( n = 3 ) \\
+        a & ( n \geq 4 \wedge x = 1 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 4 \wedge x \geq 2 ) \\
+      \end{cases}
+\]</nowiki>
+
+ハイパー演算子の素朴な定義では基数と指数と階数が正の自然数でなければならず、これは順序数へ拡張する場合においては問題にならないが、この記事では美しさも追及するため、ゼロの場合においても定義できるように拡張する。
+
+== 基数がゼロである場合について ==
+
+基数がゼロである場合について、つまり \( a \) がゼロである場合について考察すると、もとより \( a \) についての場合分けは全く行っておらず、そのまま \( a \) へゼロを代入するだけで良い。
+
+== 指数がゼロである場合について ==
+
+指数がゼロである場合について、つまり \( x \) がゼロである場合について考察しよう。
+
+加算と乗算と冪乗をゼロへ拡張する方法に倣うと、 \( a \hyop{ 1 } 0 = a \) かつ \( a \hyop{ 2 } 0 = 0 \) かつ \( a \hyop{ 3 } 0 = 1 \) を得ることができる。ここで注意しなければならないのは、 \( a \) がゼロである場合において \( 0 ^ 0 \) が現れることであり、実数の冪乗では \( 0 ^ 0 \) は未定義であるが、自然数の冪乗では \( 0 ^ 0 \) は \( 1 \) であるため、常に \( a ^ 0 = 1 \) が成立し、問題ないことになる。
+
+\( n \geq 4 \) である場合については、少し複雑であるが、 \( a \hyop{ n } 0 \) が自然に満たすべき条件へ注目すると、 \( n \geq 4 \to a \hyop{ n } 0 = 1 \) を得ることができる。
+
+一つ目に、 \( n \geq 4 \) かつ \( x \geq 2 \) について \( a \hyop{ n } x = a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) \) であることから、ここの \( x \) へ \( 1 \) を仮に代入することで、 \( n \geq 4 \) について \( a \hyop{ n } 1 = a \hyop{ n - 1 } ( a \hyop{ n } 0 ) \) を得る。
+
+二つ目に、 \( n \geq 2 \) について \( a \hyop{ n } 1 = a \) であることから、 \( n \geq 4 \) について \( a \hyop{ n } 1 = a \) かつ \( a \hyop{ n - 1 } 1 = a \) である。
+
+三つ目に、一つ目の式と二つ目の式から、 \( n \geq 4 \) を条件として、下記のように変形をし、 \( a \hyop{ n - 1 } ( a \hyop{ n } 0 ) = a \hyop{ n - 1 } 1 \) を得る。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n - 1 } ( a \hyop{ n } 0 ) \\
+  & = a \hyop{ n } 1 \\
+  & = a \\
+  & = a \hyop{ n - 1 } 1 \\
+\end{alignat}</nowiki>
+
+最後に、 \( n \geq 4 \) を条件として \( x \mapsto a \hyop{ n - 1 } x \) が単調増加関数であると仮に考えると、三つ目の式から \( a \mathbin{ [ n ] } 0 = 1 \) を得ることができる。
+
+== 階数がゼロである場合について ==
+
+階数がゼロである場合について、つまり \( n \) がゼロである場合について考察しよう。
+
+\( a \hyop{ 0 } x \) が自然に満たすべき条件について考察すると、 \( a \leq x \) に限定すれば \( a \hyop{ 0 } x = x + 1 \) であることが定まり、それに加えて可換性を要請すると \( a \hyop{ 0 } x = \max ( a + 1 , x + 1 ) \) と定まる。ただし、可換性を要請しないのであれば、 \( a \hyop{ 0 } x = x + 1 \) のような他の定義も可能である。
+
+一つ目に、 \( n \geq 4 \) かつ \( x \geq 1 \) について \( a \hyop{ n } x = a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) \) であることから、ここの \( n \) へ \( 1 \) を仮に代入すると、 \( x \geq 1 \) について \( a \hyop{ 1 } x = a \hyop{ 0 } ( a \hyop{ 1 } ( x - 1 ) ) \) を得る。ただし、前の節で \( x \) をゼロへ拡張したため、 \( x \) に関する恒等式の条件は \( x \geq 2 \) ではなく \( x \geq 1 \) である。
+
+二つ目に、 \( a \hyop{ 1 } x = a + x \) であると仮に考えると、一つ目の式から \( x \geq 1 \) について \( a + x = a \hyop{ 0 } ( a + ( x - 1 ) ) \) である。
+
+三つ目に、二つ目の式について、 \( x \hyop{ 0 } y = F ( x , y ) \) と定義して、 \( x _ \mathrm{old} \) を \( x + 1 \) で置き換えることで、 \( F ( a , a + x ) = a + x + 1 \) であるような二変数関数 \( F \) を指定する問題へと帰着することができる。
+
+最後に、 \( a \) と \( x \) は自然数であるから、 \( a \) と \( a + x _ \mathrm{old} \) を \( x \) と \( y \) で置き換えることで、 \( x \leq y \) について \( F ( x , y ) = y + 1 \) であり、 \( x > y \) についての \( F ( x , y ) \) の値を指定するだけで良いことがわかる。
+
+\( x \leq y \) について \( F ( x , y ) = y + 1 \) であるような二変数関数 \( F \) は無数にあり、最も単純な解として \( F ( x , y ) = y + 1 \) とすることができる。これは英語版ウィキペディアの "[https://en.wikipedia.org/w/index.php?title=Hyperoperation&oldid=1110399282 Hyperoperation]" と同じ定義である。
+
+\( F ( x , y ) = y + 1 \) と定めることは、後者関数からハイパー演算子を構築していくことであり、その点については美しいが、一番目の変数の値を捨てており、可換性を持たないという欠点がある。これは、二項演算子のハイパー演算子に対して、一項演算子の後者関数を、むりやり当てはめたせいかもしれない。
+
+二変数関数 \( F \) が可換性を持つことを要請すると、 \( F ( x , y ) = F ( y , x ) \) であることから、 \( x > y \) について \( F ( x , y ) = x + 1 \) であることが定まり、次のようになる。
+
+<nowiki>\[
+  F ( x , y )
+    =
+      \begin{cases}
+        y + 1 & ( x \leq y ) \\
+        x + 1 & ( x > y ) \\
+      \end{cases}
+\]</nowiki>
+
+これを一つの式へまとめると、 \( F ( x , y ) = \max ( a + 1 , x + 1 ) \) となり、 \( a \hyop{ 0 } x = \max ( a + 1 , x + 1 ) \) である。
+
+== ゼロへ拡張した定義について ==
+
+ここまで考察したことを集約すると、ゼロへ拡張したハイパー演算子の定義は、次の通りになる。
+
+<nowiki>\[
+  a \hyop{ n } x
+    =
+      \begin{cases}
+        \max ( a + 1 , x + 1 ) & ( n = 0 ) \\
+        a & ( n \geq 1 \wedge x = 0 \wedge n = 1 ) \\
+        0 & ( n \geq 1 \wedge x = 0 \wedge n = 2 ) \\
+        1 & ( n \geq 1 \wedge x = 0 \wedge n \geq 3 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 1 \wedge x \geq 1 ) \\
+      \end{cases}
+\]</nowiki>
+
+だが、この定義は素朴な定義と一致するのだろうか。
+
+== ゼロへ拡張したハイパー演算子の整合性 ==
+
+\( a \mathbin{ [ \mathord{ } \mathbin{ n } \mathord{ } ] _ \mathrm{old} } x \) を素朴な定義であるとして、 \( a \geq 1 \) かつ \( n \geq 1 \) かつ \( x \geq 1 \) である場合に \( a \mathbin{ [ \mathord{ } \mathbin{ n } \mathord{ } ] _ \mathrm{old} } x = a \hyop{ n } x \) である。
+
+一番目の補題として、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
+  & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
+  & = \max ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
+  & = ( a + x _ \mathrm{pred} ) + 1 \\
+  & = a + ( x _ \mathrm{pred} + 1 ) \\
+\end{alignat}</nowiki>
+
+二番目の補題として、 \( a \hyop{ 2 } x = a \times x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 2 } 0 = a \times 0 \) となり、 \( a \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = a \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 1 } ( a \hyop{ 2 } x _ \mathrm{pred} ) \\
+  & = a \hyop{ 1 } ( a \times x _ \mathrm{pred} ) \\
+  & = a + ( a \times x _ \mathrm{pred} ) \\
+  & = a \times ( x _ \mathrm{pred} + 1 ) \\
+\end{alignat}</nowiki>
+
+三番目の補題として、 \( a \hyop{ 3 } x = a ^ x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 3 } 0 = a ^ 0 \) となり、 \( a \hyop{ 3 } 0 = 1 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) = a ^ { x _ \mathrm{pred} + 1 } \) となり、次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 2 } ( a \hyop{ 3 } x _ \mathrm{pred} ) \\
+  & = a \hyop{ 2 } a ^ { x _ \mathrm{pred} } \\
+  & = a \times a ^ { x _ \mathrm{pred} } \\
+  & = a ^ { x _ \mathrm{pred} + 1 } \\
+\end{alignat}</nowiki>
+
+四番目の補題として、 \( n \geq 2 \) である場合、 \( a \hyop{ n } 1 = a \) である。 \( n \) について帰納法を適用する。 \( n = 2 \) の場合は \( a \hyop{ 2 } 1 = a \) となり、二番目の補題より成り立つ。 \( n \geq 3 \) かつ \( n = n _ \mathrm{pred} + 1 \) である場合は \( a \hyop{ n _ \mathrm{pred} + 1 } 1 = a \) となり、次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n _ \mathrm{pred} + 1 } 1 \\
+  & = a \hyop{ n _ \mathrm{pred} } ( a \hyop{ n _ \mathrm{pred} + 1 } 0 ) \\
+  & = a \hyop{ n _ \mathrm{pred} } 1 \\
+  & = a \\
+\end{alignat}</nowiki>
+
+五番目の補題として、 \( n \geq 1 \) かつ \( x \geq 1 \) である場合、 \( a \hyop{ n } x = a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) \) である。これは定義より自明である。
+
+最後の定理として、  \( a \geq 1 \) かつ \( n \geq 1 \) かつ \( x \geq 1 \) である場合、 \( a \mathbin{ [ \mathord{ } \mathbin{ n } \mathord{ } ] _ \mathrm{old} } x = a \hyop{ n } x \) である。 \( n \) について帰納法を適用する。 \( n = 1 \) である場合、 \( a \mathbin{ [ \mathord{ } \mathbin{ 1 } \mathord{ } ] _ \mathrm{old} } x = a \hyop{ 1 } x \) となり、一番目の補題より成り立つ。 \( n = 2 \) である場合、 \( a \mathbin{ [ \mathord{ } \mathbin{ 2 } \mathord{ } ] _ \mathrm{old} } x = a \hyop{ 2 } x \) となり、二番目の補題より成り立つ。 \( n = 3 \) である場合、 \( a \mathbin{ [ \mathord{ } \mathbin{ 3 } \mathord{ } ] _ \mathrm{old} } x = a \hyop{ 3 } x \) となり、三番目の補題より成り立つ。 \( n \geq 4 \) である場合、 \( a \mathbin{ [ \mathord{ } \mathbin{ n } \mathord{ } ] _ \mathrm{old} } x = a \hyop{ n } x \) となり、 \( x \) について帰納法を適用して、四番目の補題と五番目の補題より成り立つ。
+
+== 順序数へ拡張することについて ==
+
+前の節で示した定義を、さらに順序数へ拡張することを考えてみると、これは簡単に定義できるように見える。
+
+なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義は連続であることから自動的に定まるからである。つまり、 \( f \) が連続であるとすると、 \( \cof ( \alpha ) \geq \omega \) である場合、必ず \( f ( \alpha ) = \tsup _ { \beta < \alpha } f ( \beta ) \) となる。
+
+この方針に従って定義すると、下記のような定義となる。ただし、 \( \cof ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \tsup _ { \beta < \alpha } \beta \) と定義する。
+
+<nowiki>\[
+  a \hyop{ n } x
+    =
+      \begin{cases}
+        \max ( a + 1 , x + 1 ) & ( \cof ( n ) = 0 ) \\
+        a & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n = 1 ) \\
+        0 & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n = 2 ) \\
+        1 & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n \geq 3 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( \cof ( n ) = 1 \wedge \cof ( x ) = 1 ) \\
+        \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } & ( \cof ( n ) = 1 \wedge \cof ( x ) \geq \omega ) \\
+        \tsup _ { p < n } \mathord{ ( a \hyop{ p } x ) } & ( \cof ( n ) = \omega ) \\
+      \end{cases}
+\]</nowiki>
+
+だが、この定義は \( n \geq 2 \) では上手く行かず、非常に悪い結果となる。
+
+\( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \cof ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \cof ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \cof ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \tsup _ { y < x } \mathord{ ( a \hyop{ 1 } y ) } \) かつ \( a + y = \tsup _ { y < x } \mathord{ ( a + y ) } \) であるため、成り立つ。 \( \cof ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
+  & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
+  & = \max ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
+  & = ( a + x _ \mathrm{pred} ) + 1 \\
+  & = a + ( x _ \mathrm{pred} + 1 ) \\
+\end{alignat}</nowiki>
+
+その一方で、 \( n \geq 2 \) の場合は、 \( \omega \hyop{ 2 } ( \omega + 1 ) \) が \( \omega ^ 2 + \omega \) ではなく \( \omega ^ 2 \) となり、 \( x \mapsto \omega \hyop{ 2 } x \) が \( \omega ^ 2 \) よりも大きくならず、 \( n \mapsto \omega \hyop{ n } \omega \) も \( \omega ^ 2 \) よりも大きくならない。
+
+一つ目に、 \( x < \omega \) である場合、 \( \omega \hyop{ 2 } x = \omega \times x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) である場合は、 \( \omega \hyop{ 2 } 0 = \omega \times 0 \) となり、 \( \omega \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) である場合は、 \( \omega \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = \omega \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
+  & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } x _ \mathrm{pred} ) \\
+  & = \omega \hyop{ 1 } ( \omega \times x _ \mathrm{pred} ) \\
+  & = \omega + ( \omega \times x _ \mathrm{pred} ) \\
+  & = \omega \times ( 1 + x _ \mathrm{pred} ) \\
+  & = \omega \times ( x _ \mathrm{pred} + 1 ) \\
+\end{alignat}</nowiki>
+
+二つ目に、 \( \omega \hyop{ 2 } \omega = \omega ^ 2 \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } \omega \\
+  & = \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } \\
+  & = \tsup _ { y < \omega } \mathord{ ( \omega \times y ) } \\
+  & = \omega \times \omega \\
+  & = \omega ^ 2 \\
+\end{alignat}</nowiki>
+
+三つ目に、 \( \omega \hyop{ 2 } ( \omega + 1 ) = \omega ^ 2 \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } ( \omega + 1 ) \\
+  & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } \omega ) \\
+  & = \omega \hyop{ 1 } \omega ^ 2 \\
+  & = \omega + \omega ^ 2 \\
+  & = \omega ^ 2 \\
+\end{alignat}</nowiki>
+
+四つ目に、 \( \omega \hyop{ 2 } \alpha = \omega ^ 2 \) である場合、 \( \omega \hyop{ 2 } ( \alpha + 1 ) = \omega ^ 2 \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } ( \alpha + 1 ) \\
+  & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } \alpha ) \\
+  & = \omega \hyop{ 1 } \omega ^ 2 \\
+  & = \omega + \omega ^ 2 \\
+  & = \omega ^ 2 \\
+\end{alignat}</nowiki>
+
+五つ目に、 \( \alpha \geq \omega \) である場合、 \( \omega \hyop{ 2 } \alpha = \omega ^ 2 \) である。 \( \alpha \) について超限帰納法を適用する。 \( \alpha = \omega \) である場合、二つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \alpha = \alpha _ \mathrm{pred} + 1 \) である場合、四つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \cof ( \alpha ) \geq \omega \) である場合、これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } \alpha \\
+  & = \tsup _ { y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \\
+  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \mkern-1mu \right ) } \\
+  & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-2mu \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
+  & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-2mu \omega ^ 2 , \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
+  & = \omega ^ 2 \\
+\end{alignat}</nowiki>
+
+テトレーションどころか、乗算の範囲で異常が出ている。
+
+そも、順序数の乗算と冪乗を定義するとき、普通は \( \alpha \times ( \beta + 1 ) = \alpha \times \beta + \alpha \) かつ \( \alpha ^ { \beta + 1 } = \alpha ^ \beta \times \alpha \) と定義するのだが、これは通常のハイパー演算子（上付きハイパー演算子）の定義ではなく下付きハイパー演算子の定義である。
+
+上付きハイパー演算子の定義を使うと、 \( x \mapsto a \hyop{ n } x \) を反復適用することになり、 \( x \mapsto a \hyop{ n } x \) が正規関数であるがゆえに、 \( \omega \) 回適用した時点で \( x \mapsto a \hyop{ n } x \) の不動点となってしまい、それ以上の順序数を出力することができなくなってしまうので、それを避けるために順序数の範囲では下付きハイパー演算子の定義を採用しなければならないのだ。
+
+加算と乗算と冪乗においては、自然数の範囲では上付きハイパー演算子の値と下付きハイパー演算子の値が一致しているのを反映するかのように、下付きハイパー演算子の定義を使用していても自然数から順序数への正当な上付きハイパー演算子の拡張と呼べるような性質を持つ。
+
+だが、テトレーションを超えた領域においては、自然数の範囲でも上付きハイパー演算子の値と下付きハイパー演算子の値が一致しないのを反映するかのように、 \( \omega \hyop{ 4 } \omega \) が \( \varepsilon _ 0 \) ではなく \( \omega ^ { \mkern1mu \omega ^ { \mkern2mu \omega } } \) となってしまったりと、上付きハイパー演算子よりも下付きハイパー演算子の方へ近い性質が現れてしまう。
+
+では、上付きハイパー演算子を諦めて下付きハイパー演算子を使えば良いのかというと、こちらもこちらでゼロへ拡張できなかったりグジェゴルチク階層と対応しなかったりという大きな欠点を抱えており、できれば上付きハイパー演算子の方を使いたい。
+
+そもそも、下付きハイパー演算子を順序数へ拡張することについては、既に『[[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]』と『[[ユーザーブログ:Hexirp/超限ハイパー演算子の解析|超限ハイパー演算子の解析]]』で考察している。
+
+それを踏まえて、今回は上付きハイパー演算子の形を維持したまま順序数へ拡張する方法について考察しているのである。
+
+== 連続性について ==
+
+前の節において、  \( x \mapsto a \hyop{ n } x \) が正規関数であるがゆえに、 \( \omega \) 回適用した時点で \( x \mapsto a \hyop{ n } x \) の不動点となってしまい、それ以上の順序数を出力できなくなってしまうと書いた。
+
+実のところ、ある \( n \) において \( x \mapsto a \hyop{ n } x \) が正規関数であるとし、 \( x \mapsto a \hyop{ n + 1 } x \) が \( a \hyop{ n + 1 } 0 \) へ \( x \mapsto a \hyop{ n } x \) を \( x \) 回適用する関数であるとすると、必ず \( a \hyop{ n + 1 } \omega \) が \( x \mapsto a \hyop{ n + 1 } x \) の上限になってしまうのだ。
+
+これの一般化として、ある順序数 \( \alpha _ 0 \) を取り、ある正規関数 \( F \) を取り、 \( G \) を \( x \mapsto F ^ x ( \alpha _ 0 ) \) とすると、 \( G ( \omega ) \) が \( G \) の上限となる。ここで \( \alpha _ 0 = a \hyop{ n } 0 \) かつ \( F ( x ) = a \hyop{ n } x \) かつ \( G ( x ) = a \hyop{ n + 1 } x \) とすれば先の定理へ特殊化できる。
+
+一つ目に、 \( F ( G ( \omega ) ) = G ( \omega ) \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } F ( G ( \omega ) ) \\
+  & = F ( \tsup _ { y < \omega } G ( y ) ) \\
+  & = \tsup _ { y < \omega } F ( G ( y ) ) \\
+  & = \tsup _ { y < \omega } G ( y + 1 ) \\
+  & = G ( \omega ) \\
+\end{alignat}</nowiki>
+
+二つ目に、 \( x \geq \omega \) である場合、 \( G ( x ) = G ( \omega ) \) である。 \( x \) について超限帰納法を適用する。 \( x = \omega \) である場合、 \( G ( \omega ) = G ( \omega ) \) となり、自明である。 \( x > \omega \) かつ \( \cof ( x ) \geq \omega \) である場合、 \( G ( x ) = G ( \omega ) \) となり、 \( G ( x ) = \tsup _ { y < x } G ( y ) \) より成り立つ。 \( x > \omega \) かつ \( x = x _ \mathrm{pred} + 1 \) である場合、 \( G ( x _ \mathrm{pred} + 1 ) = G ( \omega ) \) となり、これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } G ( x _ \mathrm{pred} + 1 ) \\
+  & = F ( G ( x _ \mathrm{pred} ) ) \\
+  & = F ( G ( \omega ) ) \\
+  & = G ( \omega ) \\
+\end{alignat}</nowiki>
+
+これは、「 \( x \mapsto a \hyop{ n } x \) が連続である」と「 \( a \hyop{ n } x \) とは、 \( a \hyop{ n } 0 \) へ \( x \mapsto a \hyop{ n - 1 } x \) を \( x \) 回適用した数である」という美しい性質を保つ限り、ある順序数が上限になってしまうということである。
+
+つまり、超限ハイパー演算子が満たしてほしい性質について、それら全てを満たすような定義を作ることはできないことである。これを、次の節で明確に示す。
+
+== 超限ハイパー演算子の三律不立について ==
+
+超限ハイパー演算子が満たしてほしい性質として、次の三つの性質がある。
+
+# \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( x \mapsto a \hyop{ n } x \) は単調増加である。
+# \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( x \mapsto a \hyop{ n } x \) は連続である。
+# \( \cof ( n ) = 1 \) かつ \( \cof ( x ) = 1 \) である場合、 \( a \hyop{ n } x = a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) \) である。
+
+だが、これらの性質を全て超限ハイパー演算子が有しているとすると、そこから矛盾が出る。まさに三律不立（トリレンマ）である。
+
+一番目の補題として、 \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( x \mapsto a \hyop{ n } x \) は正規関数である。これは、一番目の性質と二番目の性質より成り立つ。
+
+二番目の補題として、 \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( a \hyop{ n + 1 } x \) は \( a \hyop{ n + 1 } 0 \) に \( x \mapsto a \hyop{ n } x \) を \( x \) 回適用した数である。これは、二番目の性質と三番目の性質より成り立つ。
+
+三番目の補題として、  \( a \geq 1 \) かつ \( \cof ( n ) = 1 \) かつ \( n \geq 2 \) である場合、 \( a \hyop{ n - 1 } ( a \hyop{ n } \omega ) = a \hyop{ n } \omega \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n - 1 } ( a \hyop{ n } \omega ) \\
+  & = a \hyop{ n - 1 } ( \tsup _ { y < \omega } \mathord{ ( a \hyop{ n } y ) } ) \\
+  & = \tsup _ { y < \omega } \mathord{ ( a \hyop{ n - 1 } ( a \hyop{ n } y ) ) } \\
+  & = \tsup _ { y < \omega } ( a \hyop{ n } ( y + 1 ) ) \\
+  & = a \hyop{ n } \omega \\
+\end{alignat}</nowiki>
+
+四番目の補題として、 \( a \geq 1 \) かつ \( \cof ( n ) = 1 \) かつ \( n \geq 2 \) かつ \( x \geq \omega \) である場合、 \( a \hyop{ n } x = a \hyop{ n } \omega \) である。 \( x \) について超限帰納法を適用する。 \( x = \omega \) である場合、 \( a \hyop{ n } \omega = a \hyop{ n } \omega \) となり、自明である。 \( x > \omega \) かつ \( \cof ( x ) \geq \omega \) である場合、 \( a \hyop{ n } ( x ) = a \hyop{ n } \omega \) となり、 \( a \hyop{ n } x = \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } \) より成り立つ。 \( x > \omega \) かつ \( x = x _ \mathrm{pred} + 1 \) である場合、 \( a \hyop{ n } ( x _ \mathrm{pred} + 1 ) = a \hyop{ n } \omega \) となり、これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ n - 1 } ( a \hyop{ n } x _ \mathrm{pred} ) \\
+  & = a \hyop{ n - 1 } ( a \hyop{ n } \omega ) \\
+  & = a \hyop{ n } \omega \\
+\end{alignat}</nowiki>
+
+最後の定理として、 \( a \geq 1 \) かつ \( \cof ( n ) = 1 \) かつ \( n \geq 2 \) である場合、 \( a \hyop{ n } \omega \) が \( x \mapsto a \hyop{ n } x \) の上限となり、これは \( x \mapsto a \hyop{ n } x \) が単調増加であることに反する。
+
+== 拡張の方針について ==
+
+上付きハイパー演算子の形を維持したまま順序数へ拡張するといっても、どのような表記を目指せば良いのだろうか？　前の節で示したように、上付きハイパー演算子の形を維持したまま順序数へ拡張することには限界がある。
+
+順序数に対する下付きハイパー演算子においては、一番目の性質と二番目の性質を満たすが、三番目の性質を満たしておらず、 \( \omega \hyop{ 4 } \omega \) が \( \varepsilon _ 0 \) ではなく \( \omega ^ { \mkern1mu \omega ^ { \mkern2mu \omega } } \) となる。
+
+一番目の性質は必ず満たしてほしいが、二番目の性質と三番目の性質については、そこまで満たしてほしいというわけではく、それでも \( \omega \hyop{ 4 } \omega \) が \( \omega ^ { \mkern1mu \omega ^ { \mkern2mu \omega } } \) ではなく \( \varepsilon _ 0 \) となってほしい。
+
+\( \omega \hyop{ 4 } ( \omega + 1 ) \) は、上付きハイパー演算子の定義に則すると、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) であり、 \( x \mapsto \omega \hyop{ 3 } x \) の不動点が \( \omega \hyop{ 4 } \omega \) であるので、 \( \omega \hyop{ 4 } \omega \) と等しくなり大きくならない。
+
+その一方で、下付きハイパー演算子の定義に則すると、 \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) であり、 \( \omega \hyop{ 4 } \omega \) は \( x \mapsto x \hyop{ 3 } \omega \) の不動点ではないため、 \( \omega \hyop{ 4 } \omega \) よりも大きくなる。
+
+通常の場合においては下付きハイパー演算子よりも上付きハイパー演算子の方が大きいのに、この場合においては上付きハイパー演算子よりも下付きハイパー演算子の方が大きいことに着目しよう。
+
+ここで、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) と \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) のうちで大きい方を選べばよいのではないかと、私は思い付いたのである。
+
+== 繰り返し適用の上限について ==
+
+\( \omega \hyop{ 4 } \omega \) へ \( x \mapsto \omega \hyop{ 3 } x \) と \( x \mapsto x \hyop{ 3 } \omega \) の両方を適用して、それらの大きい方を選ぶという手法は、順序数崩壊関数の定義における閉包集合を私に思い浮かばせた。
+
+ただし、順序数崩壊関数の定義における閉包集合は、特定の種類の操作を幾らでも繰り返しても外側へ出ることがないという意味で、特定の種類の操作について閉じている集合であるが、この場合においては、その閉包集合を作るための操作を途中で止めるようなイメージである。
+
+これを具体的に実装すると、 \( a \hyop{ n } x \) と \( S ( a , n , x ) \) を相互再帰で次のように定義することになる。
+
+== 順序数への拡張 ==
+
+<div style="display: none;"><nowiki>\[
+  \newcommand{\p}[1]{ \mathord{ \left( #1 \right) } }
+  \newcommand{\b}[1]{ \mathord{ \left[ #1 \right] } }
+  \newcommand{\c}[1]{ \mathord{ \left\{ #1 \right\} } }
+  \newcommand{\a}[1]{ \mathord{ \left\langle #1 \right\rangle } }
+  \newcommand{\bo}[1]{ \mathbin{ \left[ #1 \right] } }
+\]</nowiki></div>
+
+ならば、別の方法が必要である。ここで \( \omega \bo{ 1 } \p{ \omega \bo{ 2 } \omega } < \p{ \omega \bo{ 2 } \omega } \bo{ 1 } \omega \) になっていることに注目しよう。すると、 \( a \bo{ n + 1 } \p{ b + 1 } \) の定義として、普通は \( a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } } \) とし、それよりも \( \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ \mathrm{p} \p{ n } } a \) の方が大きい時に、それを選ぶというものを考えることが出来る。
+
+これを単純に表すと、 \( \max \p{ a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } }, \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ \mathrm{p} \p{ n } } a } \) である。さて、この定義には問題はないのだろうか。なんと問題ないのである。有限の範囲において値が変わることはない。
+
+さて、この定義は意図せずに \( a \bo{ 0 } b = \max \p{ a, b } + 1 \) と形式が似ている。更に形式を似せた方が美しくなるので、 \( \max \p{ a + 1, b + 1 } \) という風にそろえることにする。
+
+これを纏めると次のようになる。
+
+<nowiki>\[
+  \begin{align}
+    a \bo{ 0 } 0 & = a + 1 \\
+    a \bo{ 1 } 0 & = a \\
+    a \bo{ 2 } 0 & = 0 \\
+    a \bo{ n } 0 & = 1 & & \p{ 3 \leq n } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a + 1, b + 1 } & & \p{ \textrm{\( b \) is successor} } \\
+    a \bo{ n } b & = \mathrm{max} \p{ a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } }, \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ \mathrm{p} \p{ n } } a } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is successor} } \\
+    a \bo{ n } b & = \sup_{ n' < n } \p{ a \bo{ n' } b } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is limit} } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a + 1, b + 1 } & & \p{ \textrm{\( b \) is limit} } \\
+    a \bo{ n } b & = \sup_{ b' < b } \p{ a \bo{ n } b' } & & \p{ \textrm{\( b \) is limit} } \\
+  \end{align}
+\]</nowiki>
+
+この演算子の値は次のようになる。
+
+* \( \omega \bo{ 2 } \p{ \omega + 1 } = \p{ \omega \bo{ 2 } \omega } \bo{ 1 } \omega = \omega^2 \bo{ 1 } \omega = \omega^2 + \omega \)
+* \( \omega \bo{ 2 } \p{ \omega + \omega } = \omega^2 + \omega^2 \)
+* \( \omega \bo{ 2 } \p{ \omega \bo{ 2 } \omega } = \omega^3 \)
+* \( \omega \bo{ 3 } \omega = \omega^\omega \)
+* \( \omega \bo{ 3 } \p{ \omega + 1 } = \p{ \omega \bo{ 3 } \omega } \bo{ 2 } \omega = \omega^{ \omega + 1 } \)
+* \( \omega \bo{ 3 } \p{ \omega \bo{ 3 } \omega } = \omega^{ \omega^\omega } \)
+* \( \omega \bo{ 4 } \omega = \varepsilon_0 \)
+* \( \omega \bo{ 4 } \p{ \omega + 1 } = \p{ \omega \bo{ 4 } \omega } \bo{ 3 } \omega = \omega^{ \omega^{ \varepsilon_0 + 1 } } \)
+* \( \omega \bo{ 4 } \p{ \omega + 2 } = \omega \bo{ 3 } \p{ \omega \bo{ 4 } \p{ \omega + 1 } } = \omega^{ \omega^{ \omega^{ \varepsilon_0 + 1 } } } \)
+* \( \omega \bo{ 4 } \p{ \omega + \omega } = \varepsilon_1 \)
+* \( \omega \bo{ 4 } \omega^2 = \varepsilon_\omega \)
+* \( \omega \bo{ 4 } \omega^\omega = \varepsilon_{ \omega^\omega } \)
+* \( \omega \bo{ 4 } \p{ \omega \bo{ 4 } \omega } = \varepsilon_{ \varepsilon_0 } \)
+* \( \omega \bo{ 5 } \omega = \zeta_0 \)
+* \( \omega \bo{ 5 } \p{ \omega + 1 } = \p{ \omega \bo{ 5 } \omega } \bo{ 4 } \omega = \varepsilon_{ \zeta_0 + 1 } \)
+* \( \omega \bo{ 5 } \p{ \omega + 2 } = \omega \bo{ 4 } \p{ \omega \bo{ 5 } \p{ \omega + 1 } } = \varepsilon_{ \varepsilon_{ \zeta_0 + 1 } } \)
+* \( \omega \bo{ 5 } \p{ \omega + \omega } = \zeta_1 \)
+* \( \omega \bo{ 6 } \omega = \varphi_3 \p{ 0 } \)
+* \( \omega \bo{ \omega } \omega = \varphi_\omega \p{ 0 } \)
+* \( \omega \bo{ \omega } \p{ \omega + 1 } = \sup_{ n < \omega } \p{ \omega \bo{ n } \p{ \omega + 1 } } = \varphi_\omega \p{ 0 } \)
+* \( \p{ \omega \bo{ \omega } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ 1 } \)
+* \( \p{ \p{ \omega \bo{ \omega } \omega } \bo{ \omega } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ 2 } \)
+* \( \omega \bo{ \omega + 1 } \omega = \varphi_\omega \p{ \omega } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + 1 } = \p{ \omega \bo{ \omega + 1 } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ \omega + 1 } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + 2 } = \p{ \p{ \omega \bo{ \omega + 1 } \omega } \bo{ \omega } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ \omega + 2 } \)
+
+またもや \( \omega \bo{ \omega } \omega \) と \( \omega \bo{ \omega } \p{ \omega + 1 } \) の値が等しくなってしまうという現象が起こった。 \( \omega \bo{ 2 } \omega \) と \( \omega \bo{ 2 } \p{ \omega + 1 } \) が等しくなった時は、そこで増加が止まったわけだから、これはだいぶ悪いサインである。
+
+しかし、今回は \( \omega \bo{ \omega } \p{ \omega \bo{ \omega } \omega } \) で再び大きくなりはする。だが、途中で増加が止まるというのは悪いサインなので、これは改善したい。
+
+この現象が起こるのは何故だろうか？　それは \( \textrm{\( b \) is successor} \wedge \textrm{\( n \) is limit} \) の時の定義がよくないからである。たとえるなら、 \( \varphi_\omega \p{ 1 } \) の定義を \( \sup_{ n < \omega } \varphi_n \p{ \varphi_\omega \p{ 0 } + 1 } \) ではなく \( \sup_{ n < \omega } \varphi_n \p{ 1 } \) としてしまっているような、そんな感じである。ならば、その解決策も、ヴェブレン表記を参考にすれば良い。
+
+\( \omega \bo{ \omega } \p{ \omega + 1 } \) の値は、有限の時と同じように \( \omega \bo{ \omega } \p{ \omega } \) に \( \omega \bo{ n } \_ \) を適用する形になるはずだが、 \( n \) の部分をハイパー演算子と同じように 1 つ小さい値にすることが出来ないため、それを断念したという形である。しかし、ヴェブレン表記を参考にするともう一つの道が見えてくる。 \( \sup_{ n' < n } \mathrm{max} \p{ a \bo{ n' } \p{ a \bo{ n } \mathrm{p} \p{ b } }, \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ n' } a } \) とすれば良いのだ。これも形式を同じにするために \( \mathrm{max} \p{ \sup_{ n' < n } \p{ a \bo{ n' } \p{ a \bo{ n } \mathrm{p} \p{ b } } }, \sup_{ n' < n } \p{ \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ n' } a } } \) としよう。
+
+これを纏めると次のようになる。
+
+<nowiki>\[
+  \begin{align}
+    a \bo{ 0 } 0 & = a + 1 \\
+    a \bo{ 1 } 0 & = a \\
+    a \bo{ 2 } 0 & = 0 \\
+    a \bo{ n } 0 & = 1 & & \p{ 3 \leq n } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a + 1, b + 1 } & & \p{ \textrm{\( b \) is successor} } \\
+    a \bo{ n } b & = \mathrm{max} \p{ a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } }, \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ \mathrm{p} \p{ n } } a } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is successor} } \\
+    a \bo{ n } b & = \mathrm{max} \p{ \sup_{ n' < n } \p{ a \bo{ n' } \p{ a \bo{ n } \mathrm{p} \p{ b } } }, \sup_{ n' < n } \p{ \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ n' } a } } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is limit} } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a + 1, b + 1 } & & \p{ \textrm{\( b \) is limit} } \\
+    a \bo{ n } b & = \sup_{ b' < b } \p{ a \bo{ n } b' } & & \p{ \textrm{\( b \) is limit} \wedge 1 \leq n } \\
+  \end{align}
+\]</nowiki>
+
+この演算子の値は次のようになる。
+
+* \( \omega \bo{ \omega } 0 = 1 \)
+* \( \omega \bo{ \omega + 1 } 0 = 1 \)
+* \( \omega \bo{ \omega } 1 = \sup_{ n' < n } \p{ \omega \bo{ n' } \p{ \omega \bo{ \omega } 0 } } = \sup_{ n' < n } \p{ \omega \bo{ n' } 1 } = \varphi_\omega \p{ 0 } \)
+* \( \omega \bo{ \omega } 2 = \sup_{ n' < n } \p{ \p{ \omega \bo{ \omega } 1 } \bo{ n' } \omega } = \varphi_\omega \p{ 1 } \)
+* \( \omega \bo{ \omega } 3 = \sup_{ n' < n } \p{ \p{ \omega \bo{ \omega } 2 } \bo{ n' } \omega } = \varphi_\omega \p{ 2 } \)
+* \( \omega \bo{ \omega } \omega = \varphi_\omega \p{ \omega } \)
+* \( \omega \bo{ \omega } \p{ \omega + 1 } = \sup_{ n' < n } \p{ \p{ \omega \bo{ \omega } \omega } \bo{ n' } \omega } = \varphi_\omega \p{ \omega + 1 } \)
+* \( \omega \bo{ \omega } \p{ \omega + \omega } = \varphi_\omega \p{ \omega + \omega } \)
+* \( \p{ \omega \bo{ \omega } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ \omega + \omega } \)
+* \( \omega \bo{ \omega } \p{ \omega \bo{ \omega } 1 } = \varphi_\omega \p{ \varphi_\omega \p{ 0 } } \)
+* \( \omega \bo{ \omega + 1 } 1 = \omega \bo{ \omega } \p{ \omega \bo{ \omega + 1 } 0 } = \varphi_\omega \p{ \varphi_\omega \p{ 0 } } \)
+* \( \omega \bo{ \omega } \p{ \omega \bo{ \omega } \omega } = \varphi_\omega \p{ \varphi_\omega \p{ \omega } } \)
+* \( \omega \bo{ \omega + 1 } 2 = \omega \bo{ \omega } \p{ \omega \bo{ \omega + 1 } 1 } = \varphi_\omega \p{ \varphi_\omega \p{ \varphi_\omega \p{ 0 } } } \)
+* \( \omega \bo{ \omega + 1 } \omega = \varphi_{ \omega + 1 } \p{ 0 } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + 1 } = \varphi_\omega \p{ \varphi_{ \omega + 1 } \p{ 0 } + 1 } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + 2 } = \varphi_\omega \p{ \varphi_\omega \p{ \varphi_{ \omega + 1 } \p{ 0 } + 1 } } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + \omega } = \varphi_{ \omega + 1 } \p{ 1 } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega \bo{ \omega + 1 } \omega } = \varphi_{ \omega + 1 } \p{ \varphi_{ \omega + 1 } \p{ 0 } } \)
+* \( \omega \bo{ \omega + 2 } \omega = \varphi_{ \omega + 2 } \p{ 0 } \)
+* \( \omega \bo{ \omega + \omega } 1 = \varphi_{ \omega + \omega } \p{ 0 } \)
+* \( \omega \bo{ \omega + \omega } \omega = \varphi_{ \omega + \omega } \p{ \omega } \)
+* \( \omega \bo{ \omega + \omega } \p{ \omega \bo{ \omega + \omega } 1 } = \varphi_{ \omega + \omega } \p{ \varphi_{ \omega + \omega } \p{ 0 } } \)
+* \( \omega \bo{ \omega + \omega + 1 } \omega = \varphi_{ \omega + \omega + 1 } \p{ 0 } \)
+* \( \omega \bo{ \omega \bo{ \omega } \omega } \omega = \varphi_{ \varphi_\omega \p{ \omega } } \p{ \omega } \)
+* \( \omega \bo{ \omega \bo{ \omega \bo{ \omega } \omega } \omega } \omega = \varphi_{ \varphi_{ \varphi_\omega \p{ \omega } } \p{ \omega } } \p{ \omega } \)
+
+表記の限界は \( \Gamma_0 \) となる。
+
+== 今後の展望 ==
+
+この記事では、ハイパー演算子を順序数に拡張した。その結果として、超限ハイパー演算子はヴェブレン階層と大まかに対応することが判明した。今後の方向性として、超限ハイパー演算子の階数を多変数化して、多変数ヴェブレン関数と対応させることを、私は構想している。
+
+ハイパー演算子は、現在の巨大数研究において主流な分野と比べると、あまりにもその大きさが小さい表記であるが、まだまだ面白い研究の余地はあると、私は信じている。
+
+== 関連記事 ==
+
+# [[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]
+# [[ユーザーブログ:Hexirp/超限ハイパー演算子の解析|超限ハイパー演算子の解析]]
+# [[ユーザーブログ:Hexirp/数符「トランスウィークハイパー」|数符「トランスウィークハイパー」]]
+
+[[カテゴリ:ブログ記事]]
