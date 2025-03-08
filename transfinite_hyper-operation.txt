@@ -380,15 +380,37 @@
 
 通常の場合においては下付きハイパー演算子よりも上付きハイパー演算子の方が大きいのに、この場合においては上付きハイパー演算子よりも下付きハイパー演算子の方が大きいことに着目しよう。
 
-ここで、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) と \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) のうちで大きい方を選べばよいのではないかと、私は思い付いたのである。
+ここで、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) と \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) の大きい方を選べばよいのではないかと、私は思い付いたのである。
 
-== 繰り返し適用の上限について ==
+== 閉包集合について ==
 
-\( \omega \hyop{ 4 } \omega \) へ \( x \mapsto \omega \hyop{ 3 } x \) と \( x \mapsto x \hyop{ 3 } \omega \) の両方を適用して、それらの大きい方を選ぶという手法は、順序数崩壊関数の定義における閉包集合を私に思い浮かばせた。
+\( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) と \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) は、 \( \omega \hyop{ 4 } \omega \) と \( x \mapsto \omega \hyop{ 3 } x \) と \( x \mapsto x \hyop{ 3 } \omega \) の組み合わせである。
 
-ただし、順序数崩壊関数の定義における閉包集合は、特定の種類の操作を幾らでも繰り返しても外側へ出ることがないという意味で、特定の種類の操作について閉じている集合であるが、この場合においては、その閉包集合を作るための操作を途中で止めるようなイメージである。
+このように、様々な操作を組み合わせて、それにより作られる順序数の上限を取る手法として、閉包集合を用いた順序数崩壊関数の定義がある。
 
-これを具体的に実装すると、 \( a \hyop{ n } x \) と \( S ( a , n , x ) \) を相互再帰で次のように定義することになる。
+この手法を用いて、超限ハイパー演算子を定義しようとしたのだが、閉包集合は極限が介在する操作であるため、 \( \omega \hyop{ 4 } \omega \) や \( \omega \hyop{ 4 } ( \omega + \omega ) \) などのような極限の場合だけしかスムーズに定義できないという問題があり、この路線を断念することになった。
+
+実のところ、これは回り道であったのである。
+
+== 大きい方を選ぶことについて ==
+
+\( \omega \hyop{ 3 } ( \omega + 1 ) \) の値として、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) と \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) の大きい方を選ぶのが、私のアイデアである。
+
+これを、そのまま用いて、前述の定義を修正しよう。
+
+<nowiki>\[
+  a \hyop{ n } x
+    =
+      \begin{cases}
+        \max ( a + 1 , x + 1 ) & ( \cof ( n ) = 0 ) \\
+        a & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n = 1 ) \\
+        0 & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n = 2 ) \\
+        1 & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n \geq 3 ) \\
+        \max ( ( a \hyop{ n } ( x - 1 ) ) \hyop{ n - 1 } a , a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) ) & ( \cof ( n ) = 1 \wedge \cof ( x ) = 1 ) \\
+        \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } & ( \cof ( n ) = 1 \wedge \cof ( x ) \geq \omega ) \\
+        \tsup _ { p < n } \mathord{ ( a \hyop{ p } x ) } & ( \cof ( n ) = \omega ) \\
+      \end{cases}
+\]</nowiki>
 
 == 順序数への拡張 ==
 
