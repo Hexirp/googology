@@ -1,0 +1,240 @@
+超限ハイパー演算子は、多くの人々が考察してきた。この記事において、私も考察をする。ただ大きさを求めて作るだけなら他の表記を使えばよいだけなので、ハイパー演算子の形を保ったまま、最も美しい定義を追い求める。
+
+最終的に、有限の範囲では通常のハイパー演算子と一致し、テトレーションを超えても問題なく、 \( ω \) 階を超えても問題なく、その限界は \( \Gamma_0 \) であり、しかしもその定義が一貫性を持つ表記を作り上げる。
+
+<p style="display: none;"><nowiki>\(
+  \newcommand{\p}[1]{ \mathord{ \left( #1 \right) } }
+  \newcommand{\b}[1]{ \mathord{ \left[ #1 \right] } }
+  \newcommand{\c}[1]{ \mathord{ \left\{ #1 \right\} } }
+  \newcommand{\a}[1]{ \mathord{ \left\langle #1 \right\rangle } }
+  \newcommand{\bo}[1]{ \mathbin{ \left[ #1 \right] } }
+\)</nowiki></p>
+
+== 序論 ==
+
+ハイパー演算子は、加算が乗算になって乗算が累乗になってという拡張を、それ以上へと延長するものである。それは \( a \bo{ n } b \) という表記である。 \( a \) を基数と呼ぶ。 \( b \) を指数と呼ぶ。 \( n \) を階数と呼ぶ。
+
+超限ハイパー演算子は、ハイパー演算子を順序数へ拡張するという単純な発想の関数である。そのため、多くの巨大数研究者が考案し作成しようとしている。しかしながら、それらの表記の中で、ハイパー演算子の形を保ったまま \( \varepsilon_0 \) を超えることが出来た表記はない。
+
+なぜならば、素直に拡張した場合には、 \( \omega \bo{ 4 } \omega = \varepsilon_0 \) かつ \( \omega \bo{ 4 } \p{ \omega + 1 } = \omega \bo{ 3 } \p{ \omega \bo{ 4 } \omega } = \omega^{ \omega \bo{ 4 } \omega } = \omega^{ \varepsilon_0 } = \varepsilon_0 \) であり、それよりも大きい値を得ようとしても \( \varepsilon_0 \) で止まるという問題があるからである。
+
+これは、超限ハイパー演算子のポテンシャルを発揮できていないという点で、大問題である。その本来のポテンシャルは、緩増加関数を使うと明らかになる。緩増加関数は、 \( g_\alpha \p{ n } \) と書いた時に、 \( \alpha \) の中の \( \omega \) を \( n \) に置き換えた値と大体一致するという経験則がある。そこに \( g_{ \varphi_\omega \p{ 0 } } \p{ n } \approx n \bo{ n } n \) かつ \( g_{ \varphi_\alpha \p{ 0 } } \p{ n } \approx n \bo{ g_\alpha \p{ n } } n \) であるという事実も合わせると、 \( \omega \bo{ \omega } \omega = \varphi_\omega \p{ 0 } \) かつ \( \omega \bo{ \omega \bo{ \cdots \omega \bo{ \omega } \omega \cdots } \omega } \omega = \Gamma_0 \) であるという予想を立てることが出来るのだ。
+
+この問題を回避するために、今までの巨大数研究者は、ハイパー演算子の形を崩した表記を作ってきた。たとえば、 "[[:en:User_blog:EricABQ/Formal_definition_of_ordinal_hyper-operators_using_the_climbing_method|Formal definition of ordinal hyper-operators using the climbing method]]" では Jonathan Bowers が BEAF のために開発した登攀法 (climbing method) をハイパー演算子へと転用している。たとえば、『[[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]』では下付きハイパー演算子を使用している。しかしながら、ハイパー演算子の形を保ったままで拡張する表記は、未だ存在しない。
+
+この記事では、有限の場合においてハイパー演算子と完全に一致し、 \( 1 \) 段と \( 2 \) 段と \( 3 \) 段の場合において、それぞれ順序数の加算と乗算と累乗へ完全に一致し、 \( 4 \) 段において \( \varepsilon_0 \) を越え、 \( \omega \) 段において \( \varphi_\omega \p{ 0 } \) と一致し、段数の不動点において \( \Gamma_0 \) と一致し、それでいてハイパー演算子の形を保つ拡張を作成する。その表記は結果的にヴェブレン階層と対応することを示す。最後に、今後の展望を記述する。
+
+== ハイパー演算子の定義 ==
+
+[[ハイパー演算子]]は巨大数の基本ともいえる表記である。その定義は、最も素朴に書くと次のようになるだろうか。
+
+<nowiki>\[
+  \begin{align}
+    a \bo{ 1 } b & = a + b \\
+    a \bo{ 2 } b & = a \times b \\
+    a \bo{ 3 } b & = a^b \\
+    a \bo{ n } b & = \underbrace{ a \bo{ n' } \p{ a \bo{ n' } \cdots \p{ a \bo{ n' } a } } }_{ \textrm{\( b \) copies of \( a \)} } & & \p{ 4 \leq n \wedge n' + 1 = n } \\
+  \end{align}
+\]</nowiki>
+
+ここで、点々を使った省略は、やや曖昧である。そのため、それを取り除いてみよう。
+
+<nowiki>\[
+  \begin{align}
+    a \bo{ 1 } b & = a + b \\
+    a \bo{ 2 } b & = a \times b \\
+    a \bo{ 3 } b & = a^b \\
+    a \bo{ n } 1 & = a & & \p{ 4 \leq n } \\
+    a \bo{ n } b & = a \bo{ n' } \p{ a \bo{ n } b' } & & \p{ 4 \leq n \wedge 4 \leq b \wedge n' + 1 = n \wedge b' + 1 = b } \\
+  \end{align}
+\]</nowiki>
+
+この表記の定義域は \( 1 \leq a \wedge 1 \leq b \wedge 1 \leq n \) であることに注意して欲しい。
+
+== ゼロへの拡張 ==
+
+なぜ \( 0 \) の場合を記述しなかったのか？ それは、 \( 0 \) の場合の定義を作成するために、多少の議論が必要であるからである。
+
+最初に、 \( a = 0 \) の場合を考える。これは、 \( a \) に対しての場合分けを全く行っていないため、そのまま定義域を広げるだけで良い。
+
+二番目に、 \( b = 0 \) の場合を考える。
+
+\( n = 1 \) の場合は、 \( a \bo{ 1 } b = a + b \) に \( b = 0 \) を仮想的に代入して、 \( a \bo{ 1 } 0 = a + 0 = a \) としよう。
+
+\( n = 2 \) の場合は、 \( a \bo{ 2 } b = a \times b \) に \( b = 0 \) を仮想的に代入して、 \( a \bo{ 2 } 0 = a \times 0 = 0 \) としよう。
+
+\( n = 3 \) の場合は、 \( a \bo{ 3 } b = a^b \) に \( b = 0 \) を仮想的に代入して、 \( a \bo{ 3 } 0 = a^0 = 1 \) としよう。 \( a = 0 \) である場合のことだが、実数の累乗では \( 0^0 \) は未定義だが、自然数の累乗では \( 0^0 \) は \( 1 \) であるため、問題はない。
+
+問題は \( 4 \leq n \) である場合である。 \( a \bo{ n + 1 } \p{ b + 1 } = a \bo{ n } \p{ a \bo{ n + 1 } b } \) に \( b = 0 \) を仮想的に代入して、 \( a \bo{ n + 1 } \p{ 0 + 1 } = a \bo{ n } \p{ a \bo{ n + 1 } 0 } \) とする。これと \( a \bo{ n } 1 = a \) を組み合わせると、 \( a \bo{ n } 1 = a = a \bo{ n + 1 } 1 = a \bo{ n } \p{ a \bo{ n + 1 } 0 } \) となる。すなわち、 \( a \bo{ n } 1 = a \bo{ n } \p{ a \bo{ n + 1 } 0 } \) である。ハイパー演算子の単調増加性とも合わせると、 \( 1 = a \bo{ n + 1 } 0 \) となる。これにしよう。
+
+三番目に、 \( n = 0 \) の場合を考えよう。 \( a \bo{ n + 1 } \p{ b + 1 } = a \bo{ n } \p{ a \bo{ n + 1 } b } \) に \( n = 0 \) を仮想的に代入して、 \( a \bo{ 0 + 1 } \p{ b + 1 } = a \bo{ 0 } \p{ a \bo{ 0 + 1 } b } \) となる。このため、 \( a + \p{ b + 1 } = a \bo{ 0 } \p{ a + b } \) ということになる。その最も単純な解は \( a \bo{ 0 } b = b + 1 \) とすることであろう。しかし、これには対称でないという欠点がある。そのため、左右対称とするために \( a \bo{ 0 } b = \mathrm{max} \p{ a, b } + 1 \) とする。
+
+同時に \( a \bo{ 1 } 0 \) の値を定めなければならない。これは \( a \) と \( 0 \) の二択であるが、 \( a \bo{ 0 } b = b + 1 \) である時の値に合わせて \( a \) とする。
+
+これらを纏めると、次のようになる。
+
+<nowiki>\[
+  \begin{align}
+    a \bo{ 0 } 0 & = a + 1 \\
+    a \bo{ 1 } 0 & = a \\
+    a \bo{ 2 } 0 & = 0 \\
+    a \bo{ n } 0 & = 1 & & \p{ 3 \leq n } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a, b } + 1 \\
+    a \bo{ n } b & = a \bo{ n' } \p{ a \bo{ n } b' } & & \p{ 1 \leq n \wedge 1 \leq b \wedge n' + 1 = n \wedge b' + 1 = b } \\
+  \end{align}
+\]</nowiki>
+
+== 順序数への拡張 ==
+
+さて、このハイパー演算子は簡単に順序数へ拡張することが出来る。超限帰納法を使えば良いのだ。
+
+\( \mathrm{p} \p{ \alpha } = \min \c{ \beta \in \mathrm{On} : \forall \p{ \gamma \in \mathrm{On} } \ldotp \gamma < \alpha \to \gamma \leq \beta } \) を補助関数として定義する。
+
+<nowiki>\[
+  \begin{align}
+    a \bo{ 0 } 0 & = a + 1 \\
+    a \bo{ 1 } 0 & = a \\
+    a \bo{ 2 } 0 & = 0 \\
+    a \bo{ n } 0 & = 1 & & \p{ 3 \leq n } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a, b } + 1 & & \p{ \textrm{\( b \) is successor} } \\
+    a \bo{ n } b & = a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is successor} } \\
+    a \bo{ n } b & = \sup_{ n' < n } \p{ a \bo{ n' } b } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is limit} } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a , b } + 1 & & \p{ \textrm{\( b \) is limit} } \\
+    a \bo{ n } b & = \sup_{ b' < b } \p{ a \bo{ n } b' } & & \p{ \textrm{\( b \) is limit} } \\
+  \end{align}
+\]</nowiki>
+
+この演算子の値は次のようになる。
+
+* \( \omega \bo{ 0 } \omega = \omega + 1 \)
+* \( \omega \bo{ 0 } \p{ \omega + 1 } = \omega + 2 \)
+* \( \omega \bo{ 1 } \omega = \omega + \omega \)
+* \( \omega \bo{ 1 } \p{ \omega + 1 } = \omega \bo{ 0 } \p{ \omega \bo{ 1 } \omega } = \omega + \omega + 1 \)
+* \( \omega \bo{ 2 } \omega = \omega^2 \)
+* \( \omega \bo{ 2 } \p{ \omega + 1 } = \omega \bo{ 1 } \p{ \omega \bo{ 2 } \omega } = \omega \bo{ 1 } \omega^2 = \omega^2 \)
+* \( \omega \bo{ 3 } \omega = \omega^2 \)
+* \( \omega \bo{ 3 } \p{ \omega + 1 } = \omega \bo{ 2 } \p{ \omega \bo{ 3 } \omega } = \omega \bo{ 2 } \omega^2 = \omega^2 \)
+
+\( \omega^2 \) を超えて大きくならない。これは大問題である。一つ目に、ハイパー演算子の本来の意味によると、 \( a \bo{ 2 } b \) は \( a \times b \) は同値であるべきなのだが、これが成り立たない。二つ目に、 \( \omega^2 \) が限界というのはあまりにも小さすぎる。三つ目に、 \( \p{ \omega \bo{ 2 } \omega } \bo{ 1 } \omega \) とすれば \( \omega^2 + \omega \) になるため、まだ大きくなれる余地があるのに、それを発揮できていない。
+
+どうやって、この問題を回避すればよいのだろうか？　\( \omega \bo{ 2 } \p{ \omega + 1 } \) の結果を \( \omega \bo{ 1 } \p{ \omega \bo{ 2 } \omega } \) から \( \p{ \omega \bo{ 2 } \omega } \bo{ 1 } \omega \) にすれば私が望む結果となることに注目したい。この後者は下付きハイパー演算子の定義である。
+
+上記の定義の再帰を下付きハイパー演算子のものにすればよいのだろうか？　いや、そうすると、別の問題が出てくる。一つ目に、私が定義したいのは通常のハイパー演算子である。二つ目に、下付きハイパー演算子は \( 0 \) へ拡張することが出来ない。
+
+ならば、別の方法が必要である。ここで \( \omega \bo{ 1 } \p{ \omega \bo{ 2 } \omega } < \p{ \omega \bo{ 2 } \omega } \bo{ 1 } \omega \) になっていることに注目しよう。すると、 \( a \bo{ n + 1 } \p{ b + 1 } \) の定義として、普通は \( a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } } \) とし、それよりも \( \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ \mathrm{p} \p{ n } } a \) の方が大きい時に、それを選ぶというものを考えることが出来る。
+
+これを単純に表すと、 \( \max \p{ a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } }, \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ \mathrm{p} \p{ n } } a } \) である。さて、この定義には問題はないのだろうか。なんと問題ないのである。有限の範囲において値が変わることはない。
+
+さて、この定義は意図せずに \( a \bo{ 0 } b = \max \p{ a, b } + 1 \) と形式が似ている。更に形式を似せた方が美しくなるので、 \( \max \p{ a + 1, b + 1 } \) という風にそろえることにする。
+
+これを纏めると次のようになる。
+
+<nowiki>\[
+  \begin{align}
+    a \bo{ 0 } 0 & = a + 1 \\
+    a \bo{ 1 } 0 & = a \\
+    a \bo{ 2 } 0 & = 0 \\
+    a \bo{ n } 0 & = 1 & & \p{ 3 \leq n } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a + 1, b + 1 } & & \p{ \textrm{\( b \) is successor} } \\
+    a \bo{ n } b & = \mathrm{max} \p{ a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } }, \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ \mathrm{p} \p{ n } } a } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is successor} } \\
+    a \bo{ n } b & = \sup_{ n' < n } \p{ a \bo{ n' } b } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is limit} } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a + 1, b + 1 } & & \p{ \textrm{\( b \) is limit} } \\
+    a \bo{ n } b & = \sup_{ b' < b } \p{ a \bo{ n } b' } & & \p{ \textrm{\( b \) is limit} } \\
+  \end{align}
+\]</nowiki>
+
+この演算子の値は次のようになる。
+
+* \( \omega \bo{ 2 } \p{ \omega + 1 } = \p{ \omega \bo{ 2 } \omega } \bo{ 1 } \omega = \omega^2 \bo{ 1 } \omega = \omega^2 + \omega \)
+* \( \omega \bo{ 2 } \p{ \omega + \omega } = \omega^2 + \omega^2 \)
+* \( \omega \bo{ 2 } \p{ \omega \bo{ 2 } \omega } = \omega^3 \)
+* \( \omega \bo{ 3 } \omega = \omega^\omega \)
+* \( \omega \bo{ 3 } \p{ \omega + 1 } = \p{ \omega \bo{ 3 } \omega } \bo{ 2 } \omega = \omega^{ \omega + 1 } \)
+* \( \omega \bo{ 3 } \p{ \omega \bo{ 3 } \omega } = \omega^{ \omega^\omega } \)
+* \( \omega \bo{ 4 } \omega = \varepsilon_0 \)
+* \( \omega \bo{ 4 } \p{ \omega + 1 } = \p{ \omega \bo{ 4 } \omega } \bo{ 3 } \omega = \omega^{ \omega^{ \varepsilon_0 + 1 } } \)
+* \( \omega \bo{ 4 } \p{ \omega + 2 } = \omega \bo{ 3 } \p{ \omega \bo{ 4 } \p{ \omega + 1 } } = \omega^{ \omega^{ \omega^{ \varepsilon_0 + 1 } } } \)
+* \( \omega \bo{ 4 } \p{ \omega + \omega } = \varepsilon_1 \)
+* \( \omega \bo{ 4 } \omega^2 = \varepsilon_\omega \)
+* \( \omega \bo{ 4 } \omega^\omega = \varepsilon_{ \omega^\omega } \)
+* \( \omega \bo{ 4 } \p{ \omega \bo{ 4 } \omega } = \varepsilon_{ \varepsilon_0 } \)
+* \( \omega \bo{ 5 } \omega = \zeta_0 \)
+* \( \omega \bo{ 5 } \p{ \omega + 1 } = \p{ \omega \bo{ 5 } \omega } \bo{ 4 } \omega = \varepsilon_{ \zeta_0 + 1 } \)
+* \( \omega \bo{ 5 } \p{ \omega + 2 } = \omega \bo{ 4 } \p{ \omega \bo{ 5 } \p{ \omega + 1 } } = \varepsilon_{ \varepsilon_{ \zeta_0 + 1 } } \)
+* \( \omega \bo{ 5 } \p{ \omega + \omega } = \zeta_1 \)
+* \( \omega \bo{ 6 } \omega = \varphi_3 \p{ 0 } \)
+* \( \omega \bo{ \omega } \omega = \varphi_\omega \p{ 0 } \)
+* \( \omega \bo{ \omega } \p{ \omega + 1 } = \sup_{ n < \omega } \p{ \omega \bo{ n } \p{ \omega + 1 } } = \varphi_\omega \p{ 0 } \)
+* \( \p{ \omega \bo{ \omega } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ 1 } \)
+* \( \p{ \p{ \omega \bo{ \omega } \omega } \bo{ \omega } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ 2 } \)
+* \( \omega \bo{ \omega + 1 } \omega = \varphi_\omega \p{ \omega } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + 1 } = \p{ \omega \bo{ \omega + 1 } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ \omega + 1 } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + 2 } = \p{ \p{ \omega \bo{ \omega + 1 } \omega } \bo{ \omega } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ \omega + 2 } \)
+
+またもや \( \omega \bo{ \omega } \omega \) と \( \omega \bo{ \omega } \p{ \omega + 1 } \) の値が等しくなってしまうという現象が起こった。 \( \omega \bo{ 2 } \omega \) と \( \omega \bo{ 2 } \p{ \omega + 1 } \) が等しくなった時は、そこで増加が止まったわけだから、これはだいぶ悪いサインである。
+
+しかし、今回は \( \omega \bo{ \omega } \p{ \omega \bo{ \omega } \omega } \) で再び大きくなりはする。だが、途中で増加が止まるというのは悪いサインなので、これは改善したい。
+
+この現象が起こるのは何故だろうか？　それは \( \textrm{\( b \) is successor} \wedge \textrm{\( n \) is limit} \) の時の定義がよくないからである。たとえるなら、 \( \varphi_\omega \p{ 1 } \) の定義を \( \sup_{ n < \omega } \varphi_n \p{ \varphi_\omega \p{ 0 } + 1 } \) ではなく \( \sup_{ n < \omega } \varphi_n \p{ 1 } \) としてしまっているような、そんな感じである。ならば、その解決策も、ヴェブレン表記を参考にすればよい。
+
+\( \omega \bo{ \omega } \p{ \omega + 1 } \) の値は、有限の時と同じように \( \omega \bo{ \omega } \p{ \omega } \) に \( \omega \bo{ n } \_ \) を適用する形になるはずだが、 \( n \) の部分をハイパー演算子と同じように 1 つ小さい値にすることが出来ないため、それを断念したという形である。しかし、ヴェブレン表記を参考にするともう一つの道が見えてくる。 \( \sup_{ n' < n } \mathrm{max} \p{ a \bo{ n' } \p{ a \bo{ n } \mathrm{p} \p{ b } }, \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ n' } a } \) とすれば良いのだ。これも形式を同じにするために \( \mathrm{max} \p{ \sup_{ n' < n } \p{ a \bo{ n' } \p{ a \bo{ n } \mathrm{p} \p{ b } } }, \sup_{ n' < n } \p{ \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ n' } a } } \) としよう。
+
+これを纏めると次のようになる。
+
+<nowiki>\[
+  \begin{align}
+    a \bo{ 0 } 0 & = a + 1 \\
+    a \bo{ 1 } 0 & = a \\
+    a \bo{ 2 } 0 & = 0 \\
+    a \bo{ n } 0 & = 1 & & \p{ 3 \leq n } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a + 1, b + 1 } & & \p{ \textrm{\( b \) is successor} } \\
+    a \bo{ n } b & = \mathrm{max} \p{ a \bo{ \mathrm{p} \p{ n } } \p{ a \bo{ n } \mathrm{p} \p{ b } }, \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ \mathrm{p} \p{ n } } a } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is successor} } \\
+    a \bo{ n } b & = \mathrm{max} \p{ \sup_{ n' < n } \p{ a \bo{ n' } \p{ a \bo{ n } \mathrm{p} \p{ b } } }, \sup_{ n' < n } \p{ \p{ a \bo{ n } \mathrm{p} \p{ b } } \bo{ n' } a } } & & \p{ \textrm{\( b \) is successor} \wedge \textrm{\( n \) is limit} } \\
+    a \bo{ 0 } b & = \mathrm{max} \p{ a + 1, b + 1 } & & \p{ \textrm{\( b \) is limit} } \\
+    a \bo{ n } b & = \sup_{ b' < b } \p{ a \bo{ n } b' } & & \p{ \textrm{\( b \) is limit} \wedge 1 \leq n } \\
+  \end{align}
+\]</nowiki>
+
+この演算子の値は次のようになる。
+
+* \( \omega \bo{ \omega } 0 = 1 \)
+* \( \omega \bo{ \omega + 1 } 0 = 1 \)
+* \( \omega \bo{ \omega } 1 = \sup_{ n' < n } \p{ \omega \bo{ n' } \p{ \omega \bo{ \omega } 0 } } = \sup_{ n' < n } \p{ \omega \bo{ n' } 1 } = \varphi_\omega \p{ 0 } \)
+* \( \omega \bo{ \omega } 2 = \sup_{ n' < n } \p{ \p{ \omega \bo{ \omega } 1 } \bo{ n' } \omega } = \varphi_\omega \p{ 1 } \)
+* \( \omega \bo{ \omega } 3 = \sup_{ n' < n } \p{ \p{ \omega \bo{ \omega } 2 } \bo{ n' } \omega } = \varphi_\omega \p{ 2 } \)
+* \( \omega \bo{ \omega } \omega = \varphi_\omega \p{ \omega } \)
+* \( \omega \bo{ \omega } \p{ \omega + 1 } = \sup_{ n' < n } \p{ \p{ \omega \bo{ \omega } \omega } \bo{ n' } \omega } = \varphi_\omega \p{ \omega + 1 } \)
+* \( \omega \bo{ \omega } \p{ \omega + \omega } = \varphi_\omega \p{ \omega + \omega } \)
+* \( \p{ \omega \bo{ \omega } \omega } \bo{ \omega } \omega = \varphi_\omega \p{ \omega + \omega } \)
+* \( \omega \bo{ \omega } \p{ \omega \bo{ \omega } 1 } = \varphi_\omega \p{ \varphi_\omega \p{ 0 } } \)
+* \( \omega \bo{ \omega + 1 } 1 = \omega \bo{ \omega } \p{ \omega \bo{ \omega + 1 } 0 } = \varphi_\omega \p{ \varphi_\omega \p{ 0 } } \)
+* \( \omega \bo{ \omega } \p{ \omega \bo{ \omega } \omega } = \varphi_\omega \p{ \varphi_\omega \p{ \omega } } \)
+* \( \omega \bo{ \omega + 1 } 2 = \omega \bo{ \omega } \p{ \omega \bo{ \omega + 1 } 1 } = \varphi_\omega \p{ \varphi_\omega \p{ \varphi_\omega \p{ 0 } } } \)
+* \( \omega \bo{ \omega + 1 } \omega = \varphi_{ \omega + 1 } \p{ 0 } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + 1 } = \varphi_\omega \p{ \varphi_{ \omega + 1 } \p{ 0 } + 1 } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + 2 } = \varphi_\omega \p{ \varphi_\omega \p{ \varphi_{ \omega + 1 } \p{ 0 } + 1 } } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega + \omega } = \varphi_{ \omega + 1 } \p{ 1 } \)
+* \( \omega \bo{ \omega + 1 } \p{ \omega \bo{ \omega + 1 } \omega } = \varphi_{ \omega + 1 } \p{ \varphi_{ \omega + 1 } \p{ 0 } } \)
+* \( \omega \bo{ \omega + 2 } \omega = \varphi_{ \omega + 2 } \p{ 0 } \)
+* \( \omega \bo{ \omega + \omega } 1 = \varphi_{ \omega + \omega } \p{ 0 } \)
+* \( \omega \bo{ \omega + \omega } \omega = \varphi_{ \omega + \omega } \p{ \omega } \)
+* \( \omega \bo{ \omega + \omega } \p{ \omega \bo{ \omega + \omega } 1 } = \varphi_{ \omega + \omega } \p{ \varphi_{ \omega + \omega } \p{ 0 } } \)
+* \( \omega \bo{ \omega + \omega + 1 } \omega = \varphi_{ \omega + \omega + 1 } \p{ 0 } \)
+* \( \omega \bo{ \omega \bo{ \omega } \omega } \omega = \varphi_{ \varphi_\omega \p{ \omega } } \p{ \omega } \)
+* \( \omega \bo{ \omega \bo{ \omega \bo{ \omega } \omega } \omega } \omega = \varphi_{ \varphi_{ \varphi_\omega \p{ \omega } } \p{ \omega } } \p{ \omega } \)
+
+表記の限界は \( \Gamma_0 \) となる。
+
+== 今後の展望 ==
+
+この記事では、ハイパー演算子を順序数に拡張した。その結果として、超限ハイパー演算子はヴェブレン階層と大まかに対応することが判明した。今後の方向性として、超限ハイパー演算子の階数を多変数化して、多変数ヴェブレン関数と対応させることを、私は構想している。
+
+ハイパー演算子は、現在の巨大数研究において主流な分野と比べると、あまりにもその大きさが小さい表記であるが、まだまだ面白い研究の余地はあると、私は信じている。
+
+== 関連記事 ==
+
+# [[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]
+# [[ユーザーブログ:Hexirp/超限ハイパー演算子の解析|超限ハイパー演算子の解析]]
+# [[ユーザーブログ:Hexirp/数符「トランスウィークハイパー」|数符「トランスウィークハイパー」]]
+
+[[カテゴリ:ブログ記事]]
