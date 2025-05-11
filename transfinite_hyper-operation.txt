@@ -12,7 +12,7 @@
 
 その理由は、加算と乗算と冪乗は超限順序数へ拡張することが容易であるのに対して、テトレーションでは単純に拡張すると \( \omega \uparrow \uparrow \omega = \varepsilon _ 0 \) が成立し \( \omega \uparrow \uparrow ( \omega + 1 ) = \omega ^ { \omega \uparrow \uparrow \omega } = \omega ^ { \varepsilon _ 0 } = \varepsilon _ 0 \) となることから、 \( \xi \mapsto \omega \uparrow \uparrow \xi \) の上限が \( \varepsilon _ 0 \) となるという不都合な現象が発生するためである。
 
-これは、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点で、大問題である。無論のこと、ハイパー演算子は単調増加であるべきという点でも問題であるが、それ以外の理由もあるのである。
+これは、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点で、大問題である。無論のこと、ハイパー演算子は単調増加であるべきという点でも問題であるが、それ以外の理由もある。
 
 大多数の巨大数研究者が \( \omega \mathbin{ [ \omega ] } \omega = \varphi _ \omega ( 0 ) \) となり \( \xi \mapsto \omega \mathbin{ [ \xi ] } \omega \) の極限が \( \Gamma _ 0 \) となるのが自然なのではないかと考えており、これに届かないという点で問題なのである。
 
