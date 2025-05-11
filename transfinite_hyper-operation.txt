@@ -61,7 +61,7 @@
       \end{cases}
 \]</nowiki>
 
-最終的に、有限の範囲では通常のハイパー演算子と一致し、テトレーションを超えても問題なく、 \( ω \) 階を超えても問題なく、その限界は \( \Gamma_0 \) であり、しかしもその定義が一貫性を持つ表記を作り上げる。
+
 
 <p style="display: none;"><nowiki>\(
   \newcommand{\p}[1]{ \mathord{ \left( #1 \right) } }
@@ -70,20 +70,6 @@
   \newcommand{\a}[1]{ \mathord{ \left\langle #1 \right\rangle } }
   \newcommand{\bo}[1]{ \mathbin{ \left[ #1 \right] } }
 \)</nowiki></p>
-
-== 序論 ==
-
-ハイパー演算子は、加算が乗算になって乗算が累乗になってという拡張を、それ以上へと延長するものである。それは \( a \bo{ n } b \) という表記である。 \( a \) を基数と呼ぶ。 \( b \) を指数と呼ぶ。 \( n \) を階数と呼ぶ。
-
-超限ハイパー演算子は、ハイパー演算子を順序数へ拡張するという単純な発想の関数である。そのため、多くの巨大数研究者が考案し作成しようとしている。しかしながら、それらの表記の中で、ハイパー演算子の形を保ったまま \( \varepsilon_0 \) を超えることが出来た表記はない。
-
-なぜならば、素直に拡張した場合には、 \( \omega \bo{ 4 } \omega = \varepsilon_0 \) かつ \( \omega \bo{ 4 } \p{ \omega + 1 } = \omega \bo{ 3 } \p{ \omega \bo{ 4 } \omega } = \omega^{ \omega \bo{ 4 } \omega } = \omega^{ \varepsilon_0 } = \varepsilon_0 \) であり、それよりも大きい値を得ようとしても \( \varepsilon_0 \) で止まるという問題があるからである。
-
-これは、超限ハイパー演算子のポテンシャルを発揮できていないという点で、大問題である。その本来のポテンシャルは、緩増加関数を使うと明らかになる。緩増加関数は、 \( g_\alpha \p{ n } \) と書いた時に、 \( \alpha \) の中の \( \omega \) を \( n \) に置き換えた値と大体一致するという経験則がある。そこに \( g_{ \varphi_\omega \p{ 0 } } \p{ n } \approx n \bo{ n } n \) かつ \( g_{ \varphi_\alpha \p{ 0 } } \p{ n } \approx n \bo{ g_\alpha \p{ n } } n \) であるという事実も合わせると、 \( \omega \bo{ \omega } \omega = \varphi_\omega \p{ 0 } \) かつ \( \omega \bo{ \omega \bo{ \cdots \omega \bo{ \omega } \omega \cdots } \omega } \omega = \Gamma_0 \) であるという予想を立てることが出来るのだ。
-
-この問題を回避するために、今までの巨大数研究者は、ハイパー演算子の形を崩した表記を作ってきた。たとえば、 "[[:en:User_blog:EricABQ/Formal_definition_of_ordinal_hyper-operators_using_the_climbing_method|Formal definition of ordinal hyper-operators using the climbing method]]" では Jonathan Bowers が BEAF のために開発した登攀法 (climbing method) をハイパー演算子へと転用している。たとえば、『[[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]』では下付きハイパー演算子を使用している。しかしながら、ハイパー演算子の形を保ったままで拡張する表記は、未だ存在しない。
-
-この記事では、有限の場合においてハイパー演算子と完全に一致し、 \( 1 \) 段と \( 2 \) 段と \( 3 \) 段の場合において、それぞれ順序数の加算と乗算と累乗へ完全に一致し、 \( 4 \) 段において \( \varepsilon_0 \) を越え、 \( \omega \) 段において \( \varphi_\omega \p{ 0 } \) と一致し、段数の不動点において \( \Gamma_0 \) と一致し、それでいてハイパー演算子の形を保つ拡張を作成する。その表記は結果的にヴェブレン階層と対応することを示す。最後に、今後の展望を記述する。
 
 == ハイパー演算子の定義 ==
 
