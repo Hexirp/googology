@@ -41,7 +41,7 @@
         a + x & ( n = 1 ) \\
         a \times x & ( n = 2 ) \\
         a ^ x & ( n = 3 ) \\
-        \underbrace{ a \mathbin{ [ n - 1 ] } ( a \mathbin{ [ n - 1 ] } ( \cdots a \mathbin{ [ n - 1 ] } ( a \mathbin{ [ n - 1 ] } a ) \cdots ) ) } _ \textrm{\( b \) ko no \( a \) ga aru} & ( n \geq 4 ) \\
+        \underbrace{ a \mathbin{ [ n - 1 ] } ( \cdots a \mathbin{ [ n - 1 ] } ( a \mathbin{ [ n - 1 ] } a ) \cdots ) } _ \textrm{\( b \) ko no \( a \) ga aru} & ( n \geq 4 ) \\
       \end{cases}
 \]</nowiki>
 
