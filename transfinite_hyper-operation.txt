@@ -16,13 +16,11 @@
 
 その本来のポテンシャルであると過去の巨大数研究者が信じていたのは \( \omega \mathbin{ [ \omega ] } \omega = \varphi _ \omega ( 0 ) \) であり \( \xi \mapsto \omega \mathbin{ [ \xi ] } \omega \) の極限が \( \Gamma _ 0 \) であるという予想である。
 
-これを裏付ける状況証拠として、緩増加関数を解析した結果を例に挙げることができる。 \( g _ \alpha ( x ) \) が \( \alpha \) の中の \( \omega \) を \( x \) に置き換えた値と、概ね一致するという経験則があり、 \( g _ { \varphi _ \omega \( 0 ) } ( n ) \approx n \mathbin{ [ n ] } n \) であり \( g _ { \varphi _ \alpha ( 0 ) } ( n ) \approx n \mathbin{ [  g _ \alpha ( n ) ] } n \) である。このことから、前述の予想を立てることができるのである。
+これを裏付ける状況証拠として、緩増加関数を解析した結果を例に挙げることができる。 \( g _ \alpha ( x ) \) が \( \alpha \) の中の \( \omega \) を \( x \) に置き換えた値と、概ね一致するという経験則があり、 \( g _ { \varphi _ \omega ( 0 ) } ( n ) \approx n \mathbin{ [ n ] } n \) であり \( g _ { \varphi _ \alpha ( 0 ) } ( n ) \approx n \mathbin{ [  g _ \alpha ( n ) ] } n \) である。このことから、前述の予想を立てることができるのである。
 
 超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮するために、様々な巨大数研究者がハイパー演算子の形を崩した表記を作成してきた。たとえば、 "[[:en:User_blog:EricABQ/Formal_definition_of_ordinal_hyper-operators_using_the_climbing_method|Formal definition of ordinal hyper-operators using the climbing method]]" (EricABQ) では Jonathan Bowers が BEAF のために開発した climbing method をハイパー演算子へと転用している。かくいう私も『[[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]』で上付きハイパー演算子ではなく下付きハイパー演算子を超限順序数へ拡張すると \( \varepsilon _ 0 \) を超えて拡張することを指摘している。
 
-重ねて書くが、ハイパー演算子の形を保ったままで超限順序数へ拡張し、前述のポテンシャルを実現した表記は、これまでに存在しない。このような表記は、長い間、不在であり続けていた。
-
-この記事では、ハイパー演算子の形を保ったままで超限順序数へ拡張し、前述のポテンシャルを実現した表記を定義した。この表記は、 \( \omega \mathbin{ [ \omega ] } \omega = \varphi _ \omega ( 0 ) \) であり \( \xi \mapsto \omega \mathbin{ [ \xi ] } \omega \) の極限が \( \Gamma _ 0 \) である。
+重ねて書くが、ハイパー演算子の形を保ったままで超限順序数へ拡張し、前述のポテンシャルを実現した表記は、これまでに存在しないのだ。
 
 == ハイパー演算子 ==
 
