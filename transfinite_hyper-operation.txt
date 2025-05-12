@@ -96,7 +96,7 @@
 
 階数がゼロである場合について、つまり \( n \) がゼロである場合について考察しよう。
 
-\( a \hyop{ 0 } x \) が自然に満たすべき条件について考察すると、 \( a \leq x \) に限定すれば \( a \hyop{ 0 } x = x + 1 \) であることが定まり、それに加えて可換性を要請すると \( a \hyop{ 0 } x = \mathrm{max} ( a + 1 , x + 1 ) \) と定まる。ただし、可換性を要請しないのであれば、 \( a \hyop{ 0 } x = x + 1 \) のような他の定義も可能である。
+\( a \hyop{ 0 } x \) が自然に満たすべき条件について考察すると、 \( a \leq x \) に限定すれば \( a \hyop{ 0 } x = x + 1 \) であることが定まり、それに加えて可換性を要請すると \( a \hyop{ 0 } x = \max ( a + 1 , x + 1 ) \) と定まる。ただし、可換性を要請しないのであれば、 \( a \hyop{ 0 } x = x + 1 \) のような他の定義も可能である。
 
 一つ目に、 \( n \geq 4 \) かつ \( x \geq 1 \) について \( a \hyop{ n } x = a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) \) であることから、ここの \( n \) へ \( 1 \) を仮に代入すると、 \( x \geq 1 \) について \( a \hyop{ 1 } x = a \hyop{ 0 } ( a \hyop{ 1 } ( x - 1 ) ) \) を得る。ただし、前の節で \( x \) をゼロへ拡張したため、 \( x \) に関する恒等式の条件は \( x \geq 2 \) ではなく \( x \geq 1 \) である。
 
@@ -131,7 +131,7 @@
   a \hyop{ n } x
     =
       \begin{cases}
-        \mathrm{max} ( a + 1 , x + 1 ) & ( n = 0 ) \\
+        \max ( a + 1 , x + 1 ) & ( n = 0 ) \\
         a & ( n \geq 1 \wedge x = 0 \wedge n = 1 ) \\
         0 & ( n \geq 1 \wedge x = 0 \wedge n = 2 ) \\
         1 & ( n \geq 1 \wedge x = 0 \wedge n \geq 3 ) \\
@@ -151,7 +151,7 @@
   & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
-  & = \mathrm{max} ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
+  & = \max ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
   & = ( a + x _ \mathrm{pred} ) + 1 \\
   & = a + ( x _ \mathrm{pred} + 1 ) \\
 \end{alignat}</nowiki>
@@ -201,7 +201,7 @@
   a \hyop{ n } x
     =
       \begin{cases}
-        \mathrm{max} ( a + 1 , x + 1 ) & ( \mathrm{cof} ( n ) = 0 ) \\
+        \max ( a + 1 , x + 1 ) & ( \mathrm{cof} ( n ) = 0 ) \\
         a & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n = 1 ) \\
         0 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n = 2 ) \\
         1 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n \geq 3 ) \\
@@ -213,13 +213,13 @@
 
 だが、この定義は \( n \geq 2 \) では上手く行かず、非常に悪い結果となる。
 
-この定義において、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \sup _ { y < x } a \hyop{ 1 } y \) かつ \( a + y = \sup _ { y < x } ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+この定義において、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \sup _ { y < x } ( a \hyop{ 1 } y ) \) かつ \( a + y = \sup _ { y < x } ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
-  & = \mathrm{max} ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
+  & = \max ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
   & = ( a + x _ \mathrm{pred} ) + 1 \\
   & = a + ( x _ \mathrm{pred} + 1 ) \\
 \end{alignat}</nowiki>
