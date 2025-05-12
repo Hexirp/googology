@@ -20,6 +20,8 @@
 
 超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮するために、様々な巨大数研究者がハイパー演算子の形を崩した表記を作成してきた。たとえば、 "[[:en:User_blog:EricABQ/Formal_definition_of_ordinal_hyper-operators_using_the_climbing_method|Formal definition of ordinal hyper-operators using the climbing method]]" (EricABQ) では Jonathan Bowers が BEAF のために開発した climbing method をハイパー演算子へと転用している。かくいう私も『[[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]』で上付きハイパー演算子ではなく下付きハイパー演算子を超限順序数へ拡張すると \( \varepsilon _ 0 \) を超えて増大することを指摘している。
 
+だが、これらはハイパー演算子の形を崩してしまっているため、ハイパー演算子の形を保存したまま順序数へ拡張するという問題の答えとはならない。それに、 \( \omega \hyop{ \omega } \omega = \varphi _ \omega ( 0 ) \) と \( \omega \hyop{ \cdots \omega \hyop{ \omega \hyop{ \omega } \omega } \omega \cdots \omega = \Gamma _ 0 \) も成り立たない。
+
 この記事では、有限の範囲において通常のハイパー演算子と完全に一致し、順序数の範囲においては、 \( 1 \) 段と \( 2 \) 段と \( 3 \) 段の演算が加算と乗算と冪乗を完全に再現し、テトレーションを超えても破綻せず、 \( \omega \) 階を超えても破綻せず、 \( \omega \hyop{ \omega } \omega \) が \( \varphi _ \omega ( 0 ) \) となり、その表記としての限界が \( \Gamma _ 0 \) であり、それでいてハイパー演算子の形を保ち、それらに加えて、その定義が一貫していて美しいような超限ハイパー演算子の定義を示す。
 
 == ハイパー演算子 ==
