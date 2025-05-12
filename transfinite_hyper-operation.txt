@@ -213,7 +213,7 @@
 
 だが、この定義は \( n \geq 2 \) では上手く行かず、非常に悪い結果となる。
 
-この定義において、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \sup _ { y < x } ( a \hyop{ 1 } y ) \) かつ \( a + y = \sup _ { y < x } ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+\( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \sup _ { y < x } ( a \hyop{ 1 } y ) \) かつ \( a + y = \sup _ { y < x } ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
@@ -224,7 +224,28 @@
   & = a + ( x _ \mathrm{pred} + 1 ) \\
 \end{alignat}</nowiki>
 
-\( \omega \hyop{ 2 } ( \omega + 1 ) = \omega ^ 2 \) であり \( x \mapsto \omega \hyop{ 2 } x \) の上限は \( \omega ^ 2 \) である。
+その一方で、 \( n \geq 2 \) の場合は、 \( \omega \hyop{ 2 } ( \omega + 1 ) \) が \( \omega ^ 2 + \omega \) ではなく \( \omega ^ 2 \) となり、 \( x \mapsto \omega \hyop{ 2 } x \) が \( \omega ^ 2 \) よりも大きくならず、 \( n \mapsto \omega \hyop{ n } \omega \) も \( \omega ^ 2 \) よりも大きくならない。
+
+一つ目に、 \( x < \omega \) である場合、 \( \omega \hyop{ 2 } x = \omega \times x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) である場合は、 \( \omega \hyop{ 2 } 0 = \omega \times 0 \) となり、 \( \omega \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) である場合は、 \( \omega \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = \omega \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & = \omega \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
+  & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } x _ \mathrm{pred} ) \\
+  & = \omega \hyop{ 1 } ( \omega \times x _ \mathrm{pred} ) \\
+  & = \omega + ( \omega \times x _ \mathrm{pred} ) \\
+  & = \omega \times ( 1 + x _ \mathrm{pred} ) \\
+  & = \omega \times ( x _ \mathrm{pred} + 1 ) \\
+\end{alignat}</nowiki>
+
+二つ目に、 \( \omega \hyop{ 2 } \omega = \omega ^ 2 \) であり、ここまでは問題ない。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & = \omega \hyop{ 2 } \omega \\
+  & = \sup _ { y < \omega } ( \omega \hyop{ 2 } y ) \\
+  & = \sup _ { y < \omega } ( \omega \times y ) \\
+  & = \omega \times \omega \\
+  & = \omega ^ 2 \\
+\end{alignat}</nowiki>
 
 == 順序数への拡張 ==
 
