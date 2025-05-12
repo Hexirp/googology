@@ -132,12 +132,10 @@
     =
       \begin{cases}
         \mathrm{max} ( a + 1 , x + 1 ) & ( n = 0 ) \\
-        a & ( n = 1 \wedge x = 0 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 1 \wedge x \geq 1 ) \\
-        0 & ( n = 2 \wedge x = 0 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 2 \wedge x \geq 1 ) \\
-        1 & ( n \geq 3 \wedge x = 0 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 3 \wedge x \geq 1 ) \\
+        a & ( n \geq 1 \wedge x = 0 \wedge n = 1 ) \\
+        0 & ( n \geq 1 \wedge x = 0 \wedge n = 2 ) \\
+        1 & ( n \geq 1 \wedge x = 0 \wedge n \geq 3 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 1 \wedge x \geq 1 ) \\
       \end{cases}
 \]</nowiki>
 
