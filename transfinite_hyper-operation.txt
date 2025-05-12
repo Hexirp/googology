@@ -10,7 +10,7 @@
 
 しかしながら、本来のハイパー演算子の形を保ったまま \( \varepsilon _ 0 \) を超えることができた超限ハイパー演算子は、これまでに存在しない。このような表記は、長い間、不在であり続けていた。
 
-その理由は、加算と乗算と冪乗は超限順序数へ拡張することが容易であるのに対して、テトレーションでは単純に拡張すると \( \omega \uparrow \uparrow \omega = \varepsilon _ 0 \) が成立し \( \omega \uparrow \uparrow ( \omega + 1 ) = \omega ^ { \omega \uparrow \uparrow \omega } = \omega ^ { \varepsilon _ 0 } = \varepsilon _ 0 \) となることから、 \( \xi \mapsto \omega \uparrow \uparrow \xi \) の上限が \( \varepsilon _ 0 \) となるという不都合な現象が発生するためである。
+その理由は、加算と乗算と冪乗は超限順序数へ拡張することが容易であるのに対して、テトレーションでは単純に拡張すると \( \omega \uparrow \uparrow \omega = \varepsilon _ 0 \) が成立し \( \omega \uparrow \uparrow ( \omega + 1 ) = \omega ^ { \omega \uparrow \uparrow \omega } = \omega ^ { \varepsilon _ 0 } = \varepsilon _ 0 \) となることから、 \( x \mapsto \omega \uparrow \uparrow x \) がスコット連続であるとすると \( \xi \mapsto \omega \uparrow \uparrow \xi \) の上限が \( \varepsilon _ 0 \) となるという不都合な現象が発生するためである。
 
 これは、ハイパー演算子は単調増加であるべきという点で問題であるが、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点でも問題である。
 
@@ -195,7 +195,7 @@
 
 前の節で示した定義を、さらに順序数へ拡張することを考えてみると、これは簡単に定義できるように見える。
 
-なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義はスコット連続であることから自動的に定まるからである。つまり、 \( \mathrm{cof} ( \alpha ) \geq \omega \) であるとき、必ず \( f ( \alpha ) = \sup _ { \beta < \alpha } f ( \beta ) \) となる。
+なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義はスコット連続であることから自動的に定まるからである。つまり、 \( f \) がスコット連続であるとすると、 \( \mathrm{cof} ( \alpha ) \geq \omega \) である場合、必ず \( f ( \alpha ) = \sup _ { \beta < \alpha } f ( \beta ) \) となる。
 
 この方針に従って定義すると、下記のような定義となる。ただし、 \( \mathrm{cof} ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \sup _ { \beta < \alpha } \beta \) と定義する。
 
@@ -213,11 +213,15 @@
         1 & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
         \sup _ { y < x } a \hyop{ n } y & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        \sup _ { o < n } a \hyop{ o } x & ( n \geq 3 \wedge \mathrm{cof} ( n ) \geq \omega ) \\
+        \sup _ { p < n } a \hyop{ p } x & ( n \geq 3 \wedge \mathrm{cof} ( n ) \geq \omega ) \\
       \end{cases}
 \]</nowiki>
 
-だが、これは上手く行かず、非常に悪い結果となる。
+順序数の範囲においても \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。
+
+だが、この定義は \( n \geq 2 \) では上手く行かない。
+
+\( \omega \hyop{ 2 } ( \omega + 1 ) = \omega ^ 2 \) であり \( x \mapsto \omega \hyop{ 2 } x \) の上限は \( \omega ^ 2 \) である。
 
 == 順序数への拡張 ==
 
