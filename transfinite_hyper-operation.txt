@@ -181,11 +181,11 @@
         \sup _ { y < x } a \hyop{ n } y & ( n = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
         0 & ( n = 2 \wedge \mathrm{cof} ( x ) = 0 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 2 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \sup _ { x > y } a \hyop{ n } y & ( n = 2 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        \sup _ { y < x } a \hyop{ n } y & ( n = 2 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
         1 & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \sup _ { x > y } a \hyop{ n } y & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        \sup _ { n > o } a \hyop{ o } x & ( n \geq 3 \wedge \mathrm{cof} ( n ) \geq \omega ) \\
+        \sup _ { y < x } a \hyop{ n } y & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        \sup _ { o < n } a \hyop{ o } x & ( n \geq 3 \wedge \mathrm{cof} ( n ) \geq \omega ) \\
       \end{cases}
 \]</nowiki>
 
