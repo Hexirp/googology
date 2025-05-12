@@ -95,7 +95,7 @@
 
 \( a \mathbin{ [ n ] } 1 = a \) かつ \( a \mathbin{ [ n - 1 ] } 1 = a \) かつ \( a \mathbin{ [ n - 1 ] } ( a \mathbin{ [ n ] } 0 ) = a \mathbin{ [ n ] } 1 \) であることから、 \( a \mathbin{ [ n - 1 ] } ( a \mathbin{ [ n ] } 0 ) = a \) であり、 \( a \mathbin{ [ n - 1 ] } ( a \mathbin{ [ n ] } 0 ) = a \mathbin{ [ n - 1 ] } 1 \) であると、仮に考える。
 
-\( x \mapsto a \mathbin{ [ n - 1 ] } x \) は単調増加関数であると仮に考えると、 \( a \mathbin{ [ n - 1 ] } ( a \mathbin{ [ n ] } 0 ) = a \mathbin{ [ n - 1 ] } 1 \) から \( a \mathbin{ [ n ] } 0 = 1 \) を得ることができる。
+\( x \mapsto a \mathbin{ [ n - 1 ] } x \) が単調増加関数であると仮に考えると、 \( a \mathbin{ [ n - 1 ] } ( a \mathbin{ [ n ] } 0 ) = a \mathbin{ [ n - 1 ] } 1 \) から \( a \mathbin{ [ n ] } 0 = 1 \) を得ることができる。
 
 === 階数がゼロである場合について ===
 
