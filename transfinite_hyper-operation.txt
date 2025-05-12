@@ -167,29 +167,29 @@
 
 前の節で示した定義を、さらに順序数へ拡張することを考えてみると、これは簡単に定義できるように見える。
 
-なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義はスコット連続であることから自動的に定まるからである。つまり、 \( \mathrm{cof} ( \alpha ) \geq \omega \) であるとき、必ず \( f ( \alpha ) = \sup _ { \alpha > \beta } f ( \beta ) \) となる。
+なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義はスコット連続であることから自動的に定まるからである。つまり、 \( \mathrm{cof} ( \alpha ) \geq \omega \) であるとき、必ず \( f ( \alpha ) = \sup _ { \beta < \alpha } f ( \beta ) \) となる。
 
-この方針に従って定義すると、下記のような定義となる。ただし、 \( \mathrm{cof} ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \sup _ { \alpha > \beta } \beta \) と定義する。
+この方針に従って定義すると、下記のような定義となる。ただし、 \( \mathrm{cof} ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \sup _ { \beta < \alpha } \beta \) と定義する。
 
 <nowiki>\[
   a \hyop{ n } x
     =
       \begin{cases}
         \mathrm{max} ( a + 1 , x + 1 ) & ( n = 0 ) \\
-        a & ( n = 1 \wedge x = 0 ) \\
+        a & ( n = 1 \wedge \mathrm{cof} ( x ) = 0 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \sup _ { x > y } a \hyop{ n } y & ( n = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        0 & ( n = 2 \wedge x = 0 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 2 \wedge x \geq 1 ) \\
+        \sup _ { y < x } a \hyop{ n } y & ( n = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        0 & ( n = 2 \wedge \mathrm{cof} ( x ) = 0 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 2 \wedge \mathrm{cof} ( x ) = 1 ) \\
         \sup _ { x > y } a \hyop{ n } y & ( n = 2 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        1 & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge x = 0 ) \\
+        1 & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
         \sup _ { x > y } a \hyop{ n } y & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
         \sup _ { n > o } a \hyop{ o } x & ( n \geq 3 \wedge \mathrm{cof} ( n ) \geq \omega ) \\
       \end{cases}
 \]</nowiki>
 
-だが、これは上手く行かなず、実のところ、非常に悪い結果となる。
+だが、これは上手く行かず、実のところ、非常に悪い結果となる。
 
 == 順序数への拡張 ==
 
