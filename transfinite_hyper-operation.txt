@@ -14,9 +14,9 @@
 
 これは、ハイパー演算子は単調増加であるべきという点で問題であるが、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点でも問題である。
 
-大多数の巨大数研究者が \( \omega \mathbin{ [ \omega ] } \omega = \varphi _ \omega ( 0 ) \) となり \( \xi \mapsto \omega \mathbin{ [ \xi ] } \omega \) で閉じている最小の順序数が \( \Gamma _ 0 \) となるのが自然なのではないかと考えており、これに届かないという点で問題なのである。
+大多数の巨大数研究者が \( \omega \hyop{ \omega } \omega = \varphi _ \omega ( 0 ) \) となり \( \xi \mapsto \omega \hyop{ \xi } \omega \) で閉じている最小の順序数が \( \Gamma _ 0 \) となるのが自然なのではないかと考えており、これに届かないという点で問題なのである。
 
-これを裏付ける状況証拠として、緩増加関数を解析した結果を例に挙げることができる。 \( g _ \alpha ( x ) \) が \( \alpha \) の中の \( \omega \) を \( x \) に置き換えた値と、概ね一致するという経験則がある。それに加えて \( g _ { \varphi _ \omega ( 0 ) } ( n ) \approx n \mathbin{ [ n ] } n \) であり \( g _ { \varphi _ \alpha ( 0 ) } ( n ) \approx n \mathbin{ [  g _ \alpha ( n ) ] } n \) である。このことから、前述の予想を立てることができるのである。
+これを裏付ける状況証拠として、緩増加関数を解析した結果を例に挙げることができる。 \( g _ \alpha ( x ) \) が \( \alpha \) の中の \( \omega \) を \( x \) に置き換えた値と、概ね一致するという経験則がある。それに加えて \( g _ { \varphi _ \omega ( 0 ) } ( n ) \approx n \hyop{ n } n \) であり \( g _ { \varphi _ \alpha ( 0 ) } ( n ) \approx n \hyop{ g _ \alpha ( n ) } n \) である。このことから、前述の予想を立てることができるのである。
 
 超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮するために、様々な巨大数研究者がハイパー演算子の形を崩した表記を作成してきた。たとえば、 "[[:en:User_blog:EricABQ/Formal_definition_of_ordinal_hyper-operators_using_the_climbing_method|Formal definition of ordinal hyper-operators using the climbing method]]" (EricABQ) では Jonathan Bowers が BEAF のために開発した climbing method をハイパー演算子へと転用している。かくいう私も『[[ユーザーブログ:Hexirp/ハイパー演算子の拡張|ハイパー演算子の拡張]]』で上付きハイパー演算子ではなく下付きハイパー演算子を超限順序数へ拡張すると \( \varepsilon _ 0 \) を超えて増大することを指摘している。
 
