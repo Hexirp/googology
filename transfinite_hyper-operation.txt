@@ -203,17 +203,13 @@
   a \hyop{ n } x
     =
       \begin{cases}
-        \mathrm{max} ( a + 1 , x + 1 ) & ( n = 0 ) \\
-        a & ( n = 1 \wedge \mathrm{cof} ( x ) = 0 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \sup _ { y < x } a \hyop{ n } y & ( n = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        0 & ( n = 2 \wedge \mathrm{cof} ( x ) = 0 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 2 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \sup _ { y < x } a \hyop{ n } y & ( n = 2 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        1 & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \sup _ { y < x } a \hyop{ n } y & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        \sup _ { p < n } a \hyop{ p } x & ( n \geq 3 \wedge \mathrm{cof} ( n ) \geq \omega ) \\
+        \mathrm{max} ( a + 1 , x + 1 ) & ( \mathrm{cof} ( n ) = 0 ) \\
+        a & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n = 1 ) \\
+        0 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n = 2 ) \\
+        1 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n \geq 3 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
+        \sup _ { y < x } a \hyop{ n } y & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        \sup _ { p < n } a \hyop{ p } x & ( \mathrm{cof} ( n ) = \omega ) \\
       \end{cases}
 \]</nowiki>
 
