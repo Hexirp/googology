@@ -14,7 +14,7 @@
 
 これは、ハイパー演算子は単調増加であるべきという点で問題であるが、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点でも問題である。
 
-大多数の巨大数研究者が \( \omega \hyop{ \omega } \omega = \varphi _ \omega ( 0 ) \) となり \( \xi \mapsto \omega \hyop{ \xi } \omega \) で閉じている最小の順序数が \( \Gamma _ 0 \) となるのが自然なのではないかと考えており、これに届かないという点で問題なのである。
+大多数の巨大数研究者が \( \omega \hyop{ \omega } \omega = \varphi _ \omega ( 0 ) \) となり \( \omega \) へ \( \xi \mapsto \omega \hyop{ \xi } \omega \) を繰り返し適用した順序数が \( \Gamma _ 0 \) となるのが自然なのではないかと考えており、これに届かないという点で問題なのである。
 
 これを裏付ける状況証拠として、緩増加関数を解析した結果を例に挙げることができる。 \( g _ \alpha ( x ) \) が \( \alpha \) の中の \( \omega \) を \( x \) に置き換えた値と、概ね一致するという経験則がある。それに加えて \( g _ { \varphi _ \omega ( 0 ) } ( n ) \approx n \hyop{ n } n \) であり \( g _ { \varphi _ \alpha ( 0 ) } ( n ) \approx n \hyop{ g _ \alpha ( n ) } n \) である。このことから、前述の予想を立てることができるのである。
 
@@ -113,9 +113,55 @@
 
 \( a \hyop{ 0 } x = x + 1 \) へ可換性を追加することを考えると、 \( a \hyop{ 0 } x = \mathrm{max} ( a + 1 , x + 1 ) \) と定義することが適切である。 \( a + x = a \hyop{ 0 } ( a + ( x - 1 ) ) \) の前提が \( x \geq 1 \) であるということは、必ず \( a \leq a + ( x - 1 ) \) であり、 \( \mathrm{max} ( a + 1 , a + ( x - 1 ) + 1 ) = a + x \) であるということである。
 
-== ゼロへ拡張した定義の整合性 ==
+=== ゼロへ拡張した定義について ===
 
-\( a \hyop{ [ n ] } 1 = a \)
+前の節で考察したことを集約すると、ゼロへ拡張したハイパー演算子の定義は、次の通りになる。
+
+<nowiki>\[
+  a \hyop{ n } x
+    =
+      \begin{cases}
+        \mathrm{max} ( a + 1 , x + 1 ) & ( n = 0 ) \\
+        a & ( n = 1 \wedge x = 0 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 1 \wedge x \geq 1 ) \\
+        0 & ( n = 2 \wedge x = 0 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 2 \wedge x \geq 1 ) \\
+        1 & ( n \geq 3 \wedge x = 0 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 2 \wedge x \geq 1 ) \\
+      \end{cases}
+\]</nowiki>
+
+だが、この定義は素朴な定義と一致するのだろうか。
+
+== ゼロへ拡張したハイパー演算子の整合性 ==
+
+まず、 \( a \hyop{ 1 } x = a + x \) であることを証明する。
+
+これは \( x \) についての帰納法で行う。つまり、 \( a \hyop{ 1 } x = a + x \) を \( P ( x ) \) であるとし、 \( P ( 0 ) \) と \( ( \forall y ) ( P ( y ) \to P ( y + 1 ) ) \) を証明し、帰納法を適用して、 \( ( \forall x ) ( P ( x ) ) \) を証明する。
+
+\( a \hyop{ 1 } x = a + x \) の \( x \) へ \( 0 \) を代入すると、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) かつ \( a + 0 = a \) であるから、これは成り立つ。
+
+任意の \( y \) を受け取り、 \( a \hyop{ 1 } y = a + y \) を仮定し、 \( a \hyop{ 1 } ( y + 1 ) = a + ( y + 1 ) \) を証明する。
+
+\( a \hyop{ 1 } ( y + 1 ) = a \hyop{ 0 } ( a \hyop{ 1 } y ) \) であり、 \( a \hyop{ 0 } ( a \hyop{ 1 } y ) = \mathrm{max} ( a + 1 , a \hyop{ 1 } y + 1 ) \) であり、 \( \mathrm{max} ( a + 1 , a \hyop{ 1 } y + 1 ) = \mathrm{max} ( a + 1 , ( a + y ) + 1 ) \) であり、 \( y \) は自然数であるから、必ず \( a + 1 \leq ( a + y ) + 1 \) であり、 \( \mathrm{max} ( a + 1 , ( a + y ) + 1 ) = ( a + y ) + 1 \) であり、 \( ( a + y ) + 1 = a + ( y + 1 ) \) である。
+
+\( P ( 0 ) \) と \( ( \forall y ) ( P ( y ) \to P ( y + 1 ) ) \) が成立するから、帰納法より、 \( ( \forall x ) ( a \hyop{ 1 } x = a + x ) \) である。
+
+次に、 \( a \hyop{ 2 } x = a \times x \) であることを証明する。
+
+これは \( x \) について帰納法を回すことで簡単に証明できる。 \( a \hyop{ 2 } 0 = 0 \) であり、 \( 0 = a \times 0 \) である。 \( a \hyop{ 2 } ( y + 1 ) = a \hyop{ 1 } ( a \hyop{ 2 } y ) \) であり、 \( a \hyop{ 1 } ( a \hyop{ 2 } y ) = a + ( a \hyop{ 2 } y ) \) であり、 \( a + ( a \hyop{ 2 } y ) = a + ( a \times y ) \) であり、 \( a + ( a \times y ) = a \times ( y + 1 ) \) である。
+
+次に、 \( a \hyop{ 3 } x = a ^ x \) であることを証明する。
+
+これは \( x \) について帰納法を回すことで簡単に証明できる。 \( a \hyop{ 3 } 0 = 1 \) であり、 \( 1 = a ^ 0 \) である。 \( a \hyop{ 3 } ( y + 1 ) = a \hyop{ 2 } ( a \hyop{ 3 } y ) \) であり、 \( a \hyop{ 2 } ( a \hyop{ 3 } y ) = a \times ( a \hyop{ 3 } y ) \) であり、 \( a \times ( a \hyop{ 3 } y ) = a \times a ^ y \) であり、 \( a \times a ^ y = a ^ { y + 1 } \) である。
+
+次に、 \( n \geq 2 \) である場合、 \( a \hyop{ n } 1 = a \) であることを証明する。
+
+これは \( n \) について帰納法を回すことで簡単に証明できる。 \( a \hyop{ 2 } 1 = a \times 1 \) であり、 \( a \times 1 = a \) である。 \( a \hyop{ o + 1 } 1 = a \hyop{ o } ( a \hyop{ o + 1 } 0 ) \) であり、 \( o \geq 2 \) であるから \( o + 1 \geq 3 \) であり、 \( a \hyop{ o } ( a \hyop{ o + 1 } 0 ) = a \hyop{ o } 1 \) であり、 \( a \hyop{ o } 1 = a \) である。
+
+次に、 \( n \geq 1 \) である場合、 \( a \hyop{ n } ( y + 1 ) = a \hyop{ n - 1 } ( a \hyop{ n } y ) \) であることを証明するが、これは定義そのままである。
+
+これらより、 \( \mathbb{N} \times \mathbb{N} \) の辞書式順序を用いて \( \langle n , x \rangle \) についての整礎帰納法を行うことで、新しい定義と素朴な定義が一致することを示すことができる。
 
 == ゼロへの拡張 ==
 
