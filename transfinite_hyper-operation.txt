@@ -69,33 +69,6 @@
   \newcommand{\bo}[1]{ \mathbin{ \left[ #1 \right] } }
 \)</nowiki></p>
 
-== ハイパー演算子の定義 ==
-
-[[ハイパー演算子]]は巨大数の基本ともいえる表記である。その定義は、最も素朴に書くと次のようになるだろうか。
-
-<nowiki>\[
-  \begin{align}
-    a \bo{ 1 } b & = a + b \\
-    a \bo{ 2 } b & = a \times b \\
-    a \bo{ 3 } b & = a^b \\
-    a \bo{ n } b & = \underbrace{ a \bo{ n' } \p{ a \bo{ n' } \cdots \p{ a \bo{ n' } a } } }_{ \textrm{\( b \) copies of \( a \)} } & & \p{ 4 \leq n \wedge n' + 1 = n } \\
-  \end{align}
-\]</nowiki>
-
-ここで、点々を使った省略は、やや曖昧である。そのため、それを取り除いてみよう。
-
-<nowiki>\[
-  \begin{align}
-    a \bo{ 1 } b & = a + b \\
-    a \bo{ 2 } b & = a \times b \\
-    a \bo{ 3 } b & = a^b \\
-    a \bo{ n } 1 & = a & & \p{ 4 \leq n } \\
-    a \bo{ n } b & = a \bo{ n' } \p{ a \bo{ n } b' } & & \p{ 4 \leq n \wedge 4 \leq b \wedge n' + 1 = n \wedge b' + 1 = b } \\
-  \end{align}
-\]</nowiki>
-
-この表記の定義域は \( 1 \leq a \wedge 1 \leq b \wedge 1 \leq n \) であることに注意して欲しい。
-
 == ゼロへの拡張 ==
 
 なぜ \( 0 \) の場合を記述しなかったのか？ それは、 \( 0 \) の場合の定義を作成するために、多少の議論が必要であるからである。
