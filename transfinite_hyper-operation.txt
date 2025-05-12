@@ -105,9 +105,21 @@
 
 \( a \mathbin{ [ 1 ] } x = a + x \) であると仮に考えると、 \( x \geq 1 \) について \( a + x = a \mathbin{ [ 0 ] } ( a + ( x - 1 ) ) \) であるということになり、これを満たす関数を考えることにする。
 
-\( a + x = a \mathbin{ [ 0 ] } ( a + ( x - 1 ) ) \) であるような関数は無数にあり、もっとも単純な解として \( a \mathbin{ [ 0 ] } x = x + 1 \) がある。これは英語版ウィキペディアの "[https://en.wikipedia.org/w/index.php?title=Hyperoperation&oldid=1110399282 Hyperoperation]" と同じ定義となる。
+\( a + x = a \mathbin{ [ 0 ] } ( a + ( x - 1 ) ) \) であるような関数は無数にあり、最も単純な解として \( a \mathbin{ [ 0 ] } x = x + 1 \) がある。これは英語版ウィキペディアの "[https://en.wikipedia.org/w/index.php?title=Hyperoperation&oldid=1110399282 Hyperoperation]" と同じ定義となる。
 
-\( a \mathbin{ [ 0 ] } x = x + 1 \) と定義することは、後者関数から全てを構築するというコンセプトにおいては美しいが、 \( a \) の値を捨てており、可換性を持たないという欠点もある。
+\( a \mathbin{ [ 0 ] } x = x + 1 \) と定義することは、後者関数から全てを構築するというコンセプトにおいては美しいが、 \( a \) の値を捨てており、可換性を持たないという欠点もある。ハイパー演算子が二項演算子であることを鑑みると、一項演算子である後者関数を当てはめるのは不適切である。
+
+\( a \mathbin{ [ 0 ] } x = x + 1 \) へ可換性を追加することを考えると、 \( a \mathbin{ [ 0 ] } x = \mathrm{max} ( a + 1 , x + 1 ) \) と定義することが適切である。 \( a + x = a \mathbin{ [ 0 ] } ( a + ( x - 1 ) ) \) の前提が \( x \geq 1 \) であるということは、必ず \( a \leq a + ( x - 1 ) \) であり、 \( \mathrm{max} ( a + 1 , a + ( x - 1 ) + 1 ) = a + x \) であるということである。
+
+\( n = 1 \) の場合にも再帰するようになるということは、 \( x \geq 1 \) である場合には \( a \mathbin{ [ 1 ] } x = a \mathbin{ [ 0 ] } ( a \mathbin{ [ 1 ] } ( x - 1 ) ) \) であるとして、 \( x = 0 \) である場合についても考える必要がある。
+
+つまり、 \( a \mathbin{ [ 1 ] } 0 \) の値について考えることである。これについても、この値が満たすべき条件に付いて注目して考察する。
+
+\( a \mathbin{ [ 1 ] } x = a \mathbin{ [ 0 ] } ( a \mathbin{ [ 1 ] } ( x - 1 ) ) \) として、この \( x \) へ \( 1 \) を仮に代入すると、 \( a \mathbin{ [ 1 ] } 1 = a \mathbin{ [ 0 ] } ( a \mathbin{ [ 1 ] } 0 ) \) となり、 \( a \mathbin{ [ 1 ] } 1 = \mathrm{max} ( a + 1 , a \mathbin{ [ 1 ] } 0 + 1 ) \) である。
+
+\( a \mathbin{ [ 1 ] } 1 = a + 1 \) であることから、 \( \mathrm{max} ( a + 1 , a \mathbin{ [ 1 ] } 0 + 1 ) = a + 1 \) であり、 \( a \mathbin{ [ 1 ] } 0 \leq a \) である。
+
+単純な解としては、 \( a \mathbin{ [ 1 ] } 0 = 0 \) と \( a \mathbin{ [ 1 ] } 0 = a \) の二択となるが、 \( a \mathbin{ [ 0 ] } x \) が二変数版の後者関数と呼ぶべき性質を持ち、 \( a \mathbin{ [ 1 ] } x \) が \( x \mapsto a \mathbin{ [ 0 ] } x \) を \( a \mathbin{ [ 1 ] } 0 \) へ \( x \) 回適用した値となることから、 \( a \mathbin{ [ 1 ] } 0 \) を \( 0 \) へ準えて、 \( \( a \mathbin{ [ 1 ] } 0 \) = 0 \) であるとする。
 
 <p style="display: none;"><nowiki>\(
   \newcommand{\p}[1]{ \mathord{ \left( #1 \right) } }
