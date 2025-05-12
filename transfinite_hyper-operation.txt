@@ -84,7 +84,7 @@
 三つ目に、一つ目の式と二つ目の式から、 \( n \geq 4 \) を条件として、下記のように変形をし、 \( a \hyop{ n - 1 } ( a \hyop{ n } 0 ) = a \hyop{ n - 1 } 1 \) を得る。
 
 <nowiki>\begin{alignat}{2}
-  a \hyop{ n - 1 } ( a \hyop{ n } 0 ) & = a \hyop{ n - 1 } ( a \hyop{ n } 0 ) \\
+  & = a \hyop{ n - 1 } ( a \hyop{ n } 0 ) \\
   & = a \hyop{ n } 1 \\
   & = a \\
   & = a \hyop{ n - 1 } 1 \\
@@ -148,7 +148,7 @@
 一番目の補題として、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
   & = \mathrm{max} ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
@@ -159,7 +159,7 @@
 二番目の補題として、 \( a \hyop{ 2 } x = a \times x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 2 } 0 = a \times 0 \) となり、 \( a \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = a \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) & = a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 1 } ( a \hyop{ 2 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 1 } ( a \times x _ \mathrm{pred} ) \\
   & = a + ( a \times x _ \mathrm{pred} ) \\
@@ -169,7 +169,7 @@
 三番目の補題として、 \( a \hyop{ 3 } x = a ^ x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 3 } 0 = a ^ 0 \) となり、 \( a \hyop{ 3 } 0 = 1 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) = a ^ { x _ \mathrm{pred} + 1 } \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) & = a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 2 } ( a \hyop{ 3 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 2 } a ^ { x _ \mathrm{pred} } \\
   & = a \times a ^ { x _ \mathrm{pred} } \\
@@ -179,7 +179,7 @@
 四番目の補題として、 \( n \geq 2 \) である場合、 \( a \hyop{ n } 1 = a \) である。 \( n \) について帰納法を適用する。 \( n = 2 \) の場合は \( a \hyop{ 2 } 1 = a \) となり、二番目の補題より成り立つ。 \( n \geq 3 \) かつ \( n = n _ \mathrm{pred} + 1 \) である場合は \( a \hyop{ n _ \mathrm{pred} + 1 } 1 = a \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  a \hyop{ n _ \mathrm{pred} + 1 } 1 & = a \hyop{ n _ \mathrm{pred} + 1 } 1 \\
+  & = a \hyop{ n _ \mathrm{pred} + 1 } 1 \\
   & = a \hyop{ n _ \mathrm{pred} } ( a \hyop{ n _ \mathrm{pred} + 1 } 0 ) \\
   & = a \hyop{ n _ \mathrm{pred} } 1 \\
   & = a \\
@@ -213,7 +213,16 @@
 
 だが、この定義は \( n \geq 2 \) では上手く行かず、非常に悪い結果となる。
 
-この定義において、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \sup _ { y < x } a \hyop{ 1 } y \) かつ \( a + y = \sup _ { y < x } ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、
+この定義において、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \sup _ { y < x } a \hyop{ 1 } y \) かつ \( a + y = \sup _ { y < x } ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
+  & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
+  & = \mathrm{max} ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
+  & = ( a + x _ \mathrm{pred} ) + 1 \\
+  & = a + ( x _ \mathrm{pred} + 1 ) \\
+\end{alignat}</nowiki>
 
 \( \omega \hyop{ 2 } ( \omega + 1 ) = \omega ^ 2 \) であり \( x \mapsto \omega \hyop{ 2 } x \) の上限は \( \omega ^ 2 \) である。
 
