@@ -14,7 +14,7 @@
 
 これは、ハイパー演算子は単調増加であるべきという点で問題であるが、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点でも問題である。
 
-大多数の巨大数研究者が \( \omega \hyop{ \omega } \omega = \varphi _ \omega ( 0 ) \) となり \( \omega \) へ \( \xi \mapsto \omega \hyop{ \xi } \omega \) を繰り返し適用した順序数が \( \Gamma _ 0 \) となるのが自然なのではないかと考えており、これに届かないという点で問題なのである。
+私を含めた一部の巨大数研究者は \( \omega \hyop{ \omega } \omega = \varphi _ \omega ( 0 ) \) となり \( \omega \) へ \( \xi \mapsto \omega \hyop{ \xi } \omega \) を繰り返し適用した順序数が \( \Gamma _ 0 \) となるのが自然なのではないかと考えており、これに届かないという点で問題なのである。
 
 これを裏付ける状況証拠として、緩増加関数を解析した結果を例に挙げることができる。 \( g _ \alpha ( x ) \) が \( \alpha \) の中の \( \omega \) を \( x \) に置き換えた値と、概ね一致するという経験則がある。それに加えて \( g _ { \varphi _ \omega ( 0 ) } ( n ) \approx n \hyop{ n } n \) であり \( g _ { \varphi _ \alpha ( 0 ) } ( n ) \approx n \hyop{ g _ \alpha ( n ) } n \) である。このことから、前述の予想を立てることができるのである。
 
@@ -159,6 +159,8 @@
   & = ( a + x _ \mathrm{pred} ) + 1 \\
   & = a + ( x _ \mathrm{pred} + 1 ) \\
 \end{alignat}</nowiki>
+
+二番目の補題として、 \( a \hyop{ 2 } x = a \times x \) である。 \( x \) について場合分けすると、 \( x = 0 \) の場合は \( a \hyop{ 2 } 0 = a \times 0 \) となり、 \( a \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = a \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 次に、 \( a \hyop{ 2 } x = a \times x \) であることを証明する。
 
