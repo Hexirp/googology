@@ -149,19 +149,16 @@
 
 \( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x \) と \( a \hyop{ n } x \) は両方とも \( \langle n , x \rangle \in \mathbb{N} \times \mathbb{N} \) に対する辞書式順序による整礎帰納法を使用しているため、これの証明も \( \langle n , x \rangle \in \mathbb{N} \times \mathbb{N} \) に対する辞書式順序による整礎帰納法で行う。
 
-一番目の補題として、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) について場合分けすると、 \( x = 0 \) の場合は \( a \hyop{ 1 } 0 = a + 0 \) であり自明である。 \( x = x _ \mathrm{pred} + 1 \) の場合は、
+一番目の補題として、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) について場合分けすると、 \( x = 0 \) の場合は \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
-まず、 \( a \hyop{ 1 } x = a + x \) であることを証明する。
-
-これは \( x \) についての帰納法で行う。つまり、 \( a \hyop{ 1 } x = a + x \) を \( P ( x ) \) であるとし、 \( P ( 0 ) \) と \( ( \forall y ) ( P ( y ) \to P ( y + 1 ) ) \) を証明し、帰納法を適用して、 \( ( \forall x ) ( P ( x ) ) \) を証明する。
-
-\( a \hyop{ 1 } x = a + x \) の \( x \) へ \( 0 \) を代入すると、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) かつ \( a + 0 = a \) であるから、これは成り立つ。
-
-任意の \( y \) を受け取り、 \( a \hyop{ 1 } y = a + y \) を仮定し、 \( a \hyop{ 1 } ( y + 1 ) = a + ( y + 1 ) \) を証明する。
-
-\( a \hyop{ 1 } ( y + 1 ) = a \hyop{ 0 } ( a \hyop{ 1 } y ) \) であり、 \( a \hyop{ 0 } ( a \hyop{ 1 } y ) = \mathrm{max} ( a + 1 , a \hyop{ 1 } y + 1 ) \) であり、 \( \mathrm{max} ( a + 1 , a \hyop{ 1 } y + 1 ) = \mathrm{max} ( a + 1 , ( a + y ) + 1 ) \) であり、 \( y \) は自然数であるから、必ず \( a + 1 \leq ( a + y ) + 1 \) であり、 \( \mathrm{max} ( a + 1 , ( a + y ) + 1 ) = ( a + y ) + 1 \) であり、 \( ( a + y ) + 1 = a + ( y + 1 ) \) である。
-
-\( P ( 0 ) \) と \( ( \forall y ) ( P ( y ) \to P ( y + 1 ) ) \) が成立するから、帰納法より、 \( ( \forall x ) ( a \hyop{ 1 } x = a + x ) \) である。
+<nowiki>\begin{alignat}{2}
+  a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
+  & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
+  & = \mathrm{max} ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
+  & = ( a + x _ \mathrm{pred} ) + 1 \\
+  & = a + ( x _ \mathrm{pred} + 1 ) \\
+\end{alignat}</nowiki>
 
 次に、 \( a \hyop{ 2 } x = a \times x \) であることを証明する。
 
