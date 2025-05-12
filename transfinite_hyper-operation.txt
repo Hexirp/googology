@@ -237,7 +237,7 @@
   & = \omega \times ( x _ \mathrm{pred} + 1 ) \\
 \end{alignat}</nowiki>
 
-二つ目に、 \( \omega \hyop{ 2 } \omega = \omega ^ 2 \) であり、ここまでは問題ない。これは次の変形より成り立つ。
+二つ目に、 \( \omega \hyop{ 2 } \omega = \omega ^ 2 \) である。これは次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \omega \\
@@ -254,6 +254,27 @@
   & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } \omega ) \\
   & = \omega \hyop{ 1 } \omega ^ 2 \\
   & = \omega + \omega ^ 2 \\
+  & = \omega ^ 2 \\
+\end{alignat}</nowiki>
+
+四つ目に、 \( \omega \hyop{ 2 } \alpha = \omega ^ 2 \) である場合、 \( \omega \hyop{ 2 } ( \alpha + 1 ) = \omega ^ 2 \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & = \omega \hyop{ 2 } ( \alpha + 1 ) \\
+  & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } \alpha ) \\
+  & = \omega \hyop{ 1 } \omega ^ 2 \\
+  & = \omega + \omega ^ 2 \\
+  & = \omega ^ 2 \\
+\end{alignat}</nowiki>
+
+五つ目に、 \( \alpha \geq \omega \) である場合、 \( \omega \hyop{ 2 } ( \alpha + 1 ) = \omega ^ 2 \) である。 \( \alpha \) について超限帰納法を適用する。 \( \alpha = \omega \) である場合、二つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \alpha = \alpha _ \mathrm{pred} + 1 \) である場合、四つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \mathrm{cof} ( \alpha ) \geq \omega \) である場合、これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & = \omega \hyop{ 2 } \alpha \\
+  & = \sup _ { y < \alpha } \, ( \omega \hyop{ 2 } y ) \\
+  & = \max \Bigg ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \geq y < \alpha } \, ( \omega \hyop{ 2 } y ) \Bigg ) \\
+  & = \max \Bigg ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \geq y < \alpha } \omega ^ 2 \Bigg ) \\
+  & = \max ( \omega ^ 2 , \omega ^ 2 ) \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
 
