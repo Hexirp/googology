@@ -247,6 +247,16 @@
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
 
+三つ目に、 \( \omega \hyop{ 2 } ( \omega + 1 ) = \omega ^ 2 \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & = \omega \hyop{ 2 } ( \omega + 1 ) \\
+  & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } \omega ) \\
+  & = \omega \hyop{ 1 } \omega ^ 2 \\
+  & = \omega + \omega ^ 2 \\
+  & = \omega ^ 2 \\
+\end{alignat}</nowiki>
+
 == 順序数への拡張 ==
 
 <div style="display: none;"><nowiki>\[
