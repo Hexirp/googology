@@ -65,7 +65,7 @@
 
 ハイパー演算子の素朴な定義では基数と指数と階数が正の自然数でなければならず、これは順序数へ拡張する場合においては問題にならないが、この記事では美しさも追及するため、ゼロの場合においても定義できるように拡張する。
 
-== ゼロの場合について ==
+== ゼロへ拡張することについて ==
 
 前の節ではハイパー演算子の素朴な定義を示したが、これを通常の自然数まで拡張することを考察する。
 
@@ -127,7 +127,7 @@
         0 & ( n = 2 \wedge x = 0 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 2 \wedge x \geq 1 ) \\
         1 & ( n \geq 3 \wedge x = 0 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 2 \wedge x \geq 1 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 3 \wedge x \geq 1 ) \\
       \end{cases}
 \]</nowiki>
 
@@ -163,7 +163,35 @@
 
 これらより、 \( \mathbb{N} \times \mathbb{N} \) の辞書式順序を用いて \( \langle n , x \rangle \) についての整礎帰納法を行うことで、新しい定義と素朴な定義が一致することを示すことができる。
 
-== ゼロへの拡張 ==
+== 順序数へ拡張することについて ==
+
+前の節で示した定義を、さらに順序数へ拡張することを考えてみると、これは簡単に定義できるように見える。
+
+なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義はスコット連続であることから自動的に定まるからである。つまり、 \( \mathrm{cof} ( \alpha ) \geq \omega \) であるとき、必ず \( f ( \alpha ) = \sup _ { \alpha > \beta } f ( \beta ) \) となる。
+
+この方針に従って定義すると、下記のような定義となる。ただし、 \( \mathrm{cof} ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \sup _ { \alpha > \beta } \beta \) と定義する。
+
+<nowiki>\[
+  a \hyop{ n } x
+    =
+      \begin{cases}
+        \mathrm{max} ( a + 1 , x + 1 ) & ( n = 0 ) \\
+        a & ( n = 1 \wedge x = 0 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
+        \sup _ { x > y } a \hyop{ n } y & ( n = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        0 & ( n = 2 \wedge x = 0 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n = 2 \wedge x \geq 1 ) \\
+        \sup _ { x > y } a \hyop{ n } y & ( n = 2 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        1 & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge x = 0 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
+        \sup _ { x > y } a \hyop{ n } y & ( n \geq 3 \wedge \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        \sup _ { n > o } a \hyop{ o } x & ( n \geq 3 \wedge \mathrm{cof} ( n ) \geq \omega ) \\
+      \end{cases}
+\]</nowiki>
+
+だが、これは上手く行かなず、実のところ、非常に悪い結果となる。
+
+== 順序数への拡張 ==
 
 <div style="display: none;"><nowiki>\[
   \newcommand{\p}[1]{ \mathord{ \left( #1 \right) } }
@@ -172,25 +200,6 @@
   \newcommand{\a}[1]{ \mathord{ \left\langle #1 \right\rangle } }
   \newcommand{\bo}[1]{ \mathbin{ \left[ #1 \right] } }
 \]</nowiki></div>
-
-三番目に、 \( n = 0 \) の場合を考えよう。 \( a \bo{ n + 1 } \p{ b + 1 } = a \bo{ n } \p{ a \bo{ n + 1 } b } \) に \( n = 0 \) を仮想的に代入して、 \( a \bo{ 0 + 1 } \p{ b + 1 } = a \bo{ 0 } \p{ a \bo{ 0 + 1 } b } \) となる。このため、 \( a + \p{ b + 1 } = a \bo{ 0 } \p{ a + b } \) ということになる。その最も単純な解は \( a \bo{ 0 } b = b + 1 \) とすることであろう。しかし、これには対称でないという欠点がある。そのため、左右対称とするために \( a \bo{ 0 } b = \mathrm{max} \p{ a, b } + 1 \) とする。
-
-同時に \( a \bo{ 1 } 0 \) の値を定めなければならない。これは \( a \) と \( 0 \) の二択であるが、 \( a \bo{ 0 } b = b + 1 \) である時の値に合わせて \( a \) とする。
-
-これらを纏めると、次のようになる。
-
-<nowiki>\[
-  \begin{align}
-    a \bo{ 0 } 0 & = a + 1 \\
-    a \bo{ 1 } 0 & = a \\
-    a \bo{ 2 } 0 & = 0 \\
-    a \bo{ n } 0 & = 1 & & \p{ 3 \leq n } \\
-    a \bo{ 0 } b & = \mathrm{max} \p{ a, b } + 1 \\
-    a \bo{ n } b & = a \bo{ n' } \p{ a \bo{ n } b' } & & \p{ 1 \leq n \wedge 1 \leq b \wedge n' + 1 = n \wedge b' + 1 = b } \\
-  \end{align}
-\]</nowiki>
-
-== 順序数への拡張 ==
 
 さて、このハイパー演算子は簡単に順序数へ拡張することが出来る。超限帰納法を使えば良いのだ。
 
