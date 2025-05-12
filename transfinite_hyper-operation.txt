@@ -149,7 +149,7 @@
 
 \( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x \) と \( a \hyop{ n } x \) は両方とも \( \langle n , x \rangle \in \mathbb{N} \times \mathbb{N} \) に対する辞書式順序による整礎帰納法を使用しているため、これの証明も \( \langle n , x \rangle \in \mathbb{N} \times \mathbb{N} \) に対する辞書式順序による整礎帰納法で行う。
 
-一番目の補題として、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) について帰納法を適用すると、 \( x = 0 \) の場合は \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+一番目の補題として、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
@@ -160,7 +160,7 @@
   & = a + ( x _ \mathrm{pred} + 1 ) \\
 \end{alignat}</nowiki>
 
-二番目の補題として、 \( a \hyop{ 2 } x = a \times x \) である。 \( x \) について帰納法を適用すると、 \( x = 0 \) の場合は \( a \hyop{ 2 } 0 = a \times 0 \) となり、 \( a \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = a \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+二番目の補題として、 \( a \hyop{ 2 } x = a \times x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 2 } 0 = a \times 0 \) となり、 \( a \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = a \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) & = a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
@@ -170,7 +170,7 @@
   & = a \times ( x _ \mathrm{pred} + 1 ) \\
 \end{alignat}</nowiki>
 
-三番目の補題として、 \( a \hyop{ 3 } x = a ^ x \) である。 \( x \) について帰納法を適用すると、 \( x = 0 \) の場合は \( a \hyop{ 3 } 0 = a ^ 0 \) となり、 \( a \hyop{ 3 } 0 = 1 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) = a ^ { x _ \mathrm{pred} + 1 } \) となり、次の変形より成り立つ。
+三番目の補題として、 \( a \hyop{ 3 } x = a ^ x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 3 } 0 = a ^ 0 \) となり、 \( a \hyop{ 3 } 0 = 1 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) = a ^ { x _ \mathrm{pred} + 1 } \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) & = a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) \\
@@ -180,9 +180,14 @@
   & = a ^ { x _ \mathrm{pred} + 1 } \\
 \end{alignat}</nowiki>
 
-次に、 \( n \geq 2 \) である場合、 \( a \hyop{ n } 1 = a \) であることを証明する。
+四番目の補題として、 \( n \geq 2 \) である場合、 \( a \hyop{ n } 1 = a \) である。 \( n \) について帰納法を適用する。 \( n = 2 \) の場合は \( a \hyop{ 2 } 1 = a \) となり、二番目の補題より成り立つ。 \( n = 3 \) の場合は \( a \hyop{ 3 } 1 = a \) となり、三番目の補題より成り立つ。 \( n _ \mathrm{pred} \geq 3 \) かつ \( n = n _ \mathrm{pred} + 1 \) である場合は \( a \hyop{ n _ \mathrm{pred} + 1 } 1 = a \) となり、次の変形より成り立つ。
 
-これは \( n \) について帰納法を回すことで簡単に証明できる。 \( a \hyop{ 2 } 1 = a \times 1 \) であり、 \( a \times 1 = a \) である。 \( a \hyop{ o + 1 } 1 = a \hyop{ o } ( a \hyop{ o + 1 } 0 ) \) であり、 \( o \geq 2 \) であるから \( o + 1 \geq 3 \) であり、 \( a \hyop{ o } ( a \hyop{ o + 1 } 0 ) = a \hyop{ o } 1 \) であり、 \( a \hyop{ o } 1 = a \) である。
+<nowiki>\begin{alignat}{2}
+  a \hyop{ n _ \mathrm{pred} + 1 } 1 & = a \hyop{ n _ \mathrm{pred} + 1 } 1 \\
+  & = a \hyop{ n _ \mathrm{pred} } ( a \hyop{ n _ \mathrm{pred} + 1 } 0 ) \\
+  & = a \hyop{ n _ \mathrm{pred} } 1 \\
+  & = 1 \\
+\end{alignat}</nowiki>
 
 次に、 \( n \geq 1 \) である場合、 \( a \hyop{ n } ( y + 1 ) = a \hyop{ n - 1 } ( a \hyop{ n } y ) \) であることを証明するが、これは定義そのままである。
 
