@@ -145,9 +145,7 @@
 
 == ゼロへ拡張したハイパー演算子の整合性 ==
 
-\( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x \) を素朴な定義であるとして、 \( a \geq 1 \) かつ \( n \geq 1 \) かつ \( x \geq 1 \) である場合に \( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x = a \hyop{ n } x \) が成り立つ。
-
-\( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x \) と \( a \hyop{ n } x \) は両方とも \( \langle n , x \rangle \in \mathbb{N} \times \mathbb{N} \) に対する辞書式順序による整礎帰納法を使用しているため、これの証明も \( \langle n , x \rangle \in \mathbb{N} \times \mathbb{N} \) に対する辞書式順序による整礎帰納法で行う。
+\( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x \) を素朴な定義であるとして、 \( a \geq 1 \) かつ \( n \geq 1 \) かつ \( x \geq 1 \) である場合に \( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x = a \hyop{ n } x \) である。
 
 一番目の補題として、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
@@ -175,7 +173,7 @@
 <nowiki>\begin{alignat}{2}
   a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) & = a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 2 } ( a \hyop{ 3 } x _ \mathrm{pred} ) \\
-  & = a \hyop{ 2 } ( a ^ { x _ \mathrm{pred} } ) \\
+  & = a \hyop{ 2 } a ^ { x _ \mathrm{pred} } \\
   & = a \times a ^ { x _ \mathrm{pred} } \\
   & = a ^ { x _ \mathrm{pred} + 1 } \\
 \end{alignat}</nowiki>
@@ -189,9 +187,9 @@
   & = 1 \\
 \end{alignat}</nowiki>
 
-次に、 \( n \geq 1 \) である場合、 \( a \hyop{ n } ( y + 1 ) = a \hyop{ n - 1 } ( a \hyop{ n } y ) \) であることを証明するが、これは定義そのままである。
+五番目の補題として、 \( n \geq 1 \) かつ \( x \geq 1 \) である場合、 \( a \hyop{ n } x = a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) \) である。これは定義より自明である。
 
-これらより、 \( \mathbb{N} \times \mathbb{N} \) の辞書式順序を用いて \( \langle n , x \rangle \) についての整礎帰納法を行うことで、新しい定義と素朴な定義が一致することを示すことができる。
+最後の定理として、  \( a \geq 1 \) かつ \( n \geq 1 \) かつ \( x \geq 1 \) である場合、 \( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x = a \hyop{ n } x \) である。 \( n \) について帰納法を適用する。 \( n = 1 \) である場合、 \( a \mathbin{ [ \: 1 \: ] _ \mathrm{old} } x = a \hyop{ 1 } x \) となり、一番目の補題より成り立つ。 \( n = 2 \) である場合、 \( a \mathbin{ [ \: 2 \: ] _ \mathrm{old} } x = a \hyop{ 1 } x \) となり、二番目の補題より成り立つ。 \( n = 3 \) である場合、 \( a \mathbin{ [ \: 3 \: ] _ \mathrm{old} } x = a \hyop{ 1 } x \) となり、三番目の補題より成り立つ。 \( n \geq 4 \) である場合、 \( a \mathbin{ [ \: n \: ] _ \mathrm{old} } x = a \hyop{ n } x \) となり、 \( x \) について帰納法を適用して、四番目の補題と五番目の補題より成り立つ。
 
 == 順序数へ拡張することについて ==
 
