@@ -107,7 +107,7 @@
 
 \( a + x = a \mathbin{ [ 0 ] } ( a + ( x - 1 ) ) \) であるような関数は無数にあり、もっとも単純な解として \( a \mathbin{ [ 0 ] } x = x + 1 \) がある。これは英語版ウィキペディアの "[https://en.wikipedia.org/w/index.php?title=Hyperoperation&oldid=1110399282 Hyperoperation]" と同じ定義となる。
 
-\( a \mathbin{ [ 0 ] } x = x + 1 \) と定義することは、後者関数から全てを構築するというコンセプトにおいては美しいが、可換性を持たないという欠点もある。
+\( a \mathbin{ [ 0 ] } x = x + 1 \) と定義することは、後者関数から全てを構築するというコンセプトにおいては美しいが、 \( a \) の値を捨てており、可換性を持たないという欠点もある。
 
 <p style="display: none;"><nowiki>\(
   \newcommand{\p}[1]{ \mathord{ \left( #1 \right) } }
