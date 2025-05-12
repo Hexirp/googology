@@ -241,8 +241,8 @@
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \omega \\
-  & = \sup _ { y < \omega } ( \omega \hyop{ 2 } y ) \\
-  & = \sup _ { y < \omega } ( \omega \times y ) \\
+  & = \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) \\
+  & = \sup _ { y < \omega } \, ( \omega \times y ) \\
   & = \omega \times \omega \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
