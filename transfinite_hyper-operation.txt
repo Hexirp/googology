@@ -6,6 +6,7 @@
 
 <p style="display: none;"><nowiki>\[
   \DeclareMathOperator{ \tsup }{ sup }
+  \newcommand{ \cof }{ \mathrm{cof} }
   \newcommand{ \hyop }[ 1 ]{ \mathbin{ \left [ \mathord{ } \mathbin{ #1 } \mathord{ } \right ] } }
 \]</nowiki></p>
 
@@ -198,27 +199,27 @@
 
 前の節で示した定義を、さらに順序数へ拡張することを考えてみると、これは簡単に定義できるように見える。
 
-なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義はスコット連続であることから自動的に定まるからである。つまり、 \( f \) がスコット連続であるとすると、 \( \mathrm{cof} ( \alpha ) \geq \omega \) である場合、必ず \( f ( \alpha ) = \tsup _ { \beta < \alpha } f ( \beta ) \) となる。
+なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義はスコット連続であることから自動的に定まるからである。つまり、 \( f \) がスコット連続であるとすると、 \( \cof ( \alpha ) \geq \omega \) である場合、必ず \( f ( \alpha ) = \tsup _ { \beta < \alpha } f ( \beta ) \) となる。
 
-この方針に従って定義すると、下記のような定義となる。ただし、 \( \mathrm{cof} ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \tsup _ { \beta < \alpha } \beta \) と定義する。
+この方針に従って定義すると、下記のような定義となる。ただし、 \( \cof ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \tsup _ { \beta < \alpha } \beta \) と定義する。
 
 <nowiki>\[
   a \hyop{ n } x
     =
       \begin{cases}
-        \max ( a + 1 , x + 1 ) & ( \mathrm{cof} ( n ) = 0 ) \\
-        a & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n = 1 ) \\
-        0 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n = 2 ) \\
-        1 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n \geq 3 ) \\
-        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        \tsup _ { p < n } \mathord{ ( a \hyop{ p } x ) } & ( \mathrm{cof} ( n ) = \omega ) \\
+        \max ( a + 1 , x + 1 ) & ( \cof ( n ) = 0 ) \\
+        a & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n = 1 ) \\
+        0 & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n = 2 ) \\
+        1 & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n \geq 3 ) \\
+        a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( \cof ( n ) = 1 \wedge \cof ( x ) = 1 ) \\
+        \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } & ( \cof ( n ) = 1 \wedge \cof ( x ) \geq \omega ) \\
+        \tsup _ { p < n } \mathord{ ( a \hyop{ p } x ) } & ( \cof ( n ) = \omega ) \\
       \end{cases}
 \]</nowiki>
 
 だが、この定義は \( n \geq 2 \) では上手く行かず、非常に悪い結果となる。
 
-\( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \tsup _ { y < x } \mathord{ ( a \hyop{ 1 } y ) } \) かつ \( a + y = \tsup _ { y < x } \mathord{ ( a + y ) } \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+\( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \cof ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \cof ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \cof ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \tsup _ { y < x } \mathord{ ( a \hyop{ 1 } y ) } \) かつ \( a + y = \tsup _ { y < x } \mathord{ ( a + y ) } \) であるため、成り立つ。 \( \cof ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   & \phantom{ { } = { } } a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
@@ -272,7 +273,7 @@
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
 
-五つ目に、 \( \alpha \geq \omega \) である場合、 \( \omega \hyop{ 2 } \alpha = \omega ^ 2 \) である。 \( \alpha \) について超限帰納法を適用する。 \( \alpha = \omega \) である場合、二つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \alpha = \alpha _ \mathrm{pred} + 1 \) である場合、四つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \mathrm{cof} ( \alpha ) \geq \omega \) である場合、これは次の変形より成り立つ。
+五つ目に、 \( \alpha \geq \omega \) である場合、 \( \omega \hyop{ 2 } \alpha = \omega ^ 2 \) である。 \( \alpha \) について超限帰納法を適用する。 \( \alpha = \omega \) である場合、二つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \alpha = \alpha _ \mathrm{pred} + 1 \) である場合、四つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \cof ( \alpha ) \geq \omega \) である場合、これは次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   & \phantom{ { } = { } } \omega \hyop{ 2 } \alpha \\
