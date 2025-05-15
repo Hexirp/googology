@@ -277,7 +277,7 @@
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \alpha \\
   & = \tsup _ { y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \\
-  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
+  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \right ) } \\
   & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
   & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \omega ^ 2 , \omega ^ 2 \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
   & = \omega ^ 2 \\
