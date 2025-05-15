@@ -13,9 +13,12 @@
 # \( \log \, ( O ) \)
 # \( \log \mkern2mu ( O ) \)
 # \( \log \left ( O \right ) \)
+# \( \log \mathord{ \left ( O \right ) } \)
+# \( \mathord{ \log } \mathord{ \left ( O \right ) } \)
 # \( \mathrm{log} O \)
 # \( \mathrm{log} ( O ) \)
 # \( \mathrm{log} \left ( O \right ) \)
+# \( \mathrm{log} \mathord{ \left ( O \right ) } \)
 
 == 序論 ==
 
