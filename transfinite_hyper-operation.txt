@@ -11,6 +11,7 @@
 # \( \omega \mathbin{ \left [ \: \omega \: \right ] } \omega \)
 # \( \omega \mathbin{ \left [ \mathbin{ \omega } \right ] } \omega \)
 # \( \omega \mathbin{ \left [ \mathord{ } \mathbin{ \omega } \mathord{ } \right ] } \omega \)
+# \( \omega \mathbin{ \left [ \medmuskip \omega \medmuskip \right ] \omega \)
 
 == 序論 ==
 
