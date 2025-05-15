@@ -11,6 +11,7 @@
 # \( \log O \)
 # \( \log ( O ) \)
 # \( \log \, ( O ) \)
+# \( \log \mkern-2mu ( O ) \)
 # \( \log \left ( O \right ) \)
 
 == 序論 ==
