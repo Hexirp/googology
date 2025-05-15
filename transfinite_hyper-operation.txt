@@ -5,6 +5,7 @@
 この記事では、超限ハイパー演算子の定義について考察する。ただ大きさを求めて作るだけなら他の表記を使えばよいだけなので、ハイパー演算子の形を保ったまま、最も美しい定義を追い求める。その帰結として、有限の範囲において通常のハイパー演算子と完全に一致し、順序数の範囲においては、 \( 1 \) 段と \( 2 \) 段と \( 3 \) 段の演算が加算と乗算と冪乗を完全に再現し、テトレーションを超えても破綻せず、 \( \omega \) 階を超えても破綻せず、 \( \omega \mathbin{ \left [ \mathord{ } \mathbin{ \omega } \mathord{ } \right ] } \omega \) が \( \varphi _ \omega ( 0 ) \) となり、その表記としての限界が \( \Gamma _ 0 \) であり、それでいてハイパー演算子の形を保ち、それらに加えて、その定義が一貫していて美しいような超限ハイパー演算子の定義を示す。
 
 <p style="display: none;"><nowiki>\[
+  \DeclareMathOperator{\tsup}{sup}
   \newcommand{\hyop}[1]{ \mathbin{ \left [ \mathord{ } \mathbin{ #1 } \mathord{ } \right ] } }
 \]</nowiki></p>
 
@@ -199,7 +200,7 @@
 
 なぜならば、ハイパー演算子は加算と乗算と冪乗の拡張であり、加算と乗算と冪乗は正規関数であるから、ハイパー演算子も正規関数であるべきであり、正規関数において超限な場合の定義はスコット連続であることから自動的に定まるからである。つまり、 \( f \) がスコット連続であるとすると、 \( \mathrm{cof} ( \alpha ) \geq \omega \) である場合、必ず \( f ( \alpha ) = \sup _ { \beta < \alpha } f ( \beta ) \) となる。
 
-この方針に従って定義すると、下記のような定義となる。ただし、 \( \mathrm{cof} ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \sup _ { \beta < \alpha } \beta \) と定義する。
+この方針に従って定義すると、下記のような定義となる。ただし、 \( \mathrm{cof} ( \alpha ) = 1 \) であるような順序数 \( \alpha \) について、 \( \alpha - 1 \) を \( \tsup _ { \beta < \alpha } \beta \) と定義する。
 
 <nowiki>\[
   a \hyop{ n } x
@@ -210,14 +211,14 @@
         0 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n = 2 ) \\
         1 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n \geq 3 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \sup _ { y < x } \, ( a \hyop{ n } y ) & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        \sup _ { p < n } \, ( a \hyop{ p } x ) & ( \mathrm{cof} ( n ) = \omega ) \\
+        \tsup _ { y < x } \, ( a \hyop{ n } y ) & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        \tsup _ { p < n } \, ( a \hyop{ p } x ) & ( \mathrm{cof} ( n ) = \omega ) \\
       \end{cases}
 \]</nowiki>
 
 だが、この定義は \( n \geq 2 \) では上手く行かず、非常に悪い結果となる。
 
-\( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \sup _ { y < x } \, ( a \hyop{ 1 } y ) \) かつ \( a + y = \sup _ { y < x } \, ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+\( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \tsup _ { y < x } \, ( a \hyop{ 1 } y ) \) かつ \( a + y = \tsup _ { y < x } \, ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
@@ -245,8 +246,8 @@
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \omega \\
-  & = \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) \\
-  & = \sup _ { y < \omega } \, ( \omega \times y ) \\
+  & = \tsup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) \\
+  & = \tsup _ { y < \omega } \, ( \omega \times y ) \\
   & = \omega \times \omega \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
@@ -275,9 +276,9 @@
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \alpha \\
-  & = \sup _ { y < \alpha } \, ( \omega \hyop{ 2 } y ) \\
-  & = \max \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \, ( \omega \hyop{ 2 } y ) \right ) \\
-  & = \max \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) \\
+  & = \tsup _ { y < \alpha } \, ( \omega \hyop{ 2 } y ) \\
+  & = \max \left ( \tsup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \tsup _ { \omega \leq y < \alpha } \, ( \omega \hyop{ 2 } y ) \right ) \\
+  & = \max \left ( \tsup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) \\
   & = \max \left ( \omega ^ 2 , \omega ^ 2 \right ) \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
