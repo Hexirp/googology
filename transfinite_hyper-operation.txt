@@ -272,8 +272,8 @@
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \alpha \\
   & = \sup _ { y < \alpha } \, ( \omega \hyop{ 2 } y ) \\
-  & = \mathord{ \max } \mathord{ \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \, ( \omega \hyop{ 2 } y ) \right ) } \\
-  & = \mathord{ \max } \mathord{ \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) } \\
+  & = \mathord{ \max } \! \mathord{ \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \, ( \omega \hyop{ 2 } y ) \right ) } \\
+  & = \mathord{ \max } \! \mathord{ \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) } \\
   & = \max ( \omega ^ 2 , \omega ^ 2 ) \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
