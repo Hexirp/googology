@@ -90,7 +90,7 @@
 三つ目に、一つ目の式と二つ目の式から、 \( n \geq 4 \) を条件として、下記のように変形をし、 \( a \hyop{ n - 1 } ( a \hyop{ n } 0 ) = a \hyop{ n - 1 } 1 \) を得る。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } a \hyop{ n - 1 } ( a \hyop{ n } 0 ) \\
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n - 1 } ( a \hyop{ n } 0 ) \\
   & = a \hyop{ n } 1 \\
   & = a \\
   & = a \hyop{ n - 1 } 1 \\
@@ -154,7 +154,7 @@
 一番目の補題として、 \( a \hyop{ 1 } x = a + x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
   & = \max ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
@@ -165,7 +165,7 @@
 二番目の補題として、 \( a \hyop{ 2 } x = a \times x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 2 } 0 = a \times 0 \) となり、 \( a \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = a \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 1 } ( a \hyop{ 2 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 1 } ( a \times x _ \mathrm{pred} ) \\
   & = a + ( a \times x _ \mathrm{pred} ) \\
@@ -175,7 +175,7 @@
 三番目の補題として、 \( a \hyop{ 3 } x = a ^ x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) の場合は \( a \hyop{ 3 } 0 = a ^ 0 \) となり、 \( a \hyop{ 3 } 0 = 1 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) の場合は \( a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) = a ^ { x _ \mathrm{pred} + 1 } \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) \\
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ 3 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 2 } ( a \hyop{ 3 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 2 } a ^ { x _ \mathrm{pred} } \\
   & = a \times a ^ { x _ \mathrm{pred} } \\
@@ -185,7 +185,7 @@
 四番目の補題として、 \( n \geq 2 \) である場合、 \( a \hyop{ n } 1 = a \) である。 \( n \) について帰納法を適用する。 \( n = 2 \) の場合は \( a \hyop{ 2 } 1 = a \) となり、二番目の補題より成り立つ。 \( n \geq 3 \) かつ \( n = n _ \mathrm{pred} + 1 \) である場合は \( a \hyop{ n _ \mathrm{pred} + 1 } 1 = a \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } a \hyop{ n _ \mathrm{pred} + 1 } 1 \\
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n _ \mathrm{pred} + 1 } 1 \\
   & = a \hyop{ n _ \mathrm{pred} } ( a \hyop{ n _ \mathrm{pred} + 1 } 0 ) \\
   & = a \hyop{ n _ \mathrm{pred} } 1 \\
   & = a \\
@@ -222,7 +222,7 @@
 \( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \cof ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \cof ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \cof ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \tsup _ { y < x } \mathord{ ( a \hyop{ 1 } y ) } \) かつ \( a + y = \tsup _ { y < x } \mathord{ ( a + y ) } \) であるため、成り立つ。 \( \cof ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
   & = a \hyop{ 0 } ( a \hyop{ 1 } x _ \mathrm{pred} ) \\
   & = a \hyop{ 0 } ( a + x _ \mathrm{pred} ) \\
   & = \max ( a + 1 , ( a + x _ \mathrm{pred} ) + 1 ) \\
@@ -235,7 +235,7 @@
 一つ目に、 \( x < \omega \) である場合、 \( \omega \hyop{ 2 } x = \omega \times x \) である。 \( x \) について帰納法を適用する。 \( x = 0 \) である場合は、 \( \omega \hyop{ 2 } 0 = \omega \times 0 \) となり、 \( \omega \hyop{ 2 } 0 = 0 \) より成り立つ。 \( x = x _ \mathrm{pred} + 1 \) である場合は、 \( \omega \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) = \omega \times ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } \omega \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } ( x _ \mathrm{pred} + 1 ) \\
   & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } x _ \mathrm{pred} ) \\
   & = \omega \hyop{ 1 } ( \omega \times x _ \mathrm{pred} ) \\
   & = \omega + ( \omega \times x _ \mathrm{pred} ) \\
@@ -246,7 +246,7 @@
 二つ目に、 \( \omega \hyop{ 2 } \omega = \omega ^ 2 \) である。これは次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } \omega \hyop{ 2 } \omega \\
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } \omega \\
   & = \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } \\
   & = \tsup _ { y < \omega } \mathord{ ( \omega \times y ) } \\
   & = \omega \times \omega \\
@@ -256,7 +256,7 @@
 三つ目に、 \( \omega \hyop{ 2 } ( \omega + 1 ) = \omega ^ 2 \) である。これは次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } \omega \hyop{ 2 } ( \omega + 1 ) \\
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } ( \omega + 1 ) \\
   & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } \omega ) \\
   & = \omega \hyop{ 1 } \omega ^ 2 \\
   & = \omega + \omega ^ 2 \\
@@ -266,7 +266,7 @@
 四つ目に、 \( \omega \hyop{ 2 } \alpha = \omega ^ 2 \) である場合、 \( \omega \hyop{ 2 } ( \alpha + 1 ) = \omega ^ 2 \) である。これは次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } \omega \hyop{ 2 } ( \alpha + 1 ) \\
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } ( \alpha + 1 ) \\
   & = \omega \hyop{ 1 } ( \omega \hyop{ 2 } \alpha ) \\
   & = \omega \hyop{ 1 } \omega ^ 2 \\
   & = \omega + \omega ^ 2 \\
@@ -276,7 +276,7 @@
 五つ目に、 \( \alpha \geq \omega \) である場合、 \( \omega \hyop{ 2 } \alpha = \omega ^ 2 \) である。 \( \alpha \) について超限帰納法を適用する。 \( \alpha = \omega \) である場合、二つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \alpha = \alpha _ \mathrm{pred} + 1 \) である場合、四つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \cof ( \alpha ) \geq \omega \) である場合、これは次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
-  & \phantom{ { } = { } } \omega \hyop{ 2 } \alpha \\
+  & \phantom{ \mathord{ } = \mathord{ } } \omega \hyop{ 2 } \alpha \\
   & = \tsup _ { y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \\
   & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \mkern-1mu \right ) } \\
   & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-2mu \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
