@@ -374,13 +374,21 @@
 
 一番目の性質は必ず満たしてほしいが、二番目の性質と三番目の性質については、そこまで満たしてほしいというわけではく、それでも \( \omega \hyop{ 4 } \omega \) が \( \omega ^ { \mkern1mu \omega ^ { \mkern2mu \omega } } \) ではなく \( \varepsilon _ 0 \) となってほしい。
 
-\( \omega \hyop{ 4 } ( \omega + 1 ) \) は、上付きハイパー演算子の定義に則すると、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) であり、 \( x \mapsto \omega \hyop{ 4 } x \) の不動点が \( \omega \hyop{ 4 } \omega \) であるので、 \( \omega \hyop{ 4 } \omega \) と等しくなり大きくならない。
+\( \omega \hyop{ 4 } ( \omega + 1 ) \) は、上付きハイパー演算子の定義に則すると、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) であり、 \( x \mapsto \omega \hyop{ 3 } x \) の不動点が \( \omega \hyop{ 4 } \omega \) であるので、 \( \omega \hyop{ 4 } \omega \) と等しくなり大きくならない。
 
-その一方で、下付きハイパー演算子の定義に則すると、 \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) であり、 \( \omega \hyop{ 4 } \omega \) は \( x \mapsto x \hyop{ 4 } \omega \) の不動点ではないため、 \( \omega \hyop{ 4 } \omega \) よりも大きくなる。
+その一方で、下付きハイパー演算子の定義に則すると、 \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) であり、 \( \omega \hyop{ 4 } \omega \) は \( x \mapsto x \hyop{ 3 } \omega \) の不動点ではないため、 \( \omega \hyop{ 4 } \omega \) よりも大きくなる。
 
 通常の場合においては下付きハイパー演算子よりも上付きハイパー演算子の方が大きいのに、この場合においては上付きハイパー演算子よりも下付きハイパー演算子の方が大きいことに着目しよう。
 
-ここで、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) と \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) のうちで大きい方を選べばよいのではないかと、私は思い付いた。
+ここで、 \( \omega \hyop{ 3 } ( \omega \hyop{ 4 } \omega ) \) と \( ( \omega \hyop{ 4 } \omega ) \hyop{ 3 } \omega \) のうちで大きい方を選べばよいのではないかと、私は思い付いたのである。
+
+== 繰り返し適用の上限について ==
+
+\( \omega \hyop{ 4 } \omega \) へ \( x \mapsto \omega \hyop{ 3 } x \) と \( x \mapsto x \hyop{ 3 } \omega \) の両方を適用して、それらの大きい方を選ぶという手法は、順序数崩壊関数の定義における閉包集合を私に思い浮かばせた。
+
+ただし、順序数崩壊関数の定義における閉包集合は、特定の種類の操作を幾らでも繰り返しても外側へ出ることがないという意味で、特定の種類の操作について閉じている集合であるが、この場合においては、その閉包集合を作るための操作を途中で止めるようなイメージである。
+
+これを具体的に実装すると、 \( a \hyop{ n } x \) と \( S ( a , n , x ) \) を相互再帰で次のように定義することになる。
 
 == 順序数への拡張 ==
 
