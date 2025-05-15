@@ -213,7 +213,7 @@
         1 & ( \cof ( n ) = 1 \wedge \cof ( x ) = 0 \wedge n \geq 3 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( \cof ( n ) = 1 \wedge \cof ( x ) = 1 ) \\
         \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } & ( \cof ( n ) = 1 \wedge \cof ( x ) \geq \omega ) \\
-        \tsup _ { p < n } \mathord{ ( a \hyop{ p } x ) } & ( \cof ( n ) = \omega ) \\
+        \tsup _ { p < n } \mathord{ ( a \hyop{ p } x ) } & ( \cof ( n ) \geq \omega ) \\
       \end{cases}
 \]</nowiki>
 
