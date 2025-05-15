@@ -331,13 +331,38 @@
 
 == 超限ハイパー演算子の三律不立について ==
 
-超限ハイパー演算子が満たしてほしい美しい性質として、次の三つの性質がある。
+超限ハイパー演算子が満たしてほしい性質として、次の三つの性質がある。
 
 # \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( x \mapsto a \hyop{ n } x \) は単調増加である。
 # \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( x \mapsto a \hyop{ n } x \) は連続である。
-# \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( a \hyop{ n } ( x + 1 ) = a \hyop{ n - 1 } ( a \hyop{ n } x ) \) である。
+# \( \cof ( n ) = 1 \) かつ \( \cof ( x ) = 1 \) である場合、 \( a \hyop{ n } x = a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) \) である。
 
 だが、これらの性質を全て超限ハイパー演算子が有しているとすると、そこから矛盾が出る。まさに三律不立（トリレンマ）である。
+
+一番目の補題として、 \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( x \mapsto a \hyop{ n } x \) は正規関数である。これは、一番目の性質と二番目の性質より成り立つ。
+
+二番目の補題として、 \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( a \hyop{ n + 1 } x \) は \( a \hyop{ n + 1 } 0 \) に \( x \mapsto a \hyop{ n } x \) を \( x \) 回適用した数である。これは、二番目の性質と三番目の性質より成り立つ。
+
+三番目の補題として、  \( a \geq 1 \) かつ \( \cof ( n ) = 1 \) かつ \( n \geq 2 \) である場合、 \( a \hyop{ n - 1 } ( a \hyop{ n } \omega ) = a \hyop{ n } \omega \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n - 1 } ( a \hyop{ n } \omega ) \\
+  & = a \hyop{ n - 1 } ( \tsup _ { y < \omega } \mathord{ ( a \hyop{ n } y ) } ) \\
+  & = \tsup _ { y < \omega } \mathord{ ( a \hyop{ n - 1 } ( a \hyop{ n } y ) ) } \\
+  & = \tsup _ { y < \omega } ( a \hyop{ n } ( y + 1 ) ) \\
+  & = a \hyop{ n } \omega \\
+\end{alignat}</nowiki>
+
+四番目の補題として、 \( a \geq 1 \) かつ \( \cof ( n ) = 1 \) かつ \( n \geq 2 \) かつ \( x \geq \omega \) である場合、 \( a \hyop{ n } x = a \hyop{ n } \omega \) である。 \( x \) について超限帰納法を適用する。 \( x = \omega \) である場合、 \( a \hyop{ n } \omega = a \hyop{ n } \omega \) となり、自明である。 \( x > \omega \) かつ \( \cof ( x ) \geq \omega \) である場合、 \( a \hyop{ n } ( x ) = a \hyop{ n } \omega \) となり、 \( a \hyop{ n } x = \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } \) より成り立つ。 \( x > \omega \) かつ \( x = x _ \mathrm{pred} + 1 \) である場合、 \( a \hyop{ n } ( x _ \mathrm{pred} + 1 ) = a \hyop{ n } \omega \) となり、これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n } ( x _ \mathrm{pred} + 1 ) \\
+  & = a \hyop{ n - 1 } ( a \hyop{ n } x _ \mathrm{pred} ) \\
+  & = a \hyop{ n - 1 } ( a \hyop{ n } \omega ) \\
+  & = a \hyop{ n } \omega \\
+\end{alignat}</nowiki>
+
+最後の定理として、 \( a \geq 1 \) かつ \( \cof ( n ) = 1 \) かつ \( n \geq 2 \) である場合、 \( a \hyop{ n } \omega \) が \( x \mapsto a \hyop{ n } x \) の上限となり、これは \( x \mapsto a \hyop{ n } x \) が単調増加であることに反する。
 
 一番目の補題として、一番目の性質と二番目の性質を満たす場合、 \( a \geq 1 \) かつ \( n \geq 1 \) であるならば \( a \hyop{ n } ( a \hyop{ n + 1 } \omega ) = a \hyop{ n + 1 } \omega \) である。これは次の変形より成り立つ。
 
