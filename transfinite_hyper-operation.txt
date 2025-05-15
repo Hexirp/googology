@@ -304,7 +304,28 @@
 
 前の節において、  \( x \mapsto a \hyop{ n } x \) が正規関数であるがゆえに、 \( \omega \) 回適用した時点で \( x \mapsto a \hyop{ n } x \) の不動点となってしまい、それ以上の順序数を出力できなくなってしまうと書いた。
 
-実のところ、 ある \( n \) において \( x \mapsto a \hyop{ n } x \) が正規関数であるとし、 \( x \mapsto a \hyop{ n + 1 } x \) が \( a \hyop{ n + 1 } 0 \) へ \( x \mapsto a \hyop{ n } x \) を \( x \) 回適用する関数であるとすると、必ず \( a \hyop{ n + 1 } \omega \) が \( x \mapsto a \hyop{ n + 1 } x \) の上限になってしまう。
+実のところ、ある \( n \) において \( x \mapsto a \hyop{ n } x \) が正規関数であるとし、 \( x \mapsto a \hyop{ n + 1 } x \) が \( a \hyop{ n + 1 } 0 \) へ \( x \mapsto a \hyop{ n } x \) を \( x \) 回適用する関数であるとすると、必ず \( a \hyop{ n + 1 } \omega \) が \( x \mapsto a \hyop{ n + 1 } x \) の上限になってしまうのだ。
+
+これを一般化すると、ある順序数 \( \alpha \) を取り、ある正規関数 \( F \) を取り、 \( G \) を \( x \mapsto F ^ x ( \alpha ) \) とすると、 \( G ( \omega ) \) が \( G \) の上限となる。
+
+一つ目に、 \( F ( G ( \omega ) ) = G ( \omega ) \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } F ( G ( \omega ) ) \\
+  & = F ( \tsup _ { y < \omega } G ( y ) ) \\
+  & = \tsup _ { y < \omega } F ( G ( y ) ) \\
+  & = \tsup _ { y < \omega } G ( y + 1 ) \\
+  & = G ( \omega ) \\
+\end{alignat}</nowiki>
+
+二つ目に、 \( x \geq \omega \) である場合、 \( G ( x ) = G ( \omega ) \) である。 \( x \) について超限帰納法を適用する。 \( x = \omega \) である場合、 \( G ( \omega ) = G ( \omega ) \) となり、自明である。 \( x > \omega \) かつ \( \cof ( x ) \geq \omega \) である場合、 \( G ( x ) = G ( \omega ) \) となり、 \( G ( x ) = \tsup _ { y < x } G ( y ) \) より成り立つ。 \( x > \omega \) かつ \( x = x _ \mathrm{pred} + 1 \) である場合、 \( G ( x _ \mathrm{pred} + 1 ) = G ( \omega ) \) となり、これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } G ( x _ \mathrm{pred} + 1 ) \\
+  & = F ( G ( x _ \mathrm{pred} ) ) \\
+  & = F ( G ( \omega ) ) \\
+  & = G ( \omega ) \\
+\end{alignat}</nowiki>
 
 == 繰り返し適用の上限について ==
 
