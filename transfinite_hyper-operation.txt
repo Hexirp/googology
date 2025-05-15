@@ -278,8 +278,8 @@
   & \phantom{ { } = { } } \omega \hyop{ 2 } \alpha \\
   & = \tsup _ { y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \\
   & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \mkern-1mu \right ) } \\
-  & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-2mu \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
-  & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-2mu \omega ^ 2 , \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
+  & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-3mu \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
+  & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-3mu \omega ^ 2 , \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
 
