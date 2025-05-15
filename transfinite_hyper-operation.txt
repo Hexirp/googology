@@ -211,14 +211,14 @@
         0 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n = 2 ) \\
         1 & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 0 \wedge n \geq 3 ) \\
         a \hyop{ n - 1 } ( a \hyop{ n } ( x - 1 ) ) & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) = 1 ) \\
-        \tsup _ { y < x } \, ( a \hyop{ n } y ) & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
-        \tsup _ { p < n } \, ( a \hyop{ p } x ) & ( \mathrm{cof} ( n ) = \omega ) \\
+        \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } & ( \mathrm{cof} ( n ) = 1 \wedge \mathrm{cof} ( x ) \geq \omega ) \\
+        \tsup _ { p < n } \mathord{ ( a \hyop{ p } x ) } & ( \mathrm{cof} ( n ) = \omega ) \\
       \end{cases}
 \]</nowiki>
 
 だが、この定義は \( n \geq 2 \) では上手く行かず、非常に悪い結果となる。
 
-\( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \tsup _ { y < x } \, ( a \hyop{ 1 } y ) \) かつ \( a + y = \tsup _ { y < x } \, ( a + y ) \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
+\( n = 1 \) の場合は問題なく \( a \hyop{ 1 } x = a + x \) である。 \( x \) に超限帰納法を適用する。 \( \mathrm{cof} ( x ) = 0 \) である場合、 \( x = 0 \) であり、 \( a \hyop{ 1 } 0 = a + 0 \) となり、 \( a \hyop{ 1 } 0 = a \) より成り立つ。 \( \mathrm{cof} ( x ) \geq \omega \) である場合、 \( a \hyop{ 1 } x = a + x \) となり、 \( \mathrm{cof} ( x ) \geq \omega \) において \( a \hyop{ 1 } x = \tsup _ { y < x } \mathord{ ( a \hyop{ 1 } y ) } \) かつ \( a + y = \tsup _ { y < x } \mathord{ ( a + y ) } \) であるため、成り立つ。 \( \mathrm{cof} ( x ) = 1 \) である場合、 \( x = x _ \mathrm{pred} + 1 \) であり、 \( a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) = a + ( x _ \mathrm{pred} + 1 ) \) となり、次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   & = a \hyop{ 1 } ( x _ \mathrm{pred} + 1 ) \\
@@ -246,8 +246,8 @@
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \omega \\
-  & = \tsup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) \\
-  & = \tsup _ { y < \omega } \, ( \omega \times y ) \\
+  & = \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } \\
+  & = \tsup _ { y < \omega } \mathord{ ( \omega \times y ) } \\
   & = \omega \times \omega \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
@@ -276,9 +276,9 @@
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \alpha \\
-  & = \tsup _ { y < \alpha } \, ( \omega \hyop{ 2 } y ) \\
-  & = \max \left ( \tsup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \tsup _ { \omega \leq y < \alpha } \, ( \omega \hyop{ 2 } y ) \right ) \\
-  & = \max \left ( \tsup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) \\
+  & = \tsup _ { y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \\
+  & = \max \left ( \tsup _ { y < \omega } \mathrod{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \right ) \\
+  & = \max \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) \\
   & = \max \left ( \omega ^ 2 , \omega ^ 2 \right ) \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
