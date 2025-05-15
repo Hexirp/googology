@@ -267,7 +267,7 @@
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
 
-五つ目に、 \( \alpha \geq \omega \) である場合、 \( \omega \hyop{ 2 } \alpha + 1 = \omega ^ 2 \) である。 \( \alpha \) について超限帰納法を適用する。 \( \alpha = \omega \) である場合、二つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \alpha = \alpha _ \mathrm{pred} + 1 \) である場合、四つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \mathrm{cof} ( \alpha ) \geq \omega \) である場合、これは次の変形より成り立つ。
+五つ目に、 \( \alpha \geq \omega \) である場合、 \( \omega \hyop{ 2 } \alpha = \omega ^ 2 \) である。 \( \alpha \) について超限帰納法を適用する。 \( \alpha = \omega \) である場合、二つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \alpha = \alpha _ \mathrm{pred} + 1 \) である場合、四つ目の補題より成り立つ。 \( \alpha > \omega \) かつ \( \mathrm{cof} ( \alpha ) \geq \omega \) である場合、これは次の変形より成り立つ。
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \alpha \\
@@ -277,6 +277,16 @@
   & = { \textstyle \mathord{ \max } \mathord{ \left ( \omega ^ 2 , \omega ^ 2 \right ) } } \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
+
+テトレーションどころか、乗算の範囲で異常が出ている。
+
+そも、順序数の乗算と冪乗を定義するとき、普通は \( \alpha \times ( \beta + 1 ) = \alpha \times \beta + \alpha \) かつ \( \alpha ^ { \beta + 1 } = \alpha ^ \beta \times \alpha \) と定義する。
+
+これは通常のハイパー演算子（上付きハイパー演算子）ではなく下付きハイパー演算子の定義であり、順序数においては加算と乗算の交換法則が成り立たないため、下付きハイパー演算子の定義を採用しなければならないのだ。
+
+上付きハイパー演算子の定義を使うと、 \( x \mapsto \alpha \hyop{ n } x \) を反復適用することになり、どこかの時点で \( x \mapsto \alpha \hyop{ n } x \) が正規関数であるがゆえに必ず存在する不動点へ到達してしまうため、それ以上の順序数を出力することができなくなってしまう。
+
+テトレーションにおいては、上付きハイパー演算子と下付きハイパー演算子が一致しなくなるため、上付きハイパー演算子の方の定義を使わざるをえなくなり、この問題を回避できなくなってしまう。
 
 == 順序数への拡張 ==
 
