@@ -245,8 +245,8 @@
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \omega \\
-  & = { \textstyle \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) } \\
-  & = { \textstyle \sup _ { y < \omega } \, ( \omega \times y ) } \\
+  & = \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) \\
+  & = \sup _ { y < \omega } \, ( \omega \times y ) \\
   & = \omega \times \omega \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
@@ -275,10 +275,10 @@
 
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \alpha \\
-  & = { \textstyle \sup _ { y < \alpha } \, ( \omega \hyop{ 2 } y ) } \\
-  & = { \textstyle \mathord{ \max } \mathord{ \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \, ( \omega \hyop{ 2 } y ) \right ) } } \\
-  & = { \textstyle \mathord{ \max } \mathord{ \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) } } \\
-  & = { \textstyle \mathord{ \max } \mathord{ \left ( \omega ^ 2 , \omega ^ 2 \right ) } } \\
+  & = \sup _ { y < \alpha } \, ( \omega \hyop{ 2 } y ) \\
+  & = \max \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \, ( \omega \hyop{ 2 } y ) \right ) \\
+  & = \max \left ( \sup _ { y < \omega } \, ( \omega \hyop{ 2 } y ) , \sup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) \\
+  & = \max \left ( \omega ^ 2 , \omega ^ 2 \right ) \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
 
