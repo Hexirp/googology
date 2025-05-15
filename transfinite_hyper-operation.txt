@@ -15,7 +15,7 @@
 
 しかしながら、本来のハイパー演算子の形を保ったまま \( \varepsilon _ 0 \) を超えることができた超限ハイパー演算子は、これまでに存在しない。このような表記は、長い間、不在であり続けていた。
 
-その理由は、加算と乗算と冪乗は超限順序数へ拡張することが容易であるのに対して、テトレーションでは単純に拡張すると \( \omega \uparrow \uparrow \omega = \varepsilon _ 0 \) が成立し \( \omega \uparrow \uparrow ( \omega + 1 ) = \omega ^ { \mkern2mu \omega \mkern1mu \uparrow \uparrow \omega } = \omega ^ { \mkern2mu \varepsilon _ 0 } = \varepsilon _ 0 \) となることから、 \( x \mapsto \omega \uparrow \uparrow x \) がスコット連続であるとすると \( \xi \mapsto \omega \uparrow \uparrow \xi \) の上限が \( \varepsilon _ 0 \) となるという不都合な現象が発生するためである。
+その理由は、加算と乗算と冪乗は超限順序数へ拡張することが容易であるのに対して、テトレーションでは単純に拡張すると \( \omega \uparrow \uparrow \omega = \varepsilon _ 0 \) が成立し \( \omega \uparrow \uparrow ( \omega + 1 ) = \omega ^ { \mkern1mu \omega \mkern1mu \uparrow \uparrow \omega } = \omega ^ { \mkern1mu \varepsilon _ 0 } = \varepsilon _ 0 \) となることから、 \( x \mapsto \omega \uparrow \uparrow x \) がスコット連続であるとすると \( \xi \mapsto \omega \uparrow \uparrow \xi \) の上限が \( \varepsilon _ 0 \) となるという不都合な現象が発生するためである。
 
 これは、ハイパー演算子は単調増加であるべきという点で問題であるが、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点でも問題である。
 
@@ -291,7 +291,7 @@
 
 加算と乗算と冪乗においては、自然数の範囲では上付きハイパー演算子の値と下付きハイパー演算子の値が一致しているのを反映するかのように、下付きハイパー演算子の定義を使用していても自然数から順序数への正当な拡張と呼べるような性質を持つ。
 
-だが、テトレーションを超えた領域においては、自然数の範囲でも上付きハイパー演算子の値と下付きハイパー演算子の値が一致しないのを反映するかのように、 \( \omega \hyop{ 4 } \omega \) が \( \varepsilon _ 0 \) ではなく \( \omega ^ { \mkern2mu \omega ^ { \mkern2mu \omega } } \) となってしまったりと、上付きハイパー演算子よりも下付きハイパー演算子の方へ近い性質が現れてしまう。
+だが、テトレーションを超えた領域においては、自然数の範囲でも上付きハイパー演算子の値と下付きハイパー演算子の値が一致しないのを反映するかのように、 \( \omega \hyop{ 4 } \omega \) が \( \varepsilon _ 0 \) ではなく \( \omega ^ { \mkern1mu \omega ^ { \mkern1mu \omega } } \) となってしまったりと、上付きハイパー演算子よりも下付きハイパー演算子の方へ近い性質が現れてしまう。
 
 では、上付きハイパー演算子を諦めて下付きハイパー演算子を使えばよいのかというと、こちらもこちらでゼロへ拡張できないという大きな欠点を抱えており、できれば上付きハイパー演算子の方を使いたい。
 
