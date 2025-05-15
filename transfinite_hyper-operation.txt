@@ -277,9 +277,9 @@
 <nowiki>\begin{alignat}{2}
   & = \omega \hyop{ 2 } \alpha \\
   & = \tsup _ { y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \\
-  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \right ) } \\
-  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \right ) } \\
-  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \omega ^ 2 , \omega ^ 2 \right ) } \\
+  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \vbox to 11.5pt{ } \right ) } \\
+  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \vbox to 11.5pt{ } \right ) } \\
+  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \omega ^ 2 , \omega ^ 2 \vbox to 11.5pt{ } \right ) } \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
 
