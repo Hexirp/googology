@@ -15,7 +15,7 @@
 
 しかしながら、本来のハイパー演算子の形を保ったまま \( \varepsilon _ 0 \) を超えることができた超限ハイパー演算子は、これまでに存在しない。このような表記は、長い間、不在であり続けていた。
 
-その理由は、加算と乗算と冪乗は超限順序数へ拡張することが容易であるのに対して、テトレーションでは単純に拡張すると \( \omega \uparrow \uparrow \omega = \varepsilon _ 0 \) が成立し \( \omega \uparrow \uparrow ( \omega + 1 ) = \omega ^ { \omega \uparrow \uparrow \omega } = \omega ^ { \varepsilon _ 0 } = \varepsilon _ 0 \) となることから、 \( x \mapsto \omega \uparrow \uparrow x \) がスコット連続であるとすると \( \xi \mapsto \omega \uparrow \uparrow \xi \) の上限が \( \varepsilon _ 0 \) となるという不都合な現象が発生するためである。
+その理由は、加算と乗算と冪乗は超限順序数へ拡張することが容易であるのに対して、テトレーションでは単純に拡張すると \( \omega \uparrow \uparrow \omega = \varepsilon _ 0 \) が成立し \( \omega \uparrow \uparrow ( \omega + 1 ) = \omega ^ { \mkern2mu \omega \mkern1mu \uparrow \uparrow \omega } = \omega ^ { \mkern2mu \varepsilon _ 0 } = \varepsilon _ 0 \) となることから、 \( x \mapsto \omega \uparrow \uparrow x \) がスコット連続であるとすると \( \xi \mapsto \omega \uparrow \uparrow \xi \) の上限が \( \varepsilon _ 0 \) となるという不都合な現象が発生するためである。
 
 これは、ハイパー演算子は単調増加であるべきという点で問題であるが、超限ハイパー演算子というコンセプトが有する本来のポテンシャルを発揮できていないという点でも問題である。
 
@@ -278,8 +278,8 @@
   & \phantom{ { } = { } } \omega \hyop{ 2 } \alpha \\
   & = \tsup _ { y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \\
   & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \mathord{ ( \omega \hyop{ 2 } y ) } \mkern-1mu \right ) } \\
-  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \mkern-2mu \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
-  & = \mathord{ \max } \mkern-1mu \mathord{ \left ( \mkern-2mu \omega ^ 2 , \omega ^ 2 \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
+  & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-2mu \tsup _ { y < \omega } \mathord{ ( \omega \hyop{ 2 } y ) } , \tsup _ { \omega \leq y < \alpha } \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
+  & = \mathord{ \max } \mkern-2mu \mathord{ \left ( \mkern-2mu \omega ^ 2 , \omega ^ 2 \mkern-1mu \vphantom{ 0 ^ { 0 ^ 0 } } \right ) } \\
   & = \omega ^ 2 \\
 \end{alignat}</nowiki>
 
