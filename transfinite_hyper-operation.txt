@@ -337,7 +337,26 @@
 # \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( x \mapsto a \hyop{ n } x \) は連続である。
 # \( a \geq 1 \) かつ \( n \geq 1 \) である場合、 \( a \hyop{ n } ( x + 1 ) = a \hyop{ n - 1 } ( a \hyop{ n } x ) \) である。
 
-だが、これらの性質を全て超限ハイパー演算子が有しているとすると、そこから矛盾が出る。
+だが、これらの性質を全て超限ハイパー演算子が有しているとすると、そこから矛盾が出る。まさに三律不立（トリレンマ）である。
+
+一番目の補題として、一番目の性質と二番目の性質を満たす場合、 \( a \geq 1 \) かつ \( n \geq 1 \) であるならば \( a \hyop{ n } ( a \hyop{ n + 1 } \omega ) = a \hyop{ n + 1 } \omega \) である。これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } a \hyop{ n } ( a \hyop{ n + 1 } \omega ) \\
+  & = a \hyop{ n } ( \tsup _ { y < \omega } \mathord{ ( a \hyop{ n + 1 } y ) } ) \\
+  & = \tsup _ { y < \omega } \mathord{ ( a \hyop{ n } ( a \hyop{ n + 1 } y ) ) } \\
+  & = \tsup _ { y < \omega } ( a \hyop{ n + 1 } ( y + 1 ) ) \\
+  & = a \hyop{ n + 1 } \omega \\
+\end{alignat}</nowiki>
+
+二番目の補題として、一番目の性質と二番目の性質を満たす場合、 \( a \geq 1 \) かつ \( n \geq 2 \) かつ \( x \geq \omega \) であるならば \( a \hyop{ n } x = a \hyop{ n } \omega \) である。 \( x = \omega \) である場合、 \( a \hyop{ n } \omega = a \hyop{ n } \omega \) となり、自明である。 \( x > \omega \) かつ \( \cof ( x ) \geq \omega \) である場合、 \( a \hyop{ n } ( x ) = a \hyop{ n } \omega \) となり、 \( a \hyop{ n } x = \tsup _ { y < x } \mathord{ ( a \hyop{ n } y ) } \) より成り立つ。 \( x > \omega \) かつ \( x = x _ \mathrm{pred} + 1 \) である場合、 \( G ( x _ \mathrm{pred} + 1 ) = G ( \omega ) \) となり、これは次の変形より成り立つ。
+
+<nowiki>\begin{alignat}{2}
+  & \phantom{ \mathord{ } = \mathord{ } } G ( x _ \mathrm{pred} + 1 ) \\
+  & = F ( G ( x _ \mathrm{pred} ) ) \\
+  & = F ( G ( \omega ) ) \\
+  & = G ( \omega ) \\
+\end{alignat}</nowiki>
 
 == 繰り返し適用の上限について ==
 
