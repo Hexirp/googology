@@ -306,7 +306,7 @@
 
 実のところ、ある \( n \) において \( x \mapsto a \hyop{ n } x \) が正規関数であるとし、 \( x \mapsto a \hyop{ n + 1 } x \) が \( a \hyop{ n + 1 } 0 \) へ \( x \mapsto a \hyop{ n } x \) を \( x \) 回適用する関数であるとすると、必ず \( a \hyop{ n + 1 } \omega \) が \( x \mapsto a \hyop{ n + 1 } x \) の上限になってしまうのだ。
 
-これを一般化すると、ある順序数 \( \alpha \) を取り、ある正規関数 \( F \) を取り、 \( G \) を \( x \mapsto F ^ x ( \alpha ) \) とすると、 \( G ( \omega ) \) が \( G \) の上限となる。
+これの一般化として、ある順序数 \( \alpha _ 0 \) を取り、ある正規関数 \( F \) を取り、 \( G \) を \( x \mapsto F ^ x ( \alpha _ 0 ) \) とすると、 \( G ( \omega ) \) が \( G \) の上限となる。ここで \( \alpha _ 0 = a \hyop{ n } 0 \) かつ \( F ( x ) = a \hyop{ n } x \) かつ \( G ( x ) = a \hyop{ n + 1 } x \) とすれば先の定理へ特殊化できる。
 
 一つ目に、 \( F ( G ( \omega ) ) = G ( \omega ) \) である。これは次の変形より成り立つ。
 
