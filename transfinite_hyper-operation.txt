@@ -42,7 +42,7 @@
 
 ハイパー演算子の素朴な定義は、次の通りである。ただし、 \( a \geq 1 \) かつ \( n \geq 1 \) かつ \( x \geq 1 \) であるとする。つまり、基数と指数と階数が正の自然数であるということである。
 
-<nowiki>\[
+{{ユーザー:Hexirp/定義|名前=定義 3.1.|型=\(\mathbb{N}^{+} \times \mathbb{N}^{+} \times \mathbb{N}^{+} \to \mathbb{N}^{+}|値=<p><nowiki>\[
   a \hyop{ n } x
     =
       \begin{cases}
@@ -51,7 +51,7 @@
         a ^ x & ( n = 3 ) \\
         \underbrace{ a \hyop{ n - 1 } ( \cdots a \hyop{ n - 1 } ( a \hyop{ n - 1 } ( a \hyop{ n - 1 } a ) ) \cdots ) } _ \textrm{\( b \) ko no \( a \) ga aru} & ( n \geq 4 ) \\
       \end{cases}
-\]</nowiki>
+\]</nowiki></p>}}
 
 ここで、 \( \textrm{\( b \) ko no \( a \) ga aru} \) という点々を使った省略表記は、その解釈が曖昧になる余地がある。もちろん、この場合では問題にならないだろうが、定義の考察をするにあたり障害となることも確かである。
 
