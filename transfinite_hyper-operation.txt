@@ -42,7 +42,7 @@
 
 ハイパー演算子の素朴な定義は、次の通りである。ただし、 \( a \geq 1 \) かつ \( n \geq 1 \) かつ \( x \geq 1 \) であるとする。つまり、基数と指数と階数が正の自然数であるということである。
 
-{{ユーザー:Hexirp/定義|名前=定義 3.1.|型=\(\mathbb{N}^{+} \times \mathbb{N}^{+} \times \mathbb{N}^{+} \to \mathbb{N}^{+}\)|値=<p style="font-size: small;"><nowiki>\[
+{{ユーザー:Hexirp/定義|名前=定義 3.1.|型=\(\mathbb{N}^{+} \times \mathbb{N}^{+} \times \mathbb{N}^{+} \to \mathbb{N}^{+}\)|値=<p style="margin: 0; font-size: small;"><nowiki>\[
   a \hyop{ n } x
     =
       \begin{cases}
